@@ -2,7 +2,17 @@
 <feature
       id="de.uka.ipd.sdq.identifier.feature"
       label="Palladio Commons Identifier"
-      version="1.0.0.qualifier">
+      version="1.0.0.qualifier"
+      provider-name="sdq.ipd.kit.edu">
+
+   <description url="http://sdq.ipd.uka.de">
+      Palladio Commons library: Identifier EMF model
+   </description>
+
+   <copyright url="http://sdqweb.ipd.uka.de/eclipse/PCM/">
+      This plugin is protected by copyright held by the members of
+the Palladio Research Group, University of Karlsruhe.
+   </copyright>
 
    <license url="http://www.eclipse.org/legal/epl-v10.html">
       Eclipse Public License - v 1.0

@@ -12,7 +12,7 @@ import org.eclipse.emf.edit.provider.IChangeNotifier;
 import org.eclipse.emf.edit.provider.IItemProviderDecorator;
 
 /**
- * @author Snowball
+ * @author Steffen Becker
  *
  */
 public class FilteredItemsAdapterFactory extends DecoratorAdapterFactory {

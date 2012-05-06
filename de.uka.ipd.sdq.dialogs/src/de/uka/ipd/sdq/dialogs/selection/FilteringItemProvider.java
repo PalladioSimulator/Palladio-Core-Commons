@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderDecorator;
 
 /**
- * @author Snowball
+ * @author Steffen Becker
  *
  */
 public class FilteringItemProvider extends ItemProviderDecorator implements ITreeItemContentProvider {

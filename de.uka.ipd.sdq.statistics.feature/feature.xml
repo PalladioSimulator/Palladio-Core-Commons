@@ -2,9 +2,8 @@
 <feature
       id="de.uka.ipd.sdq.statistics.feature"
       label="Palladio Statistics Feature"
-      version="3.3.1.qualifier"
-      provider-name="sdq.ipd.kit.edu"
-      plugin="de.uka.ipd.sdq.branding">
+      version="1.1.0.qualifier"
+      provider-name="sdq.ipd.kit.edu">
 
    <description url="http://sdq.ipd.kit.edu">
       Provides statistical methods like batch mean algorithms, point
@@ -215,20 +214,18 @@ Each party waives its rights to a jury trial in any resulting
 litigation.
    </license>
 
-   <url>
-      <update label="Palladio Update Site" url="http://sdqweb.ipd.uka.de/eclipse/PCM/"/>
-   </url>
-
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.apache.log4j" version="1.2.13" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.probfunction.math" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.statistics" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.sensorframework" version="1.1.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.probfunction.math" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="uc.ac.ucl.ee.flanagan"/>
-      <import plugin="de.uka.ipd.sdq.probfunction"/>
       <import plugin="de.uka.ipd.sdq.stoex" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.math" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="de.uka.ipd.sdq.units"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="de.uka.ipd.sdq.units.edit"/>
    </requires>
 
    <plugin
@@ -247,6 +244,33 @@ litigation.
 
    <plugin
          id="de.uka.ipd.sdq.probfunction.math"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.uka.ipd.sdq.probfunction"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.uka.ipd.sdq.probfunction.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="uc.ac.ucl.ee.flanagan"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.math"
          download-size="0"
          install-size="0"
          version="0.0.0"

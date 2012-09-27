@@ -1,4 +1,4 @@
-// $ANTLR 3.1.3 Mar 17, 2009 19:23:44 /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g 2012-02-13 18:32:22
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g 2012-09-27 09:58:58
   
 	package de.uka.ipd.sdq.stoex.parser;
 	import de.uka.ipd.sdq.stoex.*;

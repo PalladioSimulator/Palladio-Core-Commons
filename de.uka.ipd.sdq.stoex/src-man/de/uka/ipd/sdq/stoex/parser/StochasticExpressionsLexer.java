@@ -1,4 +1,4 @@
-// $ANTLR 3.1.3 Mar 17, 2009 19:23:44 /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g 2012-02-13 18:32:22
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g 2012-09-27 09:58:59
   
   package de.uka.ipd.sdq.stoex.parser;
 
@@ -1159,125 +1159,35 @@ public class StochasticExpressionsLexer extends Lexer {
         try {
             int _type = STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:16: ( '\\\"' ( ALPHA | '_' | ' ' | NUMBER )+ '\\\"' )
-            // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:18: '\\\"' ( ALPHA | '_' | ' ' | NUMBER )+ '\\\"'
+            // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:16: ( '\\\"' ( ALPHA | '_' | ' ' | DIGIT )+ '\\\"' )
+            // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:18: '\\\"' ( ALPHA | '_' | ' ' | DIGIT )+ '\\\"'
             {
             match('\"'); 
-            // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:23: ( ALPHA | '_' | ' ' | NUMBER )+
+            // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:23: ( ALPHA | '_' | ' ' | DIGIT )+
             int cnt7=0;
             loop7:
             do {
-                int alt7=5;
-                switch ( input.LA(1) ) {
-                case 'A':
-                case 'B':
-                case 'C':
-                case 'D':
-                case 'E':
-                case 'F':
-                case 'G':
-                case 'H':
-                case 'I':
-                case 'J':
-                case 'K':
-                case 'L':
-                case 'M':
-                case 'N':
-                case 'O':
-                case 'P':
-                case 'Q':
-                case 'R':
-                case 'S':
-                case 'T':
-                case 'U':
-                case 'V':
-                case 'W':
-                case 'X':
-                case 'Y':
-                case 'Z':
-                case 'a':
-                case 'b':
-                case 'c':
-                case 'd':
-                case 'e':
-                case 'f':
-                case 'g':
-                case 'h':
-                case 'i':
-                case 'j':
-                case 'k':
-                case 'l':
-                case 'm':
-                case 'n':
-                case 'o':
-                case 'p':
-                case 'q':
-                case 'r':
-                case 's':
-                case 't':
-                case 'u':
-                case 'v':
-                case 'w':
-                case 'x':
-                case 'y':
-                case 'z':
-                    {
-                    alt7=1;
-                    }
-                    break;
-                case '_':
-                    {
-                    alt7=2;
-                    }
-                    break;
-                case ' ':
-                    {
-                    alt7=3;
-                    }
-                    break;
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                    {
-                    alt7=4;
-                    }
-                    break;
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
+                if ( (LA7_0==' '||(LA7_0>='0' && LA7_0<='9')||(LA7_0>='A' && LA7_0<='Z')||LA7_0=='_'||(LA7_0>='a' && LA7_0<='z')) ) {
+                    alt7=1;
                 }
+
 
                 switch (alt7) {
             	case 1 :
-            	    // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:24: ALPHA
+            	    // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:
             	    {
-            	    mALPHA(); 
+            	    if ( input.LA(1)==' '||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	        input.consume();
 
             	    }
-            	    break;
-            	case 2 :
-            	    // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:30: '_'
-            	    {
-            	    match('_'); 
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
 
-            	    }
-            	    break;
-            	case 3 :
-            	    // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:34: ' '
-            	    {
-            	    match(' '); 
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // /Users/joerg/Documents/work/palladio-dev/de.uka.ipd.sdq.stoex/src-man/de/uka/ipd/sdq/stoex/parser/StochasticExpressions.g:486:38: NUMBER
-            	    {
-            	    mNUMBER(); 
 
             	    }
             	    break;

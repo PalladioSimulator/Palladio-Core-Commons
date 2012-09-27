@@ -483,7 +483,7 @@ GREATER : '>' ;
 LESS : '<' ;
 GREATEREQUAL : '>=' ;
 LESSEQUAL : '<=' ;
-STRING_LITERAL : '\"' (ALPHA|'_'|' '|NUMBER)+ '\"' ;
+STRING_LITERAL : '\"' (ALPHA|'_'|' '|DIGIT)+ '\"' ;
 DOT: '.';
 ID:(ALPHA|'_')+;
 

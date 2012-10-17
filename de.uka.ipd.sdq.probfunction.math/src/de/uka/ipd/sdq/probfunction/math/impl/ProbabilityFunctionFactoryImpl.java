@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.math.complex.Complex;
 import org.eclipse.emf.common.util.EList;
 
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
@@ -41,7 +42,6 @@ import de.uka.ipd.sdq.probfunction.math.exception.NegativeDistanceException;
 import de.uka.ipd.sdq.probfunction.math.exception.ProbabilitySumNotOneException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnknownPDFTypeException;
 import de.uka.ipd.sdq.probfunction.math.util.MathTools;
-import flanagan.complex.Complex;
 
 /**
  * @author Ihssane, martens
@@ -191,7 +191,8 @@ public class ProbabilityFunctionFactoryImpl implements
 		assert (pos < numOfSamplingPoints);
 
 		List<Complex> zeroList = createZeroList(numOfSamplingPoints);
-		zeroList.get(pos).setReal(1.0);
+		Complex c = new Complex(1.0, zeroList.get(pos).getImaginary());
+		zeroList.set(pos, c);
 		return createSamplePDFFromComplex(distance, zeroList, false, unit);
 
 	}

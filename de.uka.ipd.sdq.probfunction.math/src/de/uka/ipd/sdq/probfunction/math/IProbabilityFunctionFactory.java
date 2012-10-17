@@ -2,6 +2,8 @@ package de.uka.ipd.sdq.probfunction.math;
 
 import java.util.List;
 
+import org.apache.commons.math.complex.Complex;
+
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
 import de.uka.ipd.sdq.probfunction.ContinuousSample;
 import de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction;
@@ -14,7 +16,6 @@ import de.uka.ipd.sdq.probfunction.math.exception.NegativeDistanceException;
 import de.uka.ipd.sdq.probfunction.math.exception.ProbabilitySumNotOneException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnknownPDFTypeException;
 import de.uka.ipd.sdq.probfunction.math.impl.DefaultRandomGenerator;
-import flanagan.complex.Complex;
 
 /**
  * Factory. Provides a set of methods to create all kinds of probability

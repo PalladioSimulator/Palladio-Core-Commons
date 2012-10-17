@@ -7,12 +7,14 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.math.complex.Complex;
+import org.apache.commons.math.util.MathUtils;
+
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
 import de.uka.ipd.sdq.probfunction.ContinuousSample;
 import de.uka.ipd.sdq.probfunction.math.IBoxedPDF;
 import de.uka.ipd.sdq.probfunction.math.IContinuousSample;
 import de.uka.ipd.sdq.probfunction.math.ISample;
-import flanagan.complex.Complex;
 
 /**
  * MathTools contains a set of commonly used mathematical functions, that are
@@ -109,7 +111,7 @@ public class MathTools {
 	public static List<Complex> transformDoubleToComplex(List<Double> values) {
 		List<Complex> resultList = new ArrayList<Complex>();
 		for (Double d : values) {
-			resultList.add(new Complex(d));
+			resultList.add(new Complex(d, 0));
 		}
 		return resultList;
 	}
@@ -138,7 +140,7 @@ public class MathTools {
 			result = true;
 		} else {
 			result = equalsDouble(z1.getReal(), z2.getReal())
-					&& equalsDouble(z1.getImag(), z2.getImag());
+					&& equalsDouble(z1.getImaginary(), z2.getImaginary());
 		}
 		return result;
 
@@ -334,4 +336,31 @@ public class MathTools {
 	public static boolean less(double d1, double d2) {
 		return d1 < d2 && !equalsDouble(d1, d2);
 	}
+	
+	/**
+	 * Returns the next power of two which is larger or equal to the passed {@code value}.
+	 * <p>
+	 * As an example, passing the {@code value} 7 will return 2^3 = 8. 
+	 * 
+	 * @param value a value greater than 0
+	 * @return
+	 */
+    public static int nextPowerOfTwo(int value) {
+        // first ensure that the argument is valid or throw an exception
+        if (value <= 0)
+            throw new IllegalArgumentException("Expected a parameter greater than 0, but encountered " + value);
+        
+        double exponent = MathUtils.log(2, value);
+
+        // test if the passed value is already a power of two and, if so, return the argument.
+        if (Math.floor(exponent) == exponent) {
+            return (int) value;
+        }
+
+        int resultingExponent = (int) Math.floor(exponent) + 1;
+        int resultingPowerOfTwo = MathUtils.pow(2, resultingExponent);
+
+        return resultingPowerOfTwo;
+    }
+	   
 }

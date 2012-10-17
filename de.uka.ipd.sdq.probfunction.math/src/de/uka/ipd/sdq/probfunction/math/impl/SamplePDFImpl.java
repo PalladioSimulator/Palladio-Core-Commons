@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.math.complex.Complex;
+import org.apache.commons.math.transform.FastFourierTransformer;
+
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
 import de.uka.ipd.sdq.probfunction.math.ISamplePDF;
@@ -26,8 +29,6 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnitNotSetException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnknownPDFTypeException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
 import de.uka.ipd.sdq.probfunction.math.util.MathTools;
-import flanagan.complex.Complex;
-import flanagan.math.FourierTransform;
 
 /**
  * @author Ihssane
@@ -41,7 +42,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 		ADD, SUB, MULT, DIV
 	}
 
-	private static final Complex DEFAULT_FILL_VALUE = new Complex(0, 0);
+	private static final Complex DEFAULT_FILL_VALUE = Complex.ZERO;
 
 	private static final int FOURIER_TRANSFORM = 0;
 
@@ -53,7 +54,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 
 	private Complex fillValue;
 
-	private FourierTransform fft = new FourierTransform();
+	private FastFourierTransformer  fft = new FastFourierTransformer();
 
 	protected SamplePDFImpl(double distance, IUnit unit,
 			IRandomGenerator generator) {
@@ -97,7 +98,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 		ArrayList<Complex> resultList = new ArrayList<Complex>();
 
 		for (Complex z : values) {
-			resultList.add(z.times(scalar));
+			resultList.add(z.multiply(scalar));
 		}
 
 		return pfFactory.createSamplePDFFromComplex(distance, resultList, this
@@ -119,7 +120,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 			throw new SizeTooSmallException();
 
 		for (int i = 0; i < diff; i++) {
-			values.add(new Complex(fillValue));
+			values.add(new Complex(fillValue.getReal(), fillValue.getImaginary()));
 		}
 	}
 
@@ -148,7 +149,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 	 *            the fillValue to set
 	 */
 	public void setFillValue(double fillValue) {
-		this.fillValue = new Complex(fillValue);
+		this.fillValue = new Complex(fillValue, 0);
 	}
 
 	public Complex getFillValue() {
@@ -303,7 +304,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 				result += ", ";
 			}
 			result += "(" + MathTools.asString(z.getReal()) + ", "
-					+ MathTools.asString(z.getImag()) + ")";
+					+ MathTools.asString(z.getImaginary()) + ")";
 		}
 		return result;
 	}
@@ -414,16 +415,16 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 			Complex result;
 			switch (op) {
 				case ADD :
-					result = z1.plus(z2);
+					result = z1.add(z2);
 					break;
 				case SUB :
-					result = z1.minus(z2);
+					result = z1.subtract(z2);
 					break;
 				case MULT :
-					result = z1.times(z2);
+					result = z1.multiply(z2);
 					break;
 				case DIV :
-					result = z1.over(z2);
+					result = z1.divide(z2);
 					break;
 				default :
 					result = null;
@@ -469,19 +470,26 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl
 		}
 		return operands;
 	}
-
+	
 	private IProbabilityDensityFunction transformFunction(int flag) {
-		Complex[] cValues = new Complex[values.size()];
+	    // perform padding so that the array size is a power of two as required by the FFT
+        // transformation performed later on
+		Complex[] cValues = new Complex[MathTools.nextPowerOfTwo(values.size())];
 		values.toArray(cValues);
-		fft.setData(cValues);
+		
+		// fill free space due to padding  
+        for (int i = values.size(); i < cValues.length; i++) {
+            cValues[i] = Complex.ZERO;
+        }
 
+        // perform (inverse) FFT
+		Complex[] transformedData;
 		if (flag == FOURIER_TRANSFORM)
-			fft.transform();
+		    transformedData = fft.transform(cValues);
 		else
-			fft.inverse();
+		    transformedData = fft.inversetransform(cValues);
 
-		List<Complex> resultList = Arrays.asList(fft
-				.getTransformedDataAsComplex());
+		List<Complex> resultList = Arrays.asList(transformedData);
 
 		ISamplePDF spdf = pfFactory.createSamplePDFFromComplex(distance,
 				resultList, !this.isInFrequencyDomain(), pfFactory

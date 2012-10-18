@@ -204,7 +204,7 @@ litigation.
    </license>
 
    <url>
-      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository"/>
+      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
    </url>
 
    <includes

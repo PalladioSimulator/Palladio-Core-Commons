@@ -55,7 +55,7 @@ public class UniformIntDistributionImpl extends AbstractIntegerDistribution {
 		else if(x>b)
 			return 1;
 		
-		return (x-a+1)/intCount;
+		return (x-a+1)/(double)intCount;
 	}
 
 	/* (non-Javadoc)

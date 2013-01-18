@@ -82,12 +82,12 @@ public class UniformIntDistributionImpl extends AbstractIntegerDistribution {
 		if(x<a||x>b)
 			return 0;
 		
-		return 1/intCount;
+		return 1.0/intCount;
 	}
 	
 	public double getMean()
 	{
-		return (a+b)/2;
+		return (a+b)/2.0;
 	}
 	
 	public double getVariance()

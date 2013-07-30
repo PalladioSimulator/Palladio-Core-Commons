@@ -19,7 +19,20 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
  */
 public class UniformIntDistribution extends AbstractDiscretePDF implements IUniformIntDistribution {
 	
-	public UniformIntDistribution(int a, int b) 
+	@Override
+    public int inverseF(double u) {
+        int value = super.inverseF(u);
+        
+        //Fix for bug in Apache commons math 2.1
+        int lb = ((UniformIntDistributionImpl)this.internalFunction).getA(); 
+        if (value < lb)
+            value = lb;
+        //end fix
+        
+        return value;
+    }
+
+    public UniformIntDistribution(int a, int b) 
 	{
 		try {
 			this.internalFunction = new UniformIntDistributionImpl(a, b);

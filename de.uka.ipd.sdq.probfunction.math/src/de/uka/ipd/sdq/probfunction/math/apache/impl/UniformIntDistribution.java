@@ -24,9 +24,10 @@ public class UniformIntDistribution extends AbstractDiscretePDF implements IUnif
         int value = super.inverseF(u);
         
         //Fix for bug in Apache commons math 2.1
-        int lb = ((UniformIntDistributionImpl)this.internalFunction).getA(); 
-        if (value < lb)
-            value = lb;
+        ++value;
+        int ub = ((UniformIntDistributionImpl)this.internalFunction).getB(); 
+        if (value > ub)
+            value = ub;
         //end fix
         
         return value;

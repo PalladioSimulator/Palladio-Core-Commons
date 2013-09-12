@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.statistics.feature"
       label="Palladio Statistics Feature"
-      version="1.1.1.qualifier"
+      version="1.1.2.qualifier"
       provider-name="sdq.ipd.kit.edu">
 
    <description url="http://sdq.ipd.kit.edu">

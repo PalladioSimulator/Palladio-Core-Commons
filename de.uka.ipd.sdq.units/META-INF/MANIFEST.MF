@@ -11,5 +11,7 @@ Export-Package: de.uka.ipd.sdq.units,
  de.uka.ipd.sdq.units.impl,
  de.uka.ipd.sdq.units.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ edu.kit.ipd.sdq.mdsd.profiles;bundle-version="1.0.0",
+ org.modelversioning.emfprofile;bundle-version="1.1.0"
 Bundle-ActivationPolicy: lazy

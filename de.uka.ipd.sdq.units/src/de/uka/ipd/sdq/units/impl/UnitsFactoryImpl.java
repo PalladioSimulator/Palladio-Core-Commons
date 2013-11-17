@@ -24,127 +24,127 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  */
 public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+     * Creates the default factory implementation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static UnitsFactory init() {
-		try {
-			UnitsFactory theUnitsFactory = (UnitsFactory)EPackage.Registry.INSTANCE.getEFactory("http://sdq.ipd.uka.de/Units/1.0"); 
-			if (theUnitsFactory != null) {
-				return theUnitsFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new UnitsFactoryImpl();
-	}
+        try {
+            UnitsFactory theUnitsFactory = (UnitsFactory)EPackage.Registry.INSTANCE.getEFactory("http://sdq.ipd.uka.de/Units/1.0"); 
+            if (theUnitsFactory != null) {
+                return theUnitsFactory;
+            }
+        }
+        catch (Exception exception) {
+            EcorePlugin.INSTANCE.log(exception);
+        }
+        return new UnitsFactoryImpl();
+    }
 
 	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+     * Creates an instance of the factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitsFactoryImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case UnitsPackage.BASE_UNIT: return createBaseUnit();
-			case UnitsPackage.UNIT_REPOSITORY: return createUnitRepository();
-			case UnitsPackage.UNIT_MULTIPLICATION: return createUnitMultiplication();
-			case UnitsPackage.UNIT_POWER: return createUnitPower();
-			case UnitsPackage.UNIT_LITERAL: return createUnitLiteral();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+        switch (eClass.getClassifierID()) {
+            case UnitsPackage.BASE_UNIT: return (EObject)createBaseUnit();
+            case UnitsPackage.UNIT_REPOSITORY: return (EObject)createUnitRepository();
+            case UnitsPackage.UNIT_MULTIPLICATION: return (EObject)createUnitMultiplication();
+            case UnitsPackage.UNIT_POWER: return (EObject)createUnitPower();
+            case UnitsPackage.UNIT_LITERAL: return (EObject)createUnitLiteral();
+            default:
+                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        }
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public BaseUnit createBaseUnit() {
-		BaseUnitImpl baseUnit = new BaseUnitImpl();
-		return baseUnit;
-	}
+        BaseUnitImpl baseUnit = new BaseUnitImpl();
+        return baseUnit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitRepository createUnitRepository() {
-		UnitRepositoryImpl unitRepository = new UnitRepositoryImpl();
-		return unitRepository;
-	}
+        UnitRepositoryImpl unitRepository = new UnitRepositoryImpl();
+        return unitRepository;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitMultiplication createUnitMultiplication() {
-		UnitMultiplicationImpl unitMultiplication = new UnitMultiplicationImpl();
-		return unitMultiplication;
-	}
+        UnitMultiplicationImpl unitMultiplication = new UnitMultiplicationImpl();
+        return unitMultiplication;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitPower createUnitPower() {
-		UnitPowerImpl unitPower = new UnitPowerImpl();
-		return unitPower;
-	}
+        UnitPowerImpl unitPower = new UnitPowerImpl();
+        return unitPower;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitLiteral createUnitLiteral() {
-		UnitLiteralImpl unitLiteral = new UnitLiteralImpl();
-		return unitLiteral;
-	}
+        UnitLiteralImpl unitLiteral = new UnitLiteralImpl();
+        return unitLiteral;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitsPackage getUnitsPackage() {
-		return (UnitsPackage)getEPackage();
-	}
+        return (UnitsPackage)getEPackage();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+     * @deprecated
+     * @generated
+     */
 	@Deprecated
 	public static UnitsPackage getPackage() {
-		return UnitsPackage.eINSTANCE;
-	}
+        return UnitsPackage.eINSTANCE;
+    }
 
 } //UnitsFactoryImpl

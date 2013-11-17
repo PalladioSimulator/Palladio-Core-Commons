@@ -31,153 +31,153 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  */
 public class ParenthesisImpl extends AtomImpl implements Parenthesis {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 	/**
-	 * The cached value of the '{@link #getInnerExpression() <em>Inner Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getInnerExpression() <em>Inner Expression</em>}' containment reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInnerExpression()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getInnerExpression()
+     * @generated
+     * @ordered
+     */
 	protected Expression innerExpression;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ParenthesisImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return StoexPackage.Literals.PARENTHESIS;
-	}
+        return StoexPackage.Literals.PARENTHESIS;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Expression getInnerExpression() {
-		return innerExpression;
-	}
+        return innerExpression;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public NotificationChain basicSetInnerExpression(Expression newInnerExpression, NotificationChain msgs) {
-		Expression oldInnerExpression = innerExpression;
-		innerExpression = newInnerExpression;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StoexPackage.PARENTHESIS__INNER_EXPRESSION, oldInnerExpression, newInnerExpression);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+        Expression oldInnerExpression = innerExpression;
+        innerExpression = newInnerExpression;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StoexPackage.PARENTHESIS__INNER_EXPRESSION, oldInnerExpression, newInnerExpression);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setInnerExpression(Expression newInnerExpression) {
-		if (newInnerExpression != innerExpression) {
-			NotificationChain msgs = null;
-			if (innerExpression != null)
-				msgs = ((InternalEObject)innerExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StoexPackage.PARENTHESIS__INNER_EXPRESSION, null, msgs);
-			if (newInnerExpression != null)
-				msgs = ((InternalEObject)newInnerExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StoexPackage.PARENTHESIS__INNER_EXPRESSION, null, msgs);
-			msgs = basicSetInnerExpression(newInnerExpression, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PARENTHESIS__INNER_EXPRESSION, newInnerExpression, newInnerExpression));
-	}
+        if (newInnerExpression != innerExpression) {
+            NotificationChain msgs = null;
+            if (innerExpression != null)
+                msgs = ((InternalEObject)innerExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StoexPackage.PARENTHESIS__INNER_EXPRESSION, null, msgs);
+            if (newInnerExpression != null)
+                msgs = ((InternalEObject)newInnerExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StoexPackage.PARENTHESIS__INNER_EXPRESSION, null, msgs);
+            msgs = basicSetInnerExpression(newInnerExpression, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PARENTHESIS__INNER_EXPRESSION, newInnerExpression, newInnerExpression));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
-				return basicSetInnerExpression(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
+                return basicSetInnerExpression(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
-				return getInnerExpression();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
+                return getInnerExpression();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
-				setInnerExpression((Expression)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
+                setInnerExpression((Expression)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
-				setInnerExpression((Expression)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
+                setInnerExpression((Expression)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
-				return innerExpression != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
+                return innerExpression != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ParenthesisImpl

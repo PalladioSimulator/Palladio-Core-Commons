@@ -10,6 +10,7 @@ import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.UnitRepository;
 import de.uka.ipd.sdq.units.UnitsPackage;
 
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -37,126 +38,126 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class UnitRepositoryImpl extends EObjectImpl implements UnitRepository {
+public class UnitRepositoryImpl extends EStereotypableObjectImpl implements UnitRepository {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 	/**
-	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnits()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnits()
+     * @generated
+     * @ordered
+     */
 	protected EList<BaseUnit> units;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitRepositoryImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return UnitsPackage.Literals.UNIT_REPOSITORY;
-	}
+        return UnitsPackage.Literals.UNIT_REPOSITORY;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<BaseUnit> getUnits() {
-		if (units == null) {
-			units = new EObjectContainmentEList<BaseUnit>(BaseUnit.class, this, UnitsPackage.UNIT_REPOSITORY__UNITS);
-		}
-		return units;
-	}
+        if (units == null) {
+            units = new EObjectContainmentEList<BaseUnit>(BaseUnit.class, this, UnitsPackage.UNIT_REPOSITORY__UNITS);
+        }
+        return units;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_REPOSITORY__UNITS:
-				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_REPOSITORY__UNITS:
+                return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_REPOSITORY__UNITS:
-				return getUnits();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_REPOSITORY__UNITS:
+                return getUnits();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_REPOSITORY__UNITS:
-				getUnits().clear();
-				getUnits().addAll((Collection<? extends BaseUnit>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_REPOSITORY__UNITS:
+                getUnits().clear();
+                getUnits().addAll((Collection<? extends BaseUnit>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_REPOSITORY__UNITS:
-				getUnits().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_REPOSITORY__UNITS:
+                getUnits().clear();
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_REPOSITORY__UNITS:
-				return units != null && !units.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_REPOSITORY__UNITS:
+                return units != null && !units.isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //UnitRepositoryImpl

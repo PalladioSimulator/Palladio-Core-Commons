@@ -37,124 +37,124 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplication {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 	/**
-	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnits()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnits()
+     * @generated
+     * @ordered
+     */
 	protected EList<Unit> units;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitMultiplicationImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return UnitsPackage.Literals.UNIT_MULTIPLICATION;
-	}
+        return UnitsPackage.Literals.UNIT_MULTIPLICATION;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<Unit> getUnits() {
-		if (units == null) {
-			units = new EObjectContainmentEList<Unit>(Unit.class, this, UnitsPackage.UNIT_MULTIPLICATION__UNITS);
-		}
-		return units;
-	}
+        if (units == null) {
+            units = new EObjectContainmentEList<Unit>(Unit.class, this, UnitsPackage.UNIT_MULTIPLICATION__UNITS);
+        }
+        return units;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
+                return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-				return getUnits();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
+                return getUnits();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-				getUnits().clear();
-				getUnits().addAll((Collection<? extends Unit>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
+                getUnits().clear();
+                getUnits().addAll((Collection<? extends Unit>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-				getUnits().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
+                getUnits().clear();
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-				return units != null && !units.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
+                return units != null && !units.isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //UnitMultiplicationImpl

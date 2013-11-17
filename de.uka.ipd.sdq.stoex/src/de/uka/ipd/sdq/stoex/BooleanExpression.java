@@ -20,9 +20,9 @@ package de.uka.ipd.sdq.stoex;
 public interface BooleanExpression extends IfElse {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // BooleanExpression

@@ -15,6 +15,7 @@ Export-Package: de.uka.ipd.sdq.probfunction.math,
  de.uka.ipd.sdq.probfunction.math.util
 Require-Bundle: de.uka.ipd.sdq.probfunction,
  de.uka.ipd.sdq.stoex;bundle-version="2.0.0",
- org.apache.commons.math;bundle-version="2.1.0"
+ org.apache.commons.math;bundle-version="2.1.0",
+ edu.kit.ipd.sdq.mdsd.profiles;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -10,9 +10,11 @@ import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitCarryingElement;
 import de.uka.ipd.sdq.units.UnitsPackage;
 
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -32,62 +34,62 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public abstract class UnitCarryingElementImpl extends EObjectImpl implements UnitCarryingElement {
+public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl implements UnitCarryingElement {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * The default value of the '{@link #getUnitSpecification() <em>Unit Specification</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getUnitSpecification() <em>Unit Specification</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnitSpecification()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnitSpecification()
+     * @generated
+     * @ordered
+     */
 	protected static final String UNIT_SPECIFICATION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUnitSpecification() <em>Unit Specification</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUnitSpecification() <em>Unit Specification</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnitSpecification()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnitSpecification()
+     * @generated
+     * @ordered
+     */
 	protected String unitSpecification = UNIT_SPECIFICATION_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitCarryingElementImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return UnitsPackage.Literals.UNIT_CARRYING_ELEMENT;
-	}
+        return UnitsPackage.Literals.UNIT_CARRYING_ELEMENT;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Unit getUnit() {
-		Unit unit = basicGetUnit();
-		return unit != null && unit.eIsProxy() ? (Unit)eResolveProxy((InternalEObject)unit) : unit;
-	}
+        Unit unit = basicGetUnit();
+        return unit != null && ((EObject)unit).eIsProxy() ? (Unit)eResolveProxy((InternalEObject)unit) : unit;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,120 +105,120 @@ public abstract class UnitCarryingElementImpl extends EObjectImpl implements Uni
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setUnit(Unit newUnit) {
-		// TODO: implement this method to set the 'Unit' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+        // TODO: implement this method to set the 'Unit' reference
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getUnitSpecification() {
-		return unitSpecification;
-	}
+        return unitSpecification;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setUnitSpecification(String newUnitSpecification) {
-		String oldUnitSpecification = unitSpecification;
-		unitSpecification = newUnitSpecification;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION, oldUnitSpecification, unitSpecification));
-	}
+        String oldUnitSpecification = unitSpecification;
+        unitSpecification = newUnitSpecification;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION, oldUnitSpecification, unitSpecification));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-				if (resolve) return getUnit();
-				return basicGetUnit();
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-				return getUnitSpecification();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                if (resolve) return getUnit();
+                return basicGetUnit();
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
+                return getUnitSpecification();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-				setUnit((Unit)newValue);
-				return;
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-				setUnitSpecification((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                setUnit((Unit)newValue);
+                return;
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
+                setUnitSpecification((String)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-				setUnit((Unit)null);
-				return;
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-				setUnitSpecification(UNIT_SPECIFICATION_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                setUnit((Unit)null);
+                return;
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
+                setUnitSpecification(UNIT_SPECIFICATION_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-				return basicGetUnit() != null;
-			case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-				return UNIT_SPECIFICATION_EDEFAULT == null ? unitSpecification != null : !UNIT_SPECIFICATION_EDEFAULT.equals(unitSpecification);
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                return basicGetUnit() != null;
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
+                return UNIT_SPECIFICATION_EDEFAULT == null ? unitSpecification != null : !UNIT_SPECIFICATION_EDEFAULT.equals(unitSpecification);
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (unitSpecification: ");
-		result.append(unitSpecification);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (unitSpecification: ");
+        result.append(unitSpecification);
+        result.append(')');
+        return result.toString();
+    }
 
 } //UnitCarryingElementImpl

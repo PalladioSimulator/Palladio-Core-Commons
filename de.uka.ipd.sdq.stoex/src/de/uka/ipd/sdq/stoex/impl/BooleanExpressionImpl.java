@@ -22,29 +22,29 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  */
 public abstract class BooleanExpressionImpl extends IfElseImpl implements BooleanExpression {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected BooleanExpressionImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return StoexPackage.Literals.BOOLEAN_EXPRESSION;
-	}
+        return StoexPackage.Literals.BOOLEAN_EXPRESSION;
+    }
 
 } //BooleanExpressionImpl

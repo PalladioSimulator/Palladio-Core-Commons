@@ -74,7 +74,7 @@ public class ProbFunctionPrettyPrint extends ProbfunctionSwitch<String> {
 		resultBuilder.append("[");
 		for (Sample<?> s : object.getSamples()) {
 		    resultBuilder.append(
-		            String.format("(%s%s %s%s)",
+		            String.format("(%s%s%s %s)",
 		                    leftSeparator,
 		                    s.getValue(),
 		                    rightSeparator,

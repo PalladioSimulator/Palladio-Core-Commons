@@ -2,7 +2,7 @@
 <feature
       id="edu.kit.ipd.sdq.commons.buckminster"
       label="Palladio Commons - Buckminster Build"
-      version="1.0.0.qualifier">
+      version="1.4.0.qualifier">
 
    <license url="http://www.eclipse.org/legal/epl-v10.html">
       Eclipse Public License - v 1.0

@@ -231,6 +231,10 @@ litigation.
          id="de.uka.ipd.sdq.statistics.feature"
          version="0.0.0"/>
 
+   <includes
+         id="de.uka.ipd.sdq.probfunction.feature"
+         version="0.0.0"/>
+
    <plugin
          id="de.uka.ipd.sdq.probfunction.math.tests"
          download-size="0"

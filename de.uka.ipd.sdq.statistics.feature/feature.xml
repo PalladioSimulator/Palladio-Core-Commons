@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.statistics.feature"
       label="Palladio Statistics Feature"
-      version="1.1.2.qualifier"
+      version="1.2.0.qualifier"
       provider-name="sdq.ipd.kit.edu">
 
    <description url="http://sdq.ipd.kit.edu">
@@ -218,37 +218,10 @@ litigation.
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.apache.log4j" version="1.2.13" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction.math" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.stoex" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.commons.math" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="de.uka.ipd.sdq.units"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="de.uka.ipd.sdq.units.edit"/>
    </requires>
 
    <plugin
          id="de.uka.ipd.sdq.statistics"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.uka.ipd.sdq.probfunction.math"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.uka.ipd.sdq.probfunction"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.uka.ipd.sdq.probfunction.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -135,7 +135,7 @@ public abstract class SelectEObjectDialog extends TitleAreaDialog {
 		fd_selectedObjectLabel.bottom = new FormAttachment(100, -35);
 		fd_selectedObjectLabel.top = new FormAttachment(tree, 9, SWT.DEFAULT);
 		fd_selectedObjectLabel.left = new FormAttachment(0, 7);
-		fd_selectedObjectLabel.right = new FormAttachment(0, 85);
+		fd_selectedObjectLabel.right = new FormAttachment(0, 95);
 		selectedObjectLabel.setLayoutData(fd_selectedObjectLabel);
 		selectedObjectLabel.setText("Selected object:");
 		selectedObjectLabel.setBounds(10, 260, 97, 13);

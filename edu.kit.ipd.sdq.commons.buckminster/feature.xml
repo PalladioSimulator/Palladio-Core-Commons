@@ -235,6 +235,10 @@ litigation.
          id="de.uka.ipd.sdq.probfunction.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.palladiosimulator.commons.feature"
+         version="0.0.0"/>
+
    <requires>
       <import plugin="org.junit" version="4.11.0" match="greaterOrEqual"/>
    </requires>

@@ -205,7 +205,6 @@ litigation.
 
    <url>
       <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
-      <discovery label="Third Party Wrapper Update Site" url="http://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/"/>
    </url>
 
    <includes
@@ -238,10 +237,6 @@ litigation.
 
    <includes
          id="org.palladiosimulator.commons.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.palladiosimulator.thirdpartywrapper.feature"
          version="0.0.0"/>
 
    <requires>

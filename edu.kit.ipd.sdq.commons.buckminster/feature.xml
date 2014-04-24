@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="edu.kit.ipd.sdq.commons.buckminster"
+      id="org.palladiosimulator.commons.buckminster"
       label="Palladio Commons - Buckminster Build"
       version="1.0.0.qualifier">
 
@@ -201,39 +201,7 @@ No party to this Agreement will bring a legal action under this
 Agreement more than one year after the cause of action arose.
 Each party waives its rights to a jury trial in any resulting
 litigation.
-   </license>
-
-   <url>
-      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
-   </url>
-
-   <includes
-         id="de.uka.ipd.sdq.dialogs.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.errorhandling.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.identifier.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.stoex.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.units.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.statistics.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.probfunction.feature"
-         version="0.0.0"/>
+   </license>   
 
    <includes
          id="org.palladiosimulator.commons.feature"

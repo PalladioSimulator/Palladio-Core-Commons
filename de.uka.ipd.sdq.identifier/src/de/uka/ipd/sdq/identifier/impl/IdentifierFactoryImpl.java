@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import de.uka.ipd.sdq.identifier.IdentifierFactory;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
@@ -23,72 +22,65 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
  */
 public class IdentifierFactoryImpl extends EFactoryImpl implements IdentifierFactory {
 	/**
-	 * <!-- begin-user-doc -->
+     * Creates the default factory implementation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-
-	/**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static IdentifierFactory init() {
-		try {
-			IdentifierFactory theIdentifierFactory = (IdentifierFactory)EPackage.Registry.INSTANCE.getEFactory("http://sdq.ipd.uka.de/Identifier/1.0"); 
-			if (theIdentifierFactory != null) {
-				return theIdentifierFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new IdentifierFactoryImpl();
-	}
+        try {
+            IdentifierFactory theIdentifierFactory = (IdentifierFactory)EPackage.Registry.INSTANCE.getEFactory(IdentifierPackage.eNS_URI);
+            if (theIdentifierFactory != null) {
+                return theIdentifierFactory;
+            }
+        }
+        catch (Exception exception) {
+            EcorePlugin.INSTANCE.log(exception);
+        }
+        return new IdentifierFactoryImpl();
+    }
 
 	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+     * Creates an instance of the factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public IdentifierFactoryImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+        switch (eClass.getClassifierID()) {
+            default:
+                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        }
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public IdentifierPackage getIdentifierPackage() {
-		return (IdentifierPackage)getEPackage();
-	}
+        return (IdentifierPackage)getEPackage();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+     * @deprecated
+     * @generated
+     */
 	@Deprecated
 	public static IdentifierPackage getPackage() {
-		return IdentifierPackage.eINSTANCE;
-	}
+        return IdentifierPackage.eINSTANCE;
+    }
 
 } //IdentifierFactoryImpl

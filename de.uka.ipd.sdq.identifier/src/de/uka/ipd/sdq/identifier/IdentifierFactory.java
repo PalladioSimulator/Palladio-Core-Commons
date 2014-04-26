@@ -18,26 +18,20 @@ import org.eclipse.emf.ecore.EFactory;
  */
 public interface IdentifierFactory extends EFactory {
 	/**
-	 * <!-- begin-user-doc -->
+     * The singleton instance of the factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	IdentifierFactory eINSTANCE = de.uka.ipd.sdq.identifier.impl.IdentifierFactoryImpl.init();
 
 	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
+     * Returns the package supported by this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
+     * @return the package supported by this factory.
+     * @generated
+     */
 	IdentifierPackage getIdentifierPackage();
 
 } //IdentifierFactory

@@ -19,7 +19,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @param <ObserverInterfaceType>
  *            The interface which should be implemented by the observers.
  */
-public class AbstractObservable<ObserverInterfaceType> implements IAbstractObservable<ObserverInterfaceType> {
+public abstract class AbstractObservable<ObserverInterfaceType> implements IAbstractObservable<ObserverInterfaceType> {
 
     /**
      * The ObserverPool is a proxy which allows calls to an interface to be forwarded to a set of

@@ -22,9 +22,9 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
 public interface NumericLiteral extends UnitCarryingElement, Atom {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // NumericLiteral

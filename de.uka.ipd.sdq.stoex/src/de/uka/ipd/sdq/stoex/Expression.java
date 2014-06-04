@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex;
 
-import org.eclipse.emf.ecore.EObject;
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,14 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getExpression()
  * @model abstract="true"
+ * @extends EStereotypableObject
  * @generated
  */
-public interface Expression extends EObject {
+public interface Expression extends EStereotypableObject {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // Expression

@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.identifier;
 
-import org.eclipse.emf.ecore.EObject;
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,9 +32,10 @@ import org.eclipse.emf.ecore.EObject;
  * @see de.uka.ipd.sdq.identifier.IdentifierPackage#getIdentifier()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot null='Identifier.allInstances()->isUnique(p: Identifier | p.id)'"
+ * @extends EStereotypableObject
  * @generated
  */
-public interface Identifier extends EObject {
+public interface Identifier extends EStereotypableObject {
 	/**
      * Returns the value of the '<em><b>Id</b></em>' attribute.
      * <!-- begin-user-doc -->

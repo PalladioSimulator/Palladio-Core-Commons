@@ -23,29 +23,29 @@ import de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl;
  */
 public abstract class NumericLiteralImpl extends UnitCarryingElementImpl implements NumericLiteral {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NumericLiteralImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return StoexPackage.Literals.NUMERIC_LITERAL;
-	}
+        return StoexPackage.Literals.NUMERIC_LITERAL;
+    }
 
 } //NumericLiteralImpl

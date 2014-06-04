@@ -37,269 +37,269 @@ import de.uka.ipd.sdq.units.util.UnitsAdapterFactory;
  */
 public class UnitsItemProviderAdapterFactory extends UnitsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * This keeps track of the root adapter factory that delegates to this adapter factory.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the root adapter factory that delegates to this adapter factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ComposedAdapterFactory parentAdapterFactory;
 
 	/**
-	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-	 * <!-- begin-user-doc -->
+     * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
 	/**
-	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-	 * <!-- begin-user-doc -->
+     * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
 	/**
-	 * This constructs an instance.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UnitsItemProviderAdapterFactory() {
-		supportedTypes.add(IEditingDomainItemProvider.class);
-		supportedTypes.add(IStructuredItemContentProvider.class);
-		supportedTypes.add(ITreeItemContentProvider.class);
-		supportedTypes.add(IItemLabelProvider.class);
-		supportedTypes.add(IItemPropertySource.class);
-	}
+        supportedTypes.add(IEditingDomainItemProvider.class);
+        supportedTypes.add(IStructuredItemContentProvider.class);
+        supportedTypes.add(ITreeItemContentProvider.class);
+        supportedTypes.add(IItemLabelProvider.class);
+        supportedTypes.add(IItemPropertySource.class);
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.BaseUnit} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.BaseUnit} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected BaseUnitItemProvider baseUnitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.uka.ipd.sdq.units.BaseUnit}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.uka.ipd.sdq.units.BaseUnit}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createBaseUnitAdapter() {
-		if (baseUnitItemProvider == null) {
-			baseUnitItemProvider = new BaseUnitItemProvider(this);
-		}
+        if (baseUnitItemProvider == null) {
+            baseUnitItemProvider = new BaseUnitItemProvider(this);
+        }
 
-		return baseUnitItemProvider;
-	}
+        return baseUnitItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitRepository} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitRepository} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitRepositoryItemProvider unitRepositoryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitRepository}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitRepository}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createUnitRepositoryAdapter() {
-		if (unitRepositoryItemProvider == null) {
-			unitRepositoryItemProvider = new UnitRepositoryItemProvider(this);
-		}
+        if (unitRepositoryItemProvider == null) {
+            unitRepositoryItemProvider = new UnitRepositoryItemProvider(this);
+        }
 
-		return unitRepositoryItemProvider;
-	}
+        return unitRepositoryItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitMultiplication} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitMultiplication} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitMultiplicationItemProvider unitMultiplicationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitMultiplication}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitMultiplication}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createUnitMultiplicationAdapter() {
-		if (unitMultiplicationItemProvider == null) {
-			unitMultiplicationItemProvider = new UnitMultiplicationItemProvider(this);
-		}
+        if (unitMultiplicationItemProvider == null) {
+            unitMultiplicationItemProvider = new UnitMultiplicationItemProvider(this);
+        }
 
-		return unitMultiplicationItemProvider;
-	}
+        return unitMultiplicationItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitPower} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitPower} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitPowerItemProvider unitPowerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitPower}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitPower}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createUnitPowerAdapter() {
-		if (unitPowerItemProvider == null) {
-			unitPowerItemProvider = new UnitPowerItemProvider(this);
-		}
+        if (unitPowerItemProvider == null) {
+            unitPowerItemProvider = new UnitPowerItemProvider(this);
+        }
 
-		return unitPowerItemProvider;
-	}
+        return unitPowerItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitLiteral} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitLiteral} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitLiteralItemProvider unitLiteralItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitLiteral}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitLiteral}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createUnitLiteralAdapter() {
-		if (unitLiteralItemProvider == null) {
-			unitLiteralItemProvider = new UnitLiteralItemProvider(this);
-		}
+        if (unitLiteralItemProvider == null) {
+            unitLiteralItemProvider = new UnitLiteralItemProvider(this);
+        }
 
-		return unitLiteralItemProvider;
-	}
+        return unitLiteralItemProvider;
+    }
 
 	/**
-	 * This returns the root adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+     * This returns the root adapter factory that contains this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-	}
+        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+    }
 
 	/**
-	 * This sets the composed adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+     * This sets the composed adapter factory that contains this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-		this.parentAdapterFactory = parentAdapterFactory;
-	}
+        this.parentAdapterFactory = parentAdapterFactory;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean isFactoryForType(Object type) {
-		return supportedTypes.contains(type) || super.isFactoryForType(type);
-	}
+        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    }
 
 	/**
-	 * This implementation substitutes the factory itself as the key for the adapter.
-	 * <!-- begin-user-doc -->
+     * This implementation substitutes the factory itself as the key for the adapter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter adapt(Notifier notifier, Object type) {
-		return super.adapt(notifier, this);
-	}
+        return super.adapt(notifier, this);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
-			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
-				return adapter;
-			}
-		}
+        if (isFactoryForType(type)) {
+            Object adapter = super.adapt(object, type);
+            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+                return adapter;
+            }
+        }
 
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * This adds a listener.
-	 * <!-- begin-user-doc -->
+     * This adds a listener.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void addListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.addListener(notifyChangedListener);
-	}
+        changeNotifier.addListener(notifyChangedListener);
+    }
 
 	/**
-	 * This removes a listener.
-	 * <!-- begin-user-doc -->
+     * This removes a listener.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.removeListener(notifyChangedListener);
-	}
+        changeNotifier.removeListener(notifyChangedListener);
+    }
 
 	/**
-	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-	 * <!-- begin-user-doc -->
+     * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void fireNotifyChanged(Notification notification) {
-		changeNotifier.fireNotifyChanged(notification);
+        changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
-			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
+        if (parentAdapterFactory != null) {
+            parentAdapterFactory.fireNotifyChanged(notification);
+        }
+    }
 
 	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
+     * This disposes all of the item providers created by this factory. 
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void dispose() {
-		if (baseUnitItemProvider != null) baseUnitItemProvider.dispose();
-		if (unitRepositoryItemProvider != null) unitRepositoryItemProvider.dispose();
-		if (unitMultiplicationItemProvider != null) unitMultiplicationItemProvider.dispose();
-		if (unitPowerItemProvider != null) unitPowerItemProvider.dispose();
-		if (unitLiteralItemProvider != null) unitLiteralItemProvider.dispose();
-	}
+        if (baseUnitItemProvider != null) baseUnitItemProvider.dispose();
+        if (unitRepositoryItemProvider != null) unitRepositoryItemProvider.dispose();
+        if (unitMultiplicationItemProvider != null) unitMultiplicationItemProvider.dispose();
+        if (unitPowerItemProvider != null) unitPowerItemProvider.dispose();
+        if (unitLiteralItemProvider != null) unitLiteralItemProvider.dispose();
+    }
 
 }

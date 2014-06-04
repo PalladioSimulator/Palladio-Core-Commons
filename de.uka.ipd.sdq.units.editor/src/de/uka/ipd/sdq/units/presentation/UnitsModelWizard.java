@@ -72,52 +72,49 @@ import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
 public class UnitsModelWizard extends Wizard implements INewWizard {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The supported extensions for created files.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
-            .asList(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameExtensions").split("\\s*,\\s*")));
+    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameExtensions").split("\\s*,\\s*")));
 
     /**
-     * A formatted list of supported file extensions, suitable for display. <!-- begin-user-doc -->
+     * A formatted list of supported file extensions, suitable for display.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = UnitsEditorPlugin.INSTANCE.getString(
-            "_UI_UnitsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    public static final String FORMATTED_FILE_EXTENSIONS = UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
-     * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This caches an instance of the model package.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected UnitsPackage unitsPackage = UnitsPackage.eINSTANCE;
 
     /**
-     * This caches an instance of the model factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This caches an instance of the model factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected UnitsFactory unitsFactory = unitsPackage.getUnitsFactory();
 
     /**
-     * This is the file creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This is the file creation page.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected UnitsModelWizardNewFileCreationPage newFileCreationPage;
 
     /**
-     * This is the initial object creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This is the initial object creation page.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected UnitsModelWizardInitialObjectCreationPage initialObjectCreationPage;
@@ -131,37 +128,36 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
     protected IStructuredSelection selection;
 
     /**
-     * Remember the workbench during initialization. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Remember the workbench during initialization.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected IWorkbench workbench;
 
     /**
-     * Caches the names of the types that can be created as the root object. <!-- begin-user-doc -->
+     * Caches the names of the types that can be created as the root object.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected List<String> initialObjectNames;
 
     /**
-     * This just records the information. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This just records the information.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public void init(IWorkbench workbench, IStructuredSelection selection) {
         this.workbench = workbench;
         this.selection = selection;
         setWindowTitle(UnitsEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-        setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(UnitsEditorPlugin.INSTANCE
-                .getImage("full/wizban/NewUnits")));
+        setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(UnitsEditorPlugin.INSTANCE.getImage("full/wizban/NewUnits")));
     }
 
     /**
-     * Returns the names of the types that can be created as the root object. <!-- begin-user-doc
+     * Returns the names of the types that can be created as the root object.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Collection<String> getInitialObjectNames() {
@@ -169,7 +165,7 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
             initialObjectNames = new ArrayList<String>();
             for (EClassifier eClassifier : unitsPackage.getEClassifiers()) {
                 if (eClassifier instanceof EClass) {
-                    EClass eClass = (EClass) eClassifier;
+                    EClass eClass = (EClass)eClassifier;
                     if (!eClass.isAbstract()) {
                         initialObjectNames.add(eClass.getName());
                     }
@@ -181,19 +177,19 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
     }
 
     /**
-     * Create a new model. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Create a new model.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected EObject createInitialModel() {
-        EClass eClass = (EClass) unitsPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+        EClass eClass = (EClass)unitsPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
         EObject rootObject = unitsFactory.create(eClass);
         return rootObject;
     }
 
     /**
-     * Do the work after everything is specified. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Do the work after everything is specified.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -205,41 +201,44 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
             // Do the work within an operation.
             //
-            WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-                @Override
-                protected void execute(IProgressMonitor progressMonitor) {
-                    try {
-                        // Create a resource set
-                        //
-                        ResourceSet resourceSet = new ResourceSetImpl();
+            WorkspaceModifyOperation operation =
+                new WorkspaceModifyOperation() {
+                    @Override
+                    protected void execute(IProgressMonitor progressMonitor) {
+                        try {
+                            // Create a resource set
+                            //
+                            ResourceSet resourceSet = new ResourceSetImpl();
 
-                        // Get the URI of the model file.
-                        //
-                        URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
+                            // Get the URI of the model file.
+                            //
+                            URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
 
-                        // Create a resource for this file.
-                        //
-                        Resource resource = resourceSet.createResource(fileURI);
+                            // Create a resource for this file.
+                            //
+                            Resource resource = resourceSet.createResource(fileURI);
 
-                        // Add the initial model object to the contents.
-                        //
-                        EObject rootObject = createInitialModel();
-                        if (rootObject != null) {
-                            resource.getContents().add(rootObject);
+                            // Add the initial model object to the contents.
+                            //
+                            EObject rootObject = createInitialModel();
+                            if (rootObject != null) {
+                                resource.getContents().add(rootObject);
+                            }
+
+                            // Save the contents of the resource to the file system.
+                            //
+                            Map<Object, Object> options = new HashMap<Object, Object>();
+                            options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
+                            resource.save(options);
                         }
-
-                        // Save the contents of the resource to the file system.
-                        //
-                        Map<Object, Object> options = new HashMap<Object, Object>();
-                        options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
-                        resource.save(options);
-                    } catch (Exception exception) {
-                        UnitsEditorPlugin.INSTANCE.log(exception);
-                    } finally {
-                        progressMonitor.done();
+                        catch (Exception exception) {
+                            UnitsEditorPlugin.INSTANCE.log(exception);
+                        }
+                        finally {
+                            progressMonitor.done();
+                        }
                     }
-                }
-            };
+                };
 
             getContainer().run(false, false, operation);
 
@@ -250,40 +249,43 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
             final IWorkbenchPart activePart = page.getActivePart();
             if (activePart instanceof ISetSelectionTarget) {
                 final ISelection targetSelection = new StructuredSelection(modelFile);
-                getShell().getDisplay().asyncExec(new Runnable() {
-                    public void run() {
-                        ((ISetSelectionTarget) activePart).selectReveal(targetSelection);
-                    }
-                });
+                getShell().getDisplay().asyncExec
+                    (new Runnable() {
+                         public void run() {
+                             ((ISetSelectionTarget)activePart).selectReveal(targetSelection);
+                         }
+                     });
             }
 
             // Open an editor on the new file.
             //
             try {
-                page.openEditor(new FileEditorInput(modelFile),
-                        workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
-            } catch (PartInitException exception) {
-                MessageDialog.openError(workbenchWindow.getShell(),
-                        UnitsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+                page.openEditor
+                    (new FileEditorInput(modelFile),
+                     workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
+            }
+            catch (PartInitException exception) {
+                MessageDialog.openError(workbenchWindow.getShell(), UnitsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
                 return false;
             }
 
             return true;
-        } catch (Exception exception) {
+        }
+        catch (Exception exception) {
             UnitsEditorPlugin.INSTANCE.log(exception);
             return false;
         }
     }
 
     /**
-     * This is the one page of the wizard. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This is the one page of the wizard.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public class UnitsModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
         /**
-         * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         * Pass in the selection.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
          * @generated
          */
         public UnitsModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
@@ -291,9 +293,9 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         }
 
         /**
-         * The framework calls this to see if the file is correct. <!-- begin-user-doc --> <!--
+         * The framework calls this to see if the file is correct.
+         * <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         * 
          * @generated
          */
         @Override
@@ -302,8 +304,7 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
                 String extension = new Path(getFileName()).getFileExtension();
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
                     String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-                    setErrorMessage(UnitsEditorPlugin.INSTANCE.getString(key,
-                            new Object[] { FORMATTED_FILE_EXTENSIONS }));
+                    setErrorMessage(UnitsEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
                 return true;
@@ -313,7 +314,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         public IFile getModelFile() {
@@ -322,15 +322,14 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
     }
 
     /**
-     * This is the page where the type of object to create is selected. <!-- begin-user-doc --> <!--
+     * This is the page where the type of object to create is selected.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public class UnitsModelWizardInitialObjectCreationPage extends WizardPage {
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         protected Combo initialObjectField;
@@ -342,14 +341,13 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         protected Combo encodingField;
 
         /**
-         * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         * Pass in the selection.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
          * @generated
          */
         public UnitsModelWizardInitialObjectCreationPage(String pageId) {
@@ -358,12 +356,10 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         public void createControl(Composite parent) {
-            Composite composite = new Composite(parent, SWT.NONE);
-            {
+            Composite composite = new Composite(parent, SWT.NONE); {
                 GridLayout layout = new GridLayout();
                 layout.numColumns = 1;
                 layout.verticalSpacing = 12;
@@ -431,18 +427,16 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         protected ModifyListener validator = new ModifyListener() {
-            public void modifyText(ModifyEvent e) {
-                setPageComplete(validatePage());
-            }
-        };
+                public void modifyText(ModifyEvent e) {
+                    setPageComplete(validatePage());
+                }
+            };
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         protected boolean validatePage() {
@@ -451,7 +445,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         @Override
@@ -461,7 +454,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
                 if (initialObjectField.getItemCount() == 1) {
                     initialObjectField.clearSelection();
                     encodingField.setFocus();
-                } else {
+                }
+                else {
                     encodingField.clearSelection();
                     initialObjectField.setFocus();
                 }
@@ -470,7 +464,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         public String getInitialObjectName() {
@@ -486,7 +479,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         public String getEncoding() {
@@ -502,7 +494,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         protected String getLabel(String typeName) {
             try {
                 return UnitsEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
-            } catch (MissingResourceException mre) {
+            }
+            catch(MissingResourceException mre) {
                 UnitsEditorPlugin.INSTANCE.log(mre);
             }
             return typeName;
@@ -510,15 +503,12 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
          * @generated
          */
         protected Collection<String> getEncodings() {
             if (encodings == null) {
                 encodings = new ArrayList<String>();
-                for (StringTokenizer stringTokenizer = new StringTokenizer(
-                        UnitsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
-                        .hasMoreTokens();) {
+                for (StringTokenizer stringTokenizer = new StringTokenizer(UnitsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
                     encodings.add(stringTokenizer.nextToken());
                 }
             }
@@ -527,9 +517,9 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
     }
 
     /**
-     * The framework calls this to create the contents of the wizard. <!-- begin-user-doc --> <!--
+     * The framework calls this to create the contents of the wizard.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -539,8 +529,7 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         newFileCreationPage = new UnitsModelWizardNewFileCreationPage("Whatever", selection);
         newFileCreationPage.setTitle(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsModelWizard_label"));
         newFileCreationPage.setDescription(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsModelWizard_description"));
-        newFileCreationPage.setFileName(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameDefaultBase")
-                + "." + FILE_EXTENSIONS.get(0));
+        newFileCreationPage.setFileName(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
         addPage(newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -552,7 +541,7 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
             if (selectedElement instanceof IResource) {
                 // Get the resource parent, if its a file.
                 //
-                IResource selectedResource = (IResource) selectedElement;
+                IResource selectedResource = (IResource)selectedElement;
                 if (selectedResource.getType() == IResource.FILE) {
                     selectedResource = selectedResource.getParent();
                 }
@@ -566,11 +555,10 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
 
                     // Make up a unique new name here.
                     //
-                    String defaultModelBaseFilename = UnitsEditorPlugin.INSTANCE
-                            .getString("_UI_UnitsEditorFilenameDefaultBase");
+                    String defaultModelBaseFilename = UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameDefaultBase");
                     String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
                     String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
-                    for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
+                    for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
                         modelFilename = defaultModelBaseFilename + i + "." + defaultModelFilenameExtension;
                     }
                     newFileCreationPage.setFileName(modelFilename);
@@ -579,14 +567,13 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         }
         initialObjectCreationPage = new UnitsModelWizardInitialObjectCreationPage("Whatever2");
         initialObjectCreationPage.setTitle(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsModelWizard_label"));
-        initialObjectCreationPage.setDescription(UnitsEditorPlugin.INSTANCE
-                .getString("_UI_Wizard_initial_object_description"));
+        initialObjectCreationPage.setDescription(UnitsEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         addPage(initialObjectCreationPage);
     }
 
     /**
-     * Get the file from the page. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Get the file from the page.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public IFile getModelFile() {

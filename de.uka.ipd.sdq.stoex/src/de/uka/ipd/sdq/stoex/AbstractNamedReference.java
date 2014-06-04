@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex;
 
-import org.eclipse.emf.ecore.EObject;
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,40 +22,41 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getAbstractNamedReference()
  * @model abstract="true"
+ * @extends EStereotypableObject
  * @generated
  */
-public interface AbstractNamedReference extends EObject {
+public interface AbstractNamedReference extends EStereotypableObject {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * Returns the value of the '<em><b>Reference Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Reference Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reference Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference Name</em>' attribute.
-	 * @see #setReferenceName(String)
-	 * @see de.uka.ipd.sdq.stoex.StoexPackage#getAbstractNamedReference_ReferenceName()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
+     * @return the value of the '<em>Reference Name</em>' attribute.
+     * @see #setReferenceName(String)
+     * @see de.uka.ipd.sdq.stoex.StoexPackage#getAbstractNamedReference_ReferenceName()
+     * @model required="true" ordered="false"
+     * @generated
+     */
 	String getReferenceName();
 
 	/**
-	 * Sets the value of the '{@link de.uka.ipd.sdq.stoex.AbstractNamedReference#getReferenceName <em>Reference Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.uka.ipd.sdq.stoex.AbstractNamedReference#getReferenceName <em>Reference Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reference Name</em>' attribute.
-	 * @see #getReferenceName()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Reference Name</em>' attribute.
+     * @see #getReferenceName()
+     * @generated
+     */
 	void setReferenceName(String value);
 
 } // AbstractNamedReference

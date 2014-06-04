@@ -6,16 +6,15 @@
  */
 package de.uka.ipd.sdq.units.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.UnitLiteral;
 import de.uka.ipd.sdq.units.UnitsPackage;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,135 +31,135 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class UnitLiteralImpl extends UnitImpl implements UnitLiteral {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 	/**
-	 * The cached value of the '{@link #getBaseUnit() <em>Base Unit</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getBaseUnit() <em>Base Unit</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBaseUnit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getBaseUnit()
+     * @generated
+     * @ordered
+     */
 	protected BaseUnit baseUnit;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected UnitLiteralImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return UnitsPackage.Literals.UNIT_LITERAL;
-	}
+        return UnitsPackage.Literals.UNIT_LITERAL;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public BaseUnit getBaseUnit() {
-		if (baseUnit != null && baseUnit.eIsProxy()) {
-			InternalEObject oldBaseUnit = (InternalEObject)baseUnit;
-			baseUnit = (BaseUnit)eResolveProxy(oldBaseUnit);
-			if (baseUnit != oldBaseUnit) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnitsPackage.UNIT_LITERAL__BASE_UNIT, oldBaseUnit, baseUnit));
-			}
-		}
-		return baseUnit;
-	}
+        if (baseUnit != null && ((EObject)baseUnit).eIsProxy()) {
+            InternalEObject oldBaseUnit = (InternalEObject)baseUnit;
+            baseUnit = (BaseUnit)eResolveProxy(oldBaseUnit);
+            if (baseUnit != oldBaseUnit) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnitsPackage.UNIT_LITERAL__BASE_UNIT, oldBaseUnit, baseUnit));
+            }
+        }
+        return baseUnit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public BaseUnit basicGetBaseUnit() {
-		return baseUnit;
-	}
+        return baseUnit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setBaseUnit(BaseUnit newBaseUnit) {
-		BaseUnit oldBaseUnit = baseUnit;
-		baseUnit = newBaseUnit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_LITERAL__BASE_UNIT, oldBaseUnit, baseUnit));
-	}
+        BaseUnit oldBaseUnit = baseUnit;
+        baseUnit = newBaseUnit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_LITERAL__BASE_UNIT, oldBaseUnit, baseUnit));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
-				if (resolve) return getBaseUnit();
-				return basicGetBaseUnit();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
+                if (resolve) return getBaseUnit();
+                return basicGetBaseUnit();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
-				setBaseUnit((BaseUnit)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
+                setBaseUnit((BaseUnit)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
-				setBaseUnit((BaseUnit)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
+                setBaseUnit((BaseUnit)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
-				return baseUnit != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case UnitsPackage.UNIT_LITERAL__BASE_UNIT:
+                return baseUnit != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //UnitLiteralImpl

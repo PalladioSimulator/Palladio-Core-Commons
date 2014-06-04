@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.units;
 
-import org.eclipse.emf.ecore.EObject;
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,14 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnit()
  * @model abstract="true"
+ * @extends EStereotypableObject
  * @generated
  */
-public interface Unit extends EObject {
+public interface Unit extends EStereotypableObject {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // Unit

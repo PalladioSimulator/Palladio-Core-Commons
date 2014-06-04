@@ -9,6 +9,7 @@ package de.uka.ipd.sdq.identifier.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+
 import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 

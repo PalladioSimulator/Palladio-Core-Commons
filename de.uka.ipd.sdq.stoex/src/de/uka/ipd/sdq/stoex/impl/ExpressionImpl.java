@@ -7,10 +7,10 @@
 package de.uka.ipd.sdq.stoex.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.StoexPackage;
+import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,31 +21,31 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  *
  * @generated
  */
-public abstract class ExpressionImpl extends EObjectImpl implements Expression {
+public abstract class ExpressionImpl extends EStereotypableObjectImpl implements Expression {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ExpressionImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return StoexPackage.Literals.EXPRESSION;
-	}
+        return StoexPackage.Literals.EXPRESSION;
+    }
 
 } //ExpressionImpl

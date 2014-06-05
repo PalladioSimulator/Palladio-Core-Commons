@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.stoex.feature"
       label="Palladio Commons StoEx"
-      version="1.4.0.qualifier"
+      version="2.1.0.qualifier"
       provider-name="sdq.ipd.kit.edu">
 
    <description url="http://sdq.ipd.uka.de">

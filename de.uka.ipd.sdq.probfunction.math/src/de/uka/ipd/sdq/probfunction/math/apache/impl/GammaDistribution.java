@@ -1,7 +1,7 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-
 import org.apache.commons.math.distribution.GammaDistributionImpl;
+
 //import umontreal.iro.lecuyer.probdist.GammaDist;
 //import umontreal.iro.lecuyer.probdist.GammaDistFromMoments;
 import de.uka.ipd.sdq.probfunction.math.IGammaDistribution;
@@ -28,190 +28,160 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
  */
 public class GammaDistribution extends AbstractContinousPDF implements IGammaDistribution {
 
-	/**
-	 *  Constructs a GammaDist object with parameters alpha and theta.
-	 * @param alpha shape parameter
-	 * @param theta scale parameter = 1 / rate parameter
-	 */
-	public GammaDistribution(double alpha, double theta, IRandomGenerator rng){
-		super(rng);
-		/* 
-		 * In contrast to SSJ apache common math uses beta as a direct replacement of theta! 
-		 * No 1/theta required!
-		 */ 
-		this.internalFunction = new GammaDistributionImpl(alpha, theta);
-	}
-	
-	@Override
-	public double density(double x) {
-		//SSJ compatibility
-		if(x == 0.0)
-			return 0.0;
-		
-		return super.density(x);
-	}
+    /**
+     * Constructs a GammaDist object with parameters alpha and theta.
+     * 
+     * @param alpha
+     *            shape parameter
+     * @param theta
+     *            scale parameter = 1 / rate parameter
+     */
+    public GammaDistribution(double alpha, double theta, IRandomGenerator rng) {
+        super(rng);
+        /*
+         * In contrast to SSJ apache common math uses beta as a direct replacement of theta! No
+         * 1/theta required!
+         */
+        this.internalFunction = new GammaDistributionImpl(alpha, theta);
+    }
 
-	protected GammaDistribution(IRandomGenerator rng){
-		super(rng);
-	}
+    @Override
+    public double density(double x) {
+        // SSJ compatibility
+        if (x == 0.0)
+            return 0.0;
 
-	private GammaDistribution(GammaDistributionImpl internal, IRandomGenerator rng){
-		super(rng);
-		this.internalFunction = internal;
-	}
+        return super.density(x);
+    }
 
-	
-	public IProbabilityDensityFunction add(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    protected GammaDistribution(IRandomGenerator rng) {
+        super(rng);
+    }
 
-	
-	public IProbabilityDensityFunction div(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    private GammaDistribution(GammaDistributionImpl internal, IRandomGenerator rng) {
+        super(rng);
+        this.internalFunction = internal;
+    }
 
-	public IProbabilityDensityFunction getFourierTransform()
-			throws FunctionNotInTimeDomainException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction add(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
+            UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction getInverseFourierTransform()
-			throws FunctionNotInFrequencyDomainException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction div(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
+            UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double getLowerDomainBorder() {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction getFourierTransform() throws FunctionNotInTimeDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double greaterThan(IProbabilityDensityFunction pdf)
-			throws ProbabilityFunctionException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction getInverseFourierTransform() throws FunctionNotInFrequencyDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double lessThan(IProbabilityDensityFunction pdf)
-			throws ProbabilityFunctionException {
-		throw new UnsupportedOperationException();
-	}
+    public double getLowerDomainBorder() {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction mult(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    public double greaterThan(IProbabilityDensityFunction pdf) throws ProbabilityFunctionException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double probabilisticEquals(IProbabilityDensityFunction pdf)
-			throws ProbabilityFunctionException {
-		throw new UnsupportedOperationException();
-	}
+    public double lessThan(IProbabilityDensityFunction pdf) throws ProbabilityFunctionException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction scale(double scalar) {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction mult(IProbabilityDensityFunction pdf)
+            throws FunctionsInDifferenDomainsException, UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction sub(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    public double probabilisticEquals(IProbabilityDensityFunction pdf) throws ProbabilityFunctionException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public void checkConstrains() throws NegativeDistanceException,
-			ProbabilitySumNotOneException, FunctionNotInTimeDomainException,
-			UnitNotSetException, UnitNameNotSetException,
-			InvalidSampleValueException {
-		throw new UnsupportedOperationException();
+    public IProbabilityDensityFunction scale(double scalar) {
+        throw new UnsupportedOperationException();
+    }
 
-	}
+    public IProbabilityDensityFunction sub(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
+            UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
+    public void checkConstrains() throws NegativeDistanceException, ProbabilitySumNotOneException,
+            FunctionNotInTimeDomainException, UnitNotSetException, UnitNameNotSetException, InvalidSampleValueException {
+        throw new UnsupportedOperationException();
 
-	
-	public Object getMedian() throws UnorderedDomainException {
-		throw new UnsupportedOperationException();
-	}
+    }
 
-	
-	public Object getPercentile(int p) throws IndexOutOfBoundsException,
-			UnorderedDomainException {
-		throw new UnsupportedOperationException();
-	}
-	
-	public boolean hasOrderedDomain() {
-		throw new UnsupportedOperationException();
-	}
+    public Object getMedian() throws UnorderedDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	/**
-	 * Shape parameter
-	 */
-	public double getAlpha() {
-		return ((GammaDistributionImpl)this.internalFunction).getAlpha();
-	}
+    public Object getPercentile(int p) throws IndexOutOfBoundsException, UnorderedDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	/**
-	 * Scale parameter beta
-	 */
-	public double getTheta() {
-		return ((GammaDistributionImpl)this.internalFunction).getBeta();
-	}
+    public boolean hasOrderedDomain() {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction getCumulativeFunction()
-			throws FunctionNotInTimeDomainException {
-		throw new UnsupportedOperationException();
-	}
+    /**
+     * Shape parameter
+     */
+    public double getAlpha() {
+        return ((GammaDistributionImpl) this.internalFunction).getAlpha();
+    }
 
-	
-	public IProbabilityDensityFunction shiftDomain(double scalar)
-			throws DomainNotNumbersException {
-		double newMean = this.getArithmeticMeanValue() + scalar;
-		double newVariance = this.getVariance();
-		return new GammaDistribution(new GammaDistributionFromMomentsImpl(newMean, newVariance), sampleDrawer);
-	}
+    /**
+     * Scale parameter beta
+     */
+    public double getTheta() {
+        return ((GammaDistributionImpl) this.internalFunction).getBeta();
+    }
 
-	
-	@Override
-	public double getVariance() 
-	{
-		//variance is easier to calculate for gamma than sd
-		return this.getAlpha()*this.getTheta()*this.getTheta();
-	}
+    public IProbabilityDensityFunction getCumulativeFunction() throws FunctionNotInTimeDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	public IProbabilityDensityFunction stretchDomain(double scalar) {
-		double newMean = this.getArithmeticMeanValue() * scalar;
-		double newVariance = this.getVariance() * scalar * scalar;
-		return new GammaDistribution(new GammaDistributionFromMomentsImpl(newMean, newVariance), sampleDrawer);
-	}
+    public IProbabilityDensityFunction shiftDomain(double scalar) throws DomainNotNumbersException {
+        double newMean = this.getArithmeticMeanValue() + scalar;
+        double newVariance = this.getVariance();
+        return new GammaDistribution(new GammaDistributionFromMomentsImpl(newMean, newVariance), sampleDrawer);
+    }
 
-	@Override
-	public double getStandardDeviation() {
-		return Math.sqrt(this.getVariance());
-	}
+    @Override
+    public double getVariance() {
+        // variance is easier to calculate for gamma than sd
+        return this.getAlpha() * this.getTheta() * this.getTheta();
+    }
 
-	@Override
-	public double getXinf() {
-		return 0.0;
-	}
+    public IProbabilityDensityFunction stretchDomain(double scalar) {
+        double newMean = this.getArithmeticMeanValue() * scalar;
+        double newVariance = this.getVariance() * scalar * scalar;
+        return new GammaDistribution(new GammaDistributionFromMomentsImpl(newMean, newVariance), sampleDrawer);
+    }
 
-	@Override
-	public double getXsup() {
-		return Double.POSITIVE_INFINITY;
-	}
+    @Override
+    public double getStandardDeviation() {
+        return Math.sqrt(this.getVariance());
+    }
 
-	@Override
-	public double getArithmeticMeanValue() throws DomainNotNumbersException,
-			FunctionNotInTimeDomainException {
-		return this.getAlpha()*this.getTheta();
-	}
+    @Override
+    public double getXinf() {
+        return 0.0;
+    }
+
+    @Override
+    public double getXsup() {
+        return Double.POSITIVE_INFINITY;
+    }
+
+    @Override
+    public double getArithmeticMeanValue() throws DomainNotNumbersException, FunctionNotInTimeDomainException {
+        return this.getAlpha() * this.getTheta();
+    }
 }

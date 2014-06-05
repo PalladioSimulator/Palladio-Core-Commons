@@ -13,29 +13,32 @@ import org.eclipse.emf.edit.provider.IItemProviderDecorator;
 
 /**
  * @author Steffen Becker
- *
+ * 
  */
 public class FilteredItemsAdapterFactory extends DecoratorAdapterFactory {
 
-	private Collection<?> filterList;
-	private Collection<EReference> additionalChildReferences;
+    private Collection<?> filterList;
+    private Collection<EReference> additionalChildReferences;
 
-	public FilteredItemsAdapterFactory(AdapterFactory decoratedAdapterFactory, Collection<?> filterList, Collection<EReference> childReferences) {
-		super(decoratedAdapterFactory);
-		this.filterList = filterList;
-		this.additionalChildReferences = childReferences;
-	}
+    public FilteredItemsAdapterFactory(AdapterFactory decoratedAdapterFactory, Collection<?> filterList,
+            Collection<EReference> childReferences) {
+        super(decoratedAdapterFactory);
+        this.filterList = filterList;
+        this.additionalChildReferences = childReferences;
+    }
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.emf.edit.provider.DecoratorAdapterFactory#createItemProviderDecorator(java.lang.Object, java.lang.Object)
-	 */
-	@Override
-	protected IItemProviderDecorator createItemProviderDecorator(Object target,
-			Object Type) {
-		IItemProviderDecorator decoredProvider = new FilteringItemProvider(this,filterList,additionalChildReferences);
-		decoredProvider.setDecoratedItemProvider((IChangeNotifier)getDecoratedAdapterFactory().adapt(target, Type));
-		return decoredProvider;
-	}
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * org.eclipse.emf.edit.provider.DecoratorAdapterFactory#createItemProviderDecorator(java.lang
+     * .Object, java.lang.Object)
+     */
+    @Override
+    protected IItemProviderDecorator createItemProviderDecorator(Object target, Object Type) {
+        IItemProviderDecorator decoredProvider = new FilteringItemProvider(this, filterList, additionalChildReferences);
+        decoredProvider.setDecoratedItemProvider((IChangeNotifier) getDecoratedAdapterFactory().adapt(target, Type));
+        return decoredProvider;
+    }
 
-	
 }

@@ -13,20 +13,21 @@ import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
  */
 public class DefaultRandomGenerator implements IRandomGenerator {
 
-	private Random randomGen;
-	
-	public void setSeed(Long seed) {
-		this.randomGen = new Random(seed);
-	}
+    private Random randomGen;
 
-	public DefaultRandomGenerator() {
-		this.randomGen = new Random();
-	}
-	
-	public double random() {
-		return randomGen.nextDouble();
-	}
+    public void setSeed(Long seed) {
+        this.randomGen = new Random(seed);
+    }
 
-	public void dispose() {	}
+    public DefaultRandomGenerator() {
+        this.randomGen = new Random();
+    }
+
+    public double random() {
+        return randomGen.nextDouble();
+    }
+
+    public void dispose() {
+    }
 
 }

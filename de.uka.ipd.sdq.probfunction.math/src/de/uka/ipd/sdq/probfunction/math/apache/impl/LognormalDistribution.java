@@ -2,13 +2,13 @@ package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
 import org.apache.commons.math.MathException;
 
-import de.uka.ipd.sdq.probfunction.math.apache.distribution.LognormalDistributionFromMomentsImpl;
-import de.uka.ipd.sdq.probfunction.math.apache.distribution.LognormalDistributionImpl;
 //import umontreal.iro.lecuyer.probdist.LognormalDist;
 //import umontreal.iro.lecuyer.probdist.LognormalDistFromMoments;
 import de.uka.ipd.sdq.probfunction.math.ILognormalDistribution;
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
+import de.uka.ipd.sdq.probfunction.math.apache.distribution.LognormalDistributionFromMomentsImpl;
+import de.uka.ipd.sdq.probfunction.math.apache.distribution.LognormalDistributionImpl;
 import de.uka.ipd.sdq.probfunction.math.exception.DomainNotNumbersException;
 import de.uka.ipd.sdq.probfunction.math.exception.FunctionNotInFrequencyDomainException;
 import de.uka.ipd.sdq.probfunction.math.exception.FunctionNotInTimeDomainException;
@@ -23,215 +23,177 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnitNotSetException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnknownPDFTypeException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
 
-public class LognormalDistribution extends AbstractContinousPDF  implements ILognormalDistribution {
-	
-	public LognormalDistribution(double mu, double sigma, IRandomGenerator rng){
-		super(rng);
-		
-		this.internalFunction = new LognormalDistributionImpl(mu, sigma);
-	}
-	
-	protected LognormalDistribution(IRandomGenerator rng){
-		super(rng);
-	}
+public class LognormalDistribution extends AbstractContinousPDF implements ILognormalDistribution {
 
-	private LognormalDistribution(LognormalDistributionImpl internal, IRandomGenerator rng){
-		super(rng);
-		this.internalFunction = internal;
-	}
-	
-	
-	@Override
-	public double cdf(double x) {
-		//SSJ compatibility
-    	if(x == 0.0)
-    		return 0;
-		return super.cdf(x);
-	}
+    public LognormalDistribution(double mu, double sigma, IRandomGenerator rng) {
+        super(rng);
 
-	@Override
-	public double density(double x) {
-		//SSJ compatibility
-		if(x == 0.0)
-			return 0.0;
-		
-		return super.density(x);
-	}
+        this.internalFunction = new LognormalDistributionImpl(mu, sigma);
+    }
 
-	@Override
-	public double inverseF(double u) 
-	{
-		//SSJ compatibility
-		if(u == 0.0)
-			return 0.0;
-		return super.inverseF(u);
-	}
+    protected LognormalDistribution(IRandomGenerator rng) {
+        super(rng);
+    }
 
+    private LognormalDistribution(LognormalDistributionImpl internal, IRandomGenerator rng) {
+        super(rng);
+        this.internalFunction = internal;
+    }
 
-	
-	public IProbabilityDensityFunction add(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    @Override
+    public double cdf(double x) {
+        // SSJ compatibility
+        if (x == 0.0)
+            return 0;
+        return super.cdf(x);
+    }
 
-	
-	public IProbabilityDensityFunction div(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    @Override
+    public double density(double x) {
+        // SSJ compatibility
+        if (x == 0.0)
+            return 0.0;
 
-	
-	public IProbabilityDensityFunction getCumulativeFunction()
-			throws FunctionNotInTimeDomainException {
-		throw new UnsupportedOperationException();
-	}
+        return super.density(x);
+    }
 
-	
-	public IProbabilityDensityFunction getFourierTransform()
-			throws FunctionNotInTimeDomainException {
-		throw new UnsupportedOperationException();
-	}
+    @Override
+    public double inverseF(double u) {
+        // SSJ compatibility
+        if (u == 0.0)
+            return 0.0;
+        return super.inverseF(u);
+    }
 
-	
-	public IProbabilityDensityFunction getInverseFourierTransform()
-			throws FunctionNotInFrequencyDomainException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction add(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
+            UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double getLowerDomainBorder() {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction div(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
+            UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double greaterThan(IProbabilityDensityFunction pdf)
-			throws ProbabilityFunctionException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction getCumulativeFunction() throws FunctionNotInTimeDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double lessThan(IProbabilityDensityFunction pdf)
-			throws ProbabilityFunctionException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction getFourierTransform() throws FunctionNotInTimeDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction mult(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction getInverseFourierTransform() throws FunctionNotInFrequencyDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public double probabilisticEquals(IProbabilityDensityFunction pdf)
-			throws ProbabilityFunctionException {
-		throw new UnsupportedOperationException();
-	}
+    public double getLowerDomainBorder() {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction scale(double scalar) {
-		throw new UnsupportedOperationException();
-	}
+    public double greaterThan(IProbabilityDensityFunction pdf) throws ProbabilityFunctionException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction sub(IProbabilityDensityFunction pdf)
-			throws FunctionsInDifferenDomainsException,
-			UnknownPDFTypeException, IncompatibleUnitsException {
-		throw new UnsupportedOperationException();
-	}
+    public double lessThan(IProbabilityDensityFunction pdf) throws ProbabilityFunctionException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public void checkConstrains() throws NegativeDistanceException,
-			ProbabilitySumNotOneException, FunctionNotInTimeDomainException,
-			UnitNotSetException, UnitNameNotSetException,
-			InvalidSampleValueException {
-		throw new UnsupportedOperationException();
+    public IProbabilityDensityFunction mult(IProbabilityDensityFunction pdf)
+            throws FunctionsInDifferenDomainsException, UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	}
+    public double probabilisticEquals(IProbabilityDensityFunction pdf) throws ProbabilityFunctionException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public Object getMedian() throws UnorderedDomainException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction scale(double scalar) {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public Object getPercentile(int p) throws IndexOutOfBoundsException,
-			UnorderedDomainException {
-		throw new UnsupportedOperationException();
-	}
+    public IProbabilityDensityFunction sub(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
+            UnknownPDFTypeException, IncompatibleUnitsException {
+        throw new UnsupportedOperationException();
+    }
 
-	public boolean hasOrderedDomain() {
-		throw new UnsupportedOperationException();
-	}
+    public void checkConstrains() throws NegativeDistanceException, ProbabilitySumNotOneException,
+            FunctionNotInTimeDomainException, UnitNotSetException, UnitNameNotSetException, InvalidSampleValueException {
+        throw new UnsupportedOperationException();
 
-	
-	public double getMu() {
-		return ((LognormalDistributionImpl)this.internalFunction).getMean();
-	}
+    }
 
-	
-	public double getSigma() {
-		return ((LognormalDistributionImpl)this.internalFunction).getStandardDeviation();
-	}
+    public Object getMedian() throws UnorderedDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction shiftDomain(double scalar)
-			throws DomainNotNumbersException {
-		double newMean = this.getArithmeticMeanValue() + scalar;
-		double newVariance = this.getVariance();
-		try {
-			return new LognormalDistribution(new LognormalDistributionFromMomentsImpl(newMean, newVariance), sampleDrawer);
-		} catch (MathException e) {
-			throw new ProbabilityFunctionException(e.getLocalizedMessage());
-		}
-	}
+    public Object getPercentile(int p) throws IndexOutOfBoundsException, UnorderedDomainException {
+        throw new UnsupportedOperationException();
+    }
 
-	
-	public IProbabilityDensityFunction stretchDomain(double scalar) {
-		double newMean = this.getArithmeticMeanValue() * scalar;
-		double newVariance = this.getVariance() * scalar * scalar;
-		try {
-			return new LognormalDistribution(new LognormalDistributionFromMomentsImpl(newMean, newVariance), sampleDrawer);
-		} catch (MathException e) {
-			throw new ProbabilityFunctionException(e.getLocalizedMessage());
-		}
-	}
+    public boolean hasOrderedDomain() {
+        throw new UnsupportedOperationException();
+    }
 
-	@Override
-	public double getStandardDeviation() {
-		return Math.sqrt(getVariance());
-	}
+    public double getMu() {
+        return ((LognormalDistributionImpl) this.internalFunction).getMean();
+    }
 
-	@Override
-	public double getXinf() {
-		return 0.0;
-	}
+    public double getSigma() {
+        return ((LognormalDistributionImpl) this.internalFunction).getStandardDeviation();
+    }
 
-	@Override
-	public double getXsup() {
-		return Double.POSITIVE_INFINITY;
-	}
+    public IProbabilityDensityFunction shiftDomain(double scalar) throws DomainNotNumbersException {
+        double newMean = this.getArithmeticMeanValue() + scalar;
+        double newVariance = this.getVariance();
+        try {
+            return new LognormalDistribution(new LognormalDistributionFromMomentsImpl(newMean, newVariance),
+                    sampleDrawer);
+        } catch (MathException e) {
+            throw new ProbabilityFunctionException(e.getLocalizedMessage());
+        }
+    }
 
-	@Override
-	public double getArithmeticMeanValue() throws DomainNotNumbersException,
-			FunctionNotInTimeDomainException {
-		double sigma = getSigma();
-		double sigma2 = sigma*sigma;
-		double mu = getMu();
-		return Math.exp(mu+sigma2/2);
-	}
+    public IProbabilityDensityFunction stretchDomain(double scalar) {
+        double newMean = this.getArithmeticMeanValue() * scalar;
+        double newVariance = this.getVariance() * scalar * scalar;
+        try {
+            return new LognormalDistribution(new LognormalDistributionFromMomentsImpl(newMean, newVariance),
+                    sampleDrawer);
+        } catch (MathException e) {
+            throw new ProbabilityFunctionException(e.getLocalizedMessage());
+        }
+    }
 
-	@Override
-	public double getVariance() {
-		double sigma = getSigma();
-		double sigma2 = sigma*sigma;
-		double mu = getMu();
-		return Math.exp(sigma2 + 2*mu)*Math.expm1(sigma2);
-	}
-	
-	
-	
+    @Override
+    public double getStandardDeviation() {
+        return Math.sqrt(getVariance());
+    }
+
+    @Override
+    public double getXinf() {
+        return 0.0;
+    }
+
+    @Override
+    public double getXsup() {
+        return Double.POSITIVE_INFINITY;
+    }
+
+    @Override
+    public double getArithmeticMeanValue() throws DomainNotNumbersException, FunctionNotInTimeDomainException {
+        double sigma = getSigma();
+        double sigma2 = sigma * sigma;
+        double mu = getMu();
+        return Math.exp(mu + sigma2 / 2);
+    }
+
+    @Override
+    public double getVariance() {
+        double sigma = getSigma();
+        double sigma2 = sigma * sigma;
+        double mu = getMu();
+        return Math.exp(sigma2 + 2 * mu) * Math.expm1(sigma2);
+    }
 
 }

@@ -40,8 +40,8 @@ public class ChiSquareDistribution extends AbstractContinousPDF implements IChiS
      * @param degreesOfFreedom
      *            the parameter of this distribution, which must be a positive integer
      */
-    public ChiSquareDistribution(int degreesOfFreedom, IRandomGenerator rng){
-		super(rng);
+    public ChiSquareDistribution(int degreesOfFreedom, IRandomGenerator rng) {
+        super(rng);
         assert (degreesOfFreedom > 0) : "The parameter degrees of freedom must be a positive integer.";
         this.degreesOfFreedom = degreesOfFreedom;
         this.internalFunction = new ChiSquaredDistributionImpl(degreesOfFreedom);

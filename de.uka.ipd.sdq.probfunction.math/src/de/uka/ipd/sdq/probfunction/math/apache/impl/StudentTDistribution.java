@@ -39,8 +39,8 @@ public class StudentTDistribution extends AbstractContinousPDF implements IStude
      * @param degreesOfFreedom
      *            the parameter of this distribution, which must be a positive integer
      */
-    public StudentTDistribution(int degreesOfFreedom, IRandomGenerator rng){
-		super(rng);
+    public StudentTDistribution(int degreesOfFreedom, IRandomGenerator rng) {
+        super(rng);
         assert (degreesOfFreedom > 0) : "The parameter degrees of freedom must be a positive integer.";
         this.degreesOfFreedom = degreesOfFreedom;
         this.internalFunction = new TDistributionImpl(degreesOfFreedom);

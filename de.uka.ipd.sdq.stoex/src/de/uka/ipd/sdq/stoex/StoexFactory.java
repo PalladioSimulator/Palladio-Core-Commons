@@ -9,206 +9,203 @@ package de.uka.ipd.sdq.stoex;
 import org.eclipse.emf.ecore.EFactory;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
+ * non-abstract class of the model. <!-- end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.stoex.StoexPackage
  * @generated
  */
 public interface StoexFactory extends EFactory {
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-	/**
-     * The singleton instance of the factory.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    /**
+     * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	StoexFactory eINSTANCE = de.uka.ipd.sdq.stoex.impl.StoexFactoryImpl.init();
+    StoexFactory eINSTANCE = de.uka.ipd.sdq.stoex.impl.StoexFactoryImpl.init();
 
-	/**
-     * Returns a new object of class '<em>Variable Reference</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Variable Reference</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Variable Reference</em>'.
      * @generated
      */
-	VariableReference createVariableReference();
+    VariableReference createVariableReference();
 
-	/**
-     * Returns a new object of class '<em>Namespace Reference</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Namespace Reference</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Namespace Reference</em>'.
      * @generated
      */
-	NamespaceReference createNamespaceReference();
+    NamespaceReference createNamespaceReference();
 
-	/**
-     * Returns a new object of class '<em>Variable</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Variable</em>'. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @return a new object of class '<em>Variable</em>'.
      * @generated
      */
-	Variable createVariable();
+    Variable createVariable();
 
-	/**
-     * Returns a new object of class '<em>Term Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Term Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Term Expression</em>'.
      * @generated
      */
-	TermExpression createTermExpression();
+    TermExpression createTermExpression();
 
-	/**
-     * Returns a new object of class '<em>Random Variable</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Random Variable</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Random Variable</em>'.
      * @generated
      */
-	RandomVariable createRandomVariable();
+    RandomVariable createRandomVariable();
 
-	/**
-     * Returns a new object of class '<em>Product Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Product Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Product Expression</em>'.
      * @generated
      */
-	ProductExpression createProductExpression();
+    ProductExpression createProductExpression();
 
-	/**
-     * Returns a new object of class '<em>Probability Function Literal</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Probability Function Literal</em>'. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
      * @return a new object of class '<em>Probability Function Literal</em>'.
      * @generated
      */
-	ProbabilityFunctionLiteral createProbabilityFunctionLiteral();
+    ProbabilityFunctionLiteral createProbabilityFunctionLiteral();
 
-	/**
-     * Returns a new object of class '<em>Parenthesis</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Parenthesis</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Parenthesis</em>'.
      * @generated
      */
-	Parenthesis createParenthesis();
+    Parenthesis createParenthesis();
 
-	/**
-     * Returns a new object of class '<em>Int Literal</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Int Literal</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Int Literal</em>'.
      * @generated
      */
-	IntLiteral createIntLiteral();
+    IntLiteral createIntLiteral();
 
-	/**
-     * Returns a new object of class '<em>Double Literal</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Double Literal</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Double Literal</em>'.
      * @generated
      */
-	DoubleLiteral createDoubleLiteral();
+    DoubleLiteral createDoubleLiteral();
 
-	/**
-     * Returns a new object of class '<em>Compare Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Compare Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Compare Expression</em>'.
      * @generated
      */
-	CompareExpression createCompareExpression();
+    CompareExpression createCompareExpression();
 
-	/**
-     * Returns a new object of class '<em>Bool Literal</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Bool Literal</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Bool Literal</em>'.
      * @generated
      */
-	BoolLiteral createBoolLiteral();
+    BoolLiteral createBoolLiteral();
 
-	/**
-     * Returns a new object of class '<em>String Literal</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>String Literal</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>String Literal</em>'.
      * @generated
      */
-	StringLiteral createStringLiteral();
+    StringLiteral createStringLiteral();
 
-	/**
-     * Returns a new object of class '<em>Power Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Power Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Power Expression</em>'.
      * @generated
      */
-	PowerExpression createPowerExpression();
+    PowerExpression createPowerExpression();
 
-	/**
-     * Returns a new object of class '<em>Boolean Operator Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Boolean Operator Expression</em>'. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @return a new object of class '<em>Boolean Operator Expression</em>'.
      * @generated
      */
-	BooleanOperatorExpression createBooleanOperatorExpression();
+    BooleanOperatorExpression createBooleanOperatorExpression();
 
-	/**
-     * Returns a new object of class '<em>Not Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Not Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Not Expression</em>'.
      * @generated
      */
-	NotExpression createNotExpression();
+    NotExpression createNotExpression();
 
-	/**
-     * Returns a new object of class '<em>Negative Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Negative Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Negative Expression</em>'.
      * @generated
      */
-	NegativeExpression createNegativeExpression();
+    NegativeExpression createNegativeExpression();
 
-	/**
-     * Returns a new object of class '<em>Function Literal</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>Function Literal</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>Function Literal</em>'.
      * @generated
      */
-	FunctionLiteral createFunctionLiteral();
+    FunctionLiteral createFunctionLiteral();
 
-	/**
-     * Returns a new object of class '<em>If Else Expression</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns a new object of class '<em>If Else Expression</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @return a new object of class '<em>If Else Expression</em>'.
      * @generated
      */
-	IfElseExpression createIfElseExpression();
+    IfElseExpression createIfElseExpression();
 
-	/**
-     * Returns the package supported by this factory.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the package supported by this factory.
      * @generated
      */
-	StoexPackage getStoexPackage();
+    StoexPackage getStoexPackage();
 
-} //StoexFactory
+} // StoexFactory

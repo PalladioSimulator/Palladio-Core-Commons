@@ -12,39 +12,38 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 import de.uka.ipd.sdq.stoex.Unary;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Unary</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Unary</b></em>'. <!--
+ * end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class UnaryImpl extends PowerImpl implements Unary {
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected UnaryImpl() {
+    protected UnaryImpl() {
         super();
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return StoexPackage.Literals.UNARY;
     }
 
-} //UnaryImpl
+} // UnaryImpl

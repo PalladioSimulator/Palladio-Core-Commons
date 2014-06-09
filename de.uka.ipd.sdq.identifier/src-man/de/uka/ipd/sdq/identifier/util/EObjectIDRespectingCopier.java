@@ -10,19 +10,18 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 public class EObjectIDRespectingCopier extends Copier {
 
-	/**
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = -5643746361216087434L;
+    private static final long serialVersionUID = -5643746361216087434L;
 
-	@Override
-	protected void copyAttribute(EAttribute attribute, EObject object,
-			EObject copyEObject) {
-		if (attribute == IdentifierPackage.eINSTANCE.getIdentifier_Id()) {
-			((Identifier) copyEObject).setId(EcoreUtil.generateUUID());
-		} else {
-			super.copyAttribute(attribute, object, copyEObject);
-		}
-	}
+    @Override
+    protected void copyAttribute(EAttribute attribute, EObject object, EObject copyEObject) {
+        if (attribute == IdentifierPackage.eINSTANCE.getIdentifier_Id()) {
+            ((Identifier) copyEObject).setId(EcoreUtil.generateUUID());
+        } else {
+            super.copyAttribute(attribute, object, copyEObject);
+        }
+    }
 
 }

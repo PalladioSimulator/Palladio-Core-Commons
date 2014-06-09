@@ -11,28 +11,27 @@ import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
- * This class contains helper methods to serialize and deserialize XML documents
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class IdentifierXMLProcessor extends XMLProcessor {
 
     /**
-     * Public constructor to instantiate the helper.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public IdentifierXMLProcessor() {
         super((EPackage.Registry.INSTANCE));
         IdentifierPackage.eINSTANCE.eClass();
     }
-    
+
     /**
-     * Register for "*" and "xml" file extensions the IdentifierResourceFactoryImpl factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Register for "*" and "xml" file extensions the IdentifierResourceFactoryImpl factory. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -45,4 +44,4 @@ public class IdentifierXMLProcessor extends XMLProcessor {
         return registrations;
     }
 
-} //IdentifierXMLProcessor
+} // IdentifierXMLProcessor

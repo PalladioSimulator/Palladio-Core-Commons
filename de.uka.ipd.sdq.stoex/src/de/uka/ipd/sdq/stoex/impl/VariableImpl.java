@@ -17,149 +17,151 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 import de.uka.ipd.sdq.stoex.Variable;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Variable</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Variable</b></em>'. <!--
+ * end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.stoex.impl.VariableImpl#getId_Variable <em>Id Variable</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.impl.VariableImpl#getId_Variable <em>Id Variable</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class VariableImpl extends AtomImpl implements Variable {
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-	/**
-     * The cached value of the '{@link #getId_Variable() <em>Id Variable</em>}' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    /**
+     * The cached value of the '{@link #getId_Variable() <em>Id Variable</em>}' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getId_Variable()
      * @generated
      * @ordered
      */
-	protected AbstractNamedReference id_Variable;
+    protected AbstractNamedReference id_Variable;
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected VariableImpl() {
+    protected VariableImpl() {
         super();
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return StoexPackage.Literals.VARIABLE;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public AbstractNamedReference getId_Variable() {
-        if (id_Variable != null && ((EObject)id_Variable).eIsProxy()) {
-            InternalEObject oldId_Variable = (InternalEObject)id_Variable;
-            id_Variable = (AbstractNamedReference)eResolveProxy(oldId_Variable);
+    public AbstractNamedReference getId_Variable() {
+        if (id_Variable != null && ((EObject) id_Variable).eIsProxy()) {
+            InternalEObject oldId_Variable = (InternalEObject) id_Variable;
+            id_Variable = (AbstractNamedReference) eResolveProxy(oldId_Variable);
             if (id_Variable != oldId_Variable) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, StoexPackage.VARIABLE__ID_VARIABLE, oldId_Variable, id_Variable));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, StoexPackage.VARIABLE__ID_VARIABLE,
+                            oldId_Variable, id_Variable));
             }
         }
         return id_Variable;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public AbstractNamedReference basicGetId_Variable() {
+    public AbstractNamedReference basicGetId_Variable() {
         return id_Variable;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setId_Variable(AbstractNamedReference newId_Variable) {
+    public void setId_Variable(AbstractNamedReference newId_Variable) {
         AbstractNamedReference oldId_Variable = id_Variable;
         id_Variable = newId_Variable;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.VARIABLE__ID_VARIABLE, oldId_Variable, id_Variable));
+            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.VARIABLE__ID_VARIABLE, oldId_Variable,
+                    id_Variable));
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case StoexPackage.VARIABLE__ID_VARIABLE:
-                if (resolve) return getId_Variable();
-                return basicGetId_Variable();
+        case StoexPackage.VARIABLE__ID_VARIABLE:
+            if (resolve)
+                return getId_Variable();
+            return basicGetId_Variable();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eSet(int featureID, Object newValue) {
+    @Override
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case StoexPackage.VARIABLE__ID_VARIABLE:
-                setId_Variable((AbstractNamedReference)newValue);
-                return;
+        case StoexPackage.VARIABLE__ID_VARIABLE:
+            setId_Variable((AbstractNamedReference) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eUnset(int featureID) {
+    @Override
+    public void eUnset(int featureID) {
         switch (featureID) {
-            case StoexPackage.VARIABLE__ID_VARIABLE:
-                setId_Variable((AbstractNamedReference)null);
-                return;
+        case StoexPackage.VARIABLE__ID_VARIABLE:
+            setId_Variable((AbstractNamedReference) null);
+            return;
         }
         super.eUnset(featureID);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean eIsSet(int featureID) {
+    @Override
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case StoexPackage.VARIABLE__ID_VARIABLE:
-                return id_Variable != null;
+        case StoexPackage.VARIABLE__ID_VARIABLE:
+            return id_Variable != null;
         }
         return super.eIsSet(featureID);
     }
 
-} //VariableImpl
+} // VariableImpl

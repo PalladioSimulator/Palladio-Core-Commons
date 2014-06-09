@@ -12,39 +12,38 @@ import de.uka.ipd.sdq.stoex.Power;
 import de.uka.ipd.sdq.stoex.StoexPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Power</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Power</b></em>'. <!--
+ * end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class PowerImpl extends ProductImpl implements Power {
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PowerImpl() {
+    protected PowerImpl() {
         super();
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return StoexPackage.Literals.POWER;
     }
 
-} //PowerImpl
+} // PowerImpl

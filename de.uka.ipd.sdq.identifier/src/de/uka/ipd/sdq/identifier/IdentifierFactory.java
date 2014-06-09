@@ -9,29 +9,26 @@ package de.uka.ipd.sdq.identifier;
 import org.eclipse.emf.ecore.EFactory;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
+ * non-abstract class of the model. <!-- end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.identifier.IdentifierPackage
  * @generated
  */
 public interface IdentifierFactory extends EFactory {
-	/**
-     * The singleton instance of the factory.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	IdentifierFactory eINSTANCE = de.uka.ipd.sdq.identifier.impl.IdentifierFactoryImpl.init();
+    IdentifierFactory eINSTANCE = de.uka.ipd.sdq.identifier.impl.IdentifierFactoryImpl.init();
 
-	/**
-     * Returns the package supported by this factory.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the package supported by this factory.
      * @generated
      */
-	IdentifierPackage getIdentifierPackage();
+    IdentifierPackage getIdentifierPackage();
 
-} //IdentifierFactory
+} // IdentifierFactory

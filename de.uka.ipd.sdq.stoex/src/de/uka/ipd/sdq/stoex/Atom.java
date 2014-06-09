@@ -6,23 +6,21 @@
  */
 package de.uka.ipd.sdq.stoex;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Atom</b></em>'.
- * <!-- end-user-doc -->
- *
- *
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Atom</b></em>'. <!--
+ * end-user-doc -->
+ * 
+ * 
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getAtom()
  * @model abstract="true"
  * @generated
  */
 public interface Atom extends Unary {
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // Atom

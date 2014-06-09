@@ -22,201 +22,204 @@ import de.uka.ipd.sdq.stoex.FunctionLiteral;
 import de.uka.ipd.sdq.stoex.StoexPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Function Literal</b></em>'.
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Function Literal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.stoex.impl.FunctionLiteralImpl#getId <em>Id</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.stoex.impl.FunctionLiteralImpl#getParameters_FunctionLiteral <em>Parameters Function Literal</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.impl.FunctionLiteralImpl#getId <em>Id</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.impl.FunctionLiteralImpl#getParameters_FunctionLiteral <em>
+ * Parameters Function Literal</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
-	/**
-     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
      */
-	protected static final String ID_EDEFAULT = null;
+    protected static final String ID_EDEFAULT = null;
 
-	/**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
      */
-	protected String id = ID_EDEFAULT;
+    protected String id = ID_EDEFAULT;
 
-	/**
-     * The cached value of the '{@link #getParameters_FunctionLiteral() <em>Parameters Function Literal</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The cached value of the '{@link #getParameters_FunctionLiteral()
+     * <em>Parameters Function Literal</em>}' containment reference list. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getParameters_FunctionLiteral()
      * @generated
      * @ordered
      */
-	protected EList<Expression> parameters_FunctionLiteral;
+    protected EList<Expression> parameters_FunctionLiteral;
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected FunctionLiteralImpl() {
+    protected FunctionLiteralImpl() {
         super();
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return StoexPackage.Literals.FUNCTION_LITERAL;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getId() {
+    public String getId() {
         return id;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setId(String newId) {
+    public void setId(String newId) {
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.FUNCTION_LITERAL__ID, oldId, id));
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public EList<Expression> getParameters_FunctionLiteral() {
+    public EList<Expression> getParameters_FunctionLiteral() {
         if (parameters_FunctionLiteral == null) {
-            parameters_FunctionLiteral = new EObjectContainmentEList<Expression>(Expression.class, this, StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
+            parameters_FunctionLiteral = new EObjectContainmentEList<Expression>(Expression.class, this,
+                    StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
         }
         return parameters_FunctionLiteral;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-                return ((InternalEList<?>)getParameters_FunctionLiteral()).basicRemove(otherEnd, msgs);
+        case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
+            return ((InternalEList<?>) getParameters_FunctionLiteral()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case StoexPackage.FUNCTION_LITERAL__ID:
-                return getId();
-            case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-                return getParameters_FunctionLiteral();
+        case StoexPackage.FUNCTION_LITERAL__ID:
+            return getId();
+        case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
+            return getParameters_FunctionLiteral();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case StoexPackage.FUNCTION_LITERAL__ID:
-                setId((String)newValue);
-                return;
-            case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-                getParameters_FunctionLiteral().clear();
-                getParameters_FunctionLiteral().addAll((Collection<? extends Expression>)newValue);
-                return;
+        case StoexPackage.FUNCTION_LITERAL__ID:
+            setId((String) newValue);
+            return;
+        case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
+            getParameters_FunctionLiteral().clear();
+            getParameters_FunctionLiteral().addAll((Collection<? extends Expression>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eUnset(int featureID) {
+    @Override
+    public void eUnset(int featureID) {
         switch (featureID) {
-            case StoexPackage.FUNCTION_LITERAL__ID:
-                setId(ID_EDEFAULT);
-                return;
-            case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-                getParameters_FunctionLiteral().clear();
-                return;
+        case StoexPackage.FUNCTION_LITERAL__ID:
+            setId(ID_EDEFAULT);
+            return;
+        case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
+            getParameters_FunctionLiteral().clear();
+            return;
         }
         super.eUnset(featureID);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean eIsSet(int featureID) {
+    @Override
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case StoexPackage.FUNCTION_LITERAL__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-            case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-                return parameters_FunctionLiteral != null && !parameters_FunctionLiteral.isEmpty();
+        case StoexPackage.FUNCTION_LITERAL__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
+            return parameters_FunctionLiteral != null && !parameters_FunctionLiteral.isEmpty();
         }
         return super.eIsSet(featureID);
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public String toString() {
-        if (eIsProxy()) return super.toString();
+    @Override
+    public String toString() {
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (id: ");
@@ -225,4 +228,4 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
         return result.toString();
     }
 
-} //FunctionLiteralImpl
+} // FunctionLiteralImpl

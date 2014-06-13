@@ -5,4 +5,6 @@ Bundle-SymbolicName: org.palladiosimulator.commons
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.palladiosimulator.commons.designpatterns
+Export-Package: org.palladiosimulator.commons.designpatterns,
+ org.palladiosimulator.commons.emfutils
+Require-Bundle: org.eclipse.emf.ecore

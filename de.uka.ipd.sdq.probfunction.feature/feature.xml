@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.probfunction.feature"
       label="Palladio Commons Probability Functions"
-      version="1.4.0.qualifier"
+      version="2.1.0.qualifier"
       provider-name="sdq.ipd.uka.de">
 
    <description url="http://palladio-simulator.com">

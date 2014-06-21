@@ -69,8 +69,8 @@ public class SampleItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
 			addProbabilityPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,7 +92,7 @@ public class SampleItemProvider
 				 true,
 				 false,
 				 false,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -154,8 +154,8 @@ public class SampleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Sample.class)) {
-			case ProbfunctionPackage.SAMPLE__VALUE:
 			case ProbfunctionPackage.SAMPLE__PROBABILITY:
+			case ProbfunctionPackage.SAMPLE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

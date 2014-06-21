@@ -7,6 +7,7 @@
 package de.uka.ipd.sdq.units.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -23,45 +24,23 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl#getUnit <em>Unit</em>}</li>
- * <li>{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl#getUnitSpecification <em>Unit
- * Specification</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl implements UnitCarryingElement {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-
-    /**
-     * The default value of the '{@link #getUnitSpecification() <em>Unit Specification</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getUnitSpecification()
-     * @generated
-     * @ordered
-     */
-    protected static final String UNIT_SPECIFICATION_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getUnitSpecification() <em>Unit Specification</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getUnitSpecification()
-     * @generated
-     * @ordered
-     */
-    protected String unitSpecification = UNIT_SPECIFICATION_EDEFAULT;
+    
+    private Unit unit;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected UnitCarryingElementImpl() {
@@ -70,7 +49,6 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -79,147 +57,121 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated NOT
+	 */
     public Unit getUnit() {
-        Unit unit = basicGetUnit();
-        return unit != null && ((EObject) unit).eIsProxy() ? (Unit) eResolveProxy((InternalEObject) unit) : unit;
-    }
+		// TO DO: implement this method to return the 'Unit' containment reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		//throw new UnsupportedOperationException();
+    	return unit;
+	}
 
     /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public NotificationChain basicSetUnit(Unit newUnit, NotificationChain msgs) {
+		// TO DO: implement this method to set the contained 'Unit' containment reference
+		// -> this method is automatically invoked to keep the containment relationship in synch
+		// -> do not modify other features
+		// -> return msgs, after adding any generated Notification to it (if it is null, a NotificationChain object must be created first)
+		// Ensure that you remove @generated or mark it @generated NOT
+		//throw new UnsupportedOperationException();
+		unit = newUnit;
+		return msgs;
+	}
+
+				/**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated not
      */
     public Unit basicGetUnit() {
-        // TODO: implement this method to return the 'Unit' reference
+        // TO DO: implement this method to return the 'Unit' reference
         // -> do not perform proxy resolution
         // Ensure that you remove @generated or mark it @generated NOT
 
-        return null;
+        return unit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setUnit(Unit newUnit) {
-        // TODO: implement this method to set the 'Unit' reference
+        // TODO: implement this method to set the 'Unit' containment reference
         // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
      * @generated
      */
-    public String getUnitSpecification() {
-        return unitSpecification;
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                return basicSetUnit(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
-    /**
+				/**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setUnitSpecification(String newUnitSpecification) {
-        String oldUnitSpecification = unitSpecification;
-        unitSpecification = newUnitSpecification;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION, oldUnitSpecification, unitSpecification));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            if (resolve)
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
                 return getUnit();
-            return basicGetUnit();
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-            return getUnitSpecification();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            setUnit((Unit) newValue);
-            return;
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-            setUnitSpecification((String) newValue);
-            return;
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                setUnit((Unit)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            setUnit((Unit) null);
-            return;
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-            setUnitSpecification(UNIT_SPECIFICATION_EDEFAULT);
-            return;
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                setUnit((Unit)null);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            return basicGetUnit() != null;
-        case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION:
-            return UNIT_SPECIFICATION_EDEFAULT == null ? unitSpecification != null : !UNIT_SPECIFICATION_EDEFAULT
-                    .equals(unitSpecification);
+            case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
+                return getUnit() != null;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (eIsProxy())
-            return super.toString();
-
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (unitSpecification: ");
-        result.append(unitSpecification);
-        result.append(')');
-        return result.toString();
     }
 
 } // UnitCarryingElementImpl

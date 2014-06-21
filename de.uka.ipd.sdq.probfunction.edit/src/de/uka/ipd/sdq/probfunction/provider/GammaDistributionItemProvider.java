@@ -136,10 +136,8 @@ public class GammaDistributionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((GammaDistribution)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_GammaDistribution_type") :
-			getString("_UI_GammaDistribution_type") + " " + label;
+		GammaDistribution gammaDistribution = (GammaDistribution)object;
+		return getString("_UI_GammaDistribution_type") + " " + gammaDistribution.getAlpha();
 	}
 
 	/**

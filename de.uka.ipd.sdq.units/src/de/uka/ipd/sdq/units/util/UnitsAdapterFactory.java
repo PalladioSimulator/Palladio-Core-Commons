@@ -6,6 +6,7 @@
  */
 package de.uka.ipd.sdq.units.util;
 
+import de.uka.ipd.sdq.units.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -23,27 +24,25 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
  * @see de.uka.ipd.sdq.units.UnitsPackage
  * @generated
  */
 public class UnitsAdapterFactory extends AdapterFactoryImpl {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
-     * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached model package.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected static UnitsPackage modelPackage;
 
     /**
-     * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates an instance of the adapter factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public UnitsAdapterFactory() {
@@ -53,10 +52,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
+     * Returns whether this factory is applicable for the type of the object.
+     * <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -66,70 +65,62 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
             return true;
         }
         if (object instanceof EObject) {
-            return ((EObject) object).eClass().getEPackage() == modelPackage;
+            return ((EObject)object).eClass().getEPackage() == modelPackage;
         }
         return false;
     }
 
     /**
-     * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
+     * The switch that delegates to the <code>createXXX</code> methods.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     protected UnitsSwitch<Adapter> modelSwitch = new UnitsSwitch<Adapter>() {
-        @Override
-        public Adapter caseUnitCarryingElement(UnitCarryingElement object) {
-            return createUnitCarryingElementAdapter();
-        }
-
-        @Override
-        public Adapter caseUnit(Unit object) {
-            return createUnitAdapter();
-        }
-
-        @Override
-        public Adapter caseBaseUnit(BaseUnit object) {
-            return createBaseUnitAdapter();
-        }
-
-        @Override
-        public Adapter caseUnitRepository(UnitRepository object) {
-            return createUnitRepositoryAdapter();
-        }
-
-        @Override
-        public Adapter caseUnitMultiplication(UnitMultiplication object) {
-            return createUnitMultiplicationAdapter();
-        }
-
-        @Override
-        public Adapter caseUnitPower(UnitPower object) {
-            return createUnitPowerAdapter();
-        }
-
-        @Override
-        public Adapter caseUnitLiteral(UnitLiteral object) {
-            return createUnitLiteralAdapter();
-        }
-
-        @Override
-        public Adapter defaultCase(EObject object) {
-            return createEObjectAdapter();
-        }
-    };
+            @Override
+            public Adapter caseUnitCarryingElement(UnitCarryingElement object) {
+                return createUnitCarryingElementAdapter();
+            }
+            @Override
+            public Adapter caseUnit(Unit object) {
+                return createUnitAdapter();
+            }
+            @Override
+            public Adapter caseBaseUnit(BaseUnit object) {
+                return createBaseUnitAdapter();
+            }
+            @Override
+            public Adapter caseUnitRepository(UnitRepository object) {
+                return createUnitRepositoryAdapter();
+            }
+            @Override
+            public Adapter caseUnitMultiplication(UnitMultiplication object) {
+                return createUnitMultiplicationAdapter();
+            }
+            @Override
+            public Adapter caseUnitPower(UnitPower object) {
+                return createUnitPowerAdapter();
+            }
+            @Override
+            public Adapter caseUnitDivision(UnitDivision object) {
+                return createUnitDivisionAdapter();
+            }
+            @Override
+            public Adapter defaultCase(EObject object) {
+                return createEObjectAdapter();
+            }
+        };
 
     /**
-     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param target
-     *            the object to adapt.
+     * Creates an adapter for the <code>target</code>.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param target the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
      */
     @Override
     public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject) target);
+        return modelSwitch.doSwitch((EObject)target);
     }
 
     /**
@@ -148,11 +139,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.Unit <em>Unit</em>}
-     * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.Unit <em>Unit</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.Unit
      * @generated
@@ -162,11 +152,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.BaseUnit
-     * <em>Base Unit</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.BaseUnit <em>Base Unit</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.BaseUnit
      * @generated
@@ -176,11 +165,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitRepository
-     * <em>Unit Repository</em>}'. <!-- begin-user-doc --> This default implementation returns null
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitRepository <em>Unit Repository</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitRepository
      * @generated
@@ -190,11 +178,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitMultiplication
-     * <em>Unit Multiplication</em>}'. <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitMultiplication <em>Unit Multiplication</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitMultiplication
      * @generated
@@ -204,11 +191,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitPower
-     * <em>Unit Power</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitPower <em>Unit Power</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitPower
      * @generated
@@ -218,23 +204,23 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitLiteral
-     * <em>Unit Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null so
-     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
-     * the cases anyway. <!-- end-user-doc -->
-     * 
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitDivision <em>Unit Division</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.units.UnitLiteral
+     * @see de.uka.ipd.sdq.units.UnitDivision
      * @generated
      */
-    public Adapter createUnitLiteralAdapter() {
+    public Adapter createUnitDivisionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
+     * Creates a new adapter for the default case.
+     * <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @generated
      */

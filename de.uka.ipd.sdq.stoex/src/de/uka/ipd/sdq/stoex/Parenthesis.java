@@ -9,24 +9,23 @@ package de.uka.ipd.sdq.stoex;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Parenthesis</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.stoex.Parenthesis#getInnerExpression <em>Inner Expression</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.stoex.Parenthesis#getInnerExpression <em>Inner Expression</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getParenthesis()
  * @model
  * @generated
  */
 public interface Parenthesis extends Atom {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**

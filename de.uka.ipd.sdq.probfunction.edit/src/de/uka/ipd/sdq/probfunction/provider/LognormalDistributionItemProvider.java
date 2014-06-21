@@ -136,10 +136,8 @@ public class LognormalDistributionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LognormalDistribution)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_LognormalDistribution_type") :
-			getString("_UI_LognormalDistribution_type") + " " + label;
+		LognormalDistribution lognormalDistribution = (LognormalDistribution)object;
+		return getString("_UI_LognormalDistribution_type") + " " + lognormalDistribution.getMu();
 	}
 
 	/**

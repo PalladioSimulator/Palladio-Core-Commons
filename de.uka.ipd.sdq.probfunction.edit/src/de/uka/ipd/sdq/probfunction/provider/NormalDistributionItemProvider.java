@@ -135,10 +135,8 @@ public class NormalDistributionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((NormalDistribution)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_NormalDistribution_type") :
-			getString("_UI_NormalDistribution_type") + " " + label;
+		NormalDistribution normalDistribution = (NormalDistribution)object;
+		return getString("_UI_NormalDistribution_type") + " " + normalDistribution.getMu();
 	}
 
 	/**

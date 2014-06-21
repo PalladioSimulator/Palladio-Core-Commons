@@ -12,6 +12,8 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.util.Switch;
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
 import de.uka.ipd.sdq.probfunction.Complex;
 import de.uka.ipd.sdq.probfunction.ContinuousPDF;
@@ -39,7 +41,7 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage
  * @generated
  */
-public class ProbfunctionSwitch<T1> {
+public class ProbfunctionSwitch<T1> extends Switch<T1> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,14 +69,16 @@ public class ProbfunctionSwitch<T1> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
+	 * @parameter ePackage the package in question.
+	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
-	public T1 doSwitch(EObject theEObject) {
-		return doSwitch(theEObject.eClass(), theEObject);
+	@Override
+	protected boolean isSwitchFor(EPackage ePackage) {
+		return ePackage == modelPackage;
 	}
 
 	/**
@@ -84,26 +88,7 @@ public class ProbfunctionSwitch<T1> {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	protected T1 doSwitch(EClass theEClass, EObject theEObject) {
-		if (theEClass.eContainer() == modelPackage) {
-			return doSwitch(theEClass.getClassifierID(), theEObject);
-		}
-		else {
-			List<EClass> eSuperTypes = theEClass.getESuperTypes();
-			return
-				eSuperTypes.isEmpty() ?
-					defaultCase(theEObject) :
-					doSwitch(eSuperTypes.get(0), theEObject);
-		}
-	}
-
-	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
+	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ProbfunctionPackage.BOXED_PDF: {
@@ -211,6 +196,34 @@ public class ProbfunctionSwitch<T1> {
 				if (result == null) result = caseProbabilityDensityFunction(gammaDistribution);
 				if (result == null) result = caseProbabilityFunction(gammaDistribution);
 				if (result == null) result = caseUnitCarryingElement(gammaDistribution);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProbfunctionPackage.INT_SAMPLE: {
+				IntSample intSample = (IntSample)theEObject;
+				T1 result = caseIntSample(intSample);
+				if (result == null) result = caseSample(intSample);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProbfunctionPackage.BOOL_SAMPLE: {
+				BoolSample boolSample = (BoolSample)theEObject;
+				T1 result = caseBoolSample(boolSample);
+				if (result == null) result = caseSample(boolSample);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProbfunctionPackage.DOUBLE_SAMPLE: {
+				DoubleSample doubleSample = (DoubleSample)theEObject;
+				T1 result = caseDoubleSample(doubleSample);
+				if (result == null) result = caseSample(doubleSample);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProbfunctionPackage.STRING_SAMPLE: {
+				StringSample stringSample = (StringSample)theEObject;
+				T1 result = caseStringSample(stringSample);
+				if (result == null) result = caseSample(stringSample);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -414,6 +427,66 @@ public class ProbfunctionSwitch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Int Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Int Sample</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseIntSample(IntSample object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bool Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bool Sample</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseBoolSample(BoolSample object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Double Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Double Sample</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseDoubleSample(DoubleSample object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String Sample</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseStringSample(StringSample object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Unit Carrying Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -439,6 +512,7 @@ public class ProbfunctionSwitch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
+	@Override
 	public T1 defaultCase(EObject object) {
 		return null;
 	}

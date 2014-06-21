@@ -50,7 +50,7 @@ public interface ProbfunctionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://sdq.ipd.uka.de/ProbFunction/1.0";
+	String eNS_URI = "http://sdq.ipd.uka.de/ProbFunction/2.1";
 
 	/**
 	 * The package namespace name.
@@ -79,22 +79,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int PROBABILITY_FUNCTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PROBABILITY_FUNCTION__UNIT = UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBABILITY_FUNCTION__UNIT_SPECIFICATION = UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT_SPECIFICATION;
 
 	/**
 	 * The number of structural features of the '<em>Probability Function</em>' class.
@@ -116,22 +107,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int PROBABILITY_DENSITY_FUNCTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PROBABILITY_DENSITY_FUNCTION__UNIT = PROBABILITY_FUNCTION__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBABILITY_DENSITY_FUNCTION__UNIT_SPECIFICATION = PROBABILITY_FUNCTION__UNIT_SPECIFICATION;
 
 	/**
 	 * The number of structural features of the '<em>Probability Density Function</em>' class.
@@ -153,22 +135,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int BOXED_PDF = 0;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BOXED_PDF__UNIT = PROBABILITY_DENSITY_FUNCTION__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOXED_PDF__UNIT_SPECIFICATION = PROBABILITY_DENSITY_FUNCTION__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Samples</b></em>' containment reference list.
@@ -236,22 +209,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int PROBABILITY_MASS_FUNCTION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PROBABILITY_MASS_FUNCTION__UNIT = PROBABILITY_FUNCTION__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBABILITY_MASS_FUNCTION__UNIT_SPECIFICATION = PROBABILITY_FUNCTION__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Samples</b></em>' containment reference list.
@@ -291,22 +255,22 @@ public interface ProbfunctionPackage extends EPackage {
 	int SAMPLE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SAMPLE__VALUE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Probability</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SAMPLE__PROBABILITY = 1;
+	int SAMPLE__PROBABILITY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAMPLE__VALUE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Sample</em>' class.
@@ -328,22 +292,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int SAMPLE_PDF = 6;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SAMPLE_PDF__UNIT = PROBABILITY_DENSITY_FUNCTION__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SAMPLE_PDF__UNIT_SPECIFICATION = PROBABILITY_DENSITY_FUNCTION__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -421,22 +376,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int CONTINUOUS_PDF = 8;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int CONTINUOUS_PDF__UNIT = PROBABILITY_DENSITY_FUNCTION__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTINUOUS_PDF__UNIT_SPECIFICATION = PROBABILITY_DENSITY_FUNCTION__UNIT_SPECIFICATION;
 
 	/**
 	 * The number of structural features of the '<em>Continuous PDF</em>' class.
@@ -458,22 +404,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int EXPONENTIAL_DISTRIBUTION = 9;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int EXPONENTIAL_DISTRIBUTION__UNIT = CONTINUOUS_PDF__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPONENTIAL_DISTRIBUTION__UNIT_SPECIFICATION = CONTINUOUS_PDF__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Rate</b></em>' attribute.
@@ -504,22 +441,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int NORMAL_DISTRIBUTION = 10;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int NORMAL_DISTRIBUTION__UNIT = CONTINUOUS_PDF__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NORMAL_DISTRIBUTION__UNIT_SPECIFICATION = CONTINUOUS_PDF__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Mu</b></em>' attribute.
@@ -560,22 +488,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int LOGNORMAL_DISTRIBUTION = 11;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int LOGNORMAL_DISTRIBUTION__UNIT = CONTINUOUS_PDF__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGNORMAL_DISTRIBUTION__UNIT_SPECIFICATION = CONTINUOUS_PDF__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Mu</b></em>' attribute.
@@ -615,22 +534,13 @@ public interface ProbfunctionPackage extends EPackage {
 	int GAMMA_DISTRIBUTION = 12;
 
 	/**
-	 * The feature id for the '<em><b>Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GAMMA_DISTRIBUTION__UNIT = CONTINUOUS_PDF__UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Unit Specification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMMA_DISTRIBUTION__UNIT_SPECIFICATION = CONTINUOUS_PDF__UNIT_SPECIFICATION;
 
 	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' attribute.
@@ -658,6 +568,156 @@ public interface ProbfunctionPackage extends EPackage {
 	 * @ordered
 	 */
 	int GAMMA_DISTRIBUTION_FEATURE_COUNT = CONTINUOUS_PDF_FEATURE_COUNT + 2;
+
+
+	/**
+	 * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.IntSampleImpl <em>Int Sample</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uka.ipd.sdq.probfunction.impl.IntSampleImpl
+	 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getIntSample()
+	 * @generated
+	 */
+	int INT_SAMPLE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Probability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_SAMPLE__PROBABILITY = SAMPLE__PROBABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_SAMPLE__VALUE = SAMPLE__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Int Sample</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_SAMPLE_FEATURE_COUNT = SAMPLE_FEATURE_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl <em>Bool Sample</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl
+	 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getBoolSample()
+	 * @generated
+	 */
+	int BOOL_SAMPLE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Probability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOL_SAMPLE__PROBABILITY = SAMPLE__PROBABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOL_SAMPLE__VALUE = SAMPLE__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Bool Sample</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOL_SAMPLE_FEATURE_COUNT = SAMPLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl <em>Double Sample</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl
+	 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getDoubleSample()
+	 * @generated
+	 */
+	int DOUBLE_SAMPLE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Probability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_SAMPLE__PROBABILITY = SAMPLE__PROBABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_SAMPLE__VALUE = SAMPLE__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Double Sample</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_SAMPLE_FEATURE_COUNT = SAMPLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.StringSampleImpl <em>String Sample</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uka.ipd.sdq.probfunction.impl.StringSampleImpl
+	 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getStringSample()
+	 * @generated
+	 */
+	int STRING_SAMPLE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Probability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_SAMPLE__PROBABILITY = SAMPLE__PROBABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_SAMPLE__VALUE = SAMPLE__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>String Sample</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_SAMPLE_FEATURE_COUNT = SAMPLE_FEATURE_COUNT + 0;
 
 
 	/**
@@ -776,15 +836,15 @@ public interface ProbfunctionPackage extends EPackage {
 	EClass getSample();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.uka.ipd.sdq.probfunction.Sample#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.probfunction.Sample#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the attribute '<em>Value</em>'.
 	 * @see de.uka.ipd.sdq.probfunction.Sample#getValue()
 	 * @see #getSample()
 	 * @generated
 	 */
-	EReference getSample_Value();
+	EAttribute getSample_Value();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.probfunction.Sample#getProbability <em>Probability</em>}'.
@@ -989,6 +1049,46 @@ public interface ProbfunctionPackage extends EPackage {
 	EAttribute getGammaDistribution_Theta();
 
 	/**
+	 * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.IntSample <em>Int Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Int Sample</em>'.
+	 * @see de.uka.ipd.sdq.probfunction.IntSample
+	 * @generated
+	 */
+	EClass getIntSample();
+
+	/**
+	 * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.BoolSample <em>Bool Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bool Sample</em>'.
+	 * @see de.uka.ipd.sdq.probfunction.BoolSample
+	 * @generated
+	 */
+	EClass getBoolSample();
+
+	/**
+	 * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.DoubleSample <em>Double Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Double Sample</em>'.
+	 * @see de.uka.ipd.sdq.probfunction.DoubleSample
+	 * @generated
+	 */
+	EClass getDoubleSample();
+
+	/**
+	 * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.StringSample <em>String Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String Sample</em>'.
+	 * @see de.uka.ipd.sdq.probfunction.StringSample
+	 * @generated
+	 */
+	EClass getStringSample();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1111,12 +1211,12 @@ public interface ProbfunctionPackage extends EPackage {
 		EClass SAMPLE = eINSTANCE.getSample();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SAMPLE__VALUE = eINSTANCE.getSample_Value();
+		EAttribute SAMPLE__VALUE = eINSTANCE.getSample_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Probability</b></em>' attribute feature.
@@ -1283,6 +1383,46 @@ public interface ProbfunctionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GAMMA_DISTRIBUTION__THETA = eINSTANCE.getGammaDistribution_Theta();
+
+		/**
+		 * The meta object literal for the '{@link de.uka.ipd.sdq.probfunction.impl.IntSampleImpl <em>Int Sample</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uka.ipd.sdq.probfunction.impl.IntSampleImpl
+		 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getIntSample()
+		 * @generated
+		 */
+		EClass INT_SAMPLE = eINSTANCE.getIntSample();
+
+		/**
+		 * The meta object literal for the '{@link de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl <em>Bool Sample</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl
+		 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getBoolSample()
+		 * @generated
+		 */
+		EClass BOOL_SAMPLE = eINSTANCE.getBoolSample();
+
+		/**
+		 * The meta object literal for the '{@link de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl <em>Double Sample</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl
+		 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getDoubleSample()
+		 * @generated
+		 */
+		EClass DOUBLE_SAMPLE = eINSTANCE.getDoubleSample();
+
+		/**
+		 * The meta object literal for the '{@link de.uka.ipd.sdq.probfunction.impl.StringSampleImpl <em>String Sample</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uka.ipd.sdq.probfunction.impl.StringSampleImpl
+		 * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getStringSample()
+		 * @generated
+		 */
+		EClass STRING_SAMPLE = eINSTANCE.getStringSample();
 
 	}
 

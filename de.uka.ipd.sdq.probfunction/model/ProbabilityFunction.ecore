@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="probfunction"
-    nsURI="http://sdq.ipd.uka.de/ProbFunction/1.0" nsPrefix="probfunction">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="probfunction" nsURI="http://sdq.ipd.uka.de/ProbFunction/2.1"
+    nsPrefix="probfunction">
   <eClassifiers xsi:type="ecore:EClass" name="BoxedPDF" eSuperTypes="#//ProbabilityDensityFunction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="samples" ordered="false"
         upperBound="-1" eType="#//ContinuousSample" containment="true"/>
@@ -25,12 +24,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sample">
     <eTypeParameters name="T"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
-        unique="false" lowerBound="1">
-      <eGenericType eTypeParameter="#//Sample/T"/>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability" ordered="false"
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" containment="true">
+      <eGenericType eTypeParameter="#//Sample/T"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SamplePDF" eSuperTypes="#//ProbabilityDensityFunction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" ordered="false"
@@ -88,5 +86,25 @@
         <details key="documentation" value="Scale parameter, which is the inverse of the rate parameter beta which is also sometimes given to characterise a Gamma distribution. "/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntSample">
+    <eGenericSuperTypes eClassifier="#//Sample">
+      <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoolSample">
+    <eGenericSuperTypes eClassifier="#//Sample">
+      <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoubleSample">
+    <eGenericSuperTypes eClassifier="#//Sample">
+      <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringSample">
+    <eGenericSuperTypes eClassifier="#//Sample">
+      <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>

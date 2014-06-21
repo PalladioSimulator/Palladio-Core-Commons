@@ -12,7 +12,7 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http://sdq.ipd.uka.de/StochasticExpressions/1.0" 
+       uri = "http://sdq.ipd.uka.de/StochasticExpressions/2.2" 
        class = "de.uka.ipd.sdq.stoex.StoexPackage"
        genModel = "model/stoex.genmodel" /> 
   </extension>

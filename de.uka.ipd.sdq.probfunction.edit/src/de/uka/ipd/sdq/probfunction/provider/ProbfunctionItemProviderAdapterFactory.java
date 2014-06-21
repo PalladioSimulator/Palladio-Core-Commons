@@ -312,6 +312,98 @@ public class ProbfunctionItemProviderAdapterFactory extends ProbfunctionAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.IntSample} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntSampleItemProvider intSampleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.IntSample}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntSampleAdapter() {
+		if (intSampleItemProvider == null) {
+			intSampleItemProvider = new IntSampleItemProvider(this);
+		}
+
+		return intSampleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.BoolSample} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BoolSampleItemProvider boolSampleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.BoolSample}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoolSampleAdapter() {
+		if (boolSampleItemProvider == null) {
+			boolSampleItemProvider = new BoolSampleItemProvider(this);
+		}
+
+		return boolSampleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.DoubleSample} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DoubleSampleItemProvider doubleSampleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.DoubleSample}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDoubleSampleAdapter() {
+		if (doubleSampleItemProvider == null) {
+			doubleSampleItemProvider = new DoubleSampleItemProvider(this);
+		}
+
+		return doubleSampleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.StringSample} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringSampleItemProvider stringSampleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.StringSample}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringSampleAdapter() {
+		if (stringSampleItemProvider == null) {
+			stringSampleItemProvider = new StringSampleItemProvider(this);
+		}
+
+		return stringSampleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -420,6 +512,10 @@ public class ProbfunctionItemProviderAdapterFactory extends ProbfunctionAdapterF
 		if (normalDistributionItemProvider != null) normalDistributionItemProvider.dispose();
 		if (lognormalDistributionItemProvider != null) lognormalDistributionItemProvider.dispose();
 		if (gammaDistributionItemProvider != null) gammaDistributionItemProvider.dispose();
+		if (intSampleItemProvider != null) intSampleItemProvider.dispose();
+		if (boolSampleItemProvider != null) boolSampleItemProvider.dispose();
+		if (doubleSampleItemProvider != null) doubleSampleItemProvider.dispose();
+		if (stringSampleItemProvider != null) stringSampleItemProvider.dispose();
 	}
 
 }

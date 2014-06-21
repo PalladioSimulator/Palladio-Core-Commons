@@ -122,6 +122,42 @@ public interface ProbfunctionFactory extends EFactory {
 	GammaDistribution createGammaDistribution();
 
 	/**
+	 * Returns a new object of class '<em>Int Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Int Sample</em>'.
+	 * @generated
+	 */
+	IntSample createIntSample();
+
+	/**
+	 * Returns a new object of class '<em>Bool Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bool Sample</em>'.
+	 * @generated
+	 */
+	BoolSample createBoolSample();
+
+	/**
+	 * Returns a new object of class '<em>Double Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Double Sample</em>'.
+	 * @generated
+	 */
+	DoubleSample createDoubleSample();
+
+	/**
+	 * Returns a new object of class '<em>String Sample</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String Sample</em>'.
+	 * @generated
+	 */
+	StringSample createStringSample();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

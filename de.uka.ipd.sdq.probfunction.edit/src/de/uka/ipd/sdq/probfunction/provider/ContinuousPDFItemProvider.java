@@ -74,10 +74,7 @@ public class ContinuousPDFItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ContinuousPDF)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ContinuousPDF_type") :
-			getString("_UI_ContinuousPDF_type") + " " + label;
+		return getString("_UI_ContinuousPDF_type");
 	}
 
 	/**

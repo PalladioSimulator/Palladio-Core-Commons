@@ -112,10 +112,8 @@ public class ExponentialDistributionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ExponentialDistribution)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ExponentialDistribution_type") :
-			getString("_UI_ExponentialDistribution_type") + " " + label;
+		ExponentialDistribution exponentialDistribution = (ExponentialDistribution)object;
+		return getString("_UI_ExponentialDistribution_type") + " " + exponentialDistribution.getRate();
 	}
 
 	/**

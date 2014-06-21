@@ -77,10 +77,7 @@ public class ProbabilityFunctionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProbabilityFunction)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ProbabilityFunction_type") :
-			getString("_UI_ProbabilityFunction_type") + " " + label;
+		return getString("_UI_ProbabilityFunction_type");
 	}
 
 	/**

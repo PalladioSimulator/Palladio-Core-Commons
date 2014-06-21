@@ -141,6 +141,22 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
 				return createGammaDistributionAdapter();
 			}
 			@Override
+			public Adapter caseIntSample(IntSample object) {
+				return createIntSampleAdapter();
+			}
+			@Override
+			public Adapter caseBoolSample(BoolSample object) {
+				return createBoolSampleAdapter();
+			}
+			@Override
+			public Adapter caseDoubleSample(DoubleSample object) {
+				return createDoubleSampleAdapter();
+			}
+			@Override
+			public Adapter caseStringSample(StringSample object) {
+				return createStringSampleAdapter();
+			}
+			@Override
 			public Adapter caseUnitCarryingElement(UnitCarryingElement object) {
 				return createUnitCarryingElementAdapter();
 			}
@@ -343,6 +359,62 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGammaDistributionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.probfunction.IntSample <em>Int Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uka.ipd.sdq.probfunction.IntSample
+	 * @generated
+	 */
+	public Adapter createIntSampleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.probfunction.BoolSample <em>Bool Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uka.ipd.sdq.probfunction.BoolSample
+	 * @generated
+	 */
+	public Adapter createBoolSampleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.probfunction.DoubleSample <em>Double Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uka.ipd.sdq.probfunction.DoubleSample
+	 * @generated
+	 */
+	public Adapter createDoubleSampleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.probfunction.StringSample <em>String Sample</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uka.ipd.sdq.probfunction.StringSample
+	 * @generated
+	 */
+	public Adapter createStringSampleAdapter() {
 		return null;
 	}
 

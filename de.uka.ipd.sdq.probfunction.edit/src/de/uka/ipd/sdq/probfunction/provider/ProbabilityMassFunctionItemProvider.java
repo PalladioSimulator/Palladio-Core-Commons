@@ -145,10 +145,8 @@ public class ProbabilityMassFunctionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProbabilityMassFunction)object).getUnitSpecification();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ProbabilityMassFunction_type") :
-			getString("_UI_ProbabilityMassFunction_type") + " " + label;
+		ProbabilityMassFunction probabilityMassFunction = (ProbabilityMassFunction)object;
+		return getString("_UI_ProbabilityMassFunction_type") + " " + probabilityMassFunction.isOrderedDomain();
 	}
 
 	/**
@@ -188,6 +186,26 @@ public class ProbabilityMassFunctionItemProvider
 			(createChildParameter
 				(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
 				 ProbfunctionFactory.eINSTANCE.createSample()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+				 ProbfunctionFactory.eINSTANCE.createIntSample()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+				 ProbfunctionFactory.eINSTANCE.createBoolSample()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+				 ProbfunctionFactory.eINSTANCE.createDoubleSample()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+				 ProbfunctionFactory.eINSTANCE.createStringSample()));
 	}
 
 }

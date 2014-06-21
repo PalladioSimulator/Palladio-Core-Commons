@@ -17,20 +17,18 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  * end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class UnitImpl extends EStereotypableObjectImpl implements Unit {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected UnitImpl() {
@@ -39,7 +37,6 @@ public abstract class UnitImpl extends EStereotypableObjectImpl implements Unit 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -9,27 +9,25 @@ package de.uka.ipd.sdq.stoex;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>If Else Expression</b></em>
  * '. <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.stoex.IfElseExpression#getIfExpression <em>If Expression</em>}</li>
- * <li>{@link de.uka.ipd.sdq.stoex.IfElseExpression#getElseExpression <em>Else Expression</em>}</li>
- * <li>{@link de.uka.ipd.sdq.stoex.IfElseExpression#getConditionExpression <em>Condition Expression
- * </em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.stoex.IfElseExpression#getIfExpression <em>If Expression</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.stoex.IfElseExpression#getElseExpression <em>Else Expression</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.stoex.IfElseExpression#getConditionExpression <em>Condition Expression</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getIfElseExpression()
  * @model
  * @generated
  */
 public interface IfElseExpression extends IfElse {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
@@ -50,14 +48,12 @@ public interface IfElseExpression extends IfElse {
     BooleanExpression getIfExpression();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.stoex.IfElseExpression#getIfExpression
-     * <em>If Expression</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>If Expression</em>' containment reference.
-     * @see #getIfExpression()
-     * @generated
-     */
+	 * Sets the value of the '{@link de.uka.ipd.sdq.stoex.IfElseExpression#getIfExpression <em>If Expression</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>If Expression</em>' containment reference.
+	 * @see #getIfExpression()
+	 * @generated
+	 */
     void setIfExpression(BooleanExpression value);
 
     /**
@@ -107,15 +103,13 @@ public interface IfElseExpression extends IfElse {
     BooleanExpression getConditionExpression();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.stoex.IfElseExpression#getConditionExpression
-     * <em>Condition Expression</em>}' containment reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link de.uka.ipd.sdq.stoex.IfElseExpression#getConditionExpression <em>Condition Expression</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Condition Expression</em>' containment reference.
-     * @see #getConditionExpression()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Condition Expression</em>' containment reference.
+	 * @see #getConditionExpression()
+	 * @generated
+	 */
     void setConditionExpression(BooleanExpression value);
 
 } // IfElseExpression

@@ -7,6 +7,7 @@
 package de.uka.ipd.sdq.probfunction.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -23,8 +24,8 @@ import de.uka.ipd.sdq.probfunction.Sample;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getValue <em>Value</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getProbability <em>Probability</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,16 +38,6 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	 * @generated
 	 */
 	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected T value;
 
 	/**
 	 * The default value of the '{@link #getProbability() <em>Probability</em>}' attribute.
@@ -67,6 +58,16 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	 * @ordered
 	 */
 	protected double probability = PROBABILITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected T value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,15 +112,6 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public T basicGetValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void setValue(T newValue) {
 		T oldValue = value;
 		value = newValue;
@@ -156,11 +148,10 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProbfunctionPackage.SAMPLE__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
 			case ProbfunctionPackage.SAMPLE__PROBABILITY:
 				return getProbability();
+			case ProbfunctionPackage.SAMPLE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,11 +165,11 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProbfunctionPackage.SAMPLE__VALUE:
-				setValue((T)newValue);
-				return;
 			case ProbfunctionPackage.SAMPLE__PROBABILITY:
 				setProbability((Double)newValue);
+				return;
+			case ProbfunctionPackage.SAMPLE__VALUE:
+				setValue((T)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,11 +183,11 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProbfunctionPackage.SAMPLE__VALUE:
-				setValue((T)null);
-				return;
 			case ProbfunctionPackage.SAMPLE__PROBABILITY:
 				setProbability(PROBABILITY_EDEFAULT);
+				return;
+			case ProbfunctionPackage.SAMPLE__VALUE:
+				setValue((T)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -210,10 +201,10 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProbfunctionPackage.SAMPLE__VALUE:
-				return value != null;
 			case ProbfunctionPackage.SAMPLE__PROBABILITY:
 				return probability != PROBABILITY_EDEFAULT;
+			case ProbfunctionPackage.SAMPLE__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -230,6 +221,8 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (probability: ");
 		result.append(probability);
+		result.append(", value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}

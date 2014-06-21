@@ -12,7 +12,7 @@
     
   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
     <factory 
-       uri = "http://sdq.ipd.uka.de/StochasticExpressions/1.0" 
+       uri = "http://sdq.ipd.uka.de/StochasticExpressions/2.2" 
        class = "de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory" 
        supportedTypes = 
          "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

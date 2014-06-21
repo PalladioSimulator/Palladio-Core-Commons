@@ -46,7 +46,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 	 */
 	public static ProbfunctionFactory init() {
 		try {
-			ProbfunctionFactory theProbfunctionFactory = (ProbfunctionFactory)EPackage.Registry.INSTANCE.getEFactory("http://sdq.ipd.uka.de/ProbFunction/1.0"); 
+			ProbfunctionFactory theProbfunctionFactory = (ProbfunctionFactory)EPackage.Registry.INSTANCE.getEFactory(ProbfunctionPackage.eNS_URI);
 			if (theProbfunctionFactory != null) {
 				return theProbfunctionFactory;
 			}
@@ -85,6 +85,10 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 			case ProbfunctionPackage.NORMAL_DISTRIBUTION: return createNormalDistribution();
 			case ProbfunctionPackage.LOGNORMAL_DISTRIBUTION: return createLognormalDistribution();
 			case ProbfunctionPackage.GAMMA_DISTRIBUTION: return createGammaDistribution();
+			case ProbfunctionPackage.INT_SAMPLE: return createIntSample();
+			case ProbfunctionPackage.BOOL_SAMPLE: return createBoolSample();
+			case ProbfunctionPackage.DOUBLE_SAMPLE: return createDoubleSample();
+			case ProbfunctionPackage.STRING_SAMPLE: return createStringSample();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -188,6 +192,46 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 	public GammaDistribution createGammaDistribution() {
 		GammaDistributionImpl gammaDistribution = new GammaDistributionImpl();
 		return gammaDistribution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntSample createIntSample() {
+		IntSampleImpl intSample = new IntSampleImpl();
+		return intSample;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BoolSample createBoolSample() {
+		BoolSampleImpl boolSample = new BoolSampleImpl();
+		return boolSample;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DoubleSample createDoubleSample() {
+		DoubleSampleImpl doubleSample = new DoubleSampleImpl();
+		return doubleSample;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringSample createStringSample() {
+		StringSampleImpl stringSample = new StringSampleImpl();
+		return stringSample;
 	}
 
 	/**

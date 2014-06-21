@@ -11,20 +11,18 @@ import org.eclipse.emf.ecore.EFactory;
 /**
  * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
  * non-abstract class of the model. <!-- end-user-doc -->
- * 
  * @see de.uka.ipd.sdq.units.UnitsPackage
  * @generated
  */
 public interface UnitsFactory extends EFactory {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
-     * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The singleton instance of the factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     UnitsFactory eINSTANCE = de.uka.ipd.sdq.units.impl.UnitsFactoryImpl.init();
@@ -39,44 +37,44 @@ public interface UnitsFactory extends EFactory {
     BaseUnit createBaseUnit();
 
     /**
-     * Returns a new object of class '<em>Unit Repository</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Unit Repository</em>'.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @return a new object of class '<em>Unit Repository</em>'.
      * @generated
      */
     UnitRepository createUnitRepository();
 
     /**
-     * Returns a new object of class '<em>Unit Multiplication</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Unit Multiplication</em>'.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @return a new object of class '<em>Unit Multiplication</em>'.
      * @generated
      */
     UnitMultiplication createUnitMultiplication();
 
     /**
-     * Returns a new object of class '<em>Unit Power</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Unit Power</em>'.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @return a new object of class '<em>Unit Power</em>'.
      * @generated
      */
     UnitPower createUnitPower();
 
     /**
-     * Returns a new object of class '<em>Unit Literal</em>'. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @return a new object of class '<em>Unit Literal</em>'.
+     * Returns a new object of class '<em>Unit Division</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Unit Division</em>'.
      * @generated
      */
-    UnitLiteral createUnitLiteral();
+    UnitDivision createUnitDivision();
 
     /**
-     * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Returns the package supported by this factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @return the package supported by this factory.
      * @generated
      */

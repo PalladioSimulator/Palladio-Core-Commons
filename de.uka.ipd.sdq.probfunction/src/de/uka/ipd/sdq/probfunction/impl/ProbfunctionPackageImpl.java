@@ -6,6 +6,7 @@
  */
 package de.uka.ipd.sdq.probfunction.impl;
 
+import de.uka.ipd.sdq.probfunction.BoolSample;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EGenericType;
@@ -18,8 +19,10 @@ import de.uka.ipd.sdq.probfunction.BoxedPDF;
 import de.uka.ipd.sdq.probfunction.Complex;
 import de.uka.ipd.sdq.probfunction.ContinuousPDF;
 import de.uka.ipd.sdq.probfunction.ContinuousSample;
+import de.uka.ipd.sdq.probfunction.DoubleSample;
 import de.uka.ipd.sdq.probfunction.ExponentialDistribution;
 import de.uka.ipd.sdq.probfunction.GammaDistribution;
+import de.uka.ipd.sdq.probfunction.IntSample;
 import de.uka.ipd.sdq.probfunction.LognormalDistribution;
 import de.uka.ipd.sdq.probfunction.NormalDistribution;
 import de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction;
@@ -29,6 +32,7 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionFactory;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 import de.uka.ipd.sdq.probfunction.Sample;
 import de.uka.ipd.sdq.probfunction.SamplePDF;
+import de.uka.ipd.sdq.probfunction.StringSample;
 import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
@@ -135,6 +139,34 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 	 * @generated
 	 */
 	private EClass gammaDistributionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intSampleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boolSampleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass doubleSampleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringSampleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -304,8 +336,8 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSample_Value() {
-		return (EReference)sampleEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSample_Value() {
+		return (EAttribute)sampleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -314,7 +346,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 	 * @generated
 	 */
 	public EAttribute getSample_Probability() {
-		return (EAttribute)sampleEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)sampleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -484,6 +516,42 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getIntSample() {
+		return intSampleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBoolSample() {
+		return boolSampleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDoubleSample() {
+		return doubleSampleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringSample() {
+		return stringSampleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ProbfunctionFactory getProbfunctionFactory() {
 		return (ProbfunctionFactory)getEFactoryInstance();
 	}
@@ -523,8 +591,8 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 		createEAttribute(probabilityMassFunctionEClass, PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN);
 
 		sampleEClass = createEClass(SAMPLE);
-		createEReference(sampleEClass, SAMPLE__VALUE);
 		createEAttribute(sampleEClass, SAMPLE__PROBABILITY);
+		createEAttribute(sampleEClass, SAMPLE__VALUE);
 
 		samplePDFEClass = createEClass(SAMPLE_PDF);
 		createEAttribute(samplePDFEClass, SAMPLE_PDF__DISTANCE);
@@ -550,6 +618,14 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 		gammaDistributionEClass = createEClass(GAMMA_DISTRIBUTION);
 		createEAttribute(gammaDistributionEClass, GAMMA_DISTRIBUTION__ALPHA);
 		createEAttribute(gammaDistributionEClass, GAMMA_DISTRIBUTION__THETA);
+
+		intSampleEClass = createEClass(INT_SAMPLE);
+
+		boolSampleEClass = createEClass(BOOL_SAMPLE);
+
+		doubleSampleEClass = createEClass(DOUBLE_SAMPLE);
+
+		stringSampleEClass = createEClass(STRING_SAMPLE);
 	}
 
 	/**
@@ -594,6 +670,22 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 		normalDistributionEClass.getESuperTypes().add(this.getContinuousPDF());
 		lognormalDistributionEClass.getESuperTypes().add(this.getContinuousPDF());
 		gammaDistributionEClass.getESuperTypes().add(this.getContinuousPDF());
+		EGenericType g1 = createEGenericType(this.getSample());
+		EGenericType g2 = createEGenericType(ecorePackage.getEIntegerObject());
+		g1.getETypeArguments().add(g2);
+		intSampleEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getSample());
+		g2 = createEGenericType(ecorePackage.getEBooleanObject());
+		g1.getETypeArguments().add(g2);
+		boolSampleEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getSample());
+		g2 = createEGenericType(ecorePackage.getEDoubleObject());
+		g1.getETypeArguments().add(g2);
+		doubleSampleEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getSample());
+		g2 = createEGenericType(ecorePackage.getEString());
+		g1.getETypeArguments().add(g2);
+		stringSampleEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(boxedPDFEClass, BoxedPDF.class, "BoxedPDF", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -612,9 +704,9 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 		initEAttribute(getProbabilityMassFunction_OrderedDomain(), ecorePackage.getEBoolean(), "orderedDomain", null, 1, 1, ProbabilityMassFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(sampleEClass, Sample.class, "Sample", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		EGenericType g1 = createEGenericType(sampleEClass_T);
-		initEReference(getSample_Value(), g1, null, "value", null, 1, 1, Sample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getSample_Probability(), ecorePackage.getEDouble(), "probability", null, 0, 1, Sample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		g1 = createEGenericType(sampleEClass_T);
+		initEAttribute(getSample_Value(), g1, "value", null, 0, 1, Sample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(samplePDFEClass, SamplePDF.class, "SamplePDF", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSamplePDF_Distance(), ecorePackage.getEDouble(), "distance", null, 0, 1, SamplePDF.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -640,6 +732,14 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 		initEClass(gammaDistributionEClass, GammaDistribution.class, "GammaDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGammaDistribution_Alpha(), ecorePackage.getEDouble(), "alpha", null, 1, 1, GammaDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getGammaDistribution_Theta(), ecorePackage.getEDouble(), "theta", null, 1, 1, GammaDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(intSampleEClass, IntSample.class, "IntSample", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(boolSampleEClass, BoolSample.class, "BoolSample", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(doubleSampleEClass, DoubleSample.class, "DoubleSample", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringSampleEClass, StringSample.class, "StringSample", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

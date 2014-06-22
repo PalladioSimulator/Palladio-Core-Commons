@@ -223,21 +223,21 @@ litigation.
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="de.uka.ipd.sdq.units.edit"/>
       <import plugin="org.apache.commons.math" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.stoex" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.stoex" version="2.2.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
          id="de.uka.ipd.sdq.probfunction"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.uka.ipd.sdq.probfunction.edit"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
    <plugin

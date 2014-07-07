@@ -23,94 +23,91 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ProductOperations implements Enumerator {
     /**
-	 * The '<em><b>MULT</b></em>' literal object.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #MULT_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * The '<em><b>MULT</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #MULT_VALUE
+     * @generated
+     * @ordered
+     */
     MULT(0, "MULT", "MULT"),
 
     /**
-	 * The '<em><b>DIV</b></em>' literal object.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #DIV_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * The '<em><b>DIV</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #DIV_VALUE
+     * @generated
+     * @ordered
+     */
     DIV(1, "DIV", "DIV"),
 
     /**
-	 * The '<em><b>MOD</b></em>' literal object.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #MOD_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * The '<em><b>MOD</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #MOD_VALUE
+     * @generated
+     * @ordered
+     */
     MOD(2, "MOD", "MOD");
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-	 * The '<em><b>MULT</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>MULT</b></em>' literal value. <!-- begin-user-doc -->
      * <p>
      * If the meaning of '<em><b>MULT</b></em>' literal object isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-	 * @see #MULT
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+     * 
+     * @see #MULT
+     * @model
+     * @generated
+     * @ordered
+     */
     public static final int MULT_VALUE = 0;
 
     /**
-	 * The '<em><b>DIV</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>DIV</b></em>' literal value. <!-- begin-user-doc -->
      * <p>
      * If the meaning of '<em><b>DIV</b></em>' literal object isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-	 * @see #DIV
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+     * 
+     * @see #DIV
+     * @model
+     * @generated
+     * @ordered
+     */
     public static final int DIV_VALUE = 1;
 
     /**
-	 * The '<em><b>MOD</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>MOD</b></em>' literal value. <!-- begin-user-doc -->
      * <p>
      * If the meaning of '<em><b>MOD</b></em>' literal object isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-	 * @see #MOD
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+     * 
+     * @see #MOD
+     * @model
+     * @generated
+     * @ordered
+     */
     public static final int MOD_VALUE = 2;
 
     /**
-	 * An array of all the '<em><b>Product Operations</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * An array of all the '<em><b>Product Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-	 * @generated
-	 */
-    private static final ProductOperations[] VALUES_ARRAY = new ProductOperations[] {
-			MULT,
-			DIV,
-			MOD,
-		};
+     * 
+     * @generated
+     */
+    private static final ProductOperations[] VALUES_ARRAY = new ProductOperations[] { MULT, DIV, MOD, };
 
     /**
      * A public read-only list of all the '<em><b>Product Operations</b></em>' enumerators. <!--
@@ -121,19 +118,20 @@ public enum ProductOperations implements Enumerator {
     public static final List<ProductOperations> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
-	 * Returns the '<em><b>Product Operations</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * Returns the '<em><b>Product Operations</b></em>' literal with the specified literal value.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public static ProductOperations get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ProductOperations result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ProductOperations result = VALUES_ARRAY[i];
+            if (result.toString().equals(literal)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
     /**
      * Returns the '<em><b>Product Operations</b></em>' literal with the specified name. <!--
@@ -142,81 +140,91 @@ public enum ProductOperations implements Enumerator {
      * @generated
      */
     public static ProductOperations getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ProductOperations result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ProductOperations result = VALUES_ARRAY[i];
+            if (result.getName().equals(name)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
     /**
-	 * Returns the '<em><b>Product Operations</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * Returns the '<em><b>Product Operations</b></em>' literal with the specified integer value.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public static ProductOperations get(int value) {
-		switch (value) {
-			case MULT_VALUE: return MULT;
-			case DIV_VALUE: return DIV;
-			case MOD_VALUE: return MOD;
-		}
-		return null;
-	}
+        switch (value) {
+        case MULT_VALUE:
+            return MULT;
+        case DIV_VALUE:
+            return DIV;
+        case MOD_VALUE:
+            return MOD;
+        }
+        return null;
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     private final int value;
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     private final String name;
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     private final String literal;
 
     /**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     private ProductOperations(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+        this.value = value;
+        this.name = name;
+        this.literal = literal;
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public int getValue() {
-	  return value;
-	}
+        return value;
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public String getName() {
-	  return name;
-	}
+        return name;
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public String getLiteral() {
-	  return literal;
-	}
+        return literal;
+    }
 
     /**
      * Returns the literal value of the enumerator, which is its string representation. <!--
@@ -226,7 +234,7 @@ public enum ProductOperations implements Enumerator {
      */
     @Override
     public String toString() {
-		return literal;
-	}
+        return literal;
+    }
 
 } // ProductOperations

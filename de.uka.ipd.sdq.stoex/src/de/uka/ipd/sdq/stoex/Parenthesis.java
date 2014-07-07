@@ -13,7 +13,7 @@ package de.uka.ipd.sdq.stoex;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.stoex.Parenthesis#getInnerExpression <em>Inner Expression</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.Parenthesis#getInnerExpression <em>Inner Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,9 +23,10 @@ package de.uka.ipd.sdq.stoex;
  */
 public interface Parenthesis extends Atom {
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**

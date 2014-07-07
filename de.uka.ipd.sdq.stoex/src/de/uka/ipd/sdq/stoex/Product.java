@@ -18,8 +18,9 @@ package de.uka.ipd.sdq.stoex;
 public interface Product extends Term {
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // Product

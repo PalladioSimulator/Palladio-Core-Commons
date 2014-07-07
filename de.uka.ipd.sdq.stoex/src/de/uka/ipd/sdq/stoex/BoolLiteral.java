@@ -13,7 +13,7 @@ package de.uka.ipd.sdq.stoex;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.stoex.BoolLiteral#isValue <em>Value</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.BoolLiteral#isValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,34 +23,37 @@ package de.uka.ipd.sdq.stoex;
  */
 public interface BoolLiteral extends Atom {
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Value</em>' attribute isn't clear, there really should be more of
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(boolean)
-	 * @see de.uka.ipd.sdq.stoex.StoexPackage#getBoolLiteral_Value()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
+     * 
+     * @return the value of the '<em>Value</em>' attribute.
+     * @see #setValue(boolean)
+     * @see de.uka.ipd.sdq.stoex.StoexPackage#getBoolLiteral_Value()
+     * @model required="true" ordered="false"
+     * @generated
+     */
     boolean isValue();
 
     /**
-	 * Sets the value of the '{@link de.uka.ipd.sdq.stoex.BoolLiteral#isValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #isValue()
-	 * @generated
-	 */
+     * Sets the value of the '{@link de.uka.ipd.sdq.stoex.BoolLiteral#isValue <em>Value</em>}'
+     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Value</em>' attribute.
+     * @see #isValue()
+     * @generated
+     */
     void setValue(boolean value);
 
 } // BoolLiteral

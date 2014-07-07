@@ -21,8 +21,9 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
 public interface Expression extends EStereotypableObject {
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 } // Expression

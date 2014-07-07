@@ -13,8 +13,8 @@ package de.uka.ipd.sdq.stoex;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.stoex.PowerExpression#getBase <em>Base</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.stoex.PowerExpression#getExponent <em>Exponent</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.PowerExpression#getBase <em>Base</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.PowerExpression#getExponent <em>Exponent</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,35 +24,38 @@ package de.uka.ipd.sdq.stoex;
  */
 public interface PowerExpression extends Power {
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-	 * Returns the value of the '<em><b>Base</b></em>' containment reference.
-	 * <!-- begin-user-doc
+     * Returns the value of the '<em><b>Base</b></em>' containment reference. <!-- begin-user-doc
      * -->
      * <p>
      * If the meaning of the '<em>Base</em>' containment reference isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base</em>' containment reference.
-	 * @see #setBase(Power)
-	 * @see de.uka.ipd.sdq.stoex.StoexPackage#getPowerExpression_Base()
-	 * @model containment="true" required="true" ordered="false"
-	 * @generated
-	 */
+     * 
+     * @return the value of the '<em>Base</em>' containment reference.
+     * @see #setBase(Power)
+     * @see de.uka.ipd.sdq.stoex.StoexPackage#getPowerExpression_Base()
+     * @model containment="true" required="true" ordered="false"
+     * @generated
+     */
     Power getBase();
 
     /**
-	 * Sets the value of the '{@link de.uka.ipd.sdq.stoex.PowerExpression#getBase <em>Base</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base</em>' containment reference.
-	 * @see #getBase()
-	 * @generated
-	 */
+     * Sets the value of the '{@link de.uka.ipd.sdq.stoex.PowerExpression#getBase <em>Base</em>}'
+     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Base</em>' containment reference.
+     * @see #getBase()
+     * @generated
+     */
     void setBase(Power value);
 
     /**
@@ -73,12 +76,14 @@ public interface PowerExpression extends Power {
     Unary getExponent();
 
     /**
-	 * Sets the value of the '{@link de.uka.ipd.sdq.stoex.PowerExpression#getExponent <em>Exponent</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exponent</em>' containment reference.
-	 * @see #getExponent()
-	 * @generated
-	 */
+     * Sets the value of the '{@link de.uka.ipd.sdq.stoex.PowerExpression#getExponent
+     * <em>Exponent</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Exponent</em>' containment reference.
+     * @see #getExponent()
+     * @generated
+     */
     void setExponent(Unary value);
 
 } // PowerExpression

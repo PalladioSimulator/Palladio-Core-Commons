@@ -23,8 +23,8 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.stoex.impl.RandomVariableImpl#getSpecification <em>Specification</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.stoex.impl.RandomVariableImpl#getExpression <em>Expression</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.impl.RandomVariableImpl#getSpecification <em>Specification</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.stoex.impl.RandomVariableImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,9 +32,10 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  */
 public class RandomVariableImpl extends EStereotypableObjectImpl implements RandomVariable {
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
@@ -58,49 +59,56 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
     protected String specification = SPECIFICATION_EDEFAULT;
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     protected RandomVariableImpl() {
-		super();
-	}
+        super();
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     protected EClass eStaticClass() {
-		return StoexPackage.Literals.RANDOM_VARIABLE;
-	}
+        return StoexPackage.Literals.RANDOM_VARIABLE;
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public String getSpecification() {
-		return specification;
-	}
+        return specification;
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public void setSpecification(String newSpecification) {
-		String oldSpecification = specification;
-		specification = newSpecification;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.RANDOM_VARIABLE__SPECIFICATION, oldSpecification, specification));
-	}
+        String oldSpecification = specification;
+        specification = newSpecification;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.RANDOM_VARIABLE__SPECIFICATION,
+                    oldSpecification, specification));
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     public Expression getExpression() {
-		Expression expression = basicGetExpression();
-		return expression != null && ((EObject)expression).eIsProxy() ? (Expression)eResolveProxy((InternalEObject)expression) : expression;
-	}
+        Expression expression = basicGetExpression();
+        return expression != null && ((EObject) expression).eIsProxy() ? (Expression) eResolveProxy((InternalEObject) expression)
+                : expression;
+    }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -125,77 +133,85 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
     }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-				return getSpecification();
-			case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
-				if (resolve) return getExpression();
-				return basicGetExpression();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+        case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
+            return getSpecification();
+        case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
+            if (resolve)
+                return getExpression();
+            return basicGetExpression();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-				setSpecification((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+        case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
+            setSpecification((String) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     public void eUnset(int featureID) {
-		switch (featureID) {
-			case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-				setSpecification(SPECIFICATION_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+        case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
+            setSpecification(SPECIFICATION_EDEFAULT);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-				return SPECIFICATION_EDEFAULT == null ? specification != null : !SPECIFICATION_EDEFAULT.equals(specification);
-			case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
-				return isSetExpression();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+        case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
+            return SPECIFICATION_EDEFAULT == null ? specification != null : !SPECIFICATION_EDEFAULT
+                    .equals(specification);
+        case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
+            return isSetExpression();
+        }
+        return super.eIsSet(featureID);
+    }
 
     /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (specification: ");
-		result.append(specification);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (specification: ");
+        result.append(specification);
+        result.append(')');
+        return result.toString();
+    }
 
 } // RandomVariableImpl

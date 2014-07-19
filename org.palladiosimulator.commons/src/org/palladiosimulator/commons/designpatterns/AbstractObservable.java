@@ -13,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * A generic implementation of an Observable object as defined by the <a
  * href="http://en.wikipedia.org/wiki/Observer_pattern">Observer pattern</a>. As a type parameter
  * the interface for the Observer needs to be specified.
- * 
+ *
  * Taken from http://pastebin.com/YmVhDNzk and adapted
  * @author Steven Jeuris
  * @param <ObserverInterfaceType>
@@ -24,9 +24,9 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
     /**
      * The ObserverPool is a proxy which allows calls to an interface to be forwarded to a set of
      * listeners.
-     * 
+     *
      * @author Steven Jeuris
-     * 
+     *
      * @param <T>
      *            The interface which defines which calls can be made to the listeners.
      */
@@ -44,7 +44,7 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
         /**
          * Add an observer to which the calls will be made.
-         * 
+         *
          * @param observer
          *            The observer to add.
          */
@@ -54,22 +54,26 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
         /**
          * Remove an observer to which calls where being made.
-         * 
+         *
          * @param observer
          *            The observer to remove.
-         * 
+         *
          * @return True, when the observer was found and removed, false otherwise.
          */
         boolean removeObserver(final T observer) {
             return m_pool.remove(observer);
         }
 
+        void removeAllObserver() {
+            m_pool.clear();
+        }
+
         /**
          * Create the proxy which allows to dispatch all calls to the observers.
-         * 
+         *
          * @param observerClass
          *            The interface class of the observers.
-         * 
+         *
          * @return The dispatcher which can be used to make calls to all added observers.
          */
         @SuppressWarnings("unchecked")
@@ -106,7 +110,7 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
     /**
      * Get the event dispatcher through which you can notify the observers.
-     * 
+     *
      * @return The event dispatcher through which you can notify the observers.
      */
     public ObserverInterfaceType getEventDispatcher() {
@@ -139,7 +143,7 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see be.hyp3.patterns.observer.IObservable#addObserver(T)
      */
     @Override
@@ -152,7 +156,7 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see be.hyp3.patterns.observer.IObservable#removeObserver(T)
      */
     @Override
@@ -165,6 +169,10 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
     public List<ObserverInterfaceType> getObservers() {
         return m_observers.getObservers();
+    }
+
+    public void removeAllObserver() {
+        m_observers.removeAllObserver();
     }
 
 }

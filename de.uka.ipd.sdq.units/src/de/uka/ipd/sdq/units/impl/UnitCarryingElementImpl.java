@@ -98,12 +98,10 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public void setUnit(Unit newUnit) {
-        // TODO: implement this method to set the 'Unit' containment reference
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        this.unit = newUnit;
     }
 
     /**

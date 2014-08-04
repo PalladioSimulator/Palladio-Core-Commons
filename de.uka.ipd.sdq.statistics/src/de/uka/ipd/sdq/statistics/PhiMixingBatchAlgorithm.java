@@ -30,9 +30,9 @@ import de.uka.ipd.sdq.statistics.independence.RunUpTest;
  */
 public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
-    private Logger logger;
+    private static final Logger LOGGER = Logger.getLogger("de.uka.ipd.sdq.statistics.PhiMixingBatchAlgorithm.log");
 
-    private IIndependenceTest independenceTest;
+    private final IIndependenceTest independenceTest;
 
     private QuasiIndependentSampleSequence qiSamples;
 
@@ -60,8 +60,6 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
     }
 
     private void initialize() {
-        logger = Logger.getLogger("de.uka.ipd.sdq.statistics.PhiMixingBatchAlgorithm.log");
-
         qiSamples = new QuasiIndependentSampleSequence();
 
         state = new Iteration0();
@@ -147,22 +145,23 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
         protected void independenceConditionalStateChange(int lag, State independent, State notIndependent) {
             if (independenceTest.testIndependence(qiSamples.lagSublist(lag))) {
-                logger.info("Independence test passed. Batch means are valid.");
-                if (batches.isEmpty())
+                LOGGER.info("Independence test passed. Batch means are valid.");
+                if (batches.isEmpty()) {
                     computeBatches(4);
+                }
                 setValid(true);
                 changeState(independent);
             } else {
-                logger.info("Independence test not passed. Need more samples.");
+                LOGGER.info("Independence test not passed. Need more samples.");
                 changeState(notIndependent);
             }
         }
 
         protected void logBatchStatus() {
             if (batches.isEmpty()) {
-                logger.info("No batches determinined so far. Total samples " + "seen: " + totalSamples);
+                LOGGER.info("No batches determinined so far. Total samples " + "seen: " + totalSamples);
             } else {
-                logger.info("There are " + batches.size() + " batches of size " + batches.get(0).getSize()
+                LOGGER.info("There are " + batches.size() + " batches of size " + batches.get(0).getSize()
                         + ". Total samples seen: " + totalSamples);
             }
         }
@@ -171,9 +170,10 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
     private class Iteration0 extends State {
 
+        @Override
         public void start() {
             k = 0;
-            logger.info("Start of iteration 0.");
+            LOGGER.info("Start of iteration 0.");
             demandedQiSamples += 4000;
         }
 
@@ -186,8 +186,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
             }
         }
 
+        @Override
         public void end() {
-            logger.info("End of iteration 0.");
+            LOGGER.info("End of iteration 0.");
             super.logBatchStatus();
         }
 
@@ -195,8 +196,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
     private class Iteration1a extends State {
 
+        @Override
         public void start() {
-            logger.info("Start of iteration 1a");
+            LOGGER.info("Start of iteration 1a");
             k = 1;
             demandedQiSamples += 4000;
         }
@@ -210,8 +212,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
             }
         }
 
+        @Override
         public void end() {
-            logger.info("End of iteration 1a.");
+            LOGGER.info("End of iteration 1a.");
             super.logBatchStatus();
         }
 
@@ -219,8 +222,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
     private class Iteration1b extends State {
 
+        @Override
         public void start() {
-            logger.info("Start of iteration 1b");
+            LOGGER.info("Start of iteration 1b");
             demandedQiSamples += 4000;
         }
 
@@ -233,8 +237,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
             }
         }
 
+        @Override
         public void end() {
-            logger.info("End of iteration 1b");
+            LOGGER.info("End of iteration 1b");
             super.logBatchStatus();
         }
 
@@ -242,9 +247,10 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
     private class IterationKa extends State {
 
+        @Override
         public void start() {
             ++k;
-            logger.info("Start of iteration " + k + "a.");
+            LOGGER.info("Start of iteration " + k + "a.");
             if (batches.isEmpty()) {
                 computeBatches(3);
             } else {
@@ -276,8 +282,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
             }
         }
 
+        @Override
         public void end() {
-            logger.info("End of iteration " + k + "a.");
+            LOGGER.info("End of iteration " + k + "a.");
             super.logBatchStatus();
         }
 
@@ -285,8 +292,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
     private class IterationKb extends State {
 
+        @Override
         public void start() {
-            logger.info("Start of iteration " + k + "b.");
+            LOGGER.info("Start of iteration " + k + "b.");
             assert (batches.size() == 4);
             // reduce the number of batches from 4 to 2 by
             // taking average of adjacent batch means
@@ -315,8 +323,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
             }
         }
 
+        @Override
         public void end() {
-            logger.info("End of iteration " + k + "b.");
+            LOGGER.info("End of iteration " + k + "b.");
             super.logBatchStatus();
         }
 
@@ -326,8 +335,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
 
         private int demandedSamples;
 
+        @Override
         public void start() {
-            logger.info("Start increasing batches.");
+            LOGGER.info("Start increasing batches.");
 
             if (batches.size() == 30) {
                 mergeAdjacentBatches(batches);
@@ -349,8 +359,9 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
             }
         }
 
+        @Override
         public void end() {
-            logger.info("Stop increasing batches.");
+            LOGGER.info("Stop increasing batches.");
             super.logBatchStatus();
         }
 
@@ -361,7 +372,7 @@ public class PhiMixingBatchAlgorithm extends ABatchAlgorithm {
         /**
          * buffer to store the quasi independent samples (i.e. a subset of the observation sequence)
          */
-        private List<Double> buffer;
+        private final List<Double> buffer;
 
         /** number of forthcoming observations to ignore until a sample is taken */
         private int lag;

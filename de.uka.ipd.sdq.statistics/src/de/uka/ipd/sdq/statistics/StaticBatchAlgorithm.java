@@ -15,12 +15,12 @@ import org.apache.log4j.Logger;
  */
 public class StaticBatchAlgorithm extends ABatchAlgorithm {
 
-    private int batchSize;
-    private int minNumberOfBatches;
+    private final int batchSize;
+    private final int minNumberOfBatches;
 
-    private List<Double> buffer;
+    private final List<Double> buffer;
 
-    private Logger logger = Logger.getLogger("de.uka.ipd.sdq.statistics.StaticBatchAlgorithm.log");
+    private static final Logger LOGGER = Logger.getLogger("de.uka.ipd.sdq.statistics.StaticBatchAlgorithm.log");
 
     public StaticBatchAlgorithm(int batchSize, int minNumberOfBatches) {
         this.batchSize = batchSize;
@@ -32,7 +32,7 @@ public class StaticBatchAlgorithm extends ABatchAlgorithm {
         }
 
         if (batchSize > 100000) {
-            logger.warn("Batch size is larger than 100 000, thus more than 700KB are needed to store intermediate values. Decrease batch size of you have memory problems, or ask the developers to implement a sliding mean calculation for the batchs.");
+            LOGGER.warn("Batch size is larger than 100 000, thus more than 700KB are needed to store intermediate values. Decrease batch size of you have memory problems, or ask the developers to implement a sliding mean calculation for the batchs.");
         }
         this.buffer = new LinkedList<Double>();
     }

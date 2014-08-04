@@ -18,7 +18,7 @@ import de.uka.ipd.sdq.probfunction.math.apache.impl.PDFFactory;
  */
 public class RunUpTest implements IIndependenceTest {
 
-    private static final Logger logger = Logger.getLogger(RunUpTest.class);
+    private static final Logger LOGGER = Logger.getLogger(RunUpTest.class);
 
     private static final int LOWER_SAMPLE_LIMIT = 4000;
 
@@ -80,7 +80,7 @@ public class RunUpTest implements IIndependenceTest {
         double upperQuantile = dist.inverseF(CHI_SQUARE_UPPER_QUANTILE);
         double lowerQuantile = dist.inverseF(CHI_SQUARE_LOWER_QUANTILE);
 
-        logger.info("Run Up Indepence test: F=" + V);
+        LOGGER.info("Run Up Indepence test: F=" + V);
 
         return V >= lowerQuantile && V <= upperQuantile;
     }

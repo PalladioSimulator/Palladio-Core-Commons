@@ -220,8 +220,9 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
                 || childFeature == StoexPackage.Literals.POWER_EXPRESSION__EXPONENT;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
-                    getFeatureText(childFeature), getTypeText(owner) });
+            return getString("_UI_CreateChild_text2", new Object[] {
+                    getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner)
+            });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

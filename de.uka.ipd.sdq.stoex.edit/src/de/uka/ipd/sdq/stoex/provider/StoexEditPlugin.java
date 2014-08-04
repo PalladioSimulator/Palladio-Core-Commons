@@ -46,7 +46,9 @@ public final class StoexEditPlugin extends EMFPlugin {
      * @generated
      */
     public StoexEditPlugin() {
-        super(new ResourceLocator[] { ProbabilityFunctionEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, });
+        super(new ResourceLocator[] {
+                ProbabilityFunctionEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
+        });
     }
 
     /**

@@ -5,10 +5,8 @@
  */
 package de.uka.ipd.sdq.probfunction;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Continuous PDF</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Continuous PDF</b></em>'.
  * <!-- end-user-doc -->
  *
  *
@@ -17,11 +15,11 @@ package de.uka.ipd.sdq.probfunction;
  * @generated
  */
 public interface ContinuousPDF extends ProbabilityDensityFunction {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
 } // ContinuousPDF

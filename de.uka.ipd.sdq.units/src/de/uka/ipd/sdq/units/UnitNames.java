@@ -10,113 +10,109 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Unit Names</b></em>',
- * and utility methods for working with them.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the literals of the enumeration '
+ * <em><b>Unit Names</b></em>', and utility methods for working with them. <!-- end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitNames()
  * @model
  * @generated
  */
 public enum UnitNames implements Enumerator {
-	/**
-     * The '<em><b>UNITLESS</b></em>' literal object.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The '<em><b>UNITLESS</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #UNITLESS_VALUE
      * @generated
      * @ordered
      */
-	UNITLESS(0, "UNITLESS", ""),
+    UNITLESS(0, "UNITLESS", ""),
 
-	/**
-     * The '<em><b>BYTE</b></em>' literal object.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The '<em><b>BYTE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #BYTE_VALUE
      * @generated
      * @ordered
      */
-	BYTE(1, "BYTE", "B"),
+    BYTE(1, "BYTE", "B"),
 
-	/**
-     * The '<em><b>SECOND</b></em>' literal object.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * The '<em><b>SECOND</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #SECOND_VALUE
      * @generated
      * @ordered
      */
-	SECOND(2, "SECOND", "s"), /**
-     * The '<em><b>METER</b></em>' literal object.
-     * <!-- begin-user-doc -->
+    SECOND(2, "SECOND", "s"), /**
+     * The '<em><b>METER</b></em>' literal object. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #METER_VALUE
      * @generated
      * @ordered
      */
     METER(3, "METER", "m");
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
-	/**
-     * The '<em><b>UNITLESS</b></em>' literal value.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UNITLESS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+    /**
+     * The '<em><b>UNITLESS</b></em>' literal value. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>UNITLESS</b></em>' literal object isn't clear, there really should
+     * be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * 
      * @see #UNITLESS
      * @model literal=""
      * @generated
      * @ordered
      */
-	public static final int UNITLESS_VALUE = 0;
+    public static final int UNITLESS_VALUE = 0;
 
-	/**
-     * The '<em><b>BYTE</b></em>' literal value.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>BYTE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+    /**
+     * The '<em><b>BYTE</b></em>' literal value. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>BYTE</b></em>' literal object isn't clear, there really should be
+     * more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * 
      * @see #BYTE
      * @model literal="B"
      * @generated
      * @ordered
      */
-	public static final int BYTE_VALUE = 1;
+    public static final int BYTE_VALUE = 1;
 
-	/**
-     * The '<em><b>SECOND</b></em>' literal value.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>SECOND</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+    /**
+     * The '<em><b>SECOND</b></em>' literal value. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>SECOND</b></em>' literal object isn't clear, there really should be
+     * more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * 
      * @see #SECOND
      * @model literal="s"
      * @generated
      * @ordered
      */
-	public static final int SECOND_VALUE = 2;
+    public static final int SECOND_VALUE = 2;
 
-	/**
-     * The '<em><b>METER</b></em>' literal value.
-     * <!-- begin-user-doc -->
+    /**
+     * The '<em><b>METER</b></em>' literal value. <!-- begin-user-doc -->
      * <p>
-     * If the meaning of '<em><b>METER</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
+     * If the meaning of '<em><b>METER</b></em>' literal object isn't clear, there really should be
+     * more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @see #METER
      * @model literal="m"
      * @generated
@@ -125,34 +121,30 @@ public enum UnitNames implements Enumerator {
     public static final int METER_VALUE = 3;
 
     /**
-     * An array of all the '<em><b>Unit Names</b></em>' enumerators.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * An array of all the '<em><b>Unit Names</b></em>' enumerators. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @generated
      */
-	private static final UnitNames[] VALUES_ARRAY =
-		new UnitNames[] {
-            UNITLESS,
-            BYTE,
-            SECOND,
-            METER,
-        };
+    private static final UnitNames[] VALUES_ARRAY = new UnitNames[] {
+            UNITLESS, BYTE, SECOND, METER,
+    };
 
-	/**
-     * A public read-only list of all the '<em><b>Unit Names</b></em>' enumerators.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * A public read-only list of all the '<em><b>Unit Names</b></em>' enumerators. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static final List<UnitNames> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<UnitNames> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
-	/**
-     * Returns the '<em><b>Unit Names</b></em>' literal with the specified literal value.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns the '<em><b>Unit Names</b></em>' literal with the specified literal value. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static UnitNames get(String literal) {
+    public static UnitNames get(String literal) {
         for (int i = 0; i < VALUES_ARRAY.length; ++i) {
             UnitNames result = VALUES_ARRAY[i];
             if (result.toString().equals(literal)) {
@@ -162,13 +154,13 @@ public enum UnitNames implements Enumerator {
         return null;
     }
 
-	/**
-     * Returns the '<em><b>Unit Names</b></em>' literal with the specified name.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns the '<em><b>Unit Names</b></em>' literal with the specified name. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static UnitNames getByName(String name) {
+    public static UnitNames getByName(String name) {
         for (int i = 0; i < VALUES_ARRAY.length; ++i) {
             UnitNames result = VALUES_ARRAY[i];
             if (result.getName().equals(name)) {
@@ -178,91 +170,94 @@ public enum UnitNames implements Enumerator {
         return null;
     }
 
-	/**
-     * Returns the '<em><b>Unit Names</b></em>' literal with the specified integer value.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Returns the '<em><b>Unit Names</b></em>' literal with the specified integer value. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public static UnitNames get(int value) {
+    public static UnitNames get(int value) {
         switch (value) {
-            case UNITLESS_VALUE: return UNITLESS;
-            case BYTE_VALUE: return BYTE;
-            case SECOND_VALUE: return SECOND;
-            case METER_VALUE: return METER;
+        case UNITLESS_VALUE:
+            return UNITLESS;
+        case BYTE_VALUE:
+            return BYTE;
+        case SECOND_VALUE:
+            return SECOND;
+        case METER_VALUE:
+            return METER;
         }
         return null;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	private final int value;
+    private final int value;
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	private final String name;
+    private final String name;
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	private final String literal;
+    private final String literal;
 
-	/**
-     * Only this class can construct instances.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	private UnitNames(int value, String name, String literal) {
+    private UnitNames(int value, String name, String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getValue() {
-      return value;
+    public int getValue() {
+        return value;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getName() {
-      return name;
+    public String getName() {
+        return name;
     }
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getLiteral() {
-      return literal;
-    }
-
-	/**
-     * Returns the literal value of the enumerator, which is its string representation.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	@Override
-	public String toString() {
+    public String getLiteral() {
         return literal;
     }
-	
-} //UnitNames
+
+    /**
+     * Returns the literal value of the enumerator, which is its string representation. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public String toString() {
+        return literal;
+    }
+
+} // UnitNames

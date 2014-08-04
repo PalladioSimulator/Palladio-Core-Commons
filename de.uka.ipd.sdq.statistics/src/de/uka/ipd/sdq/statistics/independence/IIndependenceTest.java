@@ -10,21 +10,21 @@ import java.util.Collection;
  */
 public interface IIndependenceTest {
 
-	/**
-	 * Tests, whether the sequence of samples appears to be independent.
-	 * 
-	 * @param samples
-	 *            the sequence of samples.
-	 * @return true, if the samples appears to be independent; false else.
-	 */
-	public boolean testIndependence(Collection<Double> samples);
+    /**
+     * Tests, whether the sequence of samples appears to be independent.
+     * 
+     * @param samples
+     *            the sequence of samples.
+     * @return true, if the samples appears to be independent; false else.
+     */
+    public boolean testIndependence(Collection<Double> samples);
 
-	/**
-	 * Returns the minimal number of samples necessary for a proper test result.
-	 * Avoid testing sequences smaller than the lower limit.
-	 * 
-	 * @return the minimal number of samples necessary for a proper test result.
-	 */
-	public int getLowerSampleLimit();
+    /**
+     * Returns the minimal number of samples necessary for a proper test result. Avoid testing
+     * sequences smaller than the lower limit.
+     * 
+     * @return the minimal number of samples necessary for a proper test result.
+     */
+    public int getLowerSampleLimit();
 
 }

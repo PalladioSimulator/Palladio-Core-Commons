@@ -107,7 +107,9 @@ public enum BooleanOperations implements Enumerator {
      * 
      * @generated
      */
-    private static final BooleanOperations[] VALUES_ARRAY = new BooleanOperations[] { AND, OR, XOR, };
+    private static final BooleanOperations[] VALUES_ARRAY = new BooleanOperations[] {
+            AND, OR, XOR,
+    };
 
     /**
      * A public read-only list of all the '<em><b>Boolean Operations</b></em>' enumerators. <!--

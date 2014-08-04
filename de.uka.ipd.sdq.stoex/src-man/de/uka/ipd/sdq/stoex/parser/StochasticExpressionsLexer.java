@@ -2042,7 +2042,8 @@ public class StochasticExpressionsLexer extends Lexer {
             "\32\44\4\uffff\1\44\1\uffff\32\44", "\1\u0099", "", "\1\u009a", "\32\44\4\uffff\1\44\1\uffff\32\44",
             "\32\44\4\uffff\1\44\1\uffff\32\44", "", "\32\44\4\uffff\1\44\1\uffff\32\44", "\1\u009e", "", "", "",
             "\1\u009f", "\1\u00a0", "\1\u00a1", "\1\u00a2", "\1\u00a3", "\1\u00a4", "\1\u00a5",
-            "\32\44\4\uffff\1\44\1\uffff\32\44", "" };
+            "\32\44\4\uffff\1\44\1\uffff\32\44", ""
+    };
 
     static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
     static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);

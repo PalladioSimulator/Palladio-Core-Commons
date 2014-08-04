@@ -10,13 +10,13 @@ import java.util.List;
  */
 public interface IPointEstimator {
 
-	/**
-	 * Conducts a point estimation.
-	 * 
-	 * @param samples
-	 *            the values for which a specific point is to be estimated.
-	 * @return
-	 */
-	public double estimatePoint(List<Double> samples);
+    /**
+     * Conducts a point estimation.
+     * 
+     * @param samples
+     *            the values for which a specific point is to be estimated.
+     * @return
+     */
+    public double estimatePoint(List<Double> samples);
 
 }

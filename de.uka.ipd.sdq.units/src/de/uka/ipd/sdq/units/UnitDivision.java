@@ -3,17 +3,15 @@
  */
 package de.uka.ipd.sdq.units;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Unit Division</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Unit Division</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.units.UnitDivision#getDividend <em>Dividend</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.units.UnitDivision#getDivisor <em>Divisor</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.units.UnitDivision#getDividend <em>Dividend</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.units.UnitDivision#getDivisor <em>Divisor</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,20 +21,21 @@ package de.uka.ipd.sdq.units;
  */
 public interface UnitDivision extends Unit {
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * Returns the value of the '<em><b>Dividend</b></em>' containment reference.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Dividend</b></em>' containment reference. <!--
+     * begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Dividend</em>' containment reference isn't clear,
-     * there really should be more of a description here...
+     * If the meaning of the '<em>Dividend</em>' containment reference isn't clear, there really
+     * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Dividend</em>' containment reference.
      * @see #setDividend(Unit)
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitDivision_Dividend()
@@ -46,23 +45,25 @@ public interface UnitDivision extends Unit {
     Unit getDividend();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.units.UnitDivision#getDividend <em>Dividend</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Dividend</em>' containment reference.
+     * Sets the value of the '{@link de.uka.ipd.sdq.units.UnitDivision#getDividend
+     * <em>Dividend</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Dividend</em>' containment reference.
      * @see #getDividend()
      * @generated
      */
     void setDividend(Unit value);
 
     /**
-     * Returns the value of the '<em><b>Divisor</b></em>' containment reference.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Divisor</b></em>' containment reference. <!-- begin-user-doc
+     * -->
      * <p>
-     * If the meaning of the '<em>Divisor</em>' containment reference isn't clear,
-     * there really should be more of a description here...
+     * If the meaning of the '<em>Divisor</em>' containment reference isn't clear, there really
+     * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Divisor</em>' containment reference.
      * @see #setDivisor(Unit)
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitDivision_Divisor()
@@ -72,10 +73,11 @@ public interface UnitDivision extends Unit {
     Unit getDivisor();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.units.UnitDivision#getDivisor <em>Divisor</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Divisor</em>' containment reference.
+     * Sets the value of the '{@link de.uka.ipd.sdq.units.UnitDivision#getDivisor <em>Divisor</em>}'
+     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Divisor</em>' containment reference.
      * @see #getDivisor()
      * @generated
      */

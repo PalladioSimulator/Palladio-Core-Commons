@@ -36,14 +36,15 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier.
-     * <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     public UnitPowerItemProvider(AdapterFactory adapterFactory) {
@@ -51,9 +52,9 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
     }
 
     /**
-     * This returns the property descriptors for the adapted class.
-     * <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -67,25 +68,20 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
     }
 
     /**
-     * This adds a property descriptor for the Exponent feature.
-     * <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Exponent feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     protected void addExponentPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_UnitPower_exponent_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_UnitPower_exponent_feature", "_UI_UnitPower_type"),
-                 UnitsPackage.Literals.UNIT_POWER__EXPONENT,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_UnitPower_exponent_feature"),
+                        getString("_UI_PropertyDescriptor_description", "_UI_UnitPower_exponent_feature",
+                                "_UI_UnitPower_type"), UnitsPackage.Literals.UNIT_POWER__EXPONENT, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -108,6 +104,7 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -119,8 +116,8 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
     }
 
     /**
-     * This returns UnitPower.gif.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns UnitPower.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -136,14 +133,15 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
      */
     @Override
     public String getText(Object object) {
-        UnitPower unitPower = (UnitPower)object;
+        UnitPower unitPower = (UnitPower) object;
         return getString("_UI_UnitPower_type") + " " + unitPower.getExponent();
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
+     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -151,45 +149,37 @@ public class UnitPowerItemProvider extends UnitItemProvider implements IEditingD
         updateChildren(notification);
 
         switch (notification.getFeatureID(UnitPower.class)) {
-            case UnitsPackage.UNIT_POWER__EXPONENT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case UnitsPackage.UNIT_POWER__UNIT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case UnitsPackage.UNIT_POWER__EXPONENT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            return;
+        case UnitsPackage.UNIT_POWER__UNIT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-     * that can be created under this object.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
+     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_POWER__UNIT,
-                 UnitsFactory.eINSTANCE.createBaseUnit()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_POWER__UNIT,
+                UnitsFactory.eINSTANCE.createBaseUnit()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_POWER__UNIT,
-                 UnitsFactory.eINSTANCE.createUnitMultiplication()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_POWER__UNIT,
+                UnitsFactory.eINSTANCE.createUnitMultiplication()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_POWER__UNIT,
-                 UnitsFactory.eINSTANCE.createUnitPower()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_POWER__UNIT,
+                UnitsFactory.eINSTANCE.createUnitPower()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_POWER__UNIT,
-                 UnitsFactory.eINSTANCE.createUnitDivision()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_POWER__UNIT,
+                UnitsFactory.eINSTANCE.createUnitDivision()));
     }
 
 }

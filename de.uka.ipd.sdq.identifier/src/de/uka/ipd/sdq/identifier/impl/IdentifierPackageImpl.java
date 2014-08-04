@@ -196,10 +196,11 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
      */
     protected void createEcoreAnnotations() {
         String source = "http://www.eclipse.org/emf/2002/Ecore";
-        addAnnotation(this, source, new String[] { "invocationDelegates",
-                "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "settingDelegates",
+        addAnnotation(this, source, new String[] {
+                "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "settingDelegates",
                 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "validationDelegates",
-                "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot" });
+                "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+        });
     }
 
     /**
@@ -210,8 +211,9 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
      */
     protected void createPivotAnnotations() {
         String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
-        addAnnotation(identifierEClass, source, new String[] { null,
-                "Identifier.allInstances()->isUnique(p: Identifier | p.id)" });
+        addAnnotation(identifierEClass, source, new String[] {
+                null, "Identifier.allInstances()->isUnique(p: Identifier | p.id)"
+        });
     }
 
     /**
@@ -222,8 +224,9 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
      */
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-        addAnnotation(getIdentifier_Id(), source, new String[] { "name", "id", "namespace",
-                "http://sdq.ipd.uka.de/Identifier/1.0" });
+        addAnnotation(getIdentifier_Id(), source, new String[] {
+                "name", "id", "namespace", "http://sdq.ipd.uka.de/Identifier/1.0"
+        });
     }
 
 } // IdentifierPackageImpl

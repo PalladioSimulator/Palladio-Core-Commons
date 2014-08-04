@@ -15,7 +15,7 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit <em>Unit</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit <em>Unit</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,22 +27,24 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
 public interface UnitCarryingElement extends EStereotypableObject {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * Returns the value of the '<em><b>Unit</b></em>' containment reference.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Unit</b></em>' containment reference. <!-- begin-user-doc
+     * -->
      * <p>
      * If the meaning of the '<em>Unit</em>' reference isn't clear, there really should be more of a
      * description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Unit</em>' containment reference.
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitCarryingElement_Unit()
-     * @model containment="true" transient="true" volatile="true" ordered="false" suppressedSetVisibility="true"
-     *        extendedMetaData="name='' namespace=''"
+     * @model containment="true" transient="true" volatile="true" ordered="false"
+     *        suppressedSetVisibility="true" extendedMetaData="name='' namespace=''"
      * @generated
      */
     Unit getUnit();

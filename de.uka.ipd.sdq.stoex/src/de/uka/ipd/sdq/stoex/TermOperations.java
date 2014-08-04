@@ -83,7 +83,9 @@ public enum TermOperations implements Enumerator {
      * 
      * @generated
      */
-    private static final TermOperations[] VALUES_ARRAY = new TermOperations[] { ADD, SUB, };
+    private static final TermOperations[] VALUES_ARRAY = new TermOperations[] {
+            ADD, SUB,
+    };
 
     /**
      * A public read-only list of all the '<em><b>Term Operations</b></em>' enumerators. <!--

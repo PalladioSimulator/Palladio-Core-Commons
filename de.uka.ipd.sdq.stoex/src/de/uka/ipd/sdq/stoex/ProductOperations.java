@@ -107,7 +107,9 @@ public enum ProductOperations implements Enumerator {
      * 
      * @generated
      */
-    private static final ProductOperations[] VALUES_ARRAY = new ProductOperations[] { MULT, DIV, MOD, };
+    private static final ProductOperations[] VALUES_ARRAY = new ProductOperations[] {
+            MULT, DIV, MOD,
+    };
 
     /**
      * A public read-only list of all the '<em><b>Product Operations</b></em>' enumerators. <!--

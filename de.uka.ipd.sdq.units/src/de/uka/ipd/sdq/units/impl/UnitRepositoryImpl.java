@@ -26,7 +26,7 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.units.impl.UnitRepositoryImpl#getUnits <em>Units</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.units.impl.UnitRepositoryImpl#getUnits <em>Units</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,6 +35,7 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
 public class UnitRepositoryImpl extends EStereotypableObjectImpl implements UnitRepository {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -50,6 +51,7 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected UnitRepositoryImpl() {
@@ -58,6 +60,7 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -67,6 +70,7 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<BaseUnit> getUnits() {
@@ -78,69 +82,74 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case UnitsPackage.UNIT_REPOSITORY__UNITS:
-                return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
+        case UnitsPackage.UNIT_REPOSITORY__UNITS:
+            return ((InternalEList<?>) getUnits()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case UnitsPackage.UNIT_REPOSITORY__UNITS:
-                return getUnits();
+        case UnitsPackage.UNIT_REPOSITORY__UNITS:
+            return getUnits();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case UnitsPackage.UNIT_REPOSITORY__UNITS:
-                getUnits().clear();
-                getUnits().addAll((Collection<? extends BaseUnit>)newValue);
-                return;
+        case UnitsPackage.UNIT_REPOSITORY__UNITS:
+            getUnits().clear();
+            getUnits().addAll((Collection<? extends BaseUnit>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case UnitsPackage.UNIT_REPOSITORY__UNITS:
-                getUnits().clear();
-                return;
+        case UnitsPackage.UNIT_REPOSITORY__UNITS:
+            getUnits().clear();
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case UnitsPackage.UNIT_REPOSITORY__UNITS:
-                return units != null && !units.isEmpty();
+        case UnitsPackage.UNIT_REPOSITORY__UNITS:
+            return units != null && !units.isEmpty();
         }
         return super.eIsSet(featureID);
     }

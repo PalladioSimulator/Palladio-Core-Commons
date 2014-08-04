@@ -180,8 +180,9 @@ public enum CompareOperations implements Enumerator {
      * 
      * @generated
      */
-    private static final CompareOperations[] VALUES_ARRAY = new CompareOperations[] { GREATER, EQUALS, LESS, NOTEQUAL,
-            LESSEQUAL, GREATEREQUAL, };
+    private static final CompareOperations[] VALUES_ARRAY = new CompareOperations[] {
+            GREATER, EQUALS, LESS, NOTEQUAL, LESSEQUAL, GREATEREQUAL,
+    };
 
     /**
      * A public read-only list of all the '<em><b>Compare Operations</b></em>' enumerators. <!--

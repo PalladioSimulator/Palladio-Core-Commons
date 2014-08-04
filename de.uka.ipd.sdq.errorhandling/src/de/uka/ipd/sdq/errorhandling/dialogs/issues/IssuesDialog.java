@@ -30,191 +30,194 @@ import de.uka.ipd.sdq.errorhandling.SeverityEnum;
 
 public class IssuesDialog extends Dialog {
 
-	public static final int IGNORE_BUTTON = 2;
-	private List<SeverityAndIssue> issues;
-	private Text detailsText;
-	private Table table;
-	/**
-	 * Create the dialog
-	 * @param parentShell
-	 */
-	public IssuesDialog(Shell parentShell, List<SeverityAndIssue> issues) {
-		super(parentShell);
-		setShellStyle(SWT.RESIZE|SWT.MAX);
-		this.issues = issues;
-		Collections.sort(this.issues);
-	}
+    public static final int IGNORE_BUTTON = 2;
+    private List<SeverityAndIssue> issues;
+    private Text detailsText;
+    private Table table;
 
-	/**
-	 * Create contents of the dialog
-	 * @param parent
-	 */
-	@Override
-	protected Control createDialogArea(Composite parent) {
-		Composite container = (Composite) super.createDialogArea(parent);
+    /**
+     * Create the dialog
+     * 
+     * @param parentShell
+     */
+    public IssuesDialog(Shell parentShell, List<SeverityAndIssue> issues) {
+        super(parentShell);
+        setShellStyle(SWT.RESIZE | SWT.MAX);
+        this.issues = issues;
+        Collections.sort(this.issues);
+    }
 
-		table = new Table(container, SWT.FULL_SELECTION | SWT.BORDER);
-		table.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				updateDetails();
-			}
-		});
-		table.setLinesVisible(true);
-		table.setHeaderVisible(true);
-		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+    /**
+     * Create contents of the dialog
+     * 
+     * @param parent
+     */
+    @Override
+    protected Control createDialogArea(Composite parent) {
+        Composite container = (Composite) super.createDialogArea(parent);
 
-		final TableColumn newColumnTableColumn = new TableColumn(table, SWT.NONE);
-		newColumnTableColumn.setWidth(81);
-		newColumnTableColumn.setText("Severity");
+        table = new Table(container, SWT.FULL_SELECTION | SWT.BORDER);
+        table.addSelectionListener(new SelectionAdapter() {
+            public void widgetSelected(SelectionEvent e) {
+                updateDetails();
+            }
+        });
+        table.setLinesVisible(true);
+        table.setHeaderVisible(true);
+        table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
-		final TableColumn newColumnTableColumn_1 = new TableColumn(table, SWT.NONE);
-		newColumnTableColumn_1.setWidth(317);
-		newColumnTableColumn_1.setText("Message");
+        final TableColumn newColumnTableColumn = new TableColumn(table, SWT.NONE);
+        newColumnTableColumn.setWidth(81);
+        newColumnTableColumn.setText("Severity");
 
-		final TableColumn newColumnTableColumn_2 = new TableColumn(table, SWT.NONE);
-		newColumnTableColumn_2.setWidth(100);
-		newColumnTableColumn_2.setText("Element");
+        final TableColumn newColumnTableColumn_1 = new TableColumn(table, SWT.NONE);
+        newColumnTableColumn_1.setWidth(317);
+        newColumnTableColumn_1.setText("Message");
 
-		final TableColumn newColumnTableColumn_3 = new TableColumn(table, SWT.NONE);
-		newColumnTableColumn_3.setWidth(150);
-		newColumnTableColumn_3.setText("Resource");
-		//
-		fillTable(table);
+        final TableColumn newColumnTableColumn_2 = new TableColumn(table, SWT.NONE);
+        newColumnTableColumn_2.setWidth(100);
+        newColumnTableColumn_2.setText("Element");
 
-		final Group detailsGroup = new Group(container, SWT.NONE);
-		final GridData gd_detailsGroup = new GridData(SWT.FILL, SWT.CENTER, true, false);
-		gd_detailsGroup.heightHint = 92;
-		detailsGroup.setLayoutData(gd_detailsGroup);
-		detailsGroup.setText("Details");
-		detailsGroup.setLayout(new GridLayout());
+        final TableColumn newColumnTableColumn_3 = new TableColumn(table, SWT.NONE);
+        newColumnTableColumn_3.setWidth(150);
+        newColumnTableColumn_3.setText("Resource");
+        //
+        fillTable(table);
 
-		detailsText = new Text(detailsGroup, SWT.WRAP | SWT.V_SCROLL | SWT.READ_ONLY | SWT.H_SCROLL | SWT.BORDER);
-		detailsText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+        final Group detailsGroup = new Group(container, SWT.NONE);
+        final GridData gd_detailsGroup = new GridData(SWT.FILL, SWT.CENTER, true, false);
+        gd_detailsGroup.heightHint = 92;
+        detailsGroup.setLayoutData(gd_detailsGroup);
+        detailsGroup.setText("Details");
+        detailsGroup.setLayout(new GridLayout());
 
-		return container;
-	}
+        detailsText = new Text(detailsGroup, SWT.WRAP | SWT.V_SCROLL | SWT.READ_ONLY | SWT.H_SCROLL | SWT.BORDER);
+        detailsText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
-	/**Updates the details section.
-	 */
-	protected void updateDetails() {
-		if (table.getSelectionIndex() > -1) {
-			SeverityAndIssue sai = issues.get(table.getSelectionIndex());
-			detailsText.setText(sai.getDetails());
-		}
-	}
+        return container;
+    }
 
-	private void fillTable(Table table) {
-		TableViewer tableViewer = new TableViewer(table);
-		tableViewer.setContentProvider(new IStructuredContentProvider(){
+    /**
+     * Updates the details section.
+     */
+    protected void updateDetails() {
+        if (table.getSelectionIndex() > -1) {
+            SeverityAndIssue sai = issues.get(table.getSelectionIndex());
+            detailsText.setText(sai.getDetails());
+        }
+    }
 
-			public void dispose() {
-			}
+    private void fillTable(Table table) {
+        TableViewer tableViewer = new TableViewer(table);
+        tableViewer.setContentProvider(new IStructuredContentProvider() {
 
-			public void inputChanged(Viewer viewer, Object oldInput,
-					Object newInput) {
-				viewer.refresh();
-			}
+            public void dispose() {
+            }
 
-			public Object[] getElements(Object inputElement) {
-				return issues.toArray();
-			}
+            public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+                viewer.refresh();
+            }
 
-		});
-		tableViewer.setLabelProvider(new ITableLabelProvider() {
+            public Object[] getElements(Object inputElement) {
+                return issues.toArray();
+            }
 
-			public Image getColumnImage(Object element, int columnIndex) {
-				SeverityAndIssue sai = (SeverityAndIssue) element;
-				switch(columnIndex){
-				case 0:
-					if (sai.getError() == SeverityEnum.ERROR)
-						return ErrorhandlingDialogImages.imageRegistry.get(ErrorhandlingDialogImages.ERROR);
-					else
-						return ErrorhandlingDialogImages.imageRegistry.get(ErrorhandlingDialogImages.WARNING);
-				default:
-					return null;
-				}
-			}
+        });
+        tableViewer.setLabelProvider(new ITableLabelProvider() {
 
-			public String getColumnText(Object element, int columnIndex) {
-				SeverityAndIssue sai = (SeverityAndIssue) element;
-				switch(columnIndex){
-				case 0:
-					if (sai.getError() == SeverityEnum.ERROR)
-						return "ERROR";
-					else
-						return "WARNING";
-				case 1:
-					return sai.getMessage();
-				case 2:
-					if (sai.getElement() != null){
-						return sai.getElement().toString();
-					} else {
-						return "";
-					}
-				case 3:
-					return sai.getResourceName();
-				}
-				return null;
-			}
+            public Image getColumnImage(Object element, int columnIndex) {
+                SeverityAndIssue sai = (SeverityAndIssue) element;
+                switch (columnIndex) {
+                case 0:
+                    if (sai.getError() == SeverityEnum.ERROR)
+                        return ErrorhandlingDialogImages.imageRegistry.get(ErrorhandlingDialogImages.ERROR);
+                    else
+                        return ErrorhandlingDialogImages.imageRegistry.get(ErrorhandlingDialogImages.WARNING);
+                default:
+                    return null;
+                }
+            }
 
-			public void addListener(ILabelProviderListener listener) {
+            public String getColumnText(Object element, int columnIndex) {
+                SeverityAndIssue sai = (SeverityAndIssue) element;
+                switch (columnIndex) {
+                case 0:
+                    if (sai.getError() == SeverityEnum.ERROR)
+                        return "ERROR";
+                    else
+                        return "WARNING";
+                case 1:
+                    return sai.getMessage();
+                case 2:
+                    if (sai.getElement() != null) {
+                        return sai.getElement().toString();
+                    } else {
+                        return "";
+                    }
+                case 3:
+                    return sai.getResourceName();
+                }
+                return null;
+            }
 
-			}
+            public void addListener(ILabelProviderListener listener) {
 
-			public void dispose() {
-			}
+            }
 
-			public boolean isLabelProperty(Object element, String property) {
-				return false;
-			}
+            public void dispose() {
+            }
 
-			public void removeListener(ILabelProviderListener listener) {
-			}
+            public boolean isLabelProperty(Object element, String property) {
+                return false;
+            }
 
-		});
-		tableViewer.setInput(issues);
-	}
+            public void removeListener(ILabelProviderListener listener) {
+            }
 
-	private void disableIgnoreButton() {
-		this.getButton(IGNORE_BUTTON).setEnabled(false);
-	}
+        });
+        tableViewer.setInput(issues);
+    }
 
-	/**
-	 * Create contents of the button bar
-	 * @param parent
-	 */
-	@Override
-	protected void createButtonsForButtonBar(Composite parent) {
-		createButton(parent, IGNORE_BUTTON, "Ignore",
-				false);
-		createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL,
-				true);
-		for (SeverityAndIssue sai : issues)
-			if (sai.getError() == SeverityEnum.ERROR) {
-				disableIgnoreButton();
-				break;
-			}
-	}
+    private void disableIgnoreButton() {
+        this.getButton(IGNORE_BUTTON).setEnabled(false);
+    }
 
-	/**
-	 * Return the initial size of the dialog
-	 */
-	@Override
-	protected Point getInitialSize() {
-		return new Point(661, 463);
-	}
-	protected void configureShell(Shell newShell) {
-		super.configureShell(newShell);
-		newShell.setText("Issues have been reported");
-	}
+    /**
+     * Create contents of the button bar
+     * 
+     * @param parent
+     */
+    @Override
+    protected void createButtonsForButtonBar(Composite parent) {
+        createButton(parent, IGNORE_BUTTON, "Ignore", false);
+        createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, true);
+        for (SeverityAndIssue sai : issues)
+            if (sai.getError() == SeverityEnum.ERROR) {
+                disableIgnoreButton();
+                break;
+            }
+    }
 
-	protected void buttonPressed(int buttonId) {
-		if (buttonId == IGNORE_BUTTON) {
-			setReturnCode(IGNORE_BUTTON);
-			close();
-			return;
-		}
-		super.buttonPressed(buttonId);
-	}
+    /**
+     * Return the initial size of the dialog
+     */
+    @Override
+    protected Point getInitialSize() {
+        return new Point(661, 463);
+    }
+
+    protected void configureShell(Shell newShell) {
+        super.configureShell(newShell);
+        newShell.setText("Issues have been reported");
+    }
+
+    protected void buttonPressed(int buttonId) {
+        if (buttonId == IGNORE_BUTTON) {
+            setReturnCode(IGNORE_BUTTON);
+            close();
+            return;
+        }
+        super.buttonPressed(buttonId);
+    }
 
 }

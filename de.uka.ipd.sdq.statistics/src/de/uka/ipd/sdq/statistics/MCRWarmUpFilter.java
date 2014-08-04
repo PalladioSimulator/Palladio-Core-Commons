@@ -3,65 +3,65 @@ package de.uka.ipd.sdq.statistics;
 import java.util.List;
 
 /**
- * Implements the "Marginal Confidence Rule" (MCR) for filtering the warm-up
- * period of a steady state simulation.
+ * Implements the "Marginal Confidence Rule" (MCR) for filtering the warm-up period of a steady
+ * state simulation.
  * <p>
- * Please note that there is no common interface for warm-up filters so far!
- * Thus the interface will likely change soon.
+ * Please note that there is no common interface for warm-up filters so far! Thus the interface will
+ * likely change soon.
  * 
  * @author Philipp Merkle
  * 
  */
 public class MCRWarmUpFilter {
 
-	private int minIndex = 0;
+    private int minIndex = 0;
 
-	public List<Double> filter(List<Double> samples) {
-		
-		if (samples.size() <= 150){
-			System.out.println("MCRWarmUpFilter Warning: Too few samples to get a meaningful result.");
-		}
-		
-		int truncatedSamplesSize = samples.size();
-		double truncatedSamplesSum = 0;
-		for (Double d : samples) {
-			truncatedSamplesSum += d;
-		}
+    public List<Double> filter(List<Double> samples) {
 
-		double minValue = Double.MAX_VALUE;
+        if (samples.size() <= 150) {
+            System.out.println("MCRWarmUpFilter Warning: Too few samples to get a meaningful result.");
+        }
 
-		for (int i = 0; i < samples.size() - 1; i++) {
-			int remaining = samples.size() - i;
-			double factor = 1 / Math.pow(remaining, 3.0);
+        int truncatedSamplesSize = samples.size();
+        double truncatedSamplesSum = 0;
+        for (Double d : samples) {
+            truncatedSamplesSum += d;
+        }
 
-			double truncatedSampleMean = truncatedSamplesSum
-					/ truncatedSamplesSize;
-			double sum = 0;
-			for (int j = i + 1; j < samples.size(); j++) {
-				sum += Math.pow(samples.get(j) - truncatedSampleMean, 2.0);
-			}
-			double d = factor * sum;
+        double minValue = Double.MAX_VALUE;
 
-			if (d < minValue) {
-//				System.out.println(i + ": " + d);
-				minIndex = i;
-				minValue = d;
-			}
+        for (int i = 0; i < samples.size() - 1; i++) {
+            int remaining = samples.size() - i;
+            double factor = 1 / Math.pow(remaining, 3.0);
 
-			truncatedSamplesSize--;
-			truncatedSamplesSum -= samples.get(0);
-		}
+            double truncatedSampleMean = truncatedSamplesSum / truncatedSamplesSize;
+            double sum = 0;
+            for (int j = i + 1; j < samples.size(); j++) {
+                sum += Math.pow(samples.get(j) - truncatedSampleMean, 2.0);
+            }
+            double d = factor * sum;
 
-		if (minIndex > samples.size() / 3){
-			//TODO: Kriterium nachschauen und logger
-			System.out.println("MCRWarmUpFilter Warning: Truncation point is in the last two thirds of the samples, so the confidence in this result is low.");
-		}
-		
-		// TODO Create new list?
-		return samples.subList(minIndex, samples.size() - 1);
-	}
+            if (d < minValue) {
+                // System.out.println(i + ": " + d);
+                minIndex = i;
+                minValue = d;
+            }
 
-	public int getTruncationIndex() {
-		return minIndex;
-	}
+            truncatedSamplesSize--;
+            truncatedSamplesSum -= samples.get(0);
+        }
+
+        if (minIndex > samples.size() / 3) {
+            // TODO: Kriterium nachschauen und logger
+            System.out
+                    .println("MCRWarmUpFilter Warning: Truncation point is in the last two thirds of the samples, so the confidence in this result is low.");
+        }
+
+        // TODO Create new list?
+        return samples.subList(minIndex, samples.size() - 1);
+    }
+
+    public int getTruncationIndex() {
+        return minIndex;
+    }
 }

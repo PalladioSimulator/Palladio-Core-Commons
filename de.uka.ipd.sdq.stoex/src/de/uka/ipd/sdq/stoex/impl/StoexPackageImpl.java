@@ -1369,7 +1369,9 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
      */
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-        addAnnotation(getRandomVariable_Expression(), source, new String[] { "name", "", "namespace", "" });
+        addAnnotation(getRandomVariable_Expression(), source, new String[] {
+                "name", "", "namespace", ""
+        });
     }
 
 } // StoexPackageImpl

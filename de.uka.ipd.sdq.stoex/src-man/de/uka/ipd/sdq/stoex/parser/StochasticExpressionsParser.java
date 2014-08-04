@@ -55,12 +55,14 @@ import de.uka.ipd.sdq.stoex.Variable;
 import de.uka.ipd.sdq.stoex.VariableReference;
 
 public class StochasticExpressionsParser extends Parser {
-    public static final String[] tokenNames = new String[] { "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "OR",
-            "XOR", "GREATER", "LESS", "EQUAL", "NOTEQUAL", "GREATEREQUAL", "LESSEQUAL", "PLUS", "MINUS", "MUL", "DIV",
-            "MOD", "POW", "NOT", "NUMBER", "STRING_LITERAL", "ID", "LPAREN", "RPAREN", "SQUARE_PAREN_L",
-            "SQUARE_PAREN_R", "COLON", "INTPMF", "DOUBLEPMF", "ENUMPMF", "ORDERED_DEF", "DOUBLEPDF", "BOOLPMF", "SEMI",
-            "FALSE", "TRUE", "BYTESIZE", "STRUCTURE", "NUMBER_OF_ELEMENTS", "TYPE", "VALUE", "DOT", "INNER", "UNIT",
-            "BOOL", "DEFINITION", "DIGIT", "Exponent", "ALPHA", "WS", "COMMENT", "LINE_COMMENT", "'?'", "':'" };
+    public static final String[] tokenNames = new String[] {
+            "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "OR", "XOR", "GREATER", "LESS", "EQUAL", "NOTEQUAL",
+            "GREATEREQUAL", "LESSEQUAL", "PLUS", "MINUS", "MUL", "DIV", "MOD", "POW", "NOT", "NUMBER",
+            "STRING_LITERAL", "ID", "LPAREN", "RPAREN", "SQUARE_PAREN_L", "SQUARE_PAREN_R", "COLON", "INTPMF",
+            "DOUBLEPMF", "ENUMPMF", "ORDERED_DEF", "DOUBLEPDF", "BOOLPMF", "SEMI", "FALSE", "TRUE", "BYTESIZE",
+            "STRUCTURE", "NUMBER_OF_ELEMENTS", "TYPE", "VALUE", "DOT", "INNER", "UNIT", "BOOL", "DEFINITION", "DIGIT",
+            "Exponent", "ALPHA", "WS", "COMMENT", "LINE_COMMENT", "'?'", "':'"
+    };
     public static final int INNER = 43;
     public static final int MOD = 17;
     public static final int BOOLPMF = 33;
@@ -2444,151 +2446,407 @@ public class StochasticExpressionsParser extends Parser {
 
     // Delegated rules
 
-    public static final BitSet FOLLOW_ifelseExpr_in_expression41 = new BitSet(new long[] { 0x0000000000000000L });
-    public static final BitSet FOLLOW_EOF_in_expression43 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_boolAndExpr_in_ifelseExpr66 = new BitSet(new long[] { 0x0020000000000002L });
-    public static final BitSet FOLLOW_53_in_ifelseExpr79 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_boolAndExpr_in_ifelseExpr85 = new BitSet(new long[] { 0x0040000000000000L });
-    public static final BitSet FOLLOW_54_in_ifelseExpr89 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_boolAndExpr_in_ifelseExpr95 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_boolOrExpr_in_boolAndExpr120 = new BitSet(new long[] { 0x0000000000000012L });
-    public static final BitSet FOLLOW_AND_in_boolAndExpr131 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_boolOrExpr_in_boolAndExpr142 = new BitSet(new long[] { 0x0000000000000012L });
-    public static final BitSet FOLLOW_compareExpr_in_boolOrExpr169 = new BitSet(new long[] { 0x0000000000000062L });
-    public static final BitSet FOLLOW_OR_in_boolOrExpr182 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_XOR_in_boolOrExpr190 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_compareExpr_in_boolOrExpr202 = new BitSet(new long[] { 0x0000000000000062L });
-    public static final BitSet FOLLOW_sumExpr_in_compareExpr240 = new BitSet(new long[] { 0x0000000000001F82L });
-    public static final BitSet FOLLOW_GREATER_in_compareExpr257 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_LESS_in_compareExpr267 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_EQUAL_in_compareExpr277 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_NOTEQUAL_in_compareExpr287 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_GREATEREQUAL_in_compareExpr297 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_LESSEQUAL_in_compareExpr307 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_sumExpr_in_compareExpr322 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_prodExpr_in_sumExpr356 = new BitSet(new long[] { 0x0000000000006002L });
-    public static final BitSet FOLLOW_PLUS_in_sumExpr382 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_MINUS_in_sumExpr393 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_prodExpr_in_sumExpr409 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_powExpr_in_prodExpr454 = new BitSet(new long[] { 0x0000000000038002L });
-    public static final BitSet FOLLOW_MUL_in_prodExpr474 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_DIV_in_prodExpr485 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_MOD_in_prodExpr496 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_powExpr_in_prodExpr512 = new BitSet(new long[] { 0x0000000000038002L });
-    public static final BitSet FOLLOW_unaryExpr_in_powExpr553 = new BitSet(new long[] { 0x0000000000040002L });
-    public static final BitSet FOLLOW_POW_in_powExpr562 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_unaryExpr_in_powExpr568 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_MINUS_in_unaryExpr604 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_unaryExpr_in_unaryExpr610 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_NOT_in_unaryExpr628 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_unaryExpr_in_unaryExpr634 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_atom_in_unaryExpr656 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_NUMBER_in_atom691 = new BitSet(new long[] { 0x0000000002000002L });
-    public static final BitSet FOLLOW_unit_in_atom693 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_definition_in_atom720 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_STRING_LITERAL_in_atom745 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_boolean_keywords_in_atom772 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_scoped_id_in_atom800 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_ID_in_atom827 = new BitSet(new long[] { 0x0000000000800000L });
-    public static final BitSet FOLLOW_arguments_in_atom840 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_atom865 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_ifelseExpr_in_atom875 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_atom881 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_unit904 = new BitSet(new long[] { 0x0000000000400000L });
-    public static final BitSet FOLLOW_unit_spec_in_unit906 = new BitSet(new long[] { 0x0000000004000000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_unit908 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_ID_in_unit_spec_atom920 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_ID_in_unit_spec_atom924 = new BitSet(new long[] { 0x0000000000040000L });
-    public static final BitSet FOLLOW_POW_in_unit_spec_atom926 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_unit_spec_atom928 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_unit_spec_atom_in_unit_spec940 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_unit_spec_atom_in_unit_spec945 = new BitSet(new long[] { 0x0000000000010000L });
-    public static final BitSet FOLLOW_DIV_in_unit_spec947 = new BitSet(new long[] { 0x0000000000400000L });
-    public static final BitSet FOLLOW_unit_spec_in_unit_spec949 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_arguments983 = new BitSet(new long[] { 0x0000001B71F84000L });
-    public static final BitSet FOLLOW_expressionList_in_arguments989 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_arguments994 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_boolAndExpr_in_expressionList1032 = new BitSet(new long[] { 0x0000000008000002L });
-    public static final BitSet FOLLOW_COLON_in_expressionList1037 = new BitSet(new long[] { 0x0000001B70F84000L });
-    public static final BitSet FOLLOW_boolAndExpr_in_expressionList1043 = new BitSet(new long[] { 0x0000000008000002L });
-    public static final BitSet FOLLOW_INTPMF_in_definition1090 = new BitSet(new long[] { 0x0000000002000000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1101 = new BitSet(new long[] { 0x0000000000800000L });
-    public static final BitSet FOLLOW_numeric_int_sample_in_definition1121 = new BitSet(
-            new long[] { 0x0000000004800000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1138 = new BitSet(new long[] { 0x0000000002000002L });
-    public static final BitSet FOLLOW_unit_in_definition1140 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_DOUBLEPMF_in_definition1153 = new BitSet(new long[] { 0x0000000002000000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1166 = new BitSet(new long[] { 0x0000000000800000L });
-    public static final BitSet FOLLOW_numeric_real_sample_in_definition1184 = new BitSet(
-            new long[] { 0x0000000004800000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1201 = new BitSet(new long[] { 0x0000000002000002L });
-    public static final BitSet FOLLOW_unit_in_definition1203 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_ENUMPMF_in_definition1218 = new BitSet(new long[] { 0x0000000002800000L });
-    public static final BitSet FOLLOW_LPAREN_in_definition1231 = new BitSet(new long[] { 0x0000000080000000L });
-    public static final BitSet FOLLOW_ORDERED_DEF_in_definition1238 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_definition1250 = new BitSet(new long[] { 0x0000000002000000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1257 = new BitSet(new long[] { 0x0000000000800000L });
-    public static final BitSet FOLLOW_stringsample_in_definition1275 = new BitSet(new long[] { 0x0000000004800000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1292 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_DOUBLEPDF_in_definition1302 = new BitSet(new long[] { 0x0000000002000000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1313 = new BitSet(new long[] { 0x0000000000800000L });
-    public static final BitSet FOLLOW_real_pdf_sample_in_definition1333 = new BitSet(new long[] { 0x0000000004800000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1350 = new BitSet(new long[] { 0x0000000002000002L });
-    public static final BitSet FOLLOW_unit_in_definition1352 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_BOOLPMF_in_definition1363 = new BitSet(new long[] { 0x0000000002800000L });
-    public static final BitSet FOLLOW_LPAREN_in_definition1376 = new BitSet(new long[] { 0x0000000080000000L });
-    public static final BitSet FOLLOW_ORDERED_DEF_in_definition1383 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_definition1395 = new BitSet(new long[] { 0x0000000002000000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1402 = new BitSet(new long[] { 0x0000000000800000L });
-    public static final BitSet FOLLOW_boolsample_in_definition1420 = new BitSet(new long[] { 0x0000000004800000L });
-    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1437 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_numeric_int_sample1463 = new BitSet(new long[] { 0x0000000000104000L });
-    public static final BitSet FOLLOW_signed_number_in_numeric_int_sample1476 = new BitSet(
-            new long[] { 0x0000000400000000L });
-    public static final BitSet FOLLOW_SEMI_in_numeric_int_sample1487 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_numeric_int_sample1495 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_numeric_int_sample1507 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_numeric_real_sample1530 = new BitSet(new long[] { 0x0000000000104000L });
-    public static final BitSet FOLLOW_signed_number_in_numeric_real_sample1543 = new BitSet(
-            new long[] { 0x0000000400000000L });
-    public static final BitSet FOLLOW_SEMI_in_numeric_real_sample1554 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_numeric_real_sample1562 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_numeric_real_sample1574 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_real_pdf_sample1598 = new BitSet(new long[] { 0x0000000000104000L });
-    public static final BitSet FOLLOW_signed_number_in_real_pdf_sample1611 = new BitSet(
-            new long[] { 0x0000000400000000L });
-    public static final BitSet FOLLOW_SEMI_in_real_pdf_sample1622 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_real_pdf_sample1630 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_real_pdf_sample1642 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_stringsample1663 = new BitSet(new long[] { 0x0000000000200000L });
-    public static final BitSet FOLLOW_STRING_LITERAL_in_stringsample1675 = new BitSet(
-            new long[] { 0x0000000400000000L });
-    public static final BitSet FOLLOW_SEMI_in_stringsample1686 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_stringsample1692 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_stringsample1703 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_LPAREN_in_boolsample1721 = new BitSet(new long[] { 0x0000001800000000L });
-    public static final BitSet FOLLOW_boolean_keywords_in_boolsample1735 = new BitSet(
-            new long[] { 0x0000000400000000L });
-    public static final BitSet FOLLOW_SEMI_in_boolsample1743 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_boolsample1749 = new BitSet(new long[] { 0x0000000001000000L });
-    public static final BitSet FOLLOW_RPAREN_in_boolsample1760 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_FALSE_in_boolean_keywords1779 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_TRUE_in_boolean_keywords1793 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_MINUS_in_signed_number1820 = new BitSet(new long[] { 0x0000000000100000L });
-    public static final BitSet FOLLOW_NUMBER_in_signed_number1828 = new BitSet(new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_BYTESIZE_in_characterisation_keywords1850 = new BitSet(
-            new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_STRUCTURE_in_characterisation_keywords1857 = new BitSet(
-            new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_NUMBER_OF_ELEMENTS_in_characterisation_keywords1864 = new BitSet(
-            new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_TYPE_in_characterisation_keywords1871 = new BitSet(
-            new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_VALUE_in_characterisation_keywords1878 = new BitSet(
-            new long[] { 0x0000000000000002L });
-    public static final BitSet FOLLOW_ID_in_scoped_id1908 = new BitSet(new long[] { 0x0000040000000002L });
-    public static final BitSet FOLLOW_DOT_in_scoped_id1919 = new BitSet(new long[] { 0x0000080000400000L });
-    public static final BitSet FOLLOW_ID_in_scoped_id1924 = new BitSet(new long[] { 0x0000040000000002L });
-    public static final BitSet FOLLOW_INNER_in_scoped_id1930 = new BitSet(new long[] { 0x0000040000000002L });
+    public static final BitSet FOLLOW_ifelseExpr_in_expression41 = new BitSet(new long[] {
+        0x0000000000000000L
+    });
+    public static final BitSet FOLLOW_EOF_in_expression43 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_boolAndExpr_in_ifelseExpr66 = new BitSet(new long[] {
+        0x0020000000000002L
+    });
+    public static final BitSet FOLLOW_53_in_ifelseExpr79 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_boolAndExpr_in_ifelseExpr85 = new BitSet(new long[] {
+        0x0040000000000000L
+    });
+    public static final BitSet FOLLOW_54_in_ifelseExpr89 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_boolAndExpr_in_ifelseExpr95 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_boolOrExpr_in_boolAndExpr120 = new BitSet(new long[] {
+        0x0000000000000012L
+    });
+    public static final BitSet FOLLOW_AND_in_boolAndExpr131 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_boolOrExpr_in_boolAndExpr142 = new BitSet(new long[] {
+        0x0000000000000012L
+    });
+    public static final BitSet FOLLOW_compareExpr_in_boolOrExpr169 = new BitSet(new long[] {
+        0x0000000000000062L
+    });
+    public static final BitSet FOLLOW_OR_in_boolOrExpr182 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_XOR_in_boolOrExpr190 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_compareExpr_in_boolOrExpr202 = new BitSet(new long[] {
+        0x0000000000000062L
+    });
+    public static final BitSet FOLLOW_sumExpr_in_compareExpr240 = new BitSet(new long[] {
+        0x0000000000001F82L
+    });
+    public static final BitSet FOLLOW_GREATER_in_compareExpr257 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_LESS_in_compareExpr267 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_EQUAL_in_compareExpr277 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_NOTEQUAL_in_compareExpr287 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_GREATEREQUAL_in_compareExpr297 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_LESSEQUAL_in_compareExpr307 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_sumExpr_in_compareExpr322 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_prodExpr_in_sumExpr356 = new BitSet(new long[] {
+        0x0000000000006002L
+    });
+    public static final BitSet FOLLOW_PLUS_in_sumExpr382 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_MINUS_in_sumExpr393 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_prodExpr_in_sumExpr409 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_powExpr_in_prodExpr454 = new BitSet(new long[] {
+        0x0000000000038002L
+    });
+    public static final BitSet FOLLOW_MUL_in_prodExpr474 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_DIV_in_prodExpr485 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_MOD_in_prodExpr496 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_powExpr_in_prodExpr512 = new BitSet(new long[] {
+        0x0000000000038002L
+    });
+    public static final BitSet FOLLOW_unaryExpr_in_powExpr553 = new BitSet(new long[] {
+        0x0000000000040002L
+    });
+    public static final BitSet FOLLOW_POW_in_powExpr562 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_unaryExpr_in_powExpr568 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_MINUS_in_unaryExpr604 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_unaryExpr_in_unaryExpr610 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_NOT_in_unaryExpr628 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_unaryExpr_in_unaryExpr634 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_atom_in_unaryExpr656 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_atom691 = new BitSet(new long[] {
+        0x0000000002000002L
+    });
+    public static final BitSet FOLLOW_unit_in_atom693 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_definition_in_atom720 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_STRING_LITERAL_in_atom745 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_boolean_keywords_in_atom772 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_scoped_id_in_atom800 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_ID_in_atom827 = new BitSet(new long[] {
+        0x0000000000800000L
+    });
+    public static final BitSet FOLLOW_arguments_in_atom840 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_atom865 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_ifelseExpr_in_atom875 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_atom881 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_unit904 = new BitSet(new long[] {
+        0x0000000000400000L
+    });
+    public static final BitSet FOLLOW_unit_spec_in_unit906 = new BitSet(new long[] {
+        0x0000000004000000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_unit908 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_ID_in_unit_spec_atom920 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_ID_in_unit_spec_atom924 = new BitSet(new long[] {
+        0x0000000000040000L
+    });
+    public static final BitSet FOLLOW_POW_in_unit_spec_atom926 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_unit_spec_atom928 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_unit_spec_atom_in_unit_spec940 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_unit_spec_atom_in_unit_spec945 = new BitSet(new long[] {
+        0x0000000000010000L
+    });
+    public static final BitSet FOLLOW_DIV_in_unit_spec947 = new BitSet(new long[] {
+        0x0000000000400000L
+    });
+    public static final BitSet FOLLOW_unit_spec_in_unit_spec949 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_arguments983 = new BitSet(new long[] {
+        0x0000001B71F84000L
+    });
+    public static final BitSet FOLLOW_expressionList_in_arguments989 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_arguments994 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_boolAndExpr_in_expressionList1032 = new BitSet(new long[] {
+        0x0000000008000002L
+    });
+    public static final BitSet FOLLOW_COLON_in_expressionList1037 = new BitSet(new long[] {
+        0x0000001B70F84000L
+    });
+    public static final BitSet FOLLOW_boolAndExpr_in_expressionList1043 = new BitSet(new long[] {
+        0x0000000008000002L
+    });
+    public static final BitSet FOLLOW_INTPMF_in_definition1090 = new BitSet(new long[] {
+        0x0000000002000000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1101 = new BitSet(new long[] {
+        0x0000000000800000L
+    });
+    public static final BitSet FOLLOW_numeric_int_sample_in_definition1121 = new BitSet(new long[] {
+        0x0000000004800000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1138 = new BitSet(new long[] {
+        0x0000000002000002L
+    });
+    public static final BitSet FOLLOW_unit_in_definition1140 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_DOUBLEPMF_in_definition1153 = new BitSet(new long[] {
+        0x0000000002000000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1166 = new BitSet(new long[] {
+        0x0000000000800000L
+    });
+    public static final BitSet FOLLOW_numeric_real_sample_in_definition1184 = new BitSet(new long[] {
+        0x0000000004800000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1201 = new BitSet(new long[] {
+        0x0000000002000002L
+    });
+    public static final BitSet FOLLOW_unit_in_definition1203 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_ENUMPMF_in_definition1218 = new BitSet(new long[] {
+        0x0000000002800000L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_definition1231 = new BitSet(new long[] {
+        0x0000000080000000L
+    });
+    public static final BitSet FOLLOW_ORDERED_DEF_in_definition1238 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_definition1250 = new BitSet(new long[] {
+        0x0000000002000000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1257 = new BitSet(new long[] {
+        0x0000000000800000L
+    });
+    public static final BitSet FOLLOW_stringsample_in_definition1275 = new BitSet(new long[] {
+        0x0000000004800000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1292 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_DOUBLEPDF_in_definition1302 = new BitSet(new long[] {
+        0x0000000002000000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1313 = new BitSet(new long[] {
+        0x0000000000800000L
+    });
+    public static final BitSet FOLLOW_real_pdf_sample_in_definition1333 = new BitSet(new long[] {
+        0x0000000004800000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1350 = new BitSet(new long[] {
+        0x0000000002000002L
+    });
+    public static final BitSet FOLLOW_unit_in_definition1352 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_BOOLPMF_in_definition1363 = new BitSet(new long[] {
+        0x0000000002800000L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_definition1376 = new BitSet(new long[] {
+        0x0000000080000000L
+    });
+    public static final BitSet FOLLOW_ORDERED_DEF_in_definition1383 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_definition1395 = new BitSet(new long[] {
+        0x0000000002000000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_L_in_definition1402 = new BitSet(new long[] {
+        0x0000000000800000L
+    });
+    public static final BitSet FOLLOW_boolsample_in_definition1420 = new BitSet(new long[] {
+        0x0000000004800000L
+    });
+    public static final BitSet FOLLOW_SQUARE_PAREN_R_in_definition1437 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_numeric_int_sample1463 = new BitSet(new long[] {
+        0x0000000000104000L
+    });
+    public static final BitSet FOLLOW_signed_number_in_numeric_int_sample1476 = new BitSet(new long[] {
+        0x0000000400000000L
+    });
+    public static final BitSet FOLLOW_SEMI_in_numeric_int_sample1487 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_numeric_int_sample1495 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_numeric_int_sample1507 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_numeric_real_sample1530 = new BitSet(new long[] {
+        0x0000000000104000L
+    });
+    public static final BitSet FOLLOW_signed_number_in_numeric_real_sample1543 = new BitSet(new long[] {
+        0x0000000400000000L
+    });
+    public static final BitSet FOLLOW_SEMI_in_numeric_real_sample1554 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_numeric_real_sample1562 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_numeric_real_sample1574 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_real_pdf_sample1598 = new BitSet(new long[] {
+        0x0000000000104000L
+    });
+    public static final BitSet FOLLOW_signed_number_in_real_pdf_sample1611 = new BitSet(new long[] {
+        0x0000000400000000L
+    });
+    public static final BitSet FOLLOW_SEMI_in_real_pdf_sample1622 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_real_pdf_sample1630 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_real_pdf_sample1642 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_stringsample1663 = new BitSet(new long[] {
+        0x0000000000200000L
+    });
+    public static final BitSet FOLLOW_STRING_LITERAL_in_stringsample1675 = new BitSet(new long[] {
+        0x0000000400000000L
+    });
+    public static final BitSet FOLLOW_SEMI_in_stringsample1686 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_stringsample1692 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_stringsample1703 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_LPAREN_in_boolsample1721 = new BitSet(new long[] {
+        0x0000001800000000L
+    });
+    public static final BitSet FOLLOW_boolean_keywords_in_boolsample1735 = new BitSet(new long[] {
+        0x0000000400000000L
+    });
+    public static final BitSet FOLLOW_SEMI_in_boolsample1743 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_boolsample1749 = new BitSet(new long[] {
+        0x0000000001000000L
+    });
+    public static final BitSet FOLLOW_RPAREN_in_boolsample1760 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_FALSE_in_boolean_keywords1779 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_TRUE_in_boolean_keywords1793 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_MINUS_in_signed_number1820 = new BitSet(new long[] {
+        0x0000000000100000L
+    });
+    public static final BitSet FOLLOW_NUMBER_in_signed_number1828 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_BYTESIZE_in_characterisation_keywords1850 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_STRUCTURE_in_characterisation_keywords1857 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_NUMBER_OF_ELEMENTS_in_characterisation_keywords1864 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_TYPE_in_characterisation_keywords1871 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_VALUE_in_characterisation_keywords1878 = new BitSet(new long[] {
+        0x0000000000000002L
+    });
+    public static final BitSet FOLLOW_ID_in_scoped_id1908 = new BitSet(new long[] {
+        0x0000040000000002L
+    });
+    public static final BitSet FOLLOW_DOT_in_scoped_id1919 = new BitSet(new long[] {
+        0x0000080000400000L
+    });
+    public static final BitSet FOLLOW_ID_in_scoped_id1924 = new BitSet(new long[] {
+        0x0000040000000002L
+    });
+    public static final BitSet FOLLOW_INNER_in_scoped_id1930 = new BitSet(new long[] {
+        0x0000040000000002L
+    });
 
 }

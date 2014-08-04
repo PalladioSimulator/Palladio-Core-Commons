@@ -15,6 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * the interface for the Observer needs to be specified.
  *
  * Taken from http://pastebin.com/YmVhDNzk and adapted
+ * 
  * @author Steven Jeuris
  * @param <ObserverInterfaceType>
  *            The interface which should be implemented by the observers.
@@ -78,15 +79,16 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
          */
         @SuppressWarnings("unchecked")
         T createEventDispatcher(final Class<?> observerClass) {
-            final T dispatcher = (T) Proxy.newProxyInstance(observerClass.getClassLoader(), new Class[] { observerClass },
-                    this);
+            final T dispatcher = (T) Proxy.newProxyInstance(observerClass.getClassLoader(), new Class[] {
+                observerClass
+            }, this);
 
             return dispatcher;
         }
 
         /**
-         * invoke() implementation of InvocationHandler. This is called whenever a call is made to an
-         * event dispatcher.
+         * invoke() implementation of InvocationHandler. This is called whenever a call is made to
+         * an event dispatcher.
          */
         @Override
         public Object invoke(final Object object, final Method method, final Object[] args) throws Throwable {
@@ -143,7 +145,7 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see be.hyp3.patterns.observer.IObservable#addObserver(T)
      */
     @Override
@@ -156,7 +158,7 @@ public abstract class AbstractObservable<ObserverInterfaceType> implements IAbst
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see be.hyp3.patterns.observer.IObservable#removeObserver(T)
      */
     @Override

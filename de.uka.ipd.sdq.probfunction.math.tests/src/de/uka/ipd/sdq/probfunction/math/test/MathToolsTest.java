@@ -13,10 +13,10 @@ public class MathToolsTest {
         Assert.assertEquals(8, MathTools.nextPowerOfTwo(7));
         Assert.assertEquals(8, MathTools.nextPowerOfTwo(8));
     }
-    
-    @Test(expected=IllegalArgumentException.class)
+
+    @Test(expected = IllegalArgumentException.class)
     public void testNextPowerOfTwoForIllegalArguments() {
         MathTools.nextPowerOfTwo(0);
     }
-    
+
 }

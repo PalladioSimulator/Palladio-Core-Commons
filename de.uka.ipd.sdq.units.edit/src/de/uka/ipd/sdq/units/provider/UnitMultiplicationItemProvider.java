@@ -27,20 +27,22 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.units.UnitMultiplication} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class UnitMultiplicationItemProvider extends UnitItemProvider implements IEditingDomainItemProvider,
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier.
-     * <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     public UnitMultiplicationItemProvider(AdapterFactory adapterFactory) {
@@ -48,9 +50,9 @@ public class UnitMultiplicationItemProvider extends UnitItemProvider implements 
     }
 
     /**
-     * This returns the property descriptors for the adapted class.
-     * <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -82,6 +84,7 @@ public class UnitMultiplicationItemProvider extends UnitItemProvider implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -93,8 +96,8 @@ public class UnitMultiplicationItemProvider extends UnitItemProvider implements 
     }
 
     /**
-     * This returns UnitMultiplication.gif.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns UnitMultiplication.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -115,8 +118,9 @@ public class UnitMultiplicationItemProvider extends UnitItemProvider implements 
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
+     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -124,42 +128,34 @@ public class UnitMultiplicationItemProvider extends UnitItemProvider implements 
         updateChildren(notification);
 
         switch (notification.getFeatureID(UnitMultiplication.class)) {
-            case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-     * that can be created under this object.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
+     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
-                 UnitsFactory.eINSTANCE.createBaseUnit()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
+                UnitsFactory.eINSTANCE.createBaseUnit()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
-                 UnitsFactory.eINSTANCE.createUnitMultiplication()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
+                UnitsFactory.eINSTANCE.createUnitMultiplication()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
-                 UnitsFactory.eINSTANCE.createUnitPower()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
+                UnitsFactory.eINSTANCE.createUnitPower()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
-                 UnitsFactory.eINSTANCE.createUnitDivision()));
+        newChildDescriptors.add(createChildParameter(UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS,
+                UnitsFactory.eINSTANCE.createUnitDivision()));
     }
 
 }

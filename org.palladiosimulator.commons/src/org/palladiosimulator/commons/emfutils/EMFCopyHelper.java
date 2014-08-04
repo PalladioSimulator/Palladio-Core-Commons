@@ -17,14 +17,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 public class EMFCopyHelper {
 
     private static final ResourceSet sourceResourceSet = new ResourceSetImpl();
-    
+
     public static List<EObject> deepCopyEObjectList(final List<EObject> roots) {
         final Copier copier = new Copier(true, false);
         final List<EObject> result = (List<EObject>) copier.copyAll(roots);
         copier.copyReferences();
         return result;
     }
-    
+
     public static List<EObject> deepCopyToEObjectList(final ResourceSet originalResourceSet) {
         EcoreUtil.resolveAll(originalResourceSet);
         final List<EObject> roots = new LinkedList<EObject>();
@@ -36,12 +36,11 @@ public class EMFCopyHelper {
         return deepCopyEObjectList(roots);
     }
 
-    public static ResourceSet deepCopyToEObjectList(final String fileName) throws FileNotFoundException,
-    IOException {
+    public static ResourceSet deepCopyToEObjectList(final String fileName) throws FileNotFoundException, IOException {
         final Resource sourceResource = sourceResourceSet.getResource(URI.createFileURI(fileName), true);
         sourceResource.load(Collections.EMPTY_MAP);
         EcoreUtil.resolveAll(sourceResource);
         return sourceResourceSet;
     }
-    
+
 }

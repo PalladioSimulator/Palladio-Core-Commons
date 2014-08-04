@@ -6,7 +6,6 @@
  */
 package de.uka.ipd.sdq.units.util;
 
-import de.uka.ipd.sdq.units.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -14,7 +13,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitCarryingElement;
-import de.uka.ipd.sdq.units.UnitLiteral;
+import de.uka.ipd.sdq.units.UnitDivision;
 import de.uka.ipd.sdq.units.UnitMultiplication;
 import de.uka.ipd.sdq.units.UnitPower;
 import de.uka.ipd.sdq.units.UnitRepository;
@@ -26,25 +25,27 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.units.UnitsPackage
  * @generated
  */
 public class UnitsSwitch<T> extends Switch<T> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
-     * The cached model package
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected static UnitsPackage modelPackage;
 
     /**
-     * Creates an instance of the switch.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public UnitsSwitch() {
@@ -54,9 +55,9 @@ public class UnitsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Checks whether this is a switch for the given package.
-     * <!-- begin-user-doc --> <!--
+     * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
@@ -67,70 +68,86 @@ public class UnitsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
+     * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case UnitsPackage.UNIT_CARRYING_ELEMENT: {
-                UnitCarryingElement unitCarryingElement = (UnitCarryingElement)theEObject;
-                T result = caseUnitCarryingElement(unitCarryingElement);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case UnitsPackage.UNIT: {
-                Unit unit = (Unit)theEObject;
-                T result = caseUnit(unit);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case UnitsPackage.BASE_UNIT: {
-                BaseUnit baseUnit = (BaseUnit)theEObject;
-                T result = caseBaseUnit(baseUnit);
-                if (result == null) result = caseUnit(baseUnit);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case UnitsPackage.UNIT_REPOSITORY: {
-                UnitRepository unitRepository = (UnitRepository)theEObject;
-                T result = caseUnitRepository(unitRepository);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case UnitsPackage.UNIT_MULTIPLICATION: {
-                UnitMultiplication unitMultiplication = (UnitMultiplication)theEObject;
-                T result = caseUnitMultiplication(unitMultiplication);
-                if (result == null) result = caseUnit(unitMultiplication);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case UnitsPackage.UNIT_POWER: {
-                UnitPower unitPower = (UnitPower)theEObject;
-                T result = caseUnitPower(unitPower);
-                if (result == null) result = caseUnit(unitPower);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case UnitsPackage.UNIT_DIVISION: {
-                UnitDivision unitDivision = (UnitDivision)theEObject;
-                T result = caseUnitDivision(unitDivision);
-                if (result == null) result = caseUnit(unitDivision);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            default: return defaultCase(theEObject);
+        case UnitsPackage.UNIT_CARRYING_ELEMENT: {
+            UnitCarryingElement unitCarryingElement = (UnitCarryingElement) theEObject;
+            T result = caseUnitCarryingElement(unitCarryingElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case UnitsPackage.UNIT: {
+            Unit unit = (Unit) theEObject;
+            T result = caseUnit(unit);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case UnitsPackage.BASE_UNIT: {
+            BaseUnit baseUnit = (BaseUnit) theEObject;
+            T result = caseBaseUnit(baseUnit);
+            if (result == null)
+                result = caseUnit(baseUnit);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case UnitsPackage.UNIT_REPOSITORY: {
+            UnitRepository unitRepository = (UnitRepository) theEObject;
+            T result = caseUnitRepository(unitRepository);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case UnitsPackage.UNIT_MULTIPLICATION: {
+            UnitMultiplication unitMultiplication = (UnitMultiplication) theEObject;
+            T result = caseUnitMultiplication(unitMultiplication);
+            if (result == null)
+                result = caseUnit(unitMultiplication);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case UnitsPackage.UNIT_POWER: {
+            UnitPower unitPower = (UnitPower) theEObject;
+            T result = caseUnitPower(unitPower);
+            if (result == null)
+                result = caseUnit(unitPower);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case UnitsPackage.UNIT_DIVISION: {
+            UnitDivision unitDivision = (UnitDivision) theEObject;
+            T result = caseUnitDivision(unitDivision);
+            if (result == null)
+                result = caseUnit(unitDivision);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        default:
+            return defaultCase(theEObject);
         }
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Unit Carrying Element</em>'.
-     * <!-- begin-user-doc --> This implementation returns null;
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Unit Carrying Element</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Unit Carrying Element</em>'.
+     * 
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Unit Carrying Element</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -172,7 +189,9 @@ public class UnitsSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Unit Repository</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * @param object the target of the switch.
+     * 
+     * @param object
+     *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Unit Repository</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
@@ -182,11 +201,14 @@ public class UnitsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Unit Multiplication</em>'.
-     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * Returns the result of interpreting the object as an instance of '<em>Unit Multiplication</em>
+     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Unit Multiplication</em>'.
+     * 
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Unit Multiplication</em>
+     *         '.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -211,11 +233,11 @@ public class UnitsSwitch<T> extends Switch<T> {
 
     /**
      * Returns the result of interpreting the object as an instance of '<em>Unit Division</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     * 
+     * @param object
+     *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Unit Division</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated

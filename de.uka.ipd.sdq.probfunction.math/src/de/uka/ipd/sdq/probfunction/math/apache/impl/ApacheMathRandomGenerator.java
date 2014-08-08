@@ -1,6 +1,7 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
 import org.apache.commons.math.random.RandomGenerator;
+import org.apache.log4j.Logger;
 
 import de.uka.ipd.sdq.probfunction.math.random.IRandomStream;
 
@@ -11,7 +12,9 @@ import de.uka.ipd.sdq.probfunction.math.random.IRandomStream;
  * 
  */
 public class ApacheMathRandomGenerator implements IRandomStream {
-
+    
+    private static final Logger LOGGER = Logger.getLogger(ApacheMathRandomGenerator.class);
+    
     protected RandomGenerator rng;
 
     public ApacheMathRandomGenerator(RandomGenerator rng) {
@@ -21,6 +24,14 @@ public class ApacheMathRandomGenerator implements IRandomStream {
 
     @Override
     public void setSeed(int[] seed) {
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Random number generator about to get initialized");
+            StringBuffer sb = new StringBuffer();
+            for (final int s : seed) {
+                sb.append(s + " ");
+            }
+            LOGGER.debug("Seed is "+sb.toString());
+        }
         rng.setSeed(seed);
     }
 

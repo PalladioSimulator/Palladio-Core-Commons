@@ -7,26 +7,26 @@ import de.uka.ipd.sdq.probfunction.math.random.IRandomStream;
 
 /**
  * Adapter for apache.math random generators.
- * 
+ *
  * @author joerg
- * 
+ *
  */
 public class ApacheMathRandomGenerator implements IRandomStream {
-    
+
     private static final Logger LOGGER = Logger.getLogger(ApacheMathRandomGenerator.class);
-    
+
     protected RandomGenerator rng;
 
-    public ApacheMathRandomGenerator(RandomGenerator rng) {
+    public ApacheMathRandomGenerator(final RandomGenerator rng) {
         super();
         this.rng = rng;
     }
 
     @Override
-    public void setSeed(int[] seed) {
+    public void setSeed(final int[] seed) {
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug("Random number generator about to get initialized");
-            StringBuffer sb = new StringBuffer();
+            final StringBuffer sb = new StringBuffer();
             for (final int s : seed) {
                 sb.append(s + " ");
             }
@@ -41,11 +41,11 @@ public class ApacheMathRandomGenerator implements IRandomStream {
     }
 
     @Override
-    public void setSeed(long[] seed) {
-        int[] intSeed = new int[seed.length];
+    public void setSeed(final long[] seed) {
+        final int[] intSeed = new int[seed.length];
 
         for (int i = 0; i < seed.length; i++) {
-            long s = seed[i];
+            final long s = seed[i];
             if (s < Integer.MIN_VALUE || s > Integer.MAX_VALUE) {
                 throw new IllegalArgumentException(s + " cannot be cast to int without changing its value.");
             }

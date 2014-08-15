@@ -5,6 +5,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.edit.ui.action.LoadResourceAction.LoadResourceDialog;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
@@ -56,6 +57,8 @@ public class SelectEObjectDialog extends TitleAreaDialog {
 
     private final ResourceSet resourceSet;
 
+    private final AdapterFactoryContentProvider contentProvider;
+
     // inner elements
     private ToolBar toolBar;
     private ToolItem addItem, editItem, deleteItem;
@@ -69,21 +72,22 @@ public class SelectEObjectDialog extends TitleAreaDialog {
 
     /** Create the dialog */
     public SelectEObjectDialog(final Shell parentShell, final String resourceName, final Object input,
-            final IContentProvider provider, final IBaseLabelProvider labelProvider) {        
+            final AdapterFactoryContentProvider contentProvider, final IBaseLabelProvider labelProvider) {
         super(parentShell);
         super.setShellStyle(SWT.RESIZE | SWT.MAX | SWT.CLOSE);
         super.create();
-        
-        if(input == null) {
+
+        if (input == null) {
             throw new RuntimeException("No input for dialog specified");
-        }        
+        }
         this.resourceSet = getResourceSet(input);
         this.resourceName = resourceName;
-        
-        viewer.setContentProvider(provider);
-        viewer.setLabelProvider(labelProvider);        
+        this.contentProvider = contentProvider;
+
+        viewer.setContentProvider(contentProvider);
+        viewer.setLabelProvider(labelProvider);
         viewer.setInput(input);
-        viewer.expandAll();        
+        viewer.expandAll();
     }
 
     /**
@@ -421,5 +425,33 @@ public class SelectEObjectDialog extends TitleAreaDialog {
 
     public EObject getResult() {
         return selection;
+    }
+
+    /**
+     * The method supplies the main knots of, in this dialogue the represented, tree.
+     * 
+     * @return the viewer root element
+     */
+    public Object getViewerRootElement() {
+        Object object = null;
+
+        if (this.contentProvider != null) {
+            object = (this.contentProvider.getElements(viewer.getInput()))[0];
+        }
+
+        return object;
+    }
+    
+    public EObject getRootOfResult() {
+        return rootOfSelection;
+    }
+
+
+    public void setViewerLabelProvider(IBaseLabelProvider labelProvider) {
+        viewer.setLabelProvider(labelProvider);
+    }
+    
+    public void setViewerContentProvider(IContentProvider provider) {
+        viewer.setContentProvider(provider);
     }
 }

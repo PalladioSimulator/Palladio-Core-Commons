@@ -7,4 +7,6 @@ Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.palladiosimulator.commons.designpatterns,
  org.palladiosimulator.commons.emfutils
-Require-Bundle: org.eclipse.emf.ecore
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.edit,
+ org.eclipse.emf.edit.ui

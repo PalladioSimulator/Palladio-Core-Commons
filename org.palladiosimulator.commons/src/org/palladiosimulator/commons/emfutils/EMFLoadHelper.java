@@ -16,7 +16,10 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
  * 
  * @author Sebastian Lehrig
  */
-public class EMFLoadHelper {
+public final class EMFLoadHelper {
+
+    private EMFLoadHelper() {
+    }
 
     /**
      * Loads the EObject specified by the given resource URI. The resource URI has to include the

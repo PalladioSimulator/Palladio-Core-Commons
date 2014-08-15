@@ -3,6 +3,7 @@ package de.uka.ipd.sdq.dialogs.selection;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.edit.ui.action.LoadResourceAction.LoadResourceDialog;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -104,7 +105,7 @@ public class SelectEObjectDialog extends TitleAreaDialog {
                 return editingDomain.getResourceSet();
             }
         }
-        return null;
+        return new ResourceSetImpl();
     }
 
     /*

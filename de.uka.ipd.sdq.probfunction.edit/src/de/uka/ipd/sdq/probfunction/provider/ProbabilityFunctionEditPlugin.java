@@ -45,9 +45,7 @@ public final class ProbabilityFunctionEditPlugin extends EMFPlugin {
      * @generated
      */
     public ProbabilityFunctionEditPlugin() {
-        super(new ResourceLocator[] {
-            UnitsEditPlugin.INSTANCE,
-        });
+        super(new ResourceLocator[] { UnitsEditPlugin.INSTANCE, });
     }
 
     /**

@@ -44,7 +44,7 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
      * 
      * @return the value of the '<em>Samples</em>' containment reference list.
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getProbabilityMassFunction_Samples()
-     * @model containment="true"
+     * @model containment="true" required="true"
      * @generated
      */
     EList<Sample> getSamples();

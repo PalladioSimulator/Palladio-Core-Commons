@@ -29,8 +29,7 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * 
  * @generated
  */
-public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

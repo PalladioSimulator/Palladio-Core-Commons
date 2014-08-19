@@ -712,7 +712,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
         initEClass(probabilityMassFunctionEClass, ProbabilityMassFunction.class, "ProbabilityMassFunction",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getProbabilityMassFunction_Samples(), this.getSample(), null, "samples", null, 0, -1,
+        initEReference(getProbabilityMassFunction_Samples(), this.getSample(), null, "samples", null, 1, -1,
                 ProbabilityMassFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbabilityMassFunction_OrderedDomain(), ecorePackage.getEBoolean(), "orderedDomain", null,

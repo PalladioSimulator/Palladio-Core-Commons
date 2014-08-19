@@ -27,9 +27,7 @@ import de.uka.ipd.sdq.units.provider.UnitCarryingElementItemProvider;
  * 
  * @generated
  */
-public class ProbabilityFunctionItemProvider extends UnitCarryingElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class ProbabilityFunctionItemProvider extends UnitCarryingElementItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

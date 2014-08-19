@@ -33,9 +33,7 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * 
  * @generated
  */
-public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

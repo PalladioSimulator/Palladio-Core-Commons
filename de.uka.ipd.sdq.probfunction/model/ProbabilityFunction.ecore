@@ -17,8 +17,8 @@
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProbabilityMassFunction" eSuperTypes="#//ProbabilityFunction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="samples" upperBound="-1"
-        eType="#//Sample" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="samples" lowerBound="1"
+        upperBound="-1" eType="#//Sample" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="orderedDomain" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -26,7 +26,7 @@
     <eTypeParameters name="T"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability" ordered="false"
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value">
       <eGenericType eTypeParameter="#//Sample/T"/>
     </eStructuralFeatures>
   </eClassifiers>

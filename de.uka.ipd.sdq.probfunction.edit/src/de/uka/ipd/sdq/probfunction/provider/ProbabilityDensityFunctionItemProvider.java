@@ -25,9 +25,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * 
  * @generated
  */
-public class ProbabilityDensityFunctionItemProvider extends ProbabilityFunctionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class ProbabilityDensityFunctionItemProvider extends ProbabilityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

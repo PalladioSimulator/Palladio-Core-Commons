@@ -7,6 +7,7 @@
 package de.uka.ipd.sdq.probfunction.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -58,8 +59,8 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
     protected double probability = PROBABILITY_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see #getValue()
      * @generated

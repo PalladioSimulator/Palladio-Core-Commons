@@ -23,8 +23,7 @@ import de.uka.ipd.sdq.probfunction.StringSample;
  * 
  * @generated
  */
-public class StringSampleItemProvider extends SampleItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class StringSampleItemProvider extends SampleItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

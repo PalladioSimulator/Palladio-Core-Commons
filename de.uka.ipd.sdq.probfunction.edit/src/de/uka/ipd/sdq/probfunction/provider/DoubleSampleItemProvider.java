@@ -23,8 +23,7 @@ import de.uka.ipd.sdq.probfunction.DoubleSample;
  * 
  * @generated
  */
-public class DoubleSampleItemProvider extends SampleItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DoubleSampleItemProvider extends SampleItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

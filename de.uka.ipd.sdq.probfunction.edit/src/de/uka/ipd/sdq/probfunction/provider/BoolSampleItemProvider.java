@@ -23,8 +23,7 @@ import de.uka.ipd.sdq.probfunction.BoolSample;
  * 
  * @generated
  */
-public class BoolSampleItemProvider extends SampleItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BoolSampleItemProvider extends SampleItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

@@ -30,8 +30,7 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * 
  * @generated
  */
-public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

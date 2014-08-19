@@ -30,9 +30,7 @@ import de.uka.ipd.sdq.probfunction.SamplePDF;
  * 
  * @generated
  */
-public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import de.uka.ipd.sdq.probfunction.BoolSample;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Bool Sample</b></em>'. <!--

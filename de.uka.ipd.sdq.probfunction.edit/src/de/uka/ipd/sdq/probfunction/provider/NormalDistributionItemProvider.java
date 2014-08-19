@@ -29,8 +29,7 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * 
  * @generated
  */
-public class NormalDistributionItemProvider extends ContinuousPDFItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class NormalDistributionItemProvider extends ContinuousPDFItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

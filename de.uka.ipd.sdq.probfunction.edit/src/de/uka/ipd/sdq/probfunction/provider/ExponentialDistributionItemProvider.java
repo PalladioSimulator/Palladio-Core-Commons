@@ -30,9 +30,7 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * 
  * @generated
  */
-public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

@@ -126,9 +126,7 @@ public enum UnitNames implements Enumerator {
      * 
      * @generated
      */
-    private static final UnitNames[] VALUES_ARRAY = new UnitNames[] {
-            UNITLESS, BYTE, SECOND, METER,
-    };
+    private static final UnitNames[] VALUES_ARRAY = new UnitNames[] { UNITLESS, BYTE, SECOND, METER, };
 
     /**
      * A public read-only list of all the '<em><b>Unit Names</b></em>' enumerators. <!--

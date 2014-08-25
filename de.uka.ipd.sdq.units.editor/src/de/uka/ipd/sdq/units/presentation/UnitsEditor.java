@@ -561,9 +561,7 @@ public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainPr
     protected void updateProblemIndication() {
         if (updateProblemIndication) {
             BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "de.uka.ipd.sdq.units.editor", 0, null,
-                    new Object[] {
-                        editingDomain.getResourceSet()
-                    });
+                    new Object[] { editingDomain.getResourceSet() });
             for (Diagnostic childDiagnostic : resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -867,9 +865,8 @@ public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainPr
         getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
         int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-        Transfer[] transfers = new Transfer[] {
-                LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance()
-        };
+        Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(),
+                FileTransfer.getInstance() };
         viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
         viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(editingDomain, viewer));
     }
@@ -909,16 +906,13 @@ public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainPr
     public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
         if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
             BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR, "de.uka.ipd.sdq.units.editor", 0,
-                    getString("_UI_CreateModelError_message", resource.getURI()), new Object[] {
-                        exception == null ? (Object) resource : exception
-                    });
+                    getString("_UI_CreateModelError_message", resource.getURI()),
+                    new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
             return new BasicDiagnostic(Diagnostic.ERROR, "de.uka.ipd.sdq.units.editor", 0, getString(
-                    "_UI_CreateModelError_message", resource.getURI()), new Object[] {
-                exception
-            });
+                    "_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;
         }
@@ -1089,9 +1083,7 @@ public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainPr
                 selfColumn.setText(getString("_UI_SelfColumn_label"));
                 selfColumn.setResizable(true);
 
-                tableViewer.setColumnProperties(new String[] {
-                        "a", "b"
-                });
+                tableViewer.setColumnProperties(new String[] { "a", "b" });
                 tableViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
                 tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 
@@ -1134,9 +1126,7 @@ public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainPr
                 selfColumn.setResizable(true);
                 selfColumn.setWidth(200);
 
-                treeViewerWithColumns.setColumnProperties(new String[] {
-                        "a", "b"
-                });
+                treeViewerWithColumns.setColumnProperties(new String[] { "a", "b" });
                 treeViewerWithColumns.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
                 treeViewerWithColumns.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 
@@ -1649,9 +1639,7 @@ public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainPr
      * @generated
      */
     private static String getString(String key, Object s1) {
-        return UnitsEditorPlugin.INSTANCE.getString(key, new Object[] {
-            s1
-        });
+        return UnitsEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
     }
 
     /**

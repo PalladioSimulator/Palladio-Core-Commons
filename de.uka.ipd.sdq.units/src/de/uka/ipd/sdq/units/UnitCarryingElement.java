@@ -43,8 +43,8 @@ public interface UnitCarryingElement extends EStereotypableObject {
      * 
      * @return the value of the '<em>Unit</em>' containment reference.
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitCarryingElement_Unit()
-     * @model containment="true" transient="true" volatile="true" ordered="false"
-     *        suppressedSetVisibility="true" extendedMetaData="name='' namespace=''"
+     * @model containment="true" volatile="true" ordered="false" suppressedSetVisibility="true"
+     *        extendedMetaData="name='' namespace=''"
      * @generated
      */
     Unit getUnit();

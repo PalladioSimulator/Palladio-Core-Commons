@@ -32,8 +32,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * 
  * @generated
  */
-public class UnitPowerItemProvider extends UnitItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class UnitPowerItemProvider extends UnitItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

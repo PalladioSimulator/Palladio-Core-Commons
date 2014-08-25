@@ -27,8 +27,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * 
  * @generated
  */
-public class UnitDivisionItemProvider extends UnitItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class UnitDivisionItemProvider extends UnitItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -184,9 +183,8 @@ public class UnitDivisionItemProvider extends UnitItemProvider implements IEditi
                 || childFeature == UnitsPackage.Literals.UNIT_DIVISION__DIVISOR;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] {
-                    getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner)
-            });
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

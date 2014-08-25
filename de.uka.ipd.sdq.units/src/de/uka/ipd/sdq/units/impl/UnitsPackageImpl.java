@@ -391,8 +391,8 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
         initEClass(unitCarryingElementEClass, UnitCarryingElement.class, "UnitCarryingElement", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getUnitCarryingElement_Unit(), this.getUnit(), null, "unit", null, 0, 1,
-                UnitCarryingElement.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                UnitCarryingElement.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         initEClass(unitEClass, Unit.class, "Unit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -452,12 +452,8 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
      */
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-        addAnnotation(getUnitCarryingElement_Unit(), source, new String[] {
-                "name", "", "namespace", ""
-        });
-        addAnnotation(getBaseUnit_Name(), source, new String[] {
-                "name", "", "namespace", ""
-        });
+        addAnnotation(getUnitCarryingElement_Unit(), source, new String[] { "name", "", "namespace", "" });
+        addAnnotation(getBaseUnit_Name(), source, new String[] { "name", "", "namespace", "" });
     }
 
 } // UnitsPackageImpl

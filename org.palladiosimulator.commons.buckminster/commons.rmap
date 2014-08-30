@@ -4,6 +4,7 @@
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^de\.uka\.ipd\.sdq\..*" />
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^edu\.kit\..*" />
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^org\.palladiosimulator\..*" />  
+  <rm:locator searchPathRef="xtext" failOnError="false" pattern="^org\.eclipse\.xtext.*" />
   <rm:locator searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator searchPathRef="MDSDProfiles" failOnError="false"/>
   <rm:locator searchPathRef="eclipse-release" failOnError="false" />

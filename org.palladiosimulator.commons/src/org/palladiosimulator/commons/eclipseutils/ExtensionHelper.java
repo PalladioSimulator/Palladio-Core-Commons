@@ -43,6 +43,84 @@ public class ExtensionHelper {
     }
 
     /**
+     * Gets all executable extensions registered at a given extension point conforming to a given
+     * attribute.
+     * 
+     * @param extensionPointID
+     *            the extension point identifier; pointing to the extension point to get executable
+     *            extensions from.
+     * @param attributeName
+     *            the name of the attribute.
+     * @param <DATA_TYPE>
+     *            the data type of the executable extension.
+     * @return list of executable extension for the given attribute.
+     */
+    public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
+            final String attributeName) {
+        final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
+
+        if (Platform.getExtensionRegistry() != null) {
+            final IConfigurationElement[] configurationElements = Platform.getExtensionRegistry()
+                    .getConfigurationElementsFor(extensionPointID);
+            for (final IConfigurationElement configurationElement : configurationElements) {
+                try {
+                    @SuppressWarnings("unchecked")
+                    final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
+                            .createExecutableExtension(attributeName);
+                    results.add(executableExtension);
+                } catch (CoreException e) {
+                    throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
+                            + attributeName + "\"");
+                }
+            }
+        }
+
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Gets all executable extensions registered at a given extension point conforming to a given
+     * attribute and filtered by the given attribute and its value.
+     * 
+     * @param extensionPointID
+     *            the extension point identifier; pointing to the extension point to get executable
+     *            extensions from.
+     * @param attributeName
+     *            the name of the attribute.
+     * @param filterAttributeName
+     *            the attribute to be used for filtering.
+     * @param filterAttributeValue
+     *            the atrribute's value to be used for filtering. Found attributes have to equal
+     *            this value in case they should be chosen.
+     * @param <DATA_TYPE>
+     *            the data type of the executable extension.
+     * @return list of executable extension for the given attribute.
+     */
+    public static <DATA_TYPE> DATA_TYPE getExecutableExtension(final String extensionPointID,
+            final String attributeName, final String filterAttributeName, final String filterAttributeValue) {
+        if (Platform.getExtensionRegistry() != null) {
+            final IConfigurationElement[] configurationElements = Platform.getExtensionRegistry()
+                    .getConfigurationElementsFor(extensionPointID);
+            for (final IConfigurationElement configurationElement : configurationElements) {
+                if (configurationElement.getAttribute(filterAttributeName).equals(filterAttributeValue)) {
+                    try {
+                        @SuppressWarnings("unchecked")
+                        final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
+                                .createExecutableExtension(attributeName);
+                        return executableExtension;
+                    } catch (CoreException e) {
+                        throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID
+                                + "->" + attributeName + "\"");
+                    }
+                }
+            }
+        }
+
+        throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
+                + attributeName + "\"");
+    }
+
+    /**
      * Gets all executable extensions registered at a given extension point at a given element and
      * conforming to a given attribute.
      * 
@@ -61,9 +139,8 @@ public class ExtensionHelper {
      */
     public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
             final String elementName, final String attributeName) throws CoreException {
-        final List<IExtension> extensions = loadExtensions(extensionPointID);
         final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
-
+        final List<IExtension> extensions = loadExtensions(extensionPointID);
         for (final IExtension extension : extensions) {
             @SuppressWarnings("unchecked")
             final DATA_TYPE executableExtension = (DATA_TYPE) obtainConfigurationElement(extension, elementName)

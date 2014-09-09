@@ -136,18 +136,21 @@ public class ExtensionHelper {
      * @param <DATA_TYPE>
      *            the data type of the executable extension.
      * @return list of executable extension for the given attribute.
-     * @throws CoreException
-     *             If the executable extension cannot be created.
      */
     public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
-            final String elementName, final String attributeName) throws CoreException {
+            final String elementName, final String attributeName) {
         final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
         final List<IExtension> extensions = loadExtensions(extensionPointID);
         for (final IExtension extension : extensions) {
-            @SuppressWarnings("unchecked")
-            final DATA_TYPE executableExtension = (DATA_TYPE) obtainConfigurationElement(extension, elementName)
-                    .createExecutableExtension(attributeName);
-            results.add(executableExtension);
+            try {
+                @SuppressWarnings("unchecked")
+                final DATA_TYPE executableExtension = (DATA_TYPE) obtainConfigurationElement(extension, elementName)
+                        .createExecutableExtension(attributeName);
+                results.add(executableExtension);
+            } catch (CoreException e) {
+                throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
+                        + elementName + "->" + attributeName + "\"");
+            }
         }
 
         return Collections.unmodifiableList(results);
@@ -173,22 +176,22 @@ public class ExtensionHelper {
      *         parameters.
      * @param <DATA_TYPE>
      *            the data type of the executable extension.
-     * @throws CoreException
-     *             If the executable extension cannot be created.
      */
     public static <DATA_TYPE> DATA_TYPE getExecutableExtension(final String extensionPointID, final String elementName,
-            final String attributeName, final String filterAttributeName, final String filterAttributeValue)
-            throws CoreException {
+            final String attributeName, final String filterAttributeName, final String filterAttributeValue) {
         final List<IExtension> extensions = loadExtensions(extensionPointID);
 
         for (final IExtension extension : extensions) {
             final IConfigurationElement configurationElement = obtainConfigurationElement(extension, elementName);
 
             if (configurationElement.getAttribute(filterAttributeName).equals(filterAttributeValue)) {
-                @SuppressWarnings("unchecked")
-                final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
-                        .createExecutableExtension(attributeName);
-                return executableExtension;
+                try {
+                    @SuppressWarnings("unchecked")
+                    final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
+                            .createExecutableExtension(attributeName);
+                    return executableExtension;
+                } catch (CoreException e) {
+                }
             }
         }
 

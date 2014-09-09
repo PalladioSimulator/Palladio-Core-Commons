@@ -57,6 +57,7 @@ public class ExtensionHelper {
      *            the data type of the executable extension.
      * @return list of executable extension for the given attribute.
      * @throws CoreException
+     *             If the executable extension cannot be created.
      */
     public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
             final String elementName, final String attributeName) throws CoreException {
@@ -94,6 +95,7 @@ public class ExtensionHelper {
      * @param <DATA_TYPE>
      *            the data type of the executable extension.
      * @throws CoreException
+     *             If the executable extension cannot be created.
      */
     public static <DATA_TYPE> DATA_TYPE getExecutableExtension(final String extensionPointID, final String elementName,
             final String attributeName, final String filterAttributeName, final String filterAttributeValue)

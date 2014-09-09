@@ -13,6 +13,8 @@ import org.eclipse.core.runtime.Platform;
 /**
  * Helper class for coping with Eclipse extension points and extensions.
  * 
+ * TODO ExtensionHelper lacks advanced filtering options. Use Java 1.8 Lambda expressions. [Lehrig]
+ * 
  * @author Sebastian Lehrig
  */
 public class ExtensionHelper {

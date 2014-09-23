@@ -20,6 +20,7 @@ public final class EMFAdapterFactoryHelper {
     public static final AdapterFactoryContentProvider ADPATER_FACTORY_CONTENT_PROVIDER = new AdapterFactoryContentProvider(
             ADAPTER_FACTORY);
 
+    /** Static helper classes shall not be instantiated. */
     private EMFAdapterFactoryHelper() {
     }
 }

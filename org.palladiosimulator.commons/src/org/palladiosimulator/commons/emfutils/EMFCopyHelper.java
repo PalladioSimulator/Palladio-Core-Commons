@@ -23,6 +23,7 @@ public final class EMFCopyHelper {
 
     private static final ResourceSet SOURCE_RESOURCE_SET = new ResourceSetImpl();
 
+    /** Static helper classes shall not be instantiated. */
     private EMFCopyHelper() {
     }
 

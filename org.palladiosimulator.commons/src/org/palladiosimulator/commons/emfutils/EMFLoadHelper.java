@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
  */
 public final class EMFLoadHelper {
 
+    /** Static helper classes shall not be instantiated. */
     private EMFLoadHelper() {
     }
 

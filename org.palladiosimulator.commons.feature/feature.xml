@@ -241,6 +241,14 @@ litigation.
          id="de.uka.ipd.sdq.probfunction.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.xtext.xbase.lib"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.sdk"
+         version="0.0.0"/>
+
    <plugin
          id="org.palladiosimulator.commons"
          download-size="0"

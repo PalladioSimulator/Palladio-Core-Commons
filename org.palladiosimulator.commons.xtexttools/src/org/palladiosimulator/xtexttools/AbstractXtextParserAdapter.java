@@ -4,7 +4,6 @@ import java.io.StringReader;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.xtext.ISetup;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.parser.IParseResult;
 import org.eclipse.xtext.parser.IParser;
@@ -14,10 +13,9 @@ import org.palladiosimulator.xtexttools.interfaces.IXProduct;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
-import com.google.inject.Module;
 
 /**
- * Abstract class for an adapter for Xtext-Parser
+ * Abstract class for an adapter for Xtext-Parser.
  * @author Jonas Heinisch
  *
  */
@@ -36,7 +34,7 @@ public abstract class AbstractXtextParserAdapter extends IXProduct implements IX
      * @param s
      *            String to parse
      */
-    public AbstractXtextParserAdapter(String s) {
+    public AbstractXtextParserAdapter(final String s) {
         this(s, false);
     }
 
@@ -48,7 +46,7 @@ public abstract class AbstractXtextParserAdapter extends IXProduct implements IX
      * @param s
      *            String to parse
      */
-    public AbstractXtextParserAdapter(String s, boolean standalone) {
+    public AbstractXtextParserAdapter(final String s, final boolean standalone) {
         setupParser(standalone);
         this.s = s;
     }
@@ -59,7 +57,7 @@ public abstract class AbstractXtextParserAdapter extends IXProduct implements IX
      * @param standalone
      *            true if not used in eclipse
      */
-    private void setupParser(boolean standalone) {
+    private void setupParser(final boolean standalone) {
         if (standalone) {
             for (EPackage pack : registerEPackages()) {
                 EPackage.Registry.INSTANCE.put(pack.getNsURI(), pack);
@@ -76,7 +74,9 @@ public abstract class AbstractXtextParserAdapter extends IXProduct implements IX
 
     @Override
     public EObject parse() {
-        result = parser.parse(new StringReader(s));
+    	if(result==null){
+    		result = parser.parse(new StringReader(s));
+    	}
         return result.getRootASTElement();
     }
 

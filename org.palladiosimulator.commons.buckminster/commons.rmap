@@ -4,6 +4,7 @@
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^de\.uka\.ipd\.sdq\..*" />
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^edu\.kit\..*" />
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^org\.palladiosimulator\..*" />  
+  <rm:locator searchPathRef="xtext" failOnError="false" pattern="^org\.eclipse\.xtext.*" />
   <rm:locator searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator searchPathRef="MDSDProfiles" failOnError="false"/>
   <rm:locator searchPathRef="eclipse-release" failOnError="false" />
@@ -48,6 +49,13 @@
     <rm:property key="buckminster.mutable" value="false"/>
   	<rm:uri format="http://download.eclipse.org/releases/luna/"/>
   </rm:provider></rm:searchPath>
+  
+  <rm:searchPath name="xtext">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:uri format="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
+    </rm:provider>
+  </rm:searchPath>
 
     <rm:searchPath name="emf">
   <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">

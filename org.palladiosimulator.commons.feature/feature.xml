@@ -242,11 +242,7 @@ litigation.
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.xtext.xbase.lib"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.xtext.sdk"
+         id="org.palladiosimulator.commons.stoex.feature"
          version="0.0.0"/>
 
    <plugin

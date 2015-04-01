@@ -2,10 +2,9 @@ package de.uka.ipd.sdq.probfunction.math;
 
 import java.util.List;
 
-import org.antlr.runtime.ANTLRStringStream;
-import org.antlr.runtime.CommonTokenStream;
-import org.antlr.runtime.RecognitionException;
+
 import org.eclipse.emf.common.util.EList;
+import org.palladiosimulator.commons.stoex.adapter.StoExParser;
 
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
 import de.uka.ipd.sdq.probfunction.ContinuousSample;
@@ -20,8 +19,6 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnknownPDFTypeException;
 import de.uka.ipd.sdq.probfunction.math.util.MathTools;
 import de.uka.ipd.sdq.probfunction.print.ProbFunctionPrettyPrint;
 import de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral;
-import de.uka.ipd.sdq.stoex.parser.StochasticExpressionsLexer;
-import de.uka.ipd.sdq.stoex.parser.StochasticExpressionsParser;
 
 /**
  * To be continued...
@@ -433,7 +430,7 @@ public class ManagedPDF {
         return this.useConfiguration;
     }
 
-    public static ManagedPDF createFromString(String spec) throws RecognitionException, StringNotPDFException {
+    public static ManagedPDF createFromString(String spec) throws StringNotPDFException {
         ProbabilityFunctionLiteral value = parse(spec);
         try {
             ProbabilityDensityFunction pdf = (ProbabilityDensityFunction) value
@@ -444,9 +441,8 @@ public class ManagedPDF {
         }
     }
 
-    private static ProbabilityFunctionLiteral parse(String s) throws RecognitionException {
-        StochasticExpressionsLexer lexer = new StochasticExpressionsLexer(new ANTLRStringStream(s));
-        StochasticExpressionsParser parser = new StochasticExpressionsParser(new CommonTokenStream(lexer));
+    private static ProbabilityFunctionLiteral parse(String s) {
+        StoExParser parser = new StoExParser(s);
         return (ProbabilityFunctionLiteral) parser.expression();
     }
 

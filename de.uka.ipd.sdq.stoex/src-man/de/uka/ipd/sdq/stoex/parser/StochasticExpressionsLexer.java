@@ -11,6 +11,7 @@ import org.antlr.runtime.MismatchedSetException;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.RecognizerSharedState;
 
+@Deprecated
 public class StochasticExpressionsLexer extends Lexer {
     public static final int INNER = 43;
     public static final int MOD = 17;

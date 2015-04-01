@@ -54,6 +54,7 @@ import de.uka.ipd.sdq.stoex.Unary;
 import de.uka.ipd.sdq.stoex.Variable;
 import de.uka.ipd.sdq.stoex.VariableReference;
 
+@Deprecated
 public class StochasticExpressionsParser extends Parser {
     public static final String[] tokenNames = new String[] {
             "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "OR", "XOR", "GREATER", "LESS", "EQUAL", "NOTEQUAL",

@@ -1,8 +1,8 @@
-package org.palladiosimulator.commons.stoex.ui.contentassist.antlr.internal;
+package org.palladiosimulator.commons.stoex.parser.antlr.internal;
 
 // Hack: Use our own Lexer superclass by means of import. 
 // Currently there is no other way to specify the superclass for the lexer.
-import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
+import org.eclipse.xtext.parser.antlr.Lexer;
 
 
 import org.antlr.runtime.*;
@@ -12,26 +12,26 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalStoExLexer extends Lexer {
-    public static final int RULE_BOOLEAN_KEYWORDS=23;
-    public static final int RULE_LPAREN=10;
-    public static final int RULE_SQUARE_PAREN_L=8;
-    public static final int RULE_ENUMPMF=17;
-    public static final int RULE_SQUARE_PAREN_R=9;
-    public static final int RULE_ID=22;
+    public static final int RULE_BOOLEAN_KEYWORDS=16;
+    public static final int RULE_LPAREN=11;
+    public static final int RULE_SQUARE_PAREN_L=9;
+    public static final int RULE_ENUMPMF=22;
+    public static final int RULE_SQUARE_PAREN_R=10;
+    public static final int RULE_ID=13;
     public static final int RULE_DIGIT=26;
-    public static final int RULE_COLON=12;
-    public static final int RULE_BOOLPMF=18;
-    public static final int RULE_ORDERED_DEF=25;
+    public static final int RULE_COLON=14;
+    public static final int RULE_BOOLPMF=24;
+    public static final int RULE_ORDERED_DEF=23;
     public static final int RULE_ML_COMMENT=27;
     public static final int RULE_ELSEDELIMITER=5;
-    public static final int RULE_INTPMF=15;
-    public static final int RULE_STRING=24;
+    public static final int RULE_INTPMF=20;
+    public static final int RULE_STRING=17;
     public static final int RULE_NOT=7;
-    public static final int RULE_DOUBLEPMF=16;
+    public static final int RULE_DOUBLEPMF=21;
     public static final int RULE_POW=6;
     public static final int RULE_SL_COMMENT=28;
     public static final int T__37=37;
-    public static final int RULE_DOUBLE=20;
+    public static final int RULE_DOUBLE=8;
     public static final int T__38=38;
     public static final int RULE_CONDDELIMITER=4;
     public static final int T__39=39;
@@ -39,20 +39,20 @@ public class InternalStoExLexer extends Lexer {
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int RULE_DECINT=21;
-    public static final int RULE_DOT=13;
+    public static final int RULE_DECINT=18;
+    public static final int RULE_DOT=15;
     public static final int EOF=-1;
     public static final int T__31=31;
     public static final int T__32=32;
     public static final int RULE_WS=29;
-    public static final int RULE_DOUBLEPDF=14;
+    public static final int RULE_DOUBLEPDF=19;
     public static final int RULE_ANY_OTHER=30;
-    public static final int RULE_RPAREN=11;
+    public static final int RULE_RPAREN=12;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
     public static final int T__45=45;
-    public static final int RULE_SEMI=19;
+    public static final int RULE_SEMI=25;
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -71,18 +71,17 @@ public class InternalStoExLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g"; }
+    public String getGrammarFileName() { return "../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g"; }
 
     // $ANTLR start "T__31"
     public final void mT__31() throws RecognitionException {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:11:7: ( 'AND' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:11:9: 'AND'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:11:7: ( '-' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:11:9: '-'
             {
-            match("AND"); 
-
+            match('-'); 
 
             }
 
@@ -99,11 +98,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:12:7: ( 'OR' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:12:9: 'OR'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:12:7: ( '/' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:12:9: '/'
             {
-            match("OR"); 
-
+            match('/'); 
 
             }
 
@@ -120,11 +118,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:13:7: ( 'XOR' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:13:9: 'XOR'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:13:7: ( '*' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:13:9: '*'
             {
-            match("XOR"); 
-
+            match('*'); 
 
             }
 
@@ -141,10 +138,11 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:14:7: ( '>' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:14:9: '>'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:14:7: ( 'AND' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:14:9: 'AND'
             {
-            match('>'); 
+            match("AND"); 
+
 
             }
 
@@ -161,10 +159,11 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:15:7: ( '<' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:15:9: '<'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:15:7: ( 'OR' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:15:9: 'OR'
             {
-            match('<'); 
+            match("OR"); 
+
 
             }
 
@@ -181,10 +180,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:16:7: ( '==' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:16:9: '=='
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:16:7: ( 'XOR' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:16:9: 'XOR'
             {
-            match("=="); 
+            match("XOR"); 
 
 
             }
@@ -202,11 +201,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:17:7: ( '<>' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:17:9: '<>'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:17:7: ( '>' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:17:9: '>'
             {
-            match("<>"); 
-
+            match('>'); 
 
             }
 
@@ -223,11 +221,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:18:7: ( '>=' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:18:9: '>='
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:18:7: ( '<' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:18:9: '<'
             {
-            match(">="); 
-
+            match('<'); 
 
             }
 
@@ -244,10 +241,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:19:7: ( '<=' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:19:9: '<='
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:19:7: ( '==' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:19:9: '=='
             {
-            match("<="); 
+            match("=="); 
 
 
             }
@@ -265,10 +262,11 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:20:7: ( '+' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:20:9: '+'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:20:7: ( '<>' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:20:9: '<>'
             {
-            match('+'); 
+            match("<>"); 
+
 
             }
 
@@ -285,10 +283,11 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:21:7: ( '-' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:21:9: '-'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:21:7: ( '>=' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:21:9: '>='
             {
-            match('-'); 
+            match(">="); 
+
 
             }
 
@@ -305,10 +304,11 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:22:7: ( '*' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:22:9: '*'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:22:7: ( '<=' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:22:9: '<='
             {
-            match('*'); 
+            match("<="); 
+
 
             }
 
@@ -325,10 +325,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:23:7: ( '/' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:23:9: '/'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:23:7: ( '+' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:23:9: '+'
             {
-            match('/'); 
+            match('+'); 
 
             }
 
@@ -345,8 +345,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:24:7: ( '%' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:24:9: '%'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:24:7: ( '%' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:24:9: '%'
             {
             match('%'); 
 
@@ -365,8 +365,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:25:7: ( '_' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:25:9: '_'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:25:7: ( '_' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:25:9: '_'
             {
             match('_'); 
 
@@ -385,8 +385,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:26:7: ( 'unitless' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:26:9: 'unitless'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:26:7: ( 'unitless' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:26:9: 'unitless'
             {
             match("unitless"); 
 
@@ -406,8 +406,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:27:7: ( 'B' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:27:9: 'B'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:27:7: ( 'B' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:27:9: 'B'
             {
             match('B'); 
 
@@ -426,8 +426,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:28:7: ( 's' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:28:9: 's'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:28:7: ( 's' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:28:9: 's'
             {
             match('s'); 
 
@@ -446,8 +446,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:29:7: ( 'm' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:29:9: 'm'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:29:7: ( 'm' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:29:9: 'm'
             {
             match('m'); 
 
@@ -466,19 +466,19 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:13: ( RULE_DECINT ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT ) )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:15: RULE_DECINT ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:13: ( RULE_DECINT ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT ) )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:15: RULE_DECINT ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
             {
             mRULE_DECINT(); 
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:27: ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:27: ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
             int alt5=2;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:28: RULE_DOT ( RULE_DIGIT )*
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:28: RULE_DOT ( RULE_DIGIT )*
                     {
                     mRULE_DOT(); 
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:37: ( RULE_DIGIT )*
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:37: ( RULE_DIGIT )*
                     loop1:
                     do {
                         int alt1=2;
@@ -491,7 +491,7 @@ public class InternalStoExLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:37: RULE_DIGIT
+                    	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:37: RULE_DIGIT
                     	    {
                     	    mRULE_DIGIT(); 
 
@@ -507,9 +507,9 @@ public class InternalStoExLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:49: ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:49: ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT
                     {
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:49: ( RULE_DOT ( RULE_DIGIT )* )?
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:49: ( RULE_DOT ( RULE_DIGIT )* )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -518,10 +518,10 @@ public class InternalStoExLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:50: RULE_DOT ( RULE_DIGIT )*
+                            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:50: RULE_DOT ( RULE_DIGIT )*
                             {
                             mRULE_DOT(); 
-                            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:59: ( RULE_DIGIT )*
+                            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:59: ( RULE_DIGIT )*
                             loop2:
                             do {
                                 int alt2=2;
@@ -534,7 +534,7 @@ public class InternalStoExLexer extends Lexer {
 
                                 switch (alt2) {
                             	case 1 :
-                            	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:59: RULE_DIGIT
+                            	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:59: RULE_DIGIT
                             	    {
                             	    mRULE_DIGIT(); 
 
@@ -561,7 +561,7 @@ public class InternalStoExLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7278:83: ( '-' | '+' )?
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2805:83: ( '-' | '+' )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -570,7 +570,7 @@ public class InternalStoExLexer extends Lexer {
                     }
                     switch (alt4) {
                         case 1 :
-                            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:
+                            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:
                             {
                             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                                 input.consume();
@@ -610,10 +610,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_DECINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:13: ( ( '0' | '1' .. '9' ( RULE_DIGIT )* ) )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:13: ( ( '0' | '1' .. '9' ( RULE_DIGIT )* ) )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
             {
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -631,17 +631,17 @@ public class InternalStoExLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:16: '0'
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:16: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:20: '1' .. '9' ( RULE_DIGIT )*
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:20: '1' .. '9' ( RULE_DIGIT )*
                     {
                     matchRange('1','9'); 
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:29: ( RULE_DIGIT )*
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:29: ( RULE_DIGIT )*
                     loop6:
                     do {
                         int alt6=2;
@@ -654,7 +654,7 @@ public class InternalStoExLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7280:29: RULE_DIGIT
+                    	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2807:29: RULE_DIGIT
                     	    {
                     	    mRULE_DIGIT(); 
 
@@ -688,10 +688,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_BOOLEAN_KEYWORDS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7282:23: ( ( 'false' | 'true' ) )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7282:25: ( 'false' | 'true' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2809:23: ( ( 'false' | 'true' ) )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2809:25: ( 'false' | 'true' )
             {
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7282:25: ( 'false' | 'true' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2809:25: ( 'false' | 'true' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -709,7 +709,7 @@ public class InternalStoExLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7282:26: 'false'
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2809:26: 'false'
                     {
                     match("false"); 
 
@@ -717,7 +717,7 @@ public class InternalStoExLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7282:34: 'true'
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2809:34: 'true'
                     {
                     match("true"); 
 
@@ -743,8 +743,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7284:10: ( 'NOT' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7284:12: 'NOT'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2811:10: ( 'NOT' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2811:12: 'NOT'
             {
             match("NOT"); 
 
@@ -764,8 +764,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_INTPMF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7286:13: ( 'IntPMF' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7286:15: 'IntPMF'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2813:13: ( 'IntPMF' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2813:15: 'IntPMF'
             {
             match("IntPMF"); 
 
@@ -785,8 +785,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_DOUBLEPMF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7288:16: ( 'DoublePMF' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7288:18: 'DoublePMF'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2815:16: ( 'DoublePMF' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2815:18: 'DoublePMF'
             {
             match("DoublePMF"); 
 
@@ -806,8 +806,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_ENUMPMF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7290:14: ( 'EnumPMF' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7290:16: 'EnumPMF'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2817:14: ( 'EnumPMF' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2817:16: 'EnumPMF'
             {
             match("EnumPMF"); 
 
@@ -827,8 +827,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_DOUBLEPDF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7292:16: ( 'DoublePDF' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7292:18: 'DoublePDF'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2819:16: ( 'DoublePDF' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2819:18: 'DoublePDF'
             {
             match("DoublePDF"); 
 
@@ -848,8 +848,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_BOOLPMF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7294:14: ( 'BoolPMF' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7294:16: 'BoolPMF'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2821:14: ( 'BoolPMF' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2821:16: 'BoolPMF'
             {
             match("BoolPMF"); 
 
@@ -869,8 +869,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_POW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7296:10: ( '^' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7296:12: '^'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2823:10: ( '^' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2823:12: '^'
             {
             match('^'); 
 
@@ -889,8 +889,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_LPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7298:13: ( '(' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7298:15: '('
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2825:13: ( '(' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2825:15: '('
             {
             match('('); 
 
@@ -909,8 +909,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_RPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7300:13: ( ')' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7300:15: ')'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2827:13: ( ')' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2827:15: ')'
             {
             match(')'); 
 
@@ -929,8 +929,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_SEMI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7302:11: ( ';' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7302:13: ';'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2829:11: ( ';' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2829:13: ';'
             {
             match(';'); 
 
@@ -949,8 +949,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7304:12: ( ',' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7304:14: ','
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2831:12: ( ',' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2831:14: ','
             {
             match(','); 
 
@@ -969,8 +969,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_ORDERED_DEF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7306:18: ( 'ordered' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7306:20: 'ordered'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2833:18: ( 'ordered' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2833:20: 'ordered'
             {
             match("ordered"); 
 
@@ -990,8 +990,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_SQUARE_PAREN_L;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7308:21: ( '[' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7308:23: '['
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2835:21: ( '[' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2835:23: '['
             {
             match('['); 
 
@@ -1010,8 +1010,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_SQUARE_PAREN_R;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7310:21: ( ']' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7310:23: ']'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2837:21: ( ']' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2837:23: ']'
             {
             match(']'); 
 
@@ -1028,8 +1028,8 @@ public class InternalStoExLexer extends Lexer {
     // $ANTLR start "RULE_DIGIT"
     public final void mRULE_DIGIT() throws RecognitionException {
         try {
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7312:21: ( '0' .. '9' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7312:23: '0' .. '9'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2839:21: ( '0' .. '9' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2839:23: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1046,8 +1046,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_DOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7314:10: ( '.' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7314:12: '.'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2841:10: ( '.' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2841:12: '.'
             {
             match('.'); 
 
@@ -1066,8 +1066,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_CONDDELIMITER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7316:20: ( '?' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7316:22: '?'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2843:20: ( '?' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2843:22: '?'
             {
             match('?'); 
 
@@ -1086,8 +1086,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_ELSEDELIMITER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7318:20: ( ':' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7318:22: ':'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2845:20: ( ':' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2845:22: ':'
             {
             match(':'); 
 
@@ -1106,8 +1106,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7320:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7320:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2847:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2847:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1118,7 +1118,7 @@ public class InternalStoExLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7320:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2847:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop9:
             do {
                 int alt9=2;
@@ -1131,7 +1131,7 @@ public class InternalStoExLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:
+            	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -1167,10 +1167,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' ) )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' ) )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
             {
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1188,10 +1188,10 @@ public class InternalStoExLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop10:
                     do {
                         int alt10=3;
@@ -1207,7 +1207,7 @@ public class InternalStoExLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1223,7 +1223,7 @@ public class InternalStoExLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1248,10 +1248,10 @@ public class InternalStoExLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\''
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop11:
                     do {
                         int alt11=3;
@@ -1276,7 +1276,7 @@ public class InternalStoExLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1292,7 +1292,7 @@ public class InternalStoExLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7322:137: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2849:137: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1335,12 +1335,12 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7324:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7324:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2851:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2851:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7324:24: ( options {greedy=false; } : . )*
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2851:24: ( options {greedy=false; } : . )*
             loop13:
             do {
                 int alt13=2;
@@ -1365,7 +1365,7 @@ public class InternalStoExLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7324:52: .
+            	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2851:52: .
             	    {
             	    matchAny(); 
 
@@ -1395,12 +1395,12 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop14:
             do {
                 int alt14=2;
@@ -1413,7 +1413,7 @@ public class InternalStoExLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1433,7 +1433,7 @@ public class InternalStoExLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:40: ( ( '\\r' )? '\\n' )?
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:40: ( ( '\\r' )? '\\n' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1442,9 +1442,9 @@ public class InternalStoExLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:41: ( '\\r' )? '\\n'
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:41: ( '\\r' )?
+                    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:41: ( '\\r' )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -1453,7 +1453,7 @@ public class InternalStoExLexer extends Lexer {
                     }
                     switch (alt15) {
                         case 1 :
-                            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7326:41: '\\r'
+                            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2853:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1485,10 +1485,10 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7328:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7328:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2855:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2855:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7328:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2855:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt17=0;
             loop17:
             do {
@@ -1502,7 +1502,7 @@ public class InternalStoExLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:
+            	    // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1542,8 +1542,8 @@ public class InternalStoExLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7330:16: ( . )
-            // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:7330:18: .
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2857:16: ( . )
+            // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:2857:18: .
             {
             matchAny(); 
 
@@ -1558,320 +1558,320 @@ public class InternalStoExLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:8: ( T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_DOUBLE | RULE_DECINT | RULE_BOOLEAN_KEYWORDS | RULE_NOT | RULE_INTPMF | RULE_DOUBLEPMF | RULE_ENUMPMF | RULE_DOUBLEPDF | RULE_BOOLPMF | RULE_POW | RULE_LPAREN | RULE_RPAREN | RULE_SEMI | RULE_COLON | RULE_ORDERED_DEF | RULE_SQUARE_PAREN_L | RULE_SQUARE_PAREN_R | RULE_DOT | RULE_CONDDELIMITER | RULE_ELSEDELIMITER | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:8: ( T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_DOUBLE | RULE_DECINT | RULE_BOOLEAN_KEYWORDS | RULE_NOT | RULE_INTPMF | RULE_DOUBLEPMF | RULE_ENUMPMF | RULE_DOUBLEPDF | RULE_BOOLPMF | RULE_POW | RULE_LPAREN | RULE_RPAREN | RULE_SEMI | RULE_COLON | RULE_ORDERED_DEF | RULE_SQUARE_PAREN_L | RULE_SQUARE_PAREN_R | RULE_DOT | RULE_CONDDELIMITER | RULE_ELSEDELIMITER | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt18=45;
         alt18 = dfa18.predict(input);
         switch (alt18) {
             case 1 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:10: T__31
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:10: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 2 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:16: T__32
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:16: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 3 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:22: T__33
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:22: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 4 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:28: T__34
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:28: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 5 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:34: T__35
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:34: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 6 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:40: T__36
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:40: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 7 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:46: T__37
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:46: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 8 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:52: T__38
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:52: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 9 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:58: T__39
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:58: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 10 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:64: T__40
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:64: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 11 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:70: T__41
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:70: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 12 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:76: T__42
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:76: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 13 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:82: T__43
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:82: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 14 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:88: T__44
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:88: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 15 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:94: T__45
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:94: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 16 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:100: T__46
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:100: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 17 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:106: T__47
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:106: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 18 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:112: T__48
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:112: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 19 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:118: T__49
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:118: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
             case 20 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:124: RULE_DOUBLE
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:124: RULE_DOUBLE
                 {
                 mRULE_DOUBLE(); 
 
                 }
                 break;
             case 21 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:136: RULE_DECINT
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:136: RULE_DECINT
                 {
                 mRULE_DECINT(); 
 
                 }
                 break;
             case 22 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:148: RULE_BOOLEAN_KEYWORDS
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:148: RULE_BOOLEAN_KEYWORDS
                 {
                 mRULE_BOOLEAN_KEYWORDS(); 
 
                 }
                 break;
             case 23 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:170: RULE_NOT
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:170: RULE_NOT
                 {
                 mRULE_NOT(); 
 
                 }
                 break;
             case 24 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:179: RULE_INTPMF
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:179: RULE_INTPMF
                 {
                 mRULE_INTPMF(); 
 
                 }
                 break;
             case 25 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:191: RULE_DOUBLEPMF
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:191: RULE_DOUBLEPMF
                 {
                 mRULE_DOUBLEPMF(); 
 
                 }
                 break;
             case 26 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:206: RULE_ENUMPMF
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:206: RULE_ENUMPMF
                 {
                 mRULE_ENUMPMF(); 
 
                 }
                 break;
             case 27 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:219: RULE_DOUBLEPDF
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:219: RULE_DOUBLEPDF
                 {
                 mRULE_DOUBLEPDF(); 
 
                 }
                 break;
             case 28 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:234: RULE_BOOLPMF
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:234: RULE_BOOLPMF
                 {
                 mRULE_BOOLPMF(); 
 
                 }
                 break;
             case 29 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:247: RULE_POW
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:247: RULE_POW
                 {
                 mRULE_POW(); 
 
                 }
                 break;
             case 30 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:256: RULE_LPAREN
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:256: RULE_LPAREN
                 {
                 mRULE_LPAREN(); 
 
                 }
                 break;
             case 31 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:268: RULE_RPAREN
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:268: RULE_RPAREN
                 {
                 mRULE_RPAREN(); 
 
                 }
                 break;
             case 32 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:280: RULE_SEMI
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:280: RULE_SEMI
                 {
                 mRULE_SEMI(); 
 
                 }
                 break;
             case 33 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:290: RULE_COLON
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:290: RULE_COLON
                 {
                 mRULE_COLON(); 
 
                 }
                 break;
             case 34 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:301: RULE_ORDERED_DEF
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:301: RULE_ORDERED_DEF
                 {
                 mRULE_ORDERED_DEF(); 
 
                 }
                 break;
             case 35 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:318: RULE_SQUARE_PAREN_L
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:318: RULE_SQUARE_PAREN_L
                 {
                 mRULE_SQUARE_PAREN_L(); 
 
                 }
                 break;
             case 36 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:338: RULE_SQUARE_PAREN_R
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:338: RULE_SQUARE_PAREN_R
                 {
                 mRULE_SQUARE_PAREN_R(); 
 
                 }
                 break;
             case 37 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:358: RULE_DOT
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:358: RULE_DOT
                 {
                 mRULE_DOT(); 
 
                 }
                 break;
             case 38 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:367: RULE_CONDDELIMITER
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:367: RULE_CONDDELIMITER
                 {
                 mRULE_CONDDELIMITER(); 
 
                 }
                 break;
             case 39 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:386: RULE_ELSEDELIMITER
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:386: RULE_ELSEDELIMITER
                 {
                 mRULE_ELSEDELIMITER(); 
 
                 }
                 break;
             case 40 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:405: RULE_ID
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:405: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 41 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:413: RULE_STRING
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:413: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 42 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:425: RULE_ML_COMMENT
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:425: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 43 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:441: RULE_SL_COMMENT
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:441: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 44 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:457: RULE_WS
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:457: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 45 :
-                // ../org.palladiosimulator.commons.stoex.ui/src-gen/org/palladiosimulator/commons/stoex/ui/contentassist/antlr/internal/InternalStoEx.g:1:465: RULE_ANY_OTHER
+                // ../org.palladiosimulator.commons.stoex/src-gen/org/palladiosimulator/commons/stoex/parser/antlr/internal/InternalStoEx.g:1:465: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1935,39 +1935,39 @@ public class InternalStoExLexer extends Lexer {
             this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "7278:27: ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )";
+            return "2805:27: ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )";
         }
     }
     static final String DFA18_eotS =
-        "\1\uffff\3\52\1\56\1\61\1\50\3\uffff\1\70\1\uffff\1\72\1\52\1\75\1\76\1\77\2\100\6\52\5\uffff\1\52\6\uffff\2\50\2\uffff\1\52\1\uffff\1\127\1\52\16\uffff\2\52\5\uffff\1\100\6\52\5\uffff\1\52\7\uffff\1\142\1\uffff\1\143\4\52\1\150\4\52\2\uffff\3\52\1\160\1\uffff\6\52\1\160\1\uffff\6\52\1\175\4\52\1\u0082\1\uffff\1\52\1\u0085\1\u0086\1\u0087\1\uffff\2\52\3\uffff\1\u008a\1\u008b\2\uffff";
+        "\2\uffff\1\54\1\uffff\3\57\1\63\1\66\1\50\2\uffff\1\72\1\57\1\75\1\76\1\77\2\100\6\57\5\uffff\1\57\6\uffff\2\50\7\uffff\1\57\1\uffff\1\127\1\57\11\uffff\2\57\5\uffff\1\100\6\57\5\uffff\1\57\7\uffff\1\142\1\uffff\1\143\4\57\1\150\4\57\2\uffff\3\57\1\160\1\uffff\6\57\1\160\1\uffff\6\57\1\175\4\57\1\u0082\1\uffff\1\57\1\u0085\1\u0086\1\u0087\1\uffff\2\57\3\uffff\1\u008a\1\u008b\2\uffff";
     static final String DFA18_eofS =
         "\u008c\uffff";
     static final String DFA18_minS =
-        "\1\0\1\116\1\122\1\117\3\75\3\uffff\1\52\1\uffff\1\60\1\156\3\60\2\56\1\141\1\162\1\117\1\156\1\157\1\156\5\uffff\1\162\6\uffff\2\0\2\uffff\1\104\1\uffff\1\60\1\122\16\uffff\1\151\1\157\5\uffff\1\56\1\154\1\165\1\124\1\164\2\165\5\uffff\1\144\7\uffff\1\60\1\uffff\1\60\1\164\1\154\1\163\1\145\1\60\1\120\1\142\1\155\1\145\2\uffff\1\154\1\120\1\145\1\60\1\uffff\1\115\1\154\1\120\1\162\1\145\1\115\1\60\1\uffff\1\106\1\145\1\115\1\145\1\163\1\106\1\60\1\120\1\106\1\144\1\163\1\60\1\uffff\1\104\3\60\1\uffff\2\106\3\uffff\2\60\2\uffff";
+        "\1\0\1\uffff\1\52\1\uffff\1\116\1\122\1\117\3\75\2\uffff\1\60\1\156\3\60\2\56\1\141\1\162\1\117\1\156\1\157\1\156\5\uffff\1\162\6\uffff\2\0\7\uffff\1\104\1\uffff\1\60\1\122\11\uffff\1\151\1\157\5\uffff\1\56\1\154\1\165\1\124\1\164\2\165\5\uffff\1\144\7\uffff\1\60\1\uffff\1\60\1\164\1\154\1\163\1\145\1\60\1\120\1\142\1\155\1\145\2\uffff\1\154\1\120\1\145\1\60\1\uffff\1\115\1\154\1\120\1\162\1\145\1\115\1\60\1\uffff\1\106\1\145\1\115\1\145\1\163\1\106\1\60\1\120\1\106\1\144\1\163\1\60\1\uffff\1\104\3\60\1\uffff\2\106\3\uffff\2\60\2\uffff";
     static final String DFA18_maxS =
-        "\1\uffff\1\116\1\122\1\117\1\75\1\76\1\75\3\uffff\1\57\1\uffff\1\172\1\156\3\172\2\145\1\141\1\162\1\117\1\156\1\157\1\156\5\uffff\1\162\6\uffff\2\uffff\2\uffff\1\104\1\uffff\1\172\1\122\16\uffff\1\151\1\157\5\uffff\1\145\1\154\1\165\1\124\1\164\2\165\5\uffff\1\144\7\uffff\1\172\1\uffff\1\172\1\164\1\154\1\163\1\145\1\172\1\120\1\142\1\155\1\145\2\uffff\1\154\1\120\1\145\1\172\1\uffff\1\115\1\154\1\120\1\162\1\145\1\115\1\172\1\uffff\1\106\1\145\1\115\1\145\1\163\1\106\1\172\1\120\1\106\1\144\1\163\1\172\1\uffff\1\115\3\172\1\uffff\2\106\3\uffff\2\172\2\uffff";
+        "\1\uffff\1\uffff\1\57\1\uffff\1\116\1\122\1\117\1\75\1\76\1\75\2\uffff\1\172\1\156\3\172\2\145\1\141\1\162\1\117\1\156\1\157\1\156\5\uffff\1\162\6\uffff\2\uffff\7\uffff\1\104\1\uffff\1\172\1\122\11\uffff\1\151\1\157\5\uffff\1\145\1\154\1\165\1\124\1\164\2\165\5\uffff\1\144\7\uffff\1\172\1\uffff\1\172\1\164\1\154\1\163\1\145\1\172\1\120\1\142\1\155\1\145\2\uffff\1\154\1\120\1\145\1\172\1\uffff\1\115\1\154\1\120\1\162\1\145\1\115\1\172\1\uffff\1\106\1\145\1\115\1\145\1\163\1\106\1\172\1\120\1\106\1\144\1\163\1\172\1\uffff\1\115\3\172\1\uffff\2\106\3\uffff\2\172\2\uffff";
     static final String DFA18_acceptS =
-        "\7\uffff\1\12\1\13\1\14\1\uffff\1\16\15\uffff\1\35\1\36\1\37\1\40\1\41\1\uffff\1\43\1\44\1\45\1\46\1\47\1\50\2\uffff\1\54\1\55\1\uffff\1\50\2\uffff\1\10\1\4\1\7\1\11\1\5\1\6\1\12\1\13\1\14\1\52\1\53\1\15\1\16\1\17\2\uffff\1\21\1\22\1\23\1\25\1\24\7\uffff\1\35\1\36\1\37\1\40\1\41\1\uffff\1\43\1\44\1\45\1\46\1\47\1\51\1\54\1\uffff\1\2\12\uffff\1\1\1\3\4\uffff\1\27\7\uffff\1\26\14\uffff\1\30\4\uffff\1\34\2\uffff\1\32\1\42\1\20\2\uffff\1\31\1\33";
+        "\1\uffff\1\1\1\uffff\1\3\6\uffff\1\15\1\16\15\uffff\1\35\1\36\1\37\1\40\1\41\1\uffff\1\43\1\44\1\45\1\46\1\47\1\50\2\uffff\1\54\1\55\1\1\1\52\1\53\1\2\1\3\1\uffff\1\50\2\uffff\1\13\1\7\1\12\1\14\1\10\1\11\1\15\1\16\1\17\2\uffff\1\21\1\22\1\23\1\25\1\24\7\uffff\1\35\1\36\1\37\1\40\1\41\1\uffff\1\43\1\44\1\45\1\46\1\47\1\51\1\54\1\uffff\1\5\12\uffff\1\4\1\6\4\uffff\1\27\7\uffff\1\26\14\uffff\1\30\4\uffff\1\34\2\uffff\1\32\1\42\1\20\2\uffff\1\31\1\33";
     static final String DFA18_specialS =
-        "\1\0\44\uffff\1\1\1\2\145\uffff}>";
+        "\1\1\44\uffff\1\0\1\2\145\uffff}>";
     static final String[] DFA18_transitionS = {
-            "\11\50\2\47\2\50\1\47\22\50\1\47\1\50\1\45\2\50\1\13\1\50\1\46\1\32\1\33\1\11\1\7\1\35\1\10\1\41\1\12\1\21\11\22\1\43\1\34\1\5\1\6\1\4\1\42\1\50\1\1\1\16\1\44\1\27\1\30\3\44\1\26\4\44\1\25\1\2\10\44\1\3\2\44\1\37\1\50\1\40\1\31\1\14\1\50\5\44\1\23\6\44\1\20\1\44\1\36\3\44\1\17\1\24\1\15\5\44\uff85\50",
-            "\1\51",
-            "\1\53",
-            "\1\54",
-            "\1\55",
-            "\1\60\1\57",
+            "\11\50\2\47\2\50\1\47\22\50\1\47\1\50\1\45\2\50\1\13\1\50\1\46\1\32\1\33\1\3\1\12\1\35\1\1\1\41\1\2\1\21\11\22\1\43\1\34\1\10\1\11\1\7\1\42\1\50\1\4\1\16\1\44\1\27\1\30\3\44\1\26\4\44\1\25\1\5\10\44\1\6\2\44\1\37\1\50\1\40\1\31\1\14\1\50\5\44\1\23\6\44\1\20\1\44\1\36\3\44\1\17\1\24\1\15\5\44\uff85\50",
+            "",
+            "\1\52\4\uffff\1\53",
+            "",
+            "\1\56",
+            "\1\60",
+            "\1\61",
             "\1\62",
+            "\1\65\1\64",
+            "\1\67",
             "",
             "",
-            "",
-            "\1\66\4\uffff\1\67",
-            "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\73",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\16\52\1\74\13\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\16\57\1\74\13\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\101\26\uffff\1\101\37\uffff\1\101",
             "\1\101\1\uffff\12\102\13\uffff\1\101\37\uffff\1\101",
             "\1\103",
@@ -1992,15 +1992,15 @@ public class InternalStoExLexer extends Lexer {
             "\42\124\1\uffff\uffdd\124",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\126",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\130",
-            "",
-            "",
-            "",
-            "",
-            "",
             "",
             "",
             "",
@@ -2037,14 +2037,14 @@ public class InternalStoExLexer extends Lexer {
             "",
             "",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\144",
             "\1\145",
             "\1\146",
             "\1\147",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\151",
             "\1\152",
             "\1\153",
@@ -2054,7 +2054,7 @@ public class InternalStoExLexer extends Lexer {
             "\1\155",
             "\1\156",
             "\1\157",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "\1\161",
             "\1\162",
@@ -2062,7 +2062,7 @@ public class InternalStoExLexer extends Lexer {
             "\1\164",
             "\1\165",
             "\1\166",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "\1\167",
             "\1\170",
@@ -2070,25 +2070,25 @@ public class InternalStoExLexer extends Lexer {
             "\1\172",
             "\1\173",
             "\1\174",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\176",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "\1\u0084\10\uffff\1\u0083",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "\1\u0088",
             "\1\u0089",
             "",
             "",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             ""
     };
@@ -2130,28 +2130,38 @@ public class InternalStoExLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA18_37 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA18_37>='\u0000' && LA18_37<='\uFFFF')) ) {s = 84;}
+
+                        else s = 40;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA18_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA18_0=='A') ) {s = 1;}
+                        if ( (LA18_0=='-') ) {s = 1;}
 
-                        else if ( (LA18_0=='O') ) {s = 2;}
+                        else if ( (LA18_0=='/') ) {s = 2;}
 
-                        else if ( (LA18_0=='X') ) {s = 3;}
+                        else if ( (LA18_0=='*') ) {s = 3;}
 
-                        else if ( (LA18_0=='>') ) {s = 4;}
+                        else if ( (LA18_0=='A') ) {s = 4;}
 
-                        else if ( (LA18_0=='<') ) {s = 5;}
+                        else if ( (LA18_0=='O') ) {s = 5;}
 
-                        else if ( (LA18_0=='=') ) {s = 6;}
+                        else if ( (LA18_0=='X') ) {s = 6;}
 
-                        else if ( (LA18_0=='+') ) {s = 7;}
+                        else if ( (LA18_0=='>') ) {s = 7;}
 
-                        else if ( (LA18_0=='-') ) {s = 8;}
+                        else if ( (LA18_0=='<') ) {s = 8;}
 
-                        else if ( (LA18_0=='*') ) {s = 9;}
+                        else if ( (LA18_0=='=') ) {s = 9;}
 
-                        else if ( (LA18_0=='/') ) {s = 10;}
+                        else if ( (LA18_0=='+') ) {s = 10;}
 
                         else if ( (LA18_0=='%') ) {s = 11;}
 
@@ -2212,16 +2222,6 @@ public class InternalStoExLexer extends Lexer {
                         else if ( ((LA18_0>='\t' && LA18_0<='\n')||LA18_0=='\r'||LA18_0==' ') ) {s = 39;}
 
                         else if ( ((LA18_0>='\u0000' && LA18_0<='\b')||(LA18_0>='\u000B' && LA18_0<='\f')||(LA18_0>='\u000E' && LA18_0<='\u001F')||LA18_0=='!'||(LA18_0>='#' && LA18_0<='$')||LA18_0=='&'||LA18_0=='@'||LA18_0=='\\'||LA18_0=='`'||(LA18_0>='{' && LA18_0<='\uFFFF')) ) {s = 40;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA18_37 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA18_37>='\u0000' && LA18_37<='\uFFFF')) ) {s = 84;}
-
-                        else s = 40;
 
                         if ( s>=0 ) return s;
                         break;

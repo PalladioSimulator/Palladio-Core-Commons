@@ -25,53 +25,53 @@ public class InternalStoExParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_CONDDELIMITER", "RULE_ELSEDELIMITER", "RULE_POW", "RULE_NOT", "RULE_SQUARE_PAREN_L", "RULE_SQUARE_PAREN_R", "RULE_LPAREN", "RULE_RPAREN", "RULE_COLON", "RULE_DOT", "RULE_DOUBLEPDF", "RULE_INTPMF", "RULE_DOUBLEPMF", "RULE_ENUMPMF", "RULE_BOOLPMF", "RULE_SEMI", "RULE_DOUBLE", "RULE_DECINT", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_ORDERED_DEF", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'AND'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'"
     };
-    public static final int RULE_ID=22;
-    public static final int RULE_CONDDELIMITER=4;
-    public static final int RULE_ANY_OTHER=30;
-    public static final int RULE_DOUBLEPMF=16;
-    public static final int RULE_DOUBLEPDF=14;
-    public static final int RULE_ENUMPMF=17;
-    public static final int EOF=-1;
-    public static final int RULE_NOT=7;
-    public static final int RULE_DOT=13;
-    public static final int RULE_POW=6;
+    public static final int RULE_BOOLEAN_KEYWORDS=23;
     public static final int RULE_LPAREN=10;
+    public static final int RULE_SQUARE_PAREN_L=8;
+    public static final int RULE_ENUMPMF=17;
+    public static final int RULE_SQUARE_PAREN_R=9;
+    public static final int RULE_ID=22;
+    public static final int RULE_DIGIT=26;
+    public static final int RULE_COLON=12;
     public static final int RULE_BOOLPMF=18;
     public static final int RULE_ORDERED_DEF=25;
-    public static final int RULE_ELSEDELIMITER=5;
-    public static final int RULE_SEMI=19;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int RULE_SL_COMMENT=28;
-    public static final int RULE_DOUBLE=20;
     public static final int RULE_ML_COMMENT=27;
-    public static final int T__31=31;
-    public static final int RULE_COLON=12;
+    public static final int RULE_ELSEDELIMITER=5;
+    public static final int RULE_INTPMF=15;
     public static final int RULE_STRING=24;
-    public static final int T__32=32;
+    public static final int RULE_NOT=7;
+    public static final int RULE_DOUBLEPMF=16;
+    public static final int RULE_POW=6;
+    public static final int RULE_SL_COMMENT=28;
+    public static final int T__37=37;
+    public static final int RULE_DOUBLE=20;
+    public static final int T__38=38;
+    public static final int RULE_CONDDELIMITER=4;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
     public static final int RULE_DECINT=21;
-    public static final int RULE_INTPMF=15;
-    public static final int RULE_RPAREN=11;
+    public static final int RULE_DOT=13;
+    public static final int EOF=-1;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_WS=29;
-    public static final int RULE_DIGIT=26;
-    public static final int RULE_BOOLEAN_KEYWORDS=23;
-    public static final int RULE_SQUARE_PAREN_R=9;
-    public static final int RULE_SQUARE_PAREN_L=8;
+    public static final int RULE_DOUBLEPDF=14;
+    public static final int RULE_ANY_OTHER=30;
+    public static final int RULE_RPAREN=11;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int RULE_SEMI=19;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -21168,11 +21168,11 @@ public class InternalStoExParser extends AbstractInternalContentAssistParser {
 
     // Delegated rules
 
-    public final boolean synpred46_InternalStoEx() {
+    public final boolean synpred11_InternalStoEx() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred46_InternalStoEx_fragment(); // can never throw exception
+            synpred11_InternalStoEx_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -21196,11 +21196,11 @@ public class InternalStoExParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred11_InternalStoEx() {
+    public final boolean synpred46_InternalStoEx() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred11_InternalStoEx_fragment(); // can never throw exception
+            synpred46_InternalStoEx_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -21231,13 +21231,13 @@ public class InternalStoExParser extends AbstractInternalContentAssistParser {
     static final String DFA2_eotS =
         "\12\uffff";
     static final String DFA2_eofS =
-        "\5\uffff\1\11\4\uffff";
+        "\5\uffff\1\10\4\uffff";
     static final String DFA2_minS =
         "\1\12\4\uffff\1\4\4\uffff";
     static final String DFA2_maxS =
         "\1\30\4\uffff\1\54\4\uffff";
     static final String DFA2_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\5\1\6";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\6\1\5";
     static final String DFA2_specialS =
         "\12\uffff}>";
     static final String[] DFA2_transitionS = {
@@ -21246,7 +21246,7 @@ public class InternalStoExParser extends AbstractInternalContentAssistParser {
             "",
             "",
             "",
-            "\3\11\3\uffff\1\10\3\11\21\uffff\16\11",
+            "\3\10\3\uffff\1\11\3\10\21\uffff\16\10",
             "",
             "",
             "",

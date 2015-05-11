@@ -4,7 +4,9 @@
 package org.palladiosimulator.commons.stoex.services;
 
 import java.util.List;
+import java.util.Map;
 
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
@@ -17,6 +19,7 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
+import org.eclipse.xtext.resource.impl.BinaryGrammarResourceFactoryImpl;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
 import org.eclipse.xtext.service.GrammarProvider;
 
@@ -2801,6 +2804,14 @@ public class StoExGrammarAccess extends AbstractGrammarElementFinder {
 
     @Inject
     public StoExGrammarAccess(GrammarProvider grammarProvider) {
+        Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+        Map<String, Object> m = reg.getExtensionToFactoryMap();
+
+        // FIX for xtext StoEx: Register xtextbin in the Resource Factory
+        if (!Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().containsKey("xtextbin"))
+            Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("xtextbin",
+                    new BinaryGrammarResourceFactoryImpl());
+
         this.grammar = internalFindGrammar(grammarProvider);
         this.pExpression = new ExpressionElements();
         this.pIfelseExpr = new IfelseExprElements();

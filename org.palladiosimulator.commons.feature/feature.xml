@@ -241,10 +241,6 @@ litigation.
          id="de.uka.ipd.sdq.probfunction.feature"
          version="0.0.0"/>
 
-   <includes
-         id="org.palladiosimulator.commons.stoex.feature"
-         version="0.0.0"/>
-
    <plugin
          id="org.palladiosimulator.commons"
          download-size="0"

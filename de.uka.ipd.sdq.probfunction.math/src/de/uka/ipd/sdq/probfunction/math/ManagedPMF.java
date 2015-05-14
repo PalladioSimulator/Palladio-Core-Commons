@@ -3,12 +3,16 @@ package de.uka.ipd.sdq.probfunction.math;
 import java.util.Iterator;
 import java.util.List;
 
-import org.palladiosimulator.commons.stoex.adapter.StoExParser;
+import org.antlr.runtime.ANTLRStringStream;
+import org.antlr.runtime.CommonTokenStream;
+import org.antlr.runtime.RecognitionException;
 
 import de.uka.ipd.sdq.probfunction.ProbabilityMassFunction;
 import de.uka.ipd.sdq.probfunction.math.exception.StringNotPDFException;
 import de.uka.ipd.sdq.probfunction.print.ProbFunctionPrettyPrint;
 import de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral;
+import de.uka.ipd.sdq.stoex.parser.StochasticExpressionsLexer;
+import de.uka.ipd.sdq.stoex.parser.StochasticExpressionsParser;
 
 /**
  * To be continued...
@@ -75,10 +79,10 @@ public class ManagedPMF {
         IProbabilityMassFunction pmf = getPmfTimeDomain();
         if (pmf.hasOrderedDomain()) {
             Object max = null;
-            for (Iterator<?> iter = pmf.getSamples().iterator(); iter.hasNext();) {
+            for (Iterator iter = pmf.getSamples().iterator(); iter.hasNext();) {
                 ISample sample = (ISample) iter.next();
                 Object obj = sample.getValue();
-                if ((max == null) || (((Comparable<Object>) max).compareTo(obj) < 0)) {
+                if ((max == null) || (((Comparable) max).compareTo(obj) < 0)) {
                     max = obj;
                 }
             }
@@ -110,18 +114,20 @@ public class ManagedPMF {
         return result;
     }
 
-    private static ProbabilityFunctionLiteral parse(String s) {
+    private static ProbabilityFunctionLiteral parse(String s) throws RecognitionException {
         try {
             int iterInt = Integer.parseInt(s);
             s = "IntPMF[(" + iterInt + ";1.0)]";
         } catch (NumberFormatException e) {
         }
 
-        StoExParser parser = new StoExParser(s);
+        StochasticExpressionsLexer lexer = new StochasticExpressionsLexer(new ANTLRStringStream(s));
+        StochasticExpressionsParser parser = new StochasticExpressionsParser(new CommonTokenStream(lexer));
         return (ProbabilityFunctionLiteral) parser.expression();
     }
 
-    public static ManagedPMF createFromString(String pmfAsString) throws StringNotPDFException {
+    @SuppressWarnings("deprecation")
+    public static ManagedPMF createFromString(String pmfAsString) throws RecognitionException, StringNotPDFException {
         ProbabilityFunctionLiteral value = parse(pmfAsString);
         try {
             ProbabilityMassFunction pmf = (ProbabilityMassFunction) value.getFunction_ProbabilityFunctionLiteral();

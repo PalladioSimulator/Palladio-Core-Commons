@@ -15,7 +15,6 @@ Export-Package: de.uka.ipd.sdq.probfunction.math,
  de.uka.ipd.sdq.probfunction.math.util
 Require-Bundle: de.uka.ipd.sdq.probfunction;bundle-version="2.1.0",
  de.uka.ipd.sdq.stoex;bundle-version="2.2.0",
- org.apache.commons.math;bundle-version="2.1.0";visibility:=reexport,
- org.palladiosimulator.commons.stoex.adapter
+ org.apache.commons.math;bundle-version="2.1.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

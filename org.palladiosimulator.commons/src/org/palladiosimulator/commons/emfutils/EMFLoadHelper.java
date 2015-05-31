@@ -1,8 +1,5 @@
 package org.palladiosimulator.commons.emfutils;
 
-import java.io.IOException;
-import java.util.Collections;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -26,8 +23,8 @@ public final class EMFLoadHelper {
      * Loads the EObject specified by the given resource URI. The resource URI has to include the
      * concrete fragment that references the EObject; otherwise an EObject cannot be uniquely
      * identified in a given resource. For example, the String
-     * "platform:/resource/myProject/daufault.usagemodel#_ieXlgKDrEeKjDcfkNgs1Gg" correctly includes
-     * a fragment while "platform:/resource/myProject/daufault.usagemodel" does not. Use the
+     * "platform:/resource/myProject/default.usagemodel#_ieXlgKDrEeKjDcfkNgs1Gg" correctly includes
+     * a fragment while "platform:/resource/myProject/default.usagemodel" does not. Use the
      * <code>getResourceURI(...)</code> method of this class in case you want to get a correct
      * resource URI for a given EObject.
      * 
@@ -35,26 +32,29 @@ public final class EMFLoadHelper {
      *            Resource URI to a given EObject (has to include fragment).
      * @return The referenced EObject.
      */
-    public static EObject loadModel(final String resourceURI) {
+    public static EObject loadAndResolveEObject(final String resourceURI) {
+        return loadAndResolveEObject(new ResourceSetImpl(), resourceURI);
+    }
+
+    public static EObject loadAndResolveEObject(final ResourceSet resourceSet, final String resourceURI) {
         final URI modelUri = URI.createURI(resourceURI);
-        final ResourceSet resourceSet = new ResourceSetImpl();
-        final Resource resource = resourceSet.createResource(modelUri);
-
-        try {
-            resource.load(Collections.EMPTY_MAP);
-        } catch (final IOException e) {
-            // TODO Auto-generated catch block. Use eclipse error log instead?
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
         if (modelUri.fragment() == null) {
             throw new IllegalArgumentException(
                     "The resource URI has to include the concrete fragment that references the EObject;"
                             + "otherwise an EObject cannot be uniquely identified in a given resource");
         }
 
-        return resource.getEObject(modelUri.fragment());
+        final Resource resource = resourceSet.getResource(modelUri.trimFragment(), true);
+        if (resource == null) {
+            throw new IllegalArgumentException("Could not load resource with URI " + resourceURI);
+        }
+
+        final EObject eObject = resource.getEObject(modelUri.fragment());
+        if (eObject == null) {
+            throw new IllegalArgumentException("Could not get eObject with URI " + resourceURI);
+        }
+
+        return eObject;
     }
 
     /**

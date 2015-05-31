@@ -31,14 +31,14 @@ import de.uka.ipd.sdq.stoex.Variable;
 public class VariableImpl extends AtomImpl implements Variable {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached value of the '{@link #getId_Variable() <em>Id Variable</em>}' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getId_Variable()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariableImpl() {
@@ -56,7 +56,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,92 +66,100 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public AbstractNamedReference getId_Variable() {
-        return id_Variable;
+        return this.id_Variable;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public NotificationChain basicSetId_Variable(AbstractNamedReference newId_Variable, NotificationChain msgs) {
-        AbstractNamedReference oldId_Variable = id_Variable;
-        id_Variable = newId_Variable;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+    public NotificationChain basicSetId_Variable(final AbstractNamedReference newId_Variable, NotificationChain msgs) {
+        final AbstractNamedReference oldId_Variable = this.id_Variable;
+        this.id_Variable = newId_Variable;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     StoexPackage.VARIABLE__ID_VARIABLE, oldId_Variable, newId_Variable);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
+            }
         }
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setId_Variable(AbstractNamedReference newId_Variable) {
-        if (newId_Variable != id_Variable) {
+    @Override
+    public void setId_Variable(final AbstractNamedReference newId_Variable) {
+        if (newId_Variable != this.id_Variable) {
             NotificationChain msgs = null;
-            if (id_Variable != null)
-                msgs = ((InternalEObject) id_Variable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            if (this.id_Variable != null) {
+                msgs = ((InternalEObject) this.id_Variable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
                         - StoexPackage.VARIABLE__ID_VARIABLE, null, msgs);
-            if (newId_Variable != null)
+            }
+            if (newId_Variable != null) {
                 msgs = ((InternalEObject) newId_Variable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
                         - StoexPackage.VARIABLE__ID_VARIABLE, null, msgs);
-            msgs = basicSetId_Variable(newId_Variable, msgs);
-            if (msgs != null)
+            }
+            msgs = this.basicSetId_Variable(newId_Variable, msgs);
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.VARIABLE__ID_VARIABLE, newId_Variable,
-                    newId_Variable));
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.VARIABLE__ID_VARIABLE,
+                    newId_Variable, newId_Variable));
+        }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.VARIABLE__ID_VARIABLE:
-            return basicSetId_Variable(null, msgs);
+            return this.basicSetId_Variable(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.VARIABLE__ID_VARIABLE:
-            return getId_Variable();
+            return this.getId_Variable();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.VARIABLE__ID_VARIABLE:
-            setId_Variable((AbstractNamedReference) newValue);
+            this.setId_Variable((AbstractNamedReference) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -159,14 +167,14 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.VARIABLE__ID_VARIABLE:
-            setId_Variable((AbstractNamedReference) null);
+            this.setId_Variable((AbstractNamedReference) null);
             return;
         }
         super.eUnset(featureID);
@@ -174,14 +182,14 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.VARIABLE__ID_VARIABLE:
-            return id_Variable != null;
+            return this.id_Variable != null;
         }
         return super.eIsSet(featureID);
     }

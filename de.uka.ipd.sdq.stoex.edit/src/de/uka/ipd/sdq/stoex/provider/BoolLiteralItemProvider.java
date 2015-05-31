@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.BoolLiteral} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class BoolLiteralItemProvider extends AtomItemProvider {
@@ -39,7 +39,7 @@ public class BoolLiteralItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    public BoolLiteralItemProvider(AdapterFactory adapterFactory) {
+    public BoolLiteralItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -50,13 +50,13 @@ public class BoolLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addValuePropertyDescriptor(object);
+            this.addValuePropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -65,15 +65,13 @@ public class BoolLiteralItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    protected void addValuePropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_BoolLiteral_value_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_BoolLiteral_value_feature",
-                                "_UI_BoolLiteral_type"), StoexPackage.Literals.BOOL_LITERAL__VALUE, true, false, false,
-                        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+    protected void addValuePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_BoolLiteral_value_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_BoolLiteral_value_feature", "_UI_BoolLiteral_type"),
+                StoexPackage.Literals.BOOL_LITERAL__VALUE, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -82,20 +80,20 @@ public class BoolLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/BoolLiteral"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/BoolLiteral"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        BoolLiteral boolLiteral = (BoolLiteral) object;
-        return getString("_UI_BoolLiteral_type") + " " + boolLiteral.isValue();
+    public String getText(final Object object) {
+        final BoolLiteral boolLiteral = (BoolLiteral) object;
+        return this.getString("_UI_BoolLiteral_type") + " " + boolLiteral.isValue();
     }
 
     /**
@@ -106,12 +104,12 @@ public class BoolLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(BoolLiteral.class)) {
         case StoexPackage.BOOL_LITERAL__VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -124,7 +122,7 @@ public class BoolLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

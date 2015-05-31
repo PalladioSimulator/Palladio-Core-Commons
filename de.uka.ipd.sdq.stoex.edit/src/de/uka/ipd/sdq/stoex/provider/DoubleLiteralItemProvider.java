@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.DoubleLiteral} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
@@ -39,7 +39,7 @@ public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
      * 
      * @generated
      */
-    public DoubleLiteralItemProvider(AdapterFactory adapterFactory) {
+    public DoubleLiteralItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -50,13 +50,13 @@ public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addValuePropertyDescriptor(object);
+            this.addValuePropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -65,14 +65,13 @@ public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
      * 
      * @generated
      */
-    protected void addValuePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_DoubleLiteral_value_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_DoubleLiteral_value_feature",
-                        "_UI_DoubleLiteral_type"), StoexPackage.Literals.DOUBLE_LITERAL__VALUE, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+    protected void addValuePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_DoubleLiteral_value_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_DoubleLiteral_value_feature", "_UI_DoubleLiteral_type"),
+                StoexPackage.Literals.DOUBLE_LITERAL__VALUE, true, false, false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -81,20 +80,20 @@ public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/DoubleLiteral"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/DoubleLiteral"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        DoubleLiteral doubleLiteral = (DoubleLiteral) object;
-        return getString("_UI_DoubleLiteral_type") + " " + doubleLiteral.getValue();
+    public String getText(final Object object) {
+        final DoubleLiteral doubleLiteral = (DoubleLiteral) object;
+        return this.getString("_UI_DoubleLiteral_type") + " " + doubleLiteral.getValue();
     }
 
     /**
@@ -105,12 +104,12 @@ public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(DoubleLiteral.class)) {
         case StoexPackage.DOUBLE_LITERAL__VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -123,7 +122,7 @@ public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

@@ -9,6 +9,10 @@ package de.uka.ipd.sdq.units.presentation;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
+import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
+import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 
 /**
  * This is the central singleton for the Units editor plugin. <!-- begin-user-doc --> <!--
@@ -44,7 +48,8 @@ public final class UnitsEditorPlugin extends EMFPlugin {
      * @generated
      */
     public UnitsEditorPlugin() {
-        super(new ResourceLocator[] {});
+        super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, EMFProfileEditPlugin.INSTANCE,
+                EMFProfileApplicationEditPlugin.INSTANCE, MdsdprofilesEditPlugin.INSTANCE, });
     }
 
     /**

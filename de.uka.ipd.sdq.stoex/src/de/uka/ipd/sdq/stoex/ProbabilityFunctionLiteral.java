@@ -28,7 +28,7 @@ import de.uka.ipd.sdq.probfunction.ProbabilityFunction;
 public interface ProbabilityFunctionLiteral extends Atom {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -41,7 +41,7 @@ public interface ProbabilityFunctionLiteral extends Atom {
      * isn't clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Function Probability Function Literal</em>' containment
      *         reference.
      * @see #setFunction_ProbabilityFunctionLiteral(ProbabilityFunction)
@@ -56,7 +56,7 @@ public interface ProbabilityFunctionLiteral extends Atom {
      * {@link de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral#getFunction_ProbabilityFunctionLiteral
      * <em>Function Probability Function Literal</em>}' containment reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Function Probability Function Literal</em>' containment
      *            reference.

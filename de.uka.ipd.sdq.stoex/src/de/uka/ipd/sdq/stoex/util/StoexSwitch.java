@@ -6,9 +6,11 @@
  */
 package de.uka.ipd.sdq.stoex.util;
 
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
 import de.uka.ipd.sdq.stoex.Atom;
@@ -49,27 +51,27 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage
  * @generated
  */
 public class StoexSwitch<T> extends Switch<T> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static StoexPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public StoexSwitch() {
@@ -81,572 +83,925 @@ public class StoexSwitch<T> extends Switch<T> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(EPackage ePackage) {
+    protected boolean isSwitchFor(final EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
     @Override
-    protected T doSwitch(int classifierID, EObject theEObject) {
+    protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
         case StoexPackage.VARIABLE_REFERENCE: {
-            VariableReference variableReference = (VariableReference) theEObject;
-            T result = caseVariableReference(variableReference);
-            if (result == null)
-                result = caseAbstractNamedReference(variableReference);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final VariableReference variableReference = (VariableReference) theEObject;
+            T result = this.caseVariableReference(variableReference);
+            if (result == null) {
+                result = this.caseAbstractNamedReference(variableReference);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.ABSTRACT_NAMED_REFERENCE: {
-            AbstractNamedReference abstractNamedReference = (AbstractNamedReference) theEObject;
-            T result = caseAbstractNamedReference(abstractNamedReference);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final AbstractNamedReference abstractNamedReference = (AbstractNamedReference) theEObject;
+            T result = this.caseAbstractNamedReference(abstractNamedReference);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.NAMESPACE_REFERENCE: {
-            NamespaceReference namespaceReference = (NamespaceReference) theEObject;
-            T result = caseNamespaceReference(namespaceReference);
-            if (result == null)
-                result = caseAbstractNamedReference(namespaceReference);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final NamespaceReference namespaceReference = (NamespaceReference) theEObject;
+            T result = this.caseNamespaceReference(namespaceReference);
+            if (result == null) {
+                result = this.caseAbstractNamedReference(namespaceReference);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.VARIABLE: {
-            Variable variable = (Variable) theEObject;
-            T result = caseVariable(variable);
-            if (result == null)
-                result = caseAtom(variable);
-            if (result == null)
-                result = caseUnary(variable);
-            if (result == null)
-                result = casePower(variable);
-            if (result == null)
-                result = caseProduct(variable);
-            if (result == null)
-                result = caseTerm(variable);
-            if (result == null)
-                result = caseComparison(variable);
-            if (result == null)
-                result = caseBooleanExpression(variable);
-            if (result == null)
-                result = caseIfElse(variable);
-            if (result == null)
-                result = caseExpression(variable);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Variable variable = (Variable) theEObject;
+            T result = this.caseVariable(variable);
+            if (result == null) {
+                result = this.caseAtom(variable);
+            }
+            if (result == null) {
+                result = this.caseUnary(variable);
+            }
+            if (result == null) {
+                result = this.casePower(variable);
+            }
+            if (result == null) {
+                result = this.caseProduct(variable);
+            }
+            if (result == null) {
+                result = this.caseTerm(variable);
+            }
+            if (result == null) {
+                result = this.caseComparison(variable);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(variable);
+            }
+            if (result == null) {
+                result = this.caseIfElse(variable);
+            }
+            if (result == null) {
+                result = this.caseExpression(variable);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(variable);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(variable);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.ATOM: {
-            Atom atom = (Atom) theEObject;
-            T result = caseAtom(atom);
-            if (result == null)
-                result = caseUnary(atom);
-            if (result == null)
-                result = casePower(atom);
-            if (result == null)
-                result = caseProduct(atom);
-            if (result == null)
-                result = caseTerm(atom);
-            if (result == null)
-                result = caseComparison(atom);
-            if (result == null)
-                result = caseBooleanExpression(atom);
-            if (result == null)
-                result = caseIfElse(atom);
-            if (result == null)
-                result = caseExpression(atom);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Atom atom = (Atom) theEObject;
+            T result = this.caseAtom(atom);
+            if (result == null) {
+                result = this.caseUnary(atom);
+            }
+            if (result == null) {
+                result = this.casePower(atom);
+            }
+            if (result == null) {
+                result = this.caseProduct(atom);
+            }
+            if (result == null) {
+                result = this.caseTerm(atom);
+            }
+            if (result == null) {
+                result = this.caseComparison(atom);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(atom);
+            }
+            if (result == null) {
+                result = this.caseIfElse(atom);
+            }
+            if (result == null) {
+                result = this.caseExpression(atom);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(atom);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(atom);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.UNARY: {
-            Unary unary = (Unary) theEObject;
-            T result = caseUnary(unary);
-            if (result == null)
-                result = casePower(unary);
-            if (result == null)
-                result = caseProduct(unary);
-            if (result == null)
-                result = caseTerm(unary);
-            if (result == null)
-                result = caseComparison(unary);
-            if (result == null)
-                result = caseBooleanExpression(unary);
-            if (result == null)
-                result = caseIfElse(unary);
-            if (result == null)
-                result = caseExpression(unary);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Unary unary = (Unary) theEObject;
+            T result = this.caseUnary(unary);
+            if (result == null) {
+                result = this.casePower(unary);
+            }
+            if (result == null) {
+                result = this.caseProduct(unary);
+            }
+            if (result == null) {
+                result = this.caseTerm(unary);
+            }
+            if (result == null) {
+                result = this.caseComparison(unary);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(unary);
+            }
+            if (result == null) {
+                result = this.caseIfElse(unary);
+            }
+            if (result == null) {
+                result = this.caseExpression(unary);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(unary);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(unary);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.POWER: {
-            Power power = (Power) theEObject;
-            T result = casePower(power);
-            if (result == null)
-                result = caseProduct(power);
-            if (result == null)
-                result = caseTerm(power);
-            if (result == null)
-                result = caseComparison(power);
-            if (result == null)
-                result = caseBooleanExpression(power);
-            if (result == null)
-                result = caseIfElse(power);
-            if (result == null)
-                result = caseExpression(power);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Power power = (Power) theEObject;
+            T result = this.casePower(power);
+            if (result == null) {
+                result = this.caseProduct(power);
+            }
+            if (result == null) {
+                result = this.caseTerm(power);
+            }
+            if (result == null) {
+                result = this.caseComparison(power);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(power);
+            }
+            if (result == null) {
+                result = this.caseIfElse(power);
+            }
+            if (result == null) {
+                result = this.caseExpression(power);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(power);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(power);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.PRODUCT: {
-            Product product = (Product) theEObject;
-            T result = caseProduct(product);
-            if (result == null)
-                result = caseTerm(product);
-            if (result == null)
-                result = caseComparison(product);
-            if (result == null)
-                result = caseBooleanExpression(product);
-            if (result == null)
-                result = caseIfElse(product);
-            if (result == null)
-                result = caseExpression(product);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Product product = (Product) theEObject;
+            T result = this.caseProduct(product);
+            if (result == null) {
+                result = this.caseTerm(product);
+            }
+            if (result == null) {
+                result = this.caseComparison(product);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(product);
+            }
+            if (result == null) {
+                result = this.caseIfElse(product);
+            }
+            if (result == null) {
+                result = this.caseExpression(product);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(product);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(product);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.TERM: {
-            Term term = (Term) theEObject;
-            T result = caseTerm(term);
-            if (result == null)
-                result = caseComparison(term);
-            if (result == null)
-                result = caseBooleanExpression(term);
-            if (result == null)
-                result = caseIfElse(term);
-            if (result == null)
-                result = caseExpression(term);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Term term = (Term) theEObject;
+            T result = this.caseTerm(term);
+            if (result == null) {
+                result = this.caseComparison(term);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(term);
+            }
+            if (result == null) {
+                result = this.caseIfElse(term);
+            }
+            if (result == null) {
+                result = this.caseExpression(term);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(term);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(term);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.COMPARISON: {
-            Comparison comparison = (Comparison) theEObject;
-            T result = caseComparison(comparison);
-            if (result == null)
-                result = caseBooleanExpression(comparison);
-            if (result == null)
-                result = caseIfElse(comparison);
-            if (result == null)
-                result = caseExpression(comparison);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Comparison comparison = (Comparison) theEObject;
+            T result = this.caseComparison(comparison);
+            if (result == null) {
+                result = this.caseBooleanExpression(comparison);
+            }
+            if (result == null) {
+                result = this.caseIfElse(comparison);
+            }
+            if (result == null) {
+                result = this.caseExpression(comparison);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(comparison);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(comparison);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.BOOLEAN_EXPRESSION: {
-            BooleanExpression booleanExpression = (BooleanExpression) theEObject;
-            T result = caseBooleanExpression(booleanExpression);
-            if (result == null)
-                result = caseIfElse(booleanExpression);
-            if (result == null)
-                result = caseExpression(booleanExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final BooleanExpression booleanExpression = (BooleanExpression) theEObject;
+            T result = this.caseBooleanExpression(booleanExpression);
+            if (result == null) {
+                result = this.caseIfElse(booleanExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(booleanExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(booleanExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(booleanExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.IF_ELSE: {
-            IfElse ifElse = (IfElse) theEObject;
-            T result = caseIfElse(ifElse);
-            if (result == null)
-                result = caseExpression(ifElse);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final IfElse ifElse = (IfElse) theEObject;
+            T result = this.caseIfElse(ifElse);
+            if (result == null) {
+                result = this.caseExpression(ifElse);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(ifElse);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(ifElse);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.EXPRESSION: {
-            Expression expression = (Expression) theEObject;
-            T result = caseExpression(expression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Expression expression = (Expression) theEObject;
+            T result = this.caseExpression(expression);
+            if (result == null) {
+                result = this.caseStereotypableElement(expression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(expression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.TERM_EXPRESSION: {
-            TermExpression termExpression = (TermExpression) theEObject;
-            T result = caseTermExpression(termExpression);
-            if (result == null)
-                result = caseTerm(termExpression);
-            if (result == null)
-                result = caseComparison(termExpression);
-            if (result == null)
-                result = caseBooleanExpression(termExpression);
-            if (result == null)
-                result = caseIfElse(termExpression);
-            if (result == null)
-                result = caseExpression(termExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final TermExpression termExpression = (TermExpression) theEObject;
+            T result = this.caseTermExpression(termExpression);
+            if (result == null) {
+                result = this.caseTerm(termExpression);
+            }
+            if (result == null) {
+                result = this.caseComparison(termExpression);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(termExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(termExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(termExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(termExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(termExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.PRODUCT_EXPRESSION: {
-            ProductExpression productExpression = (ProductExpression) theEObject;
-            T result = caseProductExpression(productExpression);
-            if (result == null)
-                result = caseProduct(productExpression);
-            if (result == null)
-                result = caseTerm(productExpression);
-            if (result == null)
-                result = caseComparison(productExpression);
-            if (result == null)
-                result = caseBooleanExpression(productExpression);
-            if (result == null)
-                result = caseIfElse(productExpression);
-            if (result == null)
-                result = caseExpression(productExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final ProductExpression productExpression = (ProductExpression) theEObject;
+            T result = this.caseProductExpression(productExpression);
+            if (result == null) {
+                result = this.caseProduct(productExpression);
+            }
+            if (result == null) {
+                result = this.caseTerm(productExpression);
+            }
+            if (result == null) {
+                result = this.caseComparison(productExpression);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(productExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(productExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(productExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(productExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(productExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL: {
-            ProbabilityFunctionLiteral probabilityFunctionLiteral = (ProbabilityFunctionLiteral) theEObject;
-            T result = caseProbabilityFunctionLiteral(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseAtom(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseUnary(probabilityFunctionLiteral);
-            if (result == null)
-                result = casePower(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseProduct(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseTerm(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseComparison(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseBooleanExpression(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseIfElse(probabilityFunctionLiteral);
-            if (result == null)
-                result = caseExpression(probabilityFunctionLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final ProbabilityFunctionLiteral probabilityFunctionLiteral = (ProbabilityFunctionLiteral) theEObject;
+            T result = this.caseProbabilityFunctionLiteral(probabilityFunctionLiteral);
+            if (result == null) {
+                result = this.caseAtom(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(probabilityFunctionLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.PARENTHESIS: {
-            Parenthesis parenthesis = (Parenthesis) theEObject;
-            T result = caseParenthesis(parenthesis);
-            if (result == null)
-                result = caseAtom(parenthesis);
-            if (result == null)
-                result = caseUnary(parenthesis);
-            if (result == null)
-                result = casePower(parenthesis);
-            if (result == null)
-                result = caseProduct(parenthesis);
-            if (result == null)
-                result = caseTerm(parenthesis);
-            if (result == null)
-                result = caseComparison(parenthesis);
-            if (result == null)
-                result = caseBooleanExpression(parenthesis);
-            if (result == null)
-                result = caseIfElse(parenthesis);
-            if (result == null)
-                result = caseExpression(parenthesis);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final Parenthesis parenthesis = (Parenthesis) theEObject;
+            T result = this.caseParenthesis(parenthesis);
+            if (result == null) {
+                result = this.caseAtom(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseUnary(parenthesis);
+            }
+            if (result == null) {
+                result = this.casePower(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseProduct(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseTerm(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseComparison(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseIfElse(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseExpression(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(parenthesis);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(parenthesis);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.NUMERIC_LITERAL: {
-            NumericLiteral numericLiteral = (NumericLiteral) theEObject;
-            T result = caseNumericLiteral(numericLiteral);
-            if (result == null)
-                result = caseUnitCarryingElement(numericLiteral);
-            if (result == null)
-                result = caseAtom(numericLiteral);
-            if (result == null)
-                result = caseUnary(numericLiteral);
-            if (result == null)
-                result = casePower(numericLiteral);
-            if (result == null)
-                result = caseProduct(numericLiteral);
-            if (result == null)
-                result = caseTerm(numericLiteral);
-            if (result == null)
-                result = caseComparison(numericLiteral);
-            if (result == null)
-                result = caseBooleanExpression(numericLiteral);
-            if (result == null)
-                result = caseIfElse(numericLiteral);
-            if (result == null)
-                result = caseExpression(numericLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final NumericLiteral numericLiteral = (NumericLiteral) theEObject;
+            T result = this.caseNumericLiteral(numericLiteral);
+            if (result == null) {
+                result = this.caseUnitCarryingElement(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseAtom(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(numericLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(numericLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(numericLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.INT_LITERAL: {
-            IntLiteral intLiteral = (IntLiteral) theEObject;
-            T result = caseIntLiteral(intLiteral);
-            if (result == null)
-                result = caseNumericLiteral(intLiteral);
-            if (result == null)
-                result = caseUnitCarryingElement(intLiteral);
-            if (result == null)
-                result = caseAtom(intLiteral);
-            if (result == null)
-                result = caseUnary(intLiteral);
-            if (result == null)
-                result = casePower(intLiteral);
-            if (result == null)
-                result = caseProduct(intLiteral);
-            if (result == null)
-                result = caseTerm(intLiteral);
-            if (result == null)
-                result = caseComparison(intLiteral);
-            if (result == null)
-                result = caseBooleanExpression(intLiteral);
-            if (result == null)
-                result = caseIfElse(intLiteral);
-            if (result == null)
-                result = caseExpression(intLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final IntLiteral intLiteral = (IntLiteral) theEObject;
+            T result = this.caseIntLiteral(intLiteral);
+            if (result == null) {
+                result = this.caseNumericLiteral(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnitCarryingElement(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseAtom(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(intLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(intLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(intLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.DOUBLE_LITERAL: {
-            DoubleLiteral doubleLiteral = (DoubleLiteral) theEObject;
-            T result = caseDoubleLiteral(doubleLiteral);
-            if (result == null)
-                result = caseNumericLiteral(doubleLiteral);
-            if (result == null)
-                result = caseUnitCarryingElement(doubleLiteral);
-            if (result == null)
-                result = caseAtom(doubleLiteral);
-            if (result == null)
-                result = caseUnary(doubleLiteral);
-            if (result == null)
-                result = casePower(doubleLiteral);
-            if (result == null)
-                result = caseProduct(doubleLiteral);
-            if (result == null)
-                result = caseTerm(doubleLiteral);
-            if (result == null)
-                result = caseComparison(doubleLiteral);
-            if (result == null)
-                result = caseBooleanExpression(doubleLiteral);
-            if (result == null)
-                result = caseIfElse(doubleLiteral);
-            if (result == null)
-                result = caseExpression(doubleLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final DoubleLiteral doubleLiteral = (DoubleLiteral) theEObject;
+            T result = this.caseDoubleLiteral(doubleLiteral);
+            if (result == null) {
+                result = this.caseNumericLiteral(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnitCarryingElement(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseAtom(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(doubleLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.COMPARE_EXPRESSION: {
-            CompareExpression compareExpression = (CompareExpression) theEObject;
-            T result = caseCompareExpression(compareExpression);
-            if (result == null)
-                result = caseComparison(compareExpression);
-            if (result == null)
-                result = caseBooleanExpression(compareExpression);
-            if (result == null)
-                result = caseIfElse(compareExpression);
-            if (result == null)
-                result = caseExpression(compareExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final CompareExpression compareExpression = (CompareExpression) theEObject;
+            T result = this.caseCompareExpression(compareExpression);
+            if (result == null) {
+                result = this.caseComparison(compareExpression);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(compareExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(compareExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(compareExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(compareExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(compareExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.BOOL_LITERAL: {
-            BoolLiteral boolLiteral = (BoolLiteral) theEObject;
-            T result = caseBoolLiteral(boolLiteral);
-            if (result == null)
-                result = caseAtom(boolLiteral);
-            if (result == null)
-                result = caseUnary(boolLiteral);
-            if (result == null)
-                result = casePower(boolLiteral);
-            if (result == null)
-                result = caseProduct(boolLiteral);
-            if (result == null)
-                result = caseTerm(boolLiteral);
-            if (result == null)
-                result = caseComparison(boolLiteral);
-            if (result == null)
-                result = caseBooleanExpression(boolLiteral);
-            if (result == null)
-                result = caseIfElse(boolLiteral);
-            if (result == null)
-                result = caseExpression(boolLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final BoolLiteral boolLiteral = (BoolLiteral) theEObject;
+            T result = this.caseBoolLiteral(boolLiteral);
+            if (result == null) {
+                result = this.caseAtom(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(boolLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(boolLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(boolLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.STRING_LITERAL: {
-            StringLiteral stringLiteral = (StringLiteral) theEObject;
-            T result = caseStringLiteral(stringLiteral);
-            if (result == null)
-                result = caseAtom(stringLiteral);
-            if (result == null)
-                result = caseUnary(stringLiteral);
-            if (result == null)
-                result = casePower(stringLiteral);
-            if (result == null)
-                result = caseProduct(stringLiteral);
-            if (result == null)
-                result = caseTerm(stringLiteral);
-            if (result == null)
-                result = caseComparison(stringLiteral);
-            if (result == null)
-                result = caseBooleanExpression(stringLiteral);
-            if (result == null)
-                result = caseIfElse(stringLiteral);
-            if (result == null)
-                result = caseExpression(stringLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final StringLiteral stringLiteral = (StringLiteral) theEObject;
+            T result = this.caseStringLiteral(stringLiteral);
+            if (result == null) {
+                result = this.caseAtom(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(stringLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(stringLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(stringLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.POWER_EXPRESSION: {
-            PowerExpression powerExpression = (PowerExpression) theEObject;
-            T result = casePowerExpression(powerExpression);
-            if (result == null)
-                result = casePower(powerExpression);
-            if (result == null)
-                result = caseProduct(powerExpression);
-            if (result == null)
-                result = caseTerm(powerExpression);
-            if (result == null)
-                result = caseComparison(powerExpression);
-            if (result == null)
-                result = caseBooleanExpression(powerExpression);
-            if (result == null)
-                result = caseIfElse(powerExpression);
-            if (result == null)
-                result = caseExpression(powerExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final PowerExpression powerExpression = (PowerExpression) theEObject;
+            T result = this.casePowerExpression(powerExpression);
+            if (result == null) {
+                result = this.casePower(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseProduct(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseTerm(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseComparison(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(powerExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(powerExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.BOOLEAN_OPERATOR_EXPRESSION: {
-            BooleanOperatorExpression booleanOperatorExpression = (BooleanOperatorExpression) theEObject;
-            T result = caseBooleanOperatorExpression(booleanOperatorExpression);
-            if (result == null)
-                result = caseBooleanExpression(booleanOperatorExpression);
-            if (result == null)
-                result = caseIfElse(booleanOperatorExpression);
-            if (result == null)
-                result = caseExpression(booleanOperatorExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final BooleanOperatorExpression booleanOperatorExpression = (BooleanOperatorExpression) theEObject;
+            T result = this.caseBooleanOperatorExpression(booleanOperatorExpression);
+            if (result == null) {
+                result = this.caseBooleanExpression(booleanOperatorExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(booleanOperatorExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(booleanOperatorExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(booleanOperatorExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(booleanOperatorExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.NOT_EXPRESSION: {
-            NotExpression notExpression = (NotExpression) theEObject;
-            T result = caseNotExpression(notExpression);
-            if (result == null)
-                result = caseUnary(notExpression);
-            if (result == null)
-                result = casePower(notExpression);
-            if (result == null)
-                result = caseProduct(notExpression);
-            if (result == null)
-                result = caseTerm(notExpression);
-            if (result == null)
-                result = caseComparison(notExpression);
-            if (result == null)
-                result = caseBooleanExpression(notExpression);
-            if (result == null)
-                result = caseIfElse(notExpression);
-            if (result == null)
-                result = caseExpression(notExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final NotExpression notExpression = (NotExpression) theEObject;
+            T result = this.caseNotExpression(notExpression);
+            if (result == null) {
+                result = this.caseUnary(notExpression);
+            }
+            if (result == null) {
+                result = this.casePower(notExpression);
+            }
+            if (result == null) {
+                result = this.caseProduct(notExpression);
+            }
+            if (result == null) {
+                result = this.caseTerm(notExpression);
+            }
+            if (result == null) {
+                result = this.caseComparison(notExpression);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(notExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(notExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(notExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(notExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(notExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.NEGATIVE_EXPRESSION: {
-            NegativeExpression negativeExpression = (NegativeExpression) theEObject;
-            T result = caseNegativeExpression(negativeExpression);
-            if (result == null)
-                result = caseUnary(negativeExpression);
-            if (result == null)
-                result = casePower(negativeExpression);
-            if (result == null)
-                result = caseProduct(negativeExpression);
-            if (result == null)
-                result = caseTerm(negativeExpression);
-            if (result == null)
-                result = caseComparison(negativeExpression);
-            if (result == null)
-                result = caseBooleanExpression(negativeExpression);
-            if (result == null)
-                result = caseIfElse(negativeExpression);
-            if (result == null)
-                result = caseExpression(negativeExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final NegativeExpression negativeExpression = (NegativeExpression) theEObject;
+            T result = this.caseNegativeExpression(negativeExpression);
+            if (result == null) {
+                result = this.caseUnary(negativeExpression);
+            }
+            if (result == null) {
+                result = this.casePower(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseProduct(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseTerm(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseComparison(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseIfElse(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(negativeExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(negativeExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.FUNCTION_LITERAL: {
-            FunctionLiteral functionLiteral = (FunctionLiteral) theEObject;
-            T result = caseFunctionLiteral(functionLiteral);
-            if (result == null)
-                result = caseAtom(functionLiteral);
-            if (result == null)
-                result = caseUnary(functionLiteral);
-            if (result == null)
-                result = casePower(functionLiteral);
-            if (result == null)
-                result = caseProduct(functionLiteral);
-            if (result == null)
-                result = caseTerm(functionLiteral);
-            if (result == null)
-                result = caseComparison(functionLiteral);
-            if (result == null)
-                result = caseBooleanExpression(functionLiteral);
-            if (result == null)
-                result = caseIfElse(functionLiteral);
-            if (result == null)
-                result = caseExpression(functionLiteral);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final FunctionLiteral functionLiteral = (FunctionLiteral) theEObject;
+            T result = this.caseFunctionLiteral(functionLiteral);
+            if (result == null) {
+                result = this.caseAtom(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseUnary(functionLiteral);
+            }
+            if (result == null) {
+                result = this.casePower(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseProduct(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseTerm(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseComparison(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseBooleanExpression(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseIfElse(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseExpression(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(functionLiteral);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(functionLiteral);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.IF_ELSE_EXPRESSION: {
-            IfElseExpression ifElseExpression = (IfElseExpression) theEObject;
-            T result = caseIfElseExpression(ifElseExpression);
-            if (result == null)
-                result = caseIfElse(ifElseExpression);
-            if (result == null)
-                result = caseExpression(ifElseExpression);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final IfElseExpression ifElseExpression = (IfElseExpression) theEObject;
+            T result = this.caseIfElseExpression(ifElseExpression);
+            if (result == null) {
+                result = this.caseIfElse(ifElseExpression);
+            }
+            if (result == null) {
+                result = this.caseExpression(ifElseExpression);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(ifElseExpression);
+            }
+            if (result == null) {
+                result = this.caseEModelElement(ifElseExpression);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case StoexPackage.RANDOM_VARIABLE: {
-            RandomVariable randomVariable = (RandomVariable) theEObject;
-            T result = caseRandomVariable(randomVariable);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final RandomVariable randomVariable = (RandomVariable) theEObject;
+            T result = this.caseRandomVariable(randomVariable);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         default:
-            return defaultCase(theEObject);
+            return this.defaultCase(theEObject);
         }
     }
 
@@ -654,7 +1009,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Variable Reference</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Variable Reference</em>
@@ -662,7 +1017,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariableReference(VariableReference object) {
+    public T caseVariableReference(final VariableReference object) {
         return null;
     }
 
@@ -670,7 +1025,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Abstract Named Reference</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -678,7 +1033,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseAbstractNamedReference(AbstractNamedReference object) {
+    public T caseAbstractNamedReference(final AbstractNamedReference object) {
         return null;
     }
 
@@ -686,7 +1041,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Namespace Reference</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Namespace Reference</em>
@@ -694,7 +1049,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseNamespaceReference(NamespaceReference object) {
+    public T caseNamespaceReference(final NamespaceReference object) {
         return null;
     }
 
@@ -702,14 +1057,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Variable</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariable(Variable object) {
+    public T caseVariable(final Variable object) {
         return null;
     }
 
@@ -717,14 +1072,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Atom</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Atom</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseAtom(Atom object) {
+    public T caseAtom(final Atom object) {
         return null;
     }
 
@@ -732,14 +1087,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Unary</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Unary</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseUnary(Unary object) {
+    public T caseUnary(final Unary object) {
         return null;
     }
 
@@ -747,14 +1102,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Power</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Power</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePower(Power object) {
+    public T casePower(final Power object) {
         return null;
     }
 
@@ -762,14 +1117,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Product</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Product</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseProduct(Product object) {
+    public T caseProduct(final Product object) {
         return null;
     }
 
@@ -777,14 +1132,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Term</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Term</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseTerm(Term object) {
+    public T caseTerm(final Term object) {
         return null;
     }
 
@@ -792,14 +1147,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Comparison</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Comparison</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseComparison(Comparison object) {
+    public T caseComparison(final Comparison object) {
         return null;
     }
 
@@ -807,7 +1162,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Boolean Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Boolean Expression</em>
@@ -815,7 +1170,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseBooleanExpression(BooleanExpression object) {
+    public T caseBooleanExpression(final BooleanExpression object) {
         return null;
     }
 
@@ -823,14 +1178,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>If Else</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>If Else</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIfElse(IfElse object) {
+    public T caseIfElse(final IfElse object) {
         return null;
     }
 
@@ -838,14 +1193,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Expression</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseExpression(Expression object) {
+    public T caseExpression(final Expression object) {
         return null;
     }
 
@@ -853,14 +1208,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Term Expression</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Term Expression</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseTermExpression(TermExpression object) {
+    public T caseTermExpression(final TermExpression object) {
         return null;
     }
 
@@ -868,14 +1223,45 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Random Variable</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Random Variable</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseRandomVariable(RandomVariable object) {
+    public T caseRandomVariable(final RandomVariable object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>EModel Element</em>'.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>EModel Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseEModelElement(final EModelElement object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Stereotypable Element</em>'. <!-- begin-user-doc --> This implementation returns null;
+     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Stereotypable Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseStereotypableElement(final StereotypableElement object) {
         return null;
     }
 
@@ -883,7 +1269,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Product Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Product Expression</em>
@@ -891,7 +1277,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseProductExpression(ProductExpression object) {
+    public T caseProductExpression(final ProductExpression object) {
         return null;
     }
 
@@ -899,7 +1285,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Probability Function Literal</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -907,7 +1293,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseProbabilityFunctionLiteral(ProbabilityFunctionLiteral object) {
+    public T caseProbabilityFunctionLiteral(final ProbabilityFunctionLiteral object) {
         return null;
     }
 
@@ -915,14 +1301,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Parenthesis</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Parenthesis</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseParenthesis(Parenthesis object) {
+    public T caseParenthesis(final Parenthesis object) {
         return null;
     }
 
@@ -930,14 +1316,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Numeric Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Numeric Literal</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseNumericLiteral(NumericLiteral object) {
+    public T caseNumericLiteral(final NumericLiteral object) {
         return null;
     }
 
@@ -945,14 +1331,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Int Literal</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Int Literal</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIntLiteral(IntLiteral object) {
+    public T caseIntLiteral(final IntLiteral object) {
         return null;
     }
 
@@ -960,14 +1346,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Double Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Double Literal</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDoubleLiteral(DoubleLiteral object) {
+    public T caseDoubleLiteral(final DoubleLiteral object) {
         return null;
     }
 
@@ -975,7 +1361,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Compare Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Compare Expression</em>
@@ -983,7 +1369,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCompareExpression(CompareExpression object) {
+    public T caseCompareExpression(final CompareExpression object) {
         return null;
     }
 
@@ -991,14 +1377,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Bool Literal</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Bool Literal</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseBoolLiteral(BoolLiteral object) {
+    public T caseBoolLiteral(final BoolLiteral object) {
         return null;
     }
 
@@ -1006,14 +1392,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>String Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>String Literal</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseStringLiteral(StringLiteral object) {
+    public T caseStringLiteral(final StringLiteral object) {
         return null;
     }
 
@@ -1021,14 +1407,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Power Expression</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Power Expression</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePowerExpression(PowerExpression object) {
+    public T casePowerExpression(final PowerExpression object) {
         return null;
     }
 
@@ -1036,7 +1422,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Boolean Operator Expression</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -1044,7 +1430,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseBooleanOperatorExpression(BooleanOperatorExpression object) {
+    public T caseBooleanOperatorExpression(final BooleanOperatorExpression object) {
         return null;
     }
 
@@ -1052,14 +1438,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Not Expression</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Not Expression</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseNotExpression(NotExpression object) {
+    public T caseNotExpression(final NotExpression object) {
         return null;
     }
 
@@ -1067,7 +1453,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Negative Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Negative Expression</em>
@@ -1075,7 +1461,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseNegativeExpression(NegativeExpression object) {
+    public T caseNegativeExpression(final NegativeExpression object) {
         return null;
     }
 
@@ -1083,14 +1469,14 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Function Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Function Literal</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseFunctionLiteral(FunctionLiteral object) {
+    public T caseFunctionLiteral(final FunctionLiteral object) {
         return null;
     }
 
@@ -1098,7 +1484,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>If Else Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>If Else Expression</em>
@@ -1106,7 +1492,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIfElseExpression(IfElseExpression object) {
+    public T caseIfElseExpression(final IfElseExpression object) {
         return null;
     }
 
@@ -1114,7 +1500,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Unit Carrying Element</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -1122,7 +1508,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseUnitCarryingElement(UnitCarryingElement object) {
+    public T caseUnitCarryingElement(final UnitCarryingElement object) {
         return null;
     }
 
@@ -1130,7 +1516,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch, but this is the last case anyway. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
@@ -1138,7 +1524,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(EObject object) {
+    public T defaultCase(final EObject object) {
         return null;
     }
 

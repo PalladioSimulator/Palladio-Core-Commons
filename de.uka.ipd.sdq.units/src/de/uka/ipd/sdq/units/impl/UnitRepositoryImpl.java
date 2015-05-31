@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
 
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.UnitRepository;
 import de.uka.ipd.sdq.units.UnitsPackage;
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Unit Repository</b></em>'.
@@ -32,17 +32,17 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  *
  * @generated
  */
-public class UnitRepositoryImpl extends EStereotypableObjectImpl implements UnitRepository {
+public class UnitRepositoryImpl extends StereotypableElementImpl implements UnitRepository {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getUnits()
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitRepositoryImpl() {
@@ -60,7 +60,7 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -70,56 +70,59 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EList<BaseUnit> getUnits() {
-        if (units == null) {
-            units = new EObjectContainmentEList<BaseUnit>(BaseUnit.class, this, UnitsPackage.UNIT_REPOSITORY__UNITS);
+        if (this.units == null) {
+            this.units = new EObjectContainmentEList<BaseUnit>(BaseUnit.class, this,
+                    UnitsPackage.UNIT_REPOSITORY__UNITS);
         }
-        return units;
+        return this.units;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case UnitsPackage.UNIT_REPOSITORY__UNITS:
-            return ((InternalEList<?>) getUnits()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getUnits()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case UnitsPackage.UNIT_REPOSITORY__UNITS:
-            return getUnits();
+            return this.getUnits();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case UnitsPackage.UNIT_REPOSITORY__UNITS:
-            getUnits().clear();
-            getUnits().addAll((Collection<? extends BaseUnit>) newValue);
+            this.getUnits().clear();
+            this.getUnits().addAll((Collection<? extends BaseUnit>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -127,14 +130,14 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_REPOSITORY__UNITS:
-            getUnits().clear();
+            this.getUnits().clear();
             return;
         }
         super.eUnset(featureID);
@@ -142,14 +145,14 @@ public class UnitRepositoryImpl extends EStereotypableObjectImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_REPOSITORY__UNITS:
-            return units != null && !units.isEmpty();
+            return this.units != null && !this.units.isEmpty();
         }
         return super.eIsSet(featureID);
     }

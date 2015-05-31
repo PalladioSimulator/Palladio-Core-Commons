@@ -20,14 +20,12 @@ import org.eclipse.emf.common.notify.NotificationChain;
 public class BoolSampleImpl extends SampleImpl<Boolean> implements BoolSample {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected BoolSampleImpl() {
@@ -36,7 +34,6 @@ public class BoolSampleImpl extends SampleImpl<Boolean> implements BoolSample {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

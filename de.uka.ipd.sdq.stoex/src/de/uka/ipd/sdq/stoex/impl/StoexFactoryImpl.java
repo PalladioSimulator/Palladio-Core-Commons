@@ -41,29 +41,30 @@ import de.uka.ipd.sdq.stoex.VariableReference;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static StoexFactory init() {
         try {
-            StoexFactory theStoexFactory = (StoexFactory) EPackage.Registry.INSTANCE.getEFactory(StoexPackage.eNS_URI);
+            final StoexFactory theStoexFactory = (StoexFactory) EPackage.Registry.INSTANCE
+                    .getEFactory(StoexPackage.eNS_URI);
             if (theStoexFactory != null) {
                 return theStoexFactory;
             }
-        } catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new StoexFactoryImpl();
@@ -71,7 +72,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public StoexFactoryImpl() {
@@ -80,50 +81,50 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
         case StoexPackage.VARIABLE_REFERENCE:
-            return (EObject) createVariableReference();
+            return this.createVariableReference();
         case StoexPackage.NAMESPACE_REFERENCE:
-            return (EObject) createNamespaceReference();
+            return this.createNamespaceReference();
         case StoexPackage.VARIABLE:
-            return (EObject) createVariable();
+            return this.createVariable();
         case StoexPackage.TERM_EXPRESSION:
-            return (EObject) createTermExpression();
+            return this.createTermExpression();
         case StoexPackage.PRODUCT_EXPRESSION:
-            return (EObject) createProductExpression();
+            return this.createProductExpression();
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL:
-            return (EObject) createProbabilityFunctionLiteral();
+            return this.createProbabilityFunctionLiteral();
         case StoexPackage.PARENTHESIS:
-            return (EObject) createParenthesis();
+            return this.createParenthesis();
         case StoexPackage.INT_LITERAL:
-            return (EObject) createIntLiteral();
+            return this.createIntLiteral();
         case StoexPackage.DOUBLE_LITERAL:
-            return (EObject) createDoubleLiteral();
+            return this.createDoubleLiteral();
         case StoexPackage.COMPARE_EXPRESSION:
-            return (EObject) createCompareExpression();
+            return this.createCompareExpression();
         case StoexPackage.BOOL_LITERAL:
-            return (EObject) createBoolLiteral();
+            return this.createBoolLiteral();
         case StoexPackage.STRING_LITERAL:
-            return (EObject) createStringLiteral();
+            return this.createStringLiteral();
         case StoexPackage.POWER_EXPRESSION:
-            return (EObject) createPowerExpression();
+            return this.createPowerExpression();
         case StoexPackage.BOOLEAN_OPERATOR_EXPRESSION:
-            return (EObject) createBooleanOperatorExpression();
+            return this.createBooleanOperatorExpression();
         case StoexPackage.NOT_EXPRESSION:
-            return (EObject) createNotExpression();
+            return this.createNotExpression();
         case StoexPackage.NEGATIVE_EXPRESSION:
-            return (EObject) createNegativeExpression();
+            return this.createNegativeExpression();
         case StoexPackage.FUNCTION_LITERAL:
-            return (EObject) createFunctionLiteral();
+            return this.createFunctionLiteral();
         case StoexPackage.IF_ELSE_EXPRESSION:
-            return (EObject) createIfElseExpression();
+            return this.createIfElseExpression();
         case StoexPackage.RANDOM_VARIABLE:
-            return (EObject) createRandomVariable();
+            return this.createRandomVariable();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -131,20 +132,20 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object createFromString(EDataType eDataType, String initialValue) {
+    public Object createFromString(final EDataType eDataType, final String initialValue) {
         switch (eDataType.getClassifierID()) {
         case StoexPackage.TERM_OPERATIONS:
-            return createTermOperationsFromString(eDataType, initialValue);
+            return this.createTermOperationsFromString(eDataType, initialValue);
         case StoexPackage.PRODUCT_OPERATIONS:
-            return createProductOperationsFromString(eDataType, initialValue);
+            return this.createProductOperationsFromString(eDataType, initialValue);
         case StoexPackage.COMPARE_OPERATIONS:
-            return createCompareOperationsFromString(eDataType, initialValue);
+            return this.createCompareOperationsFromString(eDataType, initialValue);
         case StoexPackage.BOOLEAN_OPERATIONS:
-            return createBooleanOperationsFromString(eDataType, initialValue);
+            return this.createBooleanOperationsFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -152,20 +153,20 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String convertToString(EDataType eDataType, Object instanceValue) {
+    public String convertToString(final EDataType eDataType, final Object instanceValue) {
         switch (eDataType.getClassifierID()) {
         case StoexPackage.TERM_OPERATIONS:
-            return convertTermOperationsToString(eDataType, instanceValue);
+            return this.convertTermOperationsToString(eDataType, instanceValue);
         case StoexPackage.PRODUCT_OPERATIONS:
-            return convertProductOperationsToString(eDataType, instanceValue);
+            return this.convertProductOperationsToString(eDataType, instanceValue);
         case StoexPackage.COMPARE_OPERATIONS:
-            return convertCompareOperationsToString(eDataType, instanceValue);
+            return this.convertCompareOperationsToString(eDataType, instanceValue);
         case StoexPackage.BOOLEAN_OPERATIONS:
-            return convertBooleanOperationsToString(eDataType, instanceValue);
+            return this.convertBooleanOperationsToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -173,294 +174,318 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public VariableReference createVariableReference() {
-        VariableReferenceImpl variableReference = new VariableReferenceImpl();
+        final VariableReferenceImpl variableReference = new VariableReferenceImpl();
         return variableReference;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public NamespaceReference createNamespaceReference() {
-        NamespaceReferenceImpl namespaceReference = new NamespaceReferenceImpl();
+        final NamespaceReferenceImpl namespaceReference = new NamespaceReferenceImpl();
         return namespaceReference;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public Variable createVariable() {
-        VariableImpl variable = new VariableImpl();
+        final VariableImpl variable = new VariableImpl();
         return variable;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public TermExpression createTermExpression() {
-        TermExpressionImpl termExpression = new TermExpressionImpl();
+        final TermExpressionImpl termExpression = new TermExpressionImpl();
         return termExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public RandomVariable createRandomVariable() {
-        RandomVariableImpl randomVariable = new RandomVariableImpl();
+        final RandomVariableImpl randomVariable = new RandomVariableImpl();
         return randomVariable;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ProductExpression createProductExpression() {
-        ProductExpressionImpl productExpression = new ProductExpressionImpl();
+        final ProductExpressionImpl productExpression = new ProductExpressionImpl();
         return productExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ProbabilityFunctionLiteral createProbabilityFunctionLiteral() {
-        ProbabilityFunctionLiteralImpl probabilityFunctionLiteral = new ProbabilityFunctionLiteralImpl();
+        final ProbabilityFunctionLiteralImpl probabilityFunctionLiteral = new ProbabilityFunctionLiteralImpl();
         return probabilityFunctionLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public Parenthesis createParenthesis() {
-        ParenthesisImpl parenthesis = new ParenthesisImpl();
+        final ParenthesisImpl parenthesis = new ParenthesisImpl();
         return parenthesis;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public IntLiteral createIntLiteral() {
-        IntLiteralImpl intLiteral = new IntLiteralImpl();
+        final IntLiteralImpl intLiteral = new IntLiteralImpl();
         return intLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public DoubleLiteral createDoubleLiteral() {
-        DoubleLiteralImpl doubleLiteral = new DoubleLiteralImpl();
+        final DoubleLiteralImpl doubleLiteral = new DoubleLiteralImpl();
         return doubleLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public CompareExpression createCompareExpression() {
-        CompareExpressionImpl compareExpression = new CompareExpressionImpl();
+        final CompareExpressionImpl compareExpression = new CompareExpressionImpl();
         return compareExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public BoolLiteral createBoolLiteral() {
-        BoolLiteralImpl boolLiteral = new BoolLiteralImpl();
+        final BoolLiteralImpl boolLiteral = new BoolLiteralImpl();
         return boolLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public StringLiteral createStringLiteral() {
-        StringLiteralImpl stringLiteral = new StringLiteralImpl();
+        final StringLiteralImpl stringLiteral = new StringLiteralImpl();
         return stringLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public PowerExpression createPowerExpression() {
-        PowerExpressionImpl powerExpression = new PowerExpressionImpl();
+        final PowerExpressionImpl powerExpression = new PowerExpressionImpl();
         return powerExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public BooleanOperatorExpression createBooleanOperatorExpression() {
-        BooleanOperatorExpressionImpl booleanOperatorExpression = new BooleanOperatorExpressionImpl();
+        final BooleanOperatorExpressionImpl booleanOperatorExpression = new BooleanOperatorExpressionImpl();
         return booleanOperatorExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public NotExpression createNotExpression() {
-        NotExpressionImpl notExpression = new NotExpressionImpl();
+        final NotExpressionImpl notExpression = new NotExpressionImpl();
         return notExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public NegativeExpression createNegativeExpression() {
-        NegativeExpressionImpl negativeExpression = new NegativeExpressionImpl();
+        final NegativeExpressionImpl negativeExpression = new NegativeExpressionImpl();
         return negativeExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public FunctionLiteral createFunctionLiteral() {
-        FunctionLiteralImpl functionLiteral = new FunctionLiteralImpl();
+        final FunctionLiteralImpl functionLiteral = new FunctionLiteralImpl();
         return functionLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public IfElseExpression createIfElseExpression() {
-        IfElseExpressionImpl ifElseExpression = new IfElseExpressionImpl();
+        final IfElseExpressionImpl ifElseExpression = new IfElseExpressionImpl();
         return ifElseExpression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public TermOperations createTermOperationsFromString(EDataType eDataType, String initialValue) {
-        TermOperations result = TermOperations.get(initialValue);
-        if (result == null)
+    public TermOperations createTermOperationsFromString(final EDataType eDataType, final String initialValue) {
+        final TermOperations result = TermOperations.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public String convertTermOperationsToString(EDataType eDataType, Object instanceValue) {
+    public String convertTermOperationsToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public ProductOperations createProductOperationsFromString(EDataType eDataType, String initialValue) {
-        ProductOperations result = ProductOperations.get(initialValue);
-        if (result == null)
+    public ProductOperations createProductOperationsFromString(final EDataType eDataType, final String initialValue) {
+        final ProductOperations result = ProductOperations.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public String convertProductOperationsToString(EDataType eDataType, Object instanceValue) {
+    public String convertProductOperationsToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public CompareOperations createCompareOperationsFromString(EDataType eDataType, String initialValue) {
-        CompareOperations result = CompareOperations.get(initialValue);
-        if (result == null)
+    public CompareOperations createCompareOperationsFromString(final EDataType eDataType, final String initialValue) {
+        final CompareOperations result = CompareOperations.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public String convertCompareOperationsToString(EDataType eDataType, Object instanceValue) {
+    public String convertCompareOperationsToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public BooleanOperations createBooleanOperationsFromString(EDataType eDataType, String initialValue) {
-        BooleanOperations result = BooleanOperations.get(initialValue);
-        if (result == null)
+    public BooleanOperations createBooleanOperationsFromString(final EDataType eDataType, final String initialValue) {
+        final BooleanOperations result = BooleanOperations.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public String convertBooleanOperationsToString(EDataType eDataType, Object instanceValue) {
+    public String convertBooleanOperationsToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public StoexPackage getStoexPackage() {
-        return (StoexPackage) getEPackage();
+        return (StoexPackage) this.getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

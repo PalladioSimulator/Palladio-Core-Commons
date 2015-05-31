@@ -31,14 +31,14 @@ import de.uka.ipd.sdq.stoex.Unary;
 public class NotExpressionImpl extends UnaryImpl implements NotExpression {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached value of the '{@link #getInner() <em>Inner</em>}' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getInner()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class NotExpressionImpl extends UnaryImpl implements NotExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected NotExpressionImpl() {
@@ -56,7 +56,7 @@ public class NotExpressionImpl extends UnaryImpl implements NotExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,92 +66,100 @@ public class NotExpressionImpl extends UnaryImpl implements NotExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public Unary getInner() {
-        return inner;
+        return this.inner;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public NotificationChain basicSetInner(Unary newInner, NotificationChain msgs) {
-        Unary oldInner = inner;
-        inner = newInner;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+    public NotificationChain basicSetInner(final Unary newInner, NotificationChain msgs) {
+        final Unary oldInner = this.inner;
+        this.inner = newInner;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     StoexPackage.NOT_EXPRESSION__INNER, oldInner, newInner);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
+            }
         }
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setInner(Unary newInner) {
-        if (newInner != inner) {
+    @Override
+    public void setInner(final Unary newInner) {
+        if (newInner != this.inner) {
             NotificationChain msgs = null;
-            if (inner != null)
-                msgs = ((InternalEObject) inner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            if (this.inner != null) {
+                msgs = ((InternalEObject) this.inner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
                         - StoexPackage.NOT_EXPRESSION__INNER, null, msgs);
-            if (newInner != null)
+            }
+            if (newInner != null) {
                 msgs = ((InternalEObject) newInner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
                         - StoexPackage.NOT_EXPRESSION__INNER, null, msgs);
-            msgs = basicSetInner(newInner, msgs);
-            if (msgs != null)
+            }
+            msgs = this.basicSetInner(newInner, msgs);
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.NOT_EXPRESSION__INNER, newInner,
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.NOT_EXPRESSION__INNER, newInner,
                     newInner));
+        }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.NOT_EXPRESSION__INNER:
-            return basicSetInner(null, msgs);
+            return this.basicSetInner(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.NOT_EXPRESSION__INNER:
-            return getInner();
+            return this.getInner();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.NOT_EXPRESSION__INNER:
-            setInner((Unary) newValue);
+            this.setInner((Unary) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -159,14 +167,14 @@ public class NotExpressionImpl extends UnaryImpl implements NotExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.NOT_EXPRESSION__INNER:
-            setInner((Unary) null);
+            this.setInner((Unary) null);
             return;
         }
         super.eUnset(featureID);
@@ -174,14 +182,14 @@ public class NotExpressionImpl extends UnaryImpl implements NotExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.NOT_EXPRESSION__INNER:
-            return inner != null;
+            return this.inner != null;
         }
         return super.eIsSet(featureID);
     }

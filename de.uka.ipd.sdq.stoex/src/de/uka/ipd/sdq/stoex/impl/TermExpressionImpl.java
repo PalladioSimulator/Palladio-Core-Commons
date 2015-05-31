@@ -35,7 +35,7 @@ import de.uka.ipd.sdq.stoex.TermOperations;
 public class TermExpressionImpl extends TermImpl implements TermExpression {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -43,7 +43,7 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
     /**
      * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getLeft()
      * @generated
      * @ordered
@@ -53,7 +53,7 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
     /**
      * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getRight()
      * @generated
      * @ordered
@@ -63,7 +63,7 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
     /**
      * The default value of the '{@link #getOperation() <em>Operation</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getOperation()
      * @generated
      * @ordered
@@ -73,7 +73,7 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
     /**
      * The cached value of the '{@link #getOperation() <em>Operation</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getOperation()
      * @generated
      * @ordered
@@ -82,7 +82,7 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TermExpressionImpl() {
@@ -91,7 +91,7 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -101,175 +101,194 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Term getLeft() {
-        return left;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetLeft(Term newLeft, NotificationChain msgs) {
-        Term oldLeft = left;
-        left = newLeft;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.TERM_EXPRESSION__LEFT, oldLeft, newLeft);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setLeft(Term newLeft) {
-        if (newLeft != left) {
-            NotificationChain msgs = null;
-            if (left != null)
-                msgs = ((InternalEObject) left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.TERM_EXPRESSION__LEFT, null, msgs);
-            if (newLeft != null)
-                msgs = ((InternalEObject) newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.TERM_EXPRESSION__LEFT, null, msgs);
-            msgs = basicSetLeft(newLeft, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.TERM_EXPRESSION__LEFT, newLeft, newLeft));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Product getRight() {
-        return right;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetRight(Product newRight, NotificationChain msgs) {
-        Product oldRight = right;
-        right = newRight;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.TERM_EXPRESSION__RIGHT, oldRight, newRight);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setRight(Product newRight) {
-        if (newRight != right) {
-            NotificationChain msgs = null;
-            if (right != null)
-                msgs = ((InternalEObject) right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.TERM_EXPRESSION__RIGHT, null, msgs);
-            if (newRight != null)
-                msgs = ((InternalEObject) newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.TERM_EXPRESSION__RIGHT, null, msgs);
-            msgs = basicSetRight(newRight, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.TERM_EXPRESSION__RIGHT, newRight,
-                    newRight));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public TermOperations getOperation() {
-        return operation;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setOperation(TermOperations newOperation) {
-        TermOperations oldOperation = operation;
-        operation = newOperation == null ? OPERATION_EDEFAULT : newOperation;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.TERM_EXPRESSION__OPERATION,
-                    oldOperation, operation));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public Term getLeft() {
+        return this.left;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetLeft(final Term newLeft, NotificationChain msgs) {
+        final Term oldLeft = this.left;
+        this.left = newLeft;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.TERM_EXPRESSION__LEFT, oldLeft, newLeft);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setLeft(final Term newLeft) {
+        if (newLeft != this.left) {
+            NotificationChain msgs = null;
+            if (this.left != null) {
+                msgs = ((InternalEObject) this.left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.TERM_EXPRESSION__LEFT, null, msgs);
+            }
+            if (newLeft != null) {
+                msgs = ((InternalEObject) newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.TERM_EXPRESSION__LEFT, null, msgs);
+            }
+            msgs = this.basicSetLeft(newLeft, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.TERM_EXPRESSION__LEFT, newLeft,
+                    newLeft));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Product getRight() {
+        return this.right;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetRight(final Product newRight, NotificationChain msgs) {
+        final Product oldRight = this.right;
+        this.right = newRight;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.TERM_EXPRESSION__RIGHT, oldRight, newRight);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setRight(final Product newRight) {
+        if (newRight != this.right) {
+            NotificationChain msgs = null;
+            if (this.right != null) {
+                msgs = ((InternalEObject) this.right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.TERM_EXPRESSION__RIGHT, null, msgs);
+            }
+            if (newRight != null) {
+                msgs = ((InternalEObject) newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.TERM_EXPRESSION__RIGHT, null, msgs);
+            }
+            msgs = this.basicSetRight(newRight, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.TERM_EXPRESSION__RIGHT, newRight,
+                    newRight));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public TermOperations getOperation() {
+        return this.operation;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setOperation(final TermOperations newOperation) {
+        final TermOperations oldOperation = this.operation;
+        this.operation = newOperation == null ? OPERATION_EDEFAULT : newOperation;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.TERM_EXPRESSION__OPERATION,
+                    oldOperation, this.operation));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.TERM_EXPRESSION__LEFT:
-            return basicSetLeft(null, msgs);
+            return this.basicSetLeft(null, msgs);
         case StoexPackage.TERM_EXPRESSION__RIGHT:
-            return basicSetRight(null, msgs);
+            return this.basicSetRight(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.TERM_EXPRESSION__LEFT:
-            return getLeft();
+            return this.getLeft();
         case StoexPackage.TERM_EXPRESSION__RIGHT:
-            return getRight();
+            return this.getRight();
         case StoexPackage.TERM_EXPRESSION__OPERATION:
-            return getOperation();
+            return this.getOperation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.TERM_EXPRESSION__LEFT:
-            setLeft((Term) newValue);
+            this.setLeft((Term) newValue);
             return;
         case StoexPackage.TERM_EXPRESSION__RIGHT:
-            setRight((Product) newValue);
+            this.setRight((Product) newValue);
             return;
         case StoexPackage.TERM_EXPRESSION__OPERATION:
-            setOperation((TermOperations) newValue);
+            this.setOperation((TermOperations) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -277,20 +296,20 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.TERM_EXPRESSION__LEFT:
-            setLeft((Term) null);
+            this.setLeft((Term) null);
             return;
         case StoexPackage.TERM_EXPRESSION__RIGHT:
-            setRight((Product) null);
+            this.setRight((Product) null);
             return;
         case StoexPackage.TERM_EXPRESSION__OPERATION:
-            setOperation(OPERATION_EDEFAULT);
+            this.setOperation(OPERATION_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -298,35 +317,36 @@ public class TermExpressionImpl extends TermImpl implements TermExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.TERM_EXPRESSION__LEFT:
-            return left != null;
+            return this.left != null;
         case StoexPackage.TERM_EXPRESSION__RIGHT:
-            return right != null;
+            return this.right != null;
         case StoexPackage.TERM_EXPRESSION__OPERATION:
-            return operation != OPERATION_EDEFAULT;
+            return this.operation != OPERATION_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (operation: ");
-        result.append(operation);
+        result.append(this.operation);
         result.append(')');
         return result.toString();
     }

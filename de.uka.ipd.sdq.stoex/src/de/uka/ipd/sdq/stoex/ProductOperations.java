@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Product Operations</b></em>', and utility methods for working with them. <!-- end-user-doc
  * -->
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getProductOperations()
  * @model
  * @generated
@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum ProductOperations implements Enumerator {
     /**
      * The '<em><b>MULT</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #MULT_VALUE
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public enum ProductOperations implements Enumerator {
 
     /**
      * The '<em><b>DIV</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #DIV_VALUE
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public enum ProductOperations implements Enumerator {
 
     /**
      * The '<em><b>MOD</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #MOD_VALUE
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public enum ProductOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -63,7 +63,7 @@ public enum ProductOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #MULT
      * @model
      * @generated
@@ -78,7 +78,7 @@ public enum ProductOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #DIV
      * @model
      * @generated
@@ -93,7 +93,7 @@ public enum ProductOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #MOD
      * @model
      * @generated
@@ -104,17 +104,15 @@ public enum ProductOperations implements Enumerator {
     /**
      * An array of all the '<em><b>Product Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private static final ProductOperations[] VALUES_ARRAY = new ProductOperations[] {
-            MULT, DIV, MOD,
-    };
+    private static final ProductOperations[] VALUES_ARRAY = new ProductOperations[] { MULT, DIV, MOD, };
 
     /**
      * A public read-only list of all the '<em><b>Product Operations</b></em>' enumerators. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final List<ProductOperations> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -122,12 +120,11 @@ public enum ProductOperations implements Enumerator {
     /**
      * Returns the '<em><b>Product Operations</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static ProductOperations get(String literal) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            ProductOperations result = VALUES_ARRAY[i];
+    public static ProductOperations get(final String literal) {
+        for (final ProductOperations result : VALUES_ARRAY) {
             if (result.toString().equals(literal)) {
                 return result;
             }
@@ -138,12 +135,11 @@ public enum ProductOperations implements Enumerator {
     /**
      * Returns the '<em><b>Product Operations</b></em>' literal with the specified name. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static ProductOperations getByName(String name) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            ProductOperations result = VALUES_ARRAY[i];
+    public static ProductOperations getByName(final String name) {
+        for (final ProductOperations result : VALUES_ARRAY) {
             if (result.getName().equals(name)) {
                 return result;
             }
@@ -154,10 +150,10 @@ public enum ProductOperations implements Enumerator {
     /**
      * Returns the '<em><b>Product Operations</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static ProductOperations get(int value) {
+    public static ProductOperations get(final int value) {
         switch (value) {
         case MULT_VALUE:
             return MULT;
@@ -171,31 +167,31 @@ public enum ProductOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private ProductOperations(int value, String name, String literal) {
+    private ProductOperations(final int value, final String name, final String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
@@ -203,40 +199,43 @@ public enum ProductOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getLiteral() {
-        return literal;
+        return this.literal;
     }
 
     /**
      * Returns the literal value of the enumerator, which is its string representation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        return literal;
+        return this.literal;
     }
 
 } // ProductOperations

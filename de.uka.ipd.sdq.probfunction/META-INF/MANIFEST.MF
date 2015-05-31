@@ -13,5 +13,7 @@ Export-Package: de.uka.ipd.sdq.probfunction,
  de.uka.ipd.sdq.probfunction.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.modelversioning.emfprofile;visibility:=reexport,
+ org.palladiosimulator.mdsdprofiles;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport
 Bundle-ActivationPolicy: lazy

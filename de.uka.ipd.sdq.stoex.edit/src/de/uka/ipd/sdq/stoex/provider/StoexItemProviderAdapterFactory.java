@@ -36,7 +36,7 @@ import de.uka.ipd.sdq.stoex.util.StoexAdapterFactory;
  * @generated
  */
 public class StoexItemProviderAdapterFactory extends StoexAdapterFactory implements ComposeableAdapterFactory,
-        IChangeNotifier, IDisposable {
+IChangeNotifier, IDisposable {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -47,7 +47,7 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ComposedAdapterFactory parentAdapterFactory;
@@ -55,7 +55,7 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IChangeNotifier changeNotifier = new ChangeNotifier();
@@ -74,11 +74,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * @generated
      */
     public StoexItemProviderAdapterFactory() {
-        supportedTypes.add(IEditingDomainItemProvider.class);
-        supportedTypes.add(IStructuredItemContentProvider.class);
-        supportedTypes.add(ITreeItemContentProvider.class);
-        supportedTypes.add(IItemLabelProvider.class);
-        supportedTypes.add(IItemPropertySource.class);
+        this.supportedTypes.add(IEditingDomainItemProvider.class);
+        this.supportedTypes.add(IStructuredItemContentProvider.class);
+        this.supportedTypes.add(ITreeItemContentProvider.class);
+        this.supportedTypes.add(IItemLabelProvider.class);
+        this.supportedTypes.add(IItemPropertySource.class);
     }
 
     /**
@@ -93,16 +93,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.VariableReference}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createVariableReferenceAdapter() {
-        if (variableReferenceItemProvider == null) {
-            variableReferenceItemProvider = new VariableReferenceItemProvider(this);
+        if (this.variableReferenceItemProvider == null) {
+            this.variableReferenceItemProvider = new VariableReferenceItemProvider(this);
         }
 
-        return variableReferenceItemProvider;
+        return this.variableReferenceItemProvider;
     }
 
     /**
@@ -117,16 +117,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.NamespaceReference}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createNamespaceReferenceAdapter() {
-        if (namespaceReferenceItemProvider == null) {
-            namespaceReferenceItemProvider = new NamespaceReferenceItemProvider(this);
+        if (this.namespaceReferenceItemProvider == null) {
+            this.namespaceReferenceItemProvider = new NamespaceReferenceItemProvider(this);
         }
 
-        return namespaceReferenceItemProvider;
+        return this.namespaceReferenceItemProvider;
     }
 
     /**
@@ -145,11 +145,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createVariableAdapter() {
-        if (variableItemProvider == null) {
-            variableItemProvider = new VariableItemProvider(this);
+        if (this.variableItemProvider == null) {
+            this.variableItemProvider = new VariableItemProvider(this);
         }
 
-        return variableItemProvider;
+        return this.variableItemProvider;
     }
 
     /**
@@ -163,16 +163,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.TermExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createTermExpressionAdapter() {
-        if (termExpressionItemProvider == null) {
-            termExpressionItemProvider = new TermExpressionItemProvider(this);
+        if (this.termExpressionItemProvider == null) {
+            this.termExpressionItemProvider = new TermExpressionItemProvider(this);
         }
 
-        return termExpressionItemProvider;
+        return this.termExpressionItemProvider;
     }
 
     /**
@@ -186,16 +186,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.RandomVariable}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createRandomVariableAdapter() {
-        if (randomVariableItemProvider == null) {
-            randomVariableItemProvider = new RandomVariableItemProvider(this);
+        if (this.randomVariableItemProvider == null) {
+            this.randomVariableItemProvider = new RandomVariableItemProvider(this);
         }
 
-        return randomVariableItemProvider;
+        return this.randomVariableItemProvider;
     }
 
     /**
@@ -210,16 +210,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.ProductExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createProductExpressionAdapter() {
-        if (productExpressionItemProvider == null) {
-            productExpressionItemProvider = new ProductExpressionItemProvider(this);
+        if (this.productExpressionItemProvider == null) {
+            this.productExpressionItemProvider = new ProductExpressionItemProvider(this);
         }
 
-        return productExpressionItemProvider;
+        return this.productExpressionItemProvider;
     }
 
     /**
@@ -234,16 +234,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createProbabilityFunctionLiteralAdapter() {
-        if (probabilityFunctionLiteralItemProvider == null) {
-            probabilityFunctionLiteralItemProvider = new ProbabilityFunctionLiteralItemProvider(this);
+        if (this.probabilityFunctionLiteralItemProvider == null) {
+            this.probabilityFunctionLiteralItemProvider = new ProbabilityFunctionLiteralItemProvider(this);
         }
 
-        return probabilityFunctionLiteralItemProvider;
+        return this.probabilityFunctionLiteralItemProvider;
     }
 
     /**
@@ -262,11 +262,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createParenthesisAdapter() {
-        if (parenthesisItemProvider == null) {
-            parenthesisItemProvider = new ParenthesisItemProvider(this);
+        if (this.parenthesisItemProvider == null) {
+            this.parenthesisItemProvider = new ParenthesisItemProvider(this);
         }
 
-        return parenthesisItemProvider;
+        return this.parenthesisItemProvider;
     }
 
     /**
@@ -285,11 +285,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createIntLiteralAdapter() {
-        if (intLiteralItemProvider == null) {
-            intLiteralItemProvider = new IntLiteralItemProvider(this);
+        if (this.intLiteralItemProvider == null) {
+            this.intLiteralItemProvider = new IntLiteralItemProvider(this);
         }
 
-        return intLiteralItemProvider;
+        return this.intLiteralItemProvider;
     }
 
     /**
@@ -308,11 +308,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createDoubleLiteralAdapter() {
-        if (doubleLiteralItemProvider == null) {
-            doubleLiteralItemProvider = new DoubleLiteralItemProvider(this);
+        if (this.doubleLiteralItemProvider == null) {
+            this.doubleLiteralItemProvider = new DoubleLiteralItemProvider(this);
         }
 
-        return doubleLiteralItemProvider;
+        return this.doubleLiteralItemProvider;
     }
 
     /**
@@ -327,16 +327,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.CompareExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createCompareExpressionAdapter() {
-        if (compareExpressionItemProvider == null) {
-            compareExpressionItemProvider = new CompareExpressionItemProvider(this);
+        if (this.compareExpressionItemProvider == null) {
+            this.compareExpressionItemProvider = new CompareExpressionItemProvider(this);
         }
 
-        return compareExpressionItemProvider;
+        return this.compareExpressionItemProvider;
     }
 
     /**
@@ -355,11 +355,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createBoolLiteralAdapter() {
-        if (boolLiteralItemProvider == null) {
-            boolLiteralItemProvider = new BoolLiteralItemProvider(this);
+        if (this.boolLiteralItemProvider == null) {
+            this.boolLiteralItemProvider = new BoolLiteralItemProvider(this);
         }
 
-        return boolLiteralItemProvider;
+        return this.boolLiteralItemProvider;
     }
 
     /**
@@ -378,11 +378,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createStringLiteralAdapter() {
-        if (stringLiteralItemProvider == null) {
-            stringLiteralItemProvider = new StringLiteralItemProvider(this);
+        if (this.stringLiteralItemProvider == null) {
+            this.stringLiteralItemProvider = new StringLiteralItemProvider(this);
         }
 
-        return stringLiteralItemProvider;
+        return this.stringLiteralItemProvider;
     }
 
     /**
@@ -396,16 +396,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.PowerExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createPowerExpressionAdapter() {
-        if (powerExpressionItemProvider == null) {
-            powerExpressionItemProvider = new PowerExpressionItemProvider(this);
+        if (this.powerExpressionItemProvider == null) {
+            this.powerExpressionItemProvider = new PowerExpressionItemProvider(this);
         }
 
-        return powerExpressionItemProvider;
+        return this.powerExpressionItemProvider;
     }
 
     /**
@@ -420,16 +420,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.BooleanOperatorExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createBooleanOperatorExpressionAdapter() {
-        if (booleanOperatorExpressionItemProvider == null) {
-            booleanOperatorExpressionItemProvider = new BooleanOperatorExpressionItemProvider(this);
+        if (this.booleanOperatorExpressionItemProvider == null) {
+            this.booleanOperatorExpressionItemProvider = new BooleanOperatorExpressionItemProvider(this);
         }
 
-        return booleanOperatorExpressionItemProvider;
+        return this.booleanOperatorExpressionItemProvider;
     }
 
     /**
@@ -448,11 +448,11 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      */
     @Override
     public Adapter createNotExpressionAdapter() {
-        if (notExpressionItemProvider == null) {
-            notExpressionItemProvider = new NotExpressionItemProvider(this);
+        if (this.notExpressionItemProvider == null) {
+            this.notExpressionItemProvider = new NotExpressionItemProvider(this);
         }
 
-        return notExpressionItemProvider;
+        return this.notExpressionItemProvider;
     }
 
     /**
@@ -467,16 +467,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.NegativeExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createNegativeExpressionAdapter() {
-        if (negativeExpressionItemProvider == null) {
-            negativeExpressionItemProvider = new NegativeExpressionItemProvider(this);
+        if (this.negativeExpressionItemProvider == null) {
+            this.negativeExpressionItemProvider = new NegativeExpressionItemProvider(this);
         }
 
-        return negativeExpressionItemProvider;
+        return this.negativeExpressionItemProvider;
     }
 
     /**
@@ -490,16 +490,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.FunctionLiteral}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createFunctionLiteralAdapter() {
-        if (functionLiteralItemProvider == null) {
-            functionLiteralItemProvider = new FunctionLiteralItemProvider(this);
+        if (this.functionLiteralItemProvider == null) {
+            this.functionLiteralItemProvider = new FunctionLiteralItemProvider(this);
         }
 
-        return functionLiteralItemProvider;
+        return this.functionLiteralItemProvider;
     }
 
     /**
@@ -514,16 +514,16 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.stoex.IfElseExpression}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createIfElseExpressionAdapter() {
-        if (ifElseExpressionItemProvider == null) {
-            ifElseExpressionItemProvider = new IfElseExpressionItemProvider(this);
+        if (this.ifElseExpressionItemProvider == null) {
+            this.ifElseExpressionItemProvider = new IfElseExpressionItemProvider(this);
         }
 
-        return ifElseExpressionItemProvider;
+        return this.ifElseExpressionItemProvider;
     }
 
     /**
@@ -532,8 +532,9 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * 
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
-        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+        return this.parentAdapterFactory == null ? this : this.parentAdapterFactory.getRootAdapterFactory();
     }
 
     /**
@@ -542,7 +543,8 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * 
      * @generated
      */
-    public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    @Override
+    public void setParentAdapterFactory(final ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
 
@@ -552,18 +554,18 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object type) {
-        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    public boolean isFactoryForType(final Object type) {
+        return this.supportedTypes.contains(type) || super.isFactoryForType(type);
     }
 
     /**
      * This implementation substitutes the factory itself as the key for the adapter. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Adapter adapt(Notifier notifier, Object type) {
+    public Adapter adapt(final Notifier notifier, final Object type) {
         return super.adapt(notifier, this);
     }
 
@@ -573,9 +575,9 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * @generated
      */
     @Override
-    public Object adapt(Object object, Object type) {
-        if (isFactoryForType(type)) {
-            Object adapter = super.adapt(object, type);
+    public Object adapt(final Object object, final Object type) {
+        if (this.isFactoryForType(type)) {
+            final Object adapter = super.adapt(object, type);
             if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
@@ -589,8 +591,9 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * 
      * @generated
      */
-    public void addListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.addListener(notifyChangedListener);
+    @Override
+    public void addListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.addListener(notifyChangedListener);
     }
 
     /**
@@ -598,21 +601,23 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * 
      * @generated
      */
-    public void removeListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.removeListener(notifyChangedListener);
+    @Override
+    public void removeListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.removeListener(notifyChangedListener);
     }
 
     /**
      * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void fireNotifyChanged(Notification notification) {
-        changeNotifier.fireNotifyChanged(notification);
+    @Override
+    public void fireNotifyChanged(final Notification notification) {
+        this.changeNotifier.fireNotifyChanged(notification);
 
-        if (parentAdapterFactory != null) {
-            parentAdapterFactory.fireNotifyChanged(notification);
+        if (this.parentAdapterFactory != null) {
+            this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
 
@@ -622,45 +627,65 @@ public class StoexItemProviderAdapterFactory extends StoexAdapterFactory impleme
      * 
      * @generated
      */
+    @Override
     public void dispose() {
-        if (variableReferenceItemProvider != null)
-            variableReferenceItemProvider.dispose();
-        if (namespaceReferenceItemProvider != null)
-            namespaceReferenceItemProvider.dispose();
-        if (variableItemProvider != null)
-            variableItemProvider.dispose();
-        if (termExpressionItemProvider != null)
-            termExpressionItemProvider.dispose();
-        if (productExpressionItemProvider != null)
-            productExpressionItemProvider.dispose();
-        if (probabilityFunctionLiteralItemProvider != null)
-            probabilityFunctionLiteralItemProvider.dispose();
-        if (parenthesisItemProvider != null)
-            parenthesisItemProvider.dispose();
-        if (intLiteralItemProvider != null)
-            intLiteralItemProvider.dispose();
-        if (doubleLiteralItemProvider != null)
-            doubleLiteralItemProvider.dispose();
-        if (compareExpressionItemProvider != null)
-            compareExpressionItemProvider.dispose();
-        if (boolLiteralItemProvider != null)
-            boolLiteralItemProvider.dispose();
-        if (stringLiteralItemProvider != null)
-            stringLiteralItemProvider.dispose();
-        if (powerExpressionItemProvider != null)
-            powerExpressionItemProvider.dispose();
-        if (booleanOperatorExpressionItemProvider != null)
-            booleanOperatorExpressionItemProvider.dispose();
-        if (notExpressionItemProvider != null)
-            notExpressionItemProvider.dispose();
-        if (negativeExpressionItemProvider != null)
-            negativeExpressionItemProvider.dispose();
-        if (functionLiteralItemProvider != null)
-            functionLiteralItemProvider.dispose();
-        if (ifElseExpressionItemProvider != null)
-            ifElseExpressionItemProvider.dispose();
-        if (randomVariableItemProvider != null)
-            randomVariableItemProvider.dispose();
+        if (this.variableReferenceItemProvider != null) {
+            this.variableReferenceItemProvider.dispose();
+        }
+        if (this.namespaceReferenceItemProvider != null) {
+            this.namespaceReferenceItemProvider.dispose();
+        }
+        if (this.variableItemProvider != null) {
+            this.variableItemProvider.dispose();
+        }
+        if (this.termExpressionItemProvider != null) {
+            this.termExpressionItemProvider.dispose();
+        }
+        if (this.productExpressionItemProvider != null) {
+            this.productExpressionItemProvider.dispose();
+        }
+        if (this.probabilityFunctionLiteralItemProvider != null) {
+            this.probabilityFunctionLiteralItemProvider.dispose();
+        }
+        if (this.parenthesisItemProvider != null) {
+            this.parenthesisItemProvider.dispose();
+        }
+        if (this.intLiteralItemProvider != null) {
+            this.intLiteralItemProvider.dispose();
+        }
+        if (this.doubleLiteralItemProvider != null) {
+            this.doubleLiteralItemProvider.dispose();
+        }
+        if (this.compareExpressionItemProvider != null) {
+            this.compareExpressionItemProvider.dispose();
+        }
+        if (this.boolLiteralItemProvider != null) {
+            this.boolLiteralItemProvider.dispose();
+        }
+        if (this.stringLiteralItemProvider != null) {
+            this.stringLiteralItemProvider.dispose();
+        }
+        if (this.powerExpressionItemProvider != null) {
+            this.powerExpressionItemProvider.dispose();
+        }
+        if (this.booleanOperatorExpressionItemProvider != null) {
+            this.booleanOperatorExpressionItemProvider.dispose();
+        }
+        if (this.notExpressionItemProvider != null) {
+            this.notExpressionItemProvider.dispose();
+        }
+        if (this.negativeExpressionItemProvider != null) {
+            this.negativeExpressionItemProvider.dispose();
+        }
+        if (this.functionLiteralItemProvider != null) {
+            this.functionLiteralItemProvider.dispose();
+        }
+        if (this.ifElseExpressionItemProvider != null) {
+            this.ifElseExpressionItemProvider.dispose();
+        }
+        if (this.randomVariableItemProvider != null) {
+            this.randomVariableItemProvider.dispose();
+        }
     }
 
 }

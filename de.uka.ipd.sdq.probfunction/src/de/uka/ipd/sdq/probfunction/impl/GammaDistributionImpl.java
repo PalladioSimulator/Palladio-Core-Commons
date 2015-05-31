@@ -18,8 +18,8 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl#getAlpha <em>Alpha</em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl#getTheta <em>Theta</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl#getAlpha <em>Alpha</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl#getTheta <em>Theta</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,15 +28,14 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDistribution {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The default value of the '{@link #getAlpha() <em>Alpha</em>}' attribute. <!-- begin-user-doc
+     * The default value of the '{@link #getAlpha() <em>Alpha</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getAlpha()
      * @generated
      * @ordered
@@ -44,9 +43,9 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
     protected static final double ALPHA_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getAlpha() <em>Alpha</em>}' attribute. <!-- begin-user-doc
+     * The cached value of the '{@link #getAlpha() <em>Alpha</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getAlpha()
      * @generated
      * @ordered
@@ -54,9 +53,9 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
     protected double alpha = ALPHA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getTheta() <em>Theta</em>}' attribute. <!-- begin-user-doc
+     * The default value of the '{@link #getTheta() <em>Theta</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getTheta()
      * @generated
      * @ordered
@@ -64,9 +63,9 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
     protected static final double THETA_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getTheta() <em>Theta</em>}' attribute. <!-- begin-user-doc
+     * The cached value of the '{@link #getTheta() <em>Theta</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getTheta()
      * @generated
      * @ordered
@@ -75,7 +74,6 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GammaDistributionImpl() {
@@ -84,7 +82,6 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -94,7 +91,6 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getAlpha() {
@@ -103,20 +99,17 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setAlpha(double newAlpha) {
         double oldAlpha = alpha;
         alpha = newAlpha;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA,
-                    oldAlpha, alpha));
+            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA, oldAlpha, alpha));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getTheta() {
@@ -125,94 +118,86 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setTheta(double newTheta) {
         double oldTheta = theta;
         theta = newTheta;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA,
-                    oldTheta, theta));
+            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA, oldTheta, theta));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
-            return getAlpha();
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
-            return getTheta();
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
+                return getAlpha();
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
+                return getTheta();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
-            setAlpha((Double) newValue);
-            return;
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
-            setTheta((Double) newValue);
-            return;
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
+                setAlpha((Double)newValue);
+                return;
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
+                setTheta((Double)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
-            setAlpha(ALPHA_EDEFAULT);
-            return;
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
-            setTheta(THETA_EDEFAULT);
-            return;
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
+                setAlpha(ALPHA_EDEFAULT);
+                return;
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
+                setTheta(THETA_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
-            return alpha != ALPHA_EDEFAULT;
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
-            return theta != THETA_EDEFAULT;
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
+                return alpha != ALPHA_EDEFAULT;
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
+                return theta != THETA_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (alpha: ");

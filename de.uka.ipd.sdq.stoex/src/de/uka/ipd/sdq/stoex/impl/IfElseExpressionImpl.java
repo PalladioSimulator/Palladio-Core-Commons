@@ -36,7 +36,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -44,7 +44,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
     /**
      * The cached value of the '{@link #getIfExpression() <em>If Expression</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getIfExpression()
      * @generated
      * @ordered
@@ -54,7 +54,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
     /**
      * The cached value of the '{@link #getElseExpression() <em>Else Expression</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getElseExpression()
      * @generated
      * @ordered
@@ -64,7 +64,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
     /**
      * The cached value of the '{@link #getConditionExpression() <em>Condition Expression</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getConditionExpression()
      * @generated
      * @ordered
@@ -73,7 +73,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IfElseExpressionImpl() {
@@ -82,7 +82,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,209 +92,231 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public BooleanExpression getIfExpression() {
-        return ifExpression;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetIfExpression(BooleanExpression newIfExpression, NotificationChain msgs) {
-        BooleanExpression oldIfExpression = ifExpression;
-        ifExpression = newIfExpression;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION, oldIfExpression, newIfExpression);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setIfExpression(BooleanExpression newIfExpression) {
-        if (newIfExpression != ifExpression) {
-            NotificationChain msgs = null;
-            if (ifExpression != null)
-                msgs = ((InternalEObject) ifExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION, null, msgs);
-            if (newIfExpression != null)
-                msgs = ((InternalEObject) newIfExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION, null, msgs);
-            msgs = basicSetIfExpression(newIfExpression, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION,
-                    newIfExpression, newIfExpression));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public BooleanExpression getElseExpression() {
-        return elseExpression;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetElseExpression(BooleanExpression newElseExpression, NotificationChain msgs) {
-        BooleanExpression oldElseExpression = elseExpression;
-        elseExpression = newElseExpression;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, oldElseExpression, newElseExpression);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setElseExpression(BooleanExpression newElseExpression) {
-        if (newElseExpression != elseExpression) {
-            NotificationChain msgs = null;
-            if (elseExpression != null)
-                msgs = ((InternalEObject) elseExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, null, msgs);
-            if (newElseExpression != null)
-                msgs = ((InternalEObject) newElseExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, null, msgs);
-            msgs = basicSetElseExpression(newElseExpression, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION,
-                    newElseExpression, newElseExpression));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public BooleanExpression getConditionExpression() {
-        return conditionExpression;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetConditionExpression(BooleanExpression newConditionExpression,
-            NotificationChain msgs) {
-        BooleanExpression oldConditionExpression = conditionExpression;
-        conditionExpression = newConditionExpression;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, oldConditionExpression,
-                    newConditionExpression);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setConditionExpression(BooleanExpression newConditionExpression) {
-        if (newConditionExpression != conditionExpression) {
-            NotificationChain msgs = null;
-            if (conditionExpression != null)
-                msgs = ((InternalEObject) conditionExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, null, msgs);
-            if (newConditionExpression != null)
-                msgs = ((InternalEObject) newConditionExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, null, msgs);
-            msgs = basicSetConditionExpression(newConditionExpression, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, newConditionExpression,
-                    newConditionExpression));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public BooleanExpression getIfExpression() {
+        return this.ifExpression;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetIfExpression(final BooleanExpression newIfExpression, NotificationChain msgs) {
+        final BooleanExpression oldIfExpression = this.ifExpression;
+        this.ifExpression = newIfExpression;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION, oldIfExpression, newIfExpression);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setIfExpression(final BooleanExpression newIfExpression) {
+        if (newIfExpression != this.ifExpression) {
+            NotificationChain msgs = null;
+            if (this.ifExpression != null) {
+                msgs = ((InternalEObject) this.ifExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION, null, msgs);
+            }
+            if (newIfExpression != null) {
+                msgs = ((InternalEObject) newIfExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION, null, msgs);
+            }
+            msgs = this.basicSetIfExpression(newIfExpression, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION,
+                    newIfExpression, newIfExpression));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public BooleanExpression getElseExpression() {
+        return this.elseExpression;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetElseExpression(final BooleanExpression newElseExpression, NotificationChain msgs) {
+        final BooleanExpression oldElseExpression = this.elseExpression;
+        this.elseExpression = newElseExpression;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, oldElseExpression, newElseExpression);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setElseExpression(final BooleanExpression newElseExpression) {
+        if (newElseExpression != this.elseExpression) {
+            NotificationChain msgs = null;
+            if (this.elseExpression != null) {
+                msgs = ((InternalEObject) this.elseExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, null, msgs);
+            }
+            if (newElseExpression != null) {
+                msgs = ((InternalEObject) newElseExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, null, msgs);
+            }
+            msgs = this.basicSetElseExpression(newElseExpression, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION, newElseExpression, newElseExpression));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public BooleanExpression getConditionExpression() {
+        return this.conditionExpression;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetConditionExpression(final BooleanExpression newConditionExpression,
+            NotificationChain msgs) {
+        final BooleanExpression oldConditionExpression = this.conditionExpression;
+        this.conditionExpression = newConditionExpression;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, oldConditionExpression,
+                    newConditionExpression);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setConditionExpression(final BooleanExpression newConditionExpression) {
+        if (newConditionExpression != this.conditionExpression) {
+            NotificationChain msgs = null;
+            if (this.conditionExpression != null) {
+                msgs = ((InternalEObject) this.conditionExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, null, msgs);
+            }
+            if (newConditionExpression != null) {
+                msgs = ((InternalEObject) newConditionExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, null, msgs);
+            }
+            msgs = this.basicSetConditionExpression(newConditionExpression, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION, newConditionExpression,
+                    newConditionExpression));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION:
-            return basicSetIfExpression(null, msgs);
+            return this.basicSetIfExpression(null, msgs);
         case StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION:
-            return basicSetElseExpression(null, msgs);
+            return this.basicSetElseExpression(null, msgs);
         case StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION:
-            return basicSetConditionExpression(null, msgs);
+            return this.basicSetConditionExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION:
-            return getIfExpression();
+            return this.getIfExpression();
         case StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION:
-            return getElseExpression();
+            return this.getElseExpression();
         case StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION:
-            return getConditionExpression();
+            return this.getConditionExpression();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION:
-            setIfExpression((BooleanExpression) newValue);
+            this.setIfExpression((BooleanExpression) newValue);
             return;
         case StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION:
-            setElseExpression((BooleanExpression) newValue);
+            this.setElseExpression((BooleanExpression) newValue);
             return;
         case StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION:
-            setConditionExpression((BooleanExpression) newValue);
+            this.setConditionExpression((BooleanExpression) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -302,20 +324,20 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION:
-            setIfExpression((BooleanExpression) null);
+            this.setIfExpression((BooleanExpression) null);
             return;
         case StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION:
-            setElseExpression((BooleanExpression) null);
+            this.setElseExpression((BooleanExpression) null);
             return;
         case StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION:
-            setConditionExpression((BooleanExpression) null);
+            this.setConditionExpression((BooleanExpression) null);
             return;
         }
         super.eUnset(featureID);
@@ -323,18 +345,18 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.IF_ELSE_EXPRESSION__IF_EXPRESSION:
-            return ifExpression != null;
+            return this.ifExpression != null;
         case StoexPackage.IF_ELSE_EXPRESSION__ELSE_EXPRESSION:
-            return elseExpression != null;
+            return this.elseExpression != null;
         case StoexPackage.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION:
-            return conditionExpression != null;
+            return this.conditionExpression != null;
         }
         return super.eIsSet(featureID);
     }

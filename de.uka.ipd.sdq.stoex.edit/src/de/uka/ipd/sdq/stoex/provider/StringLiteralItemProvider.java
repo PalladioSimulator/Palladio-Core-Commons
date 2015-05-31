@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.stoex.StringLiteral;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.StringLiteral} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class StringLiteralItemProvider extends AtomItemProvider {
@@ -39,7 +39,7 @@ public class StringLiteralItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    public StringLiteralItemProvider(AdapterFactory adapterFactory) {
+    public StringLiteralItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -50,13 +50,13 @@ public class StringLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addValuePropertyDescriptor(object);
+            this.addValuePropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -65,14 +65,13 @@ public class StringLiteralItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    protected void addValuePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_StringLiteral_value_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_StringLiteral_value_feature",
-                        "_UI_StringLiteral_type"), StoexPackage.Literals.STRING_LITERAL__VALUE, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    protected void addValuePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_StringLiteral_value_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_StringLiteral_value_feature", "_UI_StringLiteral_type"),
+                StoexPackage.Literals.STRING_LITERAL__VALUE, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -81,21 +80,21 @@ public class StringLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/StringLiteral"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/StringLiteral"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((StringLiteral) object).getValue();
-        return label == null || label.length() == 0 ? getString("_UI_StringLiteral_type")
-                : getString("_UI_StringLiteral_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((StringLiteral) object).getValue();
+        return label == null || label.length() == 0 ? this.getString("_UI_StringLiteral_type") : this
+                .getString("_UI_StringLiteral_type") + " " + label;
     }
 
     /**
@@ -106,12 +105,12 @@ public class StringLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(StringLiteral.class)) {
         case StoexPackage.STRING_LITERAL__VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -124,7 +123,7 @@ public class StringLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

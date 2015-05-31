@@ -20,9 +20,8 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getValue <em>Value</em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getProbability <em>Probability
- * </em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getProbability <em>Probability</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,15 +30,14 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSample {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The default value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
+     * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getValue()
      * @generated
      * @ordered
@@ -47,9 +45,9 @@ public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSampl
     protected static final double VALUE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
+     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getValue()
      * @generated
      * @ordered
@@ -78,7 +76,6 @@ public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSampl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ContinuousSampleImpl() {
@@ -87,7 +84,6 @@ public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSampl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -97,7 +93,6 @@ public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSampl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getValue() {
@@ -106,20 +101,17 @@ public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSampl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setValue(double newValue) {
         double oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE,
-                    oldValue, value));
+            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE, oldValue, value));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getProbability() {
@@ -128,94 +120,86 @@ public class ContinuousSampleImpl extends EObjectImpl implements ContinuousSampl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setProbability(double newProbability) {
         double oldProbability = probability;
         probability = newProbability;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY,
-                    oldProbability, probability));
+            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY, oldProbability, probability));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
-            return getValue();
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
-            return getProbability();
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
+                return getValue();
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
+                return getProbability();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
-            setValue((Double) newValue);
-            return;
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
-            setProbability((Double) newValue);
-            return;
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
+                setValue((Double)newValue);
+                return;
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
+                setProbability((Double)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
-            setValue(VALUE_EDEFAULT);
-            return;
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
-            setProbability(PROBABILITY_EDEFAULT);
-            return;
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
+                setValue(VALUE_EDEFAULT);
+                return;
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
+                setProbability(PROBABILITY_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
-            return value != VALUE_EDEFAULT;
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
-            return probability != PROBABILITY_EDEFAULT;
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
+                return value != VALUE_EDEFAULT;
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
+                return probability != PROBABILITY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (value: ");

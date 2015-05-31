@@ -26,7 +26,7 @@ package de.uka.ipd.sdq.stoex;
 public interface TermExpression extends Term {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +39,7 @@ public interface TermExpression extends Term {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Left</em>' containment reference.
      * @see #setLeft(Term)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getTermExpression_Left()
@@ -51,7 +51,7 @@ public interface TermExpression extends Term {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.TermExpression#getLeft <em>Left</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Left</em>' containment reference.
      * @see #getLeft()
@@ -67,7 +67,7 @@ public interface TermExpression extends Term {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Right</em>' containment reference.
      * @see #setRight(Product)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getTermExpression_Right()
@@ -79,7 +79,7 @@ public interface TermExpression extends Term {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.TermExpression#getRight <em>Right</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Right</em>' containment reference.
      * @see #getRight()
@@ -95,7 +95,7 @@ public interface TermExpression extends Term {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Operation</em>' attribute.
      * @see de.uka.ipd.sdq.stoex.TermOperations
      * @see #setOperation(TermOperations)
@@ -108,7 +108,7 @@ public interface TermExpression extends Term {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.TermExpression#getOperation
      * <em>Operation</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Operation</em>' attribute.
      * @see de.uka.ipd.sdq.stoex.TermOperations

@@ -35,7 +35,7 @@ public class VariableReferenceItemProvider extends AbstractNamedReferenceItemPro
      * 
      * @generated
      */
-    public VariableReferenceItemProvider(AdapterFactory adapterFactory) {
+    public VariableReferenceItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -46,12 +46,12 @@ public class VariableReferenceItemProvider extends AbstractNamedReferenceItemPro
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -60,21 +60,21 @@ public class VariableReferenceItemProvider extends AbstractNamedReferenceItemPro
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/VariableReference"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/VariableReference"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((VariableReference) object).getReferenceName();
-        return label == null || label.length() == 0 ? getString("_UI_VariableReference_type")
-                : getString("_UI_VariableReference_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((VariableReference) object).getReferenceName();
+        return label == null || label.length() == 0 ? this.getString("_UI_VariableReference_type") : this
+                .getString("_UI_VariableReference_type") + " " + label;
     }
 
     /**
@@ -85,8 +85,8 @@ public class VariableReferenceItemProvider extends AbstractNamedReferenceItemPro
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
         super.notifyChanged(notification);
     }
 
@@ -97,7 +97,7 @@ public class VariableReferenceItemProvider extends AbstractNamedReferenceItemPro
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

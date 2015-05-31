@@ -28,7 +28,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiteral {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -36,7 +36,7 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
     /**
      * The default value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValue()
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
     /**
      * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValue()
      * @generated
      * @ordered
@@ -55,7 +55,7 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected DoubleLiteralImpl() {
@@ -64,7 +64,7 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,49 +74,53 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public double getValue() {
-        return value;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setValue(double newValue) {
-        double oldValue = value;
-        value = newValue;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.DOUBLE_LITERAL__VALUE, oldValue, value));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public double getValue() {
+        return this.value;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setValue(final double newValue) {
+        final double oldValue = this.value;
+        this.value = newValue;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.DOUBLE_LITERAL__VALUE, oldValue,
+                    this.value));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.DOUBLE_LITERAL__VALUE:
-            return getValue();
+            return this.getValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.DOUBLE_LITERAL__VALUE:
-            setValue((Double) newValue);
+            this.setValue((Double) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -124,14 +128,14 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.DOUBLE_LITERAL__VALUE:
-            setValue(VALUE_EDEFAULT);
+            this.setValue(VALUE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -139,31 +143,32 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.DOUBLE_LITERAL__VALUE:
-            return value != VALUE_EDEFAULT;
+            return this.value != VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (value: ");
-        result.append(value);
+        result.append(this.value);
         result.append(')');
         return result.toString();
     }

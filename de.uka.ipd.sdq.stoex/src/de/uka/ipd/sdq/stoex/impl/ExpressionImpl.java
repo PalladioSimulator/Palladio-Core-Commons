@@ -7,10 +7,10 @@
 package de.uka.ipd.sdq.stoex.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.StoexPackage;
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Expression</b></em>'. <!--
@@ -20,17 +20,17 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  *
  * @generated
  */
-public abstract class ExpressionImpl extends EStereotypableObjectImpl implements Expression {
+public abstract class ExpressionImpl extends StereotypableElementImpl implements Expression {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExpressionImpl() {
@@ -39,7 +39,7 @@ public abstract class ExpressionImpl extends EStereotypableObjectImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

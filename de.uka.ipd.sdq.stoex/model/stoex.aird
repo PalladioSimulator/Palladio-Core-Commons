@@ -4,6 +4,10 @@
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/resource/org.modelversioning.emfprofile/model/emfprofiles.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/resource/org.modelversioning.emfprofile/model/emfprofileapplication.ecore#/"/>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_xRtXECIyEeSsNN0wAkJjEQ" initialized="true">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_xTkYQCIyEeSsNN0wAkJjEQ" name="stoex class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_xTnbkCIyEeSsNN0wAkJjEQ" source="GMF_DIAGRAMS">

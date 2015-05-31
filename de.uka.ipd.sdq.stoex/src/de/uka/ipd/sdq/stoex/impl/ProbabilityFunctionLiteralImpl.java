@@ -33,7 +33,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 public class ProbabilityFunctionLiteralImpl extends AtomImpl implements ProbabilityFunctionLiteral {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -41,7 +41,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
      * The cached value of the '{@link #getFunction_ProbabilityFunctionLiteral()
      * <em>Function Probability Function Literal</em>}' containment reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getFunction_ProbabilityFunctionLiteral()
      * @generated
      * @ordered
@@ -50,7 +50,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProbabilityFunctionLiteralImpl() {
@@ -59,7 +59,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -69,99 +69,107 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ProbabilityFunction getFunction_ProbabilityFunctionLiteral() {
-        return function_ProbabilityFunctionLiteral;
+        return this.function_ProbabilityFunctionLiteral;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetFunction_ProbabilityFunctionLiteral(
-            ProbabilityFunction newFunction_ProbabilityFunctionLiteral, NotificationChain msgs) {
-        ProbabilityFunction oldFunction_ProbabilityFunctionLiteral = function_ProbabilityFunctionLiteral;
-        function_ProbabilityFunctionLiteral = newFunction_ProbabilityFunctionLiteral;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+            final ProbabilityFunction newFunction_ProbabilityFunctionLiteral, NotificationChain msgs) {
+        final ProbabilityFunction oldFunction_ProbabilityFunctionLiteral = this.function_ProbabilityFunctionLiteral;
+        this.function_ProbabilityFunctionLiteral = newFunction_ProbabilityFunctionLiteral;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
                     oldFunction_ProbabilityFunctionLiteral, newFunction_ProbabilityFunctionLiteral);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
+            }
         }
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setFunction_ProbabilityFunctionLiteral(ProbabilityFunction newFunction_ProbabilityFunctionLiteral) {
-        if (newFunction_ProbabilityFunctionLiteral != function_ProbabilityFunctionLiteral) {
+    @Override
+    public void setFunction_ProbabilityFunctionLiteral(final ProbabilityFunction newFunction_ProbabilityFunctionLiteral) {
+        if (newFunction_ProbabilityFunctionLiteral != this.function_ProbabilityFunctionLiteral) {
             NotificationChain msgs = null;
-            if (function_ProbabilityFunctionLiteral != null)
-                msgs = ((InternalEObject) function_ProbabilityFunctionLiteral).eInverseRemove(this,
+            if (this.function_ProbabilityFunctionLiteral != null) {
+                msgs = ((InternalEObject) this.function_ProbabilityFunctionLiteral).eInverseRemove(this,
                         EOPPOSITE_FEATURE_BASE
                                 - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
                         null, msgs);
-            if (newFunction_ProbabilityFunctionLiteral != null)
+            }
+            if (newFunction_ProbabilityFunctionLiteral != null) {
                 msgs = ((InternalEObject) newFunction_ProbabilityFunctionLiteral).eInverseAdd(this,
                         EOPPOSITE_FEATURE_BASE
                                 - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
                         null, msgs);
-            msgs = basicSetFunction_ProbabilityFunctionLiteral(newFunction_ProbabilityFunctionLiteral, msgs);
-            if (msgs != null)
+            }
+            msgs = this.basicSetFunction_ProbabilityFunctionLiteral(newFunction_ProbabilityFunctionLiteral, msgs);
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
                     StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
                     newFunction_ProbabilityFunctionLiteral, newFunction_ProbabilityFunctionLiteral));
+        }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL:
-            return basicSetFunction_ProbabilityFunctionLiteral(null, msgs);
+            return this.basicSetFunction_ProbabilityFunctionLiteral(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL:
-            return getFunction_ProbabilityFunctionLiteral();
+            return this.getFunction_ProbabilityFunctionLiteral();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL:
-            setFunction_ProbabilityFunctionLiteral((ProbabilityFunction) newValue);
+            this.setFunction_ProbabilityFunctionLiteral((ProbabilityFunction) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -169,14 +177,14 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL:
-            setFunction_ProbabilityFunctionLiteral((ProbabilityFunction) null);
+            this.setFunction_ProbabilityFunctionLiteral((ProbabilityFunction) null);
             return;
         }
         super.eUnset(featureID);
@@ -184,14 +192,14 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL:
-            return function_ProbabilityFunctionLiteral != null;
+            return this.function_ProbabilityFunctionLiteral != null;
         }
         return super.eIsSet(featureID);
     }

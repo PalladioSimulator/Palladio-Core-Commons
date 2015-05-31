@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Term Operations</b></em>', and utility methods for working with them. <!-- end-user-doc
  * -->
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getTermOperations()
  * @model
  * @generated
@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum TermOperations implements Enumerator {
     /**
      * The '<em><b>ADD</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #ADD_VALUE
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * The '<em><b>SUB</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #SUB_VALUE
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -54,7 +54,7 @@ public enum TermOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #ADD
      * @model
      * @generated
@@ -69,7 +69,7 @@ public enum TermOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #SUB
      * @model
      * @generated
@@ -80,17 +80,15 @@ public enum TermOperations implements Enumerator {
     /**
      * An array of all the '<em><b>Term Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private static final TermOperations[] VALUES_ARRAY = new TermOperations[] {
-            ADD, SUB,
-    };
+    private static final TermOperations[] VALUES_ARRAY = new TermOperations[] { ADD, SUB, };
 
     /**
      * A public read-only list of all the '<em><b>Term Operations</b></em>' enumerators. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final List<TermOperations> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -98,12 +96,11 @@ public enum TermOperations implements Enumerator {
     /**
      * Returns the '<em><b>Term Operations</b></em>' literal with the specified literal value. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static TermOperations get(String literal) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            TermOperations result = VALUES_ARRAY[i];
+    public static TermOperations get(final String literal) {
+        for (final TermOperations result : VALUES_ARRAY) {
             if (result.toString().equals(literal)) {
                 return result;
             }
@@ -114,12 +111,11 @@ public enum TermOperations implements Enumerator {
     /**
      * Returns the '<em><b>Term Operations</b></em>' literal with the specified name. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static TermOperations getByName(String name) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            TermOperations result = VALUES_ARRAY[i];
+    public static TermOperations getByName(final String name) {
+        for (final TermOperations result : VALUES_ARRAY) {
             if (result.getName().equals(name)) {
                 return result;
             }
@@ -130,10 +126,10 @@ public enum TermOperations implements Enumerator {
     /**
      * Returns the '<em><b>Term Operations</b></em>' literal with the specified integer value. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static TermOperations get(int value) {
+    public static TermOperations get(final int value) {
         switch (value) {
         case ADD_VALUE:
             return ADD;
@@ -145,31 +141,31 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private TermOperations(int value, String name, String literal) {
+    private TermOperations(final int value, final String name, final String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
@@ -177,40 +173,43 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getLiteral() {
-        return literal;
+        return this.literal;
     }
 
     /**
      * Returns the literal value of the enumerator, which is its string representation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        return literal;
+        return this.literal;
     }
 
 } // TermOperations

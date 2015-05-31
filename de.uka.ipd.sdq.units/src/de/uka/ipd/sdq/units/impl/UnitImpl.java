@@ -7,10 +7,10 @@
 package de.uka.ipd.sdq.units.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitsPackage;
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Unit</b></em>'. <!--
@@ -20,17 +20,17 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  *
  * @generated
  */
-public abstract class UnitImpl extends EStereotypableObjectImpl implements Unit {
+public abstract class UnitImpl extends StereotypableElementImpl implements Unit {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitImpl() {
@@ -39,7 +39,7 @@ public abstract class UnitImpl extends EStereotypableObjectImpl implements Unit 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

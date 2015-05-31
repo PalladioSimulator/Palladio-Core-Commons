@@ -9,11 +9,11 @@ package de.uka.ipd.sdq.units.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitCarryingElement;
 import de.uka.ipd.sdq.units.UnitsPackage;
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -27,10 +27,10 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  *
  * @generated
  */
-public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl implements UnitCarryingElement {
+public abstract class UnitCarryingElementImpl extends StereotypableElementImpl implements UnitCarryingElement {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +39,7 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitCarryingElementImpl() {
@@ -48,7 +48,7 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -58,22 +58,23 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
+    @Override
     public Unit getUnit() {
         // TO DO: implement this method to return the 'Unit' containment reference
         // Ensure that you remove @generated or mark it @generated NOT
         // throw new UnsupportedOperationException();
-        return unit;
+        return this.unit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
-    public NotificationChain basicSetUnit(Unit newUnit, NotificationChain msgs) {
+    public NotificationChain basicSetUnit(final Unit newUnit, final NotificationChain msgs) {
         // TO DO: implement this method to set the contained 'Unit' containment reference
         // -> this method is automatically invoked to keep the containment relationship in synch
         // -> do not modify other features
@@ -81,13 +82,13 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
         // NotificationChain object must be created first)
         // Ensure that you remove @generated or mark it @generated NOT
         // throw new UnsupportedOperationException();
-        unit = newUnit;
+        this.unit = newUnit;
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated not
      */
     public Unit basicGetUnit() {
@@ -95,56 +96,57 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
         // -> do not perform proxy resolution
         // Ensure that you remove @generated or mark it @generated NOT
 
-        return unit;
+        return this.unit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
-    public void setUnit(Unit newUnit) {
+    public void setUnit(final Unit newUnit) {
         this.unit = newUnit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            return basicSetUnit(null, msgs);
+            return this.basicSetUnit(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            return getUnit();
+            return this.getUnit();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            setUnit((Unit) newValue);
+            this.setUnit((Unit) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -152,14 +154,14 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            setUnit((Unit) null);
+            this.setUnit((Unit) null);
             return;
         }
         super.eUnset(featureID);
@@ -167,14 +169,14 @@ public abstract class UnitCarryingElementImpl extends EStereotypableObjectImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            return getUnit() != null;
+            return this.getUnit() != null;
         }
         return super.eIsSet(featureID);
     }

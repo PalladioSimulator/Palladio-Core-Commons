@@ -29,7 +29,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -37,7 +37,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -56,7 +56,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BaseUnitImpl() {
@@ -65,7 +65,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,49 +75,52 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public UnitNames getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setName(UnitNames newName) {
-        UnitNames oldName = name;
-        name = newName == null ? NAME_EDEFAULT : newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.BASE_UNIT__NAME, oldName, name));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public UnitNames getName() {
+        return this.name;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setName(final UnitNames newName) {
+        final UnitNames oldName = this.name;
+        this.name = newName == null ? NAME_EDEFAULT : newName;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.BASE_UNIT__NAME, oldName, this.name));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case UnitsPackage.BASE_UNIT__NAME:
-            return getName();
+            return this.getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case UnitsPackage.BASE_UNIT__NAME:
-            setName((UnitNames) newValue);
+            this.setName((UnitNames) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -125,14 +128,14 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case UnitsPackage.BASE_UNIT__NAME:
-            setName(NAME_EDEFAULT);
+            this.setName(NAME_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -140,31 +143,32 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.BASE_UNIT__NAME:
-            return name != NAME_EDEFAULT;
+            return this.name != NAME_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: ");
-        result.append(name);
+        result.append(this.name);
         result.append(')');
         return result.toString();
     }

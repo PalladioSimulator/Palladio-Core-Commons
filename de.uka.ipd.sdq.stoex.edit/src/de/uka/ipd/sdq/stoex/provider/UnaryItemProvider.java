@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.Unary} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UnaryItemProvider extends PowerItemProvider {
@@ -33,7 +33,7 @@ public class UnaryItemProvider extends PowerItemProvider {
      * 
      * @generated
      */
-    public UnaryItemProvider(AdapterFactory adapterFactory) {
+    public UnaryItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -44,23 +44,23 @@ public class UnaryItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        return getString("_UI_Unary_type");
+    public String getText(final Object object) {
+        return this.getString("_UI_Unary_type");
     }
 
     /**
@@ -71,8 +71,8 @@ public class UnaryItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
         super.notifyChanged(notification);
     }
 
@@ -83,7 +83,7 @@ public class UnaryItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

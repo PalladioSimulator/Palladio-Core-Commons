@@ -15,7 +15,6 @@ package de.uka.ipd.sdq.probfunction;
 public interface StringSample extends Sample<String> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";

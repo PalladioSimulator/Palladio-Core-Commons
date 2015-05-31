@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.palladiosimulator.mdsdprofiles.MdsdprofilesPackage;
 
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
@@ -54,251 +55,251 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass variableReferenceEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass abstractNamedReferenceEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass namespaceReferenceEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass variableEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass atomEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unaryEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass powerEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass productEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass termEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass comparisonEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass booleanExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass ifElseEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass expressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass termExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass randomVariableEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass productExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass probabilityFunctionLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass parenthesisEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass numericLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass intLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass doubleLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass compareExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass boolLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass stringLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass powerExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass booleanOperatorExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass notExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass negativeExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass functionLiteralEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass ifElseExpressionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum termOperationsEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum productOperationsEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum compareOperationsEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum booleanOperationsEEnum = null;
@@ -311,7 +312,7 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see de.uka.ipd.sdq.stoex.StoexPackage#eNS_URI
      * @see #init()
@@ -323,7 +324,7 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -331,23 +332,24 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others
      * upon which it depends.
-     * 
+     *
      * <p>
      * This method is used to initialize {@link StoexPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to
      * obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
      * @generated
      */
     public static StoexPackage init() {
-        if (isInited)
+        if (isInited) {
             return (StoexPackage) EPackage.Registry.INSTANCE.getEPackage(StoexPackage.eNS_URI);
+        }
 
         // Obtain or create and register package
-        StoexPackageImpl theStoexPackage = (StoexPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof StoexPackageImpl ? EPackage.Registry.INSTANCE
+        final StoexPackageImpl theStoexPackage = (StoexPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof StoexPackageImpl ? EPackage.Registry.INSTANCE
                 .get(eNS_URI) : new StoexPackageImpl());
 
         isInited = true;
@@ -371,610 +373,677 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getVariableReference() {
-        return variableReferenceEClass;
+        return this.variableReferenceEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getAbstractNamedReference() {
-        return abstractNamedReferenceEClass;
+        return this.abstractNamedReferenceEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getAbstractNamedReference_ReferenceName() {
-        return (EAttribute) abstractNamedReferenceEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.abstractNamedReferenceEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getNamespaceReference() {
-        return namespaceReferenceEClass;
+        return this.namespaceReferenceEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getNamespaceReference_InnerReference_NamespaceReference() {
-        return (EReference) namespaceReferenceEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.namespaceReferenceEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getVariable() {
-        return variableEClass;
+        return this.variableEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getVariable_Id_Variable() {
-        return (EReference) variableEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.variableEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getAtom() {
-        return atomEClass;
+        return this.atomEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnary() {
-        return unaryEClass;
+        return this.unaryEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getPower() {
-        return powerEClass;
+        return this.powerEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getProduct() {
-        return productEClass;
+        return this.productEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getTerm() {
-        return termEClass;
+        return this.termEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getComparison() {
-        return comparisonEClass;
+        return this.comparisonEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getBooleanExpression() {
-        return booleanExpressionEClass;
+        return this.booleanExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getIfElse() {
-        return ifElseEClass;
+        return this.ifElseEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getExpression() {
-        return expressionEClass;
+        return this.expressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getTermExpression() {
-        return termExpressionEClass;
+        return this.termExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getTermExpression_Left() {
-        return (EReference) termExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.termExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getTermExpression_Right() {
-        return (EReference) termExpressionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.termExpressionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getTermExpression_Operation() {
-        return (EAttribute) termExpressionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) this.termExpressionEClass.getEStructuralFeatures().get(2);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getRandomVariable() {
-        return randomVariableEClass;
+        return this.randomVariableEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getRandomVariable_Specification() {
-        return (EAttribute) randomVariableEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.randomVariableEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getRandomVariable_Expression() {
-        return (EReference) randomVariableEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.randomVariableEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getProductExpression() {
-        return productExpressionEClass;
+        return this.productExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getProductExpression_Left() {
-        return (EReference) productExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.productExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getProductExpression_Right() {
-        return (EReference) productExpressionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.productExpressionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getProductExpression_Operation() {
-        return (EAttribute) productExpressionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) this.productExpressionEClass.getEStructuralFeatures().get(2);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getProbabilityFunctionLiteral() {
-        return probabilityFunctionLiteralEClass;
+        return this.probabilityFunctionLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getProbabilityFunctionLiteral_Function_ProbabilityFunctionLiteral() {
-        return (EReference) probabilityFunctionLiteralEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.probabilityFunctionLiteralEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getParenthesis() {
-        return parenthesisEClass;
+        return this.parenthesisEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getParenthesis_InnerExpression() {
-        return (EReference) parenthesisEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.parenthesisEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getNumericLiteral() {
-        return numericLiteralEClass;
+        return this.numericLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getIntLiteral() {
-        return intLiteralEClass;
+        return this.intLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getIntLiteral_Value() {
-        return (EAttribute) intLiteralEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.intLiteralEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getDoubleLiteral() {
-        return doubleLiteralEClass;
+        return this.doubleLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getDoubleLiteral_Value() {
-        return (EAttribute) doubleLiteralEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.doubleLiteralEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getCompareExpression() {
-        return compareExpressionEClass;
+        return this.compareExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getCompareExpression_Left() {
-        return (EReference) compareExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.compareExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getCompareExpression_Right() {
-        return (EReference) compareExpressionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.compareExpressionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getCompareExpression_Operation() {
-        return (EAttribute) compareExpressionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) this.compareExpressionEClass.getEStructuralFeatures().get(2);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getBoolLiteral() {
-        return boolLiteralEClass;
+        return this.boolLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getBoolLiteral_Value() {
-        return (EAttribute) boolLiteralEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.boolLiteralEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getStringLiteral() {
-        return stringLiteralEClass;
+        return this.stringLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getStringLiteral_Value() {
-        return (EAttribute) stringLiteralEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.stringLiteralEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getPowerExpression() {
-        return powerExpressionEClass;
+        return this.powerExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getPowerExpression_Base() {
-        return (EReference) powerExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.powerExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getPowerExpression_Exponent() {
-        return (EReference) powerExpressionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.powerExpressionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getBooleanOperatorExpression() {
-        return booleanOperatorExpressionEClass;
+        return this.booleanOperatorExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getBooleanOperatorExpression_Left() {
-        return (EReference) booleanOperatorExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.booleanOperatorExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getBooleanOperatorExpression_Right() {
-        return (EReference) booleanOperatorExpressionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.booleanOperatorExpressionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getBooleanOperatorExpression_Operation() {
-        return (EAttribute) booleanOperatorExpressionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) this.booleanOperatorExpressionEClass.getEStructuralFeatures().get(2);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getNotExpression() {
-        return notExpressionEClass;
+        return this.notExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getNotExpression_Inner() {
-        return (EReference) notExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.notExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getNegativeExpression() {
-        return negativeExpressionEClass;
+        return this.negativeExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getNegativeExpression_Inner() {
-        return (EReference) negativeExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.negativeExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getFunctionLiteral() {
-        return functionLiteralEClass;
+        return this.functionLiteralEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getFunctionLiteral_Id() {
-        return (EAttribute) functionLiteralEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.functionLiteralEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getFunctionLiteral_Parameters_FunctionLiteral() {
-        return (EReference) functionLiteralEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.functionLiteralEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getIfElseExpression() {
-        return ifElseExpressionEClass;
+        return this.ifElseExpressionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getIfElseExpression_IfExpression() {
-        return (EReference) ifElseExpressionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.ifElseExpressionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getIfElseExpression_ElseExpression() {
-        return (EReference) ifElseExpressionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.ifElseExpressionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getIfElseExpression_ConditionExpression() {
-        return (EReference) ifElseExpressionEClass.getEStructuralFeatures().get(2);
+        return (EReference) this.ifElseExpressionEClass.getEStructuralFeatures().get(2);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EEnum getTermOperations() {
-        return termOperationsEEnum;
+        return this.termOperationsEEnum;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EEnum getProductOperations() {
-        return productOperationsEEnum;
+        return this.productOperationsEEnum;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EEnum getCompareOperations() {
-        return compareOperationsEEnum;
+        return this.compareOperationsEEnum;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EEnum getBooleanOperations() {
-        return booleanOperationsEEnum;
+        return this.booleanOperationsEEnum;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public StoexFactory getStoexFactory() {
-        return (StoexFactory) getEFactoryInstance();
+        return (StoexFactory) this.getEFactoryInstance();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -982,118 +1051,119 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
-        if (isCreated)
+        if (this.isCreated) {
             return;
-        isCreated = true;
+        }
+        this.isCreated = true;
 
         // Create classes and their features
-        variableReferenceEClass = createEClass(VARIABLE_REFERENCE);
+        this.variableReferenceEClass = this.createEClass(VARIABLE_REFERENCE);
 
-        abstractNamedReferenceEClass = createEClass(ABSTRACT_NAMED_REFERENCE);
-        createEAttribute(abstractNamedReferenceEClass, ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME);
+        this.abstractNamedReferenceEClass = this.createEClass(ABSTRACT_NAMED_REFERENCE);
+        this.createEAttribute(this.abstractNamedReferenceEClass, ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME);
 
-        namespaceReferenceEClass = createEClass(NAMESPACE_REFERENCE);
-        createEReference(namespaceReferenceEClass, NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE);
+        this.namespaceReferenceEClass = this.createEClass(NAMESPACE_REFERENCE);
+        this.createEReference(this.namespaceReferenceEClass, NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE);
 
-        variableEClass = createEClass(VARIABLE);
-        createEReference(variableEClass, VARIABLE__ID_VARIABLE);
+        this.variableEClass = this.createEClass(VARIABLE);
+        this.createEReference(this.variableEClass, VARIABLE__ID_VARIABLE);
 
-        atomEClass = createEClass(ATOM);
+        this.atomEClass = this.createEClass(ATOM);
 
-        unaryEClass = createEClass(UNARY);
+        this.unaryEClass = this.createEClass(UNARY);
 
-        powerEClass = createEClass(POWER);
+        this.powerEClass = this.createEClass(POWER);
 
-        productEClass = createEClass(PRODUCT);
+        this.productEClass = this.createEClass(PRODUCT);
 
-        termEClass = createEClass(TERM);
+        this.termEClass = this.createEClass(TERM);
 
-        comparisonEClass = createEClass(COMPARISON);
+        this.comparisonEClass = this.createEClass(COMPARISON);
 
-        booleanExpressionEClass = createEClass(BOOLEAN_EXPRESSION);
+        this.booleanExpressionEClass = this.createEClass(BOOLEAN_EXPRESSION);
 
-        ifElseEClass = createEClass(IF_ELSE);
+        this.ifElseEClass = this.createEClass(IF_ELSE);
 
-        expressionEClass = createEClass(EXPRESSION);
+        this.expressionEClass = this.createEClass(EXPRESSION);
 
-        termExpressionEClass = createEClass(TERM_EXPRESSION);
-        createEReference(termExpressionEClass, TERM_EXPRESSION__LEFT);
-        createEReference(termExpressionEClass, TERM_EXPRESSION__RIGHT);
-        createEAttribute(termExpressionEClass, TERM_EXPRESSION__OPERATION);
+        this.termExpressionEClass = this.createEClass(TERM_EXPRESSION);
+        this.createEReference(this.termExpressionEClass, TERM_EXPRESSION__LEFT);
+        this.createEReference(this.termExpressionEClass, TERM_EXPRESSION__RIGHT);
+        this.createEAttribute(this.termExpressionEClass, TERM_EXPRESSION__OPERATION);
 
-        productExpressionEClass = createEClass(PRODUCT_EXPRESSION);
-        createEReference(productExpressionEClass, PRODUCT_EXPRESSION__LEFT);
-        createEReference(productExpressionEClass, PRODUCT_EXPRESSION__RIGHT);
-        createEAttribute(productExpressionEClass, PRODUCT_EXPRESSION__OPERATION);
+        this.productExpressionEClass = this.createEClass(PRODUCT_EXPRESSION);
+        this.createEReference(this.productExpressionEClass, PRODUCT_EXPRESSION__LEFT);
+        this.createEReference(this.productExpressionEClass, PRODUCT_EXPRESSION__RIGHT);
+        this.createEAttribute(this.productExpressionEClass, PRODUCT_EXPRESSION__OPERATION);
 
-        probabilityFunctionLiteralEClass = createEClass(PROBABILITY_FUNCTION_LITERAL);
-        createEReference(probabilityFunctionLiteralEClass,
+        this.probabilityFunctionLiteralEClass = this.createEClass(PROBABILITY_FUNCTION_LITERAL);
+        this.createEReference(this.probabilityFunctionLiteralEClass,
                 PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL);
 
-        parenthesisEClass = createEClass(PARENTHESIS);
-        createEReference(parenthesisEClass, PARENTHESIS__INNER_EXPRESSION);
+        this.parenthesisEClass = this.createEClass(PARENTHESIS);
+        this.createEReference(this.parenthesisEClass, PARENTHESIS__INNER_EXPRESSION);
 
-        numericLiteralEClass = createEClass(NUMERIC_LITERAL);
+        this.numericLiteralEClass = this.createEClass(NUMERIC_LITERAL);
 
-        intLiteralEClass = createEClass(INT_LITERAL);
-        createEAttribute(intLiteralEClass, INT_LITERAL__VALUE);
+        this.intLiteralEClass = this.createEClass(INT_LITERAL);
+        this.createEAttribute(this.intLiteralEClass, INT_LITERAL__VALUE);
 
-        doubleLiteralEClass = createEClass(DOUBLE_LITERAL);
-        createEAttribute(doubleLiteralEClass, DOUBLE_LITERAL__VALUE);
+        this.doubleLiteralEClass = this.createEClass(DOUBLE_LITERAL);
+        this.createEAttribute(this.doubleLiteralEClass, DOUBLE_LITERAL__VALUE);
 
-        compareExpressionEClass = createEClass(COMPARE_EXPRESSION);
-        createEReference(compareExpressionEClass, COMPARE_EXPRESSION__LEFT);
-        createEReference(compareExpressionEClass, COMPARE_EXPRESSION__RIGHT);
-        createEAttribute(compareExpressionEClass, COMPARE_EXPRESSION__OPERATION);
+        this.compareExpressionEClass = this.createEClass(COMPARE_EXPRESSION);
+        this.createEReference(this.compareExpressionEClass, COMPARE_EXPRESSION__LEFT);
+        this.createEReference(this.compareExpressionEClass, COMPARE_EXPRESSION__RIGHT);
+        this.createEAttribute(this.compareExpressionEClass, COMPARE_EXPRESSION__OPERATION);
 
-        boolLiteralEClass = createEClass(BOOL_LITERAL);
-        createEAttribute(boolLiteralEClass, BOOL_LITERAL__VALUE);
+        this.boolLiteralEClass = this.createEClass(BOOL_LITERAL);
+        this.createEAttribute(this.boolLiteralEClass, BOOL_LITERAL__VALUE);
 
-        stringLiteralEClass = createEClass(STRING_LITERAL);
-        createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
+        this.stringLiteralEClass = this.createEClass(STRING_LITERAL);
+        this.createEAttribute(this.stringLiteralEClass, STRING_LITERAL__VALUE);
 
-        powerExpressionEClass = createEClass(POWER_EXPRESSION);
-        createEReference(powerExpressionEClass, POWER_EXPRESSION__BASE);
-        createEReference(powerExpressionEClass, POWER_EXPRESSION__EXPONENT);
+        this.powerExpressionEClass = this.createEClass(POWER_EXPRESSION);
+        this.createEReference(this.powerExpressionEClass, POWER_EXPRESSION__BASE);
+        this.createEReference(this.powerExpressionEClass, POWER_EXPRESSION__EXPONENT);
 
-        booleanOperatorExpressionEClass = createEClass(BOOLEAN_OPERATOR_EXPRESSION);
-        createEReference(booleanOperatorExpressionEClass, BOOLEAN_OPERATOR_EXPRESSION__LEFT);
-        createEReference(booleanOperatorExpressionEClass, BOOLEAN_OPERATOR_EXPRESSION__RIGHT);
-        createEAttribute(booleanOperatorExpressionEClass, BOOLEAN_OPERATOR_EXPRESSION__OPERATION);
+        this.booleanOperatorExpressionEClass = this.createEClass(BOOLEAN_OPERATOR_EXPRESSION);
+        this.createEReference(this.booleanOperatorExpressionEClass, BOOLEAN_OPERATOR_EXPRESSION__LEFT);
+        this.createEReference(this.booleanOperatorExpressionEClass, BOOLEAN_OPERATOR_EXPRESSION__RIGHT);
+        this.createEAttribute(this.booleanOperatorExpressionEClass, BOOLEAN_OPERATOR_EXPRESSION__OPERATION);
 
-        notExpressionEClass = createEClass(NOT_EXPRESSION);
-        createEReference(notExpressionEClass, NOT_EXPRESSION__INNER);
+        this.notExpressionEClass = this.createEClass(NOT_EXPRESSION);
+        this.createEReference(this.notExpressionEClass, NOT_EXPRESSION__INNER);
 
-        negativeExpressionEClass = createEClass(NEGATIVE_EXPRESSION);
-        createEReference(negativeExpressionEClass, NEGATIVE_EXPRESSION__INNER);
+        this.negativeExpressionEClass = this.createEClass(NEGATIVE_EXPRESSION);
+        this.createEReference(this.negativeExpressionEClass, NEGATIVE_EXPRESSION__INNER);
 
-        functionLiteralEClass = createEClass(FUNCTION_LITERAL);
-        createEAttribute(functionLiteralEClass, FUNCTION_LITERAL__ID);
-        createEReference(functionLiteralEClass, FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
+        this.functionLiteralEClass = this.createEClass(FUNCTION_LITERAL);
+        this.createEAttribute(this.functionLiteralEClass, FUNCTION_LITERAL__ID);
+        this.createEReference(this.functionLiteralEClass, FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
 
-        ifElseExpressionEClass = createEClass(IF_ELSE_EXPRESSION);
-        createEReference(ifElseExpressionEClass, IF_ELSE_EXPRESSION__IF_EXPRESSION);
-        createEReference(ifElseExpressionEClass, IF_ELSE_EXPRESSION__ELSE_EXPRESSION);
-        createEReference(ifElseExpressionEClass, IF_ELSE_EXPRESSION__CONDITION_EXPRESSION);
+        this.ifElseExpressionEClass = this.createEClass(IF_ELSE_EXPRESSION);
+        this.createEReference(this.ifElseExpressionEClass, IF_ELSE_EXPRESSION__IF_EXPRESSION);
+        this.createEReference(this.ifElseExpressionEClass, IF_ELSE_EXPRESSION__ELSE_EXPRESSION);
+        this.createEReference(this.ifElseExpressionEClass, IF_ELSE_EXPRESSION__CONDITION_EXPRESSION);
 
-        randomVariableEClass = createEClass(RANDOM_VARIABLE);
-        createEAttribute(randomVariableEClass, RANDOM_VARIABLE__SPECIFICATION);
-        createEReference(randomVariableEClass, RANDOM_VARIABLE__EXPRESSION);
+        this.randomVariableEClass = this.createEClass(RANDOM_VARIABLE);
+        this.createEAttribute(this.randomVariableEClass, RANDOM_VARIABLE__SPECIFICATION);
+        this.createEReference(this.randomVariableEClass, RANDOM_VARIABLE__EXPRESSION);
 
         // Create enums
-        termOperationsEEnum = createEEnum(TERM_OPERATIONS);
-        productOperationsEEnum = createEEnum(PRODUCT_OPERATIONS);
-        compareOperationsEEnum = createEEnum(COMPARE_OPERATIONS);
-        booleanOperationsEEnum = createEEnum(BOOLEAN_OPERATIONS);
+        this.termOperationsEEnum = this.createEEnum(TERM_OPERATIONS);
+        this.productOperationsEEnum = this.createEEnum(PRODUCT_OPERATIONS);
+        this.compareOperationsEEnum = this.createEEnum(COMPARE_OPERATIONS);
+        this.booleanOperationsEEnum = this.createEEnum(BOOLEAN_OPERATIONS);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -1101,277 +1171,288 @@ public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {
-        if (isInitialized)
+        if (this.isInitialized) {
             return;
-        isInitialized = true;
+        }
+        this.isInitialized = true;
 
         // Initialize package
-        setName(eNAME);
-        setNsPrefix(eNS_PREFIX);
-        setNsURI(eNS_URI);
+        this.setName(eNAME);
+        this.setNsPrefix(eNS_PREFIX);
+        this.setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        ProbfunctionPackage theProbfunctionPackage = (ProbfunctionPackage) EPackage.Registry.INSTANCE
+        final MdsdprofilesPackage theMdsdprofilesPackage = (MdsdprofilesPackage) EPackage.Registry.INSTANCE
+                .getEPackage(MdsdprofilesPackage.eNS_URI);
+        final ProbfunctionPackage theProbfunctionPackage = (ProbfunctionPackage) EPackage.Registry.INSTANCE
                 .getEPackage(ProbfunctionPackage.eNS_URI);
-        UnitsPackage theUnitsPackage = (UnitsPackage) EPackage.Registry.INSTANCE.getEPackage(UnitsPackage.eNS_URI);
+        final UnitsPackage theUnitsPackage = (UnitsPackage) EPackage.Registry.INSTANCE
+                .getEPackage(UnitsPackage.eNS_URI);
 
         // Create type parameters
 
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        variableReferenceEClass.getESuperTypes().add(this.getAbstractNamedReference());
-        namespaceReferenceEClass.getESuperTypes().add(this.getAbstractNamedReference());
-        variableEClass.getESuperTypes().add(this.getAtom());
-        atomEClass.getESuperTypes().add(this.getUnary());
-        unaryEClass.getESuperTypes().add(this.getPower());
-        powerEClass.getESuperTypes().add(this.getProduct());
-        productEClass.getESuperTypes().add(this.getTerm());
-        termEClass.getESuperTypes().add(this.getComparison());
-        comparisonEClass.getESuperTypes().add(this.getBooleanExpression());
-        booleanExpressionEClass.getESuperTypes().add(this.getIfElse());
-        ifElseEClass.getESuperTypes().add(this.getExpression());
-        termExpressionEClass.getESuperTypes().add(this.getTerm());
-        productExpressionEClass.getESuperTypes().add(this.getProduct());
-        probabilityFunctionLiteralEClass.getESuperTypes().add(this.getAtom());
-        parenthesisEClass.getESuperTypes().add(this.getAtom());
-        numericLiteralEClass.getESuperTypes().add(theUnitsPackage.getUnitCarryingElement());
-        numericLiteralEClass.getESuperTypes().add(this.getAtom());
-        intLiteralEClass.getESuperTypes().add(this.getNumericLiteral());
-        doubleLiteralEClass.getESuperTypes().add(this.getNumericLiteral());
-        compareExpressionEClass.getESuperTypes().add(this.getComparison());
-        boolLiteralEClass.getESuperTypes().add(this.getAtom());
-        stringLiteralEClass.getESuperTypes().add(this.getAtom());
-        powerExpressionEClass.getESuperTypes().add(this.getPower());
-        booleanOperatorExpressionEClass.getESuperTypes().add(this.getBooleanExpression());
-        notExpressionEClass.getESuperTypes().add(this.getUnary());
-        negativeExpressionEClass.getESuperTypes().add(this.getUnary());
-        functionLiteralEClass.getESuperTypes().add(this.getAtom());
-        ifElseExpressionEClass.getESuperTypes().add(this.getIfElse());
+        this.variableReferenceEClass.getESuperTypes().add(this.getAbstractNamedReference());
+        this.namespaceReferenceEClass.getESuperTypes().add(this.getAbstractNamedReference());
+        this.variableEClass.getESuperTypes().add(this.getAtom());
+        this.atomEClass.getESuperTypes().add(this.getUnary());
+        this.unaryEClass.getESuperTypes().add(this.getPower());
+        this.powerEClass.getESuperTypes().add(this.getProduct());
+        this.productEClass.getESuperTypes().add(this.getTerm());
+        this.termEClass.getESuperTypes().add(this.getComparison());
+        this.comparisonEClass.getESuperTypes().add(this.getBooleanExpression());
+        this.booleanExpressionEClass.getESuperTypes().add(this.getIfElse());
+        this.ifElseEClass.getESuperTypes().add(this.getExpression());
+        this.expressionEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
+        this.termExpressionEClass.getESuperTypes().add(this.getTerm());
+        this.productExpressionEClass.getESuperTypes().add(this.getProduct());
+        this.probabilityFunctionLiteralEClass.getESuperTypes().add(this.getAtom());
+        this.parenthesisEClass.getESuperTypes().add(this.getAtom());
+        this.numericLiteralEClass.getESuperTypes().add(theUnitsPackage.getUnitCarryingElement());
+        this.numericLiteralEClass.getESuperTypes().add(this.getAtom());
+        this.intLiteralEClass.getESuperTypes().add(this.getNumericLiteral());
+        this.doubleLiteralEClass.getESuperTypes().add(this.getNumericLiteral());
+        this.compareExpressionEClass.getESuperTypes().add(this.getComparison());
+        this.boolLiteralEClass.getESuperTypes().add(this.getAtom());
+        this.stringLiteralEClass.getESuperTypes().add(this.getAtom());
+        this.powerExpressionEClass.getESuperTypes().add(this.getPower());
+        this.booleanOperatorExpressionEClass.getESuperTypes().add(this.getBooleanExpression());
+        this.notExpressionEClass.getESuperTypes().add(this.getUnary());
+        this.negativeExpressionEClass.getESuperTypes().add(this.getUnary());
+        this.functionLiteralEClass.getESuperTypes().add(this.getAtom());
+        this.ifElseExpressionEClass.getESuperTypes().add(this.getIfElse());
 
         // Initialize classes and features; add operations and parameters
-        initEClass(variableReferenceEClass, VariableReference.class, "VariableReference", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.variableReferenceEClass, VariableReference.class, "VariableReference", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.abstractNamedReferenceEClass, AbstractNamedReference.class, "AbstractNamedReference",
+                IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getAbstractNamedReference_ReferenceName(), this.ecorePackage.getEString(),
+                "referenceName", null, 1, 1, AbstractNamedReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        this.initEClass(this.namespaceReferenceEClass, NamespaceReference.class, "NamespaceReference", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getNamespaceReference_InnerReference_NamespaceReference(),
+                this.getAbstractNamedReference(), null, "innerReference_NamespaceReference", null, 1, 1,
+                NamespaceReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        this.initEClass(this.variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getVariable_Id_Variable(), this.getAbstractNamedReference(), null, "id_Variable",
+                null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        this.initEClass(this.atomEClass, Atom.class, "Atom", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.unaryEClass, Unary.class, "Unary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.powerEClass, Power.class, "Power", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.productEClass, Product.class, "Product", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(abstractNamedReferenceEClass, AbstractNamedReference.class, "AbstractNamedReference", IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getAbstractNamedReference_ReferenceName(), ecorePackage.getEString(), "referenceName", null, 1,
-                1, AbstractNamedReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEClass(this.termEClass, Term.class, "Term", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(namespaceReferenceEClass, NamespaceReference.class, "NamespaceReference", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getNamespaceReference_InnerReference_NamespaceReference(), this.getAbstractNamedReference(),
-                null, "innerReference_NamespaceReference", null, 1, 1, NamespaceReference.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-                !IS_ORDERED);
+        this.initEClass(this.comparisonEClass, Comparison.class, "Comparison", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getVariable_Id_Variable(), this.getAbstractNamedReference(), null, "id_Variable", null, 1, 1,
-                Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        this.initEClass(this.booleanExpressionEClass, BooleanExpression.class, "BooleanExpression", IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.ifElseEClass, IfElse.class, "IfElse", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.termExpressionEClass, TermExpression.class, "TermExpression", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getTermExpression_Left(), this.getTerm(), null, "left", null, 1, 1,
+                TermExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        initEClass(atomEClass, Atom.class, "Atom", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(unaryEClass, Unary.class, "Unary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(powerEClass, Power.class, "Power", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(productEClass, Product.class, "Product", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(termEClass, Term.class, "Term", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(comparisonEClass, Comparison.class, "Comparison", IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(booleanExpressionEClass, BooleanExpression.class, "BooleanExpression", IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(ifElseEClass, IfElse.class, "IfElse", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(termExpressionEClass, TermExpression.class, "TermExpression", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getTermExpression_Left(), this.getTerm(), null, "left", null, 1, 1, TermExpression.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getTermExpression_Right(), this.getProduct(), null, "right", null, 1, 1, TermExpression.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getTermExpression_Operation(), this.getTermOperations(), "operation", null, 1, 1,
+        this.initEReference(this.getTermExpression_Right(), this.getProduct(), null, "right", null, 1, 1,
+                TermExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getTermExpression_Operation(), this.getTermOperations(), "operation", null, 1, 1,
                 TermExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(productExpressionEClass, ProductExpression.class, "ProductExpression", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getProductExpression_Left(), this.getProduct(), null, "left", null, 1, 1,
+        this.initEClass(this.productExpressionEClass, ProductExpression.class, "ProductExpression", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getProductExpression_Left(), this.getProduct(), null, "left", null, 1, 1,
                 ProductExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getProductExpression_Right(), this.getPower(), null, "right", null, 1, 1,
+        this.initEReference(this.getProductExpression_Right(), this.getPower(), null, "right", null, 1, 1,
                 ProductExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getProductExpression_Operation(), this.getProductOperations(), "operation", null, 1, 1,
-                ProductExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getProductExpression_Operation(), this.getProductOperations(), "operation", null, 1,
+                1, ProductExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(probabilityFunctionLiteralEClass, ProbabilityFunctionLiteral.class, "ProbabilityFunctionLiteral",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getProbabilityFunctionLiteral_Function_ProbabilityFunctionLiteral(),
+        this.initEClass(this.probabilityFunctionLiteralEClass, ProbabilityFunctionLiteral.class,
+                "ProbabilityFunctionLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getProbabilityFunctionLiteral_Function_ProbabilityFunctionLiteral(),
                 theProbfunctionPackage.getProbabilityFunction(), null, "function_ProbabilityFunctionLiteral", null, 1,
                 1, ProbabilityFunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(parenthesisEClass, Parenthesis.class, "Parenthesis", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.parenthesisEClass, Parenthesis.class, "Parenthesis", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getParenthesis_InnerExpression(), this.getExpression(), null, "innerExpression", null, 1, 1,
-                Parenthesis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        this.initEReference(this.getParenthesis_InnerExpression(), this.getExpression(), null, "innerExpression", null,
+                1, 1, Parenthesis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(numericLiteralEClass, NumericLiteral.class, "NumericLiteral", IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.numericLiteralEClass, NumericLiteral.class, "NumericLiteral", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getIntLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, IntLiteral.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        initEClass(doubleLiteralEClass, DoubleLiteral.class, "DoubleLiteral", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getDoubleLiteral_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, DoubleLiteral.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        initEClass(compareExpressionEClass, CompareExpression.class, "CompareExpression", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getCompareExpression_Left(), this.getTerm(), null, "left", null, 1, 1, CompareExpression.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getCompareExpression_Right(), this.getTerm(), null, "right", null, 1, 1,
-                CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getCompareExpression_Operation(), this.getCompareOperations(), "operation", null, 1, 1,
-                CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        this.initEAttribute(this.getIntLiteral_Value(), this.ecorePackage.getEInt(), "value", null, 1, 1,
+                IntLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(boolLiteralEClass, BoolLiteral.class, "BoolLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.doubleLiteralEClass, DoubleLiteral.class, "DoubleLiteral", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getBoolLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, BoolLiteral.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getDoubleLiteral_Value(), this.ecorePackage.getEDouble(), "value", null, 1, 1,
+                DoubleLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, StringLiteral.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        initEClass(powerExpressionEClass, PowerExpression.class, "PowerExpression", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getPowerExpression_Base(), this.getPower(), null, "base", null, 1, 1, PowerExpression.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+        this.initEClass(this.compareExpressionEClass, CompareExpression.class, "CompareExpression", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getCompareExpression_Left(), this.getTerm(), null, "left", null, 1, 1,
+                CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getCompareExpression_Right(), this.getTerm(), null, "right", null, 1, 1,
+                CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getCompareExpression_Operation(), this.getCompareOperations(), "operation", null, 1,
+                1, CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getPowerExpression_Exponent(), this.getUnary(), null, "exponent", null, 1, 1,
+
+        this.initEClass(this.boolLiteralEClass, BoolLiteral.class, "BoolLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getBoolLiteral_Value(), this.ecorePackage.getEBoolean(), "value", null, 1, 1,
+                BoolLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+
+        this.initEClass(this.stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getStringLiteral_Value(), this.ecorePackage.getEString(), "value", null, 1, 1,
+                StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+
+        this.initEClass(this.powerExpressionEClass, PowerExpression.class, "PowerExpression", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getPowerExpression_Base(), this.getPower(), null, "base", null, 1, 1,
+                PowerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getPowerExpression_Exponent(), this.getUnary(), null, "exponent", null, 1, 1,
                 PowerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(booleanOperatorExpressionEClass, BooleanOperatorExpression.class, "BooleanOperatorExpression",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBooleanOperatorExpression_Left(), this.getBooleanExpression(), null, "left", null, 1, 1,
-                BooleanOperatorExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        this.initEClass(this.booleanOperatorExpressionEClass, BooleanOperatorExpression.class,
+                "BooleanOperatorExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getBooleanOperatorExpression_Left(), this.getBooleanExpression(), null, "left", null,
+                1, 1, BooleanOperatorExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBooleanOperatorExpression_Right(), this.getBooleanExpression(), null, "right", null, 1, 1,
-                BooleanOperatorExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        this.initEReference(this.getBooleanOperatorExpression_Right(), this.getBooleanExpression(), null, "right",
+                null, 1, 1, BooleanOperatorExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBooleanOperatorExpression_Operation(), this.getBooleanOperations(), "operation", null, 1, 1,
-                BooleanOperatorExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getBooleanOperatorExpression_Operation(), this.getBooleanOperations(), "operation",
+                null, 1, 1, BooleanOperatorExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(notExpressionEClass, NotExpression.class, "NotExpression", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.notExpressionEClass, NotExpression.class, "NotExpression", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getNotExpression_Inner(), this.getUnary(), null, "inner", null, 1, 1, NotExpression.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getNotExpression_Inner(), this.getUnary(), null, "inner", null, 1, 1,
+                NotExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(negativeExpressionEClass, NegativeExpression.class, "NegativeExpression", !IS_ABSTRACT,
+        this.initEClass(this.negativeExpressionEClass, NegativeExpression.class, "NegativeExpression", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getNegativeExpression_Inner(), this.getUnary(), null, "inner", null, 1, 1,
+        this.initEReference(this.getNegativeExpression_Inner(), this.getUnary(), null, "inner", null, 1, 1,
                 NegativeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(functionLiteralEClass, FunctionLiteral.class, "FunctionLiteral", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getFunctionLiteral_Id(), ecorePackage.getEString(), "id", null, 1, 1, FunctionLiteral.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getFunctionLiteral_Parameters_FunctionLiteral(), this.getExpression(), null,
+        this.initEClass(this.functionLiteralEClass, FunctionLiteral.class, "FunctionLiteral", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getFunctionLiteral_Id(), this.ecorePackage.getEString(), "id", null, 1, 1,
+                FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getFunctionLiteral_Parameters_FunctionLiteral(), this.getExpression(), null,
                 "parameters_FunctionLiteral", null, 0, -1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(ifElseExpressionEClass, IfElseExpression.class, "IfElseExpression", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getIfElseExpression_IfExpression(), this.getBooleanExpression(), null, "ifExpression", null, 1,
-                1, IfElseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        this.initEClass(this.ifElseExpressionEClass, IfElseExpression.class, "IfElseExpression", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getIfElseExpression_IfExpression(), this.getBooleanExpression(), null, "ifExpression",
+                null, 1, 1, IfElseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getIfElseExpression_ElseExpression(), this.getBooleanExpression(), null, "elseExpression", null,
-                1, 1, IfElseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getIfElseExpression_ConditionExpression(), this.getBooleanExpression(), null,
+        this.initEReference(this.getIfElseExpression_ElseExpression(), this.getBooleanExpression(), null,
+                "elseExpression", null, 1, 1, IfElseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getIfElseExpression_ConditionExpression(), this.getBooleanExpression(), null,
                 "conditionExpression", null, 1, 1, IfElseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(randomVariableEClass, RandomVariable.class, "RandomVariable", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.randomVariableEClass, RandomVariable.class, "RandomVariable", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getRandomVariable_Specification(), ecorePackage.getEString(), "specification", null, 1, 1,
-                RandomVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
-        initEReference(getRandomVariable_Expression(), this.getExpression(), null, "expression", null, 1, 1,
+        this.initEAttribute(this.getRandomVariable_Specification(), this.ecorePackage.getEString(), "specification",
+                null, 1, 1, RandomVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getRandomVariable_Expression(), this.getExpression(), null, "expression", null, 1, 1,
                 RandomVariable.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
         // Initialize enums and add enum literals
-        initEEnum(termOperationsEEnum, TermOperations.class, "TermOperations");
-        addEEnumLiteral(termOperationsEEnum, TermOperations.ADD);
-        addEEnumLiteral(termOperationsEEnum, TermOperations.SUB);
+        this.initEEnum(this.termOperationsEEnum, TermOperations.class, "TermOperations");
+        this.addEEnumLiteral(this.termOperationsEEnum, TermOperations.ADD);
+        this.addEEnumLiteral(this.termOperationsEEnum, TermOperations.SUB);
 
-        initEEnum(productOperationsEEnum, ProductOperations.class, "ProductOperations");
-        addEEnumLiteral(productOperationsEEnum, ProductOperations.MULT);
-        addEEnumLiteral(productOperationsEEnum, ProductOperations.DIV);
-        addEEnumLiteral(productOperationsEEnum, ProductOperations.MOD);
+        this.initEEnum(this.productOperationsEEnum, ProductOperations.class, "ProductOperations");
+        this.addEEnumLiteral(this.productOperationsEEnum, ProductOperations.MULT);
+        this.addEEnumLiteral(this.productOperationsEEnum, ProductOperations.DIV);
+        this.addEEnumLiteral(this.productOperationsEEnum, ProductOperations.MOD);
 
-        initEEnum(compareOperationsEEnum, CompareOperations.class, "CompareOperations");
-        addEEnumLiteral(compareOperationsEEnum, CompareOperations.GREATER);
-        addEEnumLiteral(compareOperationsEEnum, CompareOperations.EQUALS);
-        addEEnumLiteral(compareOperationsEEnum, CompareOperations.LESS);
-        addEEnumLiteral(compareOperationsEEnum, CompareOperations.NOTEQUAL);
-        addEEnumLiteral(compareOperationsEEnum, CompareOperations.LESSEQUAL);
-        addEEnumLiteral(compareOperationsEEnum, CompareOperations.GREATEREQUAL);
+        this.initEEnum(this.compareOperationsEEnum, CompareOperations.class, "CompareOperations");
+        this.addEEnumLiteral(this.compareOperationsEEnum, CompareOperations.GREATER);
+        this.addEEnumLiteral(this.compareOperationsEEnum, CompareOperations.EQUALS);
+        this.addEEnumLiteral(this.compareOperationsEEnum, CompareOperations.LESS);
+        this.addEEnumLiteral(this.compareOperationsEEnum, CompareOperations.NOTEQUAL);
+        this.addEEnumLiteral(this.compareOperationsEEnum, CompareOperations.LESSEQUAL);
+        this.addEEnumLiteral(this.compareOperationsEEnum, CompareOperations.GREATEREQUAL);
 
-        initEEnum(booleanOperationsEEnum, BooleanOperations.class, "BooleanOperations");
-        addEEnumLiteral(booleanOperationsEEnum, BooleanOperations.AND);
-        addEEnumLiteral(booleanOperationsEEnum, BooleanOperations.OR);
-        addEEnumLiteral(booleanOperationsEEnum, BooleanOperations.XOR);
+        this.initEEnum(this.booleanOperationsEEnum, BooleanOperations.class, "BooleanOperations");
+        this.addEEnumLiteral(this.booleanOperationsEEnum, BooleanOperations.AND);
+        this.addEEnumLiteral(this.booleanOperationsEEnum, BooleanOperations.OR);
+        this.addEEnumLiteral(this.booleanOperationsEEnum, BooleanOperations.XOR);
 
         // Create resource
-        createResource(eNS_URI);
+        this.createResource(eNS_URI);
 
         // Create annotations
         // http:///org/eclipse/emf/ecore/util/ExtendedMetaData
-        createExtendedMetaDataAnnotations();
+        this.createExtendedMetaDataAnnotations();
     }
 
     /**
      * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void createExtendedMetaDataAnnotations() {
-        String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-        addAnnotation(getRandomVariable_Expression(), source, new String[] {
-                "name", "", "namespace", ""
-        });
+        final String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
+        this.addAnnotation(this.getRandomVariable_Expression(), source, new String[] { "name", "", "namespace", "" });
     }
 
 } // StoexPackageImpl

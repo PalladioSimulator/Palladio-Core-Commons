@@ -9,10 +9,10 @@ package de.uka.ipd.sdq.stoex.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
 import de.uka.ipd.sdq.stoex.StoexPackage;
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -27,10 +27,10 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  *
  * @generated
  */
-public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImpl implements AbstractNamedReference {
+public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Container implements AbstractNamedReference {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +38,7 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
     /**
      * The default value of the '{@link #getReferenceName() <em>Reference Name</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getReferenceName()
      * @generated
      * @ordered
@@ -48,7 +48,7 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
     /**
      * The cached value of the '{@link #getReferenceName() <em>Reference Name</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getReferenceName()
      * @generated
      * @ordered
@@ -57,7 +57,7 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AbstractNamedReferenceImpl() {
@@ -66,7 +66,7 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -76,50 +76,53 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getReferenceName() {
-        return referenceName;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setReferenceName(String newReferenceName) {
-        String oldReferenceName = referenceName;
-        referenceName = newReferenceName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, oldReferenceName, referenceName));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public String getReferenceName() {
+        return this.referenceName;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setReferenceName(final String newReferenceName) {
+        final String oldReferenceName = this.referenceName;
+        this.referenceName = newReferenceName;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, oldReferenceName, this.referenceName));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
-            return getReferenceName();
+            return this.getReferenceName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
-            setReferenceName((String) newValue);
+            this.setReferenceName((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -127,14 +130,14 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
-            setReferenceName(REFERENCE_NAME_EDEFAULT);
+            this.setReferenceName(REFERENCE_NAME_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -142,32 +145,33 @@ public abstract class AbstractNamedReferenceImpl extends EStereotypableObjectImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
-            return REFERENCE_NAME_EDEFAULT == null ? referenceName != null : !REFERENCE_NAME_EDEFAULT
-                    .equals(referenceName);
+            return REFERENCE_NAME_EDEFAULT == null ? this.referenceName != null : !REFERENCE_NAME_EDEFAULT
+                    .equals(this.referenceName);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (referenceName: ");
-        result.append(referenceName);
+        result.append(this.referenceName);
         result.append(')');
         return result.toString();
     }

@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Boolean Operations</b></em>', and utility methods for working with them. <!-- end-user-doc
  * -->
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getBooleanOperations()
  * @model
  * @generated
@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum BooleanOperations implements Enumerator {
     /**
      * The '<em><b>AND</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #AND_VALUE
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * The '<em><b>OR</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #OR_VALUE
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * The '<em><b>XOR</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #XOR_VALUE
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -63,7 +63,7 @@ public enum BooleanOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #AND
      * @model
      * @generated
@@ -78,7 +78,7 @@ public enum BooleanOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #OR
      * @model
      * @generated
@@ -93,7 +93,7 @@ public enum BooleanOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #XOR
      * @model
      * @generated
@@ -104,17 +104,15 @@ public enum BooleanOperations implements Enumerator {
     /**
      * An array of all the '<em><b>Boolean Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private static final BooleanOperations[] VALUES_ARRAY = new BooleanOperations[] {
-            AND, OR, XOR,
-    };
+    private static final BooleanOperations[] VALUES_ARRAY = new BooleanOperations[] { AND, OR, XOR, };
 
     /**
      * A public read-only list of all the '<em><b>Boolean Operations</b></em>' enumerators. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final List<BooleanOperations> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -122,12 +120,11 @@ public enum BooleanOperations implements Enumerator {
     /**
      * Returns the '<em><b>Boolean Operations</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static BooleanOperations get(String literal) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            BooleanOperations result = VALUES_ARRAY[i];
+    public static BooleanOperations get(final String literal) {
+        for (final BooleanOperations result : VALUES_ARRAY) {
             if (result.toString().equals(literal)) {
                 return result;
             }
@@ -138,12 +135,11 @@ public enum BooleanOperations implements Enumerator {
     /**
      * Returns the '<em><b>Boolean Operations</b></em>' literal with the specified name. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static BooleanOperations getByName(String name) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            BooleanOperations result = VALUES_ARRAY[i];
+    public static BooleanOperations getByName(final String name) {
+        for (final BooleanOperations result : VALUES_ARRAY) {
             if (result.getName().equals(name)) {
                 return result;
             }
@@ -154,10 +150,10 @@ public enum BooleanOperations implements Enumerator {
     /**
      * Returns the '<em><b>Boolean Operations</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static BooleanOperations get(int value) {
+    public static BooleanOperations get(final int value) {
         switch (value) {
         case AND_VALUE:
             return AND;
@@ -171,31 +167,31 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private BooleanOperations(int value, String name, String literal) {
+    private BooleanOperations(final int value, final String name, final String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
@@ -203,40 +199,43 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getLiteral() {
-        return literal;
+        return this.literal;
     }
 
     /**
      * Returns the literal value of the enumerator, which is its string representation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        return literal;
+        return this.literal;
     }
 
 } // BooleanOperations

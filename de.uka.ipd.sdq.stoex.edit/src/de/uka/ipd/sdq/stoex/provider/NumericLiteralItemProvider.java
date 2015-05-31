@@ -19,7 +19,7 @@ import de.uka.ipd.sdq.units.provider.UnitCarryingElementItemProvider;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.NumericLiteral} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class NumericLiteralItemProvider extends UnitCarryingElementItemProvider {
@@ -36,7 +36,7 @@ public class NumericLiteralItemProvider extends UnitCarryingElementItemProvider 
      * 
      * @generated
      */
-    public NumericLiteralItemProvider(AdapterFactory adapterFactory) {
+    public NumericLiteralItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -47,23 +47,23 @@ public class NumericLiteralItemProvider extends UnitCarryingElementItemProvider 
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        return getString("_UI_NumericLiteral_type");
+    public String getText(final Object object) {
+        return this.getString("_UI_NumericLiteral_type");
     }
 
     /**
@@ -74,8 +74,8 @@ public class NumericLiteralItemProvider extends UnitCarryingElementItemProvider 
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
         super.notifyChanged(notification);
     }
 
@@ -86,7 +86,7 @@ public class NumericLiteralItemProvider extends UnitCarryingElementItemProvider 
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

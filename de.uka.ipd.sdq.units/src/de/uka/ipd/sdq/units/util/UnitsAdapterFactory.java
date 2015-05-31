@@ -6,11 +6,12 @@
  */
 package de.uka.ipd.sdq.units.util;
 
-import de.uka.ipd.sdq.units.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.Unit;
@@ -24,27 +25,27 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see de.uka.ipd.sdq.units.UnitsPackage
  * @generated
  */
 public class UnitsAdapterFactory extends AdapterFactoryImpl {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static UnitsPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UnitsAdapterFactory() {
@@ -57,12 +58,12 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object object) {
+    public boolean isFactoryForType(final Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -75,62 +76,72 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitsSwitch<Adapter> modelSwitch = new UnitsSwitch<Adapter>() {
         @Override
-        public Adapter caseUnitCarryingElement(UnitCarryingElement object) {
-            return createUnitCarryingElementAdapter();
+        public Adapter caseUnitCarryingElement(final UnitCarryingElement object) {
+            return UnitsAdapterFactory.this.createUnitCarryingElementAdapter();
         }
 
         @Override
-        public Adapter caseUnit(Unit object) {
-            return createUnitAdapter();
+        public Adapter caseUnit(final Unit object) {
+            return UnitsAdapterFactory.this.createUnitAdapter();
         }
 
         @Override
-        public Adapter caseBaseUnit(BaseUnit object) {
-            return createBaseUnitAdapter();
+        public Adapter caseBaseUnit(final BaseUnit object) {
+            return UnitsAdapterFactory.this.createBaseUnitAdapter();
         }
 
         @Override
-        public Adapter caseUnitRepository(UnitRepository object) {
-            return createUnitRepositoryAdapter();
+        public Adapter caseUnitRepository(final UnitRepository object) {
+            return UnitsAdapterFactory.this.createUnitRepositoryAdapter();
         }
 
         @Override
-        public Adapter caseUnitMultiplication(UnitMultiplication object) {
-            return createUnitMultiplicationAdapter();
+        public Adapter caseUnitMultiplication(final UnitMultiplication object) {
+            return UnitsAdapterFactory.this.createUnitMultiplicationAdapter();
         }
 
         @Override
-        public Adapter caseUnitPower(UnitPower object) {
-            return createUnitPowerAdapter();
+        public Adapter caseUnitPower(final UnitPower object) {
+            return UnitsAdapterFactory.this.createUnitPowerAdapter();
         }
 
         @Override
-        public Adapter caseUnitDivision(UnitDivision object) {
-            return createUnitDivisionAdapter();
+        public Adapter caseUnitDivision(final UnitDivision object) {
+            return UnitsAdapterFactory.this.createUnitDivisionAdapter();
         }
 
         @Override
-        public Adapter defaultCase(EObject object) {
-            return createEObjectAdapter();
+        public Adapter caseEModelElement(final EModelElement object) {
+            return UnitsAdapterFactory.this.createEModelElementAdapter();
+        }
+
+        @Override
+        public Adapter caseStereotypableElement(final StereotypableElement object) {
+            return UnitsAdapterFactory.this.createStereotypableElementAdapter();
+        }
+
+        @Override
+        public Adapter defaultCase(final EObject object) {
+            return UnitsAdapterFactory.this.createEObjectAdapter();
         }
     };
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
      */
     @Override
-    public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(final Notifier target) {
+        return this.modelSwitch.doSwitch((EObject) target);
     }
 
     /**
@@ -139,7 +150,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitCarryingElement
      * @generated
@@ -153,7 +164,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.Unit
      * @generated
@@ -167,7 +178,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * <em>Base Unit</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.BaseUnit
      * @generated
@@ -181,7 +192,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * <em>Unit Repository</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitRepository
      * @generated
@@ -195,7 +206,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * <em>Unit Multiplication</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitMultiplication
      * @generated
@@ -209,7 +220,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * <em>Unit Power</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitPower
      * @generated
@@ -223,7 +234,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * <em>Unit Division</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitDivision
      * @generated
@@ -233,9 +244,38 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement
+     * <em>EModel Element</em>}'. <!-- begin-user-doc --> This default implementation returns null
+     * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
+     * all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.eclipse.emf.ecore.EModelElement
+     * @generated
+     */
+    public Adapter createEModelElementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * <em>Stereotypable Element</em>}'. <!-- begin-user-doc --> This default implementation returns
+     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
+     * catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * @generated
+     */
+    public Adapter createStereotypableElementAdapter() {
+        return null;
+    }
+
+    /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @generated
      */

@@ -34,14 +34,14 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplication {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getUnits()
      * @generated
      * @ordered
@@ -50,7 +50,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitMultiplicationImpl() {
@@ -59,7 +59,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -69,56 +69,58 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EList<Unit> getUnits() {
-        if (units == null) {
-            units = new EObjectContainmentEList<Unit>(Unit.class, this, UnitsPackage.UNIT_MULTIPLICATION__UNITS);
+        if (this.units == null) {
+            this.units = new EObjectContainmentEList<Unit>(Unit.class, this, UnitsPackage.UNIT_MULTIPLICATION__UNITS);
         }
-        return units;
+        return this.units;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-            return ((InternalEList<?>) getUnits()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getUnits()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-            return getUnits();
+            return this.getUnits();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-            getUnits().clear();
-            getUnits().addAll((Collection<? extends Unit>) newValue);
+            this.getUnits().clear();
+            this.getUnits().addAll((Collection<? extends Unit>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -126,14 +128,14 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-            getUnits().clear();
+            this.getUnits().clear();
             return;
         }
         super.eUnset(featureID);
@@ -141,14 +143,14 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-            return units != null && !units.isEmpty();
+            return this.units != null && !this.units.isEmpty();
         }
         return super.eIsSet(featureID);
     }

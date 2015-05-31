@@ -33,7 +33,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -47,7 +47,7 @@ public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter impl
      * 
      * @generated
      */
-    public AbstractNamedReferenceItemProvider(AdapterFactory adapterFactory) {
+    public AbstractNamedReferenceItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -58,13 +58,13 @@ public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter impl
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addReferenceNamePropertyDescriptor(object);
+            this.addReferenceNamePropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -73,28 +73,27 @@ public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter impl
      * 
      * @generated
      */
-    protected void addReferenceNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_AbstractNamedReference_referenceName_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_AbstractNamedReference_referenceName_feature",
+    protected void addReferenceNamePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AbstractNamedReference_referenceName_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_AbstractNamedReference_referenceName_feature",
                         "_UI_AbstractNamedReference_type"),
-                StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((AbstractNamedReference) object).getReferenceName();
-        return label == null || label.length() == 0 ? getString("_UI_AbstractNamedReference_type")
-                : getString("_UI_AbstractNamedReference_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((AbstractNamedReference) object).getReferenceName();
+        return label == null || label.length() == 0 ? this.getString("_UI_AbstractNamedReference_type") : this
+                .getString("_UI_AbstractNamedReference_type") + " " + label;
     }
 
     /**
@@ -105,12 +104,12 @@ public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter impl
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(AbstractNamedReference.class)) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -123,7 +122,7 @@ public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter impl
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

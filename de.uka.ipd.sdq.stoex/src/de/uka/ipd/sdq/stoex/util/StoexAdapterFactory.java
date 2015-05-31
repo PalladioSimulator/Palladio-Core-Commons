@@ -9,7 +9,9 @@ package de.uka.ipd.sdq.stoex.util;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
 import de.uka.ipd.sdq.stoex.Atom;
@@ -47,27 +49,27 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see de.uka.ipd.sdq.stoex.StoexPackage
  * @generated
  */
 public class StoexAdapterFactory extends AdapterFactoryImpl {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static StoexPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public StoexAdapterFactory() {
@@ -80,12 +82,12 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object object) {
+    public boolean isFactoryForType(final Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -98,182 +100,192 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected StoexSwitch<Adapter> modelSwitch = new StoexSwitch<Adapter>() {
         @Override
-        public Adapter caseVariableReference(VariableReference object) {
-            return createVariableReferenceAdapter();
+        public Adapter caseVariableReference(final VariableReference object) {
+            return StoexAdapterFactory.this.createVariableReferenceAdapter();
         }
 
         @Override
-        public Adapter caseAbstractNamedReference(AbstractNamedReference object) {
-            return createAbstractNamedReferenceAdapter();
+        public Adapter caseAbstractNamedReference(final AbstractNamedReference object) {
+            return StoexAdapterFactory.this.createAbstractNamedReferenceAdapter();
         }
 
         @Override
-        public Adapter caseNamespaceReference(NamespaceReference object) {
-            return createNamespaceReferenceAdapter();
+        public Adapter caseNamespaceReference(final NamespaceReference object) {
+            return StoexAdapterFactory.this.createNamespaceReferenceAdapter();
         }
 
         @Override
-        public Adapter caseVariable(Variable object) {
-            return createVariableAdapter();
+        public Adapter caseVariable(final Variable object) {
+            return StoexAdapterFactory.this.createVariableAdapter();
         }
 
         @Override
-        public Adapter caseAtom(Atom object) {
-            return createAtomAdapter();
+        public Adapter caseAtom(final Atom object) {
+            return StoexAdapterFactory.this.createAtomAdapter();
         }
 
         @Override
-        public Adapter caseUnary(Unary object) {
-            return createUnaryAdapter();
+        public Adapter caseUnary(final Unary object) {
+            return StoexAdapterFactory.this.createUnaryAdapter();
         }
 
         @Override
-        public Adapter casePower(Power object) {
-            return createPowerAdapter();
+        public Adapter casePower(final Power object) {
+            return StoexAdapterFactory.this.createPowerAdapter();
         }
 
         @Override
-        public Adapter caseProduct(Product object) {
-            return createProductAdapter();
+        public Adapter caseProduct(final Product object) {
+            return StoexAdapterFactory.this.createProductAdapter();
         }
 
         @Override
-        public Adapter caseTerm(Term object) {
-            return createTermAdapter();
+        public Adapter caseTerm(final Term object) {
+            return StoexAdapterFactory.this.createTermAdapter();
         }
 
         @Override
-        public Adapter caseComparison(Comparison object) {
-            return createComparisonAdapter();
+        public Adapter caseComparison(final Comparison object) {
+            return StoexAdapterFactory.this.createComparisonAdapter();
         }
 
         @Override
-        public Adapter caseBooleanExpression(BooleanExpression object) {
-            return createBooleanExpressionAdapter();
+        public Adapter caseBooleanExpression(final BooleanExpression object) {
+            return StoexAdapterFactory.this.createBooleanExpressionAdapter();
         }
 
         @Override
-        public Adapter caseIfElse(IfElse object) {
-            return createIfElseAdapter();
+        public Adapter caseIfElse(final IfElse object) {
+            return StoexAdapterFactory.this.createIfElseAdapter();
         }
 
         @Override
-        public Adapter caseExpression(Expression object) {
-            return createExpressionAdapter();
+        public Adapter caseExpression(final Expression object) {
+            return StoexAdapterFactory.this.createExpressionAdapter();
         }
 
         @Override
-        public Adapter caseTermExpression(TermExpression object) {
-            return createTermExpressionAdapter();
+        public Adapter caseTermExpression(final TermExpression object) {
+            return StoexAdapterFactory.this.createTermExpressionAdapter();
         }
 
         @Override
-        public Adapter caseProductExpression(ProductExpression object) {
-            return createProductExpressionAdapter();
+        public Adapter caseProductExpression(final ProductExpression object) {
+            return StoexAdapterFactory.this.createProductExpressionAdapter();
         }
 
         @Override
-        public Adapter caseProbabilityFunctionLiteral(ProbabilityFunctionLiteral object) {
-            return createProbabilityFunctionLiteralAdapter();
+        public Adapter caseProbabilityFunctionLiteral(final ProbabilityFunctionLiteral object) {
+            return StoexAdapterFactory.this.createProbabilityFunctionLiteralAdapter();
         }
 
         @Override
-        public Adapter caseParenthesis(Parenthesis object) {
-            return createParenthesisAdapter();
+        public Adapter caseParenthesis(final Parenthesis object) {
+            return StoexAdapterFactory.this.createParenthesisAdapter();
         }
 
         @Override
-        public Adapter caseNumericLiteral(NumericLiteral object) {
-            return createNumericLiteralAdapter();
+        public Adapter caseNumericLiteral(final NumericLiteral object) {
+            return StoexAdapterFactory.this.createNumericLiteralAdapter();
         }
 
         @Override
-        public Adapter caseIntLiteral(IntLiteral object) {
-            return createIntLiteralAdapter();
+        public Adapter caseIntLiteral(final IntLiteral object) {
+            return StoexAdapterFactory.this.createIntLiteralAdapter();
         }
 
         @Override
-        public Adapter caseDoubleLiteral(DoubleLiteral object) {
-            return createDoubleLiteralAdapter();
+        public Adapter caseDoubleLiteral(final DoubleLiteral object) {
+            return StoexAdapterFactory.this.createDoubleLiteralAdapter();
         }
 
         @Override
-        public Adapter caseCompareExpression(CompareExpression object) {
-            return createCompareExpressionAdapter();
+        public Adapter caseCompareExpression(final CompareExpression object) {
+            return StoexAdapterFactory.this.createCompareExpressionAdapter();
         }
 
         @Override
-        public Adapter caseBoolLiteral(BoolLiteral object) {
-            return createBoolLiteralAdapter();
+        public Adapter caseBoolLiteral(final BoolLiteral object) {
+            return StoexAdapterFactory.this.createBoolLiteralAdapter();
         }
 
         @Override
-        public Adapter caseStringLiteral(StringLiteral object) {
-            return createStringLiteralAdapter();
+        public Adapter caseStringLiteral(final StringLiteral object) {
+            return StoexAdapterFactory.this.createStringLiteralAdapter();
         }
 
         @Override
-        public Adapter casePowerExpression(PowerExpression object) {
-            return createPowerExpressionAdapter();
+        public Adapter casePowerExpression(final PowerExpression object) {
+            return StoexAdapterFactory.this.createPowerExpressionAdapter();
         }
 
         @Override
-        public Adapter caseBooleanOperatorExpression(BooleanOperatorExpression object) {
-            return createBooleanOperatorExpressionAdapter();
+        public Adapter caseBooleanOperatorExpression(final BooleanOperatorExpression object) {
+            return StoexAdapterFactory.this.createBooleanOperatorExpressionAdapter();
         }
 
         @Override
-        public Adapter caseNotExpression(NotExpression object) {
-            return createNotExpressionAdapter();
+        public Adapter caseNotExpression(final NotExpression object) {
+            return StoexAdapterFactory.this.createNotExpressionAdapter();
         }
 
         @Override
-        public Adapter caseNegativeExpression(NegativeExpression object) {
-            return createNegativeExpressionAdapter();
+        public Adapter caseNegativeExpression(final NegativeExpression object) {
+            return StoexAdapterFactory.this.createNegativeExpressionAdapter();
         }
 
         @Override
-        public Adapter caseFunctionLiteral(FunctionLiteral object) {
-            return createFunctionLiteralAdapter();
+        public Adapter caseFunctionLiteral(final FunctionLiteral object) {
+            return StoexAdapterFactory.this.createFunctionLiteralAdapter();
         }
 
         @Override
-        public Adapter caseIfElseExpression(IfElseExpression object) {
-            return createIfElseExpressionAdapter();
+        public Adapter caseIfElseExpression(final IfElseExpression object) {
+            return StoexAdapterFactory.this.createIfElseExpressionAdapter();
         }
 
         @Override
-        public Adapter caseRandomVariable(RandomVariable object) {
-            return createRandomVariableAdapter();
+        public Adapter caseRandomVariable(final RandomVariable object) {
+            return StoexAdapterFactory.this.createRandomVariableAdapter();
         }
 
         @Override
-        public Adapter caseUnitCarryingElement(UnitCarryingElement object) {
-            return createUnitCarryingElementAdapter();
+        public Adapter caseEModelElement(final EModelElement object) {
+            return StoexAdapterFactory.this.createEModelElementAdapter();
         }
 
         @Override
-        public Adapter defaultCase(EObject object) {
-            return createEObjectAdapter();
+        public Adapter caseStereotypableElement(final StereotypableElement object) {
+            return StoexAdapterFactory.this.createStereotypableElementAdapter();
+        }
+
+        @Override
+        public Adapter caseUnitCarryingElement(final UnitCarryingElement object) {
+            return StoexAdapterFactory.this.createUnitCarryingElementAdapter();
+        }
+
+        @Override
+        public Adapter defaultCase(final EObject object) {
+            return StoexAdapterFactory.this.createEObjectAdapter();
         }
     };
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
      */
     @Override
-    public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(final Notifier target) {
+        return this.modelSwitch.doSwitch((EObject) target);
     }
 
     /**
@@ -281,7 +293,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Variable Reference</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.VariableReference
      * @generated
@@ -296,7 +308,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.AbstractNamedReference
      * @generated
@@ -310,7 +322,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Namespace Reference</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NamespaceReference
      * @generated
@@ -324,7 +336,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Variable</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Variable
      * @generated
@@ -338,7 +350,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Atom
      * @generated
@@ -352,7 +364,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Unary</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
      * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Unary
      * @generated
@@ -366,7 +378,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Power</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
      * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Power
      * @generated
@@ -380,7 +392,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Product</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Product
      * @generated
@@ -394,7 +406,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Term
      * @generated
@@ -408,7 +420,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Comparison</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Comparison
      * @generated
@@ -422,7 +434,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Boolean Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.BooleanExpression
      * @generated
@@ -436,7 +448,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>If Else</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.IfElse
      * @generated
@@ -450,7 +462,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Expression
      * @generated
@@ -464,7 +476,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Term Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.TermExpression
      * @generated
@@ -478,7 +490,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Random Variable</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.RandomVariable
      * @generated
@@ -488,11 +500,40 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement
+     * <em>EModel Element</em>}'. <!-- begin-user-doc --> This default implementation returns null
+     * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
+     * all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.eclipse.emf.ecore.EModelElement
+     * @generated
+     */
+    public Adapter createEModelElementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * <em>Stereotypable Element</em>}'. <!-- begin-user-doc --> This default implementation returns
+     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
+     * catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * @generated
+     */
+    public Adapter createStereotypableElementAdapter() {
+        return null;
+    }
+
+    /**
      * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.stoex.ProductExpression
      * <em>Product Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.ProductExpression
      * @generated
@@ -507,7 +548,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral
      * @generated
@@ -521,7 +562,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Parenthesis</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Parenthesis
      * @generated
@@ -535,7 +576,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Numeric Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NumericLiteral
      * @generated
@@ -549,7 +590,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Int Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.IntLiteral
      * @generated
@@ -563,7 +604,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Double Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.DoubleLiteral
      * @generated
@@ -577,7 +618,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Compare Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.CompareExpression
      * @generated
@@ -591,7 +632,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Bool Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.BoolLiteral
      * @generated
@@ -605,7 +646,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>String Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.StringLiteral
      * @generated
@@ -619,7 +660,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Power Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.PowerExpression
      * @generated
@@ -634,7 +675,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.BooleanOperatorExpression
      * @generated
@@ -648,7 +689,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Not Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NotExpression
      * @generated
@@ -662,7 +703,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Negative Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NegativeExpression
      * @generated
@@ -676,7 +717,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Function Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.FunctionLiteral
      * @generated
@@ -690,7 +731,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>If Else Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.IfElseExpression
      * @generated
@@ -705,7 +746,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitCarryingElement
      * @generated
@@ -717,7 +758,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @generated
      */

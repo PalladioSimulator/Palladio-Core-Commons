@@ -32,38 +32,36 @@ import de.uka.ipd.sdq.probfunction.StringSample;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
  * @generated
  */
 public class ProbfunctionFactoryImpl extends EFactoryImpl implements ProbfunctionFactory {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates the default factory implementation.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public static ProbfunctionFactory init() {
         try {
-            ProbfunctionFactory theProbfunctionFactory = (ProbfunctionFactory) EPackage.Registry.INSTANCE
-                    .getEFactory(ProbfunctionPackage.eNS_URI);
+            ProbfunctionFactory theProbfunctionFactory = (ProbfunctionFactory)EPackage.Registry.INSTANCE.getEFactory(ProbfunctionPackage.eNS_URI);
             if (theProbfunctionFactory != null) {
                 return theProbfunctionFactory;
             }
-        } catch (Exception exception) {
+        }
+        catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new ProbfunctionFactoryImpl();
     }
 
     /**
-     * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates an instance of the factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public ProbfunctionFactoryImpl() {
@@ -72,48 +70,32 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case ProbfunctionPackage.BOXED_PDF:
-            return createBoxedPDF();
-        case ProbfunctionPackage.CONTINUOUS_SAMPLE:
-            return createContinuousSample();
-        case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION:
-            return createProbabilityMassFunction();
-        case ProbfunctionPackage.SAMPLE:
-            return createSample();
-        case ProbfunctionPackage.SAMPLE_PDF:
-            return createSamplePDF();
-        case ProbfunctionPackage.COMPLEX:
-            return createComplex();
-        case ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION:
-            return createExponentialDistribution();
-        case ProbfunctionPackage.NORMAL_DISTRIBUTION:
-            return createNormalDistribution();
-        case ProbfunctionPackage.LOGNORMAL_DISTRIBUTION:
-            return createLognormalDistribution();
-        case ProbfunctionPackage.GAMMA_DISTRIBUTION:
-            return createGammaDistribution();
-        case ProbfunctionPackage.INT_SAMPLE:
-            return createIntSample();
-        case ProbfunctionPackage.BOOL_SAMPLE:
-            return createBoolSample();
-        case ProbfunctionPackage.DOUBLE_SAMPLE:
-            return createDoubleSample();
-        case ProbfunctionPackage.STRING_SAMPLE:
-            return createStringSample();
-        default:
-            throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+            case ProbfunctionPackage.BOXED_PDF: return createBoxedPDF();
+            case ProbfunctionPackage.CONTINUOUS_SAMPLE: return createContinuousSample();
+            case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION: return createProbabilityMassFunction();
+            case ProbfunctionPackage.SAMPLE: return createSample();
+            case ProbfunctionPackage.SAMPLE_PDF: return createSamplePDF();
+            case ProbfunctionPackage.COMPLEX: return createComplex();
+            case ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION: return createExponentialDistribution();
+            case ProbfunctionPackage.NORMAL_DISTRIBUTION: return createNormalDistribution();
+            case ProbfunctionPackage.LOGNORMAL_DISTRIBUTION: return createLognormalDistribution();
+            case ProbfunctionPackage.GAMMA_DISTRIBUTION: return createGammaDistribution();
+            case ProbfunctionPackage.INT_SAMPLE: return createIntSample();
+            case ProbfunctionPackage.BOOL_SAMPLE: return createBoolSample();
+            case ProbfunctionPackage.DOUBLE_SAMPLE: return createDoubleSample();
+            case ProbfunctionPackage.STRING_SAMPLE: return createStringSample();
+            default:
+                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BoxedPDF createBoxedPDF() {
@@ -123,7 +105,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ContinuousSample createContinuousSample() {
@@ -133,7 +114,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ProbabilityMassFunction createProbabilityMassFunction() {
@@ -143,7 +123,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public <T> Sample<T> createSample() {
@@ -153,7 +132,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SamplePDF createSamplePDF() {
@@ -163,7 +141,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Complex createComplex() {
@@ -173,7 +150,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ExponentialDistribution createExponentialDistribution() {
@@ -183,7 +159,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public NormalDistribution createNormalDistribution() {
@@ -193,7 +168,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public LognormalDistribution createLognormalDistribution() {
@@ -203,7 +177,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public GammaDistribution createGammaDistribution() {
@@ -213,7 +186,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public IntSample createIntSample() {
@@ -223,7 +195,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BoolSample createBoolSample() {
@@ -233,7 +204,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public DoubleSample createDoubleSample() {
@@ -243,7 +213,6 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public StringSample createStringSample() {
@@ -253,16 +222,14 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ProbfunctionPackage getProbfunctionPackage() {
-        return (ProbfunctionPackage) getEPackage();
+        return (ProbfunctionPackage)getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @deprecated
      * @generated
      */

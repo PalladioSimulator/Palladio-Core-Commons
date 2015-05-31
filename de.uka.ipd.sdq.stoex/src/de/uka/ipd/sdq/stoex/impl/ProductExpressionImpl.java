@@ -35,7 +35,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 public class ProductExpressionImpl extends ProductImpl implements ProductExpression {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -43,7 +43,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
     /**
      * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getLeft()
      * @generated
      * @ordered
@@ -53,7 +53,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
     /**
      * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getRight()
      * @generated
      * @ordered
@@ -63,7 +63,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
     /**
      * The default value of the '{@link #getOperation() <em>Operation</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getOperation()
      * @generated
      * @ordered
@@ -73,7 +73,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
     /**
      * The cached value of the '{@link #getOperation() <em>Operation</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getOperation()
      * @generated
      * @ordered
@@ -82,7 +82,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProductExpressionImpl() {
@@ -91,7 +91,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -101,176 +101,194 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Product getLeft() {
-        return left;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetLeft(Product newLeft, NotificationChain msgs) {
-        Product oldLeft = left;
-        left = newLeft;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.PRODUCT_EXPRESSION__LEFT, oldLeft, newLeft);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setLeft(Product newLeft) {
-        if (newLeft != left) {
-            NotificationChain msgs = null;
-            if (left != null)
-                msgs = ((InternalEObject) left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PRODUCT_EXPRESSION__LEFT, null, msgs);
-            if (newLeft != null)
-                msgs = ((InternalEObject) newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PRODUCT_EXPRESSION__LEFT, null, msgs);
-            msgs = basicSetLeft(newLeft, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PRODUCT_EXPRESSION__LEFT, newLeft,
-                    newLeft));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Power getRight() {
-        return right;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetRight(Power newRight, NotificationChain msgs) {
-        Power oldRight = right;
-        right = newRight;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.PRODUCT_EXPRESSION__RIGHT, oldRight, newRight);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setRight(Power newRight) {
-        if (newRight != right) {
-            NotificationChain msgs = null;
-            if (right != null)
-                msgs = ((InternalEObject) right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PRODUCT_EXPRESSION__RIGHT, null, msgs);
-            if (newRight != null)
-                msgs = ((InternalEObject) newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PRODUCT_EXPRESSION__RIGHT, null, msgs);
-            msgs = basicSetRight(newRight, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PRODUCT_EXPRESSION__RIGHT, newRight,
-                    newRight));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public ProductOperations getOperation() {
-        return operation;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setOperation(ProductOperations newOperation) {
-        ProductOperations oldOperation = operation;
-        operation = newOperation == null ? OPERATION_EDEFAULT : newOperation;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PRODUCT_EXPRESSION__OPERATION,
-                    oldOperation, operation));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public Product getLeft() {
+        return this.left;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetLeft(final Product newLeft, NotificationChain msgs) {
+        final Product oldLeft = this.left;
+        this.left = newLeft;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.PRODUCT_EXPRESSION__LEFT, oldLeft, newLeft);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setLeft(final Product newLeft) {
+        if (newLeft != this.left) {
+            NotificationChain msgs = null;
+            if (this.left != null) {
+                msgs = ((InternalEObject) this.left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.PRODUCT_EXPRESSION__LEFT, null, msgs);
+            }
+            if (newLeft != null) {
+                msgs = ((InternalEObject) newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.PRODUCT_EXPRESSION__LEFT, null, msgs);
+            }
+            msgs = this.basicSetLeft(newLeft, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PRODUCT_EXPRESSION__LEFT, newLeft,
+                    newLeft));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Power getRight() {
+        return this.right;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetRight(final Power newRight, NotificationChain msgs) {
+        final Power oldRight = this.right;
+        this.right = newRight;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    StoexPackage.PRODUCT_EXPRESSION__RIGHT, oldRight, newRight);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setRight(final Power newRight) {
+        if (newRight != this.right) {
+            NotificationChain msgs = null;
+            if (this.right != null) {
+                msgs = ((InternalEObject) this.right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.PRODUCT_EXPRESSION__RIGHT, null, msgs);
+            }
+            if (newRight != null) {
+                msgs = ((InternalEObject) newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - StoexPackage.PRODUCT_EXPRESSION__RIGHT, null, msgs);
+            }
+            msgs = this.basicSetRight(newRight, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PRODUCT_EXPRESSION__RIGHT,
+                    newRight, newRight));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public ProductOperations getOperation() {
+        return this.operation;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setOperation(final ProductOperations newOperation) {
+        final ProductOperations oldOperation = this.operation;
+        this.operation = newOperation == null ? OPERATION_EDEFAULT : newOperation;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PRODUCT_EXPRESSION__OPERATION,
+                    oldOperation, this.operation));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.PRODUCT_EXPRESSION__LEFT:
-            return basicSetLeft(null, msgs);
+            return this.basicSetLeft(null, msgs);
         case StoexPackage.PRODUCT_EXPRESSION__RIGHT:
-            return basicSetRight(null, msgs);
+            return this.basicSetRight(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.PRODUCT_EXPRESSION__LEFT:
-            return getLeft();
+            return this.getLeft();
         case StoexPackage.PRODUCT_EXPRESSION__RIGHT:
-            return getRight();
+            return this.getRight();
         case StoexPackage.PRODUCT_EXPRESSION__OPERATION:
-            return getOperation();
+            return this.getOperation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.PRODUCT_EXPRESSION__LEFT:
-            setLeft((Product) newValue);
+            this.setLeft((Product) newValue);
             return;
         case StoexPackage.PRODUCT_EXPRESSION__RIGHT:
-            setRight((Power) newValue);
+            this.setRight((Power) newValue);
             return;
         case StoexPackage.PRODUCT_EXPRESSION__OPERATION:
-            setOperation((ProductOperations) newValue);
+            this.setOperation((ProductOperations) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -278,20 +296,20 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.PRODUCT_EXPRESSION__LEFT:
-            setLeft((Product) null);
+            this.setLeft((Product) null);
             return;
         case StoexPackage.PRODUCT_EXPRESSION__RIGHT:
-            setRight((Power) null);
+            this.setRight((Power) null);
             return;
         case StoexPackage.PRODUCT_EXPRESSION__OPERATION:
-            setOperation(OPERATION_EDEFAULT);
+            this.setOperation(OPERATION_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -299,35 +317,36 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.PRODUCT_EXPRESSION__LEFT:
-            return left != null;
+            return this.left != null;
         case StoexPackage.PRODUCT_EXPRESSION__RIGHT:
-            return right != null;
+            return this.right != null;
         case StoexPackage.PRODUCT_EXPRESSION__OPERATION:
-            return operation != OPERATION_EDEFAULT;
+            return this.operation != OPERATION_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (operation: ");
-        result.append(operation);
+        result.append(this.operation);
         result.append(')');
         return result.toString();
     }

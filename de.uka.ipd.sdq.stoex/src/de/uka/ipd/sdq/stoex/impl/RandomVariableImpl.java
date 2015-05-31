@@ -8,14 +8,13 @@ package de.uka.ipd.sdq.stoex.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.StoexPackage;
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Random Variable</b></em>'.
@@ -30,10 +29,10 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.impl.EStereotypableObjec
  *
  * @generated
  */
-public class RandomVariableImpl extends EStereotypableObjectImpl implements RandomVariable {
+public class RandomVariableImpl extends MinimalEObjectImpl.Container implements RandomVariable {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -41,7 +40,7 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
     /**
      * The default value of the '{@link #getSpecification() <em>Specification</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSpecification()
      * @generated
      * @ordered
@@ -51,7 +50,7 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
     /**
      * The cached value of the '{@link #getSpecification() <em>Specification</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSpecification()
      * @generated
      * @ordered
@@ -60,7 +59,7 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RandomVariableImpl() {
@@ -69,7 +68,7 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -79,40 +78,44 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getSpecification() {
-        return specification;
+        return this.specification;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setSpecification(String newSpecification) {
-        String oldSpecification = specification;
-        specification = newSpecification;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.RANDOM_VARIABLE__SPECIFICATION,
-                    oldSpecification, specification));
+    @Override
+    public void setSpecification(final String newSpecification) {
+        final String oldSpecification = this.specification;
+        this.specification = newSpecification;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.RANDOM_VARIABLE__SPECIFICATION,
+                    oldSpecification, this.specification));
+        }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public Expression getExpression() {
-        Expression expression = basicGetExpression();
-        return expression != null && ((EObject) expression).eIsProxy() ? (Expression) eResolveProxy((InternalEObject) expression)
-                : expression;
+        final Expression expression = this.basicGetExpression();
+        return expression != null && expression.eIsProxy() ? (Expression) this
+                .eResolveProxy((InternalEObject) expression) : expression;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated not
      */
     public Expression basicGetExpression() {
@@ -124,7 +127,7 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated not
      */
     public boolean isSetExpression() {
@@ -134,32 +137,33 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-            return getSpecification();
+            return this.getSpecification();
         case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
-            if (resolve)
-                return getExpression();
-            return basicGetExpression();
+            if (resolve) {
+                return this.getExpression();
+            }
+            return this.basicGetExpression();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-            setSpecification((String) newValue);
+            this.setSpecification((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -167,14 +171,14 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-            setSpecification(SPECIFICATION_EDEFAULT);
+            this.setSpecification(SPECIFICATION_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -182,34 +186,35 @@ public class RandomVariableImpl extends EStereotypableObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-            return SPECIFICATION_EDEFAULT == null ? specification != null : !SPECIFICATION_EDEFAULT
-                    .equals(specification);
+            return SPECIFICATION_EDEFAULT == null ? this.specification != null : !SPECIFICATION_EDEFAULT
+                    .equals(this.specification);
         case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
-            return isSetExpression();
+            return this.isSetExpression();
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (specification: ");
-        result.append(specification);
+        result.append(this.specification);
         result.append(')');
         return result.toString();
     }

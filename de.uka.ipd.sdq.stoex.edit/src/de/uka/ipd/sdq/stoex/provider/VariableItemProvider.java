@@ -19,7 +19,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.Variable} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class VariableItemProvider extends AtomItemProvider {
@@ -36,7 +36,7 @@ public class VariableItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    public VariableItemProvider(AdapterFactory adapterFactory) {
+    public VariableItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -47,13 +47,13 @@ public class VariableItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addId_VariablePropertyDescriptor(object);
+            this.addId_VariablePropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -62,15 +62,12 @@ public class VariableItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    protected void addId_VariablePropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_Variable_id_Variable_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_Variable_id_Variable_feature",
-                                "_UI_Variable_type"), StoexPackage.Literals.VARIABLE__ID_VARIABLE, true, false, true,
-                        null, null, null));
+    protected void addId_VariablePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Variable_id_Variable_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_Variable_id_Variable_feature", "_UI_Variable_type"),
+                StoexPackage.Literals.VARIABLE__ID_VARIABLE, true, false, true, null, null, null));
     }
 
     /**
@@ -79,19 +76,19 @@ public class VariableItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Variable"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/Variable"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        return getString("_UI_Variable_type");
+    public String getText(final Object object) {
+        return this.getString("_UI_Variable_type");
     }
 
     /**
@@ -102,8 +99,8 @@ public class VariableItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
         super.notifyChanged(notification);
     }
 
@@ -114,7 +111,7 @@ public class VariableItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

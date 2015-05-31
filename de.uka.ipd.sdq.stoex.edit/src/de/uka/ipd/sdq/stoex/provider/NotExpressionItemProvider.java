@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.NotExpression} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class NotExpressionItemProvider extends UnaryItemProvider {
@@ -39,7 +39,7 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * 
      * @generated
      */
-    public NotExpressionItemProvider(AdapterFactory adapterFactory) {
+    public NotExpressionItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -50,12 +50,12 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -64,16 +64,16 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(StoexPackage.Literals.NOT_EXPRESSION__INNER);
+            this.childrenFeatures.add(StoexPackage.Literals.NOT_EXPRESSION__INNER);
         }
-        return childrenFeatures;
+        return this.childrenFeatures;
     }
 
     /**
@@ -82,7 +82,7 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * @generated
      */
     @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
+    protected EStructuralFeature getChildFeature(final Object object, final Object child) {
         // Check the type of the specified child object and return the proper feature to use for
         // adding (see {@link AddCommand}) it as a child.
 
@@ -95,19 +95,19 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/NotExpression"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/NotExpression"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        return getString("_UI_NotExpression_type");
+    public String getText(final Object object) {
+        return this.getString("_UI_NotExpression_type");
     }
 
     /**
@@ -118,12 +118,12 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(NotExpression.class)) {
         case StoexPackage.NOT_EXPRESSION__INNER:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -136,37 +136,37 @@ public class NotExpressionItemProvider extends UnaryItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createVariable()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createProbabilityFunctionLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createParenthesis()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createIntLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createDoubleLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createBoolLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createStringLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createNotExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createNegativeExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.NOT_EXPRESSION__INNER,
                 StoexFactory.eINSTANCE.createFunctionLiteral()));
     }
 

@@ -40,7 +40,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Comparison" abstract="true" eSuperTypes="#//BooleanExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="BooleanExpression" abstract="true" eSuperTypes="#//IfElse"/>
   <eClassifiers xsi:type="ecore:EClass" name="IfElse" abstract="true" eSuperTypes="#//Expression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.ecore#//StereotypableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="TermExpression" eSuperTypes="#//Term">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" ordered="false" lowerBound="1"
         eType="#//Term" containment="true"/>

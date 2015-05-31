@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.PowerExpression} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class PowerExpressionItemProvider extends PowerItemProvider {
@@ -39,7 +39,7 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * 
      * @generated
      */
-    public PowerExpressionItemProvider(AdapterFactory adapterFactory) {
+    public PowerExpressionItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -50,12 +50,12 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -64,17 +64,17 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(StoexPackage.Literals.POWER_EXPRESSION__BASE);
-            childrenFeatures.add(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT);
+            this.childrenFeatures.add(StoexPackage.Literals.POWER_EXPRESSION__BASE);
+            this.childrenFeatures.add(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT);
         }
-        return childrenFeatures;
+        return this.childrenFeatures;
     }
 
     /**
@@ -83,7 +83,7 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
+    protected EStructuralFeature getChildFeature(final Object object, final Object child) {
         // Check the type of the specified child object and return the proper feature to use for
         // adding (see {@link AddCommand}) it as a child.
 
@@ -96,19 +96,19 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/PowerExpression"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/PowerExpression"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        return getString("_UI_PowerExpression_type");
+    public String getText(final Object object) {
+        return this.getString("_UI_PowerExpression_type");
     }
 
     /**
@@ -119,13 +119,13 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(PowerExpression.class)) {
         case StoexPackage.POWER_EXPRESSION__BASE:
         case StoexPackage.POWER_EXPRESSION__EXPONENT:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -138,91 +138,93 @@ public class PowerExpressionItemProvider extends PowerItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createVariable()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createProbabilityFunctionLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createParenthesis()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createIntLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createDoubleLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createBoolLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createStringLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createPowerExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createNotExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createNegativeExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__BASE,
                 StoexFactory.eINSTANCE.createFunctionLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createVariable()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createProbabilityFunctionLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createParenthesis()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createIntLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createDoubleLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createBoolLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createStringLiteral()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createNotExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createNegativeExpression()));
 
-        newChildDescriptors.add(createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+        newChildDescriptors.add(this.createChildParameter(StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
                 StoexFactory.eINSTANCE.createFunctionLiteral()));
     }
 
     /**
      * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-        Object childFeature = feature;
-        Object childObject = child;
+    public String getCreateChildText(final Object owner, final Object feature, final Object child,
+            final Collection<?> selection) {
+        final Object childFeature = feature;
+        final Object childObject = child;
 
-        boolean qualify = childFeature == StoexPackage.Literals.POWER_EXPRESSION__BASE
+        final boolean qualify = childFeature == StoexPackage.Literals.POWER_EXPRESSION__BASE
                 || childFeature == StoexPackage.Literals.POWER_EXPRESSION__EXPONENT;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] {
-                    getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner)
-            });
+            return this.getString(
+                    "_UI_CreateChild_text2",
+                    new Object[] { this.getTypeText(childObject), this.getFeatureText(childFeature),
+                            this.getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

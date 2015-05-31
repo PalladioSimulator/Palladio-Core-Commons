@@ -24,7 +24,7 @@ package de.uka.ipd.sdq.stoex;
 public interface IntLiteral extends NumericLiteral {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -36,7 +36,7 @@ public interface IntLiteral extends NumericLiteral {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(int)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getIntLiteral_Value()
@@ -48,7 +48,7 @@ public interface IntLiteral extends NumericLiteral {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.IntLiteral#getValue <em>Value</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Value</em>' attribute.
      * @see #getValue()

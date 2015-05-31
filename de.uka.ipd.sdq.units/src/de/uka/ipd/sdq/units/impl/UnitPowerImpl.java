@@ -32,7 +32,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 public class UnitPowerImpl extends UnitImpl implements UnitPower {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
     /**
      * The cached value of the '{@link #getUnit() <em>Unit</em>}' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getUnit()
      * @generated
      * @ordered
@@ -50,7 +50,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
     /**
      * The default value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getExponent()
      * @generated
      * @ordered
@@ -60,7 +60,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
     /**
      * The cached value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getExponent()
      * @generated
      * @ordered
@@ -69,7 +69,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitPowerImpl() {
@@ -78,7 +78,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,118 +88,129 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public Unit getUnit() {
-        return unit;
+        return this.unit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public NotificationChain basicSetUnit(Unit newUnit, NotificationChain msgs) {
-        Unit oldUnit = unit;
-        unit = newUnit;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+    public NotificationChain basicSetUnit(final Unit newUnit, NotificationChain msgs) {
+        final Unit oldUnit = this.unit;
+        this.unit = newUnit;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     UnitsPackage.UNIT_POWER__UNIT, oldUnit, newUnit);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
+            }
         }
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setUnit(Unit newUnit) {
-        if (newUnit != unit) {
-            NotificationChain msgs = null;
-            if (unit != null)
-                msgs = ((InternalEObject) unit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_POWER__UNIT, null, msgs);
-            if (newUnit != null)
-                msgs = ((InternalEObject) newUnit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_POWER__UNIT, null, msgs);
-            msgs = basicSetUnit(newUnit, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_POWER__UNIT, newUnit, newUnit));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getExponent() {
-        return exponent;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setExponent(int newExponent) {
-        int oldExponent = exponent;
-        exponent = newExponent;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_POWER__EXPONENT, oldExponent,
-                    exponent));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public void setUnit(final Unit newUnit) {
+        if (newUnit != this.unit) {
+            NotificationChain msgs = null;
+            if (this.unit != null) {
+                msgs = ((InternalEObject) this.unit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - UnitsPackage.UNIT_POWER__UNIT, null, msgs);
+            }
+            if (newUnit != null) {
+                msgs = ((InternalEObject) newUnit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - UnitsPackage.UNIT_POWER__UNIT, null, msgs);
+            }
+            msgs = this.basicSetUnit(newUnit, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_POWER__UNIT, newUnit, newUnit));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getExponent() {
+        return this.exponent;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setExponent(final int newExponent) {
+        final int oldExponent = this.exponent;
+        this.exponent = newExponent;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_POWER__EXPONENT, oldExponent,
+                    this.exponent));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case UnitsPackage.UNIT_POWER__UNIT:
-            return basicSetUnit(null, msgs);
+            return this.basicSetUnit(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case UnitsPackage.UNIT_POWER__UNIT:
-            return getUnit();
+            return this.getUnit();
         case UnitsPackage.UNIT_POWER__EXPONENT:
-            return getExponent();
+            return this.getExponent();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case UnitsPackage.UNIT_POWER__UNIT:
-            setUnit((Unit) newValue);
+            this.setUnit((Unit) newValue);
             return;
         case UnitsPackage.UNIT_POWER__EXPONENT:
-            setExponent((Integer) newValue);
+            this.setExponent((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -207,17 +218,17 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_POWER__UNIT:
-            setUnit((Unit) null);
+            this.setUnit((Unit) null);
             return;
         case UnitsPackage.UNIT_POWER__EXPONENT:
-            setExponent(EXPONENT_EDEFAULT);
+            this.setExponent(EXPONENT_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -225,33 +236,34 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_POWER__UNIT:
-            return unit != null;
+            return this.unit != null;
         case UnitsPackage.UNIT_POWER__EXPONENT:
-            return exponent != EXPONENT_EDEFAULT;
+            return this.exponent != EXPONENT_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (exponent: ");
-        result.append(exponent);
+        result.append(this.exponent);
         result.append(')');
         return result.toString();
     }

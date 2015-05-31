@@ -23,8 +23,8 @@ import de.uka.ipd.sdq.probfunction.Sample;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getProbability <em>Probability</em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getProbability <em>Probability</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,7 +33,6 @@ import de.uka.ipd.sdq.probfunction.Sample;
 public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -70,7 +69,6 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SampleImpl() {
@@ -79,7 +77,6 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -109,7 +106,6 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setValue(T newValue) {
@@ -121,7 +117,6 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getProbability() {
@@ -130,95 +125,87 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setProbability(double newProbability) {
         double oldProbability = probability;
         probability = newProbability;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE__PROBABILITY,
-                    oldProbability, probability));
+            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE__PROBABILITY, oldProbability, probability));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE__PROBABILITY:
-            return getProbability();
-        case ProbfunctionPackage.SAMPLE__VALUE:
-            return getValue();
+            case ProbfunctionPackage.SAMPLE__PROBABILITY:
+                return getProbability();
+            case ProbfunctionPackage.SAMPLE__VALUE:
+                return getValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE__PROBABILITY:
-            setProbability((Double) newValue);
-            return;
-        case ProbfunctionPackage.SAMPLE__VALUE:
-            setValue((T) newValue);
-            return;
+            case ProbfunctionPackage.SAMPLE__PROBABILITY:
+                setProbability((Double)newValue);
+                return;
+            case ProbfunctionPackage.SAMPLE__VALUE:
+                setValue((T)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE__PROBABILITY:
-            setProbability(PROBABILITY_EDEFAULT);
-            return;
-        case ProbfunctionPackage.SAMPLE__VALUE:
-            setValue((T) null);
-            return;
+            case ProbfunctionPackage.SAMPLE__PROBABILITY:
+                setProbability(PROBABILITY_EDEFAULT);
+                return;
+            case ProbfunctionPackage.SAMPLE__VALUE:
+                setValue((T)null);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE__PROBABILITY:
-            return probability != PROBABILITY_EDEFAULT;
-        case ProbfunctionPackage.SAMPLE__VALUE:
-            return value != null;
+            case ProbfunctionPackage.SAMPLE__PROBABILITY:
+                return probability != PROBABILITY_EDEFAULT;
+            case ProbfunctionPackage.SAMPLE__VALUE:
+                return value != null;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (probability: ");

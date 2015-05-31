@@ -22,14 +22,14 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 public abstract class AtomImpl extends UnaryImpl implements Atom {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AtomImpl() {
@@ -38,7 +38,7 @@ public abstract class AtomImpl extends UnaryImpl implements Atom {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.palladiosimulator.mdsdprofiles.MdsdprofilesPackage;
 
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.Unit;
@@ -26,69 +27,69 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitCarryingElementEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass baseUnitEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitRepositoryEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitMultiplicationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitPowerEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitDivisionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum unitNamesEEnum = null;
@@ -101,7 +102,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see de.uka.ipd.sdq.units.UnitsPackage#eNS_URI
      * @see #init()
@@ -113,7 +114,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -121,26 +122,30 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others
      * upon which it depends.
-     * 
+     *
      * <p>
      * This method is used to initialize {@link UnitsPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to
      * obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
      * @generated
      */
     public static UnitsPackage init() {
-        if (isInited)
+        if (isInited) {
             return (UnitsPackage) EPackage.Registry.INSTANCE.getEPackage(UnitsPackage.eNS_URI);
+        }
 
         // Obtain or create and register package
-        UnitsPackageImpl theUnitsPackage = (UnitsPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UnitsPackageImpl ? EPackage.Registry.INSTANCE
+        final UnitsPackageImpl theUnitsPackage = (UnitsPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UnitsPackageImpl ? EPackage.Registry.INSTANCE
                 .get(eNS_URI) : new UnitsPackageImpl());
 
         isInited = true;
+
+        // Initialize simple dependencies
+        MdsdprofilesPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
         theUnitsPackage.createPackageContents();
@@ -158,160 +163,177 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnitCarryingElement() {
-        return unitCarryingElementEClass;
+        return this.unitCarryingElementEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getUnitCarryingElement_Unit() {
-        return (EReference) unitCarryingElementEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.unitCarryingElementEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnit() {
-        return unitEClass;
+        return this.unitEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getBaseUnit() {
-        return baseUnitEClass;
+        return this.baseUnitEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getBaseUnit_Name() {
-        return (EAttribute) baseUnitEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) this.baseUnitEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnitRepository() {
-        return unitRepositoryEClass;
+        return this.unitRepositoryEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getUnitRepository_Units() {
-        return (EReference) unitRepositoryEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.unitRepositoryEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnitMultiplication() {
-        return unitMultiplicationEClass;
+        return this.unitMultiplicationEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getUnitMultiplication_Units() {
-        return (EReference) unitMultiplicationEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.unitMultiplicationEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnitPower() {
-        return unitPowerEClass;
+        return this.unitPowerEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getUnitPower_Unit() {
-        return (EReference) unitPowerEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.unitPowerEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EAttribute getUnitPower_Exponent() {
-        return (EAttribute) unitPowerEClass.getEStructuralFeatures().get(1);
+        return (EAttribute) this.unitPowerEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EClass getUnitDivision() {
-        return unitDivisionEClass;
+        return this.unitDivisionEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getUnitDivision_Dividend() {
-        return (EReference) unitDivisionEClass.getEStructuralFeatures().get(0);
+        return (EReference) this.unitDivisionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EReference getUnitDivision_Divisor() {
-        return (EReference) unitDivisionEClass.getEStructuralFeatures().get(1);
+        return (EReference) this.unitDivisionEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EEnum getUnitNames() {
-        return unitNamesEEnum;
+        return this.unitNamesEEnum;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public UnitsFactory getUnitsFactory() {
-        return (UnitsFactory) getEFactoryInstance();
+        return (UnitsFactory) this.getEFactoryInstance();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -319,44 +341,45 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
-        if (isCreated)
+        if (this.isCreated) {
             return;
-        isCreated = true;
+        }
+        this.isCreated = true;
 
         // Create classes and their features
-        unitCarryingElementEClass = createEClass(UNIT_CARRYING_ELEMENT);
-        createEReference(unitCarryingElementEClass, UNIT_CARRYING_ELEMENT__UNIT);
+        this.unitCarryingElementEClass = this.createEClass(UNIT_CARRYING_ELEMENT);
+        this.createEReference(this.unitCarryingElementEClass, UNIT_CARRYING_ELEMENT__UNIT);
 
-        unitEClass = createEClass(UNIT);
+        this.unitEClass = this.createEClass(UNIT);
 
-        baseUnitEClass = createEClass(BASE_UNIT);
-        createEAttribute(baseUnitEClass, BASE_UNIT__NAME);
+        this.baseUnitEClass = this.createEClass(BASE_UNIT);
+        this.createEAttribute(this.baseUnitEClass, BASE_UNIT__NAME);
 
-        unitRepositoryEClass = createEClass(UNIT_REPOSITORY);
-        createEReference(unitRepositoryEClass, UNIT_REPOSITORY__UNITS);
+        this.unitRepositoryEClass = this.createEClass(UNIT_REPOSITORY);
+        this.createEReference(this.unitRepositoryEClass, UNIT_REPOSITORY__UNITS);
 
-        unitMultiplicationEClass = createEClass(UNIT_MULTIPLICATION);
-        createEReference(unitMultiplicationEClass, UNIT_MULTIPLICATION__UNITS);
+        this.unitMultiplicationEClass = this.createEClass(UNIT_MULTIPLICATION);
+        this.createEReference(this.unitMultiplicationEClass, UNIT_MULTIPLICATION__UNITS);
 
-        unitPowerEClass = createEClass(UNIT_POWER);
-        createEReference(unitPowerEClass, UNIT_POWER__UNIT);
-        createEAttribute(unitPowerEClass, UNIT_POWER__EXPONENT);
+        this.unitPowerEClass = this.createEClass(UNIT_POWER);
+        this.createEReference(this.unitPowerEClass, UNIT_POWER__UNIT);
+        this.createEAttribute(this.unitPowerEClass, UNIT_POWER__EXPONENT);
 
-        unitDivisionEClass = createEClass(UNIT_DIVISION);
-        createEReference(unitDivisionEClass, UNIT_DIVISION__DIVIDEND);
-        createEReference(unitDivisionEClass, UNIT_DIVISION__DIVISOR);
+        this.unitDivisionEClass = this.createEClass(UNIT_DIVISION);
+        this.createEReference(this.unitDivisionEClass, UNIT_DIVISION__DIVIDEND);
+        this.createEReference(this.unitDivisionEClass, UNIT_DIVISION__DIVISOR);
 
         // Create enums
-        unitNamesEEnum = createEEnum(UNIT_NAMES);
+        this.unitNamesEEnum = this.createEEnum(UNIT_NAMES);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -364,96 +387,106 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {
-        if (isInitialized)
+        if (this.isInitialized) {
             return;
-        isInitialized = true;
+        }
+        this.isInitialized = true;
 
         // Initialize package
-        setName(eNAME);
-        setNsPrefix(eNS_PREFIX);
-        setNsURI(eNS_URI);
+        this.setName(eNAME);
+        this.setNsPrefix(eNS_PREFIX);
+        this.setNsURI(eNS_URI);
+
+        // Obtain other dependent packages
+        final MdsdprofilesPackage theMdsdprofilesPackage = (MdsdprofilesPackage) EPackage.Registry.INSTANCE
+                .getEPackage(MdsdprofilesPackage.eNS_URI);
 
         // Create type parameters
 
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        baseUnitEClass.getESuperTypes().add(this.getUnit());
-        unitMultiplicationEClass.getESuperTypes().add(this.getUnit());
-        unitPowerEClass.getESuperTypes().add(this.getUnit());
-        unitDivisionEClass.getESuperTypes().add(this.getUnit());
+        this.unitCarryingElementEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
+        this.unitEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
+        this.baseUnitEClass.getESuperTypes().add(this.getUnit());
+        this.unitRepositoryEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
+        this.unitMultiplicationEClass.getESuperTypes().add(this.getUnit());
+        this.unitPowerEClass.getESuperTypes().add(this.getUnit());
+        this.unitDivisionEClass.getESuperTypes().add(this.getUnit());
 
         // Initialize classes and features; add operations and parameters
-        initEClass(unitCarryingElementEClass, UnitCarryingElement.class, "UnitCarryingElement", IS_ABSTRACT,
+        this.initEClass(this.unitCarryingElementEClass, UnitCarryingElement.class, "UnitCarryingElement", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getUnitCarryingElement_Unit(), this.getUnit(), null, "unit", null, 0, 1,
+        this.initEReference(this.getUnitCarryingElement_Unit(), this.getUnit(), null, "unit", null, 0, 1,
                 UnitCarryingElement.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(unitEClass, Unit.class, "Unit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEClass(this.unitEClass, Unit.class, "Unit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(baseUnitEClass, BaseUnit.class, "BaseUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getBaseUnit_Name(), this.getUnitNames(), "name", null, 1, 1, BaseUnit.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        initEClass(unitRepositoryEClass, UnitRepository.class, "UnitRepository", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.baseUnitEClass, BaseUnit.class, "BaseUnit", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getUnitRepository_Units(), this.getBaseUnit(), null, "units", null, 0, -1, UnitRepository.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getBaseUnit_Name(), this.getUnitNames(), "name", null, 1, 1, BaseUnit.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(unitMultiplicationEClass, UnitMultiplication.class, "UnitMultiplication", !IS_ABSTRACT,
+        this.initEClass(this.unitRepositoryEClass, UnitRepository.class, "UnitRepository", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getUnitRepository_Units(), this.getBaseUnit(), null, "units", null, 0, -1,
+                UnitRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        this.initEClass(this.unitMultiplicationEClass, UnitMultiplication.class, "UnitMultiplication", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getUnitMultiplication_Units(), this.getUnit(), null, "units", null, 1, -1,
+        this.initEReference(this.getUnitMultiplication_Units(), this.getUnit(), null, "units", null, 1, -1,
                 UnitMultiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(unitPowerEClass, UnitPower.class, "UnitPower", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.unitPowerEClass, UnitPower.class, "UnitPower", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getUnitPower_Unit(), this.getUnit(), null, "unit", null, 1, 1, UnitPower.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-                !IS_ORDERED);
-        initEAttribute(getUnitPower_Exponent(), ecorePackage.getEInt(), "exponent", null, 1, 1, UnitPower.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getUnitPower_Unit(), this.getUnit(), null, "unit", null, 1, 1, UnitPower.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getUnitPower_Exponent(), this.ecorePackage.getEInt(), "exponent", null, 1, 1,
+                UnitPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(unitDivisionEClass, UnitDivision.class, "UnitDivision", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.unitDivisionEClass, UnitDivision.class, "UnitDivision", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getUnitDivision_Dividend(), this.getUnit(), null, "dividend", null, 1, 1, UnitDivision.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getUnitDivision_Divisor(), this.getUnit(), null, "divisor", null, 1, 1, UnitDivision.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getUnitDivision_Dividend(), this.getUnit(), null, "dividend", null, 1, 1,
+                UnitDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getUnitDivision_Divisor(), this.getUnit(), null, "divisor", null, 1, 1,
+                UnitDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
-        initEEnum(unitNamesEEnum, UnitNames.class, "UnitNames");
-        addEEnumLiteral(unitNamesEEnum, UnitNames.UNITLESS);
-        addEEnumLiteral(unitNamesEEnum, UnitNames.BYTE);
-        addEEnumLiteral(unitNamesEEnum, UnitNames.SECOND);
-        addEEnumLiteral(unitNamesEEnum, UnitNames.METER);
+        this.initEEnum(this.unitNamesEEnum, UnitNames.class, "UnitNames");
+        this.addEEnumLiteral(this.unitNamesEEnum, UnitNames.UNITLESS);
+        this.addEEnumLiteral(this.unitNamesEEnum, UnitNames.BYTE);
+        this.addEEnumLiteral(this.unitNamesEEnum, UnitNames.SECOND);
+        this.addEEnumLiteral(this.unitNamesEEnum, UnitNames.METER);
 
         // Create resource
-        createResource(eNS_URI);
+        this.createResource(eNS_URI);
 
         // Create annotations
         // http:///org/eclipse/emf/ecore/util/ExtendedMetaData
-        createExtendedMetaDataAnnotations();
+        this.createExtendedMetaDataAnnotations();
     }
 
     /**
      * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void createExtendedMetaDataAnnotations() {
-        String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-        addAnnotation(getUnitCarryingElement_Unit(), source, new String[] { "name", "", "namespace", "" });
-        addAnnotation(getBaseUnit_Name(), source, new String[] { "name", "", "namespace", "" });
+        final String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
+        this.addAnnotation(this.getUnitCarryingElement_Unit(), source, new String[] { "name", "", "namespace", "" });
+        this.addAnnotation(this.getBaseUnit_Name(), source, new String[] { "name", "", "namespace", "" });
     }
 
 } // UnitsPackageImpl

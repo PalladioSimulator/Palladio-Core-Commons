@@ -29,11 +29,11 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.RandomVariable} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class RandomVariableItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -47,7 +47,7 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * 
      * @generated
      */
-    public RandomVariableItemProvider(AdapterFactory adapterFactory) {
+    public RandomVariableItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -58,14 +58,14 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addSpecificationPropertyDescriptor(object);
-            addExpressionPropertyDescriptor(object);
+            this.addSpecificationPropertyDescriptor(object);
+            this.addExpressionPropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
@@ -74,14 +74,13 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * 
      * @generated
      */
-    protected void addSpecificationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_RandomVariable_specification_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_RandomVariable_specification_feature",
+    protected void addSpecificationPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_RandomVariable_specification_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_RandomVariable_specification_feature",
                         "_UI_RandomVariable_type"), StoexPackage.Literals.RANDOM_VARIABLE__SPECIFICATION, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -90,14 +89,13 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * 
      * @generated
      */
-    protected void addExpressionPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_RandomVariable_expression_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_RandomVariable_expression_feature",
+    protected void addExpressionPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_RandomVariable_expression_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_RandomVariable_expression_feature",
                         "_UI_RandomVariable_type"), StoexPackage.Literals.RANDOM_VARIABLE__EXPRESSION, true, false,
-                true, null, null, null));
+                        true, null, null, null));
     }
 
     /**
@@ -106,21 +104,21 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/RandomVariable"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/RandomVariable"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((RandomVariable) object).getSpecification();
-        return label == null || label.length() == 0 ? getString("_UI_RandomVariable_type")
-                : getString("_UI_RandomVariable_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((RandomVariable) object).getSpecification();
+        return label == null || label.length() == 0 ? this.getString("_UI_RandomVariable_type") : this
+                .getString("_UI_RandomVariable_type") + " " + label;
     }
 
     /**
@@ -131,12 +129,12 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(RandomVariable.class)) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -149,7 +147,7 @@ public class RandomVariableItemProvider extends ItemProviderAdapter implements I
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

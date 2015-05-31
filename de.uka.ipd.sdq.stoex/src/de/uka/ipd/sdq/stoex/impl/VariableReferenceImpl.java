@@ -22,14 +22,14 @@ import de.uka.ipd.sdq.stoex.VariableReference;
 public class VariableReferenceImpl extends AbstractNamedReferenceImpl implements VariableReference {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariableReferenceImpl() {
@@ -38,7 +38,7 @@ public class VariableReferenceImpl extends AbstractNamedReferenceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

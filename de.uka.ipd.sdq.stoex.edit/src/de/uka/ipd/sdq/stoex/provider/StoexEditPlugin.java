@@ -8,6 +8,10 @@ package de.uka.ipd.sdq.stoex.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
+import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
+import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 
 import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
 import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
@@ -46,9 +50,9 @@ public final class StoexEditPlugin extends EMFPlugin {
      * @generated
      */
     public StoexEditPlugin() {
-        super(new ResourceLocator[] {
-                ProbabilityFunctionEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
-        });
+        super(new ResourceLocator[] { ProbabilityFunctionEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
+                EcoreEditPlugin.INSTANCE, MdsdprofilesEditPlugin.INSTANCE, EMFProfileEditPlugin.INSTANCE,
+                EMFProfileApplicationEditPlugin.INSTANCE, });
     }
 
     /**

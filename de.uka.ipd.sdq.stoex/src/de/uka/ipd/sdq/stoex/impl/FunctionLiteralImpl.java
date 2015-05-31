@@ -38,7 +38,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -46,7 +46,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -56,7 +56,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     /**
      * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -67,7 +67,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
      * The cached value of the '{@link #getParameters_FunctionLiteral()
      * <em>Parameters Function Literal</em>}' containment reference list. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getParameters_FunctionLiteral()
      * @generated
      * @ordered
@@ -76,7 +76,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FunctionLiteralImpl() {
@@ -85,7 +85,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -95,83 +95,89 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setId(String newId) {
-        String oldId = id;
-        id = newId;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.FUNCTION_LITERAL__ID, oldId, id));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<Expression> getParameters_FunctionLiteral() {
-        if (parameters_FunctionLiteral == null) {
-            parameters_FunctionLiteral = new EObjectContainmentEList<Expression>(Expression.class, this,
-                    StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
-        }
-        return parameters_FunctionLiteral;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setId(final String newId) {
+        final String oldId = this.id;
+        this.id = newId;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.FUNCTION_LITERAL__ID, oldId,
+                    this.id));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EList<Expression> getParameters_FunctionLiteral() {
+        if (this.parameters_FunctionLiteral == null) {
+            this.parameters_FunctionLiteral = new EObjectContainmentEList<Expression>(Expression.class, this,
+                    StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
+        }
+        return this.parameters_FunctionLiteral;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            return ((InternalEList<?>) getParameters_FunctionLiteral()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getParameters_FunctionLiteral()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case StoexPackage.FUNCTION_LITERAL__ID:
-            return getId();
+            return this.getId();
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            return getParameters_FunctionLiteral();
+            return this.getParameters_FunctionLiteral();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case StoexPackage.FUNCTION_LITERAL__ID:
-            setId((String) newValue);
+            this.setId((String) newValue);
             return;
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            getParameters_FunctionLiteral().clear();
-            getParameters_FunctionLiteral().addAll((Collection<? extends Expression>) newValue);
+            this.getParameters_FunctionLiteral().clear();
+            this.getParameters_FunctionLiteral().addAll((Collection<? extends Expression>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -179,17 +185,17 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case StoexPackage.FUNCTION_LITERAL__ID:
-            setId(ID_EDEFAULT);
+            this.setId(ID_EDEFAULT);
             return;
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            getParameters_FunctionLiteral().clear();
+            this.getParameters_FunctionLiteral().clear();
             return;
         }
         super.eUnset(featureID);
@@ -197,33 +203,34 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.FUNCTION_LITERAL__ID:
-            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+            return ID_EDEFAULT == null ? this.id != null : !ID_EDEFAULT.equals(this.id);
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            return parameters_FunctionLiteral != null && !parameters_FunctionLiteral.isEmpty();
+            return this.parameters_FunctionLiteral != null && !this.parameters_FunctionLiteral.isEmpty();
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (id: ");
-        result.append(id);
+        result.append(this.id);
         result.append(')');
         return result.toString();
     }

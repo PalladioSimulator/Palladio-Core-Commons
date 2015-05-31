@@ -27,8 +27,8 @@ import de.uka.ipd.sdq.probfunction.SamplePDF;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl#getDistance <em>Distance</em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl#getDistance <em>Distance</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,7 +37,6 @@ import de.uka.ipd.sdq.probfunction.SamplePDF;
 public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements SamplePDF {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -65,7 +64,6 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
     /**
      * The cached value of the '{@link #getValues() <em>Values</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getValues()
      * @generated
      * @ordered
@@ -74,7 +72,6 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SamplePDFImpl() {
@@ -83,7 +80,6 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -93,7 +89,6 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getDistance() {
@@ -102,20 +97,17 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setDistance(double newDistance) {
         double oldDistance = distance;
         distance = newDistance;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE_PDF__DISTANCE,
-                    oldDistance, distance));
+            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE_PDF__DISTANCE, oldDistance, distance));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<Complex> getValues() {
@@ -127,97 +119,90 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            return ((InternalEList<?>) getValues()).basicRemove(otherEnd, msgs);
+            case ProbfunctionPackage.SAMPLE_PDF__VALUES:
+                return ((InternalEList<?>)getValues()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
-            return getDistance();
-        case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            return getValues();
+            case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
+                return getDistance();
+            case ProbfunctionPackage.SAMPLE_PDF__VALUES:
+                return getValues();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
-            setDistance((Double) newValue);
-            return;
-        case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            getValues().clear();
-            getValues().addAll((Collection<? extends Complex>) newValue);
-            return;
+            case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
+                setDistance((Double)newValue);
+                return;
+            case ProbfunctionPackage.SAMPLE_PDF__VALUES:
+                getValues().clear();
+                getValues().addAll((Collection<? extends Complex>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
-            setDistance(DISTANCE_EDEFAULT);
-            return;
-        case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            getValues().clear();
-            return;
+            case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
+                setDistance(DISTANCE_EDEFAULT);
+                return;
+            case ProbfunctionPackage.SAMPLE_PDF__VALUES:
+                getValues().clear();
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
-            return distance != DISTANCE_EDEFAULT;
-        case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            return values != null && !values.isEmpty();
+            case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
+                return distance != DISTANCE_EDEFAULT;
+            case ProbfunctionPackage.SAMPLE_PDF__VALUES:
+                return values != null && !values.isEmpty();
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (distance: ");

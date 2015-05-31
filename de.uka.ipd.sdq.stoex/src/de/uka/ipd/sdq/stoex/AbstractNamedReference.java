@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex;
 
-import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -21,13 +21,12 @@ import edu.kit.ipd.sdq.mdsd.profiles.metamodelextension.EStereotypableObject;
  *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getAbstractNamedReference()
  * @model abstract="true"
- * @extends EStereotypableObject
  * @generated
  */
-public interface AbstractNamedReference extends EStereotypableObject {
+public interface AbstractNamedReference extends EObject {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +38,7 @@ public interface AbstractNamedReference extends EStereotypableObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Reference Name</em>' attribute.
      * @see #setReferenceName(String)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getAbstractNamedReference_ReferenceName()
@@ -51,7 +50,7 @@ public interface AbstractNamedReference extends EStereotypableObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.AbstractNamedReference#getReferenceName
      * <em>Reference Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Reference Name</em>' attribute.
      * @see #getReferenceName()

@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.stoex.FunctionLiteral} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class FunctionLiteralItemProvider extends AtomItemProvider {
@@ -41,7 +41,7 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * 
      * @generated
      */
-    public FunctionLiteralItemProvider(AdapterFactory adapterFactory) {
+    public FunctionLiteralItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -52,29 +52,28 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addIdPropertyDescriptor(object);
+            this.addIdPropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
      * This adds a property descriptor for the Id feature. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
-    protected void addIdPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_FunctionLiteral_id_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_FunctionLiteral_id_feature",
-                        "_UI_FunctionLiteral_type"), StoexPackage.Literals.FUNCTION_LITERAL__ID, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    protected void addIdPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_FunctionLiteral_id_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_FunctionLiteral_id_feature", "_UI_FunctionLiteral_type"),
+                StoexPackage.Literals.FUNCTION_LITERAL__ID, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,16 +82,16 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
+            this.childrenFeatures.add(StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
         }
-        return childrenFeatures;
+        return this.childrenFeatures;
     }
 
     /**
@@ -101,7 +100,7 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
+    protected EStructuralFeature getChildFeature(final Object object, final Object child) {
         // Check the type of the specified child object and return the proper feature to use for
         // adding (see {@link AddCommand}) it as a child.
 
@@ -114,21 +113,21 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/FunctionLiteral"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/FunctionLiteral"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((FunctionLiteral) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_FunctionLiteral_type")
-                : getString("_UI_FunctionLiteral_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((FunctionLiteral) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_FunctionLiteral_type") : this
+                .getString("_UI_FunctionLiteral_type") + " " + label;
     }
 
     /**
@@ -139,15 +138,15 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(FunctionLiteral.class)) {
         case StoexPackage.FUNCTION_LITERAL__ID:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -160,70 +159,70 @@ public class FunctionLiteralItemProvider extends AtomItemProvider {
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createVariable()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createTermExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createProductExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createProbabilityFunctionLiteral()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createParenthesis()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createIntLiteral()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createDoubleLiteral()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createCompareExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createBoolLiteral()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createStringLiteral()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createPowerExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createBooleanOperatorExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createNotExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createNegativeExpression()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createFunctionLiteral()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
                 StoexFactory.eINSTANCE.createIfElseExpression()));
     }

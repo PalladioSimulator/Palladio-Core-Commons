@@ -9,15 +9,15 @@ package de.uka.ipd.sdq.probfunction;
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Lognormal Distribution</b></em>'. <!-- end-user-doc -->
  *
- * <!-- begin-model-doc --> Lognormal distribution with parameters scale parameter mu and shape
- * parameter sigma > 0. See {@link umontreal.iro.lecuyer.probdist.LognormalDist} for definition.
+ * <!-- begin-model-doc -->
+ * Lognormal distribution with parameters scale parameter mu and shape parameter sigma > 0. See  {@link umontreal.iro.lecuyer.probdist.LognormalDist} for definition.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getMu <em>Mu</em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getSigma <em>Sigma</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getMu <em>Mu</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getSigma <em>Sigma</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,7 +28,6 @@ package de.uka.ipd.sdq.probfunction;
 public interface LognormalDistribution extends ContinuousPDF {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -51,11 +50,9 @@ public interface LognormalDistribution extends ContinuousPDF {
     double getMu();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getMu
-     * <em>Mu</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Mu</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getMu <em>Mu</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Mu</em>' attribute.
      * @see #getMu()
      * @generated
      */
@@ -79,11 +76,9 @@ public interface LognormalDistribution extends ContinuousPDF {
     double getSigma();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getSigma
-     * <em>Sigma</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Sigma</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getSigma <em>Sigma</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Sigma</em>' attribute.
      * @see #getSigma()
      * @generated
      */

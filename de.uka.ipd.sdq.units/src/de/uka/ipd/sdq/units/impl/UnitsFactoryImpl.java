@@ -6,7 +6,6 @@
  */
 package de.uka.ipd.sdq.units.impl;
 
-import de.uka.ipd.sdq.units.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -25,29 +24,30 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static UnitsFactory init() {
         try {
-            UnitsFactory theUnitsFactory = (UnitsFactory) EPackage.Registry.INSTANCE.getEFactory(UnitsPackage.eNS_URI);
+            final UnitsFactory theUnitsFactory = (UnitsFactory) EPackage.Registry.INSTANCE
+                    .getEFactory(UnitsPackage.eNS_URI);
             if (theUnitsFactory != null) {
                 return theUnitsFactory;
             }
-        } catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new UnitsFactoryImpl();
@@ -55,7 +55,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UnitsFactoryImpl() {
@@ -64,22 +64,22 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
         case UnitsPackage.BASE_UNIT:
-            return (EObject) createBaseUnit();
+            return this.createBaseUnit();
         case UnitsPackage.UNIT_REPOSITORY:
-            return (EObject) createUnitRepository();
+            return this.createUnitRepository();
         case UnitsPackage.UNIT_MULTIPLICATION:
-            return (EObject) createUnitMultiplication();
+            return this.createUnitMultiplication();
         case UnitsPackage.UNIT_POWER:
-            return (EObject) createUnitPower();
+            return this.createUnitPower();
         case UnitsPackage.UNIT_DIVISION:
-            return (EObject) createUnitDivision();
+            return this.createUnitDivision();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -87,14 +87,14 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object createFromString(EDataType eDataType, String initialValue) {
+    public Object createFromString(final EDataType eDataType, final String initialValue) {
         switch (eDataType.getClassifierID()) {
         case UnitsPackage.UNIT_NAMES:
-            return createUnitNamesFromString(eDataType, initialValue);
+            return this.createUnitNamesFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -102,14 +102,14 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String convertToString(EDataType eDataType, Object instanceValue) {
+    public String convertToString(final EDataType eDataType, final Object instanceValue) {
         switch (eDataType.getClassifierID()) {
         case UnitsPackage.UNIT_NAMES:
-            return convertUnitNamesToString(eDataType, instanceValue);
+            return this.convertUnitNamesToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -117,88 +117,95 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public BaseUnit createBaseUnit() {
-        BaseUnitImpl baseUnit = new BaseUnitImpl();
+        final BaseUnitImpl baseUnit = new BaseUnitImpl();
         return baseUnit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public UnitRepository createUnitRepository() {
-        UnitRepositoryImpl unitRepository = new UnitRepositoryImpl();
+        final UnitRepositoryImpl unitRepository = new UnitRepositoryImpl();
         return unitRepository;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public UnitMultiplication createUnitMultiplication() {
-        UnitMultiplicationImpl unitMultiplication = new UnitMultiplicationImpl();
+        final UnitMultiplicationImpl unitMultiplication = new UnitMultiplicationImpl();
         return unitMultiplication;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public UnitPower createUnitPower() {
-        UnitPowerImpl unitPower = new UnitPowerImpl();
+        final UnitPowerImpl unitPower = new UnitPowerImpl();
         return unitPower;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public UnitDivision createUnitDivision() {
-        UnitDivisionImpl unitDivision = new UnitDivisionImpl();
+        final UnitDivisionImpl unitDivision = new UnitDivisionImpl();
         return unitDivision;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public UnitNames createUnitNamesFromString(EDataType eDataType, String initialValue) {
-        UnitNames result = UnitNames.get(initialValue);
-        if (result == null)
+    public UnitNames createUnitNamesFromString(final EDataType eDataType, final String initialValue) {
+        final UnitNames result = UnitNames.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public String convertUnitNamesToString(EDataType eDataType, Object instanceValue) {
+    public String convertUnitNamesToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public UnitsPackage getUnitsPackage() {
-        return (UnitsPackage) getEPackage();
+        return (UnitsPackage) this.getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

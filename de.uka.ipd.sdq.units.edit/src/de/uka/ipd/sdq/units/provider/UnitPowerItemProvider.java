@@ -28,9 +28,10 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitPowerItemProvider extends UnitItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +39,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public UnitPowerItemProvider(final AdapterFactory adapterFactory) {
@@ -48,7 +49,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -64,7 +65,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
     /**
      * This adds a property descriptor for the Exponent feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addExponentPropertyDescriptor(final Object object) {
@@ -72,8 +73,8 @@ public class UnitPowerItemProvider extends UnitItemProvider {
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_UnitPower_exponent_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_UnitPower_exponent_feature", "_UI_UnitPower_type"),
-                        UnitsPackage.Literals.UNIT_POWER__EXPONENT, true, false, false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                UnitsPackage.Literals.UNIT_POWER__EXPONENT, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -96,7 +97,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -109,7 +110,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
 
     /**
      * This returns UnitPower.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,7 +134,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,7 +155,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

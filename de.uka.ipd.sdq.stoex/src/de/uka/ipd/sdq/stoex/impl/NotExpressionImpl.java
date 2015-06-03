@@ -29,6 +29,7 @@ import de.uka.ipd.sdq.stoex.Unary;
  * @generated
  */
 public class NotExpressionImpl extends UnaryImpl implements NotExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

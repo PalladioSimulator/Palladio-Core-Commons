@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class PowerExpressionItemProvider extends PowerItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

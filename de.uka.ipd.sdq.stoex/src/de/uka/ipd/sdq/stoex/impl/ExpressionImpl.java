@@ -21,6 +21,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class ExpressionImpl extends StereotypableElementImpl implements Expression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

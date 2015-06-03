@@ -59,6 +59,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class StoexPackageImpl extends EPackageImpl implements StoexPackage {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

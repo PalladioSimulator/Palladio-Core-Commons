@@ -27,24 +27,22 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionFactory;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 
 /**
- * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction} object. <!-- begin-user-doc --> <!--
+ * This is the item provider adapter for a {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction} object.
+ * <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public ProbabilityMassFunctionItemProvider(AdapterFactory adapterFactory) {
@@ -52,9 +50,9 @@ public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItem
     }
 
     /**
-     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -68,20 +66,25 @@ public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItem
     }
 
     /**
-     * This adds a property descriptor for the Ordered Domain feature. <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Ordered Domain feature.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     protected void addOrderedDomainPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ProbabilityMassFunction_orderedDomain_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_ProbabilityMassFunction_orderedDomain_feature",
-                        "_UI_ProbabilityMassFunction_type"),
-                ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN, true, false, false,
-                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ProbabilityMassFunction_orderedDomain_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ProbabilityMassFunction_orderedDomain_feature", "_UI_ProbabilityMassFunction_type"),
+                 ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -104,7 +107,6 @@ public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItem
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -116,8 +118,8 @@ public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItem
     }
 
     /**
-     * This returns ProbabilityMassFunction.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This returns ProbabilityMassFunction.gif.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -133,15 +135,14 @@ public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItem
      */
     @Override
     public String getText(Object object) {
-        ProbabilityMassFunction probabilityMassFunction = (ProbabilityMassFunction) object;
+        ProbabilityMassFunction probabilityMassFunction = (ProbabilityMassFunction)object;
         return getString("_UI_ProbabilityMassFunction_type") + " " + probabilityMassFunction.isOrderedDomain();
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -149,40 +150,50 @@ public class ProbabilityMassFunctionItemProvider extends ProbabilityFunctionItem
         updateChildren(notification);
 
         switch (notification.getFeatureID(ProbabilityMassFunction.class)) {
-        case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-            return;
-        case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-            return;
+            case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
-     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
-                ProbfunctionFactory.eINSTANCE.createSample()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+                 ProbfunctionFactory.eINSTANCE.createSample()));
 
-        newChildDescriptors.add(createChildParameter(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
-                ProbfunctionFactory.eINSTANCE.createIntSample()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+                 ProbfunctionFactory.eINSTANCE.createIntSample()));
 
-        newChildDescriptors.add(createChildParameter(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
-                ProbfunctionFactory.eINSTANCE.createBoolSample()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+                 ProbfunctionFactory.eINSTANCE.createBoolSample()));
 
-        newChildDescriptors.add(createChildParameter(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
-                ProbfunctionFactory.eINSTANCE.createDoubleSample()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+                 ProbfunctionFactory.eINSTANCE.createDoubleSample()));
 
-        newChildDescriptors.add(createChildParameter(ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
-                ProbfunctionFactory.eINSTANCE.createStringSample()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES,
+                 ProbfunctionFactory.eINSTANCE.createStringSample()));
     }
 
 }

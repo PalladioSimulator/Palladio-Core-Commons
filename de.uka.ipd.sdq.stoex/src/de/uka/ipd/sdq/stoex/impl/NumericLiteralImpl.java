@@ -21,6 +21,7 @@ import de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl;
  * @generated
  */
 public abstract class NumericLiteralImpl extends UnitCarryingElementImpl implements NumericLiteral {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

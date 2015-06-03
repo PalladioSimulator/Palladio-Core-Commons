@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class NamespaceReferenceItemProvider extends AbstractNamedReferenceItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

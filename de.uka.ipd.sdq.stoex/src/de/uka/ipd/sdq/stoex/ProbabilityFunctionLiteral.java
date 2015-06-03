@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.probfunction.ProbabilityFunction;
  * @generated
  */
 public interface ProbabilityFunctionLiteral extends Atom {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface RandomVariable extends EObject {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

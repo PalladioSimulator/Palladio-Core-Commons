@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class ProductImpl extends TermImpl implements Product {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

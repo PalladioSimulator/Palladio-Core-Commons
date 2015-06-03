@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * @generated
  */
 public class PowerItemProvider extends ProductItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

@@ -9,7 +9,6 @@ package de.uka.ipd.sdq.units.util;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 
@@ -30,6 +29,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitsAdapterFactory extends AdapterFactoryImpl {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -80,6 +80,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     protected UnitsSwitch<Adapter> modelSwitch = new UnitsSwitch<Adapter>() {
+
         @Override
         public Adapter caseUnitCarryingElement(final UnitCarryingElement object) {
             return UnitsAdapterFactory.this.createUnitCarryingElementAdapter();
@@ -113,11 +114,6 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseUnitDivision(final UnitDivision object) {
             return UnitsAdapterFactory.this.createUnitDivisionAdapter();
-        }
-
-        @Override
-        public Adapter caseEModelElement(final EModelElement object) {
-            return UnitsAdapterFactory.this.createEModelElementAdapter();
         }
 
         @Override
@@ -240,20 +236,6 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createUnitDivisionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement
-     * <em>EModel Element</em>}'. <!-- begin-user-doc --> This default implementation returns null
-     * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
-     * all the cases anyway. <!-- end-user-doc -->
-     *
-     * @return the new adapter.
-     * @see org.eclipse.emf.ecore.EModelElement
-     * @generated
-     */
-    public Adapter createEModelElementAdapter() {
         return null;
     }
 

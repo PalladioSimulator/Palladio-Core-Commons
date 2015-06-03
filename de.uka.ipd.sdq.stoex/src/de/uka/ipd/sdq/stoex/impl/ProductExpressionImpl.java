@@ -33,6 +33,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class ProductExpressionImpl extends ProductImpl implements ProductExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

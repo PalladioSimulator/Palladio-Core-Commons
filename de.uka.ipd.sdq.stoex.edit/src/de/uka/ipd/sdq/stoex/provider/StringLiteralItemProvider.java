@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StringLiteral;
  * @generated
  */
 public class StringLiteralItemProvider extends AtomItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

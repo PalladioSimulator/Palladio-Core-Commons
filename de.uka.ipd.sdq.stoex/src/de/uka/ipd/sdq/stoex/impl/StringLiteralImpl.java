@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StringLiteral;
  * @generated
  */
 public class StringLiteralImpl extends AtomImpl implements StringLiteral {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

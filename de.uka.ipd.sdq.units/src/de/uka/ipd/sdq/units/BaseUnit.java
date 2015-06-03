@@ -22,6 +22,7 @@ package de.uka.ipd.sdq.units;
  * @generated
  */
 public interface BaseUnit extends Unit {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -37,6 +37,7 @@ import de.uka.ipd.sdq.stoex.util.StoexAdapterFactory;
  */
 public class StoexItemProviderAdapterFactory extends StoexAdapterFactory implements ComposeableAdapterFactory,
 IChangeNotifier, IDisposable {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

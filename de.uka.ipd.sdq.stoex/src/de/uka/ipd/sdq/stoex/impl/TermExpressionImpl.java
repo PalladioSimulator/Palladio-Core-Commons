@@ -33,6 +33,7 @@ import de.uka.ipd.sdq.stoex.TermOperations;
  * @generated
  */
 public class TermExpressionImpl extends TermImpl implements TermExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

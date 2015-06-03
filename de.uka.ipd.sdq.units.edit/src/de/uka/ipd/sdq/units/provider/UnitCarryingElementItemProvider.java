@@ -21,13 +21,14 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.units.UnitCarryingElement} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class UnitCarryingElementItemProvider extends StereotypableElementItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -35,7 +36,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public UnitCarryingElementItemProvider(final AdapterFactory adapterFactory) {
@@ -45,7 +46,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -61,7 +62,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
     /**
      * This adds a property descriptor for the Unit feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addUnitPropertyDescriptor(final Object object) {
@@ -70,7 +71,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
                 this.getString("_UI_UnitCarryingElement_unit_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_UnitCarryingElement_unit_feature",
                         "_UI_UnitCarryingElement_type"), UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT, true,
-                false, true, null, null, null));
+                        false, true, null, null, null));
     }
 
     /**
@@ -88,7 +89,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -100,7 +101,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +112,7 @@ public class UnitCarryingElementItemProvider extends StereotypableElementItemPro
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -45,6 +45,7 @@ import de.uka.ipd.sdq.stoex.VariableReference;
  * @generated
  */
 public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

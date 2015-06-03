@@ -28,6 +28,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public abstract class UnitCarryingElementImpl extends StereotypableElementImpl implements UnitCarryingElement {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

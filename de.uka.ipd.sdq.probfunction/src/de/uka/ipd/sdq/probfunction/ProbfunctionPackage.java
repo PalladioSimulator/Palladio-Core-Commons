@@ -72,15 +72,6 @@ public interface ProbfunctionPackage extends EPackage {
     int PROBABILITY_FUNCTION = 2;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_FUNCTION__EANNOTATIONS = UnitsPackage.UNIT_CARRYING_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -117,15 +108,6 @@ public interface ProbfunctionPackage extends EPackage {
     int PROBABILITY_DENSITY_FUNCTION = 1;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_DENSITY_FUNCTION__EANNOTATIONS = PROBABILITY_FUNCTION__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -160,15 +142,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int BOXED_PDF = 0;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BOXED_PDF__EANNOTATIONS = PROBABILITY_DENSITY_FUNCTION__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
@@ -250,15 +223,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int PROBABILITY_MASS_FUNCTION = 4;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_MASS_FUNCTION__EANNOTATIONS = PROBABILITY_FUNCTION__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
@@ -351,15 +315,6 @@ public interface ProbfunctionPackage extends EPackage {
     int SAMPLE_PDF = 6;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SAMPLE_PDF__EANNOTATIONS = PROBABILITY_DENSITY_FUNCTION__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -450,15 +405,6 @@ public interface ProbfunctionPackage extends EPackage {
     int CONTINUOUS_PDF = 8;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONTINUOUS_PDF__EANNOTATIONS = PROBABILITY_DENSITY_FUNCTION__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -493,15 +439,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int EXPONENTIAL_DISTRIBUTION = 9;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EXPONENTIAL_DISTRIBUTION__EANNOTATIONS = CONTINUOUS_PDF__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
@@ -547,15 +484,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int NORMAL_DISTRIBUTION = 10;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int NORMAL_DISTRIBUTION__EANNOTATIONS = CONTINUOUS_PDF__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
@@ -612,15 +540,6 @@ public interface ProbfunctionPackage extends EPackage {
     int LOGNORMAL_DISTRIBUTION = 11;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int LOGNORMAL_DISTRIBUTION__EANNOTATIONS = CONTINUOUS_PDF__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -673,15 +592,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int GAMMA_DISTRIBUTION = 12;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GAMMA_DISTRIBUTION__EANNOTATIONS = CONTINUOUS_PDF__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.

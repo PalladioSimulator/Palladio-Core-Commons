@@ -24,6 +24,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface BooleanOperatorExpression extends BooleanExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

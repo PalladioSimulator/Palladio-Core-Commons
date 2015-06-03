@@ -6,7 +6,6 @@
  */
 package de.uka.ipd.sdq.units.util;
 
-import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -32,6 +31,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitsSwitch<T> extends Switch<T> {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -86,9 +86,6 @@ public class UnitsSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(unitCarryingElement);
             }
             if (result == null) {
-                result = this.caseEModelElement(unitCarryingElement);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -98,9 +95,6 @@ public class UnitsSwitch<T> extends Switch<T> {
             T result = this.caseUnit(unit);
             if (result == null) {
                 result = this.caseStereotypableElement(unit);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(unit);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -117,9 +111,6 @@ public class UnitsSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(baseUnit);
             }
             if (result == null) {
-                result = this.caseEModelElement(baseUnit);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -129,9 +120,6 @@ public class UnitsSwitch<T> extends Switch<T> {
             T result = this.caseUnitRepository(unitRepository);
             if (result == null) {
                 result = this.caseStereotypableElement(unitRepository);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(unitRepository);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -148,9 +136,6 @@ public class UnitsSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(unitMultiplication);
             }
             if (result == null) {
-                result = this.caseEModelElement(unitMultiplication);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -165,9 +150,6 @@ public class UnitsSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(unitPower);
             }
             if (result == null) {
-                result = this.caseEModelElement(unitPower);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -180,9 +162,6 @@ public class UnitsSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(unitDivision);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(unitDivision);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -298,21 +277,6 @@ public class UnitsSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseUnitDivision(final UnitDivision object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>EModel Element</em>'.
-     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     *
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>EModel Element</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseEModelElement(final EModelElement object) {
         return null;
     }
 

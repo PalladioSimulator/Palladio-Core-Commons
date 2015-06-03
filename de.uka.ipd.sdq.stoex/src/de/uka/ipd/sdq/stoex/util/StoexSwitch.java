@@ -6,7 +6,6 @@
  */
 package de.uka.ipd.sdq.stoex.util;
 
-import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -56,6 +55,7 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
  * @generated
  */
 public class StoexSwitch<T> extends Switch<T> {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -167,9 +167,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(variable);
             }
             if (result == null) {
-                result = this.caseEModelElement(variable);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -205,9 +202,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(atom);
             }
             if (result == null) {
-                result = this.caseEModelElement(atom);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -240,9 +234,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(unary);
             }
             if (result == null) {
-                result = this.caseEModelElement(unary);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -272,9 +263,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(power);
             }
             if (result == null) {
-                result = this.caseEModelElement(power);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -301,9 +289,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(product);
             }
             if (result == null) {
-                result = this.caseEModelElement(product);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -327,9 +312,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(term);
             }
             if (result == null) {
-                result = this.caseEModelElement(term);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -350,9 +332,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(comparison);
             }
             if (result == null) {
-                result = this.caseEModelElement(comparison);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -370,9 +349,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(booleanExpression);
             }
             if (result == null) {
-                result = this.caseEModelElement(booleanExpression);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -387,9 +363,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(ifElse);
             }
             if (result == null) {
-                result = this.caseEModelElement(ifElse);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -399,9 +372,6 @@ public class StoexSwitch<T> extends Switch<T> {
             T result = this.caseExpression(expression);
             if (result == null) {
                 result = this.caseStereotypableElement(expression);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(expression);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -428,9 +398,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(termExpression);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(termExpression);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -460,9 +427,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(productExpression);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(productExpression);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -503,9 +467,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(probabilityFunctionLiteral);
             }
             if (result == null) {
-                result = this.caseEModelElement(probabilityFunctionLiteral);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -544,9 +505,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(parenthesis);
             }
             if (result == null) {
-                result = this.caseEModelElement(parenthesis);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -562,9 +520,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseUnary(numericLiteral);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(numericLiteral);
             }
             if (result == null) {
                 result = this.casePower(numericLiteral);
@@ -611,9 +566,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseUnary(intLiteral);
             }
             if (result == null) {
-                result = this.caseEModelElement(intLiteral);
-            }
-            if (result == null) {
                 result = this.casePower(intLiteral);
             }
             if (result == null) {
@@ -656,9 +608,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseUnary(doubleLiteral);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(doubleLiteral);
             }
             if (result == null) {
                 result = this.casePower(doubleLiteral);
@@ -708,9 +657,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(compareExpression);
             }
             if (result == null) {
-                result = this.caseEModelElement(compareExpression);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -747,9 +693,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(boolLiteral);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(boolLiteral);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -790,9 +733,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(stringLiteral);
             }
             if (result == null) {
-                result = this.caseEModelElement(stringLiteral);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -825,9 +765,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(powerExpression);
             }
             if (result == null) {
-                result = this.caseEModelElement(powerExpression);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -846,9 +783,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(booleanOperatorExpression);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(booleanOperatorExpression);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -886,9 +820,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(notExpression);
             }
             if (result == null) {
-                result = this.caseEModelElement(notExpression);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -922,9 +853,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(negativeExpression);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(negativeExpression);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -965,9 +893,6 @@ public class StoexSwitch<T> extends Switch<T> {
                 result = this.caseStereotypableElement(functionLiteral);
             }
             if (result == null) {
-                result = this.caseEModelElement(functionLiteral);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -983,9 +908,6 @@ public class StoexSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseStereotypableElement(ifElseExpression);
-            }
-            if (result == null) {
-                result = this.caseEModelElement(ifElseExpression);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -1231,21 +1153,6 @@ public class StoexSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseRandomVariable(final RandomVariable object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>EModel Element</em>'.
-     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     *
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>EModel Element</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseEModelElement(final EModelElement object) {
         return null;
     }
 

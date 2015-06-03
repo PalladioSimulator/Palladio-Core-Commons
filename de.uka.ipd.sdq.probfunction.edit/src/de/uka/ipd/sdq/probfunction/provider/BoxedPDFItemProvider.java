@@ -33,15 +33,14 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public BoxedPDFItemProvider(AdapterFactory adapterFactory) {
@@ -49,9 +48,9 @@ public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider
     }
 
     /**
-     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -83,7 +82,6 @@ public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -95,8 +93,8 @@ public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider
     }
 
     /**
-     * This returns BoxedPDF.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This returns BoxedPDF.gif.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -117,9 +115,8 @@ public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -127,25 +124,27 @@ public class BoxedPDFItemProvider extends ProbabilityDensityFunctionItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(BoxedPDF.class)) {
-        case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-            return;
+            case ProbfunctionPackage.BOXED_PDF__SAMPLES:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
-     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(ProbfunctionPackage.Literals.BOXED_PDF__SAMPLES,
-                ProbfunctionFactory.eINSTANCE.createContinuousSample()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ProbfunctionPackage.Literals.BOXED_PDF__SAMPLES,
+                 ProbfunctionFactory.eINSTANCE.createContinuousSample()));
     }
 
 }

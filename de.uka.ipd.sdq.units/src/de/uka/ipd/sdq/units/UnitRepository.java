@@ -25,6 +25,7 @@ import org.palladiosimulator.mdsdprofiles.StereotypableElement;
  * @generated
  */
 public interface UnitRepository extends StereotypableElement {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

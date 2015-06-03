@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface UnitMultiplication extends Unit {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

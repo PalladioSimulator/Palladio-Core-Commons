@@ -32,6 +32,7 @@ import de.uka.ipd.sdq.stoex.Term;
  * @generated
  */
 public class CompareExpressionImpl extends ComparisonImpl implements CompareExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

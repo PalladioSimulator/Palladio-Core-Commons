@@ -23,6 +23,7 @@ import de.uka.ipd.sdq.units.provider.UnitCarryingElementItemProvider;
  * @generated
  */
 public class NumericLiteralItemProvider extends UnitCarryingElementItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

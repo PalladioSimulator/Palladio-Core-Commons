@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class RandomVariableImpl extends MinimalEObjectImpl.Container implements RandomVariable {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

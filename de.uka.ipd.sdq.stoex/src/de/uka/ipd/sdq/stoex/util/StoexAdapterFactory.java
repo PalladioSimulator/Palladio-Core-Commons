@@ -9,7 +9,6 @@ package de.uka.ipd.sdq.stoex.util;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 
@@ -54,6 +53,7 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
  * @generated
  */
 public class StoexAdapterFactory extends AdapterFactoryImpl {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -104,6 +104,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     protected StoexSwitch<Adapter> modelSwitch = new StoexSwitch<Adapter>() {
+
         @Override
         public Adapter caseVariableReference(final VariableReference object) {
             return StoexAdapterFactory.this.createVariableReferenceAdapter();
@@ -252,11 +253,6 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseRandomVariable(final RandomVariable object) {
             return StoexAdapterFactory.this.createRandomVariableAdapter();
-        }
-
-        @Override
-        public Adapter caseEModelElement(final EModelElement object) {
-            return StoexAdapterFactory.this.createEModelElementAdapter();
         }
 
         @Override
@@ -496,20 +492,6 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createRandomVariableAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement
-     * <em>EModel Element</em>}'. <!-- begin-user-doc --> This default implementation returns null
-     * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
-     * all the cases anyway. <!-- end-user-doc -->
-     *
-     * @return the new adapter.
-     * @see org.eclipse.emf.ecore.EModelElement
-     * @generated
-     */
-    public Adapter createEModelElementAdapter() {
         return null;
     }
 

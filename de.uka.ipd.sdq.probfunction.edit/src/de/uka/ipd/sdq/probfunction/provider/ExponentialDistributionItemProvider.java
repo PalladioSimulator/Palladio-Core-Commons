@@ -24,24 +24,22 @@ import de.uka.ipd.sdq.probfunction.ExponentialDistribution;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 
 /**
- * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.probfunction.ExponentialDistribution} object. <!-- begin-user-doc --> <!--
+ * This is the item provider adapter for a {@link de.uka.ipd.sdq.probfunction.ExponentialDistribution} object.
+ * <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public ExponentialDistributionItemProvider(AdapterFactory adapterFactory) {
@@ -49,9 +47,9 @@ public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvid
     }
 
     /**
-     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -65,25 +63,30 @@ public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvid
     }
 
     /**
-     * This adds a property descriptor for the Rate feature. <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Rate feature.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     protected void addRatePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ExponentialDistribution_rate_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_ExponentialDistribution_rate_feature",
-                        "_UI_ExponentialDistribution_type"),
-                ProbfunctionPackage.Literals.EXPONENTIAL_DISTRIBUTION__RATE, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ExponentialDistribution_rate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ExponentialDistribution_rate_feature", "_UI_ExponentialDistribution_type"),
+                 ProbfunctionPackage.Literals.EXPONENTIAL_DISTRIBUTION__RATE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
-     * This returns ExponentialDistribution.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This returns ExponentialDistribution.gif.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -99,15 +102,14 @@ public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvid
      */
     @Override
     public String getText(Object object) {
-        ExponentialDistribution exponentialDistribution = (ExponentialDistribution) object;
+        ExponentialDistribution exponentialDistribution = (ExponentialDistribution)object;
         return getString("_UI_ExponentialDistribution_type") + " " + exponentialDistribution.getRate();
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -115,17 +117,17 @@ public class ExponentialDistributionItemProvider extends ContinuousPDFItemProvid
         updateChildren(notification);
 
         switch (notification.getFeatureID(ExponentialDistribution.class)) {
-        case ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION__RATE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-            return;
+            case ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION__RATE:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
-     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override

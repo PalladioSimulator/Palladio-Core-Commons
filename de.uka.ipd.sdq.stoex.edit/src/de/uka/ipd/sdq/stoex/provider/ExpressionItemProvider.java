@@ -22,6 +22,7 @@ import org.palladiosimulator.mdsdprofiles.provider.StereotypableElementItemProvi
  * @generated
  */
 public class ExpressionItemProvider extends StereotypableElementItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

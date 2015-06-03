@@ -95,7 +95,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(boxedPDF);
                 if (result == null) result = caseUnitCarryingElement(boxedPDF);
                 if (result == null) result = caseStereotypableElement(boxedPDF);
-                if (result == null) result = caseEModelElement(boxedPDF);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -105,7 +104,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(probabilityDensityFunction);
                 if (result == null) result = caseUnitCarryingElement(probabilityDensityFunction);
                 if (result == null) result = caseStereotypableElement(probabilityDensityFunction);
-                if (result == null) result = caseEModelElement(probabilityDensityFunction);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -114,7 +112,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 T1 result = caseProbabilityFunction(probabilityFunction);
                 if (result == null) result = caseUnitCarryingElement(probabilityFunction);
                 if (result == null) result = caseStereotypableElement(probabilityFunction);
-                if (result == null) result = caseEModelElement(probabilityFunction);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -130,7 +127,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(probabilityMassFunction);
                 if (result == null) result = caseUnitCarryingElement(probabilityMassFunction);
                 if (result == null) result = caseStereotypableElement(probabilityMassFunction);
-                if (result == null) result = caseEModelElement(probabilityMassFunction);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -147,7 +143,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(samplePDF);
                 if (result == null) result = caseUnitCarryingElement(samplePDF);
                 if (result == null) result = caseStereotypableElement(samplePDF);
-                if (result == null) result = caseEModelElement(samplePDF);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -164,7 +159,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(continuousPDF);
                 if (result == null) result = caseUnitCarryingElement(continuousPDF);
                 if (result == null) result = caseStereotypableElement(continuousPDF);
-                if (result == null) result = caseEModelElement(continuousPDF);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -176,7 +170,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(exponentialDistribution);
                 if (result == null) result = caseUnitCarryingElement(exponentialDistribution);
                 if (result == null) result = caseStereotypableElement(exponentialDistribution);
-                if (result == null) result = caseEModelElement(exponentialDistribution);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -188,7 +181,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(normalDistribution);
                 if (result == null) result = caseUnitCarryingElement(normalDistribution);
                 if (result == null) result = caseStereotypableElement(normalDistribution);
-                if (result == null) result = caseEModelElement(normalDistribution);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -200,7 +192,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(lognormalDistribution);
                 if (result == null) result = caseUnitCarryingElement(lognormalDistribution);
                 if (result == null) result = caseStereotypableElement(lognormalDistribution);
-                if (result == null) result = caseEModelElement(lognormalDistribution);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -212,7 +203,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseProbabilityFunction(gammaDistribution);
                 if (result == null) result = caseUnitCarryingElement(gammaDistribution);
                 if (result == null) result = caseStereotypableElement(gammaDistribution);
-                if (result == null) result = caseEModelElement(gammaDistribution);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -478,21 +468,6 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * @generated
      */
     public T1 caseStringSample(StringSample object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>EModel Element</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>EModel Element</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T1 caseEModelElement(EModelElement object) {
         return null;
     }
 

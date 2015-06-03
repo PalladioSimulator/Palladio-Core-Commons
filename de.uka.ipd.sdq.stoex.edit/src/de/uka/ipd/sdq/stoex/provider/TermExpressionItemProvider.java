@@ -29,6 +29,7 @@ import de.uka.ipd.sdq.stoex.TermOperations;
  * @generated
  */
 public class TermExpressionItemProvider extends TermItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

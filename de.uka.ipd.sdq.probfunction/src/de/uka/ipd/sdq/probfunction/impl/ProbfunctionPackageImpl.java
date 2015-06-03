@@ -193,7 +193,6 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
         isInited = true;
 
         // Initialize simple dependencies
-        MdsdprofilesPackage.eINSTANCE.eClass();
         UnitsPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects

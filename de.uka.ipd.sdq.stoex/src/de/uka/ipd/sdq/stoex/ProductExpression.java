@@ -24,6 +24,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface ProductExpression extends Product {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

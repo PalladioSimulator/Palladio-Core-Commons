@@ -21,6 +21,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public abstract class UnitImpl extends StereotypableElementImpl implements Unit {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

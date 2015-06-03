@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.Term;
  * @generated
  */
 public abstract class TermImpl extends ComparisonImpl implements Term {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -22,6 +22,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface StringLiteral extends Atom {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

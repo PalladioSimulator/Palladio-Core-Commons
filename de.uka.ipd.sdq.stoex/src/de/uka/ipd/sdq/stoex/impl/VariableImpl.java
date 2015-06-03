@@ -29,6 +29,7 @@ import de.uka.ipd.sdq.stoex.Variable;
  * @generated
  */
 public class VariableImpl extends AtomImpl implements Variable {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -28,6 +28,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Container implements AbstractNamedReference {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

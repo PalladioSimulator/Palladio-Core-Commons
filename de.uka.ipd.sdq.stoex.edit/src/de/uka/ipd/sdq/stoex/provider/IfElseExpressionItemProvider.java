@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class IfElseExpressionItemProvider extends IfElseItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

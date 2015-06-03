@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitPowerImpl extends UnitImpl implements UnitPower {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

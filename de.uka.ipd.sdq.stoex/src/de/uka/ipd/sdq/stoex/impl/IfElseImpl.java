@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class IfElseImpl extends ExpressionImpl implements IfElse {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

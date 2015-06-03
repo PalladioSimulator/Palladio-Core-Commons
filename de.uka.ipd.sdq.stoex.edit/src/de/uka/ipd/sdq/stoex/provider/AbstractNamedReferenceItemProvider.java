@@ -34,6 +34,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  */
 public class AbstractNamedReferenceItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

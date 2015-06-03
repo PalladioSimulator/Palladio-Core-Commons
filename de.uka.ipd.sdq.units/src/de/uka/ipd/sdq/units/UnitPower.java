@@ -23,6 +23,7 @@ package de.uka.ipd.sdq.units;
  * @generated
  */
 public interface UnitPower extends Unit {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

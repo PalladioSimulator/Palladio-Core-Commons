@@ -23,6 +23,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface PowerExpression extends Power {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

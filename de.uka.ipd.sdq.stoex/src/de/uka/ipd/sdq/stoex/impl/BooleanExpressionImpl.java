@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class BooleanExpressionImpl extends IfElseImpl implements BooleanExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

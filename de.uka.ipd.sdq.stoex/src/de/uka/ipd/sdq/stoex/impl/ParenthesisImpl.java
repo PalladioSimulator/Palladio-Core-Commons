@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class ParenthesisImpl extends AtomImpl implements Parenthesis {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

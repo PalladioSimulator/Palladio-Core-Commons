@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class AtomImpl extends UnaryImpl implements Atom {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class ComparisonImpl extends BooleanExpressionImpl implements Comparison {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

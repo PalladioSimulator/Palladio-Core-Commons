@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface FunctionLiteral extends Atom {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

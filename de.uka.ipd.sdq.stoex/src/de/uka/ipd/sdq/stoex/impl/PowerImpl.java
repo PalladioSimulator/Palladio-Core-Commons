@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public abstract class PowerImpl extends ProductImpl implements Power {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

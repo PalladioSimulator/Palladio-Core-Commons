@@ -33,6 +33,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitRepositoryImpl extends StereotypableElementImpl implements UnitRepository {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

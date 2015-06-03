@@ -25,6 +25,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface IfElseExpression extends IfElse {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

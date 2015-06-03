@@ -31,6 +31,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

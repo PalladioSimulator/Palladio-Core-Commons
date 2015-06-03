@@ -31,6 +31,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public interface StoexPackage extends EPackage {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -170,15 +171,6 @@ public interface StoexPackage extends EPackage {
     int EXPRESSION = 12;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int EXPRESSION__EANNOTATIONS = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -205,15 +197,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int IF_ELSE = 11;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int IF_ELSE__EANNOTATIONS = EXPRESSION__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -244,15 +227,6 @@ public interface StoexPackage extends EPackage {
     int BOOLEAN_EXPRESSION = 10;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int BOOLEAN_EXPRESSION__EANNOTATIONS = IF_ELSE__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -279,15 +253,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int COMPARISON = 9;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int COMPARISON__EANNOTATIONS = BOOLEAN_EXPRESSION__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -318,15 +283,6 @@ public interface StoexPackage extends EPackage {
     int TERM = 8;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int TERM__EANNOTATIONS = COMPARISON__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -353,15 +309,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int PRODUCT = 7;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int PRODUCT__EANNOTATIONS = TERM__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -392,15 +339,6 @@ public interface StoexPackage extends EPackage {
     int POWER = 6;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int POWER__EANNOTATIONS = PRODUCT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -427,15 +365,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int UNARY = 5;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNARY__EANNOTATIONS = POWER__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -466,15 +395,6 @@ public interface StoexPackage extends EPackage {
     int ATOM = 4;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int ATOM__EANNOTATIONS = UNARY__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -501,15 +421,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int VARIABLE = 3;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int VARIABLE__EANNOTATIONS = ATOM__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -547,15 +458,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int TERM_EXPRESSION = 13;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int TERM_EXPRESSION__EANNOTATIONS = TERM__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -623,15 +525,6 @@ public interface StoexPackage extends EPackage {
     int PRODUCT_EXPRESSION = 14;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int PRODUCT_EXPRESSION__EANNOTATIONS = PRODUCT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -687,15 +580,6 @@ public interface StoexPackage extends EPackage {
     int PROBABILITY_FUNCTION_LITERAL = 15;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_FUNCTION_LITERAL__EANNOTATIONS = ATOM__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -731,15 +615,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int PARENTHESIS = 16;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int PARENTHESIS__EANNOTATIONS = ATOM__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -779,15 +654,6 @@ public interface StoexPackage extends EPackage {
     int NUMERIC_LITERAL = 17;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int NUMERIC_LITERAL__EANNOTATIONS = UnitsPackage.UNIT_CARRYING_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -823,15 +689,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int INT_LITERAL = 18;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int INT_LITERAL__EANNOTATIONS = NUMERIC_LITERAL__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -880,15 +737,6 @@ public interface StoexPackage extends EPackage {
     int DOUBLE_LITERAL = 19;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int DOUBLE_LITERAL__EANNOTATIONS = NUMERIC_LITERAL__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -933,15 +781,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int COMPARE_EXPRESSION = 20;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int COMPARE_EXPRESSION__EANNOTATIONS = COMPARISON__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -999,15 +838,6 @@ public interface StoexPackage extends EPackage {
     int BOOL_LITERAL = 21;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int BOOL_LITERAL__EANNOTATIONS = ATOM__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -1045,15 +875,6 @@ public interface StoexPackage extends EPackage {
     int STRING_LITERAL = 22;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int STRING_LITERAL__EANNOTATIONS = ATOM__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -1089,15 +910,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int POWER_EXPRESSION = 23;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int POWER_EXPRESSION__EANNOTATIONS = POWER__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -1144,15 +956,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int BOOLEAN_OPERATOR_EXPRESSION = 24;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int BOOLEAN_OPERATOR_EXPRESSION__EANNOTATIONS = BOOLEAN_EXPRESSION__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -1210,15 +1013,6 @@ public interface StoexPackage extends EPackage {
     int NOT_EXPRESSION = 25;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int NOT_EXPRESSION__EANNOTATIONS = UNARY__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -1256,15 +1050,6 @@ public interface StoexPackage extends EPackage {
     int NEGATIVE_EXPRESSION = 26;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int NEGATIVE_EXPRESSION__EANNOTATIONS = UNARY__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -1300,15 +1085,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int FUNCTION_LITERAL = 27;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUNCTION_LITERAL__EANNOTATIONS = ATOM__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -1355,15 +1131,6 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     int IF_ELSE_EXPRESSION = 28;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int IF_ELSE_EXPRESSION__EANNOTATIONS = IF_ELSE__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -2224,6 +1991,7 @@ public interface StoexPackage extends EPackage {
      * @generated
      */
     interface Literals {
+
         /**
          * The meta object literal for the '{@link de.uka.ipd.sdq.stoex.impl.VariableReferenceImpl
          * <em>Variable Reference</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->

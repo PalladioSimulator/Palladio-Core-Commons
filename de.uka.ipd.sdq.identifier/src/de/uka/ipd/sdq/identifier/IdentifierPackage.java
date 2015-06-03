@@ -67,15 +67,6 @@ public interface IdentifierPackage extends EPackage {
     int IDENTIFIER = 0;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int IDENTIFIER__EANNOTATIONS = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class NotExpressionItemProvider extends UnaryItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

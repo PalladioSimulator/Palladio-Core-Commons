@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface AbstractNamedReference extends EObject {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

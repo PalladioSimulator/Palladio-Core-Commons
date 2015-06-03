@@ -27,6 +27,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class BaseUnitImpl extends UnitImpl implements BaseUnit {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

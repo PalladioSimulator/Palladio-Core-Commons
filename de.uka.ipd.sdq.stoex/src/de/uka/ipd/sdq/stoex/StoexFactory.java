@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface StoexFactory extends EFactory {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class DoubleLiteralItemProvider extends NumericLiteralItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

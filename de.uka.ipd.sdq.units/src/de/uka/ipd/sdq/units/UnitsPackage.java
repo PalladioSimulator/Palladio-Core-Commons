@@ -29,6 +29,7 @@ import org.palladiosimulator.mdsdprofiles.MdsdprofilesPackage;
  * @generated
  */
 public interface UnitsPackage extends EPackage {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -75,15 +76,6 @@ public interface UnitsPackage extends EPackage {
     int UNIT_CARRYING_ELEMENT = 0;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNIT_CARRYING_ELEMENT__EANNOTATIONS = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -121,15 +113,6 @@ public interface UnitsPackage extends EPackage {
     int UNIT = 1;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNIT__EANNOTATIONS = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -156,15 +139,6 @@ public interface UnitsPackage extends EPackage {
      * @generated
      */
     int BASE_UNIT = 2;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int BASE_UNIT__EANNOTATIONS = UNIT__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -204,15 +178,6 @@ public interface UnitsPackage extends EPackage {
     int UNIT_REPOSITORY = 3;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNIT_REPOSITORY__EANNOTATIONS = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -250,15 +215,6 @@ public interface UnitsPackage extends EPackage {
     int UNIT_MULTIPLICATION = 4;
 
     /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNIT_MULTIPLICATION__EANNOTATIONS = UNIT__EANNOTATIONS;
-
-    /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
@@ -294,15 +250,6 @@ public interface UnitsPackage extends EPackage {
      * @generated
      */
     int UNIT_POWER = 5;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNIT_POWER__EANNOTATIONS = UNIT__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -349,15 +296,6 @@ public interface UnitsPackage extends EPackage {
      * @generated
      */
     int UNIT_DIVISION = 6;
-
-    /**
-     * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int UNIT_DIVISION__EANNOTATIONS = UNIT__EANNOTATIONS;
 
     /**
      * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
@@ -601,6 +539,7 @@ public interface UnitsPackage extends EPackage {
      * @generated
      */
     interface Literals {
+
         /**
          * The meta object literal for the '
          * {@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl <em>Unit Carrying Element</em>}'

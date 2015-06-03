@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.VariableReference;
  * @generated
  */
 public class VariableReferenceImpl extends AbstractNamedReferenceImpl implements VariableReference {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

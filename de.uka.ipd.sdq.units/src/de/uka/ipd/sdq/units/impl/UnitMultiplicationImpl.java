@@ -32,6 +32,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplication {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

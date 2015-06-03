@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.stoex.Unary;
  * @generated
  */
 public abstract class UnaryImpl extends PowerImpl implements Unary {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

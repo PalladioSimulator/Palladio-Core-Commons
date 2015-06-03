@@ -20,6 +20,7 @@ package de.uka.ipd.sdq.units;
  * @generated
  */
 public interface UnitDivision extends Unit {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

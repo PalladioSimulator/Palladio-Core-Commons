@@ -27,6 +27,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * @generated
  */
 public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

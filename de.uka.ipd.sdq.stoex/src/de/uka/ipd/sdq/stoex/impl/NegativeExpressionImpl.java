@@ -29,6 +29,7 @@ import de.uka.ipd.sdq.stoex.Unary;
  * @generated
  */
 public class NegativeExpressionImpl extends UnaryImpl implements NegativeExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

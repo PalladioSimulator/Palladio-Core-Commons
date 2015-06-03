@@ -33,6 +33,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class BooleanOperatorExpressionImpl extends BooleanExpressionImpl implements BooleanOperatorExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

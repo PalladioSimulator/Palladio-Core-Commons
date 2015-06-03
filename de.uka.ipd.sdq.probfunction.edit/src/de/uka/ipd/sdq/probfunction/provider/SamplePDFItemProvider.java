@@ -27,21 +27,19 @@ import de.uka.ipd.sdq.probfunction.SamplePDF;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.probfunction.SamplePDF} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
  * @generated
  */
 public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public SamplePDFItemProvider(AdapterFactory adapterFactory) {
@@ -49,9 +47,9 @@ public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvide
     }
 
     /**
-     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -66,39 +64,52 @@ public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvide
     }
 
     /**
-     * This adds a property descriptor for the Distance feature. <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Distance feature.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     protected void addDistancePropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_SamplePDF_distance_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_SamplePDF_distance_feature",
-                                "_UI_SamplePDF_type"), ProbfunctionPackage.Literals.SAMPLE_PDF__DISTANCE, true, false,
-                        false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SamplePDF_distance_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SamplePDF_distance_feature", "_UI_SamplePDF_type"),
+                 ProbfunctionPackage.Literals.SAMPLE_PDF__DISTANCE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
-     * This adds a property descriptor for the Values feature. <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Values feature.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     protected void addValuesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                getString("_UI_SamplePDF_values_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_SamplePDF_values_feature", "_UI_SamplePDF_type"),
-                ProbfunctionPackage.Literals.SAMPLE_PDF__VALUES, true, false, false, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SamplePDF_values_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SamplePDF_values_feature", "_UI_SamplePDF_type"),
+                 ProbfunctionPackage.Literals.SAMPLE_PDF__VALUES,
+                 true,
+                 false,
+                 false,
+                 null,
+                 null,
+                 null));
     }
 
     /**
-     * This returns SamplePDF.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This returns SamplePDF.gif.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -114,15 +125,14 @@ public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvide
      */
     @Override
     public String getText(Object object) {
-        SamplePDF samplePDF = (SamplePDF) object;
+        SamplePDF samplePDF = (SamplePDF)object;
         return getString("_UI_SamplePDF_type") + " " + samplePDF.getDistance();
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -130,18 +140,18 @@ public class SamplePDFItemProvider extends ProbabilityDensityFunctionItemProvide
         updateChildren(notification);
 
         switch (notification.getFeatureID(SamplePDF.class)) {
-        case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
-        case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-            return;
+            case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
+            case ProbfunctionPackage.SAMPLE_PDF__VALUES:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
-     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override

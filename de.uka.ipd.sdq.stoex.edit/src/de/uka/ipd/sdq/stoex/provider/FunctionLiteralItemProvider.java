@@ -28,6 +28,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class FunctionLiteralItemProvider extends AtomItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

@@ -23,6 +23,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class VariableItemProvider extends AtomItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

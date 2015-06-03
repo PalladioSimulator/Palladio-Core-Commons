@@ -23,6 +23,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface NamespaceReference extends AbstractNamedReference {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

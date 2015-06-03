@@ -24,6 +24,7 @@ package de.uka.ipd.sdq.stoex;
  * @generated
  */
 public interface TermExpression extends Term {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

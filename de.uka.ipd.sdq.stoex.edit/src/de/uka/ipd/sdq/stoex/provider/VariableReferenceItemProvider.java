@@ -22,6 +22,7 @@ import de.uka.ipd.sdq.stoex.VariableReference;
  * @generated
  */
 public class VariableReferenceItemProvider extends AbstractNamedReferenceItemProvider {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

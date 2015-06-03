@@ -31,6 +31,7 @@ import de.uka.ipd.sdq.stoex.Unary;
  * @generated
  */
 public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

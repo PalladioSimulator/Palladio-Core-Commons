@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiteral {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

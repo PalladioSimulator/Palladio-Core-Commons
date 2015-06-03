@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  * @generated
  */
 public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implements NamespaceReference {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

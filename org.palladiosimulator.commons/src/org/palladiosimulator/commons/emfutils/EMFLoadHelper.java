@@ -37,21 +37,24 @@ public final class EMFLoadHelper {
     }
 
     public static EObject loadAndResolveEObject(final ResourceSet resourceSet, final String resourceURI) {
-        final URI modelUri = URI.createURI(resourceURI);
-        if (modelUri.fragment() == null) {
+        return loadAndResolveEObject(resourceSet, URI.createURI(resourceURI));
+    }
+
+    public static EObject loadAndResolveEObject(final ResourceSet resourceSet, final URI modelURI) {
+        if (modelURI.fragment() == null) {
             throw new IllegalArgumentException(
                     "The resource URI has to include the concrete fragment that references the EObject;"
                             + "otherwise an EObject cannot be uniquely identified in a given resource");
         }
 
-        final Resource resource = resourceSet.getResource(modelUri.trimFragment(), true);
+        final Resource resource = resourceSet.getResource(modelURI.trimFragment(), true);
         if (resource == null) {
-            throw new IllegalArgumentException("Could not load resource with URI " + resourceURI);
+            throw new IllegalArgumentException("Could not load resource with URI " + modelURI);
         }
 
-        final EObject eObject = resource.getEObject(modelUri.fragment());
+        final EObject eObject = resource.getEObject(modelURI.fragment());
         if (eObject == null) {
-            throw new IllegalArgumentException("Could not get eObject with URI " + resourceURI);
+            throw new IllegalArgumentException("Could not get eObject with URI " + modelURI);
         }
 
         return eObject;

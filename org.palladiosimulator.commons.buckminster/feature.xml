@@ -204,7 +204,6 @@ litigation.
    </license>
 
    <url>
-      <discovery label="MDSD Profiles" url="http://sdqweb.ipd.kit.edu/eclipse/mdsdprofiles/nightly"/>
       <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
    </url>
 

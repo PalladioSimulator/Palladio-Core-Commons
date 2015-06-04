@@ -27,7 +27,7 @@ public interface ProductExpression extends Product {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public interface ProductExpression extends Product {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Left</em>' containment reference.
      * @see #setLeft(Product)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getProductExpression_Left()
@@ -52,7 +52,7 @@ public interface ProductExpression extends Product {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.ProductExpression#getLeft <em>Left</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Left</em>' containment reference.
      * @see #getLeft()
@@ -68,7 +68,7 @@ public interface ProductExpression extends Product {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Right</em>' containment reference.
      * @see #setRight(Power)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getProductExpression_Right()
@@ -80,7 +80,7 @@ public interface ProductExpression extends Product {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.ProductExpression#getRight <em>Right</em>}
      * ' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Right</em>' containment reference.
      * @see #getRight()
@@ -96,7 +96,7 @@ public interface ProductExpression extends Product {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Operation</em>' attribute.
      * @see de.uka.ipd.sdq.stoex.ProductOperations
      * @see #setOperation(ProductOperations)
@@ -109,7 +109,7 @@ public interface ProductExpression extends Product {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.ProductExpression#getOperation
      * <em>Operation</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Operation</em>' attribute.
      * @see de.uka.ipd.sdq.stoex.ProductOperations

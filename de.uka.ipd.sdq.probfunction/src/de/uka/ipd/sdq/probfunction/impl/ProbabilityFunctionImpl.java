@@ -21,14 +21,17 @@ import de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl;
  * @generated
  */
 public abstract class ProbabilityFunctionImpl extends UnitCarryingElementImpl implements ProbabilityFunction {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ProbabilityFunctionImpl() {
@@ -37,6 +40,7 @@ public abstract class ProbabilityFunctionImpl extends UnitCarryingElementImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override

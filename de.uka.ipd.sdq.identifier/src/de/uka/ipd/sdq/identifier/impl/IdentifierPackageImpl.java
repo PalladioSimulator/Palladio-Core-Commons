@@ -10,8 +10,6 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.palladiosimulator.mdsdprofiles.MdsdprofilesPackage;
 import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.identifier.IdentifierFactory;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
@@ -69,9 +67,6 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
         IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IdentifierPackageImpl());
 
         isInited = true;
-
-        // Initialize simple dependencies
-        MdsdprofilesPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
         theIdentifierPackage.createPackageContents();
@@ -154,15 +149,11 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
         setNsPrefix(eNS_PREFIX);
         setNsURI(eNS_URI);
 
-        // Obtain other dependent packages
-        MdsdprofilesPackage theMdsdprofilesPackage = (MdsdprofilesPackage)EPackage.Registry.INSTANCE.getEPackage(MdsdprofilesPackage.eNS_URI);
-
         // Create type parameters
 
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        identifierEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
 
         // Initialize classes and features; add operations and parameters
         initEClass(identifierEClass, Identifier.class, "Identifier", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

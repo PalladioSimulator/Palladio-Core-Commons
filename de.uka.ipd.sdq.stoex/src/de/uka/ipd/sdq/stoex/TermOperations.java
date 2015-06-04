@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum TermOperations implements Enumerator {
     /**
      * The '<em><b>ADD</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #ADD_VALUE
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * The '<em><b>SUB</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #SUB_VALUE
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -54,7 +54,7 @@ public enum TermOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #ADD
      * @model
      * @generated
@@ -69,7 +69,7 @@ public enum TermOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #SUB
      * @model
      * @generated
@@ -80,7 +80,7 @@ public enum TermOperations implements Enumerator {
     /**
      * An array of all the '<em><b>Term Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static final TermOperations[] VALUES_ARRAY = new TermOperations[] { ADD, SUB, };
@@ -141,28 +141,28 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private TermOperations(final int value, final String name, final String literal) {
@@ -173,7 +173,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -183,7 +183,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -193,7 +193,7 @@ public enum TermOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

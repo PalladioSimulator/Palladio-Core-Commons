@@ -23,14 +23,14 @@ public abstract class BooleanExpressionImpl extends IfElseImpl implements Boolea
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BooleanExpressionImpl() {
@@ -39,7 +39,7 @@ public abstract class BooleanExpressionImpl extends IfElseImpl implements Boolea
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

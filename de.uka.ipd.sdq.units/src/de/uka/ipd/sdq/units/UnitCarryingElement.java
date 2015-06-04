@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.units;
 
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -23,11 +23,11 @@ import org.palladiosimulator.mdsdprofiles.StereotypableElement;
  * @model abstract="true"
  * @generated
  */
-public interface UnitCarryingElement extends StereotypableElement {
+public interface UnitCarryingElement extends EObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public interface UnitCarryingElement extends StereotypableElement {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Unit</em>' containment reference.
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitCarryingElement_Unit()
      * @model containment="true" volatile="true" ordered="false" suppressedSetVisibility="true"

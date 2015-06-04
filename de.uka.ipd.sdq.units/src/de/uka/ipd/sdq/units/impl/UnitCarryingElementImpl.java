@@ -9,7 +9,7 @@ package de.uka.ipd.sdq.units.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitCarryingElement;
@@ -27,11 +27,11 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  *
  * @generated
  */
-public abstract class UnitCarryingElementImpl extends StereotypableElementImpl implements UnitCarryingElement {
+public abstract class UnitCarryingElementImpl extends MinimalEObjectImpl.Container implements UnitCarryingElement {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitCarryingElementImpl() {
@@ -49,7 +49,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -140,7 +140,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -155,7 +155,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public abstract class UnitCarryingElementImpl extends StereotypableElementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

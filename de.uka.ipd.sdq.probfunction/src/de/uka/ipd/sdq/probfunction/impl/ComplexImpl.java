@@ -19,24 +19,26 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.impl.ComplexImpl#getReal <em>Real</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.probfunction.impl.ComplexImpl#getImaginary <em>Imaginary</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.ComplexImpl#getReal <em>Real</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.ComplexImpl#getImaginary <em>Imaginary</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class ComplexImpl extends EObjectImpl implements Complex {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The default value of the '{@link #getReal() <em>Real</em>}' attribute.
-     * <!-- begin-user-doc
+     * The default value of the '{@link #getReal() <em>Real</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
+     *
      * @see #getReal()
      * @generated
      * @ordered
@@ -44,9 +46,9 @@ public class ComplexImpl extends EObjectImpl implements Complex {
     protected static final double REAL_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getReal() <em>Real</em>}' attribute.
-     * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getReal() <em>Real</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     *
      * @see #getReal()
      * @generated
      * @ordered
@@ -56,7 +58,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
     /**
      * The default value of the '{@link #getImaginary() <em>Imaginary</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getImaginary()
      * @generated
      * @ordered
@@ -66,7 +68,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
     /**
      * The cached value of the '{@link #getImaginary() <em>Imaginary</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getImaginary()
      * @generated
      * @ordered
@@ -75,6 +77,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ComplexImpl() {
@@ -83,6 +86,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -92,119 +96,138 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public double getReal() {
-        return real;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public void setReal(double newReal) {
-        double oldReal = real;
-        real = newReal;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.COMPLEX__REAL, oldReal, real));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public double getImaginary() {
-        return imaginary;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public void setImaginary(double newImaginary) {
-        double oldImaginary = imaginary;
-        imaginary = newImaginary;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.COMPLEX__IMAGINARY, oldImaginary, imaginary));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public double getReal() {
+        return this.real;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setReal(final double newReal) {
+        final double oldReal = this.real;
+        this.real = newReal;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.COMPLEX__REAL, oldReal,
+                    this.real));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public double getImaginary() {
+        return this.imaginary;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setImaginary(final double newImaginary) {
+        final double oldImaginary = this.imaginary;
+        this.imaginary = newImaginary;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.COMPLEX__IMAGINARY,
+                    oldImaginary, this.imaginary));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case ProbfunctionPackage.COMPLEX__REAL:
-                return getReal();
-            case ProbfunctionPackage.COMPLEX__IMAGINARY:
-                return getImaginary();
+        case ProbfunctionPackage.COMPLEX__REAL:
+            return this.getReal();
+        case ProbfunctionPackage.COMPLEX__IMAGINARY:
+            return this.getImaginary();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case ProbfunctionPackage.COMPLEX__REAL:
-                setReal((Double)newValue);
-                return;
-            case ProbfunctionPackage.COMPLEX__IMAGINARY:
-                setImaginary((Double)newValue);
-                return;
+        case ProbfunctionPackage.COMPLEX__REAL:
+            this.setReal((Double) newValue);
+            return;
+        case ProbfunctionPackage.COMPLEX__IMAGINARY:
+            this.setImaginary((Double) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case ProbfunctionPackage.COMPLEX__REAL:
-                setReal(REAL_EDEFAULT);
-                return;
-            case ProbfunctionPackage.COMPLEX__IMAGINARY:
-                setImaginary(IMAGINARY_EDEFAULT);
-                return;
+        case ProbfunctionPackage.COMPLEX__REAL:
+            this.setReal(REAL_EDEFAULT);
+            return;
+        case ProbfunctionPackage.COMPLEX__IMAGINARY:
+            this.setImaginary(IMAGINARY_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case ProbfunctionPackage.COMPLEX__REAL:
-                return real != REAL_EDEFAULT;
-            case ProbfunctionPackage.COMPLEX__IMAGINARY:
-                return imaginary != IMAGINARY_EDEFAULT;
+        case ProbfunctionPackage.COMPLEX__REAL:
+            return this.real != REAL_EDEFAULT;
+        case ProbfunctionPackage.COMPLEX__IMAGINARY:
+            return this.imaginary != IMAGINARY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (this.eIsProxy()) {
+            return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (real: ");
-        result.append(real);
+        result.append(this.real);
         result.append(", imaginary: ");
-        result.append(imaginary);
+        result.append(this.imaginary);
         result.append(')');
         return result.toString();
     }

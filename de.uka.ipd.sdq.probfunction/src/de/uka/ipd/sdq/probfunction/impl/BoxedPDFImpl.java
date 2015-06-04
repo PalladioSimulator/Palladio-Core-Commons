@@ -25,21 +25,24 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.impl.BoxedPDFImpl#getSamples <em>Samples</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.BoxedPDFImpl#getSamples <em>Samples</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements BoxedPDF {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached value of the '{@link #getSamples() <em>Samples</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @see #getSamples()
      * @generated
      * @ordered
@@ -48,6 +51,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected BoxedPDFImpl() {
@@ -56,6 +60,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -65,80 +70,89 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public EList<ContinuousSample> getSamples() {
-        if (samples == null) {
-            samples = new EObjectContainmentEList<ContinuousSample>(ContinuousSample.class, this, ProbfunctionPackage.BOXED_PDF__SAMPLES);
+        if (this.samples == null) {
+            this.samples = new EObjectContainmentEList<ContinuousSample>(ContinuousSample.class, this,
+                    ProbfunctionPackage.BOXED_PDF__SAMPLES);
         }
-        return samples;
+        return this.samples;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
-            case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-                return ((InternalEList<?>)getSamples()).basicRemove(otherEnd, msgs);
+        case ProbfunctionPackage.BOXED_PDF__SAMPLES:
+            return ((InternalEList<?>) this.getSamples()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-                return getSamples();
+        case ProbfunctionPackage.BOXED_PDF__SAMPLES:
+            return this.getSamples();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-                getSamples().clear();
-                getSamples().addAll((Collection<? extends ContinuousSample>)newValue);
-                return;
+        case ProbfunctionPackage.BOXED_PDF__SAMPLES:
+            this.getSamples().clear();
+            this.getSamples().addAll((Collection<? extends ContinuousSample>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-                getSamples().clear();
-                return;
+        case ProbfunctionPackage.BOXED_PDF__SAMPLES:
+            this.getSamples().clear();
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-                return samples != null && !samples.isEmpty();
+        case ProbfunctionPackage.BOXED_PDF__SAMPLES:
+            return this.samples != null && !this.samples.isEmpty();
         }
         return super.eIsSet(featureID);
     }

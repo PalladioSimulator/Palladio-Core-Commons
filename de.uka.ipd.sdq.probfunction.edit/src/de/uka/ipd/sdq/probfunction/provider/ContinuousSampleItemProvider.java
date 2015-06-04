@@ -27,145 +27,135 @@ import de.uka.ipd.sdq.probfunction.ContinuousSample;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 
 /**
- * This is the item provider adapter for a {@link de.uka.ipd.sdq.probfunction.ContinuousSample} object.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link de.uka.ipd.sdq.probfunction.ContinuousSample}
+ * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class ContinuousSampleItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * This constructs an instance from a factory and a notifier.
-     * <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
-    public ContinuousSampleItemProvider(AdapterFactory adapterFactory) {
+    public ContinuousSampleItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
     /**
-     * This returns the property descriptors for the adapted class.
-     * <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addValuePropertyDescriptor(object);
-            addProbabilityPropertyDescriptor(object);
+            this.addValuePropertyDescriptor(object);
+            this.addProbabilityPropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Value feature.
-     * <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Value feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
-    protected void addValuePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ContinuousSample_value_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ContinuousSample_value_feature", "_UI_ContinuousSample_type"),
-                 ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__VALUE,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                 null,
-                 null));
+    protected void addValuePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ContinuousSample_value_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ContinuousSample_value_feature",
+                        "_UI_ContinuousSample_type"), ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__VALUE, true,
+                        false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
-     * This adds a property descriptor for the Probability feature.
-     * <!-- begin-user-doc --> <!--
+     * This adds a property descriptor for the Probability feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
-    protected void addProbabilityPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ContinuousSample_probability_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ContinuousSample_probability_feature", "_UI_ContinuousSample_type"),
-                 ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__PROBABILITY,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                 null,
-                 null));
+    protected void addProbabilityPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ContinuousSample_probability_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ContinuousSample_probability_feature",
+                        "_UI_ContinuousSample_type"), ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__PROBABILITY,
+                        true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
-     * This returns ContinuousSample.gif.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns ContinuousSample.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/ContinuousSample"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/ContinuousSample"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        ContinuousSample continuousSample = (ContinuousSample)object;
-        return getString("_UI_ContinuousSample_type") + " " + continuousSample.getValue();
+    public String getText(final Object object) {
+        final ContinuousSample continuousSample = (ContinuousSample) object;
+        return this.getString("_UI_ContinuousSample_type") + " " + continuousSample.getValue();
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
+     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(ContinuousSample.class)) {
-            case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
-            case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
+        case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            return;
         }
         super.notifyChanged(notification);
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-     * that can be created under this object.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
+     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 
     /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc --> <!--
+     * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     @Override

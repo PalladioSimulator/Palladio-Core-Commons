@@ -9,7 +9,6 @@ package de.uka.ipd.sdq.identifier.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
@@ -66,7 +65,6 @@ public class IdentifierSwitch<T> extends Switch<T> {
             case IdentifierPackage.IDENTIFIER: {
                 Identifier identifier = (Identifier)theEObject;
                 T result = caseIdentifier(identifier);
-                if (result == null) result = caseStereotypableElement(identifier);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -86,21 +84,6 @@ public class IdentifierSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseIdentifier(Identifier object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Stereotypable Element</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Stereotypable Element</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseStereotypableElement(StereotypableElement object) {
         return null;
     }
 

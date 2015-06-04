@@ -25,7 +25,7 @@ public interface BaseUnit extends Unit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +38,7 @@ public interface BaseUnit extends Unit {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see de.uka.ipd.sdq.units.UnitNames
      * @see #setName(UnitNames)
@@ -51,7 +51,7 @@ public interface BaseUnit extends Unit {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.units.BaseUnit#getName <em>Name</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see de.uka.ipd.sdq.units.UnitNames

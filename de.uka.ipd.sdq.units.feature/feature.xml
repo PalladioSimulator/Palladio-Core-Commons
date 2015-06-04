@@ -216,13 +216,9 @@ litigation.
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.modelversioning.emfprofile" version="1.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.mdsdprofiles"/>
       <import plugin="de.uka.ipd.sdq.units"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
-      <import plugin="org.modelversioning.emfprofile.edit"/>
-      <import plugin="org.palladiosimulator.mdsdprofiles.edit"/>
       <import plugin="org.eclipse.uml2.common.edit"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="de.uka.ipd.sdq.units.edit"/>

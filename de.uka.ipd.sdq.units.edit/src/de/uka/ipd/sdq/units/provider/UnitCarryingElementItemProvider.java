@@ -13,8 +13,13 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.palladiosimulator.mdsdprofiles.provider.StereotypableElementItemProvider;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 import de.uka.ipd.sdq.units.UnitsPackage;
 
@@ -24,7 +29,8 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * 
  * @generated
  */
-public class UnitCarryingElementItemProvider extends StereotypableElementItemProvider {
+public class UnitCarryingElementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

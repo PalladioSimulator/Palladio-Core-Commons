@@ -7,7 +7,7 @@
 package de.uka.ipd.sdq.units;
 
 import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Unit Repository</b></em>'.
@@ -24,11 +24,11 @@ import org.palladiosimulator.mdsdprofiles.StereotypableElement;
  * @model
  * @generated
  */
-public interface UnitRepository extends StereotypableElement {
+public interface UnitRepository extends EObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -41,7 +41,7 @@ public interface UnitRepository extends StereotypableElement {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Units</em>' containment reference list.
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitRepository_Units()
      * @model containment="true" ordered="false"

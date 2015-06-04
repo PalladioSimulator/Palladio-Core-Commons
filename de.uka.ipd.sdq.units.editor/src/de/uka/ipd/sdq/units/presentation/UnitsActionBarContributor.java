@@ -45,6 +45,7 @@ import org.eclipse.ui.PartInitException;
  * @generated
  */
 public class UnitsActionBarContributor extends EditingDomainActionBarContributor implements ISelectionChangedListener {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -74,6 +75,7 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
      */
     protected IAction showPropertiesViewAction = new Action(
             UnitsEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+
         @Override
         public void run() {
             try {
@@ -93,6 +95,7 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
      */
     protected IAction refreshViewerAction = new Action(
             UnitsEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+
         @Override
         public boolean isEnabled() {
             return UnitsActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -199,6 +202,7 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
         // Force an update because Eclipse hides empty menus now.
         //
         submenuManager.addMenuListener(new IMenuListener() {
+
             @Override
             public void menuAboutToShow(final IMenuManager menuManager) {
                 menuManager.updateAll(true);

@@ -201,21 +201,21 @@ No party to this Agreement will bring a legal action under this
 Agreement more than one year after the cause of action arose.
 Each party waives its rights to a jury trial in any resulting
 litigation.
-   </license>   
+   </license>
 
    <url>
       <discovery label="MDSD Profiles" url="http://sdqweb.ipd.kit.edu/eclipse/mdsdprofiles/nightly"/>
       <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
    </url>
-   
+
    <includes
          id="org.palladiosimulator.commons.feature"
          version="0.0.0"/>
 
    <requires>
-      <import plugin="org.junit" version="4.11.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction.math" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.probfunction" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.junit" version="4.11.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.probfunction" version="2.1.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin

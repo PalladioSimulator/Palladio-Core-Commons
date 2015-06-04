@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.BoxedPDF#getSamples <em>Samples</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.BoxedPDF#getSamples <em>Samples</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,8 +24,10 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface BoxedPDF extends ProbabilityDensityFunction {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +41,7 @@ public interface BoxedPDF extends ProbabilityDensityFunction {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Samples</em>' containment reference list.
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getBoxedPDF_Samples()
      * @model containment="true" ordered="false"

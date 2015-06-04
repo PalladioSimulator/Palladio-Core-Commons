@@ -12,9 +12,9 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
 
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.UnitRepository;
@@ -32,11 +32,11 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  *
  * @generated
  */
-public class UnitRepositoryImpl extends StereotypableElementImpl implements UnitRepository {
+public class UnitRepositoryImpl extends MinimalEObjectImpl.Container implements UnitRepository {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -52,7 +52,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitRepositoryImpl() {
@@ -61,7 +61,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -71,7 +71,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -85,7 +85,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +100,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -114,7 +114,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -131,7 +131,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

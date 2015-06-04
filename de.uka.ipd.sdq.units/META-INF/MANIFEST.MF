@@ -11,7 +11,5 @@ Export-Package: de.uka.ipd.sdq.units,
  de.uka.ipd.sdq.units.impl,
  de.uka.ipd.sdq.units.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- org.modelversioning.emfprofile;bundle-version="1.1.0";visibility:=reexport,
- org.palladiosimulator.mdsdprofiles;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

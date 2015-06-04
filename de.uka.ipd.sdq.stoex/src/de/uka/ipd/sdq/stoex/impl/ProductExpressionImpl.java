@@ -36,7 +36,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -83,7 +83,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProductExpressionImpl() {
@@ -92,7 +92,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +102,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,7 +112,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetLeft(final Product newLeft, NotificationChain msgs) {
@@ -132,7 +132,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -159,7 +159,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -169,7 +169,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetRight(final Power newRight, NotificationChain msgs) {
@@ -189,7 +189,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -216,7 +216,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -226,7 +226,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -241,7 +241,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -258,7 +258,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -276,7 +276,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -297,7 +297,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -318,7 +318,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -336,7 +336,7 @@ public class ProductExpressionImpl extends ProductImpl implements ProductExpress
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

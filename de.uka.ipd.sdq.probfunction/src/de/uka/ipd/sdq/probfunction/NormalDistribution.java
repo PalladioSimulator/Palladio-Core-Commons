@@ -12,8 +12,8 @@ package de.uka.ipd.sdq.probfunction;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getMu <em>Mu</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getSigma <em>Sigma</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getMu <em>Mu</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getSigma <em>Sigma</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,20 +22,22 @@ package de.uka.ipd.sdq.probfunction;
  * @generated
  */
 public interface NormalDistribution extends ContinuousPDF {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * Returns the value of the '<em><b>Mu</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Mu</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Mu</em>' attribute isn't clear, there really should be more of a
      * description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Mu</em>' attribute.
      * @see #setMu(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getNormalDistribution_Mu()
@@ -45,22 +47,24 @@ public interface NormalDistribution extends ContinuousPDF {
     double getMu();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getMu <em>Mu</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Mu</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getMu
+     * <em>Mu</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Mu</em>' attribute.
      * @see #getMu()
      * @generated
      */
     void setMu(double value);
 
     /**
-     * Returns the value of the '<em><b>Sigma</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Sigma</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Sigma</em>' attribute isn't clear, there really should be more of
      * a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Sigma</em>' attribute.
      * @see #setSigma(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getNormalDistribution_Sigma()
@@ -70,9 +74,11 @@ public interface NormalDistribution extends ContinuousPDF {
     double getSigma();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getSigma <em>Sigma</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Sigma</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getSigma
+     * <em>Sigma</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Sigma</em>' attribute.
      * @see #getSigma()
      * @generated
      */

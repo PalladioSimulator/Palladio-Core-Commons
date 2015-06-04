@@ -26,7 +26,7 @@ public interface NamespaceReference extends AbstractNamedReference {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +39,7 @@ public interface NamespaceReference extends AbstractNamedReference {
      * isn't clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Inner Reference Namespace Reference</em>' containment
      *         reference.
      * @see #setInnerReference_NamespaceReference(AbstractNamedReference)
@@ -54,7 +54,7 @@ public interface NamespaceReference extends AbstractNamedReference {
      * {@link de.uka.ipd.sdq.stoex.NamespaceReference#getInnerReference_NamespaceReference
      * <em>Inner Reference Namespace Reference</em>}' containment reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Inner Reference Namespace Reference</em>' containment
      *            reference.

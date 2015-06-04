@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.identifier;
 
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Identifier</b></em>'. <!--
@@ -33,7 +33,7 @@ import org.palladiosimulator.mdsdprofiles.StereotypableElement;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot null='Identifier.allInstances()->isUnique(p: Identifier | p.id)'"
  * @generated
  */
-public interface Identifier extends StereotypableElement {
+public interface Identifier extends EObject {
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

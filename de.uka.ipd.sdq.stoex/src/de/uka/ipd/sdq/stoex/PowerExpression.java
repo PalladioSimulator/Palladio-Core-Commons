@@ -26,7 +26,7 @@ public interface PowerExpression extends Power {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +39,7 @@ public interface PowerExpression extends Power {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Base</em>' containment reference.
      * @see #setBase(Power)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getPowerExpression_Base()
@@ -51,7 +51,7 @@ public interface PowerExpression extends Power {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.PowerExpression#getBase <em>Base</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Base</em>' containment reference.
      * @see #getBase()
@@ -79,7 +79,7 @@ public interface PowerExpression extends Power {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.PowerExpression#getExponent
      * <em>Exponent</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Exponent</em>' containment reference.
      * @see #getExponent()

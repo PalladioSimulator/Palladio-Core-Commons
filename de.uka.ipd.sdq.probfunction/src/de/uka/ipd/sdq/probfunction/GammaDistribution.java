@@ -9,15 +9,16 @@ package de.uka.ipd.sdq.probfunction;
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Gamma Distribution</b></em>
  * '. <!-- end-user-doc -->
  *
- * <!-- begin-model-doc -->
- * Gamma distribution with shape parameter alpha > 0 (also called k in Wikipedia) and scale parameter theta > 0 (called lambda in umontreal.iro.lecuyer.probdist.GammaDist). The scale parameter theta is the inverse of the rate beta which is also sometimes given to characterise a Gamma distribution. 
- * <!-- end-model-doc -->
+ * <!-- begin-model-doc --> Gamma distribution with shape parameter alpha > 0 (also called k in
+ * Wikipedia) and scale parameter theta > 0 (called lambda in
+ * umontreal.iro.lecuyer.probdist.GammaDist). The scale parameter theta is the inverse of the rate
+ * beta which is also sometimes given to characterise a Gamma distribution. <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getAlpha <em>Alpha</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getTheta <em>Theta</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getAlpha <em>Alpha</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getTheta <em>Theta</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,8 +27,10 @@ package de.uka.ipd.sdq.probfunction;
  * @generated
  */
 public interface GammaDistribution extends ContinuousPDF {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +42,7 @@ public interface GammaDistribution extends ContinuousPDF {
      * a description here...
      * </p>
      * <!-- end-user-doc --> <!-- begin-model-doc --> Shape parameter <!-- end-model-doc -->
-     * 
+     *
      * @return the value of the '<em>Alpha</em>' attribute.
      * @see #setAlpha(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getGammaDistribution_Alpha()
@@ -49,9 +52,11 @@ public interface GammaDistribution extends ContinuousPDF {
     double getAlpha();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getAlpha <em>Alpha</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Alpha</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getAlpha
+     * <em>Alpha</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Alpha</em>' attribute.
      * @see #getAlpha()
      * @generated
      */
@@ -62,7 +67,7 @@ public interface GammaDistribution extends ContinuousPDF {
      * end-user-doc --> <!-- begin-model-doc --> Scale parameter, which is the inverse of the rate
      * parameter beta which is also sometimes given to characterise a Gamma distribution. <!--
      * end-model-doc -->
-     * 
+     *
      * @return the value of the '<em>Theta</em>' attribute.
      * @see #setTheta(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getGammaDistribution_Theta()
@@ -72,9 +77,11 @@ public interface GammaDistribution extends ContinuousPDF {
     double getTheta();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getTheta <em>Theta</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Theta</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getTheta
+     * <em>Theta</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Theta</em>' attribute.
      * @see #getTheta()
      * @generated
      */

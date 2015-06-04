@@ -8,10 +8,6 @@ package de.uka.ipd.sdq.identifier.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
-import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
-import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 
 /**
  * This is the central singleton for the Identifier edit plugin.
@@ -20,6 +16,7 @@ import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
  * @generated
  */
 public final class IdentifierEditPlugin extends EMFPlugin {
+
     /**
      * Keep track of the singleton.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -42,10 +39,6 @@ public final class IdentifierEditPlugin extends EMFPlugin {
     public IdentifierEditPlugin() {
         super
           (new ResourceLocator [] {
-             EcoreEditPlugin.INSTANCE,
-             EMFProfileEditPlugin.INSTANCE,
-             EMFProfileApplicationEditPlugin.INSTANCE,
-             MdsdprofilesEditPlugin.INSTANCE,
            });
     }
 
@@ -79,6 +72,7 @@ public final class IdentifierEditPlugin extends EMFPlugin {
      * @generated
      */
     public static class Implementation extends EclipsePlugin {
+
         /**
          * Creates an instance.
          * <!-- begin-user-doc --> <!-- end-user-doc -->

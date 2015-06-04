@@ -10,9 +10,6 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
-import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
-import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 
 /**
  * This is the central singleton for the Units editor plugin. <!-- begin-user-doc --> <!--
@@ -21,6 +18,7 @@ import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
  * @generated
  */
 public final class UnitsEditorPlugin extends EMFPlugin {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -48,8 +46,7 @@ public final class UnitsEditorPlugin extends EMFPlugin {
      * @generated
      */
     public UnitsEditorPlugin() {
-        super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, EMFProfileEditPlugin.INSTANCE,
-                EMFProfileApplicationEditPlugin.INSTANCE, MdsdprofilesEditPlugin.INSTANCE, });
+        super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, });
     }
 
     /**
@@ -82,6 +79,7 @@ public final class UnitsEditorPlugin extends EMFPlugin {
      * @generated
      */
     public static class Implementation extends EclipseUIPlugin {
+
         /**
          * Creates an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 

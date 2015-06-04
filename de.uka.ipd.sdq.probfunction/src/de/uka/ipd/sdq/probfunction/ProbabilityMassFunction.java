@@ -15,8 +15,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#getSamples <em>Samples</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain <em>Ordered Domain</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#getSamples <em>Samples</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain <em>Ordered Domain
+ * </em>}</li>
  * </ul>
  * </p>
  *
@@ -25,21 +26,23 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ProbabilityMassFunction extends ProbabilityFunction {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * Returns the value of the '<em><b>Samples</b></em>' containment reference list.
-     * The list contents are of type {@link de.uka.ipd.sdq.probfunction.Sample}.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Samples</b></em>' containment reference list. The list
+     * contents are of type {@link de.uka.ipd.sdq.probfunction.Sample}. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Samples</em>' containment reference list isn't clear, there really
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Samples</em>' containment reference list.
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getProbabilityMassFunction_Samples()
      * @model containment="true" required="true"
@@ -48,13 +51,13 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
     EList<Sample> getSamples();
 
     /**
-     * Returns the value of the '<em><b>Ordered Domain</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Ordered Domain</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Ordered Domain</em>' attribute isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Ordered Domain</em>' attribute.
      * @see #setOrderedDomain(boolean)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getProbabilityMassFunction_OrderedDomain()
@@ -64,9 +67,12 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
     boolean isOrderedDomain();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain <em>Ordered Domain</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Ordered Domain</em>' attribute.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain
+     * <em>Ordered Domain</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Ordered Domain</em>' attribute.
      * @see #isOrderedDomain()
      * @generated
      */

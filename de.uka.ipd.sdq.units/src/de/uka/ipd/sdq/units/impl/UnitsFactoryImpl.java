@@ -24,21 +24,21 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static UnitsFactory init() {
@@ -56,7 +56,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UnitsFactoryImpl() {
@@ -65,7 +65,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +88,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -129,7 +129,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -140,7 +140,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -151,7 +151,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -162,7 +162,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -173,7 +173,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UnitNames createUnitNamesFromString(final EDataType eDataType, final String initialValue) {
@@ -187,7 +187,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public String convertUnitNamesToString(final EDataType eDataType, final Object instanceValue) {
@@ -196,7 +196,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -206,7 +206,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

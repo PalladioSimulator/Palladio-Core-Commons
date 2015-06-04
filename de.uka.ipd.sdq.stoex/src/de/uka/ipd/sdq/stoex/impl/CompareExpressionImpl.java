@@ -35,7 +35,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -82,7 +82,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected CompareExpressionImpl() {
@@ -91,7 +91,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -101,7 +101,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetLeft(final Term newLeft, NotificationChain msgs) {
@@ -131,7 +131,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -158,7 +158,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,7 +168,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetRight(final Term newRight, NotificationChain msgs) {
@@ -188,7 +188,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -215,7 +215,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -225,7 +225,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -240,7 +240,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -257,7 +257,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -275,7 +275,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -296,7 +296,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -317,7 +317,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -335,7 +335,7 @@ public class CompareExpressionImpl extends ComparisonImpl implements CompareExpr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

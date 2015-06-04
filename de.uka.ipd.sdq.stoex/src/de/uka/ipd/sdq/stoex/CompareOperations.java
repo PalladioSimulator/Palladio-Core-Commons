@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum CompareOperations implements Enumerator {
     /**
      * The '<em><b>GREATER</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #GREATER_VALUE
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * The '<em><b>EQUALS</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #EQUALS_VALUE
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * The '<em><b>LESS</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #LESS_VALUE
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * The '<em><b>NOTEQUAL</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #NOTEQUAL_VALUE
      * @generated
      * @ordered
@@ -60,7 +60,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * The '<em><b>LESSEQUAL</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #LESSEQUAL_VALUE
      * @generated
      * @ordered
@@ -79,7 +79,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -91,7 +91,7 @@ public enum CompareOperations implements Enumerator {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #GREATER
      * @model
      * @generated
@@ -106,7 +106,7 @@ public enum CompareOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #EQUALS
      * @model
      * @generated
@@ -121,7 +121,7 @@ public enum CompareOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #LESS
      * @model
      * @generated
@@ -136,7 +136,7 @@ public enum CompareOperations implements Enumerator {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #NOTEQUAL
      * @model
      * @generated
@@ -151,7 +151,7 @@ public enum CompareOperations implements Enumerator {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #LESSEQUAL
      * @model
      * @generated
@@ -166,7 +166,7 @@ public enum CompareOperations implements Enumerator {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #GREATEREQUAL
      * @model
      * @generated
@@ -177,11 +177,11 @@ public enum CompareOperations implements Enumerator {
     /**
      * An array of all the '<em><b>Compare Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static final CompareOperations[] VALUES_ARRAY = new CompareOperations[] { GREATER, EQUALS, LESS, NOTEQUAL,
-        LESSEQUAL, GREATEREQUAL, };
+            LESSEQUAL, GREATEREQUAL, };
 
     /**
      * A public read-only list of all the '<em><b>Compare Operations</b></em>' enumerators. <!--
@@ -194,7 +194,7 @@ public enum CompareOperations implements Enumerator {
     /**
      * Returns the '<em><b>Compare Operations</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static CompareOperations get(final String literal) {
@@ -224,7 +224,7 @@ public enum CompareOperations implements Enumerator {
     /**
      * Returns the '<em><b>Compare Operations</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static CompareOperations get(final int value) {
@@ -247,28 +247,28 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private CompareOperations(final int value, final String name, final String literal) {
@@ -279,7 +279,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -289,7 +289,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -299,7 +299,7 @@ public enum CompareOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

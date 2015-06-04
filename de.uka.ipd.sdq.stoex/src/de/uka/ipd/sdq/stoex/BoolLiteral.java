@@ -25,7 +25,7 @@ public interface BoolLiteral extends Atom {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -37,7 +37,7 @@ public interface BoolLiteral extends Atom {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(boolean)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getBoolLiteral_Value()
@@ -49,7 +49,7 @@ public interface BoolLiteral extends Atom {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.BoolLiteral#isValue <em>Value</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Value</em>' attribute.
      * @see #isValue()

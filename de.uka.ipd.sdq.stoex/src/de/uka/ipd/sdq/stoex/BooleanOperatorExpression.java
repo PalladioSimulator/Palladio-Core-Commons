@@ -27,7 +27,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Left</em>' containment reference.
      * @see #setLeft(BooleanExpression)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getBooleanOperatorExpression_Left()
@@ -52,7 +52,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.BooleanOperatorExpression#getLeft
      * <em>Left</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Left</em>' containment reference.
      * @see #getLeft()
@@ -68,7 +68,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Right</em>' containment reference.
      * @see #setRight(BooleanExpression)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getBooleanOperatorExpression_Right()
@@ -80,7 +80,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.BooleanOperatorExpression#getRight
      * <em>Right</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Right</em>' containment reference.
      * @see #getRight()
@@ -96,7 +96,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Operation</em>' attribute.
      * @see de.uka.ipd.sdq.stoex.BooleanOperations
      * @see #setOperation(BooleanOperations)
@@ -109,7 +109,7 @@ public interface BooleanOperatorExpression extends BooleanExpression {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.BooleanOperatorExpression#getOperation
      * <em>Operation</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Operation</em>' attribute.
      * @see de.uka.ipd.sdq.stoex.BooleanOperations

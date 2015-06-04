@@ -7,7 +7,7 @@
 package de.uka.ipd.sdq.stoex.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.StoexPackage;
@@ -20,18 +20,18 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  *
  * @generated
  */
-public abstract class ExpressionImpl extends StereotypableElementImpl implements Expression {
+public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExpressionImpl() {
@@ -40,7 +40,7 @@ public abstract class ExpressionImpl extends StereotypableElementImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

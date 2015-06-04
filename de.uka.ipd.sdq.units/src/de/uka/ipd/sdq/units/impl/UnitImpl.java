@@ -7,7 +7,7 @@
 package de.uka.ipd.sdq.units.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.palladiosimulator.mdsdprofiles.impl.StereotypableElementImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitsPackage;
@@ -20,18 +20,18 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  *
  * @generated
  */
-public abstract class UnitImpl extends StereotypableElementImpl implements Unit {
+public abstract class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitImpl() {
@@ -40,7 +40,7 @@ public abstract class UnitImpl extends StereotypableElementImpl implements Unit 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

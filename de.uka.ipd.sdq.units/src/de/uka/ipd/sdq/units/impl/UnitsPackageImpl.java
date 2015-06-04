@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.palladiosimulator.mdsdprofiles.MdsdprofilesPackage;
 
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.Unit;
@@ -27,70 +27,70 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitCarryingElementEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass baseUnitEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitRepositoryEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitMultiplicationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitPowerEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass unitDivisionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum unitNamesEEnum = null;
@@ -103,7 +103,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see de.uka.ipd.sdq.units.UnitsPackage#eNS_URI
      * @see #init()
@@ -115,7 +115,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -128,7 +128,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
      * This method is used to initialize {@link UnitsPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to
      * obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -146,7 +146,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
         isInited = true;
 
         // Initialize simple dependencies
-        MdsdprofilesPackage.eINSTANCE.eClass();
+        EcorePackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
         theUnitsPackage.createPackageContents();
@@ -164,7 +164,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -174,7 +174,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -184,7 +184,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -194,7 +194,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -214,7 +214,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -224,7 +224,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -234,7 +234,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -244,7 +244,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -254,7 +254,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,7 +264,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -274,7 +274,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -284,7 +284,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -294,7 +294,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -304,7 +304,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -314,7 +314,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -324,7 +324,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -334,7 +334,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -342,7 +342,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
@@ -380,7 +380,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -388,7 +388,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {
@@ -402,19 +402,12 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
         this.setNsPrefix(eNS_PREFIX);
         this.setNsURI(eNS_URI);
 
-        // Obtain other dependent packages
-        final MdsdprofilesPackage theMdsdprofilesPackage = (MdsdprofilesPackage) EPackage.Registry.INSTANCE
-                .getEPackage(MdsdprofilesPackage.eNS_URI);
-
         // Create type parameters
 
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        this.unitCarryingElementEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
-        this.unitEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
         this.baseUnitEClass.getESuperTypes().add(this.getUnit());
-        this.unitRepositoryEClass.getESuperTypes().add(theMdsdprofilesPackage.getStereotypableElement());
         this.unitMultiplicationEClass.getESuperTypes().add(this.getUnit());
         this.unitPowerEClass.getESuperTypes().add(this.getUnit());
         this.unitDivisionEClass.getESuperTypes().add(this.getUnit());
@@ -481,7 +474,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
     /**
      * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void createExtendedMetaDataAnnotations() {

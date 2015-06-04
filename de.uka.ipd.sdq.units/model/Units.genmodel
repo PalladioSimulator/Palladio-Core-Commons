@@ -4,7 +4,7 @@
     copyrightText="Copyright 2007-2009, SDQ, IPD, U Karlsruhe" modelDirectory="/de.uka.ipd.sdq.units/src"
     modelPluginID="de.uka.ipd.sdq.units" modelName="Units" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.modelversioning.emfprofile/model/emfprofiles.genmodel#//emfprofile ../../org.modelversioning.emfprofile/model/emfprofileapplication.genmodel#//emfprofileapplication ../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.genmodel#//mdsdprofiles"
+    language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     cleanup="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
@@ -25,7 +25,6 @@
     <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
   </genAnnotations>
   <foreignModel>Units.ecore</foreignModel>
-  <foreignModel>../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.ecore</foreignModel>
   <foreignModel>../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Units" basePackage="de.uka.ipd.sdq"
       disposableProviderFactory="true" ecorePackage="Units.ecore#/">

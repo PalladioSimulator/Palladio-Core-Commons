@@ -6,7 +6,6 @@ package de.uka.ipd.sdq.identifier;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.palladiosimulator.mdsdprofiles.MdsdprofilesPackage;
 
 /**
  * <!-- begin-user-doc --> The <b>Package</b> for the model. It contains accessors for the meta
@@ -73,7 +72,7 @@ public interface IdentifierPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int IDENTIFIER__ID = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT_FEATURE_COUNT + 0;
+    int IDENTIFIER__ID = 0;
 
     /**
      * The number of structural features of the '<em>Identifier</em>' class.
@@ -82,7 +81,7 @@ public interface IdentifierPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int IDENTIFIER_FEATURE_COUNT = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT_FEATURE_COUNT + 1;
+    int IDENTIFIER_FEATURE_COUNT = 1;
 
     /**
      * Returns the meta object for class '{@link de.uka.ipd.sdq.identifier.Identifier <em>Identifier</em>}'.

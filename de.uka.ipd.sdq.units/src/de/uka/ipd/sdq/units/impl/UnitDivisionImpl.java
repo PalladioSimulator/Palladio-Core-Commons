@@ -30,7 +30,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +38,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
     /**
      * The cached value of the '{@link #getDividend() <em>Dividend</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDividend()
      * @generated
      * @ordered
@@ -57,7 +57,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitDivisionImpl() {
@@ -66,7 +66,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -86,7 +86,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetDividend(final Unit newDividend, NotificationChain msgs) {
@@ -106,7 +106,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -143,7 +143,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetDivisor(final Unit newDivisor, NotificationChain msgs) {
@@ -163,7 +163,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -190,7 +190,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -207,7 +207,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -223,7 +223,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -241,7 +241,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -259,7 +259,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

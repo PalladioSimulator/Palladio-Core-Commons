@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex;
 
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Expression</b></em>'. <!--
@@ -17,11 +17,11 @@ import org.palladiosimulator.mdsdprofiles.StereotypableElement;
  * @model abstract="true"
  * @generated
  */
-public interface Expression extends StereotypableElement {
+public interface Expression extends EObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";

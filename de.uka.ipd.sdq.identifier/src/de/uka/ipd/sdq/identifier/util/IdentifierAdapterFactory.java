@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
@@ -70,10 +69,6 @@ public class IdentifierAdapterFactory extends AdapterFactoryImpl {
                 return createIdentifierAdapter();
             }
             @Override
-            public Adapter caseStereotypableElement(StereotypableElement object) {
-                return createStereotypableElementAdapter();
-            }
-            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -101,20 +96,6 @@ public class IdentifierAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createIdentifierAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.palladiosimulator.mdsdprofiles.StereotypableElement <em>Stereotypable Element</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.palladiosimulator.mdsdprofiles.StereotypableElement
-     * @generated
-     */
-    public Adapter createStereotypableElementAdapter() {
         return null;
     }
 

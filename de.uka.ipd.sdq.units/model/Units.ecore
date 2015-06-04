@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="units" nsURI="http://sdq.ipd.uka.de/Units/2.1" nsPrefix="units">
-  <eClassifiers xsi:type="ecore:EClass" name="UnitCarryingElement" abstract="true"
-      eSuperTypes="../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.ecore#//StereotypableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="UnitCarryingElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" ordered="false" eType="#//Unit"
         volatile="true" containment="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -14,7 +13,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Unit" abstract="true" eSuperTypes="../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.ecore#//StereotypableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Unit" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="BaseUnit" eSuperTypes="#//Unit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="#//UnitNames" iD="true">
@@ -24,7 +23,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnitRepository" eSuperTypes="../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.ecore#//StereotypableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="UnitRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" ordered="false"
         upperBound="-1" eType="#//BaseUnit" containment="true"/>
   </eClassifiers>

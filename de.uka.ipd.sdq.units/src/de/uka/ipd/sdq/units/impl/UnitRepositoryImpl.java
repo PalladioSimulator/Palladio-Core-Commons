@@ -36,7 +36,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -52,7 +52,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected UnitRepositoryImpl() {
@@ -61,7 +61,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -71,7 +71,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -85,7 +85,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -100,7 +100,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -114,7 +114,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -131,7 +131,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class UnitRepositoryImpl extends StereotypableElementImpl implements Unit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

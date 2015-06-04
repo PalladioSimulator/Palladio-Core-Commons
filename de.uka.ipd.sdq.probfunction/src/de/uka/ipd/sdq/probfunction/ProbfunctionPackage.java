@@ -72,15 +72,6 @@ public interface ProbfunctionPackage extends EPackage {
     int PROBABILITY_FUNCTION = 2;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_FUNCTION__PROFILEABLE_ELEMENT = UnitsPackage.UNIT_CARRYING_ELEMENT__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -108,15 +99,6 @@ public interface ProbfunctionPackage extends EPackage {
     int PROBABILITY_DENSITY_FUNCTION = 1;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_DENSITY_FUNCTION__PROFILEABLE_ELEMENT = PROBABILITY_FUNCTION__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -142,15 +124,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int BOXED_PDF = 0;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BOXED_PDF__PROFILEABLE_ELEMENT = PROBABILITY_DENSITY_FUNCTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -223,15 +196,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int PROBABILITY_MASS_FUNCTION = 4;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROBABILITY_MASS_FUNCTION__PROFILEABLE_ELEMENT = PROBABILITY_FUNCTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -315,15 +279,6 @@ public interface ProbfunctionPackage extends EPackage {
     int SAMPLE_PDF = 6;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SAMPLE_PDF__PROFILEABLE_ELEMENT = PROBABILITY_DENSITY_FUNCTION__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -405,15 +360,6 @@ public interface ProbfunctionPackage extends EPackage {
     int CONTINUOUS_PDF = 8;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONTINUOUS_PDF__PROFILEABLE_ELEMENT = PROBABILITY_DENSITY_FUNCTION__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -439,15 +385,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int EXPONENTIAL_DISTRIBUTION = 9;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EXPONENTIAL_DISTRIBUTION__PROFILEABLE_ELEMENT = CONTINUOUS_PDF__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -484,15 +421,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int NORMAL_DISTRIBUTION = 10;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int NORMAL_DISTRIBUTION__PROFILEABLE_ELEMENT = CONTINUOUS_PDF__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -540,15 +468,6 @@ public interface ProbfunctionPackage extends EPackage {
     int LOGNORMAL_DISTRIBUTION = 11;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int LOGNORMAL_DISTRIBUTION__PROFILEABLE_ELEMENT = CONTINUOUS_PDF__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -592,15 +511,6 @@ public interface ProbfunctionPackage extends EPackage {
      * @generated
      */
     int GAMMA_DISTRIBUTION = 12;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GAMMA_DISTRIBUTION__PROFILEABLE_ELEMENT = CONTINUOUS_PDF__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Unit</b></em>' containment reference.

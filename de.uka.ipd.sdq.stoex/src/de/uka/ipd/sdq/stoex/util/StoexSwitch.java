@@ -50,7 +50,7 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- *
+ * 
  * @see de.uka.ipd.sdq.stoex.StoexPackage
  * @generated
  */
@@ -58,20 +58,20 @@ public class StoexSwitch<T> extends Switch<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected static StoexPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public StoexSwitch() {
@@ -83,7 +83,7 @@ public class StoexSwitch<T> extends Switch<T> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
@@ -96,7 +96,7 @@ public class StoexSwitch<T> extends Switch<T> {
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
@@ -931,7 +931,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Variable Reference</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Variable Reference</em>
@@ -947,7 +947,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Abstract Named Reference</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -963,7 +963,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Namespace Reference</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Namespace Reference</em>
@@ -1084,7 +1084,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Boolean Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Boolean Expression</em>
@@ -1130,7 +1130,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Term Expression</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Term Expression</em>'.
@@ -1145,7 +1145,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Random Variable</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Random Variable</em>'.
@@ -1160,7 +1160,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Stereotypable Element</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -1176,7 +1176,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Product Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Product Expression</em>
@@ -1192,7 +1192,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Probability Function Literal</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -1223,7 +1223,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Numeric Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Numeric Literal</em>'.
@@ -1253,7 +1253,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Double Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Double Literal</em>'.
@@ -1268,7 +1268,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Compare Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Compare Expression</em>
@@ -1299,7 +1299,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>String Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>String Literal</em>'.
@@ -1314,7 +1314,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Power Expression</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Power Expression</em>'.
@@ -1329,7 +1329,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Boolean Operator Expression</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -1345,7 +1345,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Not Expression</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Not Expression</em>'.
@@ -1360,7 +1360,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Negative Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Negative Expression</em>
@@ -1376,7 +1376,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Function Literal</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Function Literal</em>'.
@@ -1391,7 +1391,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>If Else Expression</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>If Else Expression</em>
@@ -1407,7 +1407,7 @@ public class StoexSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Unit Carrying Element</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '

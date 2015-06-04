@@ -67,15 +67,6 @@ public interface IdentifierPackage extends EPackage {
     int IDENTIFIER = 0;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int IDENTIFIER__PROFILEABLE_ELEMENT = MdsdprofilesPackage.STEREOTYPABLE_ELEMENT__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Id</b></em>' attribute.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->

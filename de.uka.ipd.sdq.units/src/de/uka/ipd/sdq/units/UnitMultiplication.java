@@ -27,7 +27,7 @@ public interface UnitMultiplication extends Unit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public interface UnitMultiplication extends Unit {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Units</em>' containment reference list.
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitMultiplication_Units()
      * @model containment="true" required="true" ordered="false"

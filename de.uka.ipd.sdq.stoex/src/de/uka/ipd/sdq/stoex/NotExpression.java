@@ -25,7 +25,7 @@ public interface NotExpression extends Unary {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +38,7 @@ public interface NotExpression extends Unary {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Inner</em>' containment reference.
      * @see #setInner(Unary)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getNotExpression_Inner()
@@ -50,7 +50,7 @@ public interface NotExpression extends Unary {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.NotExpression#getInner <em>Inner</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Inner</em>' containment reference.
      * @see #getInner()

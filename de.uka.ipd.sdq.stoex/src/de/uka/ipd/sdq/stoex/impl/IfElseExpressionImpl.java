@@ -37,7 +37,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -45,7 +45,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
     /**
      * The cached value of the '{@link #getIfExpression() <em>If Expression</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getIfExpression()
      * @generated
      * @ordered
@@ -55,7 +55,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
     /**
      * The cached value of the '{@link #getElseExpression() <em>Else Expression</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getElseExpression()
      * @generated
      * @ordered
@@ -65,7 +65,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
     /**
      * The cached value of the '{@link #getConditionExpression() <em>Condition Expression</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getConditionExpression()
      * @generated
      * @ordered
@@ -74,7 +74,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected IfElseExpressionImpl() {
@@ -83,7 +83,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -93,7 +93,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetIfExpression(final BooleanExpression newIfExpression, NotificationChain msgs) {
@@ -123,7 +123,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -150,7 +150,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -160,7 +160,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetElseExpression(final BooleanExpression newElseExpression, NotificationChain msgs) {
@@ -180,7 +180,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -207,7 +207,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -217,7 +217,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetConditionExpression(final BooleanExpression newConditionExpression,
@@ -239,7 +239,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -267,7 +267,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -286,7 +286,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -304,7 +304,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -325,7 +325,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -346,7 +346,7 @@ public class IfElseExpressionImpl extends IfElseImpl implements IfElseExpression
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

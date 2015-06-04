@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum BooleanOperations implements Enumerator {
     /**
      * The '<em><b>AND</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #AND_VALUE
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * The '<em><b>OR</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #OR_VALUE
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * The '<em><b>XOR</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #XOR_VALUE
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -63,7 +63,7 @@ public enum BooleanOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #AND
      * @model
      * @generated
@@ -78,7 +78,7 @@ public enum BooleanOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #OR
      * @model
      * @generated
@@ -93,7 +93,7 @@ public enum BooleanOperations implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #XOR
      * @model
      * @generated
@@ -104,7 +104,7 @@ public enum BooleanOperations implements Enumerator {
     /**
      * An array of all the '<em><b>Boolean Operations</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static final BooleanOperations[] VALUES_ARRAY = new BooleanOperations[] { AND, OR, XOR, };
@@ -120,7 +120,7 @@ public enum BooleanOperations implements Enumerator {
     /**
      * Returns the '<em><b>Boolean Operations</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static BooleanOperations get(final String literal) {
@@ -150,7 +150,7 @@ public enum BooleanOperations implements Enumerator {
     /**
      * Returns the '<em><b>Boolean Operations</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static BooleanOperations get(final int value) {
@@ -167,28 +167,28 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private BooleanOperations(final int value, final String name, final String literal) {
@@ -199,7 +199,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -209,7 +209,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -219,7 +219,7 @@ public enum BooleanOperations implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

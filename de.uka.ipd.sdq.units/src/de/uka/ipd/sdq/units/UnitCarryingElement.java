@@ -27,7 +27,7 @@ public interface UnitCarryingElement extends StereotypableElement {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public interface UnitCarryingElement extends StereotypableElement {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Unit</em>' containment reference.
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitCarryingElement_Unit()
      * @model containment="true" volatile="true" ordered="false" suppressedSetVisibility="true"

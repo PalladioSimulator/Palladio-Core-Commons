@@ -34,7 +34,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -52,7 +52,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
     /**
      * The cached value of the '{@link #getExponent() <em>Exponent</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getExponent()
      * @generated
      * @ordered
@@ -61,7 +61,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected PowerExpressionImpl() {
@@ -70,7 +70,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -80,7 +80,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -90,7 +90,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetBase(final Power newBase, NotificationChain msgs) {
@@ -110,7 +110,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -137,7 +137,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -147,7 +147,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetExponent(final Unary newExponent, NotificationChain msgs) {
@@ -167,7 +167,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -194,7 +194,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -211,7 +211,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -227,7 +227,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -245,7 +245,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -263,7 +263,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

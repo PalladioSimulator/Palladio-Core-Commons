@@ -33,7 +33,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -41,7 +41,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
      * The cached value of the '{@link #getInnerReference_NamespaceReference()
      * <em>Inner Reference Namespace Reference</em>}' containment reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getInnerReference_NamespaceReference()
      * @generated
      * @ordered
@@ -50,7 +50,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected NamespaceReferenceImpl() {
@@ -59,7 +59,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -69,7 +69,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -79,7 +79,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetInnerReference_NamespaceReference(
@@ -101,7 +101,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -131,7 +131,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -160,7 +160,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -175,7 +175,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -190,7 +190,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.Enumerator;
 /**
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Unit Names</b></em>', and utility methods for working with them. <!-- end-user-doc -->
- *
+ * 
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitNames()
  * @model
  * @generated
@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum UnitNames implements Enumerator {
     /**
      * The '<em><b>UNITLESS</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #UNITLESS_VALUE
      * @generated
      * @ordered
@@ -29,7 +29,7 @@ public enum UnitNames implements Enumerator {
 
     /**
      * The '<em><b>BYTE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #BYTE_VALUE
      * @generated
      * @ordered
@@ -38,7 +38,7 @@ public enum UnitNames implements Enumerator {
 
     /**
      * The '<em><b>SECOND</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #SECOND_VALUE
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public enum UnitNames implements Enumerator {
     SECOND(2, "SECOND", "s"), /**
      * The '<em><b>METER</b></em>' literal object. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #METER_VALUE
      * @generated
      * @ordered
@@ -55,7 +55,7 @@ public enum UnitNames implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -67,7 +67,7 @@ public enum UnitNames implements Enumerator {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #UNITLESS
      * @model literal=""
      * @generated
@@ -82,7 +82,7 @@ public enum UnitNames implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #BYTE
      * @model literal="B"
      * @generated
@@ -97,7 +97,7 @@ public enum UnitNames implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #SECOND
      * @model literal="s"
      * @generated
@@ -112,7 +112,7 @@ public enum UnitNames implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #METER
      * @model literal="m"
      * @generated
@@ -123,7 +123,7 @@ public enum UnitNames implements Enumerator {
     /**
      * An array of all the '<em><b>Unit Names</b></em>' enumerators. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static final UnitNames[] VALUES_ARRAY = new UnitNames[] { UNITLESS, BYTE, SECOND, METER, };
@@ -154,7 +154,7 @@ public enum UnitNames implements Enumerator {
     /**
      * Returns the '<em><b>Unit Names</b></em>' literal with the specified name. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static UnitNames getByName(final String name) {
@@ -188,28 +188,28 @@ public enum UnitNames implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private UnitNames(final int value, final String name, final String literal) {
@@ -220,7 +220,7 @@ public enum UnitNames implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -230,7 +230,7 @@ public enum UnitNames implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -240,7 +240,7 @@ public enum UnitNames implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

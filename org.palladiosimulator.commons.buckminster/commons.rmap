@@ -6,7 +6,7 @@
   <rm:locator searchPathRef="commons" failOnError="false" pattern="^org\.palladiosimulator\..*" />  
   <rm:locator searchPathRef="thirdparty" failOnError="false"/>
   
-  <rm:redirect href="https://svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/eclipse-platform.rmap" pattern=".*"/>
+  <rm:redirect href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/eclipse-platform.rmap" pattern=".*"/>
   
   <rm:searchPath name="commons">
     <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn" source="true">

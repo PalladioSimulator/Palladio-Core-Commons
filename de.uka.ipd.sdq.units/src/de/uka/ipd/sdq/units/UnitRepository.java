@@ -6,8 +6,8 @@
  */
 package de.uka.ipd.sdq.units;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Unit Repository</b></em>'.
@@ -22,9 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitRepository()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface UnitRepository extends EObject {
+public interface UnitRepository extends CDOObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

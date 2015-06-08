@@ -47,7 +47,7 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- *
+ * 
  * @see de.uka.ipd.sdq.stoex.StoexPackage
  * @generated
  */
@@ -55,20 +55,20 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected static StoexPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public StoexAdapterFactory() {
@@ -81,7 +81,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     *
+     * 
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -99,7 +99,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StoexSwitch<Adapter> modelSwitch = new StoexSwitch<Adapter>() {
@@ -267,7 +267,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
@@ -283,7 +283,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Variable Reference</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.VariableReference
      * @generated
@@ -312,7 +312,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Namespace Reference</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NamespaceReference
      * @generated
@@ -326,7 +326,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Variable</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Variable
      * @generated
@@ -340,7 +340,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Atom
      * @generated
@@ -354,7 +354,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Unary</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
      * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Unary
      * @generated
@@ -368,7 +368,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Power</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
      * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Power
      * @generated
@@ -382,7 +382,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Product</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Product
      * @generated
@@ -396,7 +396,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Term
      * @generated
@@ -410,7 +410,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Comparison</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Comparison
      * @generated
@@ -424,7 +424,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Boolean Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.BooleanExpression
      * @generated
@@ -438,7 +438,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>If Else</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.IfElse
      * @generated
@@ -452,7 +452,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Expression
      * @generated
@@ -466,7 +466,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Term Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.TermExpression
      * @generated
@@ -480,7 +480,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Random Variable</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.RandomVariable
      * @generated
@@ -494,7 +494,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Product Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.ProductExpression
      * @generated
@@ -509,7 +509,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral
      * @generated
@@ -523,7 +523,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Parenthesis</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.Parenthesis
      * @generated
@@ -537,7 +537,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Numeric Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NumericLiteral
      * @generated
@@ -551,7 +551,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Int Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.IntLiteral
      * @generated
@@ -565,7 +565,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Double Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.DoubleLiteral
      * @generated
@@ -579,7 +579,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Compare Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.CompareExpression
      * @generated
@@ -593,7 +593,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Bool Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.BoolLiteral
      * @generated
@@ -607,7 +607,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>String Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.StringLiteral
      * @generated
@@ -621,7 +621,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Power Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.PowerExpression
      * @generated
@@ -636,7 +636,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.BooleanOperatorExpression
      * @generated
@@ -650,7 +650,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Not Expression</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NotExpression
      * @generated
@@ -664,7 +664,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Negative Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.NegativeExpression
      * @generated
@@ -678,7 +678,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>Function Literal</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.FunctionLiteral
      * @generated
@@ -692,7 +692,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
      * <em>If Else Expression</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.stoex.IfElseExpression
      * @generated
@@ -719,7 +719,7 @@ public class StoexAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @generated
      */

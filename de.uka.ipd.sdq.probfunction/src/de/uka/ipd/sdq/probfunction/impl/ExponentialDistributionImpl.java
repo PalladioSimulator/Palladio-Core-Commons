@@ -28,7 +28,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -36,7 +36,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
     /**
      * The default value of the '{@link #getRate() <em>Rate</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getRate()
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
     /**
      * The cached value of the '{@link #getRate() <em>Rate</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getRate()
      * @generated
      * @ordered
@@ -55,7 +55,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExponentialDistributionImpl() {
@@ -64,7 +64,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -84,7 +84,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -99,7 +99,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -113,7 +113,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -128,7 +128,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -143,7 +143,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -157,7 +157,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -35,14 +35,14 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached value of the '{@link #getSamples() <em>Samples</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSamples()
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected BoxedPDFImpl() {
@@ -60,7 +60,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -70,7 +70,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -84,7 +84,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -99,7 +99,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -113,7 +113,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -130,7 +130,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -145,7 +145,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

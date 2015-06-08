@@ -31,21 +31,21 @@ import de.uka.ipd.sdq.probfunction.StringSample;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ProbfunctionFactoryImpl extends EFactoryImpl implements ProbfunctionFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static ProbfunctionFactory init() {
@@ -63,7 +63,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ProbfunctionFactoryImpl() {
@@ -72,7 +72,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -113,7 +113,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -124,7 +124,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -157,7 +157,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -168,7 +168,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -179,7 +179,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -190,7 +190,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -201,7 +201,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -212,7 +212,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -223,7 +223,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -234,7 +234,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -245,7 +245,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -256,7 +256,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -267,7 +267,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -277,7 +277,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @deprecated
      * @generated
      */

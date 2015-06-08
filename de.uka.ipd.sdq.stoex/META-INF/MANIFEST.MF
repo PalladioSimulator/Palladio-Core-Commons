@@ -24,6 +24,7 @@ Export-Package: de.uka.ipd.sdq.stoex,
    de.uka.ipd.sdq.stoex"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.cdo;visibility:=reexport,
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport,
  org.antlr.runtime;bundle-version="[3.2.0,3.3.0)";visibility:=reexport

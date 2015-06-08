@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Random Variable</b></em>'.
@@ -22,13 +22,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.stoex.StoexPackage#getRandomVariable()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface RandomVariable extends EObject {
+public interface RandomVariable extends CDOObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +41,7 @@ public interface RandomVariable extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Specification</em>' attribute.
      * @see #setSpecification(String)
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getRandomVariable_Specification()
@@ -52,7 +53,7 @@ public interface RandomVariable extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.stoex.RandomVariable#getSpecification
      * <em>Specification</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Specification</em>' attribute.
      * @see #getSpecification()
@@ -67,7 +68,7 @@ public interface RandomVariable extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Expression</em>' reference.
      * @see de.uka.ipd.sdq.stoex.StoexPackage#getRandomVariable_Expression()
      * @model unsettable="true" required="true" transient="true" changeable="false" volatile="true"

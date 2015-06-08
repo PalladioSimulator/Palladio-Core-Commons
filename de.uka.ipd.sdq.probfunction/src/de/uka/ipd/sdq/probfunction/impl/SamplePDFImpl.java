@@ -38,7 +38,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -66,7 +66,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
     /**
      * The cached value of the '{@link #getValues() <em>Values</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getValues()
      * @generated
      * @ordered
@@ -75,7 +75,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SamplePDFImpl() {
@@ -84,7 +84,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -94,7 +94,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -104,7 +104,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -119,7 +119,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -148,7 +148,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -164,7 +164,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -184,7 +184,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -202,7 +202,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -218,7 +218,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

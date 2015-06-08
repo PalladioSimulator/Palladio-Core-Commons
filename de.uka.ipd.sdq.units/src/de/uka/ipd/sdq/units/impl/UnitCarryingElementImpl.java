@@ -9,7 +9,7 @@ package de.uka.ipd.sdq.units.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitCarryingElement;
@@ -27,7 +27,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  *
  * @generated
  */
-public abstract class UnitCarryingElementImpl extends MinimalEObjectImpl.Container implements UnitCarryingElement {
+public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements UnitCarryingElement {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

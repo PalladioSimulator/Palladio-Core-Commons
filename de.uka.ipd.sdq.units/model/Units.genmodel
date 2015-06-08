@@ -2,10 +2,10 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
     copyrightText="Copyright 2007-2009, SDQ, IPD, U Karlsruhe" modelDirectory="/de.uka.ipd.sdq.units/src"
-    modelPluginID="de.uka.ipd.sdq.units" modelName="Units" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
-    cleanup="true">
+    modelPluginID="de.uka.ipd.sdq.units" modelName="Units" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" language="en"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore" cleanup="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
     <details key="UNION_PROPERTIES" value="REPORT"/>
@@ -26,6 +26,7 @@
   </genAnnotations>
   <foreignModel>Units.ecore</foreignModel>
   <foreignModel>../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore</foreignModel>
+  <modelPluginVariables>org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Units" basePackage="de.uka.ipd.sdq"
       disposableProviderFactory="true" ecorePackage="Units.ecore#/">
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="Units.ecore#//UnitNames">

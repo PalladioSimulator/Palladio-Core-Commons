@@ -32,7 +32,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -48,7 +48,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariableImpl() {
@@ -57,7 +57,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -67,7 +67,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -77,7 +77,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetId_Variable(final AbstractNamedReference newId_Variable, NotificationChain msgs) {
@@ -97,7 +97,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -124,7 +124,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -139,7 +139,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -153,7 +153,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -168,7 +168,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -183,7 +183,7 @@ public class VariableImpl extends AtomImpl implements Variable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

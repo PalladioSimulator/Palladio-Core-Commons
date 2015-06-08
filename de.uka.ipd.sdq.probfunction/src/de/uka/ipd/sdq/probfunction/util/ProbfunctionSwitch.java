@@ -36,7 +36,7 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- *
+ * 
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage
  * @generated
  */
@@ -44,20 +44,20 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected static ProbfunctionPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ProbfunctionSwitch() {
@@ -69,7 +69,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
@@ -82,7 +82,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
@@ -351,7 +351,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Probability Density Function</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -367,7 +367,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Probability Function</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -383,7 +383,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '<em>Continuous Sample</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Continuous Sample</em>'.
@@ -398,7 +398,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Probability Mass Function</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -459,7 +459,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '<em>Continuous PDF</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Continuous PDF</em>'.
@@ -474,7 +474,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Exponential Distribution</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -490,7 +490,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '<em>Normal Distribution</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Normal Distribution</em>
@@ -506,7 +506,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Lognormal Distribution</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -522,7 +522,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '<em>Gamma Distribution</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Gamma Distribution</em>
@@ -568,7 +568,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '<em>Double Sample</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Double Sample</em>'.
@@ -583,7 +583,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '<em>String Sample</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>String Sample</em>'.
@@ -598,7 +598,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Unit Carrying Element</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '

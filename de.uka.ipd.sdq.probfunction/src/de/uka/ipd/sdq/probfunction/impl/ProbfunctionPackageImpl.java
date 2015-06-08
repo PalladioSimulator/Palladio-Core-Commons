@@ -37,133 +37,133 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ProbfunctionPackageImpl extends EPackageImpl implements ProbfunctionPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass boxedPDFEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass probabilityDensityFunctionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass probabilityFunctionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass continuousSampleEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass probabilityMassFunctionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass sampleEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass samplePDFEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass complexEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass continuousPDFEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass exponentialDistributionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass normalDistributionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass lognormalDistributionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass gammaDistributionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass intSampleEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass boolSampleEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass doubleSampleEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass stringSampleEClass = null;
@@ -176,7 +176,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#eNS_URI
      * @see #init()
@@ -188,7 +188,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static boolean isInited = false;
@@ -201,7 +201,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
      * This method is used to initialize {@link ProbfunctionPackage#eINSTANCE} when that field is
      * accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -215,7 +215,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
         // Obtain or create and register package
         final ProbfunctionPackageImpl theProbfunctionPackage = (ProbfunctionPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof ProbfunctionPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new ProbfunctionPackageImpl());
+                        : new ProbfunctionPackageImpl());
 
         isInited = true;
 
@@ -238,7 +238,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -248,7 +248,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -258,7 +258,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -268,7 +268,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -278,7 +278,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -288,7 +288,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -298,7 +298,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -308,7 +308,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -318,7 +318,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -328,7 +328,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -338,7 +338,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -348,7 +348,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -358,7 +358,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -368,7 +368,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -378,7 +378,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -388,7 +388,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -398,7 +398,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -408,7 +408,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -418,7 +418,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -428,7 +428,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -438,7 +438,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -448,7 +448,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -458,7 +458,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -468,7 +468,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -478,7 +478,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -488,7 +488,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -498,7 +498,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -508,7 +508,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -518,7 +518,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -528,7 +528,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -538,7 +538,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -548,7 +548,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -558,7 +558,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -568,7 +568,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -578,7 +578,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -588,7 +588,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -598,7 +598,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private boolean isCreated = false;
@@ -606,7 +606,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void createPackageContents() {
@@ -671,7 +671,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private boolean isInitialized = false;
@@ -679,7 +679,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void initializePackageContents() {

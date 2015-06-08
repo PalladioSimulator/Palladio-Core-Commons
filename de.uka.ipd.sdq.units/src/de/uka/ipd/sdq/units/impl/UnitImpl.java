@@ -7,7 +7,7 @@
 package de.uka.ipd.sdq.units.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitsPackage;
@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  *
  * @generated
  */
-public abstract class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
+public abstract class UnitImpl extends CDOObjectImpl implements Unit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

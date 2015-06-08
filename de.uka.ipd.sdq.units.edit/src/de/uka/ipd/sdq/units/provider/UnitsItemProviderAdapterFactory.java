@@ -32,15 +32,15 @@ import de.uka.ipd.sdq.units.util.UnitsAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UnitsItemProviderAdapterFactory extends UnitsAdapterFactory implements ComposeableAdapterFactory,
-IChangeNotifier, IDisposable {
+        IChangeNotifier, IDisposable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -64,14 +64,14 @@ IChangeNotifier, IDisposable {
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UnitsItemProviderAdapterFactory() {
@@ -85,7 +85,7 @@ IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.BaseUnit}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BaseUnitItemProvider baseUnitItemProvider;
@@ -93,7 +93,7 @@ IChangeNotifier, IDisposable {
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.units.BaseUnit}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -108,7 +108,7 @@ IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitRepository}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitRepositoryItemProvider unitRepositoryItemProvider;
@@ -132,7 +132,7 @@ IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.units.UnitMultiplication} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitMultiplicationItemProvider unitMultiplicationItemProvider;
@@ -155,7 +155,7 @@ IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitPower}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitPowerItemProvider unitPowerItemProvider;
@@ -163,7 +163,7 @@ IChangeNotifier, IDisposable {
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitPower}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -178,7 +178,7 @@ IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.units.UnitDivision}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected UnitDivisionItemProvider unitDivisionItemProvider;
@@ -186,7 +186,7 @@ IChangeNotifier, IDisposable {
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.units.UnitDivision}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -201,7 +201,7 @@ IChangeNotifier, IDisposable {
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -212,7 +212,7 @@ IChangeNotifier, IDisposable {
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -222,7 +222,7 @@ IChangeNotifier, IDisposable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -243,7 +243,7 @@ IChangeNotifier, IDisposable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -260,7 +260,7 @@ IChangeNotifier, IDisposable {
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -270,7 +270,7 @@ IChangeNotifier, IDisposable {
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -296,7 +296,7 @@ IChangeNotifier, IDisposable {
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

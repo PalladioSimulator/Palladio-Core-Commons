@@ -29,7 +29,7 @@ public interface LognormalDistribution extends ContinuousPDF {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -54,7 +54,7 @@ public interface LognormalDistribution extends ContinuousPDF {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getMu
      * <em>Mu</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Mu</em>' attribute.
      * @see #getMu()
@@ -82,7 +82,7 @@ public interface LognormalDistribution extends ContinuousPDF {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getSigma
      * <em>Sigma</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Sigma</em>' attribute.
      * @see #getSigma()

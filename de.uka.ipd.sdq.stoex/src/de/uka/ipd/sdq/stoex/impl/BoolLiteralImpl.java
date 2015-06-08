@@ -29,7 +29,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -37,7 +37,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
     /**
      * The default value of the '{@link #isValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isValue()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
     /**
      * The cached value of the '{@link #isValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isValue()
      * @generated
      * @ordered
@@ -56,7 +56,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected BoolLiteralImpl() {
@@ -65,7 +65,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -75,7 +75,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -85,7 +85,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -100,7 +100,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -114,7 +114,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -129,7 +129,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -144,7 +144,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -158,7 +158,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -39,7 +39,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -47,7 +47,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -57,7 +57,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     /**
      * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -68,7 +68,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
      * The cached value of the '{@link #getParameters_FunctionLiteral()
      * <em>Parameters Function Literal</em>}' containment reference list. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getParameters_FunctionLiteral()
      * @generated
      * @ordered
@@ -77,7 +77,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected FunctionLiteralImpl() {
@@ -86,7 +86,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -96,7 +96,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -106,7 +106,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -121,7 +121,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -150,7 +150,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -166,7 +166,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -186,7 +186,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -220,7 +220,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

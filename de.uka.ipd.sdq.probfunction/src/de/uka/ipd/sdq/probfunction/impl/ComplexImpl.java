@@ -8,7 +8,7 @@ package de.uka.ipd.sdq.probfunction.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.probfunction.Complex;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -26,11 +26,11 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  *
  * @generated
  */
-public class ComplexImpl extends EObjectImpl implements Complex {
+public class ComplexImpl extends CDOObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +38,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
     /**
      * The default value of the '{@link #getReal() <em>Real</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getReal()
      * @generated
      * @ordered
@@ -48,7 +48,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
     /**
      * The cached value of the '{@link #getReal() <em>Real</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getReal()
      * @generated
      * @ordered
@@ -77,7 +77,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ComplexImpl() {
@@ -86,7 +86,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -96,7 +96,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -106,7 +106,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -121,7 +121,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -131,7 +131,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -162,7 +162,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -180,7 +180,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -198,7 +198,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -214,7 +214,7 @@ public class ComplexImpl extends EObjectImpl implements Complex {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

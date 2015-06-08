@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 import de.uka.ipd.sdq.probfunction.Sample;
@@ -29,11 +29,11 @@ import de.uka.ipd.sdq.probfunction.Sample;
  *
  * @generated
  */
-public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
+public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -70,7 +70,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SampleImpl() {
@@ -79,7 +79,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -136,7 +136,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -151,7 +151,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -167,7 +167,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -186,7 +186,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -220,7 +220,7 @@ public class SampleImpl<T> extends EObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

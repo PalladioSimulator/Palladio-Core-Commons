@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.units;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Unit</b></em>'. <!--
@@ -15,9 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnit()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface Unit extends EObject {
+public interface Unit extends CDOObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

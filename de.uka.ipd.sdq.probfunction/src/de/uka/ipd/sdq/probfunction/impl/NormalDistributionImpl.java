@@ -29,7 +29,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -37,7 +37,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
     /**
      * The default value of the '{@link #getMu() <em>Mu</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getMu()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
     /**
      * The cached value of the '{@link #getMu() <em>Mu</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getMu()
      * @generated
      * @ordered
@@ -57,7 +57,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
     /**
      * The default value of the '{@link #getSigma() <em>Sigma</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSigma()
      * @generated
      * @ordered
@@ -67,7 +67,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
     /**
      * The cached value of the '{@link #getSigma() <em>Sigma</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSigma()
      * @generated
      * @ordered
@@ -76,7 +76,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected NormalDistributionImpl() {
@@ -85,7 +85,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -95,7 +95,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -130,7 +130,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -145,7 +145,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -161,7 +161,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -179,7 +179,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -197,7 +197,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -213,7 +213,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

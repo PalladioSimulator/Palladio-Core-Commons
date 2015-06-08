@@ -22,14 +22,14 @@ public abstract class ContinuousPDFImpl extends ProbabilityDensityFunctionImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ContinuousPDFImpl() {
@@ -38,7 +38,7 @@ public abstract class ContinuousPDFImpl extends ProbabilityDensityFunctionImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

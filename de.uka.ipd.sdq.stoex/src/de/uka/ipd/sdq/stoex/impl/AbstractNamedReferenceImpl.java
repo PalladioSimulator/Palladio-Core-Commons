@@ -9,7 +9,7 @@ package de.uka.ipd.sdq.stoex.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
 import de.uka.ipd.sdq.stoex.StoexPackage;
@@ -27,11 +27,11 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  *
  * @generated
  */
-public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Container implements AbstractNamedReference {
+public abstract class AbstractNamedReferenceImpl extends CDOObjectImpl implements AbstractNamedReference {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +39,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
     /**
      * The default value of the '{@link #getReferenceName() <em>Reference Name</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getReferenceName()
      * @generated
      * @ordered
@@ -58,7 +58,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected AbstractNamedReferenceImpl() {
@@ -67,7 +67,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -77,7 +77,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -87,7 +87,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -102,7 +102,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -116,7 +116,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -131,7 +131,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,14 +154,14 @@ public abstract class AbstractNamedReferenceImpl extends MinimalEObjectImpl.Cont
         switch (featureID) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
             return REFERENCE_NAME_EDEFAULT == null ? this.referenceName != null : !REFERENCE_NAME_EDEFAULT
-                    .equals(this.referenceName);
+            .equals(this.referenceName);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

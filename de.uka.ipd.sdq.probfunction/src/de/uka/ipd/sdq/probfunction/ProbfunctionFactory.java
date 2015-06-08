@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EFactory;
 /**
  * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
  * non-abstract class of the model. <!-- end-user-doc -->
- *
+ * 
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage
  * @generated
  */
@@ -19,13 +19,13 @@ public interface ProbfunctionFactory extends EFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
     /**
      * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     ProbfunctionFactory eINSTANCE = de.uka.ipd.sdq.probfunction.impl.ProbfunctionFactoryImpl.init();
@@ -42,7 +42,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Continuous Sample</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Continuous Sample</em>'.
      * @generated
      */
@@ -51,7 +51,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Probability Mass Function</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Probability Mass Function</em>'.
      * @generated
      */
@@ -69,7 +69,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Sample PDF</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Sample PDF</em>'.
      * @generated
      */
@@ -87,7 +87,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Exponential Distribution</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Exponential Distribution</em>'.
      * @generated
      */
@@ -96,7 +96,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Normal Distribution</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Normal Distribution</em>'.
      * @generated
      */
@@ -105,7 +105,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Lognormal Distribution</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Lognormal Distribution</em>'.
      * @generated
      */
@@ -114,7 +114,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Gamma Distribution</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Gamma Distribution</em>'.
      * @generated
      */
@@ -123,7 +123,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Int Sample</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Int Sample</em>'.
      * @generated
      */
@@ -132,7 +132,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Bool Sample</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Bool Sample</em>'.
      * @generated
      */
@@ -141,7 +141,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Double Sample</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>Double Sample</em>'.
      * @generated
      */
@@ -150,7 +150,7 @@ public interface ProbfunctionFactory extends EFactory {
     /**
      * Returns a new object of class '<em>String Sample</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return a new object of class '<em>String Sample</em>'.
      * @generated
      */
@@ -158,7 +158,7 @@ public interface ProbfunctionFactory extends EFactory {
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the package supported by this factory.
      * @generated
      */

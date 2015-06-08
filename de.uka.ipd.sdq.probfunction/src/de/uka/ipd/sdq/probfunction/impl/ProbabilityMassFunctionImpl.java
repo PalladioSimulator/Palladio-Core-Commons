@@ -40,7 +40,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -48,7 +48,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
     /**
      * The cached value of the '{@link #getSamples() <em>Samples</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSamples()
      * @generated
      * @ordered
@@ -77,7 +77,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ProbabilityMassFunctionImpl() {
@@ -86,7 +86,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -96,7 +96,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -110,7 +110,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -150,7 +150,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -166,7 +166,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -186,7 +186,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -220,7 +220,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

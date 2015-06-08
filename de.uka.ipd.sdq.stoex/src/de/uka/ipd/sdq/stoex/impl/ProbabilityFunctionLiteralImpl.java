@@ -34,7 +34,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -42,7 +42,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
      * The cached value of the '{@link #getFunction_ProbabilityFunctionLiteral()
      * <em>Function Probability Function Literal</em>}' containment reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getFunction_ProbabilityFunctionLiteral()
      * @generated
      * @ordered
@@ -51,7 +51,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ProbabilityFunctionLiteralImpl() {
@@ -60,7 +60,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -70,7 +70,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -80,7 +80,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetFunction_ProbabilityFunctionLiteral(
@@ -102,7 +102,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -112,13 +112,13 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
             if (this.function_ProbabilityFunctionLiteral != null) {
                 msgs = ((InternalEObject) this.function_ProbabilityFunctionLiteral).eInverseRemove(this,
                         EOPPOSITE_FEATURE_BASE
-                                - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
+                        - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
                         null, msgs);
             }
             if (newFunction_ProbabilityFunctionLiteral != null) {
                 msgs = ((InternalEObject) newFunction_ProbabilityFunctionLiteral).eInverseAdd(this,
                         EOPPOSITE_FEATURE_BASE
-                                - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
+                        - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
                         null, msgs);
             }
             msgs = this.basicSetFunction_ProbabilityFunctionLiteral(newFunction_ProbabilityFunctionLiteral, msgs);
@@ -134,7 +134,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -149,7 +149,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -163,7 +163,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -178,7 +178,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -193,7 +193,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

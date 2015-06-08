@@ -5,7 +5,7 @@
  */
 package de.uka.ipd.sdq.probfunction;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Complex</b></em>'. <!--
@@ -21,13 +21,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getComplex()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Complex extends EObject {
+public interface Complex extends CDOObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -39,7 +40,7 @@ public interface Complex extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Real</em>' attribute.
      * @see #setReal(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getComplex_Real()
@@ -51,7 +52,7 @@ public interface Complex extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.Complex#getReal <em>Real</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Real</em>' attribute.
      * @see #getReal()
@@ -66,7 +67,7 @@ public interface Complex extends EObject {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Imaginary</em>' attribute.
      * @see #setImaginary(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getComplex_Imaginary()
@@ -78,7 +79,7 @@ public interface Complex extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.Complex#getImaginary
      * <em>Imaginary</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Imaginary</em>' attribute.
      * @see #getImaginary()

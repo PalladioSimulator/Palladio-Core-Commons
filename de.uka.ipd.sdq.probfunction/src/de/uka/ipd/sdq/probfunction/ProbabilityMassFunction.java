@@ -29,7 +29,7 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -42,7 +42,7 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Samples</em>' containment reference list.
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getProbabilityMassFunction_Samples()
      * @model containment="true" required="true"
@@ -57,7 +57,7 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Ordered Domain</em>' attribute.
      * @see #setOrderedDomain(boolean)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getProbabilityMassFunction_OrderedDomain()
@@ -70,7 +70,7 @@ public interface ProbabilityMassFunction extends ProbabilityFunction {
      * Sets the value of the '
      * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain
      * <em>Ordered Domain</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Ordered Domain</em>' attribute.
      * @see #isOrderedDomain()

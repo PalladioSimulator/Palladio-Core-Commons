@@ -41,21 +41,21 @@ import de.uka.ipd.sdq.stoex.VariableReference;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static StoexFactory init() {
@@ -73,7 +73,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public StoexFactoryImpl() {
@@ -82,7 +82,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,7 +154,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -175,7 +175,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -186,7 +186,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -197,7 +197,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -208,7 +208,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -219,7 +219,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -230,7 +230,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -241,7 +241,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -252,7 +252,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -263,7 +263,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -274,7 +274,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -285,7 +285,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -296,7 +296,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -307,7 +307,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -318,7 +318,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -329,7 +329,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -340,7 +340,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -351,7 +351,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -362,7 +362,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -373,7 +373,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -384,7 +384,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public TermOperations createTermOperationsFromString(final EDataType eDataType, final String initialValue) {
@@ -398,7 +398,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertTermOperationsToString(final EDataType eDataType, final Object instanceValue) {
@@ -407,7 +407,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ProductOperations createProductOperationsFromString(final EDataType eDataType, final String initialValue) {
@@ -421,7 +421,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertProductOperationsToString(final EDataType eDataType, final Object instanceValue) {
@@ -430,7 +430,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public CompareOperations createCompareOperationsFromString(final EDataType eDataType, final String initialValue) {
@@ -444,7 +444,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertCompareOperationsToString(final EDataType eDataType, final Object instanceValue) {
@@ -453,7 +453,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public BooleanOperations createBooleanOperationsFromString(final EDataType eDataType, final String initialValue) {
@@ -467,7 +467,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertBooleanOperationsToString(final EDataType eDataType, final Object instanceValue) {
@@ -476,7 +476,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -486,7 +486,7 @@ public class StoexFactoryImpl extends EFactoryImpl implements StoexFactory {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @deprecated
      * @generated
      */

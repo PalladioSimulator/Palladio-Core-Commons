@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.probfunction;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Sample</b></em>'. <!--
@@ -22,13 +22,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getSample()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Sample<T> extends EObject {
+public interface Sample<T> extends CDOObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +41,7 @@ public interface Sample<T> extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(Object)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getSample_Value()
@@ -52,7 +53,7 @@ public interface Sample<T> extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.Sample#getValue <em>Value</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Value</em>' attribute.
      * @see #getValue()
@@ -67,7 +68,7 @@ public interface Sample<T> extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Probability</em>' attribute.
      * @see #setProbability(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getSample_Probability()
@@ -79,7 +80,7 @@ public interface Sample<T> extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.Sample#getProbability
      * <em>Probability</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Probability</em>' attribute.
      * @see #getProbability()

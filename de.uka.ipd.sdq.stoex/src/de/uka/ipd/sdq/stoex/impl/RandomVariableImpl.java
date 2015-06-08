@@ -8,9 +8,10 @@ package de.uka.ipd.sdq.stoex.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.RandomVariable;
@@ -29,11 +30,11 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
  *
  * @generated
  */
-public class RandomVariableImpl extends MinimalEObjectImpl.Container implements RandomVariable {
+public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -60,7 +61,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected RandomVariableImpl() {
@@ -69,7 +70,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -79,7 +80,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -89,7 +90,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -104,13 +105,13 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Expression getExpression() {
         final Expression expression = this.basicGetExpression();
-        return expression != null && expression.eIsProxy() ? (Expression) this
+        return expression != null && ((EObject) expression).eIsProxy() ? (Expression) this
                 .eResolveProxy((InternalEObject) expression) : expression;
     }
 
@@ -138,7 +139,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -157,7 +158,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -172,7 +173,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -187,7 +188,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -195,7 +196,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
         switch (featureID) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
             return SPECIFICATION_EDEFAULT == null ? this.specification != null : !SPECIFICATION_EDEFAULT
-                    .equals(this.specification);
+            .equals(this.specification);
         case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
             return this.isSetExpression();
         }
@@ -204,7 +205,7 @@ public class RandomVariableImpl extends MinimalEObjectImpl.Container implements 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

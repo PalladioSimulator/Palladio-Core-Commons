@@ -6,7 +6,7 @@
  */
 package de.uka.ipd.sdq.probfunction;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Continuous Sample</b></em>'.
@@ -22,13 +22,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getContinuousSample()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface ContinuousSample extends EObject {
+public interface ContinuousSample extends CDOObject {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +41,7 @@ public interface ContinuousSample extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getContinuousSample_Value()
@@ -52,7 +53,7 @@ public interface ContinuousSample extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.ContinuousSample#getValue
      * <em>Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Value</em>' attribute.
      * @see #getValue()
@@ -67,7 +68,7 @@ public interface ContinuousSample extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Probability</em>' attribute.
      * @see #setProbability(double)
      * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getContinuousSample_Probability()
@@ -79,7 +80,7 @@ public interface ContinuousSample extends EObject {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.ContinuousSample#getProbability
      * <em>Probability</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Probability</em>' attribute.
      * @see #getProbability()

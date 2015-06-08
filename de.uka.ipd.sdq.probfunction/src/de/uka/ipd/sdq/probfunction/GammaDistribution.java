@@ -30,7 +30,7 @@ public interface GammaDistribution extends ContinuousPDF {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -54,7 +54,7 @@ public interface GammaDistribution extends ContinuousPDF {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getAlpha
      * <em>Alpha</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Alpha</em>' attribute.
      * @see #getAlpha()
@@ -79,7 +79,7 @@ public interface GammaDistribution extends ContinuousPDF {
     /**
      * Sets the value of the '{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getTheta
      * <em>Theta</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Theta</em>' attribute.
      * @see #getTheta()

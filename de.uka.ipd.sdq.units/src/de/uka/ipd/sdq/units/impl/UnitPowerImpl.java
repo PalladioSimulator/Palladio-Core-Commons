@@ -33,7 +33,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -70,7 +70,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected UnitPowerImpl() {
@@ -79,7 +79,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -89,7 +89,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -99,7 +99,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetUnit(final Unit newUnit, NotificationChain msgs) {
@@ -119,7 +119,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -145,7 +145,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -155,7 +155,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -185,7 +185,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -201,7 +201,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -219,7 +219,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -237,7 +237,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -253,7 +253,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -27,7 +27,7 @@
   </genAnnotations>
   <foreignModel>ProbabilityFunction.ecore</foreignModel>
   <foreignModel>../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore</foreignModel>
-  <modelPluginVariables>org.eclipse.emf.cdo</modelPluginVariables>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Probfunction" basePackage="de.uka.ipd.sdq"
       disposableProviderFactory="true" ecorePackage="ProbabilityFunction.ecore#/">
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProbabilityFunction.ecore#//BoxedPDF">

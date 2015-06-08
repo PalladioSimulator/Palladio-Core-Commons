@@ -35,7 +35,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -51,7 +51,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected UnitMultiplicationImpl() {
@@ -60,7 +60,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -70,7 +70,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -83,7 +83,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -98,7 +98,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -112,7 +112,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -129,7 +129,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -144,7 +144,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

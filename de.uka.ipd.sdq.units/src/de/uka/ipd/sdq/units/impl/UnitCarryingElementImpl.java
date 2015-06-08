@@ -31,7 +31,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -40,7 +40,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected UnitCarryingElementImpl() {
@@ -49,7 +49,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -140,7 +140,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -155,7 +155,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

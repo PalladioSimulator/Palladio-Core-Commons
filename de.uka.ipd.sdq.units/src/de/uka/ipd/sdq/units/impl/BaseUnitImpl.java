@@ -30,7 +30,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -38,7 +38,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -48,7 +48,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -57,7 +57,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected BaseUnitImpl() {
@@ -66,7 +66,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -86,7 +86,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -100,7 +100,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -114,7 +114,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -129,7 +129,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -144,7 +144,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -158,7 +158,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -26,7 +26,7 @@
   </genAnnotations>
   <foreignModel>Units.ecore</foreignModel>
   <foreignModel>../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore</foreignModel>
-  <modelPluginVariables>org.eclipse.emf.cdo</modelPluginVariables>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Units" basePackage="de.uka.ipd.sdq"
       disposableProviderFactory="true" ecorePackage="Units.ecore#/">
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="Units.ecore#//UnitNames">

@@ -17,10 +17,10 @@
 				format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Commons/trunk/{0}?moduleAfterTag&amp;moduleAfterBranch">
 				<bc:propertyRef key="buckminster.component" />
 			</rm:uri>
-			<!-- <rm:versionConverter type="TAG" versionType="Triplet">
+			<rm:versionConverter type="TAG" versionType="Triplet">
 				<rm:transform fromPattern="^(.*)$" fromReplacement="commons_rc_$1"
 					toPattern="^commons_rc_(.*)$" toReplacement="$1" />
-			</rm:versionConverter> -->
+			</rm:versionConverter> 
 		</rm:provider>
 	</rm:searchPath>
 	<rm:searchPath name="thirdparty">

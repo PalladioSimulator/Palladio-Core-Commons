@@ -48,4 +48,14 @@ public abstract class UnitImpl extends CDOObjectImpl implements Unit {
         return UnitsPackage.Literals.UNIT;
     }
 
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
 } // UnitImpl

@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.DoubleLiteral;
 import de.uka.ipd.sdq.stoex.StoexPackage;
@@ -45,16 +43,6 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
     protected static final double VALUE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getValue()
-     * @generated
-     * @ordered
-     */
-    protected double value = VALUE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -80,7 +68,8 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
      */
     @Override
     public double getValue() {
-        return this.value;
+        return (Double) this.eDynamicGet(StoexPackage.DOUBLE_LITERAL__VALUE,
+                StoexPackage.Literals.DOUBLE_LITERAL__VALUE, true, true);
     }
 
     /**
@@ -90,12 +79,7 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
      */
     @Override
     public void setValue(final double newValue) {
-        final double oldValue = this.value;
-        this.value = newValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.DOUBLE_LITERAL__VALUE, oldValue,
-                    this.value));
-        }
+        this.eDynamicSet(StoexPackage.DOUBLE_LITERAL__VALUE, StoexPackage.Literals.DOUBLE_LITERAL__VALUE, newValue);
     }
 
     /**
@@ -151,27 +135,9 @@ public class DoubleLiteralImpl extends NumericLiteralImpl implements DoubleLiter
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.DOUBLE_LITERAL__VALUE:
-            return this.value != VALUE_EDEFAULT;
+            return this.getValue() != VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (value: ");
-        result.append(this.value);
-        result.append(')');
-        return result.toString();
     }
 
 } // DoubleLiteralImpl

@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.probfunction.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.probfunction.ContinuousSample;
@@ -46,36 +44,15 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
      * @ordered
      */
     protected static final double VALUE_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getValue()
-     * @generated
-     * @ordered
-     */
-    protected double value = VALUE_EDEFAULT;
-
     /**
      * The default value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getProbability()
      * @generated
      * @ordered
      */
     protected static final double PROBABILITY_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getProbability()
-     * @generated
-     * @ordered
-     */
-    protected double probability = PROBABILITY_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -102,8 +79,19 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
      * @generated
      */
     @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
     public double getValue() {
-        return this.value;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE,
+                ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__VALUE, true, true);
     }
 
     /**
@@ -113,12 +101,8 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
      */
     @Override
     public void setValue(final double newValue) {
-        final double oldValue = this.value;
-        this.value = newValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE,
-                    oldValue, this.value));
-        }
+        this.eDynamicSet(ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE,
+                ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__VALUE, newValue);
     }
 
     /**
@@ -128,7 +112,8 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
      */
     @Override
     public double getProbability() {
-        return this.probability;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY,
+                ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__PROBABILITY, true, true);
     }
 
     /**
@@ -138,12 +123,8 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
      */
     @Override
     public void setProbability(final double newProbability) {
-        final double oldProbability = this.probability;
-        this.probability = newProbability;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY, oldProbability, this.probability));
-        }
+        this.eDynamicSet(ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY,
+                ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__PROBABILITY, newProbability);
     }
 
     /**
@@ -207,31 +188,11 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE:
-            return this.value != VALUE_EDEFAULT;
+            return this.getValue() != VALUE_EDEFAULT;
         case ProbfunctionPackage.CONTINUOUS_SAMPLE__PROBABILITY:
-            return this.probability != PROBABILITY_EDEFAULT;
+            return this.getProbability() != PROBABILITY_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (value: ");
-        result.append(this.value);
-        result.append(", probability: ");
-        result.append(this.probability);
-        result.append(')');
-        return result.toString();
     }
 
 } // ContinuousSampleImpl

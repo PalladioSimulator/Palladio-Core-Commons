@@ -5,9 +5,7 @@
  */
 package de.uka.ipd.sdq.probfunction.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.probfunction.ExponentialDistribution;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -44,16 +42,6 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
     protected static final double RATE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getRate() <em>Rate</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getRate()
-     * @generated
-     * @ordered
-     */
-    protected double rate = RATE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -79,7 +67,8 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
      */
     @Override
     public double getRate() {
-        return this.rate;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION__RATE,
+                ProbfunctionPackage.Literals.EXPONENTIAL_DISTRIBUTION__RATE, true, true);
     }
 
     /**
@@ -89,12 +78,8 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
      */
     @Override
     public void setRate(final double newRate) {
-        final double oldRate = this.rate;
-        this.rate = newRate;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION__RATE, oldRate, this.rate));
-        }
+        this.eDynamicSet(ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION__RATE,
+                ProbfunctionPackage.Literals.EXPONENTIAL_DISTRIBUTION__RATE, newRate);
     }
 
     /**
@@ -150,27 +135,9 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.EXPONENTIAL_DISTRIBUTION__RATE:
-            return this.rate != RATE_EDEFAULT;
+            return this.getRate() != RATE_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (rate: ");
-        result.append(this.rate);
-        result.append(')');
-        return result.toString();
     }
 
 } // ExponentialDistributionImpl

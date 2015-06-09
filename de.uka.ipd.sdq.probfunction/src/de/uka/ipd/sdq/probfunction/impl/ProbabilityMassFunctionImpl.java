@@ -8,13 +8,10 @@ package de.uka.ipd.sdq.probfunction.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.uka.ipd.sdq.probfunction.ProbabilityMassFunction;
@@ -46,34 +43,14 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The cached value of the '{@link #getSamples() <em>Samples</em>}' containment reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getSamples()
-     * @generated
-     * @ordered
-     */
-    protected EList<Sample> samples;
-
-    /**
      * The default value of the '{@link #isOrderedDomain() <em>Ordered Domain</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isOrderedDomain()
      * @generated
      * @ordered
      */
     protected static final boolean ORDERED_DOMAIN_EDEFAULT = false;
-
-    /**
-     * The cached value of the '{@link #isOrderedDomain() <em>Ordered Domain</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #isOrderedDomain()
-     * @generated
-     * @ordered
-     */
-    protected boolean orderedDomain = ORDERED_DOMAIN_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -99,13 +76,11 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<Sample> getSamples() {
-        if (this.samples == null) {
-            this.samples = new EObjectContainmentEList<Sample>(Sample.class, this,
-                    ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES);
-        }
-        return this.samples;
+        return (EList<Sample>) this.eDynamicGet(ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES,
+                ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES, true, true);
     }
 
     /**
@@ -115,7 +90,8 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
      */
     @Override
     public boolean isOrderedDomain() {
-        return this.orderedDomain;
+        return (Boolean) this.eDynamicGet(ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN,
+                ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN, true, true);
     }
 
     /**
@@ -125,12 +101,8 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
      */
     @Override
     public void setOrderedDomain(final boolean newOrderedDomain) {
-        final boolean oldOrderedDomain = this.orderedDomain;
-        this.orderedDomain = newOrderedDomain;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN, oldOrderedDomain, this.orderedDomain));
-        }
+        this.eDynamicSet(ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN,
+                ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN, newOrderedDomain);
     }
 
     /**
@@ -211,29 +183,11 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES:
-            return this.samples != null && !this.samples.isEmpty();
+            return !this.getSamples().isEmpty();
         case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN:
-            return this.orderedDomain != ORDERED_DOMAIN_EDEFAULT;
+            return this.isOrderedDomain() != ORDERED_DOMAIN_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (orderedDomain: ");
-        result.append(this.orderedDomain);
-        result.append(')');
-        return result.toString();
     }
 
 } // ProbabilityMassFunctionImpl

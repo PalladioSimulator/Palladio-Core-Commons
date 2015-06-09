@@ -5,9 +5,7 @@
  */
 package de.uka.ipd.sdq.probfunction.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.probfunction.GammaDistribution;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -43,17 +41,6 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
      * @ordered
      */
     protected static final double ALPHA_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getAlpha() <em>Alpha</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getAlpha()
-     * @generated
-     * @ordered
-     */
-    protected double alpha = ALPHA_EDEFAULT;
-
     /**
      * The default value of the '{@link #getTheta() <em>Theta</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
@@ -63,16 +50,6 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
      * @ordered
      */
     protected static final double THETA_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getTheta() <em>Theta</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getTheta()
-     * @generated
-     * @ordered
-     */
-    protected double theta = THETA_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -100,7 +77,8 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
      */
     @Override
     public double getAlpha() {
-        return this.alpha;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA,
+                ProbfunctionPackage.Literals.GAMMA_DISTRIBUTION__ALPHA, true, true);
     }
 
     /**
@@ -110,12 +88,8 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
      */
     @Override
     public void setAlpha(final double newAlpha) {
-        final double oldAlpha = this.alpha;
-        this.alpha = newAlpha;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA,
-                    oldAlpha, this.alpha));
-        }
+        this.eDynamicSet(ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA,
+                ProbfunctionPackage.Literals.GAMMA_DISTRIBUTION__ALPHA, newAlpha);
     }
 
     /**
@@ -125,7 +99,8 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
      */
     @Override
     public double getTheta() {
-        return this.theta;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA,
+                ProbfunctionPackage.Literals.GAMMA_DISTRIBUTION__THETA, true, true);
     }
 
     /**
@@ -135,12 +110,8 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
      */
     @Override
     public void setTheta(final double newTheta) {
-        final double oldTheta = this.theta;
-        this.theta = newTheta;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA,
-                    oldTheta, this.theta));
-        }
+        this.eDynamicSet(ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA,
+                ProbfunctionPackage.Literals.GAMMA_DISTRIBUTION__THETA, newTheta);
     }
 
     /**
@@ -204,31 +175,11 @@ public class GammaDistributionImpl extends ContinuousPDFImpl implements GammaDis
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.GAMMA_DISTRIBUTION__ALPHA:
-            return this.alpha != ALPHA_EDEFAULT;
+            return this.getAlpha() != ALPHA_EDEFAULT;
         case ProbfunctionPackage.GAMMA_DISTRIBUTION__THETA:
-            return this.theta != THETA_EDEFAULT;
+            return this.getTheta() != THETA_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (alpha: ");
-        result.append(this.alpha);
-        result.append(", theta: ");
-        result.append(this.theta);
-        result.append(')');
-        return result.toString();
     }
 
 } // GammaDistributionImpl

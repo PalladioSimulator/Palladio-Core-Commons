@@ -6,11 +6,9 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
 import de.uka.ipd.sdq.stoex.NamespaceReference;
@@ -37,16 +35,6 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getInnerReference_NamespaceReference()
-     * <em>Inner Reference Namespace Reference</em>}' containment reference. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getInnerReference_NamespaceReference()
-     * @generated
-     * @ordered
-     */
-    protected AbstractNamedReference innerReference_NamespaceReference;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -74,7 +62,9 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
      */
     @Override
     public AbstractNamedReference getInnerReference_NamespaceReference() {
-        return this.innerReference_NamespaceReference;
+        return (AbstractNamedReference) this.eDynamicGet(
+                StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
+                StoexPackage.Literals.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE, true, true);
     }
 
     /**
@@ -84,18 +74,8 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
      */
     public NotificationChain basicSetInnerReference_NamespaceReference(
             final AbstractNamedReference newInnerReference_NamespaceReference, NotificationChain msgs) {
-        final AbstractNamedReference oldInnerReference_NamespaceReference = this.innerReference_NamespaceReference;
-        this.innerReference_NamespaceReference = newInnerReference_NamespaceReference;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
-                    oldInnerReference_NamespaceReference, newInnerReference_NamespaceReference);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newInnerReference_NamespaceReference,
+                StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE, msgs);
         return msgs;
     }
 
@@ -106,27 +86,9 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
      */
     @Override
     public void setInnerReference_NamespaceReference(final AbstractNamedReference newInnerReference_NamespaceReference) {
-        if (newInnerReference_NamespaceReference != this.innerReference_NamespaceReference) {
-            NotificationChain msgs = null;
-            if (this.innerReference_NamespaceReference != null) {
-                msgs = ((InternalEObject) this.innerReference_NamespaceReference).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE - StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
-                        null, msgs);
-            }
-            if (newInnerReference_NamespaceReference != null) {
-                msgs = ((InternalEObject) newInnerReference_NamespaceReference).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE - StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
-                        null, msgs);
-            }
-            msgs = this.basicSetInnerReference_NamespaceReference(newInnerReference_NamespaceReference, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
-                    newInnerReference_NamespaceReference, newInnerReference_NamespaceReference));
-        }
+        this.eDynamicSet(StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
+                StoexPackage.Literals.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE,
+                newInnerReference_NamespaceReference);
     }
 
     /**
@@ -197,7 +159,7 @@ public class NamespaceReferenceImpl extends AbstractNamedReferenceImpl implement
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE:
-            return this.innerReference_NamespaceReference != null;
+            return this.getInnerReference_NamespaceReference() != null;
         }
         return super.eIsSet(featureID);
     }

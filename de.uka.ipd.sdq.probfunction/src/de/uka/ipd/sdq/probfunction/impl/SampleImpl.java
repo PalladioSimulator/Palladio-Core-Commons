@@ -41,32 +41,12 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
     /**
      * The default value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getProbability()
      * @generated
      * @ordered
      */
     protected static final double PROBABILITY_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getProbability()
-     * @generated
-     * @ordered
-     */
-    protected double probability = PROBABILITY_EDEFAULT;
-
-    /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getValue()
-     * @generated
-     * @ordered
-     */
-    protected T value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -89,24 +69,12 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated not
+     * 
+     * @generated
      */
     @Override
-    @SuppressWarnings("unchecked")
-    public T getValue() {
-        /* In Samples the value is always a simple type and not an EObject, hence the cast fails! */
-        if (this.value != null && this.value instanceof EObject && ((EObject) this.value).eIsProxy()) {
-            final InternalEObject oldValue = (InternalEObject) this.value;
-            this.value = (T) this.eResolveProxy(oldValue);
-            if (this.value != oldValue) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProbfunctionPackage.SAMPLE__VALUE,
-                            oldValue, this.value));
-                }
-            }
-        }
-        return this.value;
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
     /**
@@ -116,37 +84,7 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
      */
     @Override
     public void setValue(final T newValue) {
-        final T oldValue = this.value;
-        this.value = newValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE__VALUE, oldValue,
-                    this.value));
-        }
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public double getProbability() {
-        return this.probability;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public void setProbability(final double newProbability) {
-        final double oldProbability = this.probability;
-        this.probability = newProbability;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE__PROBABILITY,
-                    oldProbability, this.probability));
-        }
+        this.eDynamicSet(ProbfunctionPackage.SAMPLE__VALUE, ProbfunctionPackage.Literals.SAMPLE__VALUE, newValue);
     }
 
     /**
@@ -211,9 +149,9 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.SAMPLE__PROBABILITY:
-            return this.probability != PROBABILITY_EDEFAULT;
+            return this.getProbability() != PROBABILITY_EDEFAULT;
         case ProbfunctionPackage.SAMPLE__VALUE:
-            return this.value != null;
+            return this.getValue() != null;
         }
         return super.eIsSet(featureID);
     }
@@ -224,18 +162,43 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
      * @generated
      */
     @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
+    public double getProbability() {
+        return (Double) this.eDynamicGet(ProbfunctionPackage.SAMPLE__PROBABILITY,
+                ProbfunctionPackage.Literals.SAMPLE__PROBABILITY, true, true);
+    }
 
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (probability: ");
-        result.append(this.probability);
-        result.append(", value: ");
-        result.append(this.value);
-        result.append(')');
-        return result.toString();
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public void setProbability(final double newProbability) {
+        this.eDynamicSet(ProbfunctionPackage.SAMPLE__PROBABILITY, ProbfunctionPackage.Literals.SAMPLE__PROBABILITY,
+                newProbability);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated not
+     */
+    @Override
+    @SuppressWarnings("unchecked")
+    public T getValue() {
+        /* In Samples the value is always a simple type and not an EObject, hence the cast fails! */
+        Object value = this.eGet(ProbfunctionPackage.Literals.SAMPLE__VALUE, true);
+        if (value != null && value instanceof EObject && ((EObject) value).eIsProxy()) {
+            final InternalEObject oldValue = (InternalEObject) value;
+            value = (T) this.eResolveProxy(oldValue);
+            if (value != oldValue) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProbfunctionPackage.SAMPLE__VALUE,
+                            oldValue, value));
+                }
+            }
+        }
+        return (T) value;
     }
 
 } // SampleImpl

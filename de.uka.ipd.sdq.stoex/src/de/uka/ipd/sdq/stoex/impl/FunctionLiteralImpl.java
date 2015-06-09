@@ -8,13 +8,10 @@ package de.uka.ipd.sdq.stoex.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.uka.ipd.sdq.stoex.Expression;
@@ -55,27 +52,6 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     protected static final String ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected String id = ID_EDEFAULT;
-
-    /**
-     * The cached value of the '{@link #getParameters_FunctionLiteral()
-     * <em>Parameters Function Literal</em>}' containment reference list. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getParameters_FunctionLiteral()
-     * @generated
-     * @ordered
-     */
-    protected EList<Expression> parameters_FunctionLiteral;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -101,7 +77,8 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
      */
     @Override
     public String getId() {
-        return this.id;
+        return (String) this.eDynamicGet(StoexPackage.FUNCTION_LITERAL__ID, StoexPackage.Literals.FUNCTION_LITERAL__ID,
+                true, true);
     }
 
     /**
@@ -111,12 +88,7 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
      */
     @Override
     public void setId(final String newId) {
-        final String oldId = this.id;
-        this.id = newId;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.FUNCTION_LITERAL__ID, oldId,
-                    this.id));
-        }
+        this.eDynamicSet(StoexPackage.FUNCTION_LITERAL__ID, StoexPackage.Literals.FUNCTION_LITERAL__ID, newId);
     }
 
     /**
@@ -124,13 +96,11 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<Expression> getParameters_FunctionLiteral() {
-        if (this.parameters_FunctionLiteral == null) {
-            this.parameters_FunctionLiteral = new EObjectContainmentEList<Expression>(Expression.class, this,
-                    StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL);
-        }
-        return this.parameters_FunctionLiteral;
+        return (EList<Expression>) this.eDynamicGet(StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL,
+                StoexPackage.Literals.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL, true, true);
     }
 
     /**
@@ -211,29 +181,11 @@ public class FunctionLiteralImpl extends AtomImpl implements FunctionLiteral {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.FUNCTION_LITERAL__ID:
-            return ID_EDEFAULT == null ? this.id != null : !ID_EDEFAULT.equals(this.id);
+            return ID_EDEFAULT == null ? this.getId() != null : !ID_EDEFAULT.equals(this.getId());
         case StoexPackage.FUNCTION_LITERAL__PARAMETERS_FUNCTION_LITERAL:
-            return this.parameters_FunctionLiteral != null && !this.parameters_FunctionLiteral.isEmpty();
+            return !this.getParameters_FunctionLiteral().isEmpty();
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (id: ");
-        result.append(this.id);
-        result.append(')');
-        return result.toString();
     }
 
 } // FunctionLiteralImpl

@@ -8,13 +8,10 @@ package de.uka.ipd.sdq.probfunction.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.uka.ipd.sdq.probfunction.Complex;
@@ -46,32 +43,12 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
     /**
      * The default value of the '{@link #getDistance() <em>Distance</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getDistance()
      * @generated
      * @ordered
      */
     protected static final double DISTANCE_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getDistance() <em>Distance</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getDistance()
-     * @generated
-     * @ordered
-     */
-    protected double distance = DISTANCE_EDEFAULT;
-
-    /**
-     * The cached value of the '{@link #getValues() <em>Values</em>}' containment reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getValues()
-     * @generated
-     * @ordered
-     */
-    protected EList<Complex> values;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -99,7 +76,8 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
      */
     @Override
     public double getDistance() {
-        return this.distance;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.SAMPLE_PDF__DISTANCE,
+                ProbfunctionPackage.Literals.SAMPLE_PDF__DISTANCE, true, true);
     }
 
     /**
@@ -109,12 +87,8 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
      */
     @Override
     public void setDistance(final double newDistance) {
-        final double oldDistance = this.distance;
-        this.distance = newDistance;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.SAMPLE_PDF__DISTANCE,
-                    oldDistance, this.distance));
-        }
+        this.eDynamicSet(ProbfunctionPackage.SAMPLE_PDF__DISTANCE, ProbfunctionPackage.Literals.SAMPLE_PDF__DISTANCE,
+                newDistance);
     }
 
     /**
@@ -122,13 +96,11 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<Complex> getValues() {
-        if (this.values == null) {
-            this.values = new EObjectContainmentEList<Complex>(Complex.class, this,
-                    ProbfunctionPackage.SAMPLE_PDF__VALUES);
-        }
-        return this.values;
+        return (EList<Complex>) this.eDynamicGet(ProbfunctionPackage.SAMPLE_PDF__VALUES,
+                ProbfunctionPackage.Literals.SAMPLE_PDF__VALUES, true, true);
     }
 
     /**
@@ -209,29 +181,11 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.SAMPLE_PDF__DISTANCE:
-            return this.distance != DISTANCE_EDEFAULT;
+            return this.getDistance() != DISTANCE_EDEFAULT;
         case ProbfunctionPackage.SAMPLE_PDF__VALUES:
-            return this.values != null && !this.values.isEmpty();
+            return !this.getValues().isEmpty();
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (distance: ");
-        result.append(this.distance);
-        result.append(')');
-        return result.toString();
     }
 
 } // SamplePDFImpl

@@ -12,7 +12,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
@@ -40,15 +39,6 @@ public class UnitRepositoryImpl extends CDOObjectImpl implements UnitRepository 
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getUnits()
-     * @generated
-     * @ordered
-     */
-    protected EList<BaseUnit> units;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -75,12 +65,20 @@ public class UnitRepositoryImpl extends CDOObjectImpl implements UnitRepository 
      * @generated
      */
     @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
     public EList<BaseUnit> getUnits() {
-        if (this.units == null) {
-            this.units = new EObjectContainmentEList<BaseUnit>(BaseUnit.class, this,
-                    UnitsPackage.UNIT_REPOSITORY__UNITS);
-        }
-        return this.units;
+        return (EList<BaseUnit>) this.eDynamicGet(UnitsPackage.UNIT_REPOSITORY__UNITS,
+                UnitsPackage.Literals.UNIT_REPOSITORY__UNITS, true, true);
     }
 
     /**
@@ -153,7 +151,7 @@ public class UnitRepositoryImpl extends CDOObjectImpl implements UnitRepository 
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_REPOSITORY__UNITS:
-            return this.units != null && !this.units.isEmpty();
+            return !this.getUnits().isEmpty();
         }
         return super.eIsSet(featureID);
     }

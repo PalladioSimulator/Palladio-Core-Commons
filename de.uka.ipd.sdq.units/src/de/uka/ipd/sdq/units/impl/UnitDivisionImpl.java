@@ -3,11 +3,9 @@
  */
 package de.uka.ipd.sdq.units.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitDivision;
@@ -36,26 +34,6 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The cached value of the '{@link #getDividend() <em>Dividend</em>}' containment reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getDividend()
-     * @generated
-     * @ordered
-     */
-    protected Unit dividend;
-
-    /**
-     * The cached value of the '{@link #getDivisor() <em>Divisor</em>}' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getDivisor()
-     * @generated
-     * @ordered
-     */
-    protected Unit divisor;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -81,7 +59,8 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      */
     @Override
     public Unit getDividend() {
-        return this.dividend;
+        return (Unit) this.eDynamicGet(UnitsPackage.UNIT_DIVISION__DIVIDEND,
+                UnitsPackage.Literals.UNIT_DIVISION__DIVIDEND, true, true);
     }
 
     /**
@@ -90,17 +69,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      * @generated
      */
     public NotificationChain basicSetDividend(final Unit newDividend, NotificationChain msgs) {
-        final Unit oldDividend = this.dividend;
-        this.dividend = newDividend;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    UnitsPackage.UNIT_DIVISION__DIVIDEND, oldDividend, newDividend);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newDividend, UnitsPackage.UNIT_DIVISION__DIVIDEND, msgs);
         return msgs;
     }
 
@@ -111,24 +80,8 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      */
     @Override
     public void setDividend(final Unit newDividend) {
-        if (newDividend != this.dividend) {
-            NotificationChain msgs = null;
-            if (this.dividend != null) {
-                msgs = ((InternalEObject) this.dividend).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_DIVISION__DIVIDEND, null, msgs);
-            }
-            if (newDividend != null) {
-                msgs = ((InternalEObject) newDividend).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_DIVISION__DIVIDEND, null, msgs);
-            }
-            msgs = this.basicSetDividend(newDividend, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_DIVISION__DIVIDEND,
-                    newDividend, newDividend));
-        }
+        this.eDynamicSet(UnitsPackage.UNIT_DIVISION__DIVIDEND, UnitsPackage.Literals.UNIT_DIVISION__DIVIDEND,
+                newDividend);
     }
 
     /**
@@ -138,7 +91,8 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      */
     @Override
     public Unit getDivisor() {
-        return this.divisor;
+        return (Unit) this.eDynamicGet(UnitsPackage.UNIT_DIVISION__DIVISOR,
+                UnitsPackage.Literals.UNIT_DIVISION__DIVISOR, true, true);
     }
 
     /**
@@ -147,17 +101,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      * @generated
      */
     public NotificationChain basicSetDivisor(final Unit newDivisor, NotificationChain msgs) {
-        final Unit oldDivisor = this.divisor;
-        this.divisor = newDivisor;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    UnitsPackage.UNIT_DIVISION__DIVISOR, oldDivisor, newDivisor);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newDivisor, UnitsPackage.UNIT_DIVISION__DIVISOR, msgs);
         return msgs;
     }
 
@@ -168,24 +112,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      */
     @Override
     public void setDivisor(final Unit newDivisor) {
-        if (newDivisor != this.divisor) {
-            NotificationChain msgs = null;
-            if (this.divisor != null) {
-                msgs = ((InternalEObject) this.divisor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_DIVISION__DIVISOR, null, msgs);
-            }
-            if (newDivisor != null) {
-                msgs = ((InternalEObject) newDivisor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_DIVISION__DIVISOR, null, msgs);
-            }
-            msgs = this.basicSetDivisor(newDivisor, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_DIVISION__DIVISOR, newDivisor,
-                    newDivisor));
-        }
+        this.eDynamicSet(UnitsPackage.UNIT_DIVISION__DIVISOR, UnitsPackage.Literals.UNIT_DIVISION__DIVISOR, newDivisor);
     }
 
     /**
@@ -266,9 +193,9 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_DIVISION__DIVIDEND:
-            return this.dividend != null;
+            return this.getDividend() != null;
         case UnitsPackage.UNIT_DIVISION__DIVISOR:
-            return this.divisor != null;
+            return this.getDivisor() != null;
         }
         return super.eIsSet(featureID);
     }

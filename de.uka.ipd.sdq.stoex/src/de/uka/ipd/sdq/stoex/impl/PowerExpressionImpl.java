@@ -6,11 +6,9 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.Power;
 import de.uka.ipd.sdq.stoex.PowerExpression;
@@ -40,26 +38,6 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The cached value of the '{@link #getBase() <em>Base</em>}' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getBase()
-     * @generated
-     * @ordered
-     */
-    protected Power base;
-
-    /**
-     * The cached value of the '{@link #getExponent() <em>Exponent</em>}' containment reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getExponent()
-     * @generated
-     * @ordered
-     */
-    protected Unary exponent;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -85,7 +63,8 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
      */
     @Override
     public Power getBase() {
-        return this.base;
+        return (Power) this.eDynamicGet(StoexPackage.POWER_EXPRESSION__BASE,
+                StoexPackage.Literals.POWER_EXPRESSION__BASE, true, true);
     }
 
     /**
@@ -94,17 +73,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
      * @generated
      */
     public NotificationChain basicSetBase(final Power newBase, NotificationChain msgs) {
-        final Power oldBase = this.base;
-        this.base = newBase;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.POWER_EXPRESSION__BASE, oldBase, newBase);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newBase, StoexPackage.POWER_EXPRESSION__BASE, msgs);
         return msgs;
     }
 
@@ -115,24 +84,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
      */
     @Override
     public void setBase(final Power newBase) {
-        if (newBase != this.base) {
-            NotificationChain msgs = null;
-            if (this.base != null) {
-                msgs = ((InternalEObject) this.base).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.POWER_EXPRESSION__BASE, null, msgs);
-            }
-            if (newBase != null) {
-                msgs = ((InternalEObject) newBase).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.POWER_EXPRESSION__BASE, null, msgs);
-            }
-            msgs = this.basicSetBase(newBase, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.POWER_EXPRESSION__BASE, newBase,
-                    newBase));
-        }
+        this.eDynamicSet(StoexPackage.POWER_EXPRESSION__BASE, StoexPackage.Literals.POWER_EXPRESSION__BASE, newBase);
     }
 
     /**
@@ -142,7 +94,8 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
      */
     @Override
     public Unary getExponent() {
-        return this.exponent;
+        return (Unary) this.eDynamicGet(StoexPackage.POWER_EXPRESSION__EXPONENT,
+                StoexPackage.Literals.POWER_EXPRESSION__EXPONENT, true, true);
     }
 
     /**
@@ -151,17 +104,7 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
      * @generated
      */
     public NotificationChain basicSetExponent(final Unary newExponent, NotificationChain msgs) {
-        final Unary oldExponent = this.exponent;
-        this.exponent = newExponent;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.POWER_EXPRESSION__EXPONENT, oldExponent, newExponent);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newExponent, StoexPackage.POWER_EXPRESSION__EXPONENT, msgs);
         return msgs;
     }
 
@@ -172,24 +115,8 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
      */
     @Override
     public void setExponent(final Unary newExponent) {
-        if (newExponent != this.exponent) {
-            NotificationChain msgs = null;
-            if (this.exponent != null) {
-                msgs = ((InternalEObject) this.exponent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.POWER_EXPRESSION__EXPONENT, null, msgs);
-            }
-            if (newExponent != null) {
-                msgs = ((InternalEObject) newExponent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.POWER_EXPRESSION__EXPONENT, null, msgs);
-            }
-            msgs = this.basicSetExponent(newExponent, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.POWER_EXPRESSION__EXPONENT,
-                    newExponent, newExponent));
-        }
+        this.eDynamicSet(StoexPackage.POWER_EXPRESSION__EXPONENT, StoexPackage.Literals.POWER_EXPRESSION__EXPONENT,
+                newExponent);
     }
 
     /**
@@ -270,9 +197,9 @@ public class PowerExpressionImpl extends PowerImpl implements PowerExpression {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.POWER_EXPRESSION__BASE:
-            return this.base != null;
+            return this.getBase() != null;
         case StoexPackage.POWER_EXPRESSION__EXPONENT:
-            return this.exponent != null;
+            return this.getExponent() != null;
         }
         return super.eIsSet(featureID);
     }

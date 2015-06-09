@@ -12,7 +12,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.uka.ipd.sdq.units.Unit;
@@ -39,15 +38,6 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getUnits()
-     * @generated
-     * @ordered
-     */
-    protected EList<Unit> units;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -73,12 +63,11 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<Unit> getUnits() {
-        if (this.units == null) {
-            this.units = new EObjectContainmentEList<Unit>(Unit.class, this, UnitsPackage.UNIT_MULTIPLICATION__UNITS);
-        }
-        return this.units;
+        return (EList<Unit>) this.eDynamicGet(UnitsPackage.UNIT_MULTIPLICATION__UNITS,
+                UnitsPackage.Literals.UNIT_MULTIPLICATION__UNITS, true, true);
     }
 
     /**
@@ -151,7 +140,7 @@ public class UnitMultiplicationImpl extends UnitImpl implements UnitMultiplicati
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_MULTIPLICATION__UNITS:
-            return this.units != null && !this.units.isEmpty();
+            return !this.getUnits().isEmpty();
         }
         return super.eIsSet(featureID);
     }

@@ -6,11 +6,9 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.probfunction.ProbabilityFunction;
 import de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral;
@@ -38,16 +36,6 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getFunction_ProbabilityFunctionLiteral()
-     * <em>Function Probability Function Literal</em>}' containment reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getFunction_ProbabilityFunctionLiteral()
-     * @generated
-     * @ordered
-     */
-    protected ProbabilityFunction function_ProbabilityFunctionLiteral;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -75,7 +63,9 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
      */
     @Override
     public ProbabilityFunction getFunction_ProbabilityFunctionLiteral() {
-        return this.function_ProbabilityFunctionLiteral;
+        return (ProbabilityFunction) this.eDynamicGet(
+                StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
+                StoexPackage.Literals.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL, true, true);
     }
 
     /**
@@ -85,18 +75,8 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
      */
     public NotificationChain basicSetFunction_ProbabilityFunctionLiteral(
             final ProbabilityFunction newFunction_ProbabilityFunctionLiteral, NotificationChain msgs) {
-        final ProbabilityFunction oldFunction_ProbabilityFunctionLiteral = this.function_ProbabilityFunctionLiteral;
-        this.function_ProbabilityFunctionLiteral = newFunction_ProbabilityFunctionLiteral;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
-                    oldFunction_ProbabilityFunctionLiteral, newFunction_ProbabilityFunctionLiteral);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newFunction_ProbabilityFunctionLiteral,
+                StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL, msgs);
         return msgs;
     }
 
@@ -107,29 +87,9 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
      */
     @Override
     public void setFunction_ProbabilityFunctionLiteral(final ProbabilityFunction newFunction_ProbabilityFunctionLiteral) {
-        if (newFunction_ProbabilityFunctionLiteral != this.function_ProbabilityFunctionLiteral) {
-            NotificationChain msgs = null;
-            if (this.function_ProbabilityFunctionLiteral != null) {
-                msgs = ((InternalEObject) this.function_ProbabilityFunctionLiteral).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
-                        null, msgs);
-            }
-            if (newFunction_ProbabilityFunctionLiteral != null) {
-                msgs = ((InternalEObject) newFunction_ProbabilityFunctionLiteral).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
-                        null, msgs);
-            }
-            msgs = this.basicSetFunction_ProbabilityFunctionLiteral(newFunction_ProbabilityFunctionLiteral, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
-                    newFunction_ProbabilityFunctionLiteral, newFunction_ProbabilityFunctionLiteral));
-        }
+        this.eDynamicSet(StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
+                StoexPackage.Literals.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL,
+                newFunction_ProbabilityFunctionLiteral);
     }
 
     /**
@@ -200,7 +160,7 @@ public class ProbabilityFunctionLiteralImpl extends AtomImpl implements Probabil
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.PROBABILITY_FUNCTION_LITERAL__FUNCTION_PROBABILITY_FUNCTION_LITERAL:
-            return this.function_ProbabilityFunctionLiteral != null;
+            return this.getFunction_ProbabilityFunctionLiteral() != null;
         }
         return super.eIsSet(featureID);
     }

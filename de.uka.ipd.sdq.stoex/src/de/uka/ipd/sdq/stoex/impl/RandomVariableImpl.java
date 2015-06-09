@@ -6,11 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
@@ -50,16 +46,6 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
     protected static final String SPECIFICATION_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getSpecification() <em>Specification</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getSpecification()
-     * @generated
-     * @ordered
-     */
-    protected String specification = SPECIFICATION_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -84,8 +70,19 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
      * @generated
      */
     @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
     public String getSpecification() {
-        return this.specification;
+        return (String) this.eDynamicGet(StoexPackage.RANDOM_VARIABLE__SPECIFICATION,
+                StoexPackage.Literals.RANDOM_VARIABLE__SPECIFICATION, true, true);
     }
 
     /**
@@ -95,12 +92,8 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
      */
     @Override
     public void setSpecification(final String newSpecification) {
-        final String oldSpecification = this.specification;
-        this.specification = newSpecification;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.RANDOM_VARIABLE__SPECIFICATION,
-                    oldSpecification, this.specification));
-        }
+        this.eDynamicSet(StoexPackage.RANDOM_VARIABLE__SPECIFICATION,
+                StoexPackage.Literals.RANDOM_VARIABLE__SPECIFICATION, newSpecification);
     }
 
     /**
@@ -110,9 +103,8 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
      */
     @Override
     public Expression getExpression() {
-        final Expression expression = this.basicGetExpression();
-        return expression != null && ((EObject) expression).eIsProxy() ? (Expression) this
-                .eResolveProxy((InternalEObject) expression) : expression;
+        return (Expression) this.eDynamicGet(StoexPackage.RANDOM_VARIABLE__EXPRESSION,
+                StoexPackage.Literals.RANDOM_VARIABLE__EXPRESSION, true, true);
     }
 
     /**
@@ -195,30 +187,12 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.RANDOM_VARIABLE__SPECIFICATION:
-            return SPECIFICATION_EDEFAULT == null ? this.specification != null : !SPECIFICATION_EDEFAULT
-            .equals(this.specification);
+            return SPECIFICATION_EDEFAULT == null ? this.getSpecification() != null : !SPECIFICATION_EDEFAULT
+            .equals(this.getSpecification());
         case StoexPackage.RANDOM_VARIABLE__EXPRESSION:
             return this.isSetExpression();
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (specification: ");
-        result.append(this.specification);
-        result.append(')');
-        return result.toString();
     }
 
 } // RandomVariableImpl

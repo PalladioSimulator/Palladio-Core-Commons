@@ -5,9 +5,7 @@
  */
 package de.uka.ipd.sdq.probfunction.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.probfunction.Complex;
@@ -44,36 +42,15 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
      * @ordered
      */
     protected static final double REAL_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getReal() <em>Real</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getReal()
-     * @generated
-     * @ordered
-     */
-    protected double real = REAL_EDEFAULT;
-
     /**
      * The default value of the '{@link #getImaginary() <em>Imaginary</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getImaginary()
      * @generated
      * @ordered
      */
     protected static final double IMAGINARY_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getImaginary() <em>Imaginary</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getImaginary()
-     * @generated
-     * @ordered
-     */
-    protected double imaginary = IMAGINARY_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -100,8 +77,19 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
      * @generated
      */
     @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
     public double getReal() {
-        return this.real;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.COMPLEX__REAL, ProbfunctionPackage.Literals.COMPLEX__REAL,
+                true, true);
     }
 
     /**
@@ -111,12 +99,7 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
      */
     @Override
     public void setReal(final double newReal) {
-        final double oldReal = this.real;
-        this.real = newReal;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.COMPLEX__REAL, oldReal,
-                    this.real));
-        }
+        this.eDynamicSet(ProbfunctionPackage.COMPLEX__REAL, ProbfunctionPackage.Literals.COMPLEX__REAL, newReal);
     }
 
     /**
@@ -126,7 +109,8 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
      */
     @Override
     public double getImaginary() {
-        return this.imaginary;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.COMPLEX__IMAGINARY,
+                ProbfunctionPackage.Literals.COMPLEX__IMAGINARY, true, true);
     }
 
     /**
@@ -136,12 +120,8 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
      */
     @Override
     public void setImaginary(final double newImaginary) {
-        final double oldImaginary = this.imaginary;
-        this.imaginary = newImaginary;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.COMPLEX__IMAGINARY,
-                    oldImaginary, this.imaginary));
-        }
+        this.eDynamicSet(ProbfunctionPackage.COMPLEX__IMAGINARY, ProbfunctionPackage.Literals.COMPLEX__IMAGINARY,
+                newImaginary);
     }
 
     /**
@@ -205,31 +185,11 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.COMPLEX__REAL:
-            return this.real != REAL_EDEFAULT;
+            return this.getReal() != REAL_EDEFAULT;
         case ProbfunctionPackage.COMPLEX__IMAGINARY:
-            return this.imaginary != IMAGINARY_EDEFAULT;
+            return this.getImaginary() != IMAGINARY_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (real: ");
-        result.append(this.real);
-        result.append(", imaginary: ");
-        result.append(this.imaginary);
-        result.append(')');
-        return result.toString();
     }
 
 } // ComplexImpl

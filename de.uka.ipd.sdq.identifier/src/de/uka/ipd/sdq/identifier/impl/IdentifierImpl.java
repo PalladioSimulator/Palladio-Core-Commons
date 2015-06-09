@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.identifier.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import de.uka.ipd.sdq.identifier.Identifier;
@@ -38,16 +36,6 @@ public abstract class IdentifierImpl extends CDOObjectImpl implements Identifier
     protected static final String ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected String id = ID_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated not
@@ -67,11 +55,21 @@ public abstract class IdentifierImpl extends CDOObjectImpl implements Identifier
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String getId() {
-        return id;
+        return (String)eDynamicGet(IdentifierPackage.IDENTIFIER__ID, IdentifierPackage.Literals.IDENTIFIER__ID, true, true);
     }
 
     /**
@@ -79,14 +77,12 @@ public abstract class IdentifierImpl extends CDOObjectImpl implements Identifier
      * @generated
      */
     public void setId(String newId) {
-        String oldId = id;
-        id = newId;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, IdentifierPackage.IDENTIFIER__ID, oldId, id));
+        eDynamicSet(IdentifierPackage.IDENTIFIER__ID, IdentifierPackage.Literals.IDENTIFIER__ID, newId);
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -99,7 +95,8 @@ public abstract class IdentifierImpl extends CDOObjectImpl implements Identifier
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -113,7 +110,8 @@ public abstract class IdentifierImpl extends CDOObjectImpl implements Identifier
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -127,31 +125,17 @@ public abstract class IdentifierImpl extends CDOObjectImpl implements Identifier
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
             case IdentifierPackage.IDENTIFIER__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+                return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (eIsProxy()) return super.toString();
-
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (id: ");
-        result.append(id);
-        result.append(')');
-        return result.toString();
     }
 
 } // IdentifierImpl

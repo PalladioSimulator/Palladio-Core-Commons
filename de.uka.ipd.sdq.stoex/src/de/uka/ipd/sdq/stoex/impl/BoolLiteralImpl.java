@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.BoolLiteral;
 import de.uka.ipd.sdq.stoex.StoexPackage;
@@ -45,16 +43,6 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
     protected static final boolean VALUE_EDEFAULT = false;
 
     /**
-     * The cached value of the '{@link #isValue() <em>Value</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #isValue()
-     * @generated
-     * @ordered
-     */
-    protected boolean value = VALUE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -80,7 +68,8 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
      */
     @Override
     public boolean isValue() {
-        return this.value;
+        return (Boolean) this.eDynamicGet(StoexPackage.BOOL_LITERAL__VALUE, StoexPackage.Literals.BOOL_LITERAL__VALUE,
+                true, true);
     }
 
     /**
@@ -90,12 +79,7 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
      */
     @Override
     public void setValue(final boolean newValue) {
-        final boolean oldValue = this.value;
-        this.value = newValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.BOOL_LITERAL__VALUE, oldValue,
-                    this.value));
-        }
+        this.eDynamicSet(StoexPackage.BOOL_LITERAL__VALUE, StoexPackage.Literals.BOOL_LITERAL__VALUE, newValue);
     }
 
     /**
@@ -151,27 +135,9 @@ public class BoolLiteralImpl extends AtomImpl implements BoolLiteral {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.BOOL_LITERAL__VALUE:
-            return this.value != VALUE_EDEFAULT;
+            return this.isValue() != VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (value: ");
-        result.append(this.value);
-        result.append(')');
-        return result.toString();
     }
 
 } // BoolLiteralImpl

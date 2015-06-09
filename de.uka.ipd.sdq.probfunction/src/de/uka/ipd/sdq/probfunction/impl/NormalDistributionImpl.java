@@ -5,9 +5,7 @@
  */
 package de.uka.ipd.sdq.probfunction.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.probfunction.NormalDistribution;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -43,17 +41,6 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      * @ordered
      */
     protected static final double MU_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getMu() <em>Mu</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getMu()
-     * @generated
-     * @ordered
-     */
-    protected double mu = MU_EDEFAULT;
-
     /**
      * The default value of the '{@link #getSigma() <em>Sigma</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
@@ -63,16 +50,6 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      * @ordered
      */
     protected static final double SIGMA_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getSigma() <em>Sigma</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getSigma()
-     * @generated
-     * @ordered
-     */
-    protected double sigma = SIGMA_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -100,7 +77,8 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      */
     @Override
     public double getMu() {
-        return this.mu;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.NORMAL_DISTRIBUTION__MU,
+                ProbfunctionPackage.Literals.NORMAL_DISTRIBUTION__MU, true, true);
     }
 
     /**
@@ -110,12 +88,8 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      */
     @Override
     public void setMu(final double newMu) {
-        final double oldMu = this.mu;
-        this.mu = newMu;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.NORMAL_DISTRIBUTION__MU,
-                    oldMu, this.mu));
-        }
+        this.eDynamicSet(ProbfunctionPackage.NORMAL_DISTRIBUTION__MU,
+                ProbfunctionPackage.Literals.NORMAL_DISTRIBUTION__MU, newMu);
     }
 
     /**
@@ -125,7 +99,8 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      */
     @Override
     public double getSigma() {
-        return this.sigma;
+        return (Double) this.eDynamicGet(ProbfunctionPackage.NORMAL_DISTRIBUTION__SIGMA,
+                ProbfunctionPackage.Literals.NORMAL_DISTRIBUTION__SIGMA, true, true);
     }
 
     /**
@@ -135,12 +110,8 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      */
     @Override
     public void setSigma(final double newSigma) {
-        final double oldSigma = this.sigma;
-        this.sigma = newSigma;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ProbfunctionPackage.NORMAL_DISTRIBUTION__SIGMA,
-                    oldSigma, this.sigma));
-        }
+        this.eDynamicSet(ProbfunctionPackage.NORMAL_DISTRIBUTION__SIGMA,
+                ProbfunctionPackage.Literals.NORMAL_DISTRIBUTION__SIGMA, newSigma);
     }
 
     /**
@@ -204,31 +175,11 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.NORMAL_DISTRIBUTION__MU:
-            return this.mu != MU_EDEFAULT;
+            return this.getMu() != MU_EDEFAULT;
         case ProbfunctionPackage.NORMAL_DISTRIBUTION__SIGMA:
-            return this.sigma != SIGMA_EDEFAULT;
+            return this.getSigma() != SIGMA_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (mu: ");
-        result.append(this.mu);
-        result.append(", sigma: ");
-        result.append(this.sigma);
-        result.append(')');
-        return result.toString();
     }
 
 } // NormalDistributionImpl

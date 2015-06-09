@@ -6,11 +6,9 @@
  */
 package de.uka.ipd.sdq.units.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.units.Unit;
 import de.uka.ipd.sdq.units.UnitPower;
@@ -39,16 +37,6 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
 
     /**
-     * The cached value of the '{@link #getUnit() <em>Unit</em>}' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getUnit()
-     * @generated
-     * @ordered
-     */
-    protected Unit unit;
-
-    /**
      * The default value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -57,16 +45,6 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      * @ordered
      */
     protected static final int EXPONENT_EDEFAULT = 0;
-
-    /**
-     * The cached value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getExponent()
-     * @generated
-     * @ordered
-     */
-    protected int exponent = EXPONENT_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -94,7 +72,8 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      */
     @Override
     public Unit getUnit() {
-        return this.unit;
+        return (Unit) this.eDynamicGet(UnitsPackage.UNIT_POWER__UNIT, UnitsPackage.Literals.UNIT_POWER__UNIT, true,
+                true);
     }
 
     /**
@@ -103,17 +82,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      * @generated
      */
     public NotificationChain basicSetUnit(final Unit newUnit, NotificationChain msgs) {
-        final Unit oldUnit = this.unit;
-        this.unit = newUnit;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    UnitsPackage.UNIT_POWER__UNIT, oldUnit, newUnit);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newUnit, UnitsPackage.UNIT_POWER__UNIT, msgs);
         return msgs;
     }
 
@@ -124,23 +93,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      */
     @Override
     public void setUnit(final Unit newUnit) {
-        if (newUnit != this.unit) {
-            NotificationChain msgs = null;
-            if (this.unit != null) {
-                msgs = ((InternalEObject) this.unit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_POWER__UNIT, null, msgs);
-            }
-            if (newUnit != null) {
-                msgs = ((InternalEObject) newUnit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - UnitsPackage.UNIT_POWER__UNIT, null, msgs);
-            }
-            msgs = this.basicSetUnit(newUnit, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_POWER__UNIT, newUnit, newUnit));
-        }
+        this.eDynamicSet(UnitsPackage.UNIT_POWER__UNIT, UnitsPackage.Literals.UNIT_POWER__UNIT, newUnit);
     }
 
     /**
@@ -150,7 +103,8 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      */
     @Override
     public int getExponent() {
-        return this.exponent;
+        return (Integer) this.eDynamicGet(UnitsPackage.UNIT_POWER__EXPONENT,
+                UnitsPackage.Literals.UNIT_POWER__EXPONENT, true, true);
     }
 
     /**
@@ -160,12 +114,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      */
     @Override
     public void setExponent(final int newExponent) {
-        final int oldExponent = this.exponent;
-        this.exponent = newExponent;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.UNIT_POWER__EXPONENT, oldExponent,
-                    this.exponent));
-        }
+        this.eDynamicSet(UnitsPackage.UNIT_POWER__EXPONENT, UnitsPackage.Literals.UNIT_POWER__EXPONENT, newExponent);
     }
 
     /**
@@ -244,29 +193,11 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_POWER__UNIT:
-            return this.unit != null;
+            return this.getUnit() != null;
         case UnitsPackage.UNIT_POWER__EXPONENT:
-            return this.exponent != EXPONENT_EDEFAULT;
+            return this.getExponent() != EXPONENT_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (exponent: ");
-        result.append(this.exponent);
-        result.append(')');
-        return result.toString();
     }
 
 } // UnitPowerImpl

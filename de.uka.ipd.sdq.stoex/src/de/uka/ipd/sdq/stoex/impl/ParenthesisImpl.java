@@ -6,11 +6,9 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.Parenthesis;
@@ -37,15 +35,6 @@ public class ParenthesisImpl extends AtomImpl implements Parenthesis {
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getInnerExpression() <em>Inner Expression</em>}' containment
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getInnerExpression()
-     * @generated
-     * @ordered
-     */
-    protected Expression innerExpression;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -73,7 +62,8 @@ public class ParenthesisImpl extends AtomImpl implements Parenthesis {
      */
     @Override
     public Expression getInnerExpression() {
-        return this.innerExpression;
+        return (Expression) this.eDynamicGet(StoexPackage.PARENTHESIS__INNER_EXPRESSION,
+                StoexPackage.Literals.PARENTHESIS__INNER_EXPRESSION, true, true);
     }
 
     /**
@@ -82,17 +72,8 @@ public class ParenthesisImpl extends AtomImpl implements Parenthesis {
      * @generated
      */
     public NotificationChain basicSetInnerExpression(final Expression newInnerExpression, NotificationChain msgs) {
-        final Expression oldInnerExpression = this.innerExpression;
-        this.innerExpression = newInnerExpression;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.PARENTHESIS__INNER_EXPRESSION, oldInnerExpression, newInnerExpression);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newInnerExpression,
+                StoexPackage.PARENTHESIS__INNER_EXPRESSION, msgs);
         return msgs;
     }
 
@@ -103,24 +84,8 @@ public class ParenthesisImpl extends AtomImpl implements Parenthesis {
      */
     @Override
     public void setInnerExpression(final Expression newInnerExpression) {
-        if (newInnerExpression != this.innerExpression) {
-            NotificationChain msgs = null;
-            if (this.innerExpression != null) {
-                msgs = ((InternalEObject) this.innerExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PARENTHESIS__INNER_EXPRESSION, null, msgs);
-            }
-            if (newInnerExpression != null) {
-                msgs = ((InternalEObject) newInnerExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.PARENTHESIS__INNER_EXPRESSION, null, msgs);
-            }
-            msgs = this.basicSetInnerExpression(newInnerExpression, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.PARENTHESIS__INNER_EXPRESSION,
-                    newInnerExpression, newInnerExpression));
-        }
+        this.eDynamicSet(StoexPackage.PARENTHESIS__INNER_EXPRESSION,
+                StoexPackage.Literals.PARENTHESIS__INNER_EXPRESSION, newInnerExpression);
     }
 
     /**
@@ -191,7 +156,7 @@ public class ParenthesisImpl extends AtomImpl implements Parenthesis {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.PARENTHESIS__INNER_EXPRESSION:
-            return this.innerExpression != null;
+            return this.getInnerExpression() != null;
         }
         return super.eIsSet(featureID);
     }

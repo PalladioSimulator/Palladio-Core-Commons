@@ -4,8 +4,9 @@
     copyrightText="Copyright 2007-2009, SDQ, IPD, U Karlsruhe" modelDirectory="/de.uka.ipd.sdq.units/src"
     modelPluginID="de.uka.ipd.sdq.units" modelName="Units" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
     rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" codeFormatting="true"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" language="en"
-    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore" cleanup="true">
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="6.0"
+    language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    cleanup="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
     <details key="UNION_PROPERTIES" value="REPORT"/>

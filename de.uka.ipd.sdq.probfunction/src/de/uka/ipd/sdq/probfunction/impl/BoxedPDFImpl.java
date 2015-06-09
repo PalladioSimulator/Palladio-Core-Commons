@@ -12,7 +12,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
@@ -39,15 +38,6 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getSamples() <em>Samples</em>}' containment reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getSamples()
-     * @generated
-     * @ordered
-     */
-    protected EList<ContinuousSample> samples;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -73,13 +63,11 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<ContinuousSample> getSamples() {
-        if (this.samples == null) {
-            this.samples = new EObjectContainmentEList<ContinuousSample>(ContinuousSample.class, this,
-                    ProbfunctionPackage.BOXED_PDF__SAMPLES);
-        }
-        return this.samples;
+        return (EList<ContinuousSample>) this.eDynamicGet(ProbfunctionPackage.BOXED_PDF__SAMPLES,
+                ProbfunctionPackage.Literals.BOXED_PDF__SAMPLES, true, true);
     }
 
     /**
@@ -152,7 +140,7 @@ public class BoxedPDFImpl extends ProbabilityDensityFunctionImpl implements Boxe
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ProbfunctionPackage.BOXED_PDF__SAMPLES:
-            return this.samples != null && !this.samples.isEmpty();
+            return !this.getSamples().isEmpty();
         }
         return super.eIsSet(featureID);
     }

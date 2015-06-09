@@ -48,4 +48,14 @@ public abstract class ExpressionImpl extends CDOObjectImpl implements Expression
         return StoexPackage.Literals.EXPRESSION;
     }
 
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
 } // ExpressionImpl

@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.StoexPackage;
 import de.uka.ipd.sdq.stoex.StringLiteral;
@@ -45,16 +43,6 @@ public class StringLiteralImpl extends AtomImpl implements StringLiteral {
     protected static final String VALUE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getValue()
-     * @generated
-     * @ordered
-     */
-    protected String value = VALUE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -80,7 +68,8 @@ public class StringLiteralImpl extends AtomImpl implements StringLiteral {
      */
     @Override
     public String getValue() {
-        return this.value;
+        return (String) this.eDynamicGet(StoexPackage.STRING_LITERAL__VALUE,
+                StoexPackage.Literals.STRING_LITERAL__VALUE, true, true);
     }
 
     /**
@@ -90,12 +79,7 @@ public class StringLiteralImpl extends AtomImpl implements StringLiteral {
      */
     @Override
     public void setValue(final String newValue) {
-        final String oldValue = this.value;
-        this.value = newValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.STRING_LITERAL__VALUE, oldValue,
-                    this.value));
-        }
+        this.eDynamicSet(StoexPackage.STRING_LITERAL__VALUE, StoexPackage.Literals.STRING_LITERAL__VALUE, newValue);
     }
 
     /**
@@ -151,27 +135,9 @@ public class StringLiteralImpl extends AtomImpl implements StringLiteral {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.STRING_LITERAL__VALUE:
-            return VALUE_EDEFAULT == null ? this.value != null : !VALUE_EDEFAULT.equals(this.value);
+            return VALUE_EDEFAULT == null ? this.getValue() != null : !VALUE_EDEFAULT.equals(this.getValue());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (value: ");
-        result.append(this.value);
-        result.append(')');
-        return result.toString();
     }
 
 } // StringLiteralImpl

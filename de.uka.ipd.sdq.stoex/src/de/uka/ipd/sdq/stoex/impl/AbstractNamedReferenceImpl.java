@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import de.uka.ipd.sdq.stoex.AbstractNamedReference;
@@ -47,16 +45,6 @@ public abstract class AbstractNamedReferenceImpl extends CDOObjectImpl implement
     protected static final String REFERENCE_NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getReferenceName() <em>Reference Name</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getReferenceName()
-     * @generated
-     * @ordered
-     */
-    protected String referenceName = REFERENCE_NAME_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -81,8 +69,19 @@ public abstract class AbstractNamedReferenceImpl extends CDOObjectImpl implement
      * @generated
      */
     @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
     public String getReferenceName() {
-        return this.referenceName;
+        return (String) this.eDynamicGet(StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME,
+                StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, true, true);
     }
 
     /**
@@ -92,12 +91,8 @@ public abstract class AbstractNamedReferenceImpl extends CDOObjectImpl implement
      */
     @Override
     public void setReferenceName(final String newReferenceName) {
-        final String oldReferenceName = this.referenceName;
-        this.referenceName = newReferenceName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, oldReferenceName, this.referenceName));
-        }
+        this.eDynamicSet(StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME,
+                StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME, newReferenceName);
     }
 
     /**
@@ -153,28 +148,10 @@ public abstract class AbstractNamedReferenceImpl extends CDOObjectImpl implement
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME:
-            return REFERENCE_NAME_EDEFAULT == null ? this.referenceName != null : !REFERENCE_NAME_EDEFAULT
-            .equals(this.referenceName);
+            return REFERENCE_NAME_EDEFAULT == null ? this.getReferenceName() != null : !REFERENCE_NAME_EDEFAULT
+            .equals(this.getReferenceName());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (referenceName: ");
-        result.append(this.referenceName);
-        result.append(')');
-        return result.toString();
     }
 
 } // AbstractNamedReferenceImpl

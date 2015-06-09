@@ -6,9 +6,7 @@
  */
 package de.uka.ipd.sdq.units.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.units.BaseUnit;
 import de.uka.ipd.sdq.units.UnitNames;
@@ -46,16 +44,6 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     protected static final UnitNames NAME_EDEFAULT = UnitNames.UNITLESS;
 
     /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected UnitNames name = NAME_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -81,7 +69,8 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
      */
     @Override
     public UnitNames getName() {
-        return this.name;
+        return (UnitNames) this.eDynamicGet(UnitsPackage.BASE_UNIT__NAME, UnitsPackage.Literals.BASE_UNIT__NAME, true,
+                true);
     }
 
     /**
@@ -91,11 +80,7 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
      */
     @Override
     public void setName(final UnitNames newName) {
-        final UnitNames oldName = this.name;
-        this.name = newName == null ? NAME_EDEFAULT : newName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, UnitsPackage.BASE_UNIT__NAME, oldName, this.name));
-        }
+        this.eDynamicSet(UnitsPackage.BASE_UNIT__NAME, UnitsPackage.Literals.BASE_UNIT__NAME, newName);
     }
 
     /**
@@ -151,27 +136,9 @@ public class BaseUnitImpl extends UnitImpl implements BaseUnit {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.BASE_UNIT__NAME:
-            return this.name != NAME_EDEFAULT;
+            return this.getName() != NAME_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (name: ");
-        result.append(this.name);
-        result.append(')');
-        return result.toString();
     }
 
 } // BaseUnitImpl

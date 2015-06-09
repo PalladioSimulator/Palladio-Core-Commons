@@ -6,11 +6,9 @@
  */
 package de.uka.ipd.sdq.stoex.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.uka.ipd.sdq.stoex.NegativeExpression;
 import de.uka.ipd.sdq.stoex.StoexPackage;
@@ -36,15 +34,6 @@ public class NegativeExpressionImpl extends UnaryImpl implements NegativeExpress
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-    /**
-     * The cached value of the '{@link #getInner() <em>Inner</em>}' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getInner()
-     * @generated
-     * @ordered
-     */
-    protected Unary inner;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -72,7 +61,8 @@ public class NegativeExpressionImpl extends UnaryImpl implements NegativeExpress
      */
     @Override
     public Unary getInner() {
-        return this.inner;
+        return (Unary) this.eDynamicGet(StoexPackage.NEGATIVE_EXPRESSION__INNER,
+                StoexPackage.Literals.NEGATIVE_EXPRESSION__INNER, true, true);
     }
 
     /**
@@ -81,17 +71,7 @@ public class NegativeExpressionImpl extends UnaryImpl implements NegativeExpress
      * @generated
      */
     public NotificationChain basicSetInner(final Unary newInner, NotificationChain msgs) {
-        final Unary oldInner = this.inner;
-        this.inner = newInner;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    StoexPackage.NEGATIVE_EXPRESSION__INNER, oldInner, newInner);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newInner, StoexPackage.NEGATIVE_EXPRESSION__INNER, msgs);
         return msgs;
     }
 
@@ -102,24 +82,8 @@ public class NegativeExpressionImpl extends UnaryImpl implements NegativeExpress
      */
     @Override
     public void setInner(final Unary newInner) {
-        if (newInner != this.inner) {
-            NotificationChain msgs = null;
-            if (this.inner != null) {
-                msgs = ((InternalEObject) this.inner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.NEGATIVE_EXPRESSION__INNER, null, msgs);
-            }
-            if (newInner != null) {
-                msgs = ((InternalEObject) newInner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - StoexPackage.NEGATIVE_EXPRESSION__INNER, null, msgs);
-            }
-            msgs = this.basicSetInner(newInner, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, StoexPackage.NEGATIVE_EXPRESSION__INNER,
-                    newInner, newInner));
-        }
+        this.eDynamicSet(StoexPackage.NEGATIVE_EXPRESSION__INNER, StoexPackage.Literals.NEGATIVE_EXPRESSION__INNER,
+                newInner);
     }
 
     /**
@@ -190,7 +154,7 @@ public class NegativeExpressionImpl extends UnaryImpl implements NegativeExpress
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case StoexPackage.NEGATIVE_EXPRESSION__INNER:
-            return this.inner != null;
+            return this.getInner() != null;
         }
         return super.eIsSet(featureID);
     }

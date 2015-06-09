@@ -41,7 +41,7 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
     /**
      * The default value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getProbability()
      * @generated
      * @ordered
@@ -75,6 +75,31 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
     @Override
     protected int eStaticFeatureCount() {
         return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated NOT
+     */
+    @Override
+    @SuppressWarnings("unchecked")
+    public T getValue() {
+        /* In Samples the value is always a simple type and not an EObject, hence the cast fails! */
+        T value = (T) this.eDynamicGet(ProbfunctionPackage.SAMPLE__VALUE, ProbfunctionPackage.Literals.SAMPLE__VALUE,
+                true, true);
+
+        if (value != null && value instanceof EObject && ((EObject) value).eIsProxy()) {
+            final InternalEObject oldValue = (InternalEObject) value;
+            value = (T) this.eResolveProxy(oldValue);
+            if (value != oldValue) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProbfunctionPackage.SAMPLE__VALUE,
+                            oldValue, value));
+                }
+            }
+        }
+        return value;
     }
 
     /**
@@ -176,29 +201,6 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
     public void setProbability(final double newProbability) {
         this.eDynamicSet(ProbfunctionPackage.SAMPLE__PROBABILITY, ProbfunctionPackage.Literals.SAMPLE__PROBABILITY,
                 newProbability);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated not
-     */
-    @Override
-    @SuppressWarnings("unchecked")
-    public T getValue() {
-        /* In Samples the value is always a simple type and not an EObject, hence the cast fails! */
-        Object value = this.eGet(ProbfunctionPackage.Literals.SAMPLE__VALUE, true);
-        if (value != null && value instanceof EObject && ((EObject) value).eIsProxy()) {
-            final InternalEObject oldValue = (InternalEObject) value;
-            value = (T) this.eResolveProxy(oldValue);
-            if (value != oldValue) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProbfunctionPackage.SAMPLE__VALUE,
-                            oldValue, value));
-                }
-            }
-        }
-        return (T) value;
     }
 
 } // SampleImpl

@@ -45,7 +45,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
     /**
      * The default value of the '{@link #isOrderedDomain() <em>Ordered Domain</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #isOrderedDomain()
      * @generated
      * @ordered

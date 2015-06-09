@@ -47,7 +47,7 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
     /**
      * The default value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getProbability()
      * @generated
      * @ordered

@@ -43,7 +43,7 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements Sam
     /**
      * The default value of the '{@link #getDistance() <em>Distance</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDistance()
      * @generated
      * @ordered

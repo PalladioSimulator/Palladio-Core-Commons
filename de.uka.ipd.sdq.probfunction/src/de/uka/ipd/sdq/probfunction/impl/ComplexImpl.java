@@ -45,7 +45,7 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
     /**
      * The default value of the '{@link #getImaginary() <em>Imaginary</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getImaginary()
      * @generated
      * @ordered

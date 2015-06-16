@@ -3,7 +3,7 @@
       id="de.uka.ipd.sdq.errorhandling.feature"
       label="Palladio Commons Errorhandling"
       version="1.4.0.qualifier"
-      provider-name="sdq.ipd.kit.edu">
+      provider-name="palladiosimulator.org">
 
    <description url="http://sdq.ipd.uka.de">
       Palladio Commons library: Errorhandling classes

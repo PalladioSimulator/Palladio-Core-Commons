@@ -3,7 +3,7 @@
       id="de.uka.ipd.sdq.units.feature"
       label="Palladio Commons Units"
       version="2.1.0.qualifier"
-      provider-name="sdq.ipd.kit.edu">
+      provider-name="palladiosimulator.org">
 
    <description url="http://sdq.ipd.uka.de">
       Palladio Commons library: Units classes

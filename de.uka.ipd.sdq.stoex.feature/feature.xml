@@ -3,7 +3,7 @@
       id="de.uka.ipd.sdq.stoex.feature"
       label="Palladio Commons StoEx"
       version="2.2.0.qualifier"
-      provider-name="sdq.ipd.kit.edu">
+      provider-name="palladiosimulator.org">
 
    <description url="http://sdq.ipd.uka.de">
       Palladio Commons library: StoEx classes

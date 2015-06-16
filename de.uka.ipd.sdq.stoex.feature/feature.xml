@@ -11,12 +11,10 @@
       Palladio Commons library: StoEx classes
    </description>
 
-   <copyright url="http://sdqweb.ipd.uka.de/eclipse/PCM/">
-      This plugin is protected by copyright held by the members of
-the Palladio Research Group, University of Karlsruhe.
+   <copyright url="%copyrightURL">
+      %copyright
    </copyright>
 
-   
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>

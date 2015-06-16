@@ -11,11 +11,10 @@
       Metamodels to model probability distributions
    </description>
 
-   <copyright url="http://palladio-simulator.com">
-      Copyright 2014, Palladio Development Team
+   <copyright url="%copyrightURL">
+      %copyright
    </copyright>
 
-   
    <url>
       <discovery label="Palladio Commons" url="https://sdqweb.ipd.kit.edu/eclipse/commons/releases/1.4.0/"/>
    </url>

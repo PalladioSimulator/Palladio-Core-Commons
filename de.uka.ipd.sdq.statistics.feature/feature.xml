@@ -12,12 +12,10 @@
 estimators, confidence estimators and indepence tests.
    </description>
 
-   <copyright>
-      This plugin is protected by copyright held by the members of
-the Palladio Research Group, University of Karlsruhe.
+   <copyright url="%copyrightURL">
+      %copyright
    </copyright>
 
-   
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.apache.log4j" version="1.2.13" match="greaterOrEqual"/>

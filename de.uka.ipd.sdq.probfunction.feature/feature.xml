@@ -213,7 +213,7 @@ litigation.
    </license>
 
    <url>
-      <discovery label="Palladio Commons" url="http://sdqweb.ipd.kit.edu/eclipse/commons/releases/1.4.0/"/>
+      <discovery label="Palladio Commons" url="https://sdqweb.ipd.kit.edu/eclipse/commons/releases/1.4.0/"/>
    </url>
 
    <requires>

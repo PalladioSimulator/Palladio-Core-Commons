@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.license"
       version="1.0.0"
-      provider-name="%vendor">
+      provider-name="%providerName">
 
    <license url="%licenseURL">
       %license

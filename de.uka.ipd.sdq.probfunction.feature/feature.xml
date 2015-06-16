@@ -5,7 +5,7 @@
       version="2.1.0.qualifier"
       provider-name="sdq.ipd.uka.de"
       license-feature="org.palladiosimulator.license"
-      license-feature-version="1.0.0.qualifier">
+      license-feature-version="1.0.0">
 
    <description url="http://palladio-simulator.com">
       Metamodels to model probability distributions

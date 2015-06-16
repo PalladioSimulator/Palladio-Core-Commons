@@ -7,6 +7,8 @@
 		failOnError="false" />
 	<rm:locator pattern="^org\.palladiosimulator\.commons.*"
 		searchPathRef="commons" failOnError="false" />
+	<rm:locator pattern="^org\.palladiosimulator\.license"
+		searchPathRef="commons" failOnError="false" />
 	<rm:locator searchPathRef="thirdparty" failOnError="false" />
 	<rm:redirect pattern=".*"
 		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/eclipse-platform.rmap" />

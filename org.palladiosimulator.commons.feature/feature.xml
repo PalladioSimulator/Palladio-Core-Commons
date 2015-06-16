@@ -11,10 +11,6 @@
       Common Palladio plugins.
    </description>
 
-   <copyright url="%copyrightURL">
-      %copyright
-   </copyright>
-
    <includes
          id="de.uka.ipd.sdq.dialogs.feature"
          version="0.0.0"/>

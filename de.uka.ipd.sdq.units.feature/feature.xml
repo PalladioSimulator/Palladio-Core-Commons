@@ -11,10 +11,6 @@
       Palladio Commons library: Units classes
    </description>
 
-   <copyright url="%copyrightURL">
-      %copyright
-   </copyright>
-
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>

@@ -11,10 +11,6 @@
       Palladio Commons library: Dialog classes
    </description>
 
-   <copyright url="%copyrightURL">
-      %copyright
-   </copyright>
-
    <requires>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.emf.edit.ui"/>

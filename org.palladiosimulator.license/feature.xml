@@ -3,10 +3,6 @@
       id="org.palladiosimulator.license"
       version="1.0.0">
 
-   <copyright url="%copyrightURL">
-      %copyright
-   </copyright>
-
    <license url="%licenseURL">
       %license
    </license>

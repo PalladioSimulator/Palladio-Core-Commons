@@ -11,10 +11,6 @@
       Common StoEx Palladio plugins.
    </description>
 
-   <copyright url="%copyrightURL">
-      %copyright
-   </copyright>
-
    <requires>
       <import feature="org.eclipse.xtext.sdk" version="2.8.1.v201503230617"/>
       <import feature="org.eclipse.xtend.sdk" version="2.8.1.v201503230617"/>

@@ -11,10 +11,6 @@
       Metamodels to model probability distributions
    </description>
 
-   <copyright url="%copyrightURL">
-      %copyright
-   </copyright>
-
    <url>
       <discovery label="Palladio Commons" url="https://sdqweb.ipd.kit.edu/eclipse/commons/releases/1.4.0/"/>
    </url>

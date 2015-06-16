@@ -241,6 +241,13 @@ litigation.
          id="de.uka.ipd.sdq.probfunction.feature"
          version="0.0.0"/>
 
+   <requires>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.core.runtime" version="3.10.0" match="greaterOrEqual"/>
+   </requires>
+
    <plugin
          id="org.palladiosimulator.commons"
          download-size="0"

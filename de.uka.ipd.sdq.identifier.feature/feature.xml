@@ -3,7 +3,6 @@
       id="de.uka.ipd.sdq.identifier.feature"
       label="Palladio Commons Identifier"
       version="2.1.0.qualifier"
-      provider-name="palladiosimulator.org"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 

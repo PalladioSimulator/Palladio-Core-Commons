@@ -3,7 +3,6 @@
       id="de.uka.ipd.sdq.dialogs.feature"
       label="Palladio Commons Dialogs"
       version="1.4.0.qualifier"
-      provider-name="palladiosimulator.org"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 

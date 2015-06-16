@@ -3,7 +3,6 @@
       id="org.palladiosimulator.commons.feature"
       label="Palladio Simulator Commons Feature"
       version="1.5.0.qualifier"
-      provider-name="palladiosimulator.org"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 

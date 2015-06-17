@@ -8,10 +8,12 @@
 	<rm:locator pattern="^org\.palladiosimulator\.commons.*"
 		searchPathRef="commons" failOnError="false" />
 	<rm:locator pattern="^org\.palladiosimulator\.license"
-		searchPathRef="commons" failOnError="false" />
+		searchPathRef="build" failOnError="false" />
 	<rm:locator searchPathRef="thirdparty" failOnError="false" />
 	<rm:redirect pattern=".*"
 		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/eclipse-platform.rmap" />
+		
+		
 	<rm:searchPath name="commons">
 		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
 			readerType="svn">
@@ -30,6 +32,15 @@
 			readerType="svn">
 			<rm:uri
 				format="http://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/">
+				<bc:propertyRef key="buckminster.component" />
+			</rm:uri>
+		</rm:provider>
+	</rm:searchPath>
+	<rm:searchPath name="build">
+		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
+			readerType="svn">
+			<rm:uri
+				format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/{0}">
 				<bc:propertyRef key="buckminster.component" />
 			</rm:uri>
 		</rm:provider>

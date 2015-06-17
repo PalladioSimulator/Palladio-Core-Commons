@@ -27,15 +27,16 @@
 			</rm:versionConverter> --> 
 		</rm:provider>
 	</rm:searchPath>
+	
 	<rm:searchPath name="thirdparty">
 		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
-			readerType="svn">
+			readerType="p2">
 			<rm:uri
-				format="http://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/">
-				<bc:propertyRef key="buckminster.component" />
+				format="https://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/">
 			</rm:uri>
 		</rm:provider>
 	</rm:searchPath>
+	
 	<rm:searchPath name="build">
 		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
 			readerType="svn">
@@ -45,4 +46,5 @@
 			</rm:uri>
 		</rm:provider>
 	</rm:searchPath>
+	
 </rm:rmap>

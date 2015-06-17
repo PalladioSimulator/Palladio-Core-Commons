@@ -6,10 +6,6 @@
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
-   <url>
-      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
-   </url>
-
    <includes
          id="org.palladiosimulator.commons.feature"
          version="0.0.0"/>

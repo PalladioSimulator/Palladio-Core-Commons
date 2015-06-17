@@ -10,10 +10,6 @@
       Metamodels to model probability distributions
    </description>
 
-   <url>
-      <discovery label="Palladio Commons" url="https://sdqweb.ipd.kit.edu/eclipse/commons/releases/1.4.0/"/>
-   </url>
-
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>

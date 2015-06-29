@@ -30,7 +30,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
@@ -47,7 +47,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RandomVariableImpl() {
@@ -56,7 +56,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,7 +66,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -87,7 +87,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -98,13 +98,15 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
+     *
+     * @generated not
      */
     @Override
     public Expression getExpression() {
-        return (Expression) this.eDynamicGet(StoexPackage.RANDOM_VARIABLE__EXPRESSION,
-                StoexPackage.Literals.RANDOM_VARIABLE__EXPRESSION, true, true);
+        // FIXME: StB: I am not sure at all how this is supposed to work with dynamic feature.
+        // The code below works but is far of the generated one....
+        return (Expression) this.eGet(StoexPackage.RANDOM_VARIABLE__EXPRESSION,
+                false, true);
     }
 
     /**
@@ -131,7 +133,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -150,7 +152,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,7 +167,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -180,7 +182,7 @@ public class RandomVariableImpl extends CDOObjectImpl implements RandomVariable 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

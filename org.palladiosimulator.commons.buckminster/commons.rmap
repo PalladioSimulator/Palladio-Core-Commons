@@ -1,50 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0"
 	xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
-	<rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="commons"
-		failOnError="false" />
-	<rm:locator pattern="^edu\.kit\..*" searchPathRef="commons"
-		failOnError="false" />
-	<rm:locator pattern="^org\.palladiosimulator\.commons.*"
-		searchPathRef="commons" failOnError="false" />
-	<rm:locator pattern="^org\.palladiosimulator\.license"
-		searchPathRef="build" failOnError="false" />
-	<rm:locator searchPathRef="thirdparty" failOnError="false" />
-	<rm:redirect pattern=".*"
-		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/eclipse-platform.rmap" />
-		
+	
+	<rm:locator pattern="^de\.uka\.ipd\.sdq\.[dialogs|errorhandling|identifier|probfuction|statistics|stoex|units].*" searchPathRef="commons" failOnError="true" />
+	<rm:locator pattern="^org\.palladiosimulator\.commons.*" searchPathRef="commons" failOnError="true" />
+
+	<rm:redirect pattern=".*" href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/ThirdPartyWrapper/trunk/org.palladiosimulator.thirdpartywrapper.buckminster/thirdpartywrapper.rmap" />
 		
 	<rm:searchPath name="commons">
-		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
-			readerType="svn">
-			<rm:uri
-				format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Commons/trunk/{0}?moduleAfterTag&amp;moduleAfterBranch">
-				<bc:propertyRef key="buckminster.component" />
-			</rm:uri>
-			<!--  <rm:versionConverter type="TAG" versionType="OSGi">
-				<rm:transform fromPattern="^(.*)$" fromReplacement="commons_rc_$1"
-					toPattern="^commons_rc_(.*)$" toReplacement="$1" />
-			</rm:versionConverter> --> 
-		</rm:provider>
-	</rm:searchPath>
-	
-	<rm:searchPath name="thirdparty">
-		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
-			readerType="p2">
-			<rm:uri
-				format="https://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/">
-			</rm:uri>
-		</rm:provider>
-	</rm:searchPath>
-	
-	<rm:searchPath name="build">
-		<rm:provider componentTypes="eclipse.feature,osgi.bundle"
-			readerType="svn">
-			<rm:uri
-				format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/{0}">
+		<rm:provider componentTypes="eclipse.feature,osgi.bundle" source="true" mutable="true" readerType="svn">
+			<rm:uri	format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Commons/trunk/{0}?moduleAfterTag&amp;moduleAfterBranch">
 				<bc:propertyRef key="buckminster.component" />
 			</rm:uri>
 		</rm:provider>
+		<rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
+      		<rm:uri format="https://sdqweb.ipd.kit.edu/eclipse/commons/nightly/"/>
+    	</rm:provider>
 	</rm:searchPath>
 	
 </rm:rmap>

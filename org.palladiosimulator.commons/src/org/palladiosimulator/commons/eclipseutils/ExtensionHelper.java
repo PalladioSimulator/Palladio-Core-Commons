@@ -17,7 +17,11 @@ import org.eclipse.core.runtime.Platform;
  * 
  * @author Sebastian Lehrig
  */
-public class ExtensionHelper {
+public final class ExtensionHelper {
+
+    /** Static helper classes shall not be instantiated. */
+    private ExtensionHelper() {
+    }
 
     /**
      * Gets all attributes registered at a given extension point at a given element and conforming
@@ -70,7 +74,7 @@ public class ExtensionHelper {
                     final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
                             .createExecutableExtension(attributeName);
                     results.add(executableExtension);
-                } catch (CoreException e) {
+                } catch (final CoreException e) {
                     throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
                             + attributeName + "\"");
                 }
@@ -110,7 +114,7 @@ public class ExtensionHelper {
                         final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
                                 .createExecutableExtension(attributeName);
                         return executableExtension;
-                    } catch (CoreException e) {
+                    } catch (final CoreException e) {
                         throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID
                                 + "->" + attributeName + "\"");
                     }
@@ -118,8 +122,8 @@ public class ExtensionHelper {
             }
         }
 
-        throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
-                + attributeName + "\"");
+        throw new RuntimeException(
+                "Unable to create executable extension for \"" + extensionPointID + "->" + attributeName + "\"");
     }
 
     /**
@@ -147,7 +151,7 @@ public class ExtensionHelper {
                 final DATA_TYPE executableExtension = (DATA_TYPE) obtainConfigurationElement(extension, elementName)
                         .createExecutableExtension(attributeName);
                 results.add(executableExtension);
-            } catch (CoreException e) {
+            } catch (final CoreException e) {
                 throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
                         + elementName + "->" + attributeName + "\"");
             }
@@ -190,7 +194,7 @@ public class ExtensionHelper {
                     final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
                             .createExecutableExtension(attributeName);
                     return executableExtension;
-                } catch (CoreException e) {
+                } catch (final CoreException e) {
                 }
             }
         }
@@ -209,7 +213,8 @@ public class ExtensionHelper {
      *            the configuration element name to be matched.
      * @return a matched configuration element.
      */
-    private static IConfigurationElement obtainConfigurationElement(final IExtension extension, final String elementName) {
+    private static IConfigurationElement obtainConfigurationElement(final IExtension extension,
+            final String elementName) {
         for (final IConfigurationElement element : extension.getConfigurationElements()) {
             if (element.getName().equals(elementName)) {
                 return element;
@@ -228,8 +233,8 @@ public class ExtensionHelper {
      * @return list of extensions at the given extension point.
      */
     private static List<IExtension> loadExtensions(final String extensionPointID) {
-        return Collections.unmodifiableList(Arrays.asList(Platform.getExtensionRegistry()
-                .getExtensionPoint(extensionPointID).getExtensions()));
+        return Collections.unmodifiableList(
+                Arrays.asList(Platform.getExtensionRegistry().getExtensionPoint(extensionPointID).getExtensions()));
     }
 
 }

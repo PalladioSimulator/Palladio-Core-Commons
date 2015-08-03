@@ -9,6 +9,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.URIUtil;
 
 /**
  * Helper class for coping with files, especially residing within plug-ins.
@@ -35,7 +36,8 @@ public final class FileHelper {
     public static File getFile(final String path) {
         try {
             final URL resolveURL = FileLocator.toFileURL(new URL(path));
-            final URI resolvedURI = new URI(resolveURL.getProtocol(), resolveURL.getPath(), null);
+            final URI resolvedURI = URIUtil.toURI(resolveURL);
+            //final URI resolvedURI = new URI(resolveURL.getProtocol(), resolveURL.getAuthority(), resolveURL.getPath(), null, null);
             return new File(resolvedURI);
         } catch (final MalformedURLException e1) {
             throw new IllegalArgumentException("The path \"" + path + "\" is not a valid URL!");

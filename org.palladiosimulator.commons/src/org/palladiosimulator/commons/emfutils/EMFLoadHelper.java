@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
  * This class provides static helper methods for accessing models during runtime. Models are stored
  * in resources, identified by resource URIs. Concrete model elements are identified by their
  * fragments.
- * 
+ *
  * @author Sebastian Lehrig
  */
 public final class EMFLoadHelper {
@@ -27,7 +27,7 @@ public final class EMFLoadHelper {
      * a fragment while "platform:/resource/myProject/default.usagemodel" does not. Use the
      * <code>getResourceURI(...)</code> method of this class in case you want to get a correct
      * resource URI for a given EObject.
-     * 
+     *
      * @param resourceURI
      *            Resource URI to a given EObject (has to include fragment).
      * @return The referenced EObject.
@@ -63,21 +63,27 @@ public final class EMFLoadHelper {
     /**
      * Creates a resource URI for a given EObject; including its fragment that uniquely identifies
      * the EObject within the resource.
-     * 
+     *
      * @param eObject
      *            The given EObject.
      * @return The URI String of the given object; including its fragment.
      */
     public static String getResourceURI(final EObject eObject) {
-        final URI uri = eObject.eResource().getURI();
-        final URI fullUri = uri.appendFragment(getResourceFragment(eObject));
+        final Resource resource = eObject.eResource();
+        if (resource == null) {
+            // FIXME: What should be the right behaviour here??
+            return "";
+        } else {
+            final URI uri = resource.getURI();
+            final URI fullUri = uri.appendFragment(getResourceFragment(eObject));
 
-        return fullUri.toString();
+            return fullUri.toString();
+        }
     }
 
     /**
      * Returns the URI fragment of a given eObject.
-     * 
+     *
      * @param eObject
      *            the eObject to look the fragment up for.
      * @return the fragment of the eObject.

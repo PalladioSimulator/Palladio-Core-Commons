@@ -9,7 +9,9 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.URIUtil;
+import org.osgi.framework.Bundle;
 
 /**
  * Helper class for coping with files, especially residing within plug-ins.
@@ -37,7 +39,8 @@ public final class FileHelper {
         try {
             final URL resolveURL = FileLocator.toFileURL(new URL(path));
             final URI resolvedURI = URIUtil.toURI(resolveURL);
-            //final URI resolvedURI = new URI(resolveURL.getProtocol(), resolveURL.getAuthority(), resolveURL.getPath(), null, null);
+            // final URI resolvedURI = new URI(resolveURL.getProtocol(), resolveURL.getAuthority(),
+            // resolveURL.getPath(), null, null);
             return new File(resolvedURI);
         } catch (final MalformedURLException e1) {
             throw new IllegalArgumentException("The path \"" + path + "\" is not a valid URL!");
@@ -103,5 +106,32 @@ public final class FileHelper {
         }
 
         return uris;
+    }
+
+    /**
+     * Returns the JAR file corresponding to the given plug-in ID from the current Eclipse platform.
+     * In case the referenced plug-in is available as directory rather than as JAR file, a
+     * file-handle to this directory is returned.
+     * 
+     * TODO package found directories into a plug-in JAR file (special structure!) [Lehrig]
+     * 
+     * @see http://www.eclipsezone.com/eclipse/forums/t49415.html
+     * 
+     * @param pluginID
+     *            Plug-in ID for of the Jar file to be loaded
+     * @return the plug-in's Jar file
+     */
+    public static File getPluginJarFile(final String pluginID) {
+        final Bundle plugin = Platform.getBundle(pluginID);
+
+        if (plugin == null) {
+            throw new RuntimeException("Plug-In with ID \"" + pluginID + "\" cannot be resolved");
+        }
+
+        try {
+            return FileLocator.getBundleFile(plugin);
+        } catch (final IOException e) {
+            throw new RuntimeException("No access for reading \"" + plugin + "\"");
+        }
     }
 }

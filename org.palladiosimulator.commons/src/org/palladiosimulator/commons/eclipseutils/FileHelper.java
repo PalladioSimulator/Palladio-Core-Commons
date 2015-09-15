@@ -113,17 +113,13 @@ public final class FileHelper {
      * In case the referenced plug-in is available as directory rather than as JAR file, a
      * file-handle to this directory is returned.
      * 
-     * TODO package found directories into a plug-in JAR file (special structure!) [Lehrig]
-     * 
      * @see http://www.eclipsezone.com/eclipse/forums/t49415.html
-     * 
      * @param pluginID
      *            Plug-in ID for of the Jar file to be loaded
      * @return the plug-in's Jar file
      */
     public static File getPluginJarFile(final String pluginID) {
         final Bundle plugin = Platform.getBundle(pluginID);
-
         if (plugin == null) {
             throw new RuntimeException("Plug-In with ID \"" + pluginID + "\" cannot be resolved");
         }
@@ -133,5 +129,61 @@ public final class FileHelper {
         } catch (final IOException e) {
             throw new RuntimeException("No access for reading \"" + plugin + "\"");
         }
+    }
+
+    /**
+     * Returns the name of the JAR file corresponding to the given plug-in ID from the current
+     * Eclipse platform.
+     * 
+     * @see http://www.eclipsezone.com/eclipse/forums/t49415.html
+     * @param pluginID
+     *            Plug-in ID for of the Jar file to be loaded
+     * @return the plug-in's Jar file
+     */
+    public static String getPluginJarFileName(final String pluginID) {
+        final Bundle plugin = Platform.getBundle(pluginID);
+        if (plugin == null) {
+            throw new RuntimeException("Plug-In with ID \"" + pluginID + "\" cannot be resolved");
+        }
+
+        final File file;
+        try {
+            file = FileLocator.getBundleFile(plugin);
+        } catch (final IOException e) {
+            throw new RuntimeException("No access for reading \"" + plugin + "\"");
+        }
+
+        if (!file.isDirectory()) {
+            return file.getName();
+        } else {
+            final StringBuffer fileName = new StringBuffer(200);
+
+            fileName.append(plugin.getSymbolicName());
+            fileName.append("_");
+            fileName.append(plugin.getVersion().getMajor());
+            fileName.append(".");
+            fileName.append(plugin.getVersion().getMinor());
+            fileName.append(".");
+            fileName.append(plugin.getVersion().getMicro());
+            fileName.append(".jar");
+
+            return fileName.toString();
+        }
+    }
+
+    /**
+     * Packages the class files within a given directory into a JAR file. The folder structure is
+     * maintained.
+     * 
+     * @param directory
+     *            the directory to be packaged.
+     * @return a JAR file handle
+     */
+    public static File packageToPluginJar(final File directory, final File targetJarFile) {
+        if (!directory.isDirectory()) {
+            throw new RuntimeException("Can only package directories to JARs!");
+        }
+
+        return null;
     }
 }

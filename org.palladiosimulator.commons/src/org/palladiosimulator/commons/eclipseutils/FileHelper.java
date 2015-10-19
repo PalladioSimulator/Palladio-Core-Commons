@@ -25,8 +25,8 @@ public final class FileHelper {
     }
 
     /**
-     * Gets a file object of the given path represented as String. Works even if the files comes
-     * from a plug-in packed in a jar file.
+     * Gets a file object of the given path represented as String. Works even if the file comes from
+     * a plug-in packaged in a jar file.
      * 
      * @see http://stackoverflow.com/questions/23825933/eclipse-plugin-development-how-to-get-
      *      resource-from-another-plugin

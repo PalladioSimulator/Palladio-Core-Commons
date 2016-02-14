@@ -102,7 +102,7 @@ public final class FileHelper {
         final org.eclipse.emf.common.util.URI[] uris = new org.eclipse.emf.common.util.URI[files.length];
 
         for (int i = 0; i < files.length; ++i) {
-            uris[i] = org.eclipse.emf.common.util.URI.createFileURI(files[i].getPath());
+            uris[i] = org.eclipse.emf.common.util.URI.createURI(path).appendSegment(files[i].getName());
         }
 
         return uris;

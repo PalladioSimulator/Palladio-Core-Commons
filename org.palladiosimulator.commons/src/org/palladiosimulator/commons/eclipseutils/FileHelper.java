@@ -52,6 +52,21 @@ public final class FileHelper {
     }
 
     /**
+     * Gets all files from a given folder.
+     * 
+     * @param folder
+     *            File object pointing to the folder to load.
+     * @return Array of files within the given folder.
+     */
+    public static File[] getFiles(final File folder) {
+        if (folder == null || !folder.exists() || !folder.isDirectory()) {
+            throw new IllegalArgumentException("The folder \"" + folder + "\" is not accessible!");
+        }
+
+        return folder.listFiles();
+    }
+
+    /**
      * Gets all files from a given folder, filtered by the given file extension.
      * 
      * @param folder
@@ -73,6 +88,17 @@ public final class FileHelper {
             }
 
         });
+    }
+
+    /**
+     * Gets all files from a given folder.
+     * 
+     * @param folder
+     *            String-representation pointing to the folder to load.
+     * @return Array of files within the given folder.
+     */
+    public static File[] getFiles(final String path) {
+        return getFiles(getFile(path));
     }
 
     /**

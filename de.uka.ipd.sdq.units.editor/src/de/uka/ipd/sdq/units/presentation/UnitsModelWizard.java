@@ -76,7 +76,7 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -92,8 +92,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = UnitsEditorPlugin.INSTANCE.getString(
-            "_UI_UnitsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    public static final String FORMATTED_FILE_EXTENSIONS = UnitsEditorPlugin.INSTANCE
+            .getString("_UI_UnitsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
      * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -156,8 +156,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         this.workbench = workbench;
         this.selection = selection;
         this.setWindowTitle(UnitsEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-        this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(UnitsEditorPlugin.INSTANCE
-                .getImage("full/wizban/NewUnits")));
+        this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
+                .getImageDescriptor(UnitsEditorPlugin.INSTANCE.getImage("full/wizban/NewUnits")));
     }
 
     /**
@@ -188,8 +188,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected EObject createInitialModel() {
-        final EClass eClass = (EClass) this.unitsPackage.getEClassifier(this.initialObjectCreationPage
-                .getInitialObjectName());
+        final EClass eClass = (EClass) this.unitsPackage
+                .getEClassifier(this.initialObjectCreationPage.getInitialObjectName());
         final EObject rootObject = this.unitsFactory.create(eClass);
         return rootObject;
     }
@@ -209,7 +209,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
             // Do the work within an operation.
             //
             final WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-
                 @Override
                 protected void execute(final IProgressMonitor progressMonitor) {
                     try {
@@ -256,7 +255,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
             if (activePart instanceof ISetSelectionTarget) {
                 final ISelection targetSelection = new StructuredSelection(modelFile);
                 this.getShell().getDisplay().asyncExec(new Runnable() {
-
                     @Override
                     public void run() {
                         ((ISetSelectionTarget) activePart).selectReveal(targetSelection);
@@ -268,7 +266,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
             //
             try {
                 page.openEditor(new FileEditorInput(modelFile),
-                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
+                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString())
+                                .getId());
             } catch (final PartInitException exception) {
                 MessageDialog.openError(workbenchWindow.getShell(),
                         UnitsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
@@ -311,8 +310,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
                     final String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
                             : "_WARN_FilenameExtension";
-                    this.setErrorMessage(UnitsEditorPlugin.INSTANCE.getString(key,
-                            new Object[] { FORMATTED_FILE_EXTENSIONS }));
+                    this.setErrorMessage(
+                            UnitsEditorPlugin.INSTANCE.getString(key, new Object[] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
                 return true;
@@ -447,7 +446,6 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
          * @generated
          */
         protected ModifyListener validator = new ModifyListener() {
-
             @Override
             public void modifyText(final ModifyEvent e) {
                 UnitsModelWizardInitialObjectCreationPage.this
@@ -533,7 +531,7 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
                 this.encodings = new ArrayList<String>();
                 for (final StringTokenizer stringTokenizer = new StringTokenizer(
                         UnitsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
-                        .hasMoreTokens();) {
+                                .hasMoreTokens();) {
                     this.encodings.add(stringTokenizer.nextToken());
                 }
             }
@@ -553,10 +551,11 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         //
         this.newFileCreationPage = new UnitsModelWizardNewFileCreationPage("Whatever", this.selection);
         this.newFileCreationPage.setTitle(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsModelWizard_label"));
-        this.newFileCreationPage.setDescription(UnitsEditorPlugin.INSTANCE
-                .getString("_UI_UnitsModelWizard_description"));
-        this.newFileCreationPage.setFileName(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameDefaultBase")
-                + "." + FILE_EXTENSIONS.get(0));
+        this.newFileCreationPage
+                .setDescription(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsModelWizard_description"));
+        this.newFileCreationPage
+                .setFileName(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditorFilenameDefaultBase") + "."
+                        + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -595,8 +594,8 @@ public class UnitsModelWizard extends Wizard implements INewWizard {
         }
         this.initialObjectCreationPage = new UnitsModelWizardInitialObjectCreationPage("Whatever2");
         this.initialObjectCreationPage.setTitle(UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsModelWizard_label"));
-        this.initialObjectCreationPage.setDescription(UnitsEditorPlugin.INSTANCE
-                .getString("_UI_Wizard_initial_object_description"));
+        this.initialObjectCreationPage
+                .setDescription(UnitsEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);
     }
 

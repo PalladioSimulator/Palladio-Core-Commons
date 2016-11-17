@@ -11,15 +11,15 @@ import de.uka.ipd.sdq.probfunction.NormalDistribution;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Normal Distribution</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Normal
+ * Distribution</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.NormalDistributionImpl#getMu <em>Mu</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.NormalDistributionImpl#getSigma <em>Sigma</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -30,7 +30,7 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #getMu() <em>Mu</em>}' attribute. <!-- begin-user-doc -->
@@ -89,7 +89,8 @@ public class NormalDistributionImpl extends ContinuousPDFImpl implements NormalD
     @Override
     public void setMu(final double newMu) {
         this.eDynamicSet(ProbfunctionPackage.NORMAL_DISTRIBUTION__MU,
-                ProbfunctionPackage.Literals.NORMAL_DISTRIBUTION__MU, newMu);
+                ProbfunctionPackage.Literals.NORMAL_DISTRIBUTION__MU,
+                newMu);
     }
 
     /**

@@ -11,8 +11,6 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Bool Sample</b></em>'. <!--
  * end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -23,7 +21,7 @@ public class BoolSampleImpl extends SampleImpl<Boolean> implements BoolSample {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

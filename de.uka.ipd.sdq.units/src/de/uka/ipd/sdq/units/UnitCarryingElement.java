@@ -9,15 +9,15 @@ package de.uka.ipd.sdq.units;
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Unit Carrying Element</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object ' <em><b>Unit Carrying
+ * Element</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit <em>Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitCarryingElement()
  * @model abstract="true"
@@ -31,7 +31,7 @@ public interface UnitCarryingElement extends CDOObject {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Unit</b></em>' containment reference. <!-- begin-user-doc
@@ -43,11 +43,34 @@ public interface UnitCarryingElement extends CDOObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Unit</em>' containment reference.
+     * @see #isSetUnit()
+     * @see #unsetUnit()
      * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitCarryingElement_Unit()
-     * @model containment="true" volatile="true" ordered="false" suppressedSetVisibility="true"
+     * @model containment="true" unsettable="true" ordered="false" suppressedSetVisibility="true"
      *        extendedMetaData="name='' namespace=''"
      * @generated
      */
     Unit getUnit();
+
+    /**
+     * Unsets the value of the '{@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit
+     * <em>Unit</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #isSetUnit()
+     * @see #getUnit()
+     * @generated
+     */
+    void unsetUnit();
+
+    /**
+     * Returns whether the value of the '{@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit
+     * <em>Unit</em>}' containment reference is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return whether the value of the '<em>Unit</em>' containment reference is set.
+     * @see #unsetUnit()
+     * @see #getUnit()
+     * @generated
+     */
+    boolean isSetUnit();
 
 } // UnitCarryingElement

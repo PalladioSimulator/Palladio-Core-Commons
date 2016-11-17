@@ -21,11 +21,11 @@ import de.uka.ipd.sdq.probfunction.Sample;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getProbability <em>Probability</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.SampleImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -36,7 +36,7 @@ public class SampleImpl<T> extends CDOObjectImpl implements Sample<T> {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #getProbability() <em>Probability</em>}' attribute. <!--

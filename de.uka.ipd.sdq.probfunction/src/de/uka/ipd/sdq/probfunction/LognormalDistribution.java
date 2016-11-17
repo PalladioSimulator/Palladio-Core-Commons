@@ -6,8 +6,8 @@
 package de.uka.ipd.sdq.probfunction;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Lognormal Distribution</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object ' <em><b>Lognormal
+ * Distribution</b></em>'. <!-- end-user-doc -->
  *
  * <!-- begin-model-doc --> Lognormal distribution with parameters scale parameter mu and shape
  * parameter sigma > 0. See {@link umontreal.iro.lecuyer.probdist.LognormalDist} for definition.
@@ -15,11 +15,11 @@ package de.uka.ipd.sdq.probfunction;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getMu <em>Mu</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.LognormalDistribution#getSigma <em>Sigma</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getLognormalDistribution()
  * @model
@@ -32,7 +32,7 @@ public interface LognormalDistribution extends ContinuousPDF {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Mu</b></em>' attribute. <!-- begin-user-doc -->

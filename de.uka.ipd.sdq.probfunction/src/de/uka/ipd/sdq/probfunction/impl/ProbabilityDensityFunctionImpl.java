@@ -12,22 +12,20 @@ import de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Probability Density Function</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Probability Density
+ * Function</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
 public abstract class ProbabilityDensityFunctionImpl extends ProbabilityFunctionImpl implements
-ProbabilityDensityFunction {
+        ProbabilityDensityFunction {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

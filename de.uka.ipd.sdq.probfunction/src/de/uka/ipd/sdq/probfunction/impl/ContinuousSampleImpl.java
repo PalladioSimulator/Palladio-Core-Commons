@@ -17,12 +17,12 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * '. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getValue <em>Value</em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getProbability <em>Probability
- * </em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl#getProbability
+ * <em>Probability</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -33,7 +33,7 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
@@ -102,7 +102,8 @@ public class ContinuousSampleImpl extends CDOObjectImpl implements ContinuousSam
     @Override
     public void setValue(final double newValue) {
         this.eDynamicSet(ProbfunctionPackage.CONTINUOUS_SAMPLE__VALUE,
-                ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__VALUE, newValue);
+                ProbfunctionPackage.Literals.CONTINUOUS_SAMPLE__VALUE,
+                newValue);
     }
 
     /**

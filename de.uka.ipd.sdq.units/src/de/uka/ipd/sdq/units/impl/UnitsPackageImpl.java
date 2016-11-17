@@ -37,7 +37,7 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -140,8 +140,9 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
         }
 
         // Obtain or create and register package
-        final UnitsPackageImpl theUnitsPackage = (UnitsPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UnitsPackageImpl ? EPackage.Registry.INSTANCE
-                .get(eNS_URI) : new UnitsPackageImpl());
+        final UnitsPackageImpl theUnitsPackage = (UnitsPackageImpl) (EPackage.Registry.INSTANCE
+                .get(eNS_URI) instanceof UnitsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
+                        : new UnitsPackageImpl());
 
         isInited = true;
 
@@ -416,45 +417,51 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
         this.initEClass(this.unitCarryingElementEClass, UnitCarryingElement.class, "UnitCarryingElement", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getUnitCarryingElement_Unit(), this.getUnit(), null, "unit", null, 0, 1,
-                UnitCarryingElement.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                UnitCarryingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.unitEClass, Unit.class, "Unit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.baseUnitEClass, BaseUnit.class, "BaseUnit", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getBaseUnit_Name(), this.getUnitNames(), "name", null, 1, 1, BaseUnit.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.unitRepositoryEClass, UnitRepository.class, "UnitRepository", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getUnitRepository_Units(), this.getBaseUnit(), null, "units", null, 0, -1,
-                UnitRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                UnitRepository.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.unitMultiplicationEClass, UnitMultiplication.class, "UnitMultiplication", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getUnitMultiplication_Units(), this.getUnit(), null, "units", null, 1, -1,
-                UnitMultiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                UnitMultiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.unitPowerEClass, UnitPower.class, "UnitPower", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getUnitPower_Unit(), this.getUnit(), null, "unit", null, 1, 1, UnitPower.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
         this.initEAttribute(this.getUnitPower_Exponent(), this.ecorePackage.getEInt(), "exponent", null, 1, 1,
-                UnitPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+                UnitPower.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
 
         this.initEClass(this.unitDivisionEClass, UnitDivision.class, "UnitDivision", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getUnitDivision_Dividend(), this.getUnit(), null, "dividend", null, 1, 1,
-                UnitDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                UnitDivision.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getUnitDivision_Divisor(), this.getUnit(), null, "divisor", null, 1, 1,
-                UnitDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                UnitDivision.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         this.initEEnum(this.unitNamesEEnum, UnitNames.class, "UnitNames");
@@ -479,8 +486,18 @@ public class UnitsPackageImpl extends EPackageImpl implements UnitsPackage {
      */
     protected void createExtendedMetaDataAnnotations() {
         final String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-        this.addAnnotation(this.getUnitCarryingElement_Unit(), source, new String[] { "name", "", "namespace", "" });
-        this.addAnnotation(this.getBaseUnit_Name(), source, new String[] { "name", "", "namespace", "" });
+        this.addAnnotation(this.getUnitCarryingElement_Unit(),
+                source,
+                new String[] {
+                        "name", "",
+                        "namespace", ""
+                });
+        this.addAnnotation(this.getBaseUnit_Name(),
+                source,
+                new String[] {
+                        "name", "",
+                        "namespace", ""
+                });
     }
 
 } // UnitsPackageImpl

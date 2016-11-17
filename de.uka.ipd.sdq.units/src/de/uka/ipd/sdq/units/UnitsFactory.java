@@ -22,7 +22,7 @@ public interface UnitsFactory extends EFactory {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
     /**
      * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

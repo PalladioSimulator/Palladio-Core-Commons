@@ -34,7 +34,7 @@ public class UnitPowerItemProvider extends UnitItemProvider {
      *
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
@@ -69,12 +69,20 @@ public class UnitPowerItemProvider extends UnitItemProvider {
      * @generated
      */
     protected void addExponentPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_UnitPower_exponent_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_UnitPower_exponent_feature", "_UI_UnitPower_type"),
-                        UnitsPackage.Literals.UNIT_POWER__EXPONENT, true, false, false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_UnitPower_exponent_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_UnitPower_exponent_feature",
+                                "_UI_UnitPower_type"),
+                        UnitsPackage.Literals.UNIT_POWER__EXPONENT,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -132,8 +140,8 @@ public class UnitPowerItemProvider extends UnitItemProvider {
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

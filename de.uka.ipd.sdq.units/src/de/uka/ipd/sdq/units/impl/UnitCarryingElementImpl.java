@@ -16,14 +16,14 @@ import de.uka.ipd.sdq.units.UnitCarryingElement;
 import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Unit Carrying Element</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Unit Carrying
+ * Element</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl#getUnit <em>Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -34,9 +34,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
-
-    private Unit unit;
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -69,54 +67,64 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
+     * 
+     * @generated
      */
     @Override
     public Unit getUnit() {
-        // TO DO: implement this method to return the 'Unit' containment reference
-        // Ensure that you remove @generated or mark it @generated NOT
-        // throw new UnsupportedOperationException();
-        return this.unit;
+        return (Unit) this.eDynamicGet(UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT,
+                UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
+     * 
+     * @generated
      */
-    public NotificationChain basicSetUnit(final Unit newUnit, final NotificationChain msgs) {
-        // TO DO: implement this method to set the contained 'Unit' containment reference
-        // -> this method is automatically invoked to keep the containment relationship in synch
-        // -> do not modify other features
-        // -> return msgs, after adding any generated Notification to it (if it is null, a
-        // NotificationChain object must be created first)
-        // Ensure that you remove @generated or mark it @generated NOT
-        // throw new UnsupportedOperationException();
-        this.unit = newUnit;
+    public NotificationChain basicSetUnit(final Unit newUnit, NotificationChain msgs) {
+        msgs = this.eDynamicInverseAdd((InternalEObject) newUnit, UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT, msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated not
+     * 
+     * @generated
      */
-    public Unit basicGetUnit() {
-        // TO DO: implement this method to return the 'Unit' reference
-        // -> do not perform proxy resolution
-        // Ensure that you remove @generated or mark it @generated NOT
-
-        return this.unit;
+    public void setUnit(final Unit newUnit) {
+        this.eDynamicSet(UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT, UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT,
+                newUnit);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
+     * 
+     * @generated
      */
-    public void setUnit(final Unit newUnit) {
-        this.unit = newUnit;
+    public NotificationChain basicUnsetUnit(final NotificationChain msgs) {
+        return this.eDynamicInverseRemove((InternalEObject) this.getUnit(), UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT,
+                msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public void unsetUnit() {
+        this.eDynamicUnset(UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT, UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public boolean isSetUnit() {
+        return this.eDynamicIsSet(UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT,
+                UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT);
     }
 
     /**
@@ -129,7 +137,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
             final NotificationChain msgs) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            return this.basicSetUnit(null, msgs);
+            return this.basicUnsetUnit(msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -172,7 +180,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
     public void eUnset(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            this.setUnit((Unit) null);
+            this.unsetUnit();
             return;
         }
         super.eUnset(featureID);
@@ -187,7 +195,7 @@ public abstract class UnitCarryingElementImpl extends CDOObjectImpl implements U
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case UnitsPackage.UNIT_CARRYING_ELEMENT__UNIT:
-            return this.getUnit() != null;
+            return this.isSetUnit();
         }
         return super.eIsSet(featureID);
     }

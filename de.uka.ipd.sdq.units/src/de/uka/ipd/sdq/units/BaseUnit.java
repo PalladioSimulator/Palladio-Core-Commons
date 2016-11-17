@@ -12,10 +12,10 @@ package de.uka.ipd.sdq.units;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.units.BaseUnit#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.units.UnitsPackage#getBaseUnit()
  * @model
@@ -28,7 +28,7 @@ public interface BaseUnit extends Unit {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute. The literals are from the

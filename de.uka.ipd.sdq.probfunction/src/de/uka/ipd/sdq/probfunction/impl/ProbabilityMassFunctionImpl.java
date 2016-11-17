@@ -19,28 +19,28 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 import de.uka.ipd.sdq.probfunction.Sample;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Probability Mass Function</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Probability Mass
+ * Function</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl#getSamples <em>Samples
- * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl#isOrderedDomain <em>
- * Ordered Domain</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl#getSamples
+ * <em>Samples</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl#isOrderedDomain
+ * <em>Ordered Domain</em>}</li>
+ * </ul>
  *
  * @generated
  */
-public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl implements ProbabilityMassFunction {
+public class ProbabilityMassFunctionImpl<T> extends ProbabilityFunctionImpl implements ProbabilityMassFunction<T> {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #isOrderedDomain() <em>Ordered Domain</em>}' attribute. <!--
@@ -78,8 +78,8 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
      */
     @SuppressWarnings("unchecked")
     @Override
-    public EList<Sample> getSamples() {
-        return (EList<Sample>) this.eDynamicGet(ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES,
+    public EList<Sample<T>> getSamples() {
+        return (EList<Sample<T>>) this.eDynamicGet(ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES,
                 ProbfunctionPackage.Literals.PROBABILITY_MASS_FUNCTION__SAMPLES, true, true);
     }
 
@@ -147,7 +147,7 @@ public class ProbabilityMassFunctionImpl extends ProbabilityFunctionImpl impleme
         switch (featureID) {
         case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__SAMPLES:
             this.getSamples().clear();
-            this.getSamples().addAll((Collection<? extends Sample>) newValue);
+            this.getSamples().addAll((Collection<? extends Sample<T>>) newValue);
             return;
         case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION__ORDERED_DOMAIN:
             this.setOrderedDomain((Boolean) newValue);

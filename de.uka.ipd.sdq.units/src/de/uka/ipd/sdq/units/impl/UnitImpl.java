@@ -15,8 +15,6 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Unit</b></em>'. <!--
  * end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -27,7 +25,7 @@ public abstract class UnitImpl extends CDOObjectImpl implements Unit {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

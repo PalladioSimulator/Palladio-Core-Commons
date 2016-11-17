@@ -21,22 +21,22 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 /**
  * This is the item provider adapter for a {@link de.uka.ipd.sdq.probfunction.LognormalDistribution}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public LognormalDistributionItemProvider(final AdapterFactory adapterFactory) {
@@ -46,7 +46,7 @@ public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -67,32 +67,48 @@ public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider
      * @generated
      */
     protected void addMuPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_LognormalDistribution_mu_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_LognormalDistribution_mu_feature",
-                        "_UI_LognormalDistribution_type"), ProbfunctionPackage.Literals.LOGNORMAL_DISTRIBUTION__MU,
-                        true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_LognormalDistribution_mu_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_LognormalDistribution_mu_feature",
+                                "_UI_LognormalDistribution_type"),
+                        ProbfunctionPackage.Literals.LOGNORMAL_DISTRIBUTION__MU,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
      * This adds a property descriptor for the Sigma feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addSigmaPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_LognormalDistribution_sigma_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_LognormalDistribution_sigma_feature",
-                        "_UI_LognormalDistribution_type"), ProbfunctionPackage.Literals.LOGNORMAL_DISTRIBUTION__SIGMA,
-                        true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_LognormalDistribution_sigma_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_LognormalDistribution_sigma_feature",
+                                "_UI_LognormalDistribution_type"),
+                        ProbfunctionPackage.Literals.LOGNORMAL_DISTRIBUTION__SIGMA,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
      * This returns LognormalDistribution.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -114,9 +130,9 @@ public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -135,7 +151,7 @@ public class LognormalDistributionItemProvider extends ContinuousPDFItemProvider
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

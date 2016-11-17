@@ -19,6 +19,6 @@ public interface StringSample extends Sample<String> {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
 } // StringSample

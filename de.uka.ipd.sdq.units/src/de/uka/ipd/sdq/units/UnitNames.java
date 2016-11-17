@@ -10,8 +10,8 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
- * <!-- begin-user-doc --> A representation of the literals of the enumeration '
- * <em><b>Unit Names</b></em>', and utility methods for working with them. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the literals of the enumeration ' <em><b>Unit
+ * Names</b></em>', and utility methods for working with them. <!-- end-user-doc -->
  * 
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitNames()
  * @model
@@ -43,9 +43,9 @@ public enum UnitNames implements Enumerator {
      * @generated
      * @ordered
      */
-    SECOND(2, "SECOND", "s"), /**
-     * The '<em><b>METER</b></em>' literal object. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+    SECOND(2, "SECOND", "s"),
+    /**
+     * The '<em><b>METER</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see #METER_VALUE
      * @generated
@@ -58,7 +58,7 @@ public enum UnitNames implements Enumerator {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The '<em><b>UNITLESS</b></em>' literal value. <!-- begin-user-doc -->
@@ -126,7 +126,12 @@ public enum UnitNames implements Enumerator {
      * 
      * @generated
      */
-    private static final UnitNames[] VALUES_ARRAY = new UnitNames[] { UNITLESS, BYTE, SECOND, METER, };
+    private static final UnitNames[] VALUES_ARRAY = new UnitNames[] {
+            UNITLESS,
+            BYTE,
+            SECOND,
+            METER,
+    };
 
     /**
      * A public read-only list of all the '<em><b>Unit Names</b></em>' enumerators. <!--
@@ -155,6 +160,9 @@ public enum UnitNames implements Enumerator {
      * Returns the '<em><b>Unit Names</b></em>' literal with the specified name. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
+     * @param name
+     *            the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static UnitNames getByName(final String name) {

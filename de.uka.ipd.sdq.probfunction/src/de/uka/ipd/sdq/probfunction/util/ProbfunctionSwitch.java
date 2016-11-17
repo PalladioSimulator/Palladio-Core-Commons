@@ -47,7 +47,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -70,7 +70,8 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
-     * @parameter ePackage the package in question.
+     * @param ePackage
+     *            the package in question.
      * @return whether this is a switch for the given package.
      * @generated
      */
@@ -140,7 +141,7 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
             return result;
         }
         case ProbfunctionPackage.PROBABILITY_MASS_FUNCTION: {
-            final ProbabilityMassFunction probabilityMassFunction = (ProbabilityMassFunction) theEObject;
+            final ProbabilityMassFunction<?> probabilityMassFunction = (ProbabilityMassFunction<?>) theEObject;
             T1 result = this.caseProbabilityMassFunction(probabilityMassFunction);
             if (result == null) {
                 result = this.caseProbabilityFunction(probabilityMassFunction);
@@ -348,14 +349,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Probability Density Function</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Probability Density
+     * Function</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Probability Density Function</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Probability Density
+     *         Function</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -364,14 +365,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Probability Function</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Probability
+     * Function</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Probability Function</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Probability
+     *         Function</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -395,18 +396,18 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Probability Mass Function</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Probability Mass
+     * Function</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Probability Mass Function</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Probability Mass
+     *         Function</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T1 caseProbabilityMassFunction(final ProbabilityMassFunction object) {
+    public <T> T1 caseProbabilityMassFunction(final ProbabilityMassFunction<T> object) {
         return null;
     }
 
@@ -471,14 +472,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Exponential Distribution</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Exponential
+     * Distribution</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Exponential Distribution</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Exponential
+     *         Distribution</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -487,14 +488,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Normal Distribution</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Normal
+     * Distribution</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Normal Distribution</em>
-     *         '.
+     * @return the result of interpreting the object as an instance of '<em>Normal
+     *         Distribution</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -503,14 +504,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Lognormal Distribution</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Lognormal
+     * Distribution</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Lognormal Distribution</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Lognormal
+     *         Distribution</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -519,14 +520,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Gamma Distribution</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Gamma
+     * Distribution</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Gamma Distribution</em>
-     *         '.
+     * @return the result of interpreting the object as an instance of '<em>Gamma
+     *         Distribution</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -595,14 +596,14 @@ public class ProbfunctionSwitch<T1> extends Switch<T1> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Unit Carrying Element</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Unit Carrying
+     * Element</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Unit Carrying Element</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Unit Carrying
+     *         Element</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */

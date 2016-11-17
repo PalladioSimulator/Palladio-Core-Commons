@@ -13,7 +13,7 @@ public class ProbFunctionCSVPrint extends ProbfunctionSwitch<String> {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * de.uka.ipd.sdq.probfunction.util.ProbfunctionSwitch#caseBoxedPDF(de.uka.ipd.sdq.probfunction
      * .BoxedPDF)
@@ -23,10 +23,10 @@ public class ProbFunctionCSVPrint extends ProbfunctionSwitch<String> {
      * visitor.
      */
     @Override
-    public String caseBoxedPDF(BoxedPDF object) {
+    public String caseBoxedPDF(final BoxedPDF object) {
         String sampleString = "";
-        for (ContinuousSample s : (List<ContinuousSample>) object.getSamples()) {
-            double value = s.getProbability();
+        for (final ContinuousSample s : (List<ContinuousSample>) object.getSamples()) {
+            final double value = s.getProbability();
             // double precision = 0.00001;
             // double precision = 0.00000001;
 
@@ -45,19 +45,19 @@ public class ProbFunctionCSVPrint extends ProbfunctionSwitch<String> {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * de.uka.ipd.sdq.probfunction.util.ProbfunctionSwitch#caseProbabilityMassFunction(de.uka.ipd
      * .sdq.probfunction.ProbabilityMassFunction)
      */
     @Override
-    public String caseProbabilityMassFunction(ProbabilityMassFunction object) {
+    public <T> String caseProbabilityMassFunction(final ProbabilityMassFunction<T> object) {
 
         String sampleString = "";
-        String leftSeparator = "";
-        String rightSeparator = ";";
+        final String leftSeparator = "";
+        final String rightSeparator = ";";
 
-        for (Sample s : (List<Sample>) object.getSamples()) {
+        for (final Sample<T> s : (List<Sample<T>>) object.getSamples()) {
             sampleString += leftSeparator + s.getValue() + rightSeparator + s.getProbability() + "\n";
         }
         return sampleString;

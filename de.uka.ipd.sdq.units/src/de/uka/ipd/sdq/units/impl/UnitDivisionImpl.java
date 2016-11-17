@@ -16,11 +16,11 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.units.impl.UnitDivisionImpl#getDividend <em>Dividend</em>}</li>
  * <li>{@link de.uka.ipd.sdq.units.impl.UnitDivisionImpl#getDivisor <em>Divisor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -31,7 +31,7 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -60,7 +60,8 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
     @Override
     public Unit getDividend() {
         return (Unit) this.eDynamicGet(UnitsPackage.UNIT_DIVISION__DIVIDEND,
-                UnitsPackage.Literals.UNIT_DIVISION__DIVIDEND, true, true);
+                UnitsPackage.Literals.UNIT_DIVISION__DIVIDEND,
+                true, true);
     }
 
     /**
@@ -92,7 +93,8 @@ public class UnitDivisionImpl extends UnitImpl implements UnitDivision {
     @Override
     public Unit getDivisor() {
         return (Unit) this.eDynamicGet(UnitsPackage.UNIT_DIVISION__DIVISOR,
-                UnitsPackage.Literals.UNIT_DIVISION__DIVISOR, true, true);
+                UnitsPackage.Literals.UNIT_DIVISION__DIVISOR,
+                true, true);
     }
 
     /**

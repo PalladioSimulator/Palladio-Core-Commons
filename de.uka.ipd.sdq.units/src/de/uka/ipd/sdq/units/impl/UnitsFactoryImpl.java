@@ -34,7 +34,7 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -179,8 +179,8 @@ public class UnitsFactoryImpl extends EFactoryImpl implements UnitsFactory {
     public UnitNames createUnitNamesFromString(final EDataType eDataType, final String initialValue) {
         final UnitNames result = UnitNames.get(initialValue);
         if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         }
         return result;
     }

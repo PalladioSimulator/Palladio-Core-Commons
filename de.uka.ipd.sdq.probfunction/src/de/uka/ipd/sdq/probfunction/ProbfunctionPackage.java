@@ -35,7 +35,7 @@ public interface ProbfunctionPackage extends EPackage {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -94,9 +94,9 @@ public interface ProbfunctionPackage extends EPackage {
     int PROBABILITY_FUNCTION_FEATURE_COUNT = UnitsPackage.UNIT_CARRYING_ELEMENT_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '
-     * {@link de.uka.ipd.sdq.probfunction.impl.ProbabilityDensityFunctionImpl
-     * <em>Probability Density Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityDensityFunctionImpl <em>Probability
+     * Density Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.ProbabilityDensityFunctionImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getProbabilityDensityFunction()
@@ -123,8 +123,8 @@ public interface ProbfunctionPackage extends EPackage {
     int PROBABILITY_DENSITY_FUNCTION_FEATURE_COUNT = PROBABILITY_FUNCTION_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.BoxedPDFImpl
-     * <em>Boxed PDF</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.BoxedPDFImpl <em>Boxed
+     * PDF</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.BoxedPDFImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getBoxedPDF()
@@ -197,9 +197,9 @@ public interface ProbfunctionPackage extends EPackage {
     int CONTINUOUS_SAMPLE_FEATURE_COUNT = 2;
 
     /**
-     * The meta object id for the '
-     * {@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl
-     * <em>Probability Mass Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl <em>Probability Mass
+     * Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getProbabilityMassFunction()
@@ -281,8 +281,8 @@ public interface ProbfunctionPackage extends EPackage {
     int SAMPLE_FEATURE_COUNT = 2;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl
-     * <em>Sample PDF</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl <em>Sample
+     * PDF</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.SamplePDFImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getSamplePDF()
@@ -392,9 +392,9 @@ public interface ProbfunctionPackage extends EPackage {
     int CONTINUOUS_PDF_FEATURE_COUNT = PROBABILITY_DENSITY_FUNCTION_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '
-     * {@link de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl
-     * <em>Exponential Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl <em>Exponential
+     * Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getExponentialDistribution()
@@ -476,8 +476,7 @@ public interface ProbfunctionPackage extends EPackage {
     int NORMAL_DISTRIBUTION_FEATURE_COUNT = CONTINUOUS_PDF_FEATURE_COUNT + 2;
 
     /**
-     * The meta object id for the '
-     * {@link de.uka.ipd.sdq.probfunction.impl.LognormalDistributionImpl
+     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.LognormalDistributionImpl
      * <em>Lognormal Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.LognormalDistributionImpl
@@ -569,8 +568,8 @@ public interface ProbfunctionPackage extends EPackage {
     int GAMMA_DISTRIBUTION_FEATURE_COUNT = CONTINUOUS_PDF_FEATURE_COUNT + 2;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.IntSampleImpl
-     * <em>Int Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.IntSampleImpl <em>Int
+     * Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.IntSampleImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getIntSample()
@@ -606,8 +605,8 @@ public interface ProbfunctionPackage extends EPackage {
     int INT_SAMPLE_FEATURE_COUNT = SAMPLE_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl
-     * <em>Bool Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl <em>Bool
+     * Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.probfunction.impl.BoolSampleImpl
      * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getBoolSample()
@@ -717,8 +716,8 @@ public interface ProbfunctionPackage extends EPackage {
     int STRING_SAMPLE_FEATURE_COUNT = SAMPLE_FEATURE_COUNT + 0;
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.BoxedPDF
-     * <em>Boxed PDF</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.BoxedPDF <em>Boxed
+     * PDF</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Boxed PDF</em>'.
      * @see de.uka.ipd.sdq.probfunction.BoxedPDF
@@ -739,9 +738,9 @@ public interface ProbfunctionPackage extends EPackage {
     EReference getBoxedPDF_Samples();
 
     /**
-     * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction
-     * <em>Probability Density Function</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction <em>Probability Density
+     * Function</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Probability Density Function</em>'.
      * @see de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction
@@ -782,8 +781,8 @@ public interface ProbfunctionPackage extends EPackage {
     EAttribute getContinuousSample_Value();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.probfunction.ContinuousSample#getProbability <em>Probability</em>}'.
+     * Returns the meta object for the attribute
+     * '{@link de.uka.ipd.sdq.probfunction.ContinuousSample#getProbability <em>Probability</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Probability</em>'.
@@ -794,8 +793,7 @@ public interface ProbfunctionPackage extends EPackage {
     EAttribute getContinuousSample_Probability();
 
     /**
-     * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction
      * <em>Probability Mass Function</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Probability Mass Function</em>'.
@@ -805,8 +803,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getProbabilityMassFunction();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#getSamples <em>Samples</em>}'.
+     * Returns the meta object for the containment reference list
+     * '{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#getSamples <em>Samples</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Samples</em>'.
@@ -817,9 +815,9 @@ public interface ProbfunctionPackage extends EPackage {
     EReference getProbabilityMassFunction_Samples();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain
-     * <em>Ordered Domain</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute
+     * '{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain <em>Ordered
+     * Domain</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Ordered Domain</em>'.
      * @see de.uka.ipd.sdq.probfunction.ProbabilityMassFunction#isOrderedDomain()
@@ -829,8 +827,8 @@ public interface ProbfunctionPackage extends EPackage {
     EAttribute getProbabilityMassFunction_OrderedDomain();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.Sample <em>Sample</em>}
-     * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.Sample
+     * <em>Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Sample</em>'.
      * @see de.uka.ipd.sdq.probfunction.Sample
@@ -839,9 +837,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getSample();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.probfunction.Sample#getValue <em>Value</em>}'. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.probfunction.Sample#getValue
+     * <em>Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Value</em>'.
      * @see de.uka.ipd.sdq.probfunction.Sample#getValue()
@@ -863,8 +860,8 @@ public interface ProbfunctionPackage extends EPackage {
     EAttribute getSample_Probability();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.SamplePDF
-     * <em>Sample PDF</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.SamplePDF <em>Sample
+     * PDF</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Sample PDF</em>'.
      * @see de.uka.ipd.sdq.probfunction.SamplePDF
@@ -885,9 +882,9 @@ public interface ProbfunctionPackage extends EPackage {
     EAttribute getSamplePDF_Distance();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.probfunction.SamplePDF#getValues <em>Values</em>}'. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * Returns the meta object for the containment reference list
+     * '{@link de.uka.ipd.sdq.probfunction.SamplePDF#getValues <em>Values</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Values</em>'.
      * @see de.uka.ipd.sdq.probfunction.SamplePDF#getValues()
@@ -907,9 +904,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getComplex();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.probfunction.Complex#getReal <em>Real</em>}'. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.probfunction.Complex#getReal
+     * <em>Real</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Real</em>'.
      * @see de.uka.ipd.sdq.probfunction.Complex#getReal()
@@ -941,9 +937,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getContinuousPDF();
 
     /**
-     * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.probfunction.ExponentialDistribution <em>Exponential Distribution</em>}
-     * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.ExponentialDistribution
+     * <em>Exponential Distribution</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Exponential Distribution</em>'.
      * @see de.uka.ipd.sdq.probfunction.ExponentialDistribution
@@ -1066,8 +1061,8 @@ public interface ProbfunctionPackage extends EPackage {
     EAttribute getGammaDistribution_Theta();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.IntSample
-     * <em>Int Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.IntSample <em>Int
+     * Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Int Sample</em>'.
      * @see de.uka.ipd.sdq.probfunction.IntSample
@@ -1076,8 +1071,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getIntSample();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.BoolSample
-     * <em>Bool Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.BoolSample <em>Bool
+     * Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Bool Sample</em>'.
      * @see de.uka.ipd.sdq.probfunction.BoolSample
@@ -1086,8 +1081,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getBoolSample();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.DoubleSample
-     * <em>Double Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.DoubleSample <em>Double
+     * Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Double Sample</em>'.
      * @see de.uka.ipd.sdq.probfunction.DoubleSample
@@ -1096,8 +1091,8 @@ public interface ProbfunctionPackage extends EPackage {
     EClass getDoubleSample();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.StringSample
-     * <em>String Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.probfunction.StringSample <em>String
+     * Sample</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>String Sample</em>'.
      * @see de.uka.ipd.sdq.probfunction.StringSample
@@ -1148,9 +1143,8 @@ public interface ProbfunctionPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.ProbabilityDensityFunctionImpl
-         * <em>Probability Density Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
-         * -->
+         * {@link de.uka.ipd.sdq.probfunction.impl.ProbabilityDensityFunctionImpl <em>Probability
+         * Density Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see de.uka.ipd.sdq.probfunction.impl.ProbabilityDensityFunctionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getProbabilityDensityFunction()
@@ -1159,9 +1153,9 @@ public interface ProbfunctionPackage extends EPackage {
         EClass PROBABILITY_DENSITY_FUNCTION = eINSTANCE.getProbabilityDensityFunction();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.ProbabilityFunctionImpl
-         * <em>Probability Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityFunctionImpl <em>Probability
+         * Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.ProbabilityFunctionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getProbabilityFunction()
@@ -1170,9 +1164,9 @@ public interface ProbfunctionPackage extends EPackage {
         EClass PROBABILITY_FUNCTION = eINSTANCE.getProbabilityFunction();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl <em>Continuous Sample</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl <em>Continuous
+         * Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.ContinuousSampleImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getContinuousSample()
@@ -1197,9 +1191,9 @@ public interface ProbfunctionPackage extends EPackage {
         EAttribute CONTINUOUS_SAMPLE__PROBABILITY = eINSTANCE.getContinuousSample_Probability();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl
-         * <em>Probability Mass Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl <em>Probability Mass
+         * Function</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.ProbabilityMassFunctionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getProbabilityMassFunction()
@@ -1302,8 +1296,8 @@ public interface ProbfunctionPackage extends EPackage {
         EAttribute COMPLEX__IMAGINARY = eINSTANCE.getComplex_Imaginary();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.ContinuousPDFImpl <em>Continuous PDF</em>}'
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.ContinuousPDFImpl <em>Continuous PDF</em>}'
          * class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.ContinuousPDFImpl
@@ -1313,9 +1307,9 @@ public interface ProbfunctionPackage extends EPackage {
         EClass CONTINUOUS_PDF = eINSTANCE.getContinuousPDF();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl
-         * <em>Exponential Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl <em>Exponential
+         * Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getExponentialDistribution()
@@ -1332,9 +1326,9 @@ public interface ProbfunctionPackage extends EPackage {
         EAttribute EXPONENTIAL_DISTRIBUTION__RATE = eINSTANCE.getExponentialDistribution_Rate();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.NormalDistributionImpl
-         * <em>Normal Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.NormalDistributionImpl <em>Normal
+         * Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.NormalDistributionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getNormalDistribution()
@@ -1359,9 +1353,9 @@ public interface ProbfunctionPackage extends EPackage {
         EAttribute NORMAL_DISTRIBUTION__SIGMA = eINSTANCE.getNormalDistribution_Sigma();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.LognormalDistributionImpl
-         * <em>Lognormal Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.LognormalDistributionImpl <em>Lognormal
+         * Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.LognormalDistributionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getLognormalDistribution()
@@ -1386,9 +1380,9 @@ public interface ProbfunctionPackage extends EPackage {
         EAttribute LOGNORMAL_DISTRIBUTION__SIGMA = eINSTANCE.getLognormalDistribution_Sigma();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl
-         * <em>Gamma Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl <em>Gamma
+         * Distribution</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.GammaDistributionImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getGammaDistribution()
@@ -1433,9 +1427,8 @@ public interface ProbfunctionPackage extends EPackage {
         EClass BOOL_SAMPLE = eINSTANCE.getBoolSample();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl <em>Double Sample</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl
+         * <em>Double Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.DoubleSampleImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getDoubleSample()
@@ -1444,9 +1437,8 @@ public interface ProbfunctionPackage extends EPackage {
         EClass DOUBLE_SAMPLE = eINSTANCE.getDoubleSample();
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.probfunction.impl.StringSampleImpl <em>String Sample</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.probfunction.impl.StringSampleImpl
+         * <em>String Sample</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.probfunction.impl.StringSampleImpl
          * @see de.uka.ipd.sdq.probfunction.impl.ProbfunctionPackageImpl#getStringSample()

@@ -24,7 +24,7 @@ public final class UnitsEditorPlugin extends EMFPlugin {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -46,7 +46,9 @@ public final class UnitsEditorPlugin extends EMFPlugin {
      * @generated
      */
     public UnitsEditorPlugin() {
-        super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, });
+        super(new ResourceLocator[] {
+                EcoreEditPlugin.INSTANCE,
+        });
     }
 
     /**

@@ -6,13 +6,11 @@
  */
 package de.uka.ipd.sdq.probfunction;
 
-import org.eclipse.emf.ecore.EObject;
-
 import de.uka.ipd.sdq.units.UnitCarryingElement;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Probability Function</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object ' <em><b>Probability
+ * Function</b></em>'. <!-- end-user-doc -->
  *
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getProbabilityFunction()
@@ -23,7 +21,8 @@ public interface ProbabilityFunction extends UnitCarryingElement {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 } // ProbabilityFunction

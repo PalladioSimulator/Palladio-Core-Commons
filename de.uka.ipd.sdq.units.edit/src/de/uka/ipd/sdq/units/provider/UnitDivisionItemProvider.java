@@ -29,7 +29,7 @@ public class UnitDivisionItemProvider extends UnitItemProvider {
      *
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
@@ -111,8 +111,8 @@ public class UnitDivisionItemProvider extends UnitItemProvider {
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -176,12 +176,11 @@ public class UnitDivisionItemProvider extends UnitItemProvider {
         final Object childFeature = feature;
         final Object childObject = child;
 
-        final boolean qualify = childFeature == UnitsPackage.Literals.UNIT_DIVISION__DIVIDEND
-                || childFeature == UnitsPackage.Literals.UNIT_DIVISION__DIVISOR;
+        final boolean qualify = childFeature == UnitsPackage.Literals.UNIT_DIVISION__DIVIDEND ||
+                childFeature == UnitsPackage.Literals.UNIT_DIVISION__DIVISOR;
 
         if (qualify) {
-            return this.getString(
-                    "_UI_CreateChild_text2",
+            return this.getString("_UI_CreateChild_text2",
                     new Object[] { this.getTypeText(childObject), this.getFeatureText(childFeature),
                             this.getTypeText(owner) });
         }

@@ -16,11 +16,11 @@ package de.uka.ipd.sdq.probfunction;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getAlpha <em>Alpha</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.GammaDistribution#getTheta <em>Theta</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getGammaDistribution()
  * @model
@@ -33,7 +33,7 @@ public interface GammaDistribution extends ContinuousPDF {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Alpha</b></em>' attribute. <!-- begin-user-doc -->

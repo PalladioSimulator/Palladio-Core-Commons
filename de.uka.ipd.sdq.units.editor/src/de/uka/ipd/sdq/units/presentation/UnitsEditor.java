@@ -130,14 +130,14 @@ import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
  * @generated
  */
 public class UnitsEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
-IMenuListener, IViewerProvider, IGotoMarker {
+        IMenuListener, IViewerProvider, IGotoMarker {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
@@ -283,7 +283,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     protected IPartListener partListener = new IPartListener() {
-
         @Override
         public void partActivated(final IWorkbenchPart p) {
             if (p instanceof ContentOutline) {
@@ -369,7 +368,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     protected EContentAdapter problemIndicationAdapter = new EContentAdapter() {
-
         @Override
         public void notifyChanged(final Notification notification) {
             if (notification.getNotifier() instanceof Resource) {
@@ -387,7 +385,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                     if (UnitsEditor.this.updateProblemIndication) {
                         UnitsEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
-
                             @Override
                             public void run() {
                                 UnitsEditor.this.updateProblemIndication();
@@ -413,7 +410,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             UnitsEditor.this.resourceToDiagnosticMap.remove(target);
             if (UnitsEditor.this.updateProblemIndication) {
                 UnitsEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
-
                     @Override
                     public void run() {
                         UnitsEditor.this.updateProblemIndication();
@@ -429,13 +425,11 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     protected IResourceChangeListener resourceChangeListener = new IResourceChangeListener() {
-
         @Override
         public void resourceChanged(final IResourceChangeEvent event) {
             final IResourceDelta delta = event.getDelta();
             try {
                 class ResourceDeltaVisitor implements IResourceDeltaVisitor {
-
                     protected ResourceSet resourceSet = UnitsEditor.this.editingDomain.getResourceSet();
                     protected Collection<Resource> changedResources = new ArrayList<Resource>();
                     protected Collection<Resource> removedResources = new ArrayList<Resource>();
@@ -443,8 +437,9 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public boolean visit(final IResourceDelta delta) {
                         if (delta.getResource().getType() == IResource.FILE) {
-                            if (delta.getKind() == IResourceDelta.REMOVED || delta.getKind() == IResourceDelta.CHANGED
-                                    && delta.getFlags() != IResourceDelta.MARKERS) {
+                            if (delta.getKind() == IResourceDelta.REMOVED ||
+                                    delta.getKind() == IResourceDelta.CHANGED
+                                            && delta.getFlags() != IResourceDelta.MARKERS) {
                                 final Resource resource = this.resourceSet.getResource(
                                         URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
                                 if (resource != null) {
@@ -475,7 +470,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                 if (!visitor.getRemovedResources().isEmpty()) {
                     UnitsEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
-
                         @Override
                         public void run() {
                             UnitsEditor.this.removedResources.addAll(visitor.getRemovedResources());
@@ -488,7 +482,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                 if (!visitor.getChangedResources().isEmpty()) {
                     UnitsEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
-
                         @Override
                         public void run() {
                             UnitsEditor.this.changedResources.addAll(visitor.getChangedResources());
@@ -582,8 +575,11 @@ IMenuListener, IViewerProvider, IGotoMarker {
      */
     protected void updateProblemIndication() {
         if (this.updateProblemIndication) {
-            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "de.uka.ipd.sdq.units.editor", 0,
-                    null, new Object[] { this.editingDomain.getResourceSet() });
+            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
+                    "de.uka.ipd.sdq.units.editor",
+                    0,
+                    null,
+                    new Object[] { this.editingDomain.getResourceSet() });
             for (final Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -630,7 +626,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     protected boolean handleDirtyConflict() {
-        return MessageDialog.openQuestion(this.getSite().getShell(), getString("_UI_FileConflict_label"),
+        return MessageDialog.openQuestion(this.getSite().getShell(),
+                getString("_UI_FileConflict_label"),
                 getString("_WARN_FileConflict"));
     }
 
@@ -668,11 +665,9 @@ IMenuListener, IViewerProvider, IGotoMarker {
         // the viewer with focus.
         //
         commandStack.addCommandStackListener(new CommandStackListener() {
-
             @Override
             public void commandStackChanged(final EventObject event) {
                 UnitsEditor.this.getContainer().getDisplay().asyncExec(new Runnable() {
-
                     @Override
                     public void run() {
                         UnitsEditor.this.firePropertyChange(IEditorPart.PROP_DIRTY);
@@ -726,7 +721,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
         //
         if (theSelection != null && !theSelection.isEmpty()) {
             final Runnable runnable = new Runnable() {
-
                 @Override
                 public void run() {
                     // Try to select the items in the current content viewer of the editor.
@@ -843,7 +837,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 // Create the listener on demand.
                 //
                 this.selectionChangedListener = new ISelectionChangedListener() {
-
                     // This just notifies those things that are affected by the section.
                     //
                     @Override
@@ -871,8 +864,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
             // Set the editors selection based on the current viewer's selection.
             //
-            this.setSelection(this.currentViewer == null ? StructuredSelection.EMPTY : this.currentViewer
-                    .getSelection());
+            this.setSelection(
+                    this.currentViewer == null ? StructuredSelection.EMPTY : this.currentViewer.getSelection());
         }
     }
 
@@ -903,8 +896,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
         final int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-        final Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(),
-                LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
+        final Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(),
+                FileTransfer.getInstance() };
         viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
         viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(this.editingDomain, viewer));
     }
@@ -916,7 +909,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     public void createModel() {
-        final URI resourceURI = EditUIUtil.getURI(this.getEditorInput());
+        final URI resourceURI = EditUIUtil.getURI(this.getEditorInput(),
+                this.editingDomain.getResourceSet().getURIConverter());
         Exception exception = null;
         Resource resource = null;
         try {
@@ -942,15 +936,22 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     public Diagnostic analyzeResourceProblems(final Resource resource, final Exception exception) {
-        if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
-            final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
-                    "de.uka.ipd.sdq.units.editor", 0, getString("_UI_CreateModelError_message", resource.getURI()),
+        final boolean hasErrors = !resource.getErrors().isEmpty();
+        if (hasErrors || !resource.getWarnings().isEmpty()) {
+            final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(
+                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
+                    "de.uka.ipd.sdq.units.editor",
+                    0,
+                    getString("_UI_CreateModelError_message", resource.getURI()),
                     new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
-            return new BasicDiagnostic(Diagnostic.ERROR, "de.uka.ipd.sdq.units.editor", 0, getString(
-                    "_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
+            return new BasicDiagnostic(Diagnostic.ERROR,
+                    "de.uka.ipd.sdq.units.editor",
+                    0,
+                    getString("_UI_CreateModelError_message", resource.getURI()),
+                    new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;
         }
@@ -975,7 +976,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), UnitsEditor.this) {
-
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         final Tree tree = new Tree(composite, SWT.MULTI);
@@ -996,8 +996,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                 this.selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(this.adapterFactory));
                 this.selectionViewer.setInput(this.editingDomain.getResourceSet());
-                this.selectionViewer.setSelection(new StructuredSelection(this.editingDomain.getResourceSet()
-                        .getResources().get(0)), true);
+                this.selectionViewer.setSelection(
+                        new StructuredSelection(this.editingDomain.getResourceSet().getResources().get(0)), true);
                 viewerPane.setTitle(this.editingDomain.getResourceSet());
 
                 new AdapterFactoryTreeEditor(this.selectionViewer.getTree(), this.adapterFactory);
@@ -1011,7 +1011,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), UnitsEditor.this) {
-
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         final Tree tree = new Tree(composite, SWT.MULTI);
@@ -1041,7 +1040,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), UnitsEditor.this) {
-
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new ListViewer(composite);
@@ -1067,7 +1065,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), UnitsEditor.this) {
-
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TreeViewer(composite);
@@ -1095,7 +1092,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), UnitsEditor.this) {
-
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TableViewer(composite);
@@ -1139,7 +1135,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), UnitsEditor.this) {
-
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TreeViewer(composite);
@@ -1180,7 +1175,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             }
 
             this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
-
                 @Override
                 public void run() {
                     UnitsEditor.this.setActivePage(0);
@@ -1192,7 +1186,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
         // area if there are more than one page
         //
         this.getContainer().addControlListener(new ControlAdapter() {
-
             boolean guard = false;
 
             @Override
@@ -1206,7 +1199,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
         });
 
         this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
-
             @Override
             public void run() {
                 UnitsEditor.this.updateProblemIndication();
@@ -1293,7 +1285,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // The content outline is just a tree.
             //
             class MyContentOutlinePage extends ContentOutlinePage {
-
                 @Override
                 public void createControl(final Composite parent) {
                     super.createControl(parent);
@@ -1302,10 +1293,10 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                     // Set up the tree viewer.
                     //
-                    UnitsEditor.this.contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(
-                            UnitsEditor.this.adapterFactory));
-                    UnitsEditor.this.contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(
-                            UnitsEditor.this.adapterFactory));
+                    UnitsEditor.this.contentOutlineViewer
+                            .setContentProvider(new AdapterFactoryContentProvider(UnitsEditor.this.adapterFactory));
+                    UnitsEditor.this.contentOutlineViewer
+                            .setLabelProvider(new AdapterFactoryLabelProvider(UnitsEditor.this.adapterFactory));
                     UnitsEditor.this.contentOutlineViewer.setInput(UnitsEditor.this.editingDomain.getResourceSet());
 
                     // Make sure our popups work.
@@ -1315,8 +1306,10 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     if (!UnitsEditor.this.editingDomain.getResourceSet().getResources().isEmpty()) {
                         // Select the root object in the view.
                         //
-                        UnitsEditor.this.contentOutlineViewer.setSelection(new StructuredSelection(
-                                UnitsEditor.this.editingDomain.getResourceSet().getResources().get(0)), true);
+                        UnitsEditor.this.contentOutlineViewer.setSelection(
+                                new StructuredSelection(
+                                        UnitsEditor.this.editingDomain.getResourceSet().getResources().get(0)),
+                                true);
                     }
                 }
 
@@ -1339,7 +1332,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // Listen to selection so that we can handle it is a special way.
             //
             this.contentOutlinePage.addSelectionChangedListener(new ISelectionChangedListener() {
-
                 // This ensures that we handle selections correctly.
                 //
                 @Override
@@ -1360,7 +1352,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
      */
     public IPropertySheetPage getPropertySheetPage() {
         final PropertySheetPage propertySheetPage = new ExtendedPropertySheetPage(this.editingDomain) {
-
             @Override
             public void setSelectionToViewer(final List<?> selection) {
                 UnitsEditor.this.setSelectionToViewer(selection);
@@ -1447,7 +1438,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
         // workbench.
         //
         final WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-
             // This is the method that gets invoked when the operation runs.
             //
             @Override
@@ -1539,8 +1529,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
         if (path != null) {
             final IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
             if (file != null) {
-                this.doSaveAs(URI.createPlatformResourceURI(file.getFullPath().toString(), true), new FileEditorInput(
-                        file));
+                this.doSaveAs(URI.createPlatformResourceURI(file.getFullPath().toString(), true),
+                        new FileEditorInput(file));
             }
         }
     }
@@ -1554,9 +1544,9 @@ IMenuListener, IViewerProvider, IGotoMarker {
         (this.editingDomain.getResourceSet().getResources().get(0)).setURI(uri);
         this.setInputWithNotify(editorInput);
         this.setPartName(editorInput.getName());
-        final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null ? this
-                .getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
-                this.doSave(progressMonitor);
+        final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null
+                ? this.getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
+        this.doSave(progressMonitor);
     }
 
     /**
@@ -1659,8 +1649,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
      */
     public void setStatusLineManager(final ISelection selection) {
         final IStatusLineManager statusLineManager = this.currentViewer != null
-                && this.currentViewer == this.contentOutlineViewer ? this.contentOutlineStatusLineManager : this
-                .getActionBars().getStatusLineManager();
+                && this.currentViewer == this.contentOutlineViewer
+                        ? this.contentOutlineStatusLineManager : this.getActionBars().getStatusLineManager();
 
         if (statusLineManager != null) {
             if (selection instanceof IStructuredSelection) {
@@ -1671,14 +1661,14 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     break;
                 }
                 case 1: {
-                    final String text = new AdapterFactoryItemDelegator(this.adapterFactory).getText(collection
-                            .iterator().next());
+                    final String text = new AdapterFactoryItemDelegator(this.adapterFactory)
+                            .getText(collection.iterator().next());
                     statusLineManager.setMessage(getString("_UI_SingleObjectSelected", text));
                     break;
                 }
                 default: {
-                    statusLineManager.setMessage(getString("_UI_MultiObjectSelected",
-                            Integer.toString(collection.size())));
+                    statusLineManager
+                            .setMessage(getString("_UI_MultiObjectSelected", Integer.toString(collection.size())));
                     break;
                 }
                 }

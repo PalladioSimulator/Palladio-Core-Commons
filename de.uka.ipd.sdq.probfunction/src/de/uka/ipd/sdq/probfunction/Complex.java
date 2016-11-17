@@ -13,11 +13,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.Complex#getReal <em>Real</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.Complex#getImaginary <em>Imaginary</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getComplex()
  * @model
@@ -31,7 +31,7 @@ public interface Complex extends CDOObject {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Real</b></em>' attribute. <!-- begin-user-doc -->

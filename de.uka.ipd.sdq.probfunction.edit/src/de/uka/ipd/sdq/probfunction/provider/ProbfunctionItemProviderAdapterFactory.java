@@ -32,18 +32,18 @@ import de.uka.ipd.sdq.probfunction.util.ProbfunctionAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ProbfunctionItemProviderAdapterFactory extends ProbfunctionAdapterFactory implements
-ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -64,14 +64,14 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ProbfunctionItemProviderAdapterFactory() {
@@ -85,7 +85,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.BoxedPDF}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BoxedPDFItemProvider boxedPDFItemProvider;
@@ -109,7 +109,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.ContinuousSample} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ContinuousSampleItemProvider continuousSampleItemProvider;
@@ -133,7 +133,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProbabilityMassFunctionItemProvider probabilityMassFunctionItemProvider;
@@ -141,7 +141,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -156,7 +156,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.Sample}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SampleItemProvider sampleItemProvider;
@@ -164,7 +164,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.Sample}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -180,7 +180,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.SamplePDF} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SamplePDFItemProvider samplePDFItemProvider;
@@ -203,7 +203,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.probfunction.Complex}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ComplexItemProvider complexItemProvider;
@@ -227,7 +227,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.ExponentialDistribution} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExponentialDistributionItemProvider exponentialDistributionItemProvider;
@@ -235,7 +235,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This creates an adapter for a {@link de.uka.ipd.sdq.probfunction.ExponentialDistribution}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -251,7 +251,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.NormalDistribution} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected NormalDistributionItemProvider normalDistributionItemProvider;
@@ -275,7 +275,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.LognormalDistribution} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LognormalDistributionItemProvider lognormalDistributionItemProvider;
@@ -299,7 +299,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.GammaDistribution} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected GammaDistributionItemProvider gammaDistributionItemProvider;
@@ -323,7 +323,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.IntSample} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IntSampleItemProvider intSampleItemProvider;
@@ -347,7 +347,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.BoolSample} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BoolSampleItemProvider boolSampleItemProvider;
@@ -371,7 +371,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.DoubleSample} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected DoubleSampleItemProvider doubleSampleItemProvider;
@@ -395,7 +395,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
      * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.probfunction.StringSample} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected StringSampleItemProvider stringSampleItemProvider;
@@ -418,7 +418,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -429,7 +429,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -439,7 +439,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -460,7 +460,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -477,7 +477,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -487,7 +487,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -513,7 +513,7 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

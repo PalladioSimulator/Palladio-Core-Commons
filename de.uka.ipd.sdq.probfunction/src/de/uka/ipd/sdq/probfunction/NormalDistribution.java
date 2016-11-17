@@ -11,11 +11,11 @@ package de.uka.ipd.sdq.probfunction;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getMu <em>Mu</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.NormalDistribution#getSigma <em>Sigma</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.probfunction.ProbfunctionPackage#getNormalDistribution()
  * @model
@@ -28,7 +28,7 @@ public interface NormalDistribution extends ContinuousPDF {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Mu</b></em>' attribute. <!-- begin-user-doc -->

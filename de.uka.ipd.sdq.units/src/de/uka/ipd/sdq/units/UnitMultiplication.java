@@ -14,10 +14,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.units.UnitMultiplication#getUnits <em>Units</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.units.UnitsPackage#getUnitMultiplication()
  * @model
@@ -30,7 +30,7 @@ public interface UnitMultiplication extends Unit {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Returns the value of the '<em><b>Units</b></em>' containment reference list. The list

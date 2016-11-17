@@ -41,7 +41,7 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -139,8 +139,8 @@ public class ProbfunctionFactoryImpl extends EFactoryImpl implements Probfunctio
      * @generated
      */
     @Override
-    public ProbabilityMassFunction createProbabilityMassFunction() {
-        final ProbabilityMassFunctionImpl probabilityMassFunction = new ProbabilityMassFunctionImpl();
+    public <T> ProbabilityMassFunction<T> createProbabilityMassFunction() {
+        final ProbabilityMassFunctionImpl<T> probabilityMassFunction = new ProbabilityMassFunctionImpl<T>();
         return probabilityMassFunction;
     }
 

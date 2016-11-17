@@ -51,7 +51,7 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -75,7 +75,6 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
      */
     protected IAction showPropertiesViewAction = new Action(
             UnitsEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
-
         @Override
         public void run() {
             try {
@@ -95,7 +94,6 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
      */
     protected IAction refreshViewerAction = new Action(
             UnitsEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
-
         @Override
         public boolean isEnabled() {
             return UnitsActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -181,7 +179,8 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
         super.contributeToMenu(menuManager);
 
         final IMenuManager submenuManager = new MenuManager(
-                UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditor_menu"), "de.uka.ipd.sdq.unitsMenuID");
+                UnitsEditorPlugin.INSTANCE.getString("_UI_UnitsEditor_menu"),
+                "de.uka.ipd.sdq.unitsMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));
@@ -190,7 +189,8 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
 
         // Prepare for CreateChild item addition or removal.
         //
-        this.createChildMenuManager = new MenuManager(UnitsEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+        this.createChildMenuManager = new MenuManager(
+                UnitsEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         submenuManager.insertBefore("additions", this.createChildMenuManager);
 
         // Prepare for CreateSibling item addition or removal.
@@ -202,7 +202,6 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
         // Force an update because Eclipse hides empty menus now.
         //
         submenuManager.addMenuListener(new IMenuListener() {
-
             @Override
             public void menuAboutToShow(final IMenuManager menuManager) {
                 menuManager.updateAll(true);
@@ -237,8 +236,8 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
             // Fake a selection changed event to update the menus.
             //
             if (this.selectionProvider.getSelection() != null) {
-                this.selectionChanged(new SelectionChangedEvent(this.selectionProvider, this.selectionProvider
-                        .getSelection()));
+                this.selectionChanged(
+                        new SelectionChangedEvent(this.selectionProvider, this.selectionProvider.getSelection()));
             }
         }
     }
@@ -299,7 +298,8 @@ public class UnitsActionBarContributor extends EditingDomainActionBarContributor
      * 
      * @generated
      */
-    protected Collection<IAction> generateCreateChildActions(final Collection<?> descriptors, final ISelection selection) {
+    protected Collection<IAction> generateCreateChildActions(final Collection<?> descriptors,
+            final ISelection selection) {
         final Collection<IAction> actions = new ArrayList<IAction>();
         if (descriptors != null) {
             for (final Object descriptor : descriptors) {

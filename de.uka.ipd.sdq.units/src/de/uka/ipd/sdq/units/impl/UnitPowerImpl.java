@@ -19,11 +19,11 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.units.impl.UnitPowerImpl#getUnit <em>Unit</em>}</li>
  * <li>{@link de.uka.ipd.sdq.units.impl.UnitPowerImpl#getExponent <em>Exponent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -34,7 +34,7 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
@@ -103,8 +103,8 @@ public class UnitPowerImpl extends UnitImpl implements UnitPower {
      */
     @Override
     public int getExponent() {
-        return (Integer) this.eDynamicGet(UnitsPackage.UNIT_POWER__EXPONENT,
-                UnitsPackage.Literals.UNIT_POWER__EXPONENT, true, true);
+        return (Integer) this.eDynamicGet(UnitsPackage.UNIT_POWER__EXPONENT, UnitsPackage.Literals.UNIT_POWER__EXPONENT,
+                true, true);
     }
 
     /**

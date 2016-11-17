@@ -45,7 +45,7 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -90,7 +90,6 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     protected ProbfunctionSwitch<Adapter> modelSwitch = new ProbfunctionSwitch<Adapter>() {
-
         @Override
         public Adapter caseBoxedPDF(final BoxedPDF object) {
             return ProbfunctionAdapterFactory.this.createBoxedPDFAdapter();
@@ -112,7 +111,7 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseProbabilityMassFunction(final ProbabilityMassFunction object) {
+        public <T> Adapter caseProbabilityMassFunction(final ProbabilityMassFunction<T> object) {
             return ProbfunctionAdapterFactory.this.createProbabilityMassFunctionAdapter();
         }
 
@@ -215,11 +214,11 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction
-     * <em>Probability Density Function</em>}'. <!-- begin-user-doc --> This default implementation
-     * returns null so that we can easily ignore cases; it's useful to ignore a case when
-     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class
+     * '{@link de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction <em>Probability Density
+     * Function</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
+     * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction
@@ -260,11 +259,11 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction
-     * <em>Probability Mass Function</em>}'. <!-- begin-user-doc --> This default implementation
-     * returns null so that we can easily ignore cases; it's useful to ignore a case when
-     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class
+     * '{@link de.uka.ipd.sdq.probfunction.ProbabilityMassFunction <em>Probability Mass
+     * Function</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
+     * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.probfunction.ProbabilityMassFunction
@@ -332,11 +331,11 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.probfunction.ExponentialDistribution <em>Exponential Distribution</em>}
-     * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
-     * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+     * Creates a new adapter for an object of class
+     * '{@link de.uka.ipd.sdq.probfunction.ExponentialDistribution <em>Exponential
+     * Distribution</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
+     * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.probfunction.ExponentialDistribution
@@ -362,8 +361,8 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.probfunction.LognormalDistribution <em>Lognormal Distribution</em>}'.
+     * Creates a new adapter for an object of class
+     * '{@link de.uka.ipd.sdq.probfunction.LognormalDistribution <em>Lognormal Distribution</em>}'.
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
@@ -420,10 +419,10 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.probfunction.DoubleSample <em>Double Sample</em>}'. <!-- begin-user-doc
-     * --> This default implementation returns null so that we can easily ignore cases; it's useful
-     * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.probfunction.DoubleSample
+     * <em>Double Sample</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
+     * the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.probfunction.DoubleSample
@@ -434,10 +433,10 @@ public class ProbfunctionAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.probfunction.StringSample <em>String Sample</em>}'. <!-- begin-user-doc
-     * --> This default implementation returns null so that we can easily ignore cases; it's useful
-     * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.probfunction.StringSample
+     * <em>String Sample</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
+     * the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.probfunction.StringSample

@@ -11,14 +11,15 @@ import de.uka.ipd.sdq.probfunction.ExponentialDistribution;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Exponential Distribution</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Exponential
+ * Distribution</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl#getRate <em>Rate</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link de.uka.ipd.sdq.probfunction.impl.ExponentialDistributionImpl#getRate
+ * <em>Rate</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -29,7 +30,7 @@ public class ExponentialDistributionImpl extends ContinuousPDFImpl implements Ex
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #getRate() <em>Rate</em>}' attribute. <!-- begin-user-doc

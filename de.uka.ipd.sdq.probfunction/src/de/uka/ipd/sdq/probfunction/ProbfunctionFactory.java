@@ -22,7 +22,7 @@ public interface ProbfunctionFactory extends EFactory {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
     /**
      * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -55,7 +55,7 @@ public interface ProbfunctionFactory extends EFactory {
      * @return a new object of class '<em>Probability Mass Function</em>'.
      * @generated
      */
-    ProbabilityMassFunction createProbabilityMassFunction();
+    <T> ProbabilityMassFunction<T> createProbabilityMassFunction();
 
     /**
      * Returns a new object of class '<em>Sample</em>'. <!-- begin-user-doc --> <!-- end-user-doc

@@ -34,7 +34,7 @@ public interface UnitsPackage extends EPackage {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -65,8 +65,8 @@ public interface UnitsPackage extends EPackage {
     UnitsPackage eINSTANCE = de.uka.ipd.sdq.units.impl.UnitsPackageImpl.init();
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl
-     * <em>Unit Carrying Element</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl <em>Unit
+     * Carrying Element</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl
      * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitCarryingElement()
@@ -112,8 +112,8 @@ public interface UnitsPackage extends EPackage {
     int UNIT_FEATURE_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.BaseUnitImpl <em>Base Unit</em>}
-     * ' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.BaseUnitImpl <em>Base
+     * Unit</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.units.impl.BaseUnitImpl
      * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getBaseUnit()
@@ -140,8 +140,8 @@ public interface UnitsPackage extends EPackage {
     int BASE_UNIT_FEATURE_COUNT = UNIT_FEATURE_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitRepositoryImpl
-     * <em>Unit Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitRepositoryImpl <em>Unit
+     * Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.units.impl.UnitRepositoryImpl
      * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitRepository()
@@ -168,8 +168,8 @@ public interface UnitsPackage extends EPackage {
     int UNIT_REPOSITORY_FEATURE_COUNT = 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitMultiplicationImpl
-     * <em>Unit Multiplication</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitMultiplicationImpl <em>Unit
+     * Multiplication</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.units.impl.UnitMultiplicationImpl
      * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitMultiplication()
@@ -196,8 +196,8 @@ public interface UnitsPackage extends EPackage {
     int UNIT_MULTIPLICATION_FEATURE_COUNT = UNIT_FEATURE_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitPowerImpl
-     * <em>Unit Power</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitPowerImpl <em>Unit
+     * Power</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.units.impl.UnitPowerImpl
      * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitPower()
@@ -233,8 +233,8 @@ public interface UnitsPackage extends EPackage {
     int UNIT_POWER_FEATURE_COUNT = UNIT_FEATURE_COUNT + 2;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitDivisionImpl
-     * <em>Unit Division</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link de.uka.ipd.sdq.units.impl.UnitDivisionImpl <em>Unit
+     * Division</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see de.uka.ipd.sdq.units.impl.UnitDivisionImpl
      * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitDivision()
@@ -280,8 +280,8 @@ public interface UnitsPackage extends EPackage {
     int UNIT_NAMES = 7;
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitCarryingElement
-     * <em>Unit Carrying Element</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitCarryingElement <em>Unit
+     * Carrying Element</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Unit Carrying Element</em>'.
      * @see de.uka.ipd.sdq.units.UnitCarryingElement
@@ -290,8 +290,8 @@ public interface UnitsPackage extends EPackage {
     EClass getUnitCarryingElement();
 
     /**
-     * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit <em>Unit</em>}'. <!-- begin-user-doc
+     * Returns the meta object for the containment reference
+     * '{@link de.uka.ipd.sdq.units.UnitCarryingElement#getUnit <em>Unit</em>}'. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Unit</em>'.
@@ -333,8 +333,8 @@ public interface UnitsPackage extends EPackage {
     EAttribute getBaseUnit_Name();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitRepository
-     * <em>Unit Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitRepository <em>Unit
+     * Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Unit Repository</em>'.
      * @see de.uka.ipd.sdq.units.UnitRepository
@@ -343,9 +343,9 @@ public interface UnitsPackage extends EPackage {
     EClass getUnitRepository();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.units.UnitRepository#getUnits <em>Units</em>}'. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the meta object for the containment reference list
+     * '{@link de.uka.ipd.sdq.units.UnitRepository#getUnits <em>Units</em>}'. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Units</em>'.
      * @see de.uka.ipd.sdq.units.UnitRepository#getUnits()
@@ -355,8 +355,8 @@ public interface UnitsPackage extends EPackage {
     EReference getUnitRepository_Units();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitMultiplication
-     * <em>Unit Multiplication</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitMultiplication <em>Unit
+     * Multiplication</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Unit Multiplication</em>'.
      * @see de.uka.ipd.sdq.units.UnitMultiplication
@@ -365,10 +365,10 @@ public interface UnitsPackage extends EPackage {
     EClass getUnitMultiplication();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.units.UnitMultiplication#getUnits <em>Units</em>}'. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
+     * Returns the meta object for the containment reference list
+     * '{@link de.uka.ipd.sdq.units.UnitMultiplication#getUnits <em>Units</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
      * @return the meta object for the containment reference list '<em>Units</em>'.
      * @see de.uka.ipd.sdq.units.UnitMultiplication#getUnits()
      * @see #getUnitMultiplication()
@@ -377,8 +377,8 @@ public interface UnitsPackage extends EPackage {
     EReference getUnitMultiplication_Units();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitPower <em>Unit Power</em>}
-     * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitPower <em>Unit
+     * Power</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Unit Power</em>'.
      * @see de.uka.ipd.sdq.units.UnitPower
@@ -387,8 +387,8 @@ public interface UnitsPackage extends EPackage {
     EClass getUnitPower();
 
     /**
-     * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.units.UnitPower#getUnit <em>Unit</em>}'. <!-- begin-user-doc --> <!--
+     * Returns the meta object for the containment reference
+     * '{@link de.uka.ipd.sdq.units.UnitPower#getUnit <em>Unit</em>}'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Unit</em>'.
@@ -410,8 +410,8 @@ public interface UnitsPackage extends EPackage {
     EAttribute getUnitPower_Exponent();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitDivision
-     * <em>Unit Division</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link de.uka.ipd.sdq.units.UnitDivision <em>Unit
+     * Division</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Unit Division</em>'.
      * @see de.uka.ipd.sdq.units.UnitDivision
@@ -420,10 +420,10 @@ public interface UnitsPackage extends EPackage {
     EClass getUnitDivision();
 
     /**
-     * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.units.UnitDivision#getDividend <em>Dividend</em>}'. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
+     * Returns the meta object for the containment reference
+     * '{@link de.uka.ipd.sdq.units.UnitDivision#getDividend <em>Dividend</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
      * @return the meta object for the containment reference '<em>Dividend</em>'.
      * @see de.uka.ipd.sdq.units.UnitDivision#getDividend()
      * @see #getUnitDivision()
@@ -432,8 +432,8 @@ public interface UnitsPackage extends EPackage {
     EReference getUnitDivision_Dividend();
 
     /**
-     * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.units.UnitDivision#getDivisor <em>Divisor</em>}'. <!-- begin-user-doc
+     * Returns the meta object for the containment reference
+     * '{@link de.uka.ipd.sdq.units.UnitDivision#getDivisor <em>Divisor</em>}'. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Divisor</em>'.
@@ -444,8 +444,8 @@ public interface UnitsPackage extends EPackage {
     EReference getUnitDivision_Divisor();
 
     /**
-     * Returns the meta object for enum '{@link de.uka.ipd.sdq.units.UnitNames <em>Unit Names</em>}
-     * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for enum '{@link de.uka.ipd.sdq.units.UnitNames <em>Unit
+     * Names</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for enum '<em>Unit Names</em>'.
      * @see de.uka.ipd.sdq.units.UnitNames
@@ -477,9 +477,8 @@ public interface UnitsPackage extends EPackage {
     interface Literals {
 
         /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl <em>Unit Carrying Element</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl
+         * <em>Unit Carrying Element</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.units.impl.UnitCarryingElementImpl
          * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitCarryingElement()
@@ -496,8 +495,8 @@ public interface UnitsPackage extends EPackage {
         EReference UNIT_CARRYING_ELEMENT__UNIT = eINSTANCE.getUnitCarryingElement_Unit();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.UnitImpl <em>Unit</em>}
-         * ' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.UnitImpl
+         * <em>Unit</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.units.impl.UnitImpl
          * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnit()
@@ -506,8 +505,8 @@ public interface UnitsPackage extends EPackage {
         EClass UNIT = eINSTANCE.getUnit();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.BaseUnitImpl
-         * <em>Base Unit</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.BaseUnitImpl <em>Base
+         * Unit</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.units.impl.BaseUnitImpl
          * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getBaseUnit()
@@ -560,8 +559,8 @@ public interface UnitsPackage extends EPackage {
         EReference UNIT_MULTIPLICATION__UNITS = eINSTANCE.getUnitMultiplication_Units();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.UnitPowerImpl
-         * <em>Unit Power</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.units.impl.UnitPowerImpl <em>Unit
+         * Power</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.units.impl.UnitPowerImpl
          * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitPower()
@@ -612,8 +611,8 @@ public interface UnitsPackage extends EPackage {
         EReference UNIT_DIVISION__DIVISOR = eINSTANCE.getUnitDivision_Divisor();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.units.UnitNames
-         * <em>Unit Names</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '{@link de.uka.ipd.sdq.units.UnitNames <em>Unit
+         * Names</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @see de.uka.ipd.sdq.units.UnitNames
          * @see de.uka.ipd.sdq.units.impl.UnitsPackageImpl#getUnitNames()

@@ -34,7 +34,7 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -79,7 +79,6 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     protected UnitsSwitch<Adapter> modelSwitch = new UnitsSwitch<Adapter>() {
-
         @Override
         public Adapter caseUnitCarryingElement(final UnitCarryingElement object) {
             return UnitsAdapterFactory.this.createUnitCarryingElementAdapter();
@@ -150,10 +149,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.Unit <em>Unit</em>}
-     * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
-     * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.Unit
+     * <em>Unit</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
+     * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.Unit
@@ -164,10 +163,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.BaseUnit
-     * <em>Base Unit</em>}'. <!-- begin-user-doc --> This default implementation returns null so
-     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
-     * the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.BaseUnit <em>Base
+     * Unit</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.BaseUnit
@@ -206,10 +205,10 @@ public class UnitsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitPower
-     * <em>Unit Power</em>}'. <!-- begin-user-doc --> This default implementation returns null so
-     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
-     * the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.units.UnitPower <em>Unit
+     * Power</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.units.UnitPower

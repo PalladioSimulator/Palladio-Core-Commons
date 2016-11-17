@@ -37,7 +37,7 @@ public class UnitCarryingElementItemProvider extends ItemProviderAdapter impleme
      *
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
@@ -72,12 +72,20 @@ public class UnitCarryingElementItemProvider extends ItemProviderAdapter impleme
      * @generated
      */
     protected void addUnitPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_UnitCarryingElement_unit_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_UnitCarryingElement_unit_feature",
-                        "_UI_UnitCarryingElement_type"), UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT, true,
-                false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_UnitCarryingElement_unit_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_UnitCarryingElement_unit_feature",
+                                "_UI_UnitCarryingElement_type"),
+                        UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -93,8 +101,8 @@ public class UnitCarryingElementItemProvider extends ItemProviderAdapter impleme
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

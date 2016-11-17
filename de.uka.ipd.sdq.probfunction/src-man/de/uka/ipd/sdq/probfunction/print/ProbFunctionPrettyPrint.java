@@ -31,15 +31,15 @@ public class ProbFunctionPrettyPrint extends ProbfunctionSwitch<String> {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * de.uka.ipd.sdq.probfunction.util.ProbfunctionSwitch#caseBoxedPDF(de.uka.ipd.sdq.probfunction
      * .BoxedPDF)
      */
     @Override
-    public String caseBoxedPDF(BoxedPDF object) {
+    public String caseBoxedPDF(final BoxedPDF object) {
         resultBuilder.append("DoublePDF[");
-        for (ContinuousSample s : object.getSamples()) {
+        for (final ContinuousSample s : object.getSamples()) {
             // double value = s.getProbability();
             // double precision = 0.00001;
             // Why needed as Decimal format rounds internally???
@@ -56,16 +56,16 @@ public class ProbFunctionPrettyPrint extends ProbfunctionSwitch<String> {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * de.uka.ipd.sdq.probfunction.util.ProbfunctionSwitch#caseProbabilityMassFunction(de.uka.ipd
      * .sdq.probfunction.ProbabilityMassFunction)
      */
     @Override
-    public String caseProbabilityMassFunction(ProbabilityMassFunction object) {
-        Sample<?> sample = object.getSamples().get(0);
+    public <T> String caseProbabilityMassFunction(final ProbabilityMassFunction<T> object) {
+        final Sample<T> sample = object.getSamples().get(0);
 
-        String pmfType = detectType(sample);
+        final String pmfType = detectType(sample);
         String leftSeparator = "";
         String rightSeparator = ";";
 
@@ -76,7 +76,7 @@ public class ProbFunctionPrettyPrint extends ProbfunctionSwitch<String> {
 
         resultBuilder.append(pmfType);
         resultBuilder.append("[");
-        for (Sample<?> s : object.getSamples()) {
+        for (final Sample<T> s : object.getSamples()) {
             resultBuilder.append(String.format("(%s%s%s %s)", leftSeparator, s.getValue(), rightSeparator,
                     df.format(s.getProbability())));
         }
@@ -85,40 +85,44 @@ public class ProbFunctionPrettyPrint extends ProbfunctionSwitch<String> {
     }
 
     @Override
-    public String caseExponentialDistribution(ExponentialDistribution object) {
+    public String caseExponentialDistribution(final ExponentialDistribution object) {
         resultBuilder.append(String.format("Exp(%s)", df.format(object.getRate())));
         return resultBuilder.toString();
     }
 
     @Override
-    public String caseGammaDistribution(GammaDistribution object) {
+    public String caseGammaDistribution(final GammaDistribution object) {
         resultBuilder
-                .append(String.format("Gamma(%s, %s)", df.format(object.getAlpha()), df.format(object.getTheta())));
+        .append(String.format("Gamma(%s, %s)", df.format(object.getAlpha()), df.format(object.getTheta())));
         return resultBuilder.toString();
     }
 
     @Override
-    public String caseLognormalDistribution(LognormalDistribution object) {
+    public String caseLognormalDistribution(final LognormalDistribution object) {
         resultBuilder.append(String.format("Lognorm(%s, %s)", df.format(object.getMu()), df.format(object.getSigma())));
         return resultBuilder.toString();
     }
 
     @Override
-    public String caseNormalDistribution(NormalDistribution object) {
+    public String caseNormalDistribution(final NormalDistribution object) {
         resultBuilder.append(String.format("Norm(%s, %s)", df.format(object.getMu()), df.format(object.getSigma())));
         return resultBuilder.toString();
     }
 
-    private String detectType(Sample<?> object) {
-        if (object.getValue() instanceof Integer)
+    private String detectType(final Sample<?> object) {
+        if (object.getValue() instanceof Integer) {
             return "IntPMF";
-        if (object.getValue() instanceof Double)
+        }
+        if (object.getValue() instanceof Double) {
             return "DoublePMF";
+        }
         if (object.getValue().equals("true") || object.getValue().equals("false")
-                || object.getValue() instanceof Boolean)
+                || object.getValue() instanceof Boolean) {
             return "BoolPMF";
-        if (object.getValue() instanceof String)
+        }
+        if (object.getValue() instanceof String) {
             return "EnumPMF";
+        }
         throw new UnsupportedOperationException("Unknown PMF found!");
     }
 }

@@ -19,6 +19,6 @@ public interface IntSample extends Sample<Integer> {
      * 
      * @generated
      */
-    String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
 } // IntSample

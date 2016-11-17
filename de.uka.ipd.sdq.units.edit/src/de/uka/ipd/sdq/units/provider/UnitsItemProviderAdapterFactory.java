@@ -43,7 +43,7 @@ public class UnitsItemProviderAdapterFactory extends UnitsAdapterFactory impleme
      *
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--

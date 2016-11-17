@@ -16,11 +16,11 @@ import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.ComplexImpl#getReal <em>Real</em>}</li>
  * <li>{@link de.uka.ipd.sdq.probfunction.impl.ComplexImpl#getImaginary <em>Imaginary</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -31,7 +31,7 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * The default value of the '{@link #getReal() <em>Real</em>}' attribute. <!-- begin-user-doc
@@ -89,7 +89,8 @@ public class ComplexImpl extends CDOObjectImpl implements Complex {
     @Override
     public double getReal() {
         return (Double) this.eDynamicGet(ProbfunctionPackage.COMPLEX__REAL, ProbfunctionPackage.Literals.COMPLEX__REAL,
-                true, true);
+                true,
+                true);
     }
 
     /**

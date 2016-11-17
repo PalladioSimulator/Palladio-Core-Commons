@@ -47,7 +47,7 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2007-2009, SDQ, IPD, U Karlsruhe";
+    public static final String copyright = "Copyright 2007-2017, Palladiosimulator.org";
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -698,6 +698,8 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
                 .getEPackage(UnitsPackage.eNS_URI);
 
         // Create type parameters
+        final ETypeParameter probabilityMassFunctionEClass_T = this
+                .addETypeParameter(this.probabilityMassFunctionEClass, "T");
         final ETypeParameter sampleEClass_T = this.addETypeParameter(this.sampleEClass, "T");
 
         // Set bounds for type parameters
@@ -734,38 +736,47 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
         this.initEClass(this.boxedPDFEClass, BoxedPDF.class, "BoxedPDF", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getBoxedPDF_Samples(), this.getContinuousSample(), null, "samples", null, 0, -1,
-                BoxedPDF.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                BoxedPDF.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.probabilityDensityFunctionEClass, ProbabilityDensityFunction.class,
-                "ProbabilityDensityFunction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                "ProbabilityDensityFunction",
+                IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.probabilityFunctionEClass, ProbabilityFunction.class, "ProbabilityFunction", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.continuousSampleEClass, ContinuousSample.class, "ContinuousSample", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getContinuousSample_Value(), this.ecorePackage.getEDouble(), "value", null, 0, 1,
                 ContinuousSample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getContinuousSample_Probability(), this.ecorePackage.getEDouble(), "probability",
-                null, 0, 1, ContinuousSample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getContinuousSample_Probability(), this.ecorePackage.getEDouble(), "probability", null,
+                0, 1,
+                ContinuousSample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.probabilityMassFunctionEClass, ProbabilityMassFunction.class, "ProbabilityMassFunction",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getProbabilityMassFunction_Samples(), this.getSample(), null, "samples", null, 1, -1,
+        g1 = this.createEGenericType(this.getSample());
+        g2 = this.createEGenericType(probabilityMassFunctionEClass_T);
+        g1.getETypeArguments().add(g2);
+        this.initEReference(this.getProbabilityMassFunction_Samples(), g1, null, "samples", null, 1, -1,
                 ProbabilityMassFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getProbabilityMassFunction_OrderedDomain(), this.ecorePackage.getEBoolean(),
-                "orderedDomain", null, 1, 1, ProbabilityMassFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                "orderedDomain", null, 1,
+                1, ProbabilityMassFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.sampleEClass, Sample.class, "Sample", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getSample_Probability(), this.ecorePackage.getEDouble(), "probability", null, 0, 1,
-                Sample.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+                Sample.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
         g1 = this.createEGenericType(sampleEClass_T);
         this.initEAttribute(this.getSample_Value(), g1, "value", null, 0, 1, Sample.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -773,19 +784,22 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
         this.initEClass(this.samplePDFEClass, SamplePDF.class, "SamplePDF", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getSamplePDF_Distance(), this.ecorePackage.getEDouble(), "distance", null, 0, 1,
-                SamplePDF.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getSamplePDF_Values(), this.getComplex(), null, "values", null, 0, -1,
-                SamplePDF.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                SamplePDF.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
+        this.initEReference(this.getSamplePDF_Values(), this.getComplex(), null, "values", null, 0, -1, SamplePDF.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.complexEClass, Complex.class, "Complex", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getComplex_Real(), this.ecorePackage.getEDouble(), "real", null, 1, 1, Complex.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getComplex_Imaginary(), this.ecorePackage.getEDouble(), "imaginary", null, 1, 1,
-                Complex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+                Complex.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
 
         this.initEClass(this.continuousPDFEClass, ContinuousPDF.class, "ContinuousPDF", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -799,14 +813,15 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
         this.initEClass(this.normalDistributionEClass, NormalDistribution.class, "NormalDistribution", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getNormalDistribution_Mu(), this.ecorePackage.getEDouble(), "mu", null, 1, 1,
-                NormalDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                NormalDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getNormalDistribution_Sigma(), this.ecorePackage.getEDouble(), "sigma", null, 1, 1,
-                NormalDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                NormalDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.lognormalDistributionEClass, LognormalDistribution.class, "LognormalDistribution",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getLognormalDistribution_Mu(), this.ecorePackage.getEDouble(), "mu", null, 1, 1,
                 LognormalDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -815,7 +830,8 @@ public class ProbfunctionPackageImpl extends EPackageImpl implements Probfunctio
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.gammaDistributionEClass, GammaDistribution.class, "GammaDistribution", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getGammaDistribution_Alpha(), this.ecorePackage.getEDouble(), "alpha", null, 1, 1,
                 GammaDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);

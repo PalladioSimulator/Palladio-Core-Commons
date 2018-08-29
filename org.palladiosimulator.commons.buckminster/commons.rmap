@@ -4,10 +4,9 @@
 
 	<rm:property key="resolveFrom" value="release"/>
 
+	<rm:locator pattern="^de\.uka\.ipd\.sdq\.sensorframework.*" searchPathRef="sensorframework" failOnError="true"/>
 	<rm:locator pattern="^de\.uka\.ipd\.sdq\.[dialogs|errorhandling|identifier|probfuction|statistics|stoex|units].*" searchPathRef="commons" failOnError="true" />
 	<rm:locator pattern="^org\.palladiosimulator\.commons.*" searchPathRef="commons" failOnError="true" />
-	<rm:locator pattern="^de\.uka\.ipd\.sdq\.sensorframework.*" searchPathRef="sensorframework" failOnError="true"/>
-	<rm:locator pattern="^de\.uka\.ipd\.sdq\.sensorframework$" searchPathRef="sensorframework" failOnError="true"/>
 
 	<rm:redirect pattern=".*" href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/ThirdPartyWrapper/trunk/org.palladiosimulator.thirdpartywrapper.buckminster/thirdpartywrapper.rmap" />
 

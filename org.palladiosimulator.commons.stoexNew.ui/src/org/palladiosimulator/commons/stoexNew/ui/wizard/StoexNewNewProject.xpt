@@ -1,0 +1,14 @@
+«IMPORT org::palladiosimulator::commons::stoexNew::ui::wizard»
+
+«DEFINE main FOR StoexNewProjectInfo»
+«EXPAND model FOR this»
+«ENDDEFINE»
+
+«DEFINE model FOR StoexNewProjectInfo»
+«FILE "src/model/Model.stoexnew"-»
+/*
+ * This is an example model
+ */
+Hello Xtext!
+«ENDFILE»
+«ENDDEFINE»

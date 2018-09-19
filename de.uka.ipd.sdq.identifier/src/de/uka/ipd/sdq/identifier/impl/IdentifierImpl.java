@@ -17,10 +17,10 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uka.ipd.sdq.identifier.impl.IdentifierImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -9,10 +9,12 @@ package de.uka.ipd.sdq.identifier.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.identifier.IdentifierFactory;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
+import de.uka.ipd.sdq.identifier.util.IdentifierValidator;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
@@ -51,7 +53,7 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-     * 
+     *
      * <p>This method is used to initialize {@link IdentifierPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -64,7 +66,8 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
         if (isInited) return (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 
         // Obtain or create and register package
-        IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IdentifierPackageImpl());
+        Object registeredIdentifierPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        IdentifierPackageImpl theIdentifierPackage = registeredIdentifierPackage instanceof IdentifierPackageImpl ? (IdentifierPackageImpl)registeredIdentifierPackage : new IdentifierPackageImpl();
 
         isInited = true;
 
@@ -74,10 +77,18 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
         // Initialize created meta-data
         theIdentifierPackage.initializePackageContents();
 
+        // Register package validator
+        EValidator.Registry.INSTANCE.put
+            (theIdentifierPackage,
+             new EValidator.Descriptor() {
+                 public EValidator getEValidator() {
+                     return IdentifierValidator.INSTANCE;
+                 }
+             });
+
         // Mark meta-data to indicate it can't be changed
         theIdentifierPackage.freeze();
 
-  
         // Update the registry and return the package
         EPackage.Registry.INSTANCE.put(IdentifierPackage.eNS_URI, theIdentifierPackage);
         return theIdentifierPackage;
@@ -167,8 +178,6 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
         createEcoreAnnotations();
         // http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
         createPivotAnnotations();
-        // http:///org/eclipse/emf/ecore/util/ExtendedMetaData
-        createExtendedMetaDataAnnotations();
     }
 
     /**
@@ -178,14 +187,20 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
      * @generated
      */
     protected void createEcoreAnnotations() {
-        String source = "http://www.eclipse.org/emf/2002/Ecore";	
+        String source = "http://www.eclipse.org/emf/2002/Ecore";
         addAnnotation
-          (this, 
-           source, 
+          (this,
+           source,
            new String[] {
-             "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-             "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-             "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+               "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+               "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+               "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+           });
+        addAnnotation
+          (identifierEClass,
+           source,
+           new String[] {
+               "constraints", "identifierIsUnique"
            });
     }
 
@@ -196,28 +211,12 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
      * @generated
      */
     protected void createPivotAnnotations() {
-        String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+        String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
         addAnnotation
-          (identifierEClass, 
-           source, 
+          (identifierEClass,
+           source,
            new String[] {
-             null, "Identifier.allInstances()->isUnique(p: Identifier | p.id)"
-           });
-    }
-
-    /**
-     * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    protected void createExtendedMetaDataAnnotations() {
-        String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
-        addAnnotation
-          (getIdentifier_Id(), 
-           source, 
-           new String[] {
-             "name", "id",
-             "namespace", "http://sdq.ipd.uka.de/Identifier/1.0"
+               "identifierIsUnique", "Identifier.allInstances()->isUnique(p: Identifier | p.id)"
            });
     }
 

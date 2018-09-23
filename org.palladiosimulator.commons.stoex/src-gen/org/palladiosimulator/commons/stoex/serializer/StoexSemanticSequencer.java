@@ -539,8 +539,8 @@ public class StoexSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (
 	 *         (samples+=numeric_int_sample+ unit=Unit?) | 
 	 *         (samples+=numeric_real_sample+ unit=Unit?) | 
-	 *         (orderedDomain?=ORDERED_DEF? samples+=stringsample+) | 
-	 *         (orderedDomain?=ORDERED_DEF? samples+=boolsample+)
+	 *         (orderedDomain?='ordered'? samples+=stringsample+) | 
+	 *         (orderedDomain?='ordered'? samples+=boolsample+)
 	 *     )
 	 */
 	protected void sequence_ProbabilityMassFunction(ISerializationContext context, ProbabilityMassFunction semanticObject) {

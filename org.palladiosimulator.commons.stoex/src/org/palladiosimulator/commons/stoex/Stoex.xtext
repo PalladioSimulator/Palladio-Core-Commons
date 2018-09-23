@@ -23,7 +23,7 @@ expression returns Expression:
 
 // ifelseExpr -> boolAndExpr ('?' boolAndExpr ':' boolAndExpr)?
 ifelseExpr returns IfElse:
-	boolAndExpr ({IfElseExpression.conditionExpression=current} CONDDELIMITER ifExpression=boolAndExpr ELSEDELIMITER elseExpression = boolAndExpr )?
+	boolAndExpr ({IfElseExpression.conditionExpression=current} '?' ifExpression=boolAndExpr ':' elseExpression = boolAndExpr )?
 ;
 
 //BooleanExpression -> boolOrExpr (BooleanOperations boolOrExpr)*
@@ -89,7 +89,7 @@ enum ProductOperations:
 
 // powExpr -> unaryExpr (POW unaryExpr)?
 powExpr returns Power: 
-	unaryExpr ({PowerExpression.base=current} POW exponent = unaryExpr)? 		
+	unaryExpr ({PowerExpression.base=current} '^' exponent = unaryExpr)? 		
 ;
 
 // unaryExpr -> NegativeExpression | NotExpression | atom
@@ -99,7 +99,7 @@ unaryExpr returns Unary :
 
 // NotExpression -> NOT unaryExpr
 NotExpression:
-	NOT inner=unaryExpr
+	'NOT' inner=unaryExpr
 ;
 
 // NegativeExpression -> '-' unaryExpr
@@ -119,9 +119,9 @@ atom returns Atom:
 	ProbabilityFunctionLiteral
 ;
 
-// DoubleLiteral -> DOUBLE (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+// DoubleLiteral -> DOUBLE ('[' Unit ']')?
 DoubleLiteral:
-	value=DOUBLE (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+	value=DOUBLE ('[' unit=Unit ']')?
 ;
 
 // ProbabilityFunctionLiteral -> definition
@@ -129,17 +129,17 @@ ProbabilityFunctionLiteral:
 	function_ProbabilityFunctionLiteral=definition
 ;
 
-// Parenthesis -> LPAREN ifelseExpr RPAREN
+// Parenthesis -> '(' ifelseExpr ')'
 Parenthesis:
-	LPAREN innerExpression = ifelseExpr RPAREN
+	'(' innerExpression = ifelseExpr ')'
 ;          
 
-// FunctionLiteral -> ID LPAREN (boolAndExpr (COLON boolAndExpr)* )? RPAREN
+// FunctionLiteral -> ID '(' (boolAndExpr (',' boolAndExpr)* )? ')'
 FunctionLiteral:
-	id=ID LPAREN (
+	id=ID '(' (
 		parameters_FunctionLiteral+=boolAndExpr 
-		(COLON parameters_FunctionLiteral+=boolAndExpr)*
-	)? RPAREN
+		(',' parameters_FunctionLiteral+=boolAndExpr)*
+	)? ')'
 ;
 
 // Variable -> AbstractNamedReference
@@ -157,9 +157,9 @@ VariableReference:
 	referenceName=ID
 ;
 
-// NamespaceReference -> ID DOT AbstractNamedReference
+// NamespaceReference -> ID '.' AbstractNamedReference
 NamespaceReference:
-	referenceName=ID DOT innerReference_NamespaceReference=AbstractNamedReference
+	referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference
 ;
 
 // BoolLiteral -> BOOLEAN_KEYWORDS
@@ -172,9 +172,9 @@ StringLiteral:
 	value=STRING
 ;
 
-// IntLiteral -> DECINT (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+// IntLiteral -> DECINT ('[' Unit ']')?
 IntLiteral:
-	value=DECINT (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+	value=DECINT ('[' unit=Unit ']')?
 ;
 
 //#############################
@@ -195,10 +195,10 @@ unitMulti returns Unit:
 	unitPow ({UnitMultiplication.units+=current}'*' units+=Unit)*
 ;
 
-// unitPow -> (BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN) (POW SIGNED_INT)*
+// unitPow -> (BaseUnit | '(' (unitMulti | unitDiv) ')') (POW SIGNED_INT)*
 unitPow returns Unit:
 	(BaseUnit |
-	LPAREN (unitMulti | unitDiv) RPAREN) ({UnitPower.unit=current}POW exponent=SIGNED_INT)*
+	'(' (unitMulti | unitDiv) ')') ({UnitPower.unit=current} '^' exponent=SIGNED_INT)*
 ;
 
 // BaseUnit -> UnitNames
@@ -225,63 +225,63 @@ ProbabilityDensityFunction:
 	BoxedPDF
 ;
 
-// BoxedPDF -> DOUBLEPDF SQUARE_PAREN_L (real_pdf_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+// BoxedPDF -> DOUBLEPDF '[' (real_pdf_sample)+ ']' ('[' Unit ']')?
 BoxedPDF:
-	DOUBLEPDF SQUARE_PAREN_L (samples+=real_pdf_sample)+ SQUARE_PAREN_R 
-		(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+	'DoublePDF' '[' (samples+=real_pdf_sample)+ ']' 
+		('[' unit=Unit ']')?
 ;
 
-// ProbabilityMassFunction -> INTPMF SQUARE_PAREN_L (numeric_int_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-// ProbabilityMassFunction -> DOUBLEPMF SQUARE_PAREN_L (numeric_real_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-// ProbabilityMassFunction -> ENUMPMF (LPAREN ORDERED_DEF RPAREN)? SQUARE_PAREN_L (stringsample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-// ProbabilityMassFunction -> BOOLPMF (LPAREN ORDERED_DEF RPAREN)? SQUARE_PAREN_L (boolsample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+// ProbabilityMassFunction -> INTPMF '[' (numeric_int_sample)+ ']' ('[' Unit ']')?
+// ProbabilityMassFunction -> DOUBLEPMF '[' (numeric_real_sample)+ ']' ('[' Unit ']')?
+// ProbabilityMassFunction -> ENUMPMF ('(' 'ordered' ')')? '[' (stringsample)+ ']' ('[' Unit ']')?
+// ProbabilityMassFunction -> BOOLPMF ('(' 'ordered' ')')? '[' (boolsample)+ ']' ('[' Unit ']')?
 ProbabilityMassFunction:
 	// Numeric PMF
-	INTPMF SQUARE_PAREN_L (samples+=numeric_int_sample)+ SQUARE_PAREN_R 
-		(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
-	| DOUBLEPMF SQUARE_PAREN_L (samples+=numeric_real_sample)+ SQUARE_PAREN_R 
-		(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+	'IntPMF' '[' (samples+=numeric_int_sample)+ ']' 
+		('[' unit=Unit ']')?
+	| 'DoublePMF' '[' (samples+=numeric_real_sample)+ ']' 
+		('[' unit=Unit ']')?
 	| // Enum PMF
-		ENUMPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
-			SQUARE_PAREN_L (samples+=stringsample)+ SQUARE_PAREN_R
+		'EnumPMF' ('(' orderedDomain?='ordered' ')')?
+			'[' (samples+=stringsample)+ ']'
 	| // Bool PMF
-		BOOLPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
-			SQUARE_PAREN_L (samples+=boolsample)+ SQUARE_PAREN_R
+		'BoolPMF' ('(' orderedDomain?='ordered' ')')?
+			'[' (samples+=boolsample)+ ']'
 ;	 		
 
-// numeric_int_sample -> LPAREN SIGNED_INT SEMI DOUBLE RPAREN
+// numeric_int_sample -> '(' SIGNED_INT ';' DOUBLE ')'
 numeric_int_sample returns IntSample: 
-	LPAREN value=SIGNED_INT //INT
-	SEMI probability=DOUBLE  //DOUBLE
-	RPAREN
+	'(' value=SIGNED_INT //INT
+	';' probability=DOUBLE  //DOUBLE
+	')'
 ;
 		
-// numeric_real_sample -> LPAREN SIGNED_NUMBER SEMI DOUBLE RPAREN
+// numeric_real_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'
 numeric_real_sample returns DoubleSample: 
-	LPAREN value=SIGNED_NUMBER//DOUBLE
-	SEMI probability=DOUBLE //DOUBLE
-	RPAREN
+	'(' value=SIGNED_NUMBER//DOUBLE
+	';' probability=DOUBLE //DOUBLE
+	')'
 ;
 	
-// real_pdf_sample -> LPAREN SIGNED_NUMBER SEMI DOUBLE RPAREN		
+// real_pdf_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'		
 real_pdf_sample returns ContinuousSample: 
-	LPAREN value=SIGNED_NUMBER//DOUBLE
-	SEMI probability=DOUBLE //DOUBLE
-	RPAREN
+	'(' value=SIGNED_NUMBER//DOUBLE
+	';' probability=DOUBLE //DOUBLE
+	')'
 ;
 
-// stringsample -> LPAREN STRING SEMI DOUBLE RPAREN		
+// stringsample -> '(' STRING ';' DOUBLE ')'		
 stringsample returns StringSample: 
-	LPAREN value=STRING
-	SEMI probability=DOUBLE //DOUBLE
-	RPAREN
+	'(' value=STRING
+	';' probability=DOUBLE //DOUBLE
+	')'
 ;
 
-// boolsample -> LPAREN BOOLEAN_KEYWORDS SEMI DOUBLE RPAREN
+// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
 boolsample returns BoolSample: 
-	LPAREN value=BOOLEAN_KEYWORDS
-	SEMI probability=DOUBLE //DOUBLE 
-	RPAREN
+	'(' value=BOOLEAN_KEYWORDS
+	';' probability=DOUBLE //DOUBLE 
+	')'
 ;
 
 //#############################
@@ -297,8 +297,12 @@ SIGNED_INT returns ecore::EInt:
 	('-')? DECINT
 ;
 
+
+//#############################
+//terminals
+
 terminal DOUBLE returns ecore::EDouble:
-	DECINT ((DOT DIGIT*) | ((DOT DIGIT*)? ('E'|'e') ('-'|'+')? DECINT))
+	DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT))
 ;
 terminal DECINT returns ecore::EInt: 
 	'0' | ('1'..'9') DIGIT*
@@ -308,39 +312,7 @@ terminal BOOLEAN_KEYWORDS  returns ecore::EBoolean:
 	'false' | 'true'
 ;
 
-
-//#############################
-// terminals:
-terminal NOT: 'NOT';
-
-terminal INTPMF: 'IntPMF';
-terminal DOUBLEPMF: 'DoublePMF';
-terminal ENUMPMF: 'EnumPMF';
-terminal DOUBLEPDF: 'DoublePDF';
-terminal BOOLPMF: 'BoolPMF';
-
-terminal POW   : '^' ;
-
-terminal LPAREN: '(' ;
-terminal RPAREN: ')' ;
-
-terminal SEMI: ';' ;
-terminal COLON:	',';
-
-terminal ORDERED_DEF: 'ordered';
-
-terminal SQUARE_PAREN_L : '[' ;
-terminal SQUARE_PAREN_R : ']' ;
-
 terminal fragment DIGIT : '0'..'9' ;
-
-terminal DOT: '.';
-
-
-terminal CONDDELIMITER: '?';
-terminal ELSEDELIMITER: ':';
-
-
 
 //#############################
 //adapted from xtexts terminals:

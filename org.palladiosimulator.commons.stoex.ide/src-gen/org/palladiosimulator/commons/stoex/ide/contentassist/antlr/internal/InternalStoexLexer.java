@@ -12,47 +12,47 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalStoexLexer extends Lexer {
-    public static final int RULE_BOOLEAN_KEYWORDS=23;
-    public static final int RULE_LPAREN=10;
-    public static final int RULE_SQUARE_PAREN_L=8;
-    public static final int RULE_ENUMPMF=17;
-    public static final int RULE_SQUARE_PAREN_R=9;
-    public static final int RULE_ID=22;
-    public static final int RULE_DIGIT=26;
-    public static final int RULE_COLON=12;
-    public static final int RULE_BOOLPMF=18;
-    public static final int RULE_ORDERED_DEF=25;
-    public static final int RULE_ML_COMMENT=27;
-    public static final int RULE_ELSEDELIMITER=5;
-    public static final int RULE_INTPMF=15;
-    public static final int RULE_STRING=24;
-    public static final int RULE_NOT=7;
-    public static final int RULE_DOUBLEPMF=16;
-    public static final int RULE_POW=6;
-    public static final int RULE_SL_COMMENT=28;
+    public static final int RULE_BOOLEAN_KEYWORDS=7;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__14=14;
+    public static final int RULE_ID=6;
+    public static final int RULE_DIGIT=9;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=10;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int RULE_STRING=8;
+    public static final int RULE_SL_COMMENT=11;
     public static final int T__37=37;
-    public static final int RULE_DOUBLE=20;
+    public static final int RULE_DOUBLE=4;
     public static final int T__38=38;
-    public static final int RULE_CONDDELIMITER=4;
     public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int RULE_DECINT=21;
-    public static final int RULE_DOT=13;
+    public static final int RULE_DECINT=5;
     public static final int EOF=-1;
+    public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_WS=29;
-    public static final int RULE_DOUBLEPDF=14;
-    public static final int RULE_ANY_OTHER=30;
-    public static final int RULE_RPAREN=11;
+    public static final int RULE_WS=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
     public static final int T__45=45;
-    public static final int RULE_SEMI=19;
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -73,16 +73,363 @@ public class InternalStoexLexer extends Lexer {
     }
     public String getGrammarFileName() { return "InternalStoex.g"; }
 
-    // $ANTLR start "T__31"
-    public final void mT__31() throws RecognitionException {
+    // $ANTLR start "T__14"
+    public final void mT__14() throws RecognitionException {
         try {
-            int _type = T__31;
+            int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // InternalStoex.g:11:7: ( 'AND' )
             // InternalStoex.g:11:9: 'AND'
             {
             match("AND"); 
 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__14"
+
+    // $ANTLR start "T__15"
+    public final void mT__15() throws RecognitionException {
+        try {
+            int _type = T__15;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:12:7: ( 'OR' )
+            // InternalStoex.g:12:9: 'OR'
+            {
+            match("OR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__15"
+
+    // $ANTLR start "T__16"
+    public final void mT__16() throws RecognitionException {
+        try {
+            int _type = T__16;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:13:7: ( 'XOR' )
+            // InternalStoex.g:13:9: 'XOR'
+            {
+            match("XOR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__16"
+
+    // $ANTLR start "T__17"
+    public final void mT__17() throws RecognitionException {
+        try {
+            int _type = T__17;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:14:7: ( '>' )
+            // InternalStoex.g:14:9: '>'
+            {
+            match('>'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__17"
+
+    // $ANTLR start "T__18"
+    public final void mT__18() throws RecognitionException {
+        try {
+            int _type = T__18;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:15:7: ( '<' )
+            // InternalStoex.g:15:9: '<'
+            {
+            match('<'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__18"
+
+    // $ANTLR start "T__19"
+    public final void mT__19() throws RecognitionException {
+        try {
+            int _type = T__19;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:16:7: ( '==' )
+            // InternalStoex.g:16:9: '=='
+            {
+            match("=="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__19"
+
+    // $ANTLR start "T__20"
+    public final void mT__20() throws RecognitionException {
+        try {
+            int _type = T__20;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:17:7: ( '<>' )
+            // InternalStoex.g:17:9: '<>'
+            {
+            match("<>"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__20"
+
+    // $ANTLR start "T__21"
+    public final void mT__21() throws RecognitionException {
+        try {
+            int _type = T__21;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:18:7: ( '>=' )
+            // InternalStoex.g:18:9: '>='
+            {
+            match(">="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__21"
+
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
+        try {
+            int _type = T__22;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:19:7: ( '<=' )
+            // InternalStoex.g:19:9: '<='
+            {
+            match("<="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__22"
+
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
+        try {
+            int _type = T__23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:20:7: ( '+' )
+            // InternalStoex.g:20:9: '+'
+            {
+            match('+'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__23"
+
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
+        try {
+            int _type = T__24;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:21:7: ( '-' )
+            // InternalStoex.g:21:9: '-'
+            {
+            match('-'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__24"
+
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
+        try {
+            int _type = T__25;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:22:7: ( '*' )
+            // InternalStoex.g:22:9: '*'
+            {
+            match('*'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:23:7: ( '/' )
+            // InternalStoex.g:23:9: '/'
+            {
+            match('/'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:24:7: ( '%' )
+            // InternalStoex.g:24:9: '%'
+            {
+            match('%'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:25:7: ( '_' )
+            // InternalStoex.g:25:9: '_'
+            {
+            match('_'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:26:7: ( 'unitless' )
+            // InternalStoex.g:26:9: 'unitless'
+            {
+            match("unitless"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__29"
+
+    // $ANTLR start "T__30"
+    public final void mT__30() throws RecognitionException {
+        try {
+            int _type = T__30;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:27:7: ( 'B' )
+            // InternalStoex.g:27:9: 'B'
+            {
+            match('B'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__30"
+
+    // $ANTLR start "T__31"
+    public final void mT__31() throws RecognitionException {
+        try {
+            int _type = T__31;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalStoex.g:28:7: ( 's' )
+            // InternalStoex.g:28:9: 's'
+            {
+            match('s'); 
 
             }
 
@@ -99,11 +446,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:12:7: ( 'OR' )
-            // InternalStoex.g:12:9: 'OR'
+            // InternalStoex.g:29:7: ( 'm' )
+            // InternalStoex.g:29:9: 'm'
             {
-            match("OR"); 
-
+            match('m'); 
 
             }
 
@@ -120,11 +466,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:13:7: ( 'XOR' )
-            // InternalStoex.g:13:9: 'XOR'
+            // InternalStoex.g:30:7: ( '?' )
+            // InternalStoex.g:30:9: '?'
             {
-            match("XOR"); 
-
+            match('?'); 
 
             }
 
@@ -141,10 +486,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:14:7: ( '>' )
-            // InternalStoex.g:14:9: '>'
+            // InternalStoex.g:31:7: ( ':' )
+            // InternalStoex.g:31:9: ':'
             {
-            match('>'); 
+            match(':'); 
 
             }
 
@@ -161,10 +506,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:15:7: ( '<' )
-            // InternalStoex.g:15:9: '<'
+            // InternalStoex.g:32:7: ( '^' )
+            // InternalStoex.g:32:9: '^'
             {
-            match('<'); 
+            match('^'); 
 
             }
 
@@ -181,10 +526,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:16:7: ( '==' )
-            // InternalStoex.g:16:9: '=='
+            // InternalStoex.g:33:7: ( 'NOT' )
+            // InternalStoex.g:33:9: 'NOT'
             {
-            match("=="); 
+            match("NOT"); 
 
 
             }
@@ -202,11 +547,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:17:7: ( '<>' )
-            // InternalStoex.g:17:9: '<>'
+            // InternalStoex.g:34:7: ( '[' )
+            // InternalStoex.g:34:9: '['
             {
-            match("<>"); 
-
+            match('['); 
 
             }
 
@@ -223,11 +567,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:18:7: ( '>=' )
-            // InternalStoex.g:18:9: '>='
+            // InternalStoex.g:35:7: ( ']' )
+            // InternalStoex.g:35:9: ']'
             {
-            match(">="); 
-
+            match(']'); 
 
             }
 
@@ -244,11 +587,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:19:7: ( '<=' )
-            // InternalStoex.g:19:9: '<='
+            // InternalStoex.g:36:7: ( '(' )
+            // InternalStoex.g:36:9: '('
             {
-            match("<="); 
-
+            match('('); 
 
             }
 
@@ -265,10 +607,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:20:7: ( '+' )
-            // InternalStoex.g:20:9: '+'
+            // InternalStoex.g:37:7: ( ')' )
+            // InternalStoex.g:37:9: ')'
             {
-            match('+'); 
+            match(')'); 
 
             }
 
@@ -285,10 +627,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:21:7: ( '-' )
-            // InternalStoex.g:21:9: '-'
+            // InternalStoex.g:38:7: ( ',' )
+            // InternalStoex.g:38:9: ','
             {
-            match('-'); 
+            match(','); 
 
             }
 
@@ -305,10 +647,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:22:7: ( '*' )
-            // InternalStoex.g:22:9: '*'
+            // InternalStoex.g:39:7: ( '.' )
+            // InternalStoex.g:39:9: '.'
             {
-            match('*'); 
+            match('.'); 
 
             }
 
@@ -325,10 +667,11 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:23:7: ( '/' )
-            // InternalStoex.g:23:9: '/'
+            // InternalStoex.g:40:7: ( 'DoublePDF' )
+            // InternalStoex.g:40:9: 'DoublePDF'
             {
-            match('/'); 
+            match("DoublePDF"); 
+
 
             }
 
@@ -345,10 +688,11 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:24:7: ( '%' )
-            // InternalStoex.g:24:9: '%'
+            // InternalStoex.g:41:7: ( 'IntPMF' )
+            // InternalStoex.g:41:9: 'IntPMF'
             {
-            match('%'); 
+            match("IntPMF"); 
+
 
             }
 
@@ -365,10 +709,11 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:25:7: ( '_' )
-            // InternalStoex.g:25:9: '_'
+            // InternalStoex.g:42:7: ( 'DoublePMF' )
+            // InternalStoex.g:42:9: 'DoublePMF'
             {
-            match('_'); 
+            match("DoublePMF"); 
+
 
             }
 
@@ -385,10 +730,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:26:7: ( 'unitless' )
-            // InternalStoex.g:26:9: 'unitless'
+            // InternalStoex.g:43:7: ( 'EnumPMF' )
+            // InternalStoex.g:43:9: 'EnumPMF'
             {
-            match("unitless"); 
+            match("EnumPMF"); 
 
 
             }
@@ -406,10 +751,11 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:27:7: ( 'B' )
-            // InternalStoex.g:27:9: 'B'
+            // InternalStoex.g:44:7: ( 'BoolPMF' )
+            // InternalStoex.g:44:9: 'BoolPMF'
             {
-            match('B'); 
+            match("BoolPMF"); 
+
 
             }
 
@@ -426,10 +772,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:28:7: ( 's' )
-            // InternalStoex.g:28:9: 's'
+            // InternalStoex.g:45:7: ( ';' )
+            // InternalStoex.g:45:9: ';'
             {
-            match('s'); 
+            match(';'); 
 
             }
 
@@ -446,10 +792,11 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:29:7: ( 'm' )
-            // InternalStoex.g:29:9: 'm'
+            // InternalStoex.g:46:7: ( 'ordered' )
+            // InternalStoex.g:46:9: 'ordered'
             {
-            match('m'); 
+            match("ordered"); 
+
 
             }
 
@@ -466,19 +813,19 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6497:13: ( RULE_DECINT ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT ) )
-            // InternalStoex.g:6497:15: RULE_DECINT ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
+            // InternalStoex.g:6505:13: ( RULE_DECINT ( '.' ( RULE_DIGIT )* | ( '.' ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT ) )
+            // InternalStoex.g:6505:15: RULE_DECINT ( '.' ( RULE_DIGIT )* | ( '.' ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
             {
             mRULE_DECINT(); 
-            // InternalStoex.g:6497:27: ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
+            // InternalStoex.g:6505:27: ( '.' ( RULE_DIGIT )* | ( '.' ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )
             int alt5=2;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // InternalStoex.g:6497:28: RULE_DOT ( RULE_DIGIT )*
+                    // InternalStoex.g:6505:28: '.' ( RULE_DIGIT )*
                     {
-                    mRULE_DOT(); 
-                    // InternalStoex.g:6497:37: ( RULE_DIGIT )*
+                    match('.'); 
+                    // InternalStoex.g:6505:32: ( RULE_DIGIT )*
                     loop1:
                     do {
                         int alt1=2;
@@ -491,7 +838,7 @@ public class InternalStoexLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // InternalStoex.g:6497:37: RULE_DIGIT
+                    	    // InternalStoex.g:6505:32: RULE_DIGIT
                     	    {
                     	    mRULE_DIGIT(); 
 
@@ -507,9 +854,9 @@ public class InternalStoexLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:6497:49: ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT
+                    // InternalStoex.g:6505:44: ( '.' ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT
                     {
-                    // InternalStoex.g:6497:49: ( RULE_DOT ( RULE_DIGIT )* )?
+                    // InternalStoex.g:6505:44: ( '.' ( RULE_DIGIT )* )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -518,10 +865,10 @@ public class InternalStoexLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // InternalStoex.g:6497:50: RULE_DOT ( RULE_DIGIT )*
+                            // InternalStoex.g:6505:45: '.' ( RULE_DIGIT )*
                             {
-                            mRULE_DOT(); 
-                            // InternalStoex.g:6497:59: ( RULE_DIGIT )*
+                            match('.'); 
+                            // InternalStoex.g:6505:49: ( RULE_DIGIT )*
                             loop2:
                             do {
                                 int alt2=2;
@@ -534,7 +881,7 @@ public class InternalStoexLexer extends Lexer {
 
                                 switch (alt2) {
                             	case 1 :
-                            	    // InternalStoex.g:6497:59: RULE_DIGIT
+                            	    // InternalStoex.g:6505:49: RULE_DIGIT
                             	    {
                             	    mRULE_DIGIT(); 
 
@@ -561,7 +908,7 @@ public class InternalStoexLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // InternalStoex.g:6497:83: ( '-' | '+' )?
+                    // InternalStoex.g:6505:73: ( '-' | '+' )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -610,10 +957,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_DECINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6499:13: ( ( '0' | '1' .. '9' ( RULE_DIGIT )* ) )
-            // InternalStoex.g:6499:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
+            // InternalStoex.g:6507:13: ( ( '0' | '1' .. '9' ( RULE_DIGIT )* ) )
+            // InternalStoex.g:6507:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
             {
-            // InternalStoex.g:6499:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
+            // InternalStoex.g:6507:15: ( '0' | '1' .. '9' ( RULE_DIGIT )* )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -631,17 +978,17 @@ public class InternalStoexLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalStoex.g:6499:16: '0'
+                    // InternalStoex.g:6507:16: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:6499:20: '1' .. '9' ( RULE_DIGIT )*
+                    // InternalStoex.g:6507:20: '1' .. '9' ( RULE_DIGIT )*
                     {
                     matchRange('1','9'); 
-                    // InternalStoex.g:6499:29: ( RULE_DIGIT )*
+                    // InternalStoex.g:6507:29: ( RULE_DIGIT )*
                     loop6:
                     do {
                         int alt6=2;
@@ -654,7 +1001,7 @@ public class InternalStoexLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalStoex.g:6499:29: RULE_DIGIT
+                    	    // InternalStoex.g:6507:29: RULE_DIGIT
                     	    {
                     	    mRULE_DIGIT(); 
 
@@ -688,10 +1035,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_BOOLEAN_KEYWORDS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6501:23: ( ( 'false' | 'true' ) )
-            // InternalStoex.g:6501:25: ( 'false' | 'true' )
+            // InternalStoex.g:6509:23: ( ( 'false' | 'true' ) )
+            // InternalStoex.g:6509:25: ( 'false' | 'true' )
             {
-            // InternalStoex.g:6501:25: ( 'false' | 'true' )
+            // InternalStoex.g:6509:25: ( 'false' | 'true' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -709,7 +1056,7 @@ public class InternalStoexLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalStoex.g:6501:26: 'false'
+                    // InternalStoex.g:6509:26: 'false'
                     {
                     match("false"); 
 
@@ -717,7 +1064,7 @@ public class InternalStoexLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:6501:34: 'true'
+                    // InternalStoex.g:6509:34: 'true'
                     {
                     match("true"); 
 
@@ -738,298 +1085,11 @@ public class InternalStoexLexer extends Lexer {
     }
     // $ANTLR end "RULE_BOOLEAN_KEYWORDS"
 
-    // $ANTLR start "RULE_NOT"
-    public final void mRULE_NOT() throws RecognitionException {
-        try {
-            int _type = RULE_NOT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6503:10: ( 'NOT' )
-            // InternalStoex.g:6503:12: 'NOT'
-            {
-            match("NOT"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_NOT"
-
-    // $ANTLR start "RULE_INTPMF"
-    public final void mRULE_INTPMF() throws RecognitionException {
-        try {
-            int _type = RULE_INTPMF;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6505:13: ( 'IntPMF' )
-            // InternalStoex.g:6505:15: 'IntPMF'
-            {
-            match("IntPMF"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_INTPMF"
-
-    // $ANTLR start "RULE_DOUBLEPMF"
-    public final void mRULE_DOUBLEPMF() throws RecognitionException {
-        try {
-            int _type = RULE_DOUBLEPMF;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6507:16: ( 'DoublePMF' )
-            // InternalStoex.g:6507:18: 'DoublePMF'
-            {
-            match("DoublePMF"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_DOUBLEPMF"
-
-    // $ANTLR start "RULE_ENUMPMF"
-    public final void mRULE_ENUMPMF() throws RecognitionException {
-        try {
-            int _type = RULE_ENUMPMF;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6509:14: ( 'EnumPMF' )
-            // InternalStoex.g:6509:16: 'EnumPMF'
-            {
-            match("EnumPMF"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ENUMPMF"
-
-    // $ANTLR start "RULE_DOUBLEPDF"
-    public final void mRULE_DOUBLEPDF() throws RecognitionException {
-        try {
-            int _type = RULE_DOUBLEPDF;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6511:16: ( 'DoublePDF' )
-            // InternalStoex.g:6511:18: 'DoublePDF'
-            {
-            match("DoublePDF"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_DOUBLEPDF"
-
-    // $ANTLR start "RULE_BOOLPMF"
-    public final void mRULE_BOOLPMF() throws RecognitionException {
-        try {
-            int _type = RULE_BOOLPMF;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6513:14: ( 'BoolPMF' )
-            // InternalStoex.g:6513:16: 'BoolPMF'
-            {
-            match("BoolPMF"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_BOOLPMF"
-
-    // $ANTLR start "RULE_POW"
-    public final void mRULE_POW() throws RecognitionException {
-        try {
-            int _type = RULE_POW;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6515:10: ( '^' )
-            // InternalStoex.g:6515:12: '^'
-            {
-            match('^'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_POW"
-
-    // $ANTLR start "RULE_LPAREN"
-    public final void mRULE_LPAREN() throws RecognitionException {
-        try {
-            int _type = RULE_LPAREN;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6517:13: ( '(' )
-            // InternalStoex.g:6517:15: '('
-            {
-            match('('); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_LPAREN"
-
-    // $ANTLR start "RULE_RPAREN"
-    public final void mRULE_RPAREN() throws RecognitionException {
-        try {
-            int _type = RULE_RPAREN;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6519:13: ( ')' )
-            // InternalStoex.g:6519:15: ')'
-            {
-            match(')'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_RPAREN"
-
-    // $ANTLR start "RULE_SEMI"
-    public final void mRULE_SEMI() throws RecognitionException {
-        try {
-            int _type = RULE_SEMI;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6521:11: ( ';' )
-            // InternalStoex.g:6521:13: ';'
-            {
-            match(';'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_SEMI"
-
-    // $ANTLR start "RULE_COLON"
-    public final void mRULE_COLON() throws RecognitionException {
-        try {
-            int _type = RULE_COLON;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6523:12: ( ',' )
-            // InternalStoex.g:6523:14: ','
-            {
-            match(','); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_COLON"
-
-    // $ANTLR start "RULE_ORDERED_DEF"
-    public final void mRULE_ORDERED_DEF() throws RecognitionException {
-        try {
-            int _type = RULE_ORDERED_DEF;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6525:18: ( 'ordered' )
-            // InternalStoex.g:6525:20: 'ordered'
-            {
-            match("ordered"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ORDERED_DEF"
-
-    // $ANTLR start "RULE_SQUARE_PAREN_L"
-    public final void mRULE_SQUARE_PAREN_L() throws RecognitionException {
-        try {
-            int _type = RULE_SQUARE_PAREN_L;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6527:21: ( '[' )
-            // InternalStoex.g:6527:23: '['
-            {
-            match('['); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_SQUARE_PAREN_L"
-
-    // $ANTLR start "RULE_SQUARE_PAREN_R"
-    public final void mRULE_SQUARE_PAREN_R() throws RecognitionException {
-        try {
-            int _type = RULE_SQUARE_PAREN_R;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6529:21: ( ']' )
-            // InternalStoex.g:6529:23: ']'
-            {
-            match(']'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_SQUARE_PAREN_R"
-
     // $ANTLR start "RULE_DIGIT"
     public final void mRULE_DIGIT() throws RecognitionException {
         try {
-            // InternalStoex.g:6531:21: ( '0' .. '9' )
-            // InternalStoex.g:6531:23: '0' .. '9'
+            // InternalStoex.g:6511:21: ( '0' .. '9' )
+            // InternalStoex.g:6511:23: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1041,73 +1101,13 @@ public class InternalStoexLexer extends Lexer {
     }
     // $ANTLR end "RULE_DIGIT"
 
-    // $ANTLR start "RULE_DOT"
-    public final void mRULE_DOT() throws RecognitionException {
-        try {
-            int _type = RULE_DOT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6533:10: ( '.' )
-            // InternalStoex.g:6533:12: '.'
-            {
-            match('.'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_DOT"
-
-    // $ANTLR start "RULE_CONDDELIMITER"
-    public final void mRULE_CONDDELIMITER() throws RecognitionException {
-        try {
-            int _type = RULE_CONDDELIMITER;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6535:20: ( '?' )
-            // InternalStoex.g:6535:22: '?'
-            {
-            match('?'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_CONDDELIMITER"
-
-    // $ANTLR start "RULE_ELSEDELIMITER"
-    public final void mRULE_ELSEDELIMITER() throws RecognitionException {
-        try {
-            int _type = RULE_ELSEDELIMITER;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6537:20: ( ':' )
-            // InternalStoex.g:6537:22: ':'
-            {
-            match(':'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ELSEDELIMITER"
-
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6539:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalStoex.g:6539:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalStoex.g:6513:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalStoex.g:6513:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1118,7 +1118,7 @@ public class InternalStoexLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalStoex.g:6539:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalStoex.g:6513:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop9:
             do {
                 int alt9=2;
@@ -1167,10 +1167,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6541:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' ) )
-            // InternalStoex.g:6541:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
+            // InternalStoex.g:6515:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' ) )
+            // InternalStoex.g:6515:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
             {
-            // InternalStoex.g:6541:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
+            // InternalStoex.g:6515:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\'' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1188,10 +1188,10 @@ public class InternalStoexLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalStoex.g:6541:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalStoex.g:6515:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalStoex.g:6541:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalStoex.g:6515:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop10:
                     do {
                         int alt10=3;
@@ -1207,7 +1207,7 @@ public class InternalStoexLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // InternalStoex.g:6541:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // InternalStoex.g:6515:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1223,7 +1223,7 @@ public class InternalStoexLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalStoex.g:6541:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalStoex.g:6515:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1248,10 +1248,10 @@ public class InternalStoexLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:6541:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\''
+                    // InternalStoex.g:6515:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalStoex.g:6541:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalStoex.g:6515:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop11:
                     do {
                         int alt11=3;
@@ -1276,7 +1276,7 @@ public class InternalStoexLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // InternalStoex.g:6541:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // InternalStoex.g:6515:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1292,7 +1292,7 @@ public class InternalStoexLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalStoex.g:6541:137: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalStoex.g:6515:137: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1335,12 +1335,12 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6543:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalStoex.g:6543:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalStoex.g:6517:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalStoex.g:6517:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalStoex.g:6543:24: ( options {greedy=false; } : . )*
+            // InternalStoex.g:6517:24: ( options {greedy=false; } : . )*
             loop13:
             do {
                 int alt13=2;
@@ -1365,7 +1365,7 @@ public class InternalStoexLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // InternalStoex.g:6543:52: .
+            	    // InternalStoex.g:6517:52: .
             	    {
             	    matchAny(); 
 
@@ -1395,12 +1395,12 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6545:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalStoex.g:6545:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalStoex.g:6519:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalStoex.g:6519:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalStoex.g:6545:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalStoex.g:6519:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop14:
             do {
                 int alt14=2;
@@ -1413,7 +1413,7 @@ public class InternalStoexLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalStoex.g:6545:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalStoex.g:6519:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1433,7 +1433,7 @@ public class InternalStoexLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalStoex.g:6545:40: ( ( '\\r' )? '\\n' )?
+            // InternalStoex.g:6519:40: ( ( '\\r' )? '\\n' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1442,9 +1442,9 @@ public class InternalStoexLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalStoex.g:6545:41: ( '\\r' )? '\\n'
+                    // InternalStoex.g:6519:41: ( '\\r' )? '\\n'
                     {
-                    // InternalStoex.g:6545:41: ( '\\r' )?
+                    // InternalStoex.g:6519:41: ( '\\r' )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -1453,7 +1453,7 @@ public class InternalStoexLexer extends Lexer {
                     }
                     switch (alt15) {
                         case 1 :
-                            // InternalStoex.g:6545:41: '\\r'
+                            // InternalStoex.g:6519:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1485,10 +1485,10 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6547:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalStoex.g:6547:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalStoex.g:6521:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalStoex.g:6521:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalStoex.g:6547:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalStoex.g:6521:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt17=0;
             loop17:
             do {
@@ -1542,8 +1542,8 @@ public class InternalStoexLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalStoex.g:6549:16: ( . )
-            // InternalStoex.g:6549:18: .
+            // InternalStoex.g:6523:16: ( . )
+            // InternalStoex.g:6523:18: .
             {
             matchAny(); 
 
@@ -1558,320 +1558,320 @@ public class InternalStoexLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalStoex.g:1:8: ( T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_DOUBLE | RULE_DECINT | RULE_BOOLEAN_KEYWORDS | RULE_NOT | RULE_INTPMF | RULE_DOUBLEPMF | RULE_ENUMPMF | RULE_DOUBLEPDF | RULE_BOOLPMF | RULE_POW | RULE_LPAREN | RULE_RPAREN | RULE_SEMI | RULE_COLON | RULE_ORDERED_DEF | RULE_SQUARE_PAREN_L | RULE_SQUARE_PAREN_R | RULE_DOT | RULE_CONDDELIMITER | RULE_ELSEDELIMITER | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // InternalStoex.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_DOUBLE | RULE_DECINT | RULE_BOOLEAN_KEYWORDS | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt18=45;
         alt18 = dfa18.predict(input);
         switch (alt18) {
             case 1 :
-                // InternalStoex.g:1:10: T__31
+                // InternalStoex.g:1:10: T__14
+                {
+                mT__14(); 
+
+                }
+                break;
+            case 2 :
+                // InternalStoex.g:1:16: T__15
+                {
+                mT__15(); 
+
+                }
+                break;
+            case 3 :
+                // InternalStoex.g:1:22: T__16
+                {
+                mT__16(); 
+
+                }
+                break;
+            case 4 :
+                // InternalStoex.g:1:28: T__17
+                {
+                mT__17(); 
+
+                }
+                break;
+            case 5 :
+                // InternalStoex.g:1:34: T__18
+                {
+                mT__18(); 
+
+                }
+                break;
+            case 6 :
+                // InternalStoex.g:1:40: T__19
+                {
+                mT__19(); 
+
+                }
+                break;
+            case 7 :
+                // InternalStoex.g:1:46: T__20
+                {
+                mT__20(); 
+
+                }
+                break;
+            case 8 :
+                // InternalStoex.g:1:52: T__21
+                {
+                mT__21(); 
+
+                }
+                break;
+            case 9 :
+                // InternalStoex.g:1:58: T__22
+                {
+                mT__22(); 
+
+                }
+                break;
+            case 10 :
+                // InternalStoex.g:1:64: T__23
+                {
+                mT__23(); 
+
+                }
+                break;
+            case 11 :
+                // InternalStoex.g:1:70: T__24
+                {
+                mT__24(); 
+
+                }
+                break;
+            case 12 :
+                // InternalStoex.g:1:76: T__25
+                {
+                mT__25(); 
+
+                }
+                break;
+            case 13 :
+                // InternalStoex.g:1:82: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 14 :
+                // InternalStoex.g:1:88: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 15 :
+                // InternalStoex.g:1:94: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 16 :
+                // InternalStoex.g:1:100: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 17 :
+                // InternalStoex.g:1:106: T__30
+                {
+                mT__30(); 
+
+                }
+                break;
+            case 18 :
+                // InternalStoex.g:1:112: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 2 :
-                // InternalStoex.g:1:16: T__32
+            case 19 :
+                // InternalStoex.g:1:118: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 3 :
-                // InternalStoex.g:1:22: T__33
+            case 20 :
+                // InternalStoex.g:1:124: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 4 :
-                // InternalStoex.g:1:28: T__34
+            case 21 :
+                // InternalStoex.g:1:130: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 5 :
-                // InternalStoex.g:1:34: T__35
+            case 22 :
+                // InternalStoex.g:1:136: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 6 :
-                // InternalStoex.g:1:40: T__36
+            case 23 :
+                // InternalStoex.g:1:142: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 7 :
-                // InternalStoex.g:1:46: T__37
+            case 24 :
+                // InternalStoex.g:1:148: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 8 :
-                // InternalStoex.g:1:52: T__38
+            case 25 :
+                // InternalStoex.g:1:154: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 9 :
-                // InternalStoex.g:1:58: T__39
+            case 26 :
+                // InternalStoex.g:1:160: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 10 :
-                // InternalStoex.g:1:64: T__40
+            case 27 :
+                // InternalStoex.g:1:166: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 11 :
-                // InternalStoex.g:1:70: T__41
+            case 28 :
+                // InternalStoex.g:1:172: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 12 :
-                // InternalStoex.g:1:76: T__42
+            case 29 :
+                // InternalStoex.g:1:178: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 13 :
-                // InternalStoex.g:1:82: T__43
+            case 30 :
+                // InternalStoex.g:1:184: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 14 :
-                // InternalStoex.g:1:88: T__44
+            case 31 :
+                // InternalStoex.g:1:190: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 15 :
-                // InternalStoex.g:1:94: T__45
+            case 32 :
+                // InternalStoex.g:1:196: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
-            case 16 :
-                // InternalStoex.g:1:100: T__46
+            case 33 :
+                // InternalStoex.g:1:202: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
-            case 17 :
-                // InternalStoex.g:1:106: T__47
+            case 34 :
+                // InternalStoex.g:1:208: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
-            case 18 :
-                // InternalStoex.g:1:112: T__48
+            case 35 :
+                // InternalStoex.g:1:214: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
-            case 19 :
-                // InternalStoex.g:1:118: T__49
+            case 36 :
+                // InternalStoex.g:1:220: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
-            case 20 :
-                // InternalStoex.g:1:124: RULE_DOUBLE
+            case 37 :
+                // InternalStoex.g:1:226: RULE_DOUBLE
                 {
                 mRULE_DOUBLE(); 
 
                 }
                 break;
-            case 21 :
-                // InternalStoex.g:1:136: RULE_DECINT
+            case 38 :
+                // InternalStoex.g:1:238: RULE_DECINT
                 {
                 mRULE_DECINT(); 
 
                 }
                 break;
-            case 22 :
-                // InternalStoex.g:1:148: RULE_BOOLEAN_KEYWORDS
+            case 39 :
+                // InternalStoex.g:1:250: RULE_BOOLEAN_KEYWORDS
                 {
                 mRULE_BOOLEAN_KEYWORDS(); 
 
                 }
                 break;
-            case 23 :
-                // InternalStoex.g:1:170: RULE_NOT
-                {
-                mRULE_NOT(); 
-
-                }
-                break;
-            case 24 :
-                // InternalStoex.g:1:179: RULE_INTPMF
-                {
-                mRULE_INTPMF(); 
-
-                }
-                break;
-            case 25 :
-                // InternalStoex.g:1:191: RULE_DOUBLEPMF
-                {
-                mRULE_DOUBLEPMF(); 
-
-                }
-                break;
-            case 26 :
-                // InternalStoex.g:1:206: RULE_ENUMPMF
-                {
-                mRULE_ENUMPMF(); 
-
-                }
-                break;
-            case 27 :
-                // InternalStoex.g:1:219: RULE_DOUBLEPDF
-                {
-                mRULE_DOUBLEPDF(); 
-
-                }
-                break;
-            case 28 :
-                // InternalStoex.g:1:234: RULE_BOOLPMF
-                {
-                mRULE_BOOLPMF(); 
-
-                }
-                break;
-            case 29 :
-                // InternalStoex.g:1:247: RULE_POW
-                {
-                mRULE_POW(); 
-
-                }
-                break;
-            case 30 :
-                // InternalStoex.g:1:256: RULE_LPAREN
-                {
-                mRULE_LPAREN(); 
-
-                }
-                break;
-            case 31 :
-                // InternalStoex.g:1:268: RULE_RPAREN
-                {
-                mRULE_RPAREN(); 
-
-                }
-                break;
-            case 32 :
-                // InternalStoex.g:1:280: RULE_SEMI
-                {
-                mRULE_SEMI(); 
-
-                }
-                break;
-            case 33 :
-                // InternalStoex.g:1:290: RULE_COLON
-                {
-                mRULE_COLON(); 
-
-                }
-                break;
-            case 34 :
-                // InternalStoex.g:1:301: RULE_ORDERED_DEF
-                {
-                mRULE_ORDERED_DEF(); 
-
-                }
-                break;
-            case 35 :
-                // InternalStoex.g:1:318: RULE_SQUARE_PAREN_L
-                {
-                mRULE_SQUARE_PAREN_L(); 
-
-                }
-                break;
-            case 36 :
-                // InternalStoex.g:1:338: RULE_SQUARE_PAREN_R
-                {
-                mRULE_SQUARE_PAREN_R(); 
-
-                }
-                break;
-            case 37 :
-                // InternalStoex.g:1:358: RULE_DOT
-                {
-                mRULE_DOT(); 
-
-                }
-                break;
-            case 38 :
-                // InternalStoex.g:1:367: RULE_CONDDELIMITER
-                {
-                mRULE_CONDDELIMITER(); 
-
-                }
-                break;
-            case 39 :
-                // InternalStoex.g:1:386: RULE_ELSEDELIMITER
-                {
-                mRULE_ELSEDELIMITER(); 
-
-                }
-                break;
             case 40 :
-                // InternalStoex.g:1:405: RULE_ID
+                // InternalStoex.g:1:272: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 41 :
-                // InternalStoex.g:1:413: RULE_STRING
+                // InternalStoex.g:1:280: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 42 :
-                // InternalStoex.g:1:425: RULE_ML_COMMENT
+                // InternalStoex.g:1:292: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 43 :
-                // InternalStoex.g:1:441: RULE_SL_COMMENT
+                // InternalStoex.g:1:308: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 44 :
-                // InternalStoex.g:1:457: RULE_WS
+                // InternalStoex.g:1:324: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 45 :
-                // InternalStoex.g:1:465: RULE_ANY_OTHER
+                // InternalStoex.g:1:332: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1886,23 +1886,23 @@ public class InternalStoexLexer extends Lexer {
     protected DFA5 dfa5 = new DFA5(this);
     protected DFA18 dfa18 = new DFA18(this);
     static final String DFA5_eotS =
-        "\1\uffff\1\3\2\uffff\1\3";
+        "\1\uffff\1\4\1\uffff\1\4\1\uffff";
     static final String DFA5_eofS =
         "\5\uffff";
     static final String DFA5_minS =
-        "\1\56\1\60\2\uffff\1\60";
+        "\1\56\1\60\1\uffff\1\60\1\uffff";
     static final String DFA5_maxS =
-        "\2\145\2\uffff\1\145";
+        "\2\145\1\uffff\1\145\1\uffff";
     static final String DFA5_acceptS =
-        "\2\uffff\1\2\1\1\1\uffff";
+        "\2\uffff\1\2\1\uffff\1\1";
     static final String DFA5_specialS =
         "\5\uffff}>";
     static final String[] DFA5_transitionS = {
             "\1\1\26\uffff\1\2\37\uffff\1\2",
-            "\12\4\13\uffff\1\2\37\uffff\1\2",
+            "\12\3\13\uffff\1\2\37\uffff\1\2",
             "",
-            "",
-            "\12\4\13\uffff\1\2\37\uffff\1\2"
+            "\12\3\13\uffff\1\2\37\uffff\1\2",
+            ""
     };
 
     static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
@@ -1935,23 +1935,23 @@ public class InternalStoexLexer extends Lexer {
             this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "6497:27: ( RULE_DOT ( RULE_DIGIT )* | ( RULE_DOT ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )";
+            return "6505:27: ( '.' ( RULE_DIGIT )* | ( '.' ( RULE_DIGIT )* )? ( 'E' | 'e' ) ( '-' | '+' )? RULE_DECINT )";
         }
     }
     static final String DFA18_eotS =
-        "\1\uffff\3\52\1\56\1\61\1\50\3\uffff\1\70\1\uffff\1\72\1\52\1\75\1\76\1\77\2\100\6\52\5\uffff\1\52\6\uffff\2\50\2\uffff\1\52\1\uffff\1\127\1\52\16\uffff\2\52\5\uffff\1\100\6\52\5\uffff\1\52\7\uffff\1\142\1\uffff\1\143\4\52\1\150\4\52\2\uffff\3\52\1\160\1\uffff\6\52\1\160\1\uffff\6\52\1\175\4\52\1\u0082\1\uffff\1\52\1\u0085\1\u0086\1\u0087\1\uffff\2\52\3\uffff\1\u008a\1\u008b\2\uffff";
+        "\1\uffff\3\52\1\56\1\61\1\50\3\uffff\1\70\1\uffff\1\72\1\52\1\75\1\76\1\77\3\uffff\1\52\6\uffff\3\52\1\uffff\1\52\2\117\2\52\1\uffff\2\50\2\uffff\1\52\1\uffff\1\127\1\52\16\uffff\2\52\6\uffff\1\52\6\uffff\3\52\1\uffff\1\52\2\uffff\1\117\2\52\2\uffff\1\142\1\uffff\1\143\2\52\1\146\6\52\2\uffff\2\52\1\uffff\5\52\1\164\6\52\1\164\1\uffff\3\52\1\176\3\52\1\u0082\1\52\1\uffff\1\u0085\1\u0086\1\u0087\1\uffff\2\52\3\uffff\1\u008a\1\u008b\2\uffff";
     static final String DFA18_eofS =
         "\u008c\uffff";
     static final String DFA18_minS =
-        "\1\0\1\116\1\122\1\117\3\75\3\uffff\1\52\1\uffff\1\60\1\156\3\60\2\56\1\141\1\162\1\117\1\156\1\157\1\156\5\uffff\1\162\6\uffff\2\0\2\uffff\1\104\1\uffff\1\60\1\122\16\uffff\1\151\1\157\5\uffff\1\56\1\154\1\165\1\124\1\164\2\165\5\uffff\1\144\7\uffff\1\60\1\uffff\1\60\1\164\1\154\1\163\1\145\1\60\1\120\1\142\1\155\1\145\2\uffff\1\154\1\120\1\145\1\60\1\uffff\1\115\1\154\1\120\1\162\1\145\1\115\1\60\1\uffff\1\106\1\145\1\115\1\145\1\163\1\106\1\60\1\120\1\106\1\144\1\163\1\60\1\uffff\1\104\3\60\1\uffff\2\106\3\uffff\2\60\2\uffff";
+        "\1\0\1\116\1\122\1\117\3\75\3\uffff\1\52\1\uffff\1\60\1\156\3\60\3\uffff\1\117\6\uffff\1\157\2\156\1\uffff\1\162\2\56\1\141\1\162\1\uffff\2\0\2\uffff\1\104\1\uffff\1\60\1\122\16\uffff\1\151\1\157\6\uffff\1\124\6\uffff\1\165\1\164\1\165\1\uffff\1\144\2\uffff\1\56\1\154\1\165\2\uffff\1\60\1\uffff\1\60\1\164\1\154\1\60\1\142\1\120\1\155\1\145\1\163\1\145\2\uffff\1\154\1\120\1\uffff\1\154\1\115\1\120\1\162\1\145\1\60\1\145\1\115\1\145\1\106\1\115\1\145\1\60\1\uffff\1\163\1\106\1\120\1\60\1\106\1\144\1\163\1\60\1\104\1\uffff\3\60\1\uffff\2\106\3\uffff\2\60\2\uffff";
     static final String DFA18_maxS =
-        "\1\uffff\1\116\1\122\1\117\1\75\1\76\1\75\3\uffff\1\57\1\uffff\1\172\1\156\3\172\2\145\1\141\1\162\1\117\1\156\1\157\1\156\5\uffff\1\162\6\uffff\2\uffff\2\uffff\1\104\1\uffff\1\172\1\122\16\uffff\1\151\1\157\5\uffff\1\145\1\154\1\165\1\124\1\164\2\165\5\uffff\1\144\7\uffff\1\172\1\uffff\1\172\1\164\1\154\1\163\1\145\1\172\1\120\1\142\1\155\1\145\2\uffff\1\154\1\120\1\145\1\172\1\uffff\1\115\1\154\1\120\1\162\1\145\1\115\1\172\1\uffff\1\106\1\145\1\115\1\145\1\163\1\106\1\172\1\120\1\106\1\144\1\163\1\172\1\uffff\1\115\3\172\1\uffff\2\106\3\uffff\2\172\2\uffff";
+        "\1\uffff\1\116\1\122\1\117\1\75\1\76\1\75\3\uffff\1\57\1\uffff\1\172\1\156\3\172\3\uffff\1\117\6\uffff\1\157\2\156\1\uffff\1\162\2\145\1\141\1\162\1\uffff\2\uffff\2\uffff\1\104\1\uffff\1\172\1\122\16\uffff\1\151\1\157\6\uffff\1\124\6\uffff\1\165\1\164\1\165\1\uffff\1\144\2\uffff\1\145\1\154\1\165\2\uffff\1\172\1\uffff\1\172\1\164\1\154\1\172\1\142\1\120\1\155\1\145\1\163\1\145\2\uffff\1\154\1\120\1\uffff\1\154\1\115\1\120\1\162\1\145\1\172\1\145\1\115\1\145\1\106\1\115\1\145\1\172\1\uffff\1\163\1\106\1\120\1\172\1\106\1\144\1\163\1\172\1\115\1\uffff\3\172\1\uffff\2\106\3\uffff\2\172\2\uffff";
     static final String DFA18_acceptS =
-        "\7\uffff\1\12\1\13\1\14\1\uffff\1\16\15\uffff\1\35\1\36\1\37\1\40\1\41\1\uffff\1\43\1\44\1\45\1\46\1\47\1\50\2\uffff\1\54\1\55\1\uffff\1\50\2\uffff\1\10\1\4\1\7\1\11\1\5\1\6\1\12\1\13\1\14\1\52\1\53\1\15\1\16\1\17\2\uffff\1\21\1\22\1\23\1\25\1\24\7\uffff\1\35\1\36\1\37\1\40\1\41\1\uffff\1\43\1\44\1\45\1\46\1\47\1\51\1\54\1\uffff\1\2\12\uffff\1\1\1\3\4\uffff\1\27\7\uffff\1\26\14\uffff\1\30\4\uffff\1\34\2\uffff\1\32\1\42\1\20\2\uffff\1\31\1\33";
+        "\7\uffff\1\12\1\13\1\14\1\uffff\1\16\5\uffff\1\24\1\25\1\26\1\uffff\1\30\1\31\1\32\1\33\1\34\1\35\3\uffff\1\43\5\uffff\1\50\2\uffff\1\54\1\55\1\uffff\1\50\2\uffff\1\10\1\4\1\7\1\11\1\5\1\6\1\12\1\13\1\14\1\52\1\53\1\15\1\16\1\17\2\uffff\1\21\1\22\1\23\1\24\1\25\1\26\1\uffff\1\30\1\31\1\32\1\33\1\34\1\35\3\uffff\1\43\1\uffff\1\46\1\45\3\uffff\1\51\1\54\1\uffff\1\2\12\uffff\1\1\1\3\2\uffff\1\27\15\uffff\1\47\11\uffff\1\37\3\uffff\1\42\2\uffff\1\41\1\44\1\20\2\uffff\1\36\1\40";
     static final String DFA18_specialS =
         "\1\0\44\uffff\1\1\1\2\145\uffff}>";
     static final String[] DFA18_transitionS = {
-            "\11\50\2\47\2\50\1\47\22\50\1\47\1\50\1\45\2\50\1\13\1\50\1\46\1\32\1\33\1\11\1\7\1\35\1\10\1\41\1\12\1\21\11\22\1\43\1\34\1\5\1\6\1\4\1\42\1\50\1\1\1\16\1\44\1\27\1\30\3\44\1\26\4\44\1\25\1\2\10\44\1\3\2\44\1\37\1\50\1\40\1\31\1\14\1\50\5\44\1\23\6\44\1\20\1\44\1\36\3\44\1\17\1\24\1\15\5\44\uff85\50",
+            "\11\50\2\47\2\50\1\47\22\50\1\47\1\50\1\45\2\50\1\13\1\50\1\46\1\27\1\30\1\11\1\7\1\31\1\10\1\32\1\12\1\40\11\41\1\22\1\36\1\5\1\6\1\4\1\21\1\50\1\1\1\16\1\44\1\33\1\35\3\44\1\34\4\44\1\24\1\2\10\44\1\3\2\44\1\25\1\50\1\26\1\23\1\14\1\50\5\44\1\42\6\44\1\20\1\44\1\37\3\44\1\17\1\43\1\15\5\44\uff85\50",
             "\1\51",
             "\1\53",
             "\1\54",
@@ -1968,25 +1968,25 @@ public class InternalStoexLexer extends Lexer {
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\16\52\1\74\13\52",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\101\26\uffff\1\101\37\uffff\1\101",
-            "\1\101\1\uffff\12\102\13\uffff\1\101\37\uffff\1\101",
+            "",
+            "",
+            "",
             "\1\103",
-            "\1\104",
-            "\1\105",
-            "\1\106",
-            "\1\107",
-            "\1\110",
             "",
             "",
             "",
             "",
+            "",
+            "",
+            "\1\112",
+            "\1\113",
+            "\1\114",
             "",
             "\1\116",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\120\26\uffff\1\120\37\uffff\1\120",
+            "\1\120\1\uffff\12\121\13\uffff\1\120\37\uffff\1\120",
+            "\1\122",
+            "\1\123",
             "",
             "\0\124",
             "\42\124\1\uffff\uffdd\124",
@@ -2017,24 +2017,24 @@ public class InternalStoexLexer extends Lexer {
             "",
             "",
             "",
-            "\1\101\1\uffff\12\102\13\uffff\1\101\37\uffff\1\101",
+            "",
             "\1\133",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\134",
             "\1\135",
             "\1\136",
+            "",
             "\1\137",
+            "",
+            "",
+            "\1\120\1\uffff\12\121\13\uffff\1\120\37\uffff\1\120",
             "\1\140",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\141",
-            "",
-            "",
-            "",
-            "",
-            "",
             "",
             "",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
@@ -2042,9 +2042,9 @@ public class InternalStoexLexer extends Lexer {
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "\1\144",
             "\1\145",
-            "\1\146",
-            "\1\147",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\147",
+            "\1\150",
             "\1\151",
             "\1\152",
             "\1\153",
@@ -2053,31 +2053,31 @@ public class InternalStoexLexer extends Lexer {
             "",
             "\1\155",
             "\1\156",
-            "\1\157",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "",
+            "\1\157",
+            "\1\160",
             "\1\161",
             "\1\162",
             "\1\163",
-            "\1\164",
+            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "\1\165",
             "\1\166",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "",
             "\1\167",
             "\1\170",
             "\1\171",
             "\1\172",
+            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "",
             "\1\173",
             "\1\174",
+            "\1\175",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\176",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\u0083\10\uffff\1\u0084",
             "",
-            "\1\u0084\10\uffff\1\u0083",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
@@ -2123,7 +2123,7 @@ public class InternalStoexLexer extends Lexer {
             this.transition = DFA18_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_DOUBLE | RULE_DECINT | RULE_BOOLEAN_KEYWORDS | RULE_NOT | RULE_INTPMF | RULE_DOUBLEPMF | RULE_ENUMPMF | RULE_DOUBLEPDF | RULE_BOOLPMF | RULE_POW | RULE_LPAREN | RULE_RPAREN | RULE_SEMI | RULE_COLON | RULE_ORDERED_DEF | RULE_SQUARE_PAREN_L | RULE_SQUARE_PAREN_R | RULE_DOT | RULE_CONDDELIMITER | RULE_ELSEDELIMITER | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_DOUBLE | RULE_DECINT | RULE_BOOLEAN_KEYWORDS | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -2165,43 +2165,43 @@ public class InternalStoexLexer extends Lexer {
 
                         else if ( (LA18_0=='m') ) {s = 16;}
 
-                        else if ( (LA18_0=='0') ) {s = 17;}
+                        else if ( (LA18_0=='?') ) {s = 17;}
 
-                        else if ( ((LA18_0>='1' && LA18_0<='9')) ) {s = 18;}
+                        else if ( (LA18_0==':') ) {s = 18;}
 
-                        else if ( (LA18_0=='f') ) {s = 19;}
+                        else if ( (LA18_0=='^') ) {s = 19;}
 
-                        else if ( (LA18_0=='t') ) {s = 20;}
+                        else if ( (LA18_0=='N') ) {s = 20;}
 
-                        else if ( (LA18_0=='N') ) {s = 21;}
+                        else if ( (LA18_0=='[') ) {s = 21;}
 
-                        else if ( (LA18_0=='I') ) {s = 22;}
+                        else if ( (LA18_0==']') ) {s = 22;}
 
-                        else if ( (LA18_0=='D') ) {s = 23;}
+                        else if ( (LA18_0=='(') ) {s = 23;}
 
-                        else if ( (LA18_0=='E') ) {s = 24;}
+                        else if ( (LA18_0==')') ) {s = 24;}
 
-                        else if ( (LA18_0=='^') ) {s = 25;}
+                        else if ( (LA18_0==',') ) {s = 25;}
 
-                        else if ( (LA18_0=='(') ) {s = 26;}
+                        else if ( (LA18_0=='.') ) {s = 26;}
 
-                        else if ( (LA18_0==')') ) {s = 27;}
+                        else if ( (LA18_0=='D') ) {s = 27;}
 
-                        else if ( (LA18_0==';') ) {s = 28;}
+                        else if ( (LA18_0=='I') ) {s = 28;}
 
-                        else if ( (LA18_0==',') ) {s = 29;}
+                        else if ( (LA18_0=='E') ) {s = 29;}
 
-                        else if ( (LA18_0=='o') ) {s = 30;}
+                        else if ( (LA18_0==';') ) {s = 30;}
 
-                        else if ( (LA18_0=='[') ) {s = 31;}
+                        else if ( (LA18_0=='o') ) {s = 31;}
 
-                        else if ( (LA18_0==']') ) {s = 32;}
+                        else if ( (LA18_0=='0') ) {s = 32;}
 
-                        else if ( (LA18_0=='.') ) {s = 33;}
+                        else if ( ((LA18_0>='1' && LA18_0<='9')) ) {s = 33;}
 
-                        else if ( (LA18_0=='?') ) {s = 34;}
+                        else if ( (LA18_0=='f') ) {s = 34;}
 
-                        else if ( (LA18_0==':') ) {s = 35;}
+                        else if ( (LA18_0=='t') ) {s = 35;}
 
                         else if ( (LA18_0=='C'||(LA18_0>='F' && LA18_0<='H')||(LA18_0>='J' && LA18_0<='M')||(LA18_0>='P' && LA18_0<='W')||(LA18_0>='Y' && LA18_0<='Z')||(LA18_0>='a' && LA18_0<='e')||(LA18_0>='g' && LA18_0<='l')||LA18_0=='n'||(LA18_0>='p' && LA18_0<='r')||(LA18_0>='v' && LA18_0<='z')) ) {s = 36;}
 

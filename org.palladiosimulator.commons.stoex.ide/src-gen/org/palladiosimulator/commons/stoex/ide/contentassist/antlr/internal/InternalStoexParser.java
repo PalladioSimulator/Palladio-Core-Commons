@@ -23,49 +23,49 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalStoexParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_CONDDELIMITER", "RULE_ELSEDELIMITER", "RULE_POW", "RULE_NOT", "RULE_SQUARE_PAREN_L", "RULE_SQUARE_PAREN_R", "RULE_LPAREN", "RULE_RPAREN", "RULE_COLON", "RULE_DOT", "RULE_DOUBLEPDF", "RULE_INTPMF", "RULE_DOUBLEPMF", "RULE_ENUMPMF", "RULE_BOOLPMF", "RULE_SEMI", "RULE_DOUBLE", "RULE_DECINT", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_ORDERED_DEF", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'AND'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_DOUBLE", "RULE_DECINT", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'AND'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'", "'?'", "':'", "'^'", "'NOT'", "'['", "']'", "'('", "')'", "','", "'.'", "'DoublePDF'", "'IntPMF'", "'DoublePMF'", "'EnumPMF'", "'BoolPMF'", "';'", "'ordered'"
     };
-    public static final int RULE_BOOLEAN_KEYWORDS=23;
-    public static final int RULE_LPAREN=10;
-    public static final int RULE_SQUARE_PAREN_L=8;
-    public static final int RULE_ENUMPMF=17;
-    public static final int RULE_SQUARE_PAREN_R=9;
-    public static final int RULE_ID=22;
-    public static final int RULE_DIGIT=26;
-    public static final int RULE_COLON=12;
-    public static final int RULE_BOOLPMF=18;
-    public static final int RULE_ORDERED_DEF=25;
-    public static final int RULE_ML_COMMENT=27;
-    public static final int RULE_ELSEDELIMITER=5;
-    public static final int RULE_INTPMF=15;
-    public static final int RULE_STRING=24;
-    public static final int RULE_NOT=7;
-    public static final int RULE_DOUBLEPMF=16;
-    public static final int RULE_POW=6;
-    public static final int RULE_SL_COMMENT=28;
+    public static final int RULE_BOOLEAN_KEYWORDS=7;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__14=14;
+    public static final int RULE_ID=6;
+    public static final int RULE_DIGIT=9;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=10;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int RULE_STRING=8;
+    public static final int RULE_SL_COMMENT=11;
     public static final int T__37=37;
-    public static final int RULE_DOUBLE=20;
+    public static final int RULE_DOUBLE=4;
     public static final int T__38=38;
-    public static final int RULE_CONDDELIMITER=4;
     public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int RULE_DECINT=21;
-    public static final int RULE_DOT=13;
+    public static final int RULE_DECINT=5;
     public static final int EOF=-1;
+    public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_WS=29;
-    public static final int RULE_DOUBLEPDF=14;
-    public static final int RULE_ANY_OTHER=30;
-    public static final int RULE_RPAREN=11;
+    public static final int RULE_WS=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
     public static final int T__45=45;
-    public static final int RULE_SEMI=19;
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -3481,7 +3481,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1052:3: ( 'AND' )
             // InternalStoex.g:1052:4: 'AND'
             {
-            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
             }
 
@@ -3774,27 +3774,27 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1144:1: ( ( ruleNegativeExpression ) | ( ruleNotExpression ) | ( ruleatom ) )
             int alt1=3;
             switch ( input.LA(1) ) {
-            case 41:
+            case 24:
                 {
                 alt1=1;
                 }
                 break;
-            case RULE_NOT:
+            case 36:
                 {
                 alt1=2;
                 }
                 break;
-            case RULE_LPAREN:
-            case RULE_DOUBLEPDF:
-            case RULE_INTPMF:
-            case RULE_DOUBLEPMF:
-            case RULE_ENUMPMF:
-            case RULE_BOOLPMF:
             case RULE_DOUBLE:
             case RULE_DECINT:
             case RULE_ID:
             case RULE_BOOLEAN_KEYWORDS:
             case RULE_STRING:
+            case 39:
+            case 43:
+            case 44:
+            case 45:
+            case 46:
+            case 47:
                 {
                 alt1=3;
                 }
@@ -4120,10 +4120,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             if ( (LA3_0==RULE_ID) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==EOF||(LA3_1>=RULE_CONDDELIMITER && LA3_1<=RULE_POW)||(LA3_1>=RULE_RPAREN && LA3_1<=RULE_COLON)||(LA3_1>=31 && LA3_1<=44)) ) {
+                if ( (LA3_1==EOF||(LA3_1>=14 && LA3_1<=27)||(LA3_1>=33 && LA3_1<=35)||(LA3_1>=40 && LA3_1<=41)) ) {
                     alt3=1;
                 }
-                else if ( (LA3_1==RULE_DOT) ) {
+                else if ( (LA3_1==42) ) {
                     alt3=2;
                 }
                 else {
@@ -4313,10 +4313,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( ((LA5_0>=45 && LA5_0<=49)) ) {
+            if ( ((LA5_0>=28 && LA5_0<=32)) ) {
                 alt5=1;
             }
-            else if ( (LA5_0==RULE_LPAREN) ) {
+            else if ( (LA5_0==39) ) {
                 alt5=2;
             }
             else {
@@ -4406,7 +4406,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1297:1: ( ( ruleunitMulti ) | ( ruleunitDiv ) )
             int alt6=2;
             switch ( input.LA(1) ) {
-            case 45:
+            case 28:
                 {
                 int LA6_1 = input.LA(2);
 
@@ -4425,7 +4425,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 46:
+            case 29:
                 {
                 int LA6_2 = input.LA(2);
 
@@ -4444,7 +4444,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 47:
+            case 30:
                 {
                 int LA6_3 = input.LA(2);
 
@@ -4463,7 +4463,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 48:
+            case 31:
                 {
                 int LA6_4 = input.LA(2);
 
@@ -4482,7 +4482,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 49:
+            case 32:
                 {
                 int LA6_5 = input.LA(2);
 
@@ -4501,7 +4501,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case RULE_LPAREN:
+            case 39:
                 {
                 int LA6_6 = input.LA(2);
 
@@ -4603,10 +4603,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( ((LA7_0>=RULE_INTPMF && LA7_0<=RULE_BOOLPMF)) ) {
+            if ( ((LA7_0>=44 && LA7_0<=47)) ) {
                 alt7=1;
             }
-            else if ( (LA7_0==RULE_DOUBLEPDF) ) {
+            else if ( (LA7_0==43) ) {
                 alt7=2;
             }
             else {
@@ -4690,22 +4690,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1339:1: ( ( ( rule__ProbabilityMassFunction__Group_0__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_1__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_2__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_3__0 ) ) )
             int alt8=4;
             switch ( input.LA(1) ) {
-            case RULE_INTPMF:
+            case 44:
                 {
                 alt8=1;
                 }
                 break;
-            case RULE_DOUBLEPMF:
+            case 45:
                 {
                 alt8=2;
                 }
                 break;
-            case RULE_ENUMPMF:
+            case 46:
                 {
                 alt8=3;
                 }
                 break;
-            case RULE_BOOLPMF:
+            case 47:
                 {
                 alt8=4;
                 }
@@ -4862,17 +4862,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1372:1: ( ( ( 'AND' ) ) | ( ( 'OR' ) ) | ( ( 'XOR' ) ) )
             int alt9=3;
             switch ( input.LA(1) ) {
-            case 31:
+            case 14:
                 {
                 alt9=1;
                 }
                 break;
-            case 32:
+            case 15:
                 {
                 alt9=2;
                 }
                 break;
-            case 33:
+            case 16:
                 {
                 alt9=3;
                 }
@@ -4898,7 +4898,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1375:3: ( 'AND' )
                     // InternalStoex.g:1375:4: 'AND'
                     {
-                    match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -4923,7 +4923,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1381:3: ( 'OR' )
                     // InternalStoex.g:1381:4: 'OR'
                     {
-                    match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -4948,7 +4948,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1387:3: ( 'XOR' )
                     // InternalStoex.g:1387:4: 'XOR'
                     {
-                    match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -4989,10 +4989,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==32) ) {
+            if ( (LA10_0==15) ) {
                 alt10=1;
             }
-            else if ( (LA10_0==33) ) {
+            else if ( (LA10_0==16) ) {
                 alt10=2;
             }
             else {
@@ -5015,7 +5015,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1402:3: ( 'OR' )
                     // InternalStoex.g:1402:4: 'OR'
                     {
-                    match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5040,7 +5040,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1408:3: ( 'XOR' )
                     // InternalStoex.g:1408:4: 'XOR'
                     {
-                    match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5080,32 +5080,32 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1420:1: ( ( ( '>' ) ) | ( ( '<' ) ) | ( ( '==' ) ) | ( ( '<>' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) )
             int alt11=6;
             switch ( input.LA(1) ) {
-            case 34:
+            case 17:
                 {
                 alt11=1;
                 }
                 break;
-            case 35:
+            case 18:
                 {
                 alt11=2;
                 }
                 break;
-            case 36:
+            case 19:
                 {
                 alt11=3;
                 }
                 break;
-            case 37:
+            case 20:
                 {
                 alt11=4;
                 }
                 break;
-            case 38:
+            case 21:
                 {
                 alt11=5;
                 }
                 break;
-            case 39:
+            case 22:
                 {
                 alt11=6;
                 }
@@ -5131,7 +5131,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1423:3: ( '>' )
                     // InternalStoex.g:1423:4: '>'
                     {
-                    match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5156,7 +5156,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1429:3: ( '<' )
                     // InternalStoex.g:1429:4: '<'
                     {
-                    match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5181,7 +5181,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1435:3: ( '==' )
                     // InternalStoex.g:1435:4: '=='
                     {
-                    match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5206,7 +5206,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1441:3: ( '<>' )
                     // InternalStoex.g:1441:4: '<>'
                     {
-                    match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5231,7 +5231,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1447:3: ( '>=' )
                     // InternalStoex.g:1447:4: '>='
                     {
-                    match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5256,7 +5256,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1453:3: ( '<=' )
                     // InternalStoex.g:1453:4: '<='
                     {
-                    match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5297,10 +5297,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==40) ) {
+            if ( (LA12_0==23) ) {
                 alt12=1;
             }
-            else if ( (LA12_0==41) ) {
+            else if ( (LA12_0==24) ) {
                 alt12=2;
             }
             else {
@@ -5323,7 +5323,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1468:3: ( '+' )
                     // InternalStoex.g:1468:4: '+'
                     {
-                    match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5348,7 +5348,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1474:3: ( '-' )
                     // InternalStoex.g:1474:4: '-'
                     {
-                    match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5388,17 +5388,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1486:1: ( ( ( '*' ) ) | ( ( '/' ) ) | ( ( '%' ) ) )
             int alt13=3;
             switch ( input.LA(1) ) {
-            case 42:
+            case 25:
                 {
                 alt13=1;
                 }
                 break;
-            case 43:
+            case 26:
                 {
                 alt13=2;
                 }
                 break;
-            case 44:
+            case 27:
                 {
                 alt13=3;
                 }
@@ -5424,7 +5424,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1489:3: ( '*' )
                     // InternalStoex.g:1489:4: '*'
                     {
-                    match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5449,7 +5449,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1495:3: ( '/' )
                     // InternalStoex.g:1495:4: '/'
                     {
-                    match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5474,7 +5474,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1501:3: ( '%' )
                     // InternalStoex.g:1501:4: '%'
                     {
-                    match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5514,27 +5514,27 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1513:1: ( ( ( '_' ) ) | ( ( 'unitless' ) ) | ( ( 'B' ) ) | ( ( 's' ) ) | ( ( 'm' ) ) )
             int alt14=5;
             switch ( input.LA(1) ) {
-            case 45:
+            case 28:
                 {
                 alt14=1;
                 }
                 break;
-            case 46:
+            case 29:
                 {
                 alt14=2;
                 }
                 break;
-            case 47:
+            case 30:
                 {
                 alt14=3;
                 }
                 break;
-            case 48:
+            case 31:
                 {
                 alt14=4;
                 }
                 break;
-            case 49:
+            case 32:
                 {
                 alt14=5;
                 }
@@ -5560,7 +5560,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1516:3: ( '_' )
                     // InternalStoex.g:1516:4: '_'
                     {
-                    match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5585,7 +5585,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1522:3: ( 'unitless' )
                     // InternalStoex.g:1522:4: 'unitless'
                     {
-                    match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5610,7 +5610,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1528:3: ( 'B' )
                     // InternalStoex.g:1528:4: 'B'
                     {
-                    match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5635,7 +5635,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1534:3: ( 's' )
                     // InternalStoex.g:1534:4: 's'
                     {
-                    match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5660,7 +5660,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     // InternalStoex.g:1540:3: ( 'm' )
                     // InternalStoex.g:1540:4: 'm'
                     {
-                    match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5826,7 +5826,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==RULE_CONDDELIMITER) ) {
+            if ( (LA15_0==33) ) {
                 alt15=1;
             }
             switch (alt15) {
@@ -5986,24 +5986,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__1__Impl"
-    // InternalStoex.g:1641:1: rule__IfelseExpr__Group_1__1__Impl : ( RULE_CONDDELIMITER ) ;
+    // InternalStoex.g:1641:1: rule__IfelseExpr__Group_1__1__Impl : ( '?' ) ;
     public final void rule__IfelseExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1645:1: ( ( RULE_CONDDELIMITER ) )
-            // InternalStoex.g:1646:1: ( RULE_CONDDELIMITER )
+            // InternalStoex.g:1645:1: ( ( '?' ) )
+            // InternalStoex.g:1646:1: ( '?' )
             {
-            // InternalStoex.g:1646:1: ( RULE_CONDDELIMITER )
-            // InternalStoex.g:1647:2: RULE_CONDDELIMITER
+            // InternalStoex.g:1646:1: ( '?' )
+            // InternalStoex.g:1647:2: '?'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIfelseExprAccess().getCONDDELIMITERTerminalRuleCall_1_1()); 
+               before(grammarAccess.getIfelseExprAccess().getQuestionMarkKeyword_1_1()); 
             }
-            match(input,RULE_CONDDELIMITER,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIfelseExprAccess().getCONDDELIMITERTerminalRuleCall_1_1()); 
+               after(grammarAccess.getIfelseExprAccess().getQuestionMarkKeyword_1_1()); 
             }
 
             }
@@ -6154,24 +6154,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__3__Impl"
-    // InternalStoex.g:1695:1: rule__IfelseExpr__Group_1__3__Impl : ( RULE_ELSEDELIMITER ) ;
+    // InternalStoex.g:1695:1: rule__IfelseExpr__Group_1__3__Impl : ( ':' ) ;
     public final void rule__IfelseExpr__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1699:1: ( ( RULE_ELSEDELIMITER ) )
-            // InternalStoex.g:1700:1: ( RULE_ELSEDELIMITER )
+            // InternalStoex.g:1699:1: ( ( ':' ) )
+            // InternalStoex.g:1700:1: ( ':' )
             {
-            // InternalStoex.g:1700:1: ( RULE_ELSEDELIMITER )
-            // InternalStoex.g:1701:2: RULE_ELSEDELIMITER
+            // InternalStoex.g:1700:1: ( ':' )
+            // InternalStoex.g:1701:2: ':'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIfelseExprAccess().getELSEDELIMITERTerminalRuleCall_1_3()); 
+               before(grammarAccess.getIfelseExprAccess().getColonKeyword_1_3()); 
             }
-            match(input,RULE_ELSEDELIMITER,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIfelseExprAccess().getELSEDELIMITERTerminalRuleCall_1_3()); 
+               after(grammarAccess.getIfelseExprAccess().getColonKeyword_1_3()); 
             }
 
             }
@@ -6416,7 +6416,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==31) ) {
+                if ( (LA16_0==14) ) {
                     alt16=1;
                 }
 
@@ -6853,7 +6853,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( ((LA17_0>=32 && LA17_0<=33)) ) {
+                if ( ((LA17_0>=15 && LA17_0<=16)) ) {
                     alt17=1;
                 }
 
@@ -7288,7 +7288,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( ((LA18_0>=34 && LA18_0<=39)) ) {
+            if ( ((LA18_0>=17 && LA18_0<=22)) ) {
                 alt18=1;
             }
             switch (alt18) {
@@ -7720,7 +7720,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt19=2;
                 int LA19_0 = input.LA(1);
 
-                if ( ((LA19_0>=40 && LA19_0<=41)) ) {
+                if ( ((LA19_0>=23 && LA19_0<=24)) ) {
                     alt19=1;
                 }
 
@@ -8157,7 +8157,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt20=2;
                 int LA20_0 = input.LA(1);
 
-                if ( ((LA20_0>=42 && LA20_0<=44)) ) {
+                if ( ((LA20_0>=25 && LA20_0<=27)) ) {
                     alt20=1;
                 }
 
@@ -8592,7 +8592,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==RULE_POW) ) {
+            if ( (LA21_0==35) ) {
                 alt21=1;
             }
             switch (alt21) {
@@ -8752,24 +8752,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__1__Impl"
-    // InternalStoex.g:2505:1: rule__PowExpr__Group_1__1__Impl : ( RULE_POW ) ;
+    // InternalStoex.g:2505:1: rule__PowExpr__Group_1__1__Impl : ( '^' ) ;
     public final void rule__PowExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2509:1: ( ( RULE_POW ) )
-            // InternalStoex.g:2510:1: ( RULE_POW )
+            // InternalStoex.g:2509:1: ( ( '^' ) )
+            // InternalStoex.g:2510:1: ( '^' )
             {
-            // InternalStoex.g:2510:1: ( RULE_POW )
-            // InternalStoex.g:2511:2: RULE_POW
+            // InternalStoex.g:2510:1: ( '^' )
+            // InternalStoex.g:2511:2: '^'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPowExprAccess().getPOWTerminalRuleCall_1_1()); 
+               before(grammarAccess.getPowExprAccess().getCircumflexAccentKeyword_1_1()); 
             }
-            match(input,RULE_POW,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPowExprAccess().getPOWTerminalRuleCall_1_1()); 
+               after(grammarAccess.getPowExprAccess().getCircumflexAccentKeyword_1_1()); 
             }
 
             }
@@ -8915,24 +8915,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotExpression__Group__0__Impl"
-    // InternalStoex.g:2559:1: rule__NotExpression__Group__0__Impl : ( RULE_NOT ) ;
+    // InternalStoex.g:2559:1: rule__NotExpression__Group__0__Impl : ( 'NOT' ) ;
     public final void rule__NotExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2563:1: ( ( RULE_NOT ) )
-            // InternalStoex.g:2564:1: ( RULE_NOT )
+            // InternalStoex.g:2563:1: ( ( 'NOT' ) )
+            // InternalStoex.g:2564:1: ( 'NOT' )
             {
-            // InternalStoex.g:2564:1: ( RULE_NOT )
-            // InternalStoex.g:2565:2: RULE_NOT
+            // InternalStoex.g:2564:1: ( 'NOT' )
+            // InternalStoex.g:2565:2: 'NOT'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNotExpressionAccess().getNOTTerminalRuleCall_0()); 
+               before(grammarAccess.getNotExpressionAccess().getNOTKeyword_0()); 
             }
-            match(input,RULE_NOT,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNotExpressionAccess().getNOTTerminalRuleCall_0()); 
+               after(grammarAccess.getNotExpressionAccess().getNOTKeyword_0()); 
             }
 
             }
@@ -9093,7 +9093,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegativeExpressionAccess().getHyphenMinusKeyword_0()); 
             }
-            match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNegativeExpressionAccess().getHyphenMinusKeyword_0()); 
             }
@@ -9344,7 +9344,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt22=2;
             int LA22_0 = input.LA(1);
 
-            if ( (LA22_0==RULE_SQUARE_PAREN_L) ) {
+            if ( (LA22_0==37) ) {
                 alt22=1;
             }
             switch (alt22) {
@@ -9425,24 +9425,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__0__Impl"
-    // InternalStoex.g:2721:1: rule__DoubleLiteral__Group_1__0__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:2721:1: rule__DoubleLiteral__Group_1__0__Impl : ( '[' ) ;
     public final void rule__DoubleLiteral__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2725:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:2726:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:2725:1: ( ( '[' ) )
+            // InternalStoex.g:2726:1: ( '[' )
             {
-            // InternalStoex.g:2726:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:2727:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:2726:1: ( '[' )
+            // InternalStoex.g:2727:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDoubleLiteralAccess().getSQUARE_PAREN_LTerminalRuleCall_1_0()); 
+               before(grammarAccess.getDoubleLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDoubleLiteralAccess().getSQUARE_PAREN_LTerminalRuleCall_1_0()); 
+               after(grammarAccess.getDoubleLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
 
             }
@@ -9588,24 +9588,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__2__Impl"
-    // InternalStoex.g:2774:1: rule__DoubleLiteral__Group_1__2__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:2774:1: rule__DoubleLiteral__Group_1__2__Impl : ( ']' ) ;
     public final void rule__DoubleLiteral__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2778:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:2779:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:2778:1: ( ( ']' ) )
+            // InternalStoex.g:2779:1: ( ']' )
             {
-            // InternalStoex.g:2779:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:2780:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:2779:1: ( ']' )
+            // InternalStoex.g:2780:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDoubleLiteralAccess().getSQUARE_PAREN_RTerminalRuleCall_1_2()); 
+               before(grammarAccess.getDoubleLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDoubleLiteralAccess().getSQUARE_PAREN_RTerminalRuleCall_1_2()); 
+               after(grammarAccess.getDoubleLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
 
             }
@@ -9667,24 +9667,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__0__Impl"
-    // InternalStoex.g:2802:1: rule__Parenthesis__Group__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:2802:1: rule__Parenthesis__Group__0__Impl : ( '(' ) ;
     public final void rule__Parenthesis__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2806:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:2807:1: ( RULE_LPAREN )
+            // InternalStoex.g:2806:1: ( ( '(' ) )
+            // InternalStoex.g:2807:1: ( '(' )
             {
-            // InternalStoex.g:2807:1: ( RULE_LPAREN )
-            // InternalStoex.g:2808:2: RULE_LPAREN
+            // InternalStoex.g:2807:1: ( '(' )
+            // InternalStoex.g:2808:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getParenthesisAccess().getLPARENTerminalRuleCall_0()); 
+               before(grammarAccess.getParenthesisAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getParenthesisAccess().getLPARENTerminalRuleCall_0()); 
+               after(grammarAccess.getParenthesisAccess().getLeftParenthesisKeyword_0()); 
             }
 
             }
@@ -9830,24 +9830,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__2__Impl"
-    // InternalStoex.g:2855:1: rule__Parenthesis__Group__2__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:2855:1: rule__Parenthesis__Group__2__Impl : ( ')' ) ;
     public final void rule__Parenthesis__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2859:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:2860:1: ( RULE_RPAREN )
+            // InternalStoex.g:2859:1: ( ( ')' ) )
+            // InternalStoex.g:2860:1: ( ')' )
             {
-            // InternalStoex.g:2860:1: ( RULE_RPAREN )
-            // InternalStoex.g:2861:2: RULE_RPAREN
+            // InternalStoex.g:2860:1: ( ')' )
+            // InternalStoex.g:2861:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getParenthesisAccess().getRPARENTerminalRuleCall_2()); 
+               before(grammarAccess.getParenthesisAccess().getRightParenthesisKeyword_2()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getParenthesisAccess().getRPARENTerminalRuleCall_2()); 
+               after(grammarAccess.getParenthesisAccess().getRightParenthesisKeyword_2()); 
             }
 
             }
@@ -9998,24 +9998,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__1__Impl"
-    // InternalStoex.g:2910:1: rule__FunctionLiteral__Group__1__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:2910:1: rule__FunctionLiteral__Group__1__Impl : ( '(' ) ;
     public final void rule__FunctionLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2914:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:2915:1: ( RULE_LPAREN )
+            // InternalStoex.g:2914:1: ( ( '(' ) )
+            // InternalStoex.g:2915:1: ( '(' )
             {
-            // InternalStoex.g:2915:1: ( RULE_LPAREN )
-            // InternalStoex.g:2916:2: RULE_LPAREN
+            // InternalStoex.g:2915:1: ( '(' )
+            // InternalStoex.g:2916:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getFunctionLiteralAccess().getLPARENTerminalRuleCall_1()); 
+               before(grammarAccess.getFunctionLiteralAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getFunctionLiteralAccess().getLPARENTerminalRuleCall_1()); 
+               after(grammarAccess.getFunctionLiteralAccess().getLeftParenthesisKeyword_1()); 
             }
 
             }
@@ -10096,7 +10096,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( (LA23_0==RULE_NOT||LA23_0==RULE_LPAREN||(LA23_0>=RULE_DOUBLEPDF && LA23_0<=RULE_BOOLPMF)||(LA23_0>=RULE_DOUBLE && LA23_0<=RULE_STRING)||LA23_0==41) ) {
+            if ( ((LA23_0>=RULE_DOUBLE && LA23_0<=RULE_STRING)||LA23_0==24||LA23_0==36||LA23_0==39||(LA23_0>=43 && LA23_0<=47)) ) {
                 alt23=1;
             }
             switch (alt23) {
@@ -10172,24 +10172,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__3__Impl"
-    // InternalStoex.g:2963:1: rule__FunctionLiteral__Group__3__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:2963:1: rule__FunctionLiteral__Group__3__Impl : ( ')' ) ;
     public final void rule__FunctionLiteral__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2967:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:2968:1: ( RULE_RPAREN )
+            // InternalStoex.g:2967:1: ( ( ')' ) )
+            // InternalStoex.g:2968:1: ( ')' )
             {
-            // InternalStoex.g:2968:1: ( RULE_RPAREN )
-            // InternalStoex.g:2969:2: RULE_RPAREN
+            // InternalStoex.g:2968:1: ( ')' )
+            // InternalStoex.g:2969:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getFunctionLiteralAccess().getRPARENTerminalRuleCall_3()); 
+               before(grammarAccess.getFunctionLiteralAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getFunctionLiteralAccess().getRPARENTerminalRuleCall_3()); 
+               after(grammarAccess.getFunctionLiteralAccess().getRightParenthesisKeyword_3()); 
             }
 
             }
@@ -10356,7 +10356,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt24=2;
                 int LA24_0 = input.LA(1);
 
-                if ( (LA24_0==RULE_COLON) ) {
+                if ( (LA24_0==41) ) {
                     alt24=1;
                 }
 
@@ -10442,24 +10442,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2_1__0__Impl"
-    // InternalStoex.g:3045:1: rule__FunctionLiteral__Group_2_1__0__Impl : ( RULE_COLON ) ;
+    // InternalStoex.g:3045:1: rule__FunctionLiteral__Group_2_1__0__Impl : ( ',' ) ;
     public final void rule__FunctionLiteral__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3049:1: ( ( RULE_COLON ) )
-            // InternalStoex.g:3050:1: ( RULE_COLON )
+            // InternalStoex.g:3049:1: ( ( ',' ) )
+            // InternalStoex.g:3050:1: ( ',' )
             {
-            // InternalStoex.g:3050:1: ( RULE_COLON )
-            // InternalStoex.g:3051:2: RULE_COLON
+            // InternalStoex.g:3050:1: ( ',' )
+            // InternalStoex.g:3051:2: ','
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getFunctionLiteralAccess().getCOLONTerminalRuleCall_2_1_0()); 
+               before(grammarAccess.getFunctionLiteralAccess().getCommaKeyword_2_1_0()); 
             }
-            match(input,RULE_COLON,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getFunctionLiteralAccess().getCOLONTerminalRuleCall_2_1_0()); 
+               after(grammarAccess.getFunctionLiteralAccess().getCommaKeyword_2_1_0()); 
             }
 
             }
@@ -10694,24 +10694,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__1__Impl"
-    // InternalStoex.g:3126:1: rule__NamespaceReference__Group__1__Impl : ( RULE_DOT ) ;
+    // InternalStoex.g:3126:1: rule__NamespaceReference__Group__1__Impl : ( '.' ) ;
     public final void rule__NamespaceReference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3130:1: ( ( RULE_DOT ) )
-            // InternalStoex.g:3131:1: ( RULE_DOT )
+            // InternalStoex.g:3130:1: ( ( '.' ) )
+            // InternalStoex.g:3131:1: ( '.' )
             {
-            // InternalStoex.g:3131:1: ( RULE_DOT )
-            // InternalStoex.g:3132:2: RULE_DOT
+            // InternalStoex.g:3131:1: ( '.' )
+            // InternalStoex.g:3132:2: '.'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNamespaceReferenceAccess().getDOTTerminalRuleCall_1()); 
+               before(grammarAccess.getNamespaceReferenceAccess().getFullStopKeyword_1()); 
             }
-            match(input,RULE_DOT,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNamespaceReferenceAccess().getDOTTerminalRuleCall_1()); 
+               after(grammarAccess.getNamespaceReferenceAccess().getFullStopKeyword_1()); 
             }
 
             }
@@ -10960,7 +10960,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt25=2;
             int LA25_0 = input.LA(1);
 
-            if ( (LA25_0==RULE_SQUARE_PAREN_L) ) {
+            if ( (LA25_0==37) ) {
                 alt25=1;
             }
             switch (alt25) {
@@ -11041,24 +11041,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__0__Impl"
-    // InternalStoex.g:3234:1: rule__IntLiteral__Group_1__0__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:3234:1: rule__IntLiteral__Group_1__0__Impl : ( '[' ) ;
     public final void rule__IntLiteral__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3238:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:3239:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:3238:1: ( ( '[' ) )
+            // InternalStoex.g:3239:1: ( '[' )
             {
-            // InternalStoex.g:3239:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:3240:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:3239:1: ( '[' )
+            // InternalStoex.g:3240:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntLiteralAccess().getSQUARE_PAREN_LTerminalRuleCall_1_0()); 
+               before(grammarAccess.getIntLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntLiteralAccess().getSQUARE_PAREN_LTerminalRuleCall_1_0()); 
+               after(grammarAccess.getIntLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
 
             }
@@ -11204,24 +11204,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__2__Impl"
-    // InternalStoex.g:3287:1: rule__IntLiteral__Group_1__2__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:3287:1: rule__IntLiteral__Group_1__2__Impl : ( ']' ) ;
     public final void rule__IntLiteral__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3291:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:3292:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:3291:1: ( ( ']' ) )
+            // InternalStoex.g:3292:1: ( ']' )
             {
-            // InternalStoex.g:3292:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:3293:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:3292:1: ( ']' )
+            // InternalStoex.g:3293:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntLiteralAccess().getSQUARE_PAREN_RTerminalRuleCall_1_2()); 
+               before(grammarAccess.getIntLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntLiteralAccess().getSQUARE_PAREN_RTerminalRuleCall_1_2()); 
+               after(grammarAccess.getIntLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
 
             }
@@ -11380,7 +11380,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( (LA26_0==43) ) {
+            if ( (LA26_0==26) ) {
                 alt26=1;
             }
             switch (alt26) {
@@ -11555,7 +11555,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getSolidusKeyword_1_1()); 
             }
-            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitDivAccess().getSolidusKeyword_1_1()); 
             }
@@ -11802,7 +11802,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt27=2;
                 int LA27_0 = input.LA(1);
 
-                if ( (LA27_0==42) ) {
+                if ( (LA27_0==25) ) {
                     int LA27_2 = input.LA(2);
 
                     if ( (synpred46_InternalStoex()) ) {
@@ -11988,7 +11988,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getAsteriskKeyword_1_1()); 
             }
-            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitMultiAccess().getAsteriskKeyword_1_1()); 
             }
@@ -12241,7 +12241,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt28=2;
                 int LA28_0 = input.LA(1);
 
-                if ( (LA28_0==RULE_POW) ) {
+                if ( (LA28_0==35) ) {
                     alt28=1;
                 }
 
@@ -12327,24 +12327,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__0__Impl"
-    // InternalStoex.g:3639:1: rule__UnitPow__Group_0_1__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:3639:1: rule__UnitPow__Group_0_1__0__Impl : ( '(' ) ;
     public final void rule__UnitPow__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3643:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:3644:1: ( RULE_LPAREN )
+            // InternalStoex.g:3643:1: ( ( '(' ) )
+            // InternalStoex.g:3644:1: ( '(' )
             {
-            // InternalStoex.g:3644:1: ( RULE_LPAREN )
-            // InternalStoex.g:3645:2: RULE_LPAREN
+            // InternalStoex.g:3644:1: ( '(' )
+            // InternalStoex.g:3645:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnitPowAccess().getLPARENTerminalRuleCall_0_1_0()); 
+               before(grammarAccess.getUnitPowAccess().getLeftParenthesisKeyword_0_1_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getUnitPowAccess().getLPARENTerminalRuleCall_0_1_0()); 
+               after(grammarAccess.getUnitPowAccess().getLeftParenthesisKeyword_0_1_0()); 
             }
 
             }
@@ -12490,24 +12490,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__2__Impl"
-    // InternalStoex.g:3692:1: rule__UnitPow__Group_0_1__2__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:3692:1: rule__UnitPow__Group_0_1__2__Impl : ( ')' ) ;
     public final void rule__UnitPow__Group_0_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3696:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:3697:1: ( RULE_RPAREN )
+            // InternalStoex.g:3696:1: ( ( ')' ) )
+            // InternalStoex.g:3697:1: ( ')' )
             {
-            // InternalStoex.g:3697:1: ( RULE_RPAREN )
-            // InternalStoex.g:3698:2: RULE_RPAREN
+            // InternalStoex.g:3697:1: ( ')' )
+            // InternalStoex.g:3698:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnitPowAccess().getRPARENTerminalRuleCall_0_1_2()); 
+               before(grammarAccess.getUnitPowAccess().getRightParenthesisKeyword_0_1_2()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getUnitPowAccess().getRPARENTerminalRuleCall_0_1_2()); 
+               after(grammarAccess.getUnitPowAccess().getRightParenthesisKeyword_0_1_2()); 
             }
 
             }
@@ -12648,24 +12648,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__1__Impl"
-    // InternalStoex.g:3747:1: rule__UnitPow__Group_1__1__Impl : ( RULE_POW ) ;
+    // InternalStoex.g:3747:1: rule__UnitPow__Group_1__1__Impl : ( '^' ) ;
     public final void rule__UnitPow__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3751:1: ( ( RULE_POW ) )
-            // InternalStoex.g:3752:1: ( RULE_POW )
+            // InternalStoex.g:3751:1: ( ( '^' ) )
+            // InternalStoex.g:3752:1: ( '^' )
             {
-            // InternalStoex.g:3752:1: ( RULE_POW )
-            // InternalStoex.g:3753:2: RULE_POW
+            // InternalStoex.g:3752:1: ( '^' )
+            // InternalStoex.g:3753:2: '^'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnitPowAccess().getPOWTerminalRuleCall_1_1()); 
+               before(grammarAccess.getUnitPowAccess().getCircumflexAccentKeyword_1_1()); 
             }
-            match(input,RULE_POW,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getUnitPowAccess().getPOWTerminalRuleCall_1_1()); 
+               after(grammarAccess.getUnitPowAccess().getCircumflexAccentKeyword_1_1()); 
             }
 
             }
@@ -12811,24 +12811,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__0__Impl"
-    // InternalStoex.g:3801:1: rule__BoxedPDF__Group__0__Impl : ( RULE_DOUBLEPDF ) ;
+    // InternalStoex.g:3801:1: rule__BoxedPDF__Group__0__Impl : ( 'DoublePDF' ) ;
     public final void rule__BoxedPDF__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3805:1: ( ( RULE_DOUBLEPDF ) )
-            // InternalStoex.g:3806:1: ( RULE_DOUBLEPDF )
+            // InternalStoex.g:3805:1: ( ( 'DoublePDF' ) )
+            // InternalStoex.g:3806:1: ( 'DoublePDF' )
             {
-            // InternalStoex.g:3806:1: ( RULE_DOUBLEPDF )
-            // InternalStoex.g:3807:2: RULE_DOUBLEPDF
+            // InternalStoex.g:3806:1: ( 'DoublePDF' )
+            // InternalStoex.g:3807:2: 'DoublePDF'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoxedPDFAccess().getDOUBLEPDFTerminalRuleCall_0()); 
+               before(grammarAccess.getBoxedPDFAccess().getDoublePDFKeyword_0()); 
             }
-            match(input,RULE_DOUBLEPDF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoxedPDFAccess().getDOUBLEPDFTerminalRuleCall_0()); 
+               after(grammarAccess.getBoxedPDFAccess().getDoublePDFKeyword_0()); 
             }
 
             }
@@ -12890,24 +12890,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__1__Impl"
-    // InternalStoex.g:3828:1: rule__BoxedPDF__Group__1__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:3828:1: rule__BoxedPDF__Group__1__Impl : ( '[' ) ;
     public final void rule__BoxedPDF__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3832:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:3833:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:3832:1: ( ( '[' ) )
+            // InternalStoex.g:3833:1: ( '[' )
             {
-            // InternalStoex.g:3833:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:3834:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:3833:1: ( '[' )
+            // InternalStoex.g:3834:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_LTerminalRuleCall_1()); 
+               before(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_1()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_LTerminalRuleCall_1()); 
+               after(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_1()); 
             }
 
             }
@@ -13016,7 +13016,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt29=2;
                 int LA29_0 = input.LA(1);
 
-                if ( (LA29_0==RULE_LPAREN) ) {
+                if ( (LA29_0==39) ) {
                     alt29=1;
                 }
 
@@ -13105,24 +13105,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__3__Impl"
-    // InternalStoex.g:3889:1: rule__BoxedPDF__Group__3__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:3889:1: rule__BoxedPDF__Group__3__Impl : ( ']' ) ;
     public final void rule__BoxedPDF__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3893:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:3894:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:3893:1: ( ( ']' ) )
+            // InternalStoex.g:3894:1: ( ']' )
             {
-            // InternalStoex.g:3894:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:3895:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:3894:1: ( ']' )
+            // InternalStoex.g:3895:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_RTerminalRuleCall_3()); 
+               before(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_3()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_RTerminalRuleCall_3()); 
+               after(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_3()); 
             }
 
             }
@@ -13198,7 +13198,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==RULE_SQUARE_PAREN_L) ) {
+            if ( (LA30_0==37) ) {
                 alt30=1;
             }
             switch (alt30) {
@@ -13279,24 +13279,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__0__Impl"
-    // InternalStoex.g:3943:1: rule__BoxedPDF__Group_4__0__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:3943:1: rule__BoxedPDF__Group_4__0__Impl : ( '[' ) ;
     public final void rule__BoxedPDF__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3947:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:3948:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:3947:1: ( ( '[' ) )
+            // InternalStoex.g:3948:1: ( '[' )
             {
-            // InternalStoex.g:3948:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:3949:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:3948:1: ( '[' )
+            // InternalStoex.g:3949:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_LTerminalRuleCall_4_0()); 
+               before(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_4_0()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_LTerminalRuleCall_4_0()); 
+               after(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_4_0()); 
             }
 
             }
@@ -13442,24 +13442,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__2__Impl"
-    // InternalStoex.g:3996:1: rule__BoxedPDF__Group_4__2__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:3996:1: rule__BoxedPDF__Group_4__2__Impl : ( ']' ) ;
     public final void rule__BoxedPDF__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4000:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4001:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4000:1: ( ( ']' ) )
+            // InternalStoex.g:4001:1: ( ']' )
             {
-            // InternalStoex.g:4001:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4002:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4001:1: ( ']' )
+            // InternalStoex.g:4002:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_RTerminalRuleCall_4_2()); 
+               before(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_4_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoxedPDFAccess().getSQUARE_PAREN_RTerminalRuleCall_4_2()); 
+               after(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_4_2()); 
             }
 
             }
@@ -13521,24 +13521,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__0__Impl"
-    // InternalStoex.g:4024:1: rule__ProbabilityMassFunction__Group_0__0__Impl : ( RULE_INTPMF ) ;
+    // InternalStoex.g:4024:1: rule__ProbabilityMassFunction__Group_0__0__Impl : ( 'IntPMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4028:1: ( ( RULE_INTPMF ) )
-            // InternalStoex.g:4029:1: ( RULE_INTPMF )
+            // InternalStoex.g:4028:1: ( ( 'IntPMF' ) )
+            // InternalStoex.g:4029:1: ( 'IntPMF' )
             {
-            // InternalStoex.g:4029:1: ( RULE_INTPMF )
-            // InternalStoex.g:4030:2: RULE_INTPMF
+            // InternalStoex.g:4029:1: ( 'IntPMF' )
+            // InternalStoex.g:4030:2: 'IntPMF'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getINTPMFTerminalRuleCall_0_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getIntPMFKeyword_0_0()); 
             }
-            match(input,RULE_INTPMF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getINTPMFTerminalRuleCall_0_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getIntPMFKeyword_0_0()); 
             }
 
             }
@@ -13600,24 +13600,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__1__Impl"
-    // InternalStoex.g:4051:1: rule__ProbabilityMassFunction__Group_0__1__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:4051:1: rule__ProbabilityMassFunction__Group_0__1__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4055:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:4056:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:4055:1: ( ( '[' ) )
+            // InternalStoex.g:4056:1: ( '[' )
             {
-            // InternalStoex.g:4056:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:4057:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:4056:1: ( '[' )
+            // InternalStoex.g:4057:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_0_1()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_1()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_0_1()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_1()); 
             }
 
             }
@@ -13726,7 +13726,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt31=2;
                 int LA31_0 = input.LA(1);
 
-                if ( (LA31_0==RULE_LPAREN) ) {
+                if ( (LA31_0==39) ) {
                     alt31=1;
                 }
 
@@ -13815,24 +13815,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__3__Impl"
-    // InternalStoex.g:4112:1: rule__ProbabilityMassFunction__Group_0__3__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:4112:1: rule__ProbabilityMassFunction__Group_0__3__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4116:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4117:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4116:1: ( ( ']' ) )
+            // InternalStoex.g:4117:1: ( ']' )
             {
-            // InternalStoex.g:4117:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4118:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4117:1: ( ']' )
+            // InternalStoex.g:4118:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_0_3()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_3()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_0_3()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_3()); 
             }
 
             }
@@ -13908,7 +13908,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt32=2;
             int LA32_0 = input.LA(1);
 
-            if ( (LA32_0==RULE_SQUARE_PAREN_L) ) {
+            if ( (LA32_0==37) ) {
                 alt32=1;
             }
             switch (alt32) {
@@ -13989,24 +13989,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__0__Impl"
-    // InternalStoex.g:4166:1: rule__ProbabilityMassFunction__Group_0_4__0__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:4166:1: rule__ProbabilityMassFunction__Group_0_4__0__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_0_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4170:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:4171:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:4170:1: ( ( '[' ) )
+            // InternalStoex.g:4171:1: ( '[' )
             {
-            // InternalStoex.g:4171:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:4172:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:4171:1: ( '[' )
+            // InternalStoex.g:4172:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_0_4_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_4_0()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_0_4_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_4_0()); 
             }
 
             }
@@ -14152,24 +14152,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__2__Impl"
-    // InternalStoex.g:4219:1: rule__ProbabilityMassFunction__Group_0_4__2__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:4219:1: rule__ProbabilityMassFunction__Group_0_4__2__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_0_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4223:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4224:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4223:1: ( ( ']' ) )
+            // InternalStoex.g:4224:1: ( ']' )
             {
-            // InternalStoex.g:4224:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4225:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4224:1: ( ']' )
+            // InternalStoex.g:4225:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_0_4_2()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_4_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_0_4_2()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_4_2()); 
             }
 
             }
@@ -14231,24 +14231,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__0__Impl"
-    // InternalStoex.g:4247:1: rule__ProbabilityMassFunction__Group_1__0__Impl : ( RULE_DOUBLEPMF ) ;
+    // InternalStoex.g:4247:1: rule__ProbabilityMassFunction__Group_1__0__Impl : ( 'DoublePMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4251:1: ( ( RULE_DOUBLEPMF ) )
-            // InternalStoex.g:4252:1: ( RULE_DOUBLEPMF )
+            // InternalStoex.g:4251:1: ( ( 'DoublePMF' ) )
+            // InternalStoex.g:4252:1: ( 'DoublePMF' )
             {
-            // InternalStoex.g:4252:1: ( RULE_DOUBLEPMF )
-            // InternalStoex.g:4253:2: RULE_DOUBLEPMF
+            // InternalStoex.g:4252:1: ( 'DoublePMF' )
+            // InternalStoex.g:4253:2: 'DoublePMF'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getDOUBLEPMFTerminalRuleCall_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getDoublePMFKeyword_1_0()); 
             }
-            match(input,RULE_DOUBLEPMF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getDOUBLEPMFTerminalRuleCall_1_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getDoublePMFKeyword_1_0()); 
             }
 
             }
@@ -14310,24 +14310,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__1__Impl"
-    // InternalStoex.g:4274:1: rule__ProbabilityMassFunction__Group_1__1__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:4274:1: rule__ProbabilityMassFunction__Group_1__1__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4278:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:4279:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:4278:1: ( ( '[' ) )
+            // InternalStoex.g:4279:1: ( '[' )
             {
-            // InternalStoex.g:4279:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:4280:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:4279:1: ( '[' )
+            // InternalStoex.g:4280:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_1_1()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_1()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_1_1()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_1()); 
             }
 
             }
@@ -14436,7 +14436,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt33=2;
                 int LA33_0 = input.LA(1);
 
-                if ( (LA33_0==RULE_LPAREN) ) {
+                if ( (LA33_0==39) ) {
                     alt33=1;
                 }
 
@@ -14525,24 +14525,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__3__Impl"
-    // InternalStoex.g:4335:1: rule__ProbabilityMassFunction__Group_1__3__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:4335:1: rule__ProbabilityMassFunction__Group_1__3__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4339:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4340:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4339:1: ( ( ']' ) )
+            // InternalStoex.g:4340:1: ( ']' )
             {
-            // InternalStoex.g:4340:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4341:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4340:1: ( ']' )
+            // InternalStoex.g:4341:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_1_3()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_3()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_1_3()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_3()); 
             }
 
             }
@@ -14618,7 +14618,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt34=2;
             int LA34_0 = input.LA(1);
 
-            if ( (LA34_0==RULE_SQUARE_PAREN_L) ) {
+            if ( (LA34_0==37) ) {
                 alt34=1;
             }
             switch (alt34) {
@@ -14699,24 +14699,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__0__Impl"
-    // InternalStoex.g:4389:1: rule__ProbabilityMassFunction__Group_1_4__0__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:4389:1: rule__ProbabilityMassFunction__Group_1_4__0__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_1_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4393:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:4394:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:4393:1: ( ( '[' ) )
+            // InternalStoex.g:4394:1: ( '[' )
             {
-            // InternalStoex.g:4394:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:4395:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:4394:1: ( '[' )
+            // InternalStoex.g:4395:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_1_4_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_4_0()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_1_4_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_4_0()); 
             }
 
             }
@@ -14862,24 +14862,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__2__Impl"
-    // InternalStoex.g:4442:1: rule__ProbabilityMassFunction__Group_1_4__2__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:4442:1: rule__ProbabilityMassFunction__Group_1_4__2__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_1_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4446:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4447:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4446:1: ( ( ']' ) )
+            // InternalStoex.g:4447:1: ( ']' )
             {
-            // InternalStoex.g:4447:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4448:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4447:1: ( ']' )
+            // InternalStoex.g:4448:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_1_4_2()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_4_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_1_4_2()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_4_2()); 
             }
 
             }
@@ -14941,24 +14941,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__0__Impl"
-    // InternalStoex.g:4470:1: rule__ProbabilityMassFunction__Group_2__0__Impl : ( RULE_ENUMPMF ) ;
+    // InternalStoex.g:4470:1: rule__ProbabilityMassFunction__Group_2__0__Impl : ( 'EnumPMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4474:1: ( ( RULE_ENUMPMF ) )
-            // InternalStoex.g:4475:1: ( RULE_ENUMPMF )
+            // InternalStoex.g:4474:1: ( ( 'EnumPMF' ) )
+            // InternalStoex.g:4475:1: ( 'EnumPMF' )
             {
-            // InternalStoex.g:4475:1: ( RULE_ENUMPMF )
-            // InternalStoex.g:4476:2: RULE_ENUMPMF
+            // InternalStoex.g:4475:1: ( 'EnumPMF' )
+            // InternalStoex.g:4476:2: 'EnumPMF'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getENUMPMFTerminalRuleCall_2_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getEnumPMFKeyword_2_0()); 
             }
-            match(input,RULE_ENUMPMF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getENUMPMFTerminalRuleCall_2_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getEnumPMFKeyword_2_0()); 
             }
 
             }
@@ -15039,7 +15039,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt35=2;
             int LA35_0 = input.LA(1);
 
-            if ( (LA35_0==RULE_LPAREN) ) {
+            if ( (LA35_0==39) ) {
                 alt35=1;
             }
             switch (alt35) {
@@ -15120,24 +15120,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__2__Impl"
-    // InternalStoex.g:4524:1: rule__ProbabilityMassFunction__Group_2__2__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:4524:1: rule__ProbabilityMassFunction__Group_2__2__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4528:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:4529:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:4528:1: ( ( '[' ) )
+            // InternalStoex.g:4529:1: ( '[' )
             {
-            // InternalStoex.g:4529:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:4530:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:4529:1: ( '[' )
+            // InternalStoex.g:4530:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_2_2()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_2_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_2_2()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_2_2()); 
             }
 
             }
@@ -15246,7 +15246,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt36=2;
                 int LA36_0 = input.LA(1);
 
-                if ( (LA36_0==RULE_LPAREN) ) {
+                if ( (LA36_0==39) ) {
                     alt36=1;
                 }
 
@@ -15330,24 +15330,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__4__Impl"
-    // InternalStoex.g:4584:1: rule__ProbabilityMassFunction__Group_2__4__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:4584:1: rule__ProbabilityMassFunction__Group_2__4__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4588:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4589:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4588:1: ( ( ']' ) )
+            // InternalStoex.g:4589:1: ( ']' )
             {
-            // InternalStoex.g:4589:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4590:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4589:1: ( ']' )
+            // InternalStoex.g:4590:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_2_4()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_2_4()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_2_4()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_2_4()); 
             }
 
             }
@@ -15409,24 +15409,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__0__Impl"
-    // InternalStoex.g:4612:1: rule__ProbabilityMassFunction__Group_2_1__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:4612:1: rule__ProbabilityMassFunction__Group_2_1__0__Impl : ( '(' ) ;
     public final void rule__ProbabilityMassFunction__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4616:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:4617:1: ( RULE_LPAREN )
+            // InternalStoex.g:4616:1: ( ( '(' ) )
+            // InternalStoex.g:4617:1: ( '(' )
             {
-            // InternalStoex.g:4617:1: ( RULE_LPAREN )
-            // InternalStoex.g:4618:2: RULE_LPAREN
+            // InternalStoex.g:4617:1: ( '(' )
+            // InternalStoex.g:4618:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getLPARENTerminalRuleCall_2_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_2_1_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getLPARENTerminalRuleCall_2_1_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_2_1_0()); 
             }
 
             }
@@ -15572,24 +15572,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__2__Impl"
-    // InternalStoex.g:4665:1: rule__ProbabilityMassFunction__Group_2_1__2__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:4665:1: rule__ProbabilityMassFunction__Group_2_1__2__Impl : ( ')' ) ;
     public final void rule__ProbabilityMassFunction__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4669:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:4670:1: ( RULE_RPAREN )
+            // InternalStoex.g:4669:1: ( ( ')' ) )
+            // InternalStoex.g:4670:1: ( ')' )
             {
-            // InternalStoex.g:4670:1: ( RULE_RPAREN )
-            // InternalStoex.g:4671:2: RULE_RPAREN
+            // InternalStoex.g:4670:1: ( ')' )
+            // InternalStoex.g:4671:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getRPARENTerminalRuleCall_2_1_2()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_2_1_2()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getRPARENTerminalRuleCall_2_1_2()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_2_1_2()); 
             }
 
             }
@@ -15651,24 +15651,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__0__Impl"
-    // InternalStoex.g:4693:1: rule__ProbabilityMassFunction__Group_3__0__Impl : ( RULE_BOOLPMF ) ;
+    // InternalStoex.g:4693:1: rule__ProbabilityMassFunction__Group_3__0__Impl : ( 'BoolPMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4697:1: ( ( RULE_BOOLPMF ) )
-            // InternalStoex.g:4698:1: ( RULE_BOOLPMF )
+            // InternalStoex.g:4697:1: ( ( 'BoolPMF' ) )
+            // InternalStoex.g:4698:1: ( 'BoolPMF' )
             {
-            // InternalStoex.g:4698:1: ( RULE_BOOLPMF )
-            // InternalStoex.g:4699:2: RULE_BOOLPMF
+            // InternalStoex.g:4698:1: ( 'BoolPMF' )
+            // InternalStoex.g:4699:2: 'BoolPMF'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getBOOLPMFTerminalRuleCall_3_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getBoolPMFKeyword_3_0()); 
             }
-            match(input,RULE_BOOLPMF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getBOOLPMFTerminalRuleCall_3_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getBoolPMFKeyword_3_0()); 
             }
 
             }
@@ -15749,7 +15749,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt37=2;
             int LA37_0 = input.LA(1);
 
-            if ( (LA37_0==RULE_LPAREN) ) {
+            if ( (LA37_0==39) ) {
                 alt37=1;
             }
             switch (alt37) {
@@ -15830,24 +15830,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__2__Impl"
-    // InternalStoex.g:4747:1: rule__ProbabilityMassFunction__Group_3__2__Impl : ( RULE_SQUARE_PAREN_L ) ;
+    // InternalStoex.g:4747:1: rule__ProbabilityMassFunction__Group_3__2__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4751:1: ( ( RULE_SQUARE_PAREN_L ) )
-            // InternalStoex.g:4752:1: ( RULE_SQUARE_PAREN_L )
+            // InternalStoex.g:4751:1: ( ( '[' ) )
+            // InternalStoex.g:4752:1: ( '[' )
             {
-            // InternalStoex.g:4752:1: ( RULE_SQUARE_PAREN_L )
-            // InternalStoex.g:4753:2: RULE_SQUARE_PAREN_L
+            // InternalStoex.g:4752:1: ( '[' )
+            // InternalStoex.g:4753:2: '['
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_3_2()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_3_2()); 
             }
-            match(input,RULE_SQUARE_PAREN_L,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_LTerminalRuleCall_3_2()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_3_2()); 
             }
 
             }
@@ -15956,7 +15956,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                 int alt38=2;
                 int LA38_0 = input.LA(1);
 
-                if ( (LA38_0==RULE_LPAREN) ) {
+                if ( (LA38_0==39) ) {
                     alt38=1;
                 }
 
@@ -16040,24 +16040,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__4__Impl"
-    // InternalStoex.g:4807:1: rule__ProbabilityMassFunction__Group_3__4__Impl : ( RULE_SQUARE_PAREN_R ) ;
+    // InternalStoex.g:4807:1: rule__ProbabilityMassFunction__Group_3__4__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4811:1: ( ( RULE_SQUARE_PAREN_R ) )
-            // InternalStoex.g:4812:1: ( RULE_SQUARE_PAREN_R )
+            // InternalStoex.g:4811:1: ( ( ']' ) )
+            // InternalStoex.g:4812:1: ( ']' )
             {
-            // InternalStoex.g:4812:1: ( RULE_SQUARE_PAREN_R )
-            // InternalStoex.g:4813:2: RULE_SQUARE_PAREN_R
+            // InternalStoex.g:4812:1: ( ']' )
+            // InternalStoex.g:4813:2: ']'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_3_4()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_3_4()); 
             }
-            match(input,RULE_SQUARE_PAREN_R,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getSQUARE_PAREN_RTerminalRuleCall_3_4()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_3_4()); 
             }
 
             }
@@ -16119,24 +16119,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__0__Impl"
-    // InternalStoex.g:4835:1: rule__ProbabilityMassFunction__Group_3_1__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:4835:1: rule__ProbabilityMassFunction__Group_3_1__0__Impl : ( '(' ) ;
     public final void rule__ProbabilityMassFunction__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4839:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:4840:1: ( RULE_LPAREN )
+            // InternalStoex.g:4839:1: ( ( '(' ) )
+            // InternalStoex.g:4840:1: ( '(' )
             {
-            // InternalStoex.g:4840:1: ( RULE_LPAREN )
-            // InternalStoex.g:4841:2: RULE_LPAREN
+            // InternalStoex.g:4840:1: ( '(' )
+            // InternalStoex.g:4841:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getLPARENTerminalRuleCall_3_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_3_1_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getLPARENTerminalRuleCall_3_1_0()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_3_1_0()); 
             }
 
             }
@@ -16282,24 +16282,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__2__Impl"
-    // InternalStoex.g:4888:1: rule__ProbabilityMassFunction__Group_3_1__2__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:4888:1: rule__ProbabilityMassFunction__Group_3_1__2__Impl : ( ')' ) ;
     public final void rule__ProbabilityMassFunction__Group_3_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4892:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:4893:1: ( RULE_RPAREN )
+            // InternalStoex.g:4892:1: ( ( ')' ) )
+            // InternalStoex.g:4893:1: ( ')' )
             {
-            // InternalStoex.g:4893:1: ( RULE_RPAREN )
-            // InternalStoex.g:4894:2: RULE_RPAREN
+            // InternalStoex.g:4893:1: ( ')' )
+            // InternalStoex.g:4894:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getRPARENTerminalRuleCall_3_1_2()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_3_1_2()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getRPARENTerminalRuleCall_3_1_2()); 
+               after(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_3_1_2()); 
             }
 
             }
@@ -16361,24 +16361,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__0__Impl"
-    // InternalStoex.g:4916:1: rule__Numeric_int_sample__Group__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:4916:1: rule__Numeric_int_sample__Group__0__Impl : ( '(' ) ;
     public final void rule__Numeric_int_sample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4920:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:4921:1: ( RULE_LPAREN )
+            // InternalStoex.g:4920:1: ( ( '(' ) )
+            // InternalStoex.g:4921:1: ( '(' )
             {
-            // InternalStoex.g:4921:1: ( RULE_LPAREN )
-            // InternalStoex.g:4922:2: RULE_LPAREN
+            // InternalStoex.g:4921:1: ( '(' )
+            // InternalStoex.g:4922:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumeric_int_sampleAccess().getLPARENTerminalRuleCall_0()); 
+               before(grammarAccess.getNumeric_int_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumeric_int_sampleAccess().getLPARENTerminalRuleCall_0()); 
+               after(grammarAccess.getNumeric_int_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
 
             }
@@ -16529,24 +16529,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__2__Impl"
-    // InternalStoex.g:4970:1: rule__Numeric_int_sample__Group__2__Impl : ( RULE_SEMI ) ;
+    // InternalStoex.g:4970:1: rule__Numeric_int_sample__Group__2__Impl : ( ';' ) ;
     public final void rule__Numeric_int_sample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4974:1: ( ( RULE_SEMI ) )
-            // InternalStoex.g:4975:1: ( RULE_SEMI )
+            // InternalStoex.g:4974:1: ( ( ';' ) )
+            // InternalStoex.g:4975:1: ( ';' )
             {
-            // InternalStoex.g:4975:1: ( RULE_SEMI )
-            // InternalStoex.g:4976:2: RULE_SEMI
+            // InternalStoex.g:4975:1: ( ';' )
+            // InternalStoex.g:4976:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumeric_int_sampleAccess().getSEMITerminalRuleCall_2()); 
+               before(grammarAccess.getNumeric_int_sampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,RULE_SEMI,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumeric_int_sampleAccess().getSEMITerminalRuleCall_2()); 
+               after(grammarAccess.getNumeric_int_sampleAccess().getSemicolonKeyword_2()); 
             }
 
             }
@@ -16692,24 +16692,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__4__Impl"
-    // InternalStoex.g:5023:1: rule__Numeric_int_sample__Group__4__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:5023:1: rule__Numeric_int_sample__Group__4__Impl : ( ')' ) ;
     public final void rule__Numeric_int_sample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5027:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:5028:1: ( RULE_RPAREN )
+            // InternalStoex.g:5027:1: ( ( ')' ) )
+            // InternalStoex.g:5028:1: ( ')' )
             {
-            // InternalStoex.g:5028:1: ( RULE_RPAREN )
-            // InternalStoex.g:5029:2: RULE_RPAREN
+            // InternalStoex.g:5028:1: ( ')' )
+            // InternalStoex.g:5029:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumeric_int_sampleAccess().getRPARENTerminalRuleCall_4()); 
+               before(grammarAccess.getNumeric_int_sampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumeric_int_sampleAccess().getRPARENTerminalRuleCall_4()); 
+               after(grammarAccess.getNumeric_int_sampleAccess().getRightParenthesisKeyword_4()); 
             }
 
             }
@@ -16771,24 +16771,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__0__Impl"
-    // InternalStoex.g:5051:1: rule__Numeric_real_sample__Group__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:5051:1: rule__Numeric_real_sample__Group__0__Impl : ( '(' ) ;
     public final void rule__Numeric_real_sample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5055:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:5056:1: ( RULE_LPAREN )
+            // InternalStoex.g:5055:1: ( ( '(' ) )
+            // InternalStoex.g:5056:1: ( '(' )
             {
-            // InternalStoex.g:5056:1: ( RULE_LPAREN )
-            // InternalStoex.g:5057:2: RULE_LPAREN
+            // InternalStoex.g:5056:1: ( '(' )
+            // InternalStoex.g:5057:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumeric_real_sampleAccess().getLPARENTerminalRuleCall_0()); 
+               before(grammarAccess.getNumeric_real_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumeric_real_sampleAccess().getLPARENTerminalRuleCall_0()); 
+               after(grammarAccess.getNumeric_real_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
 
             }
@@ -16939,24 +16939,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__2__Impl"
-    // InternalStoex.g:5105:1: rule__Numeric_real_sample__Group__2__Impl : ( RULE_SEMI ) ;
+    // InternalStoex.g:5105:1: rule__Numeric_real_sample__Group__2__Impl : ( ';' ) ;
     public final void rule__Numeric_real_sample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5109:1: ( ( RULE_SEMI ) )
-            // InternalStoex.g:5110:1: ( RULE_SEMI )
+            // InternalStoex.g:5109:1: ( ( ';' ) )
+            // InternalStoex.g:5110:1: ( ';' )
             {
-            // InternalStoex.g:5110:1: ( RULE_SEMI )
-            // InternalStoex.g:5111:2: RULE_SEMI
+            // InternalStoex.g:5110:1: ( ';' )
+            // InternalStoex.g:5111:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumeric_real_sampleAccess().getSEMITerminalRuleCall_2()); 
+               before(grammarAccess.getNumeric_real_sampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,RULE_SEMI,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumeric_real_sampleAccess().getSEMITerminalRuleCall_2()); 
+               after(grammarAccess.getNumeric_real_sampleAccess().getSemicolonKeyword_2()); 
             }
 
             }
@@ -17102,24 +17102,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__4__Impl"
-    // InternalStoex.g:5158:1: rule__Numeric_real_sample__Group__4__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:5158:1: rule__Numeric_real_sample__Group__4__Impl : ( ')' ) ;
     public final void rule__Numeric_real_sample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5162:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:5163:1: ( RULE_RPAREN )
+            // InternalStoex.g:5162:1: ( ( ')' ) )
+            // InternalStoex.g:5163:1: ( ')' )
             {
-            // InternalStoex.g:5163:1: ( RULE_RPAREN )
-            // InternalStoex.g:5164:2: RULE_RPAREN
+            // InternalStoex.g:5163:1: ( ')' )
+            // InternalStoex.g:5164:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumeric_real_sampleAccess().getRPARENTerminalRuleCall_4()); 
+               before(grammarAccess.getNumeric_real_sampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumeric_real_sampleAccess().getRPARENTerminalRuleCall_4()); 
+               after(grammarAccess.getNumeric_real_sampleAccess().getRightParenthesisKeyword_4()); 
             }
 
             }
@@ -17181,24 +17181,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__0__Impl"
-    // InternalStoex.g:5186:1: rule__Real_pdf_sample__Group__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:5186:1: rule__Real_pdf_sample__Group__0__Impl : ( '(' ) ;
     public final void rule__Real_pdf_sample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5190:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:5191:1: ( RULE_LPAREN )
+            // InternalStoex.g:5190:1: ( ( '(' ) )
+            // InternalStoex.g:5191:1: ( '(' )
             {
-            // InternalStoex.g:5191:1: ( RULE_LPAREN )
-            // InternalStoex.g:5192:2: RULE_LPAREN
+            // InternalStoex.g:5191:1: ( '(' )
+            // InternalStoex.g:5192:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getReal_pdf_sampleAccess().getLPARENTerminalRuleCall_0()); 
+               before(grammarAccess.getReal_pdf_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getReal_pdf_sampleAccess().getLPARENTerminalRuleCall_0()); 
+               after(grammarAccess.getReal_pdf_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
 
             }
@@ -17349,24 +17349,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__2__Impl"
-    // InternalStoex.g:5240:1: rule__Real_pdf_sample__Group__2__Impl : ( RULE_SEMI ) ;
+    // InternalStoex.g:5240:1: rule__Real_pdf_sample__Group__2__Impl : ( ';' ) ;
     public final void rule__Real_pdf_sample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5244:1: ( ( RULE_SEMI ) )
-            // InternalStoex.g:5245:1: ( RULE_SEMI )
+            // InternalStoex.g:5244:1: ( ( ';' ) )
+            // InternalStoex.g:5245:1: ( ';' )
             {
-            // InternalStoex.g:5245:1: ( RULE_SEMI )
-            // InternalStoex.g:5246:2: RULE_SEMI
+            // InternalStoex.g:5245:1: ( ';' )
+            // InternalStoex.g:5246:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getReal_pdf_sampleAccess().getSEMITerminalRuleCall_2()); 
+               before(grammarAccess.getReal_pdf_sampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,RULE_SEMI,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getReal_pdf_sampleAccess().getSEMITerminalRuleCall_2()); 
+               after(grammarAccess.getReal_pdf_sampleAccess().getSemicolonKeyword_2()); 
             }
 
             }
@@ -17512,24 +17512,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__4__Impl"
-    // InternalStoex.g:5293:1: rule__Real_pdf_sample__Group__4__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:5293:1: rule__Real_pdf_sample__Group__4__Impl : ( ')' ) ;
     public final void rule__Real_pdf_sample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5297:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:5298:1: ( RULE_RPAREN )
+            // InternalStoex.g:5297:1: ( ( ')' ) )
+            // InternalStoex.g:5298:1: ( ')' )
             {
-            // InternalStoex.g:5298:1: ( RULE_RPAREN )
-            // InternalStoex.g:5299:2: RULE_RPAREN
+            // InternalStoex.g:5298:1: ( ')' )
+            // InternalStoex.g:5299:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getReal_pdf_sampleAccess().getRPARENTerminalRuleCall_4()); 
+               before(grammarAccess.getReal_pdf_sampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getReal_pdf_sampleAccess().getRPARENTerminalRuleCall_4()); 
+               after(grammarAccess.getReal_pdf_sampleAccess().getRightParenthesisKeyword_4()); 
             }
 
             }
@@ -17591,24 +17591,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__0__Impl"
-    // InternalStoex.g:5321:1: rule__Stringsample__Group__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:5321:1: rule__Stringsample__Group__0__Impl : ( '(' ) ;
     public final void rule__Stringsample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5325:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:5326:1: ( RULE_LPAREN )
+            // InternalStoex.g:5325:1: ( ( '(' ) )
+            // InternalStoex.g:5326:1: ( '(' )
             {
-            // InternalStoex.g:5326:1: ( RULE_LPAREN )
-            // InternalStoex.g:5327:2: RULE_LPAREN
+            // InternalStoex.g:5326:1: ( '(' )
+            // InternalStoex.g:5327:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStringsampleAccess().getLPARENTerminalRuleCall_0()); 
+               before(grammarAccess.getStringsampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStringsampleAccess().getLPARENTerminalRuleCall_0()); 
+               after(grammarAccess.getStringsampleAccess().getLeftParenthesisKeyword_0()); 
             }
 
             }
@@ -17759,24 +17759,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__2__Impl"
-    // InternalStoex.g:5375:1: rule__Stringsample__Group__2__Impl : ( RULE_SEMI ) ;
+    // InternalStoex.g:5375:1: rule__Stringsample__Group__2__Impl : ( ';' ) ;
     public final void rule__Stringsample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5379:1: ( ( RULE_SEMI ) )
-            // InternalStoex.g:5380:1: ( RULE_SEMI )
+            // InternalStoex.g:5379:1: ( ( ';' ) )
+            // InternalStoex.g:5380:1: ( ';' )
             {
-            // InternalStoex.g:5380:1: ( RULE_SEMI )
-            // InternalStoex.g:5381:2: RULE_SEMI
+            // InternalStoex.g:5380:1: ( ';' )
+            // InternalStoex.g:5381:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStringsampleAccess().getSEMITerminalRuleCall_2()); 
+               before(grammarAccess.getStringsampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,RULE_SEMI,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStringsampleAccess().getSEMITerminalRuleCall_2()); 
+               after(grammarAccess.getStringsampleAccess().getSemicolonKeyword_2()); 
             }
 
             }
@@ -17922,24 +17922,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__4__Impl"
-    // InternalStoex.g:5428:1: rule__Stringsample__Group__4__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:5428:1: rule__Stringsample__Group__4__Impl : ( ')' ) ;
     public final void rule__Stringsample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5432:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:5433:1: ( RULE_RPAREN )
+            // InternalStoex.g:5432:1: ( ( ')' ) )
+            // InternalStoex.g:5433:1: ( ')' )
             {
-            // InternalStoex.g:5433:1: ( RULE_RPAREN )
-            // InternalStoex.g:5434:2: RULE_RPAREN
+            // InternalStoex.g:5433:1: ( ')' )
+            // InternalStoex.g:5434:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStringsampleAccess().getRPARENTerminalRuleCall_4()); 
+               before(grammarAccess.getStringsampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStringsampleAccess().getRPARENTerminalRuleCall_4()); 
+               after(grammarAccess.getStringsampleAccess().getRightParenthesisKeyword_4()); 
             }
 
             }
@@ -18001,24 +18001,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__0__Impl"
-    // InternalStoex.g:5456:1: rule__Boolsample__Group__0__Impl : ( RULE_LPAREN ) ;
+    // InternalStoex.g:5456:1: rule__Boolsample__Group__0__Impl : ( '(' ) ;
     public final void rule__Boolsample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5460:1: ( ( RULE_LPAREN ) )
-            // InternalStoex.g:5461:1: ( RULE_LPAREN )
+            // InternalStoex.g:5460:1: ( ( '(' ) )
+            // InternalStoex.g:5461:1: ( '(' )
             {
-            // InternalStoex.g:5461:1: ( RULE_LPAREN )
-            // InternalStoex.g:5462:2: RULE_LPAREN
+            // InternalStoex.g:5461:1: ( '(' )
+            // InternalStoex.g:5462:2: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoolsampleAccess().getLPARENTerminalRuleCall_0()); 
+               before(grammarAccess.getBoolsampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,RULE_LPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoolsampleAccess().getLPARENTerminalRuleCall_0()); 
+               after(grammarAccess.getBoolsampleAccess().getLeftParenthesisKeyword_0()); 
             }
 
             }
@@ -18169,24 +18169,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__2__Impl"
-    // InternalStoex.g:5510:1: rule__Boolsample__Group__2__Impl : ( RULE_SEMI ) ;
+    // InternalStoex.g:5510:1: rule__Boolsample__Group__2__Impl : ( ';' ) ;
     public final void rule__Boolsample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5514:1: ( ( RULE_SEMI ) )
-            // InternalStoex.g:5515:1: ( RULE_SEMI )
+            // InternalStoex.g:5514:1: ( ( ';' ) )
+            // InternalStoex.g:5515:1: ( ';' )
             {
-            // InternalStoex.g:5515:1: ( RULE_SEMI )
-            // InternalStoex.g:5516:2: RULE_SEMI
+            // InternalStoex.g:5515:1: ( ';' )
+            // InternalStoex.g:5516:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoolsampleAccess().getSEMITerminalRuleCall_2()); 
+               before(grammarAccess.getBoolsampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,RULE_SEMI,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoolsampleAccess().getSEMITerminalRuleCall_2()); 
+               after(grammarAccess.getBoolsampleAccess().getSemicolonKeyword_2()); 
             }
 
             }
@@ -18332,24 +18332,24 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__4__Impl"
-    // InternalStoex.g:5563:1: rule__Boolsample__Group__4__Impl : ( RULE_RPAREN ) ;
+    // InternalStoex.g:5563:1: rule__Boolsample__Group__4__Impl : ( ')' ) ;
     public final void rule__Boolsample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5567:1: ( ( RULE_RPAREN ) )
-            // InternalStoex.g:5568:1: ( RULE_RPAREN )
+            // InternalStoex.g:5567:1: ( ( ')' ) )
+            // InternalStoex.g:5568:1: ( ')' )
             {
-            // InternalStoex.g:5568:1: ( RULE_RPAREN )
-            // InternalStoex.g:5569:2: RULE_RPAREN
+            // InternalStoex.g:5568:1: ( ')' )
+            // InternalStoex.g:5569:2: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoolsampleAccess().getRPARENTerminalRuleCall_4()); 
+               before(grammarAccess.getBoolsampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,RULE_RPAREN,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getBoolsampleAccess().getRPARENTerminalRuleCall_4()); 
+               after(grammarAccess.getBoolsampleAccess().getRightParenthesisKeyword_4()); 
             }
 
             }
@@ -18430,14 +18430,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt39=2;
             int LA39_0 = input.LA(1);
 
-            if ( (LA39_0==41) ) {
+            if ( (LA39_0==24) ) {
                 alt39=1;
             }
             switch (alt39) {
                 case 1 :
                     // InternalStoex.g:5598:3: '-'
                     {
-                    match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -18600,14 +18600,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             int alt40=2;
             int LA40_0 = input.LA(1);
 
-            if ( (LA40_0==41) ) {
+            if ( (LA40_0==24) ) {
                 alt40=1;
             }
             switch (alt40) {
                 case 1 :
                     // InternalStoex.g:5652:3: '-'
                     {
-                    match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -20485,24 +20485,36 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1"
-    // InternalStoex.g:6287:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 : ( RULE_ORDERED_DEF ) ;
+    // InternalStoex.g:6287:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 : ( ( 'ordered' ) ) ;
     public final void rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6291:1: ( ( RULE_ORDERED_DEF ) )
-            // InternalStoex.g:6292:2: ( RULE_ORDERED_DEF )
+            // InternalStoex.g:6291:1: ( ( ( 'ordered' ) ) )
+            // InternalStoex.g:6292:2: ( ( 'ordered' ) )
             {
-            // InternalStoex.g:6292:2: ( RULE_ORDERED_DEF )
-            // InternalStoex.g:6293:3: RULE_ORDERED_DEF
+            // InternalStoex.g:6292:2: ( ( 'ordered' ) )
+            // InternalStoex.g:6293:3: ( 'ordered' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainORDERED_DEFTerminalRuleCall_2_1_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
             }
-            match(input,RULE_ORDERED_DEF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalStoex.g:6294:3: ( 'ordered' )
+            // InternalStoex.g:6295:4: 'ordered'
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainORDERED_DEFTerminalRuleCall_2_1_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
+            }
+            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
             }
 
             }
@@ -20526,17 +20538,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__SamplesAssignment_2_3"
-    // InternalStoex.g:6302:1: rule__ProbabilityMassFunction__SamplesAssignment_2_3 : ( rulestringsample ) ;
+    // InternalStoex.g:6306:1: rule__ProbabilityMassFunction__SamplesAssignment_2_3 : ( rulestringsample ) ;
     public final void rule__ProbabilityMassFunction__SamplesAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6306:1: ( ( rulestringsample ) )
-            // InternalStoex.g:6307:2: ( rulestringsample )
+            // InternalStoex.g:6310:1: ( ( rulestringsample ) )
+            // InternalStoex.g:6311:2: ( rulestringsample )
             {
-            // InternalStoex.g:6307:2: ( rulestringsample )
-            // InternalStoex.g:6308:3: rulestringsample
+            // InternalStoex.g:6311:2: ( rulestringsample )
+            // InternalStoex.g:6312:3: rulestringsample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesStringsampleParserRuleCall_2_3_0()); 
@@ -20571,24 +20583,36 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1"
-    // InternalStoex.g:6317:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 : ( RULE_ORDERED_DEF ) ;
+    // InternalStoex.g:6321:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 : ( ( 'ordered' ) ) ;
     public final void rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6321:1: ( ( RULE_ORDERED_DEF ) )
-            // InternalStoex.g:6322:2: ( RULE_ORDERED_DEF )
+            // InternalStoex.g:6325:1: ( ( ( 'ordered' ) ) )
+            // InternalStoex.g:6326:2: ( ( 'ordered' ) )
             {
-            // InternalStoex.g:6322:2: ( RULE_ORDERED_DEF )
-            // InternalStoex.g:6323:3: RULE_ORDERED_DEF
+            // InternalStoex.g:6326:2: ( ( 'ordered' ) )
+            // InternalStoex.g:6327:3: ( 'ordered' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainORDERED_DEFTerminalRuleCall_3_1_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
             }
-            match(input,RULE_ORDERED_DEF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalStoex.g:6328:3: ( 'ordered' )
+            // InternalStoex.g:6329:4: 'ordered'
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainORDERED_DEFTerminalRuleCall_3_1_1_0()); 
+               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
+            }
+            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
             }
 
             }
@@ -20612,17 +20636,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__SamplesAssignment_3_3"
-    // InternalStoex.g:6332:1: rule__ProbabilityMassFunction__SamplesAssignment_3_3 : ( ruleboolsample ) ;
+    // InternalStoex.g:6340:1: rule__ProbabilityMassFunction__SamplesAssignment_3_3 : ( ruleboolsample ) ;
     public final void rule__ProbabilityMassFunction__SamplesAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6336:1: ( ( ruleboolsample ) )
-            // InternalStoex.g:6337:2: ( ruleboolsample )
+            // InternalStoex.g:6344:1: ( ( ruleboolsample ) )
+            // InternalStoex.g:6345:2: ( ruleboolsample )
             {
-            // InternalStoex.g:6337:2: ( ruleboolsample )
-            // InternalStoex.g:6338:3: ruleboolsample
+            // InternalStoex.g:6345:2: ( ruleboolsample )
+            // InternalStoex.g:6346:3: ruleboolsample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesBoolsampleParserRuleCall_3_3_0()); 
@@ -20657,17 +20681,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__ValueAssignment_1"
-    // InternalStoex.g:6347:1: rule__Numeric_int_sample__ValueAssignment_1 : ( ruleSIGNED_INT ) ;
+    // InternalStoex.g:6355:1: rule__Numeric_int_sample__ValueAssignment_1 : ( ruleSIGNED_INT ) ;
     public final void rule__Numeric_int_sample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6351:1: ( ( ruleSIGNED_INT ) )
-            // InternalStoex.g:6352:2: ( ruleSIGNED_INT )
+            // InternalStoex.g:6359:1: ( ( ruleSIGNED_INT ) )
+            // InternalStoex.g:6360:2: ( ruleSIGNED_INT )
             {
-            // InternalStoex.g:6352:2: ( ruleSIGNED_INT )
-            // InternalStoex.g:6353:3: ruleSIGNED_INT
+            // InternalStoex.g:6360:2: ( ruleSIGNED_INT )
+            // InternalStoex.g:6361:3: ruleSIGNED_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getValueSIGNED_INTParserRuleCall_1_0()); 
@@ -20702,17 +20726,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__ProbabilityAssignment_3"
-    // InternalStoex.g:6362:1: rule__Numeric_int_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6370:1: rule__Numeric_int_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Numeric_int_sample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6366:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6367:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6374:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6375:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6367:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6368:3: RULE_DOUBLE
+            // InternalStoex.g:6375:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6376:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20743,17 +20767,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__ValueAssignment_1"
-    // InternalStoex.g:6377:1: rule__Numeric_real_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
+    // InternalStoex.g:6385:1: rule__Numeric_real_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
     public final void rule__Numeric_real_sample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6381:1: ( ( ruleSIGNED_NUMBER ) )
-            // InternalStoex.g:6382:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6389:1: ( ( ruleSIGNED_NUMBER ) )
+            // InternalStoex.g:6390:2: ( ruleSIGNED_NUMBER )
             {
-            // InternalStoex.g:6382:2: ( ruleSIGNED_NUMBER )
-            // InternalStoex.g:6383:3: ruleSIGNED_NUMBER
+            // InternalStoex.g:6390:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6391:3: ruleSIGNED_NUMBER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getValueSIGNED_NUMBERParserRuleCall_1_0()); 
@@ -20788,17 +20812,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__ProbabilityAssignment_3"
-    // InternalStoex.g:6392:1: rule__Numeric_real_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6400:1: rule__Numeric_real_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Numeric_real_sample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6396:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6397:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6404:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6405:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6397:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6398:3: RULE_DOUBLE
+            // InternalStoex.g:6405:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6406:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20829,17 +20853,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__ValueAssignment_1"
-    // InternalStoex.g:6407:1: rule__Real_pdf_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
+    // InternalStoex.g:6415:1: rule__Real_pdf_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
     public final void rule__Real_pdf_sample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6411:1: ( ( ruleSIGNED_NUMBER ) )
-            // InternalStoex.g:6412:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6419:1: ( ( ruleSIGNED_NUMBER ) )
+            // InternalStoex.g:6420:2: ( ruleSIGNED_NUMBER )
             {
-            // InternalStoex.g:6412:2: ( ruleSIGNED_NUMBER )
-            // InternalStoex.g:6413:3: ruleSIGNED_NUMBER
+            // InternalStoex.g:6420:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6421:3: ruleSIGNED_NUMBER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getValueSIGNED_NUMBERParserRuleCall_1_0()); 
@@ -20874,17 +20898,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__ProbabilityAssignment_3"
-    // InternalStoex.g:6422:1: rule__Real_pdf_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6430:1: rule__Real_pdf_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Real_pdf_sample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6426:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6427:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6434:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6435:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6427:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6428:3: RULE_DOUBLE
+            // InternalStoex.g:6435:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6436:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20915,17 +20939,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__ValueAssignment_1"
-    // InternalStoex.g:6437:1: rule__Stringsample__ValueAssignment_1 : ( RULE_STRING ) ;
+    // InternalStoex.g:6445:1: rule__Stringsample__ValueAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Stringsample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6441:1: ( ( RULE_STRING ) )
-            // InternalStoex.g:6442:2: ( RULE_STRING )
+            // InternalStoex.g:6449:1: ( ( RULE_STRING ) )
+            // InternalStoex.g:6450:2: ( RULE_STRING )
             {
-            // InternalStoex.g:6442:2: ( RULE_STRING )
-            // InternalStoex.g:6443:3: RULE_STRING
+            // InternalStoex.g:6450:2: ( RULE_STRING )
+            // InternalStoex.g:6451:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getValueSTRINGTerminalRuleCall_1_0()); 
@@ -20956,17 +20980,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__ProbabilityAssignment_3"
-    // InternalStoex.g:6452:1: rule__Stringsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6460:1: rule__Stringsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Stringsample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6456:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6457:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6464:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6465:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6457:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6458:3: RULE_DOUBLE
+            // InternalStoex.g:6465:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6466:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20997,17 +21021,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__ValueAssignment_1"
-    // InternalStoex.g:6467:1: rule__Boolsample__ValueAssignment_1 : ( RULE_BOOLEAN_KEYWORDS ) ;
+    // InternalStoex.g:6475:1: rule__Boolsample__ValueAssignment_1 : ( RULE_BOOLEAN_KEYWORDS ) ;
     public final void rule__Boolsample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6471:1: ( ( RULE_BOOLEAN_KEYWORDS ) )
-            // InternalStoex.g:6472:2: ( RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:6479:1: ( ( RULE_BOOLEAN_KEYWORDS ) )
+            // InternalStoex.g:6480:2: ( RULE_BOOLEAN_KEYWORDS )
             {
-            // InternalStoex.g:6472:2: ( RULE_BOOLEAN_KEYWORDS )
-            // InternalStoex.g:6473:3: RULE_BOOLEAN_KEYWORDS
+            // InternalStoex.g:6480:2: ( RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:6481:3: RULE_BOOLEAN_KEYWORDS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getValueBOOLEAN_KEYWORDSTerminalRuleCall_1_0()); 
@@ -21038,17 +21062,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__ProbabilityAssignment_3"
-    // InternalStoex.g:6482:1: rule__Boolsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6490:1: rule__Boolsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Boolsample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6486:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6487:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6494:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6495:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6487:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6488:3: RULE_DOUBLE
+            // InternalStoex.g:6495:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6496:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -21228,17 +21252,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     protected DFA4 dfa4 = new DFA4(this);
     static final String dfa_1s = "\12\uffff";
     static final String dfa_2s = "\5\uffff\1\10\4\uffff";
-    static final String dfa_3s = "\1\12\4\uffff\1\4\4\uffff";
-    static final String dfa_4s = "\1\30\4\uffff\1\54\4\uffff";
+    static final String dfa_3s = "\1\4\4\uffff\1\16\4\uffff";
+    static final String dfa_4s = "\1\57\4\uffff\1\52\4\uffff";
     static final String dfa_5s = "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\6\1\5";
     static final String dfa_6s = "\12\uffff}>";
     static final String[] dfa_7s = {
-            "\1\6\3\uffff\5\7\1\uffff\1\2\1\1\1\5\1\4\1\3",
+            "\1\2\1\1\1\5\1\4\1\3\36\uffff\1\6\3\uffff\5\7",
             "",
             "",
             "",
             "",
-            "\3\10\3\uffff\1\11\3\10\21\uffff\16\10",
+            "\16\10\5\uffff\3\10\3\uffff\1\11\3\10",
             "",
             "",
             "",
@@ -21270,12 +21294,12 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             return "1167:1: rule__Atom__Alternatives : ( ( ruleIntLiteral ) | ( ruleDoubleLiteral ) | ( ruleStringLiteral ) | ( ruleBoolLiteral ) | ( ruleFunctionLiteral ) | ( ruleVariable ) | ( ruleParenthesis ) | ( ruleProbabilityFunctionLiteral ) );";
         }
     }
-    static final String dfa_8s = "\1\12\6\0\3\uffff";
-    static final String dfa_9s = "\1\61\6\0\3\uffff";
+    static final String dfa_8s = "\1\34\6\0\3\uffff";
+    static final String dfa_9s = "\1\47\6\0\3\uffff";
     static final String dfa_10s = "\7\uffff\1\1\1\2\1\3";
     static final String dfa_11s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\3\uffff}>";
     static final String[] dfa_12s = {
-            "\1\6\42\uffff\1\1\1\2\1\3\1\4\1\5",
+            "\1\1\1\2\1\3\1\4\1\5\6\uffff\1\6",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -21426,42 +21450,42 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000020001F7C480L});
-        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000080000002L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000300000000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000300000002L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x000000FC00000000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000030000000000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000030000000002L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00001C0000000000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00001C0000000002L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000100L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0003E00000000400L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000200L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000400L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000020001F7CC80L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000001002L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000080000000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000040000000002L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000042L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000020000200000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000402L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000000500L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000020000100000L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000F890010001F0L});
+        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000018000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000018002L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000000007E0000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000001800000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000001800002L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000000E000000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x000000000E000002L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000800000000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000002000000000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000081F0000000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000010000000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000008000000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000F990010001F0L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000020000000002L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000002000002L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000800000002L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000001000020L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000008000000002L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x000000A000000000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000001000010L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000080L});
     }
 
 

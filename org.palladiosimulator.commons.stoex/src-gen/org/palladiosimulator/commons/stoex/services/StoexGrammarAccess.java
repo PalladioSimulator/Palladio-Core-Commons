@@ -45,10 +45,10 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBoolAndExprParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cIfElseExpressionConditionExpressionAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final RuleCall cCONDDELIMITERTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cQuestionMarkKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cIfExpressionAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cIfExpressionBoolAndExprParserRuleCall_1_2_0 = (RuleCall)cIfExpressionAssignment_1_2.eContents().get(0);
-		private final RuleCall cELSEDELIMITERTerminalRuleCall_1_3 = (RuleCall)cGroup_1.eContents().get(3);
+		private final Keyword cColonKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		private final Assignment cElseExpressionAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
 		private final RuleCall cElseExpressionBoolAndExprParserRuleCall_1_4_0 = (RuleCall)cElseExpressionAssignment_1_4.eContents().get(0);
 		
@@ -56,26 +56,25 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//// Stochastic Expressions:
 		//// ifelseExpr -> boolAndExpr ('?' boolAndExpr ':' boolAndExpr)?
 		//ifelseExpr IfElse:
-		//	boolAndExpr ({IfElseExpression.conditionExpression=current} CONDDELIMITER ifExpression=boolAndExpr ELSEDELIMITER
+		//	boolAndExpr ({IfElseExpression.conditionExpression=current} '?' ifExpression=boolAndExpr ':'
 		//	elseExpression=boolAndExpr)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//boolAndExpr ({IfElseExpression.conditionExpression=current} CONDDELIMITER ifExpression=boolAndExpr ELSEDELIMITER
+		//boolAndExpr ({IfElseExpression.conditionExpression=current} '?' ifExpression=boolAndExpr ':'
 		//elseExpression=boolAndExpr)?
 		public Group getGroup() { return cGroup; }
 		
 		//boolAndExpr
 		public RuleCall getBoolAndExprParserRuleCall_0() { return cBoolAndExprParserRuleCall_0; }
 		
-		//({IfElseExpression.conditionExpression=current} CONDDELIMITER ifExpression=boolAndExpr ELSEDELIMITER
-		//elseExpression=boolAndExpr)?
+		//({IfElseExpression.conditionExpression=current} '?' ifExpression=boolAndExpr ':' elseExpression=boolAndExpr)?
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//{IfElseExpression.conditionExpression=current}
 		public Action getIfElseExpressionConditionExpressionAction_1_0() { return cIfElseExpressionConditionExpressionAction_1_0; }
 		
-		//CONDDELIMITER
-		public RuleCall getCONDDELIMITERTerminalRuleCall_1_1() { return cCONDDELIMITERTerminalRuleCall_1_1; }
+		//'?'
+		public Keyword getQuestionMarkKeyword_1_1() { return cQuestionMarkKeyword_1_1; }
 		
 		//ifExpression=boolAndExpr
 		public Assignment getIfExpressionAssignment_1_2() { return cIfExpressionAssignment_1_2; }
@@ -83,8 +82,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//boolAndExpr
 		public RuleCall getIfExpressionBoolAndExprParserRuleCall_1_2_0() { return cIfExpressionBoolAndExprParserRuleCall_1_2_0; }
 		
-		//ELSEDELIMITER
-		public RuleCall getELSEDELIMITERTerminalRuleCall_1_3() { return cELSEDELIMITERTerminalRuleCall_1_3; }
+		//':'
+		public Keyword getColonKeyword_1_3() { return cColonKeyword_1_3; }
 		
 		//elseExpression=boolAndExpr
 		public Assignment getElseExpressionAssignment_1_4() { return cElseExpressionAssignment_1_4; }
@@ -339,29 +338,29 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnaryExprParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cPowerExpressionBaseAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final RuleCall cPOWTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cCircumflexAccentKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cExponentAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cExponentUnaryExprParserRuleCall_1_2_0 = (RuleCall)cExponentAssignment_1_2.eContents().get(0);
 		
 		//// powExpr -> unaryExpr (POW unaryExpr)?
 		//powExpr Power:
-		//	unaryExpr ({PowerExpression.base=current} POW exponent=unaryExpr)?;
+		//	unaryExpr ({PowerExpression.base=current} '^' exponent=unaryExpr)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//unaryExpr ({PowerExpression.base=current} POW exponent=unaryExpr)?
+		//unaryExpr ({PowerExpression.base=current} '^' exponent=unaryExpr)?
 		public Group getGroup() { return cGroup; }
 		
 		//unaryExpr
 		public RuleCall getUnaryExprParserRuleCall_0() { return cUnaryExprParserRuleCall_0; }
 		
-		//({PowerExpression.base=current} POW exponent=unaryExpr)?
+		//({PowerExpression.base=current} '^' exponent=unaryExpr)?
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//{PowerExpression.base=current}
 		public Action getPowerExpressionBaseAction_1_0() { return cPowerExpressionBaseAction_1_0; }
 		
-		//POW
-		public RuleCall getPOWTerminalRuleCall_1_1() { return cPOWTerminalRuleCall_1_1; }
+		//'^'
+		public Keyword getCircumflexAccentKeyword_1_1() { return cCircumflexAccentKeyword_1_1; }
 		
 		//exponent=unaryExpr
 		public Assignment getExponentAssignment_1_2() { return cExponentAssignment_1_2; }
@@ -396,20 +395,20 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	public class NotExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.NotExpression");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cNOTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cNOTKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cInnerAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cInnerUnaryExprParserRuleCall_1_0 = (RuleCall)cInnerAssignment_1.eContents().get(0);
 		
 		//// NotExpression -> NOT unaryExpr
 		//NotExpression:
-		//	NOT inner=unaryExpr;
+		//	'NOT' inner=unaryExpr;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//NOT inner=unaryExpr
+		//'NOT' inner=unaryExpr
 		public Group getGroup() { return cGroup; }
 		
-		//NOT
-		public RuleCall getNOTTerminalRuleCall_0() { return cNOTTerminalRuleCall_0; }
+		//'NOT'
+		public Keyword getNOTKeyword_0() { return cNOTKeyword_0; }
 		
 		//inner=unaryExpr
 		public Assignment getInnerAssignment_1() { return cInnerAssignment_1; }
@@ -493,17 +492,17 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cValueDOUBLETerminalRuleCall_0_0 = (RuleCall)cValueAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cUnitAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cUnitUnitParserRuleCall_1_1_0 = (RuleCall)cUnitAssignment_1_1.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
+		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
-		//// DoubleLiteral -> DOUBLE (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+		//// DoubleLiteral -> DOUBLE ('[' Unit ']')?
 		//DoubleLiteral:
-		//	value=DOUBLE (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?;
+		//	value=DOUBLE ('[' unit=Unit ']')?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//value=DOUBLE (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//value=DOUBLE ('[' unit=Unit ']')?
 		public Group getGroup() { return cGroup; }
 		
 		//value=DOUBLE
@@ -512,11 +511,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//DOUBLE
 		public RuleCall getValueDOUBLETerminalRuleCall_0_0() { return cValueDOUBLETerminalRuleCall_0_0; }
 		
-		//(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//('[' unit=Unit ']')?
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_1_0() { return cSQUARE_PAREN_LTerminalRuleCall_1_0; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
 		
 		//unit=Unit
 		public Assignment getUnitAssignment_1_1() { return cUnitAssignment_1_1; }
@@ -524,8 +523,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//Unit
 		public RuleCall getUnitUnitParserRuleCall_1_1_0() { return cUnitUnitParserRuleCall_1_1_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_1_2() { return cSQUARE_PAREN_RTerminalRuleCall_1_2; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
 	}
 	public class ProbabilityFunctionLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ProbabilityFunctionLiteral");
@@ -546,21 +545,21 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	public class ParenthesisElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.Parenthesis");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cInnerExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cInnerExpressionIfelseExprParserRuleCall_1_0 = (RuleCall)cInnerExpressionAssignment_1.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//// Parenthesis -> LPAREN ifelseExpr RPAREN
+		//// Parenthesis -> '(' ifelseExpr ')'
 		//Parenthesis:
-		//	LPAREN innerExpression=ifelseExpr RPAREN;
+		//	'(' innerExpression=ifelseExpr ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//LPAREN innerExpression=ifelseExpr RPAREN
+		//'(' innerExpression=ifelseExpr ')'
 		public Group getGroup() { return cGroup; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0() { return cLPARENTerminalRuleCall_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 		
 		//innerExpression=ifelseExpr
 		public Assignment getInnerExpressionAssignment_1() { return cInnerExpressionAssignment_1; }
@@ -568,30 +567,30 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//ifelseExpr
 		public RuleCall getInnerExpressionIfelseExprParserRuleCall_1_0() { return cInnerExpressionIfelseExprParserRuleCall_1_0; }
 		
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_2() { return cRPARENTerminalRuleCall_2; }
+		//')'
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
 	public class FunctionLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.FunctionLiteral");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cIdAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cIdIDTerminalRuleCall_0_0 = (RuleCall)cIdAssignment_0.eContents().get(0);
-		private final RuleCall cLPARENTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Assignment cParameters_FunctionLiteralAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cParameters_FunctionLiteralBoolAndExprParserRuleCall_2_0_0 = (RuleCall)cParameters_FunctionLiteralAssignment_2_0.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final RuleCall cCOLONTerminalRuleCall_2_1_0 = (RuleCall)cGroup_2_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Assignment cParameters_FunctionLiteralAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
 		private final RuleCall cParameters_FunctionLiteralBoolAndExprParserRuleCall_2_1_1_0 = (RuleCall)cParameters_FunctionLiteralAssignment_2_1_1.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//// FunctionLiteral -> ID LPAREN (boolAndExpr (COLON boolAndExpr)* )? RPAREN
+		//// FunctionLiteral -> ID '(' (boolAndExpr (',' boolAndExpr)* )? ')'
 		//FunctionLiteral:
-		//	id=ID LPAREN (parameters_FunctionLiteral+=boolAndExpr (COLON parameters_FunctionLiteral+=boolAndExpr)*)? RPAREN;
+		//	id=ID '(' (parameters_FunctionLiteral+=boolAndExpr (',' parameters_FunctionLiteral+=boolAndExpr)*)? ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//id=ID LPAREN (parameters_FunctionLiteral+=boolAndExpr (COLON parameters_FunctionLiteral+=boolAndExpr)*)? RPAREN
+		//id=ID '(' (parameters_FunctionLiteral+=boolAndExpr (',' parameters_FunctionLiteral+=boolAndExpr)*)? ')'
 		public Group getGroup() { return cGroup; }
 		
 		//id=ID
@@ -600,10 +599,10 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdIDTerminalRuleCall_0_0() { return cIdIDTerminalRuleCall_0_0; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_1() { return cLPARENTerminalRuleCall_1; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 		
-		//(parameters_FunctionLiteral+=boolAndExpr (COLON parameters_FunctionLiteral+=boolAndExpr)*)?
+		//(parameters_FunctionLiteral+=boolAndExpr (',' parameters_FunctionLiteral+=boolAndExpr)*)?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//parameters_FunctionLiteral+=boolAndExpr
@@ -612,11 +611,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//boolAndExpr
 		public RuleCall getParameters_FunctionLiteralBoolAndExprParserRuleCall_2_0_0() { return cParameters_FunctionLiteralBoolAndExprParserRuleCall_2_0_0; }
 		
-		//(COLON parameters_FunctionLiteral+=boolAndExpr)*
+		//(',' parameters_FunctionLiteral+=boolAndExpr)*
 		public Group getGroup_2_1() { return cGroup_2_1; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_2_1_0() { return cCOLONTerminalRuleCall_2_1_0; }
+		//','
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
 		//parameters_FunctionLiteral+=boolAndExpr
 		public Assignment getParameters_FunctionLiteralAssignment_2_1_1() { return cParameters_FunctionLiteralAssignment_2_1_1; }
@@ -624,8 +623,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//boolAndExpr
 		public RuleCall getParameters_FunctionLiteralBoolAndExprParserRuleCall_2_1_1_0() { return cParameters_FunctionLiteralBoolAndExprParserRuleCall_2_1_1_0; }
 		
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_3() { return cRPARENTerminalRuleCall_3; }
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 	public class VariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.Variable");
@@ -684,16 +683,16 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cReferenceNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cReferenceNameIDTerminalRuleCall_0_0 = (RuleCall)cReferenceNameAssignment_0.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cInnerReference_NamespaceReferenceAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0 = (RuleCall)cInnerReference_NamespaceReferenceAssignment_2.eContents().get(0);
 		
-		//// NamespaceReference -> ID DOT AbstractNamedReference
+		//// NamespaceReference -> ID '.' AbstractNamedReference
 		//NamespaceReference:
-		//	referenceName=ID DOT innerReference_NamespaceReference=AbstractNamedReference;
+		//	referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//referenceName=ID DOT innerReference_NamespaceReference=AbstractNamedReference
+		//referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference
 		public Group getGroup() { return cGroup; }
 		
 		//referenceName=ID
@@ -702,8 +701,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getReferenceNameIDTerminalRuleCall_0_0() { return cReferenceNameIDTerminalRuleCall_0_0; }
 		
-		//DOT
-		public RuleCall getDOTTerminalRuleCall_1() { return cDOTTerminalRuleCall_1; }
+		//'.'
+		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
 		
 		//innerReference_NamespaceReference=AbstractNamedReference
 		public Assignment getInnerReference_NamespaceReferenceAssignment_2() { return cInnerReference_NamespaceReferenceAssignment_2; }
@@ -749,17 +748,17 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cValueDECINTTerminalRuleCall_0_0 = (RuleCall)cValueAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cUnitAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cUnitUnitParserRuleCall_1_1_0 = (RuleCall)cUnitAssignment_1_1.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
+		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
-		//// IntLiteral -> DECINT (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+		//// IntLiteral -> DECINT ('[' Unit ']')?
 		//IntLiteral:
-		//	value=DECINT (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?;
+		//	value=DECINT ('[' unit=Unit ']')?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//value=DECINT (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//value=DECINT ('[' unit=Unit ']')?
 		public Group getGroup() { return cGroup; }
 		
 		//value=DECINT
@@ -768,11 +767,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//DECINT
 		public RuleCall getValueDECINTTerminalRuleCall_0_0() { return cValueDECINTTerminalRuleCall_0_0; }
 		
-		//(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//('[' unit=Unit ']')?
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_1_0() { return cSQUARE_PAREN_LTerminalRuleCall_1_0; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
 		
 		//unit=Unit
 		public Assignment getUnitAssignment_1_1() { return cUnitAssignment_1_1; }
@@ -780,8 +779,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//Unit
 		public RuleCall getUnitUnitParserRuleCall_1_1_0() { return cUnitUnitParserRuleCall_1_1_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_1_2() { return cSQUARE_PAREN_RTerminalRuleCall_1_2; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
 	}
 	public class UnitElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.Unit");
@@ -887,36 +886,37 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final RuleCall cBaseUnitParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
 		private final Group cGroup_0_1 = (Group)cAlternatives_0.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0_1_0 = (RuleCall)cGroup_0_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
 		private final Alternatives cAlternatives_0_1_1 = (Alternatives)cGroup_0_1.eContents().get(1);
 		private final RuleCall cUnitMultiParserRuleCall_0_1_1_0 = (RuleCall)cAlternatives_0_1_1.eContents().get(0);
 		private final RuleCall cUnitDivParserRuleCall_0_1_1_1 = (RuleCall)cAlternatives_0_1_1.eContents().get(1);
-		private final RuleCall cRPARENTerminalRuleCall_0_1_2 = (RuleCall)cGroup_0_1.eContents().get(2);
+		private final Keyword cRightParenthesisKeyword_0_1_2 = (Keyword)cGroup_0_1.eContents().get(2);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cUnitPowerUnitAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final RuleCall cPOWTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cCircumflexAccentKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cExponentAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cExponentSIGNED_INTParserRuleCall_1_2_0 = (RuleCall)cExponentAssignment_1_2.eContents().get(0);
 		
-		//// unitPow -> (BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN) (POW SIGNED_INT)*
+		//// unitPow -> (BaseUnit | '(' (unitMulti | unitDiv) ')') (POW SIGNED_INT)*
 		//unitPow Unit:
-		//	(BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN) ({UnitPower.unit=current} POW exponent=SIGNED_INT)*;
+		//	(BaseUnit |
+		//	'(' (unitMulti | unitDiv) ')') ({UnitPower.unit=current} '^' exponent=SIGNED_INT)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN) ({UnitPower.unit=current} POW exponent=SIGNED_INT)*
+		//(BaseUnit | '(' (unitMulti | unitDiv) ')') ({UnitPower.unit=current} '^' exponent=SIGNED_INT)*
 		public Group getGroup() { return cGroup; }
 		
-		//BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN
+		//BaseUnit | '(' (unitMulti | unitDiv) ')'
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
 		//BaseUnit
 		public RuleCall getBaseUnitParserRuleCall_0_0() { return cBaseUnitParserRuleCall_0_0; }
 		
-		//LPAREN (unitMulti | unitDiv) RPAREN
+		//'(' (unitMulti | unitDiv) ')'
 		public Group getGroup_0_1() { return cGroup_0_1; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0_1_0() { return cLPARENTerminalRuleCall_0_1_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0_1_0() { return cLeftParenthesisKeyword_0_1_0; }
 		
 		//unitMulti | unitDiv
 		public Alternatives getAlternatives_0_1_1() { return cAlternatives_0_1_1; }
@@ -927,17 +927,17 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//unitDiv
 		public RuleCall getUnitDivParserRuleCall_0_1_1_1() { return cUnitDivParserRuleCall_0_1_1_1; }
 		
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_0_1_2() { return cRPARENTerminalRuleCall_0_1_2; }
+		//')'
+		public Keyword getRightParenthesisKeyword_0_1_2() { return cRightParenthesisKeyword_0_1_2; }
 		
-		//({UnitPower.unit=current} POW exponent=SIGNED_INT)*
+		//({UnitPower.unit=current} '^' exponent=SIGNED_INT)*
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//{UnitPower.unit=current}
 		public Action getUnitPowerUnitAction_1_0() { return cUnitPowerUnitAction_1_0; }
 		
-		//POW
-		public RuleCall getPOWTerminalRuleCall_1_1() { return cPOWTerminalRuleCall_1_1; }
+		//'^'
+		public Keyword getCircumflexAccentKeyword_1_1() { return cCircumflexAccentKeyword_1_1; }
 		
 		//exponent=SIGNED_INT
 		public Assignment getExponentAssignment_1_2() { return cExponentAssignment_1_2; }
@@ -999,30 +999,30 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	public class BoxedPDFElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.BoxedPDF");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cDOUBLEPDFTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cDoublePDFKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSamplesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSamplesReal_pdf_sampleParserRuleCall_2_0 = (RuleCall)cSamplesAssignment_2.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Keyword cRightSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_4_0 = (RuleCall)cGroup_4.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cUnitAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cUnitUnitParserRuleCall_4_1_0 = (RuleCall)cUnitAssignment_4_1.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
+		private final Keyword cRightSquareBracketKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
 		
-		//// BoxedPDF -> DOUBLEPDF SQUARE_PAREN_L (real_pdf_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+		//// BoxedPDF -> DOUBLEPDF '[' (real_pdf_sample)+ ']' ('[' Unit ']')?
 		//BoxedPDF:
-		//	DOUBLEPDF SQUARE_PAREN_L samples+=real_pdf_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?;
+		//	'DoublePDF' '[' samples+=real_pdf_sample+ ']' ('[' unit=Unit ']')?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//DOUBLEPDF SQUARE_PAREN_L samples+=real_pdf_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//'DoublePDF' '[' samples+=real_pdf_sample+ ']' ('[' unit=Unit ']')?
 		public Group getGroup() { return cGroup; }
 		
-		//DOUBLEPDF
-		public RuleCall getDOUBLEPDFTerminalRuleCall_0() { return cDOUBLEPDFTerminalRuleCall_0; }
+		//'DoublePDF'
+		public Keyword getDoublePDFKeyword_0() { return cDoublePDFKeyword_0; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_1() { return cSQUARE_PAREN_LTerminalRuleCall_1; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_1() { return cLeftSquareBracketKeyword_1; }
 		
 		//samples+=real_pdf_sample+
 		public Assignment getSamplesAssignment_2() { return cSamplesAssignment_2; }
@@ -1030,14 +1030,14 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//real_pdf_sample
 		public RuleCall getSamplesReal_pdf_sampleParserRuleCall_2_0() { return cSamplesReal_pdf_sampleParserRuleCall_2_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_3() { return cSQUARE_PAREN_RTerminalRuleCall_3; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
 		
-		//(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//('[' unit=Unit ']')?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_4_0() { return cSQUARE_PAREN_LTerminalRuleCall_4_0; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_4_0() { return cLeftSquareBracketKeyword_4_0; }
 		
 		//unit=Unit
 		public Assignment getUnitAssignment_4_1() { return cUnitAssignment_4_1; }
@@ -1045,87 +1045,85 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//Unit
 		public RuleCall getUnitUnitParserRuleCall_4_1_0() { return cUnitUnitParserRuleCall_4_1_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_4_2() { return cSQUARE_PAREN_RTerminalRuleCall_4_2; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_4_2() { return cRightSquareBracketKeyword_4_2; }
 	}
 	public class ProbabilityMassFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ProbabilityMassFunction");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final RuleCall cINTPMFTerminalRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Keyword cIntPMFKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final Assignment cSamplesAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final RuleCall cSamplesNumeric_int_sampleParserRuleCall_0_2_0 = (RuleCall)cSamplesAssignment_0_2.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_0_3 = (RuleCall)cGroup_0.eContents().get(3);
+		private final Keyword cRightSquareBracketKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
 		private final Group cGroup_0_4 = (Group)cGroup_0.eContents().get(4);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_0_4_0 = (RuleCall)cGroup_0_4.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_0_4_0 = (Keyword)cGroup_0_4.eContents().get(0);
 		private final Assignment cUnitAssignment_0_4_1 = (Assignment)cGroup_0_4.eContents().get(1);
 		private final RuleCall cUnitUnitParserRuleCall_0_4_1_0 = (RuleCall)cUnitAssignment_0_4_1.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_0_4_2 = (RuleCall)cGroup_0_4.eContents().get(2);
+		private final Keyword cRightSquareBracketKeyword_0_4_2 = (Keyword)cGroup_0_4.eContents().get(2);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cDOUBLEPMFTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cDoublePMFKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cSamplesAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cSamplesNumeric_real_sampleParserRuleCall_1_2_0 = (RuleCall)cSamplesAssignment_1_2.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_1_3 = (RuleCall)cGroup_1.eContents().get(3);
+		private final Keyword cRightSquareBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_1_4_0 = (RuleCall)cGroup_1_4.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1_4_0 = (Keyword)cGroup_1_4.eContents().get(0);
 		private final Assignment cUnitAssignment_1_4_1 = (Assignment)cGroup_1_4.eContents().get(1);
 		private final RuleCall cUnitUnitParserRuleCall_1_4_1_0 = (RuleCall)cUnitAssignment_1_4_1.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_1_4_2 = (RuleCall)cGroup_1_4.eContents().get(2);
+		private final Keyword cRightSquareBracketKeyword_1_4_2 = (Keyword)cGroup_1_4.eContents().get(2);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final RuleCall cENUMPMFTerminalRuleCall_2_0 = (RuleCall)cGroup_2.eContents().get(0);
+		private final Keyword cEnumPMFKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_2_1_0 = (RuleCall)cGroup_2_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Assignment cOrderedDomainAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final RuleCall cOrderedDomainORDERED_DEFTerminalRuleCall_2_1_1_0 = (RuleCall)cOrderedDomainAssignment_2_1_1.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_2_1_2 = (RuleCall)cGroup_2_1.eContents().get(2);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_2_2 = (RuleCall)cGroup_2.eContents().get(2);
+		private final Keyword cOrderedDomainOrderedKeyword_2_1_1_0 = (Keyword)cOrderedDomainAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2_1_2 = (Keyword)cGroup_2_1.eContents().get(2);
+		private final Keyword cLeftSquareBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		private final Assignment cSamplesAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
 		private final RuleCall cSamplesStringsampleParserRuleCall_2_3_0 = (RuleCall)cSamplesAssignment_2_3.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_2_4 = (RuleCall)cGroup_2.eContents().get(4);
+		private final Keyword cRightSquareBracketKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final RuleCall cBOOLPMFTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
+		private final Keyword cBoolPMFKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_3_1_0 = (RuleCall)cGroup_3_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
 		private final Assignment cOrderedDomainAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cOrderedDomainORDERED_DEFTerminalRuleCall_3_1_1_0 = (RuleCall)cOrderedDomainAssignment_3_1_1.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_3_1_2 = (RuleCall)cGroup_3_1.eContents().get(2);
-		private final RuleCall cSQUARE_PAREN_LTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
+		private final Keyword cOrderedDomainOrderedKeyword_3_1_1_0 = (Keyword)cOrderedDomainAssignment_3_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_1_2 = (Keyword)cGroup_3_1.eContents().get(2);
+		private final Keyword cLeftSquareBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		private final Assignment cSamplesAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
 		private final RuleCall cSamplesBoolsampleParserRuleCall_3_3_0 = (RuleCall)cSamplesAssignment_3_3.eContents().get(0);
-		private final RuleCall cSQUARE_PAREN_RTerminalRuleCall_3_4 = (RuleCall)cGroup_3.eContents().get(4);
+		private final Keyword cRightSquareBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
 		
-		//// ProbabilityMassFunction -> INTPMF SQUARE_PAREN_L (numeric_int_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-		//// ProbabilityMassFunction -> DOUBLEPMF SQUARE_PAREN_L (numeric_real_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-		//// ProbabilityMassFunction -> ENUMPMF (LPAREN ORDERED_DEF RPAREN)? SQUARE_PAREN_L (stringsample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-		//// ProbabilityMassFunction -> BOOLPMF (LPAREN ORDERED_DEF RPAREN)? SQUARE_PAREN_L (boolsample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-		//ProbabilityMassFunction:
-		//	INTPMF SQUARE_PAREN_L samples+=numeric_int_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
-		//	| DOUBLEPMF SQUARE_PAREN_L samples+=numeric_real_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
-		//	| ENUMPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
-		//	SQUARE_PAREN_L samples+=stringsample+ SQUARE_PAREN_R
-		//	| BOOLPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
-		//	SQUARE_PAREN_L samples+=boolsample+ SQUARE_PAREN_R;
+		//// ProbabilityMassFunction -> INTPMF '[' (numeric_int_sample)+ ']' ('[' Unit ']')?
+		//// ProbabilityMassFunction -> DOUBLEPMF '[' (numeric_real_sample)+ ']' ('[' Unit ']')?
+		//// ProbabilityMassFunction -> ENUMPMF ('(' 'ordered' ')')? '[' (stringsample)+ ']' ('[' Unit ']')?
+		//// ProbabilityMassFunction -> BOOLPMF ('(' 'ordered' ')')? '[' (boolsample)+ ']' ('[' Unit ']')?
+		//ProbabilityMassFunction: // Numeric PMF
+		//	'IntPMF' '[' samples+=numeric_int_sample+ ']' ('[' unit=Unit ']')? | 'DoublePMF' '[' samples+=numeric_real_sample+ ']'
+		//	('[' unit=Unit ']')? | // Enum PMF
+		//	'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=stringsample+ ']' | // Bool PMF
+		//	'BoolPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=boolsample+ ']';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//// Numeric PMF
-		//INTPMF SQUARE_PAREN_L samples+=numeric_int_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)? | DOUBLEPMF
-		//SQUARE_PAREN_L samples+=numeric_real_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)? | ENUMPMF
-		//(LPAREN orderedDomain?=ORDERED_DEF RPAREN)? SQUARE_PAREN_L samples+=stringsample+ SQUARE_PAREN_R | BOOLPMF (LPAREN
-		//orderedDomain?=ORDERED_DEF RPAREN)? SQUARE_PAREN_L samples+=boolsample+ SQUARE_PAREN_R
+		//'IntPMF' '[' samples+=numeric_int_sample+ ']' ('[' unit=Unit ']')? | 'DoublePMF' '[' samples+=numeric_real_sample+ ']'
+		//('[' unit=Unit ']')? | // Enum PMF
+		//'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=stringsample+ ']' | // Bool PMF
+		//'BoolPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=boolsample+ ']'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//// Numeric PMF
-		//INTPMF SQUARE_PAREN_L samples+=numeric_int_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//'IntPMF' '[' samples+=numeric_int_sample+ ']' ('[' unit=Unit ']')?
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//// Numeric PMF
-		//INTPMF
-		public RuleCall getINTPMFTerminalRuleCall_0_0() { return cINTPMFTerminalRuleCall_0_0; }
+		//'IntPMF'
+		public Keyword getIntPMFKeyword_0_0() { return cIntPMFKeyword_0_0; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_0_1() { return cSQUARE_PAREN_LTerminalRuleCall_0_1; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_0_1() { return cLeftSquareBracketKeyword_0_1; }
 		
 		//samples+=numeric_int_sample+
 		public Assignment getSamplesAssignment_0_2() { return cSamplesAssignment_0_2; }
@@ -1133,14 +1131,14 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//numeric_int_sample
 		public RuleCall getSamplesNumeric_int_sampleParserRuleCall_0_2_0() { return cSamplesNumeric_int_sampleParserRuleCall_0_2_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_0_3() { return cSQUARE_PAREN_RTerminalRuleCall_0_3; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_0_3() { return cRightSquareBracketKeyword_0_3; }
 		
-		//(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//('[' unit=Unit ']')?
 		public Group getGroup_0_4() { return cGroup_0_4; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_0_4_0() { return cSQUARE_PAREN_LTerminalRuleCall_0_4_0; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_0_4_0() { return cLeftSquareBracketKeyword_0_4_0; }
 		
 		//unit=Unit
 		public Assignment getUnitAssignment_0_4_1() { return cUnitAssignment_0_4_1; }
@@ -1148,17 +1146,17 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//Unit
 		public RuleCall getUnitUnitParserRuleCall_0_4_1_0() { return cUnitUnitParserRuleCall_0_4_1_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_0_4_2() { return cSQUARE_PAREN_RTerminalRuleCall_0_4_2; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_0_4_2() { return cRightSquareBracketKeyword_0_4_2; }
 		
-		//DOUBLEPMF SQUARE_PAREN_L samples+=numeric_real_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//'DoublePMF' '[' samples+=numeric_real_sample+ ']' ('[' unit=Unit ']')?
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//DOUBLEPMF
-		public RuleCall getDOUBLEPMFTerminalRuleCall_1_0() { return cDOUBLEPMFTerminalRuleCall_1_0; }
+		//'DoublePMF'
+		public Keyword getDoublePMFKeyword_1_0() { return cDoublePMFKeyword_1_0; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_1_1() { return cSQUARE_PAREN_LTerminalRuleCall_1_1; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_1_1() { return cLeftSquareBracketKeyword_1_1; }
 		
 		//samples+=numeric_real_sample+
 		public Assignment getSamplesAssignment_1_2() { return cSamplesAssignment_1_2; }
@@ -1166,14 +1164,14 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//numeric_real_sample
 		public RuleCall getSamplesNumeric_real_sampleParserRuleCall_1_2_0() { return cSamplesNumeric_real_sampleParserRuleCall_1_2_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_1_3() { return cSQUARE_PAREN_RTerminalRuleCall_1_3; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_1_3() { return cRightSquareBracketKeyword_1_3; }
 		
-		//(SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
+		//('[' unit=Unit ']')?
 		public Group getGroup_1_4() { return cGroup_1_4; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_1_4_0() { return cSQUARE_PAREN_LTerminalRuleCall_1_4_0; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_1_4_0() { return cLeftSquareBracketKeyword_1_4_0; }
 		
 		//unit=Unit
 		public Assignment getUnitAssignment_1_4_1() { return cUnitAssignment_1_4_1; }
@@ -1181,34 +1179,34 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//Unit
 		public RuleCall getUnitUnitParserRuleCall_1_4_1_0() { return cUnitUnitParserRuleCall_1_4_1_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_1_4_2() { return cSQUARE_PAREN_RTerminalRuleCall_1_4_2; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_1_4_2() { return cRightSquareBracketKeyword_1_4_2; }
 		
 		//// Enum PMF
-		//ENUMPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)? SQUARE_PAREN_L samples+=stringsample+ SQUARE_PAREN_R
+		//'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=stringsample+ ']'
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//// Enum PMF
-		//ENUMPMF
-		public RuleCall getENUMPMFTerminalRuleCall_2_0() { return cENUMPMFTerminalRuleCall_2_0; }
+		//'EnumPMF'
+		public Keyword getEnumPMFKeyword_2_0() { return cEnumPMFKeyword_2_0; }
 		
-		//(LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
+		//('(' orderedDomain?='ordered' ')')?
 		public Group getGroup_2_1() { return cGroup_2_1; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_2_1_0() { return cLPARENTerminalRuleCall_2_1_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_2_1_0() { return cLeftParenthesisKeyword_2_1_0; }
 		
-		//orderedDomain?=ORDERED_DEF
+		//orderedDomain?='ordered'
 		public Assignment getOrderedDomainAssignment_2_1_1() { return cOrderedDomainAssignment_2_1_1; }
 		
-		//ORDERED_DEF
-		public RuleCall getOrderedDomainORDERED_DEFTerminalRuleCall_2_1_1_0() { return cOrderedDomainORDERED_DEFTerminalRuleCall_2_1_1_0; }
+		//'ordered'
+		public Keyword getOrderedDomainOrderedKeyword_2_1_1_0() { return cOrderedDomainOrderedKeyword_2_1_1_0; }
 		
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_2_1_2() { return cRPARENTerminalRuleCall_2_1_2; }
+		//')'
+		public Keyword getRightParenthesisKeyword_2_1_2() { return cRightParenthesisKeyword_2_1_2; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_2_2() { return cSQUARE_PAREN_LTerminalRuleCall_2_2; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_2_2() { return cLeftSquareBracketKeyword_2_2; }
 		
 		//samples+=stringsample+
 		public Assignment getSamplesAssignment_2_3() { return cSamplesAssignment_2_3; }
@@ -1216,34 +1214,34 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//stringsample
 		public RuleCall getSamplesStringsampleParserRuleCall_2_3_0() { return cSamplesStringsampleParserRuleCall_2_3_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_2_4() { return cSQUARE_PAREN_RTerminalRuleCall_2_4; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_2_4() { return cRightSquareBracketKeyword_2_4; }
 		
 		//// Bool PMF
-		//BOOLPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)? SQUARE_PAREN_L samples+=boolsample+ SQUARE_PAREN_R
+		//'BoolPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=boolsample+ ']'
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//// Bool PMF
-		//BOOLPMF
-		public RuleCall getBOOLPMFTerminalRuleCall_3_0() { return cBOOLPMFTerminalRuleCall_3_0; }
+		//'BoolPMF'
+		public Keyword getBoolPMFKeyword_3_0() { return cBoolPMFKeyword_3_0; }
 		
-		//(LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
+		//('(' orderedDomain?='ordered' ')')?
 		public Group getGroup_3_1() { return cGroup_3_1; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_3_1_0() { return cLPARENTerminalRuleCall_3_1_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_3_1_0() { return cLeftParenthesisKeyword_3_1_0; }
 		
-		//orderedDomain?=ORDERED_DEF
+		//orderedDomain?='ordered'
 		public Assignment getOrderedDomainAssignment_3_1_1() { return cOrderedDomainAssignment_3_1_1; }
 		
-		//ORDERED_DEF
-		public RuleCall getOrderedDomainORDERED_DEFTerminalRuleCall_3_1_1_0() { return cOrderedDomainORDERED_DEFTerminalRuleCall_3_1_1_0; }
+		//'ordered'
+		public Keyword getOrderedDomainOrderedKeyword_3_1_1_0() { return cOrderedDomainOrderedKeyword_3_1_1_0; }
 		
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_3_1_2() { return cRPARENTerminalRuleCall_3_1_2; }
+		//')'
+		public Keyword getRightParenthesisKeyword_3_1_2() { return cRightParenthesisKeyword_3_1_2; }
 		
-		//SQUARE_PAREN_L
-		public RuleCall getSQUARE_PAREN_LTerminalRuleCall_3_2() { return cSQUARE_PAREN_LTerminalRuleCall_3_2; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_3_2() { return cLeftSquareBracketKeyword_3_2; }
 		
 		//samples+=boolsample+
 		public Assignment getSamplesAssignment_3_3() { return cSamplesAssignment_3_3; }
@@ -1251,34 +1249,34 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//boolsample
 		public RuleCall getSamplesBoolsampleParserRuleCall_3_3_0() { return cSamplesBoolsampleParserRuleCall_3_3_0; }
 		
-		//SQUARE_PAREN_R
-		public RuleCall getSQUARE_PAREN_RTerminalRuleCall_3_4() { return cSQUARE_PAREN_RTerminalRuleCall_3_4; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_3_4() { return cRightSquareBracketKeyword_3_4; }
 	}
 	public class Numeric_int_sampleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.numeric_int_sample");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueSIGNED_INTParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final RuleCall cSEMITerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cProbabilityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cProbabilityDOUBLETerminalRuleCall_3_0 = (RuleCall)cProbabilityAssignment_3.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// numeric_int_sample -> LPAREN SIGNED_INT SEMI DOUBLE RPAREN
+		//// numeric_int_sample -> '(' SIGNED_INT ';' DOUBLE ')'
 		//numeric_int_sample IntSample:
-		//	LPAREN value=SIGNED_INT //INT
-		//	SEMI probability=DOUBLE //DOUBLE
-		//	RPAREN;
+		//	'(' value=SIGNED_INT //INT
+		//	';' probability=DOUBLE //DOUBLE
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//LPAREN value=SIGNED_INT //INT
-		//SEMI probability=DOUBLE //DOUBLE
-		//RPAREN
+		//'(' value=SIGNED_INT //INT
+		//';' probability=DOUBLE //DOUBLE
+		//')'
 		public Group getGroup() { return cGroup; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0() { return cLPARENTerminalRuleCall_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 		
 		//value=SIGNED_INT
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
@@ -1287,8 +1285,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueSIGNED_INTParserRuleCall_1_0() { return cValueSIGNED_INTParserRuleCall_1_0; }
 		
 		////INT
-		//SEMI
-		public RuleCall getSEMITerminalRuleCall_2() { return cSEMITerminalRuleCall_2; }
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 		
 		//probability=DOUBLE
 		public Assignment getProbabilityAssignment_3() { return cProbabilityAssignment_3; }
@@ -1297,34 +1295,34 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getProbabilityDOUBLETerminalRuleCall_3_0() { return cProbabilityDOUBLETerminalRuleCall_3_0; }
 		
 		////DOUBLE
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_4() { return cRPARENTerminalRuleCall_4; }
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class Numeric_real_sampleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.numeric_real_sample");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueSIGNED_NUMBERParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final RuleCall cSEMITerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cProbabilityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cProbabilityDOUBLETerminalRuleCall_3_0 = (RuleCall)cProbabilityAssignment_3.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// numeric_real_sample -> LPAREN SIGNED_NUMBER SEMI DOUBLE RPAREN
+		//// numeric_real_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'
 		//numeric_real_sample DoubleSample:
-		//	LPAREN value=SIGNED_NUMBER //DOUBLE
-		//	SEMI probability=DOUBLE //DOUBLE
-		//	RPAREN;
+		//	'(' value=SIGNED_NUMBER //DOUBLE
+		//	';' probability=DOUBLE //DOUBLE
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//LPAREN value=SIGNED_NUMBER //DOUBLE
-		//SEMI probability=DOUBLE //DOUBLE
-		//RPAREN
+		//'(' value=SIGNED_NUMBER //DOUBLE
+		//';' probability=DOUBLE //DOUBLE
+		//')'
 		public Group getGroup() { return cGroup; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0() { return cLPARENTerminalRuleCall_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 		
 		//value=SIGNED_NUMBER
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
@@ -1333,8 +1331,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueSIGNED_NUMBERParserRuleCall_1_0() { return cValueSIGNED_NUMBERParserRuleCall_1_0; }
 		
 		////DOUBLE
-		//SEMI
-		public RuleCall getSEMITerminalRuleCall_2() { return cSEMITerminalRuleCall_2; }
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 		
 		//probability=DOUBLE
 		public Assignment getProbabilityAssignment_3() { return cProbabilityAssignment_3; }
@@ -1343,34 +1341,34 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getProbabilityDOUBLETerminalRuleCall_3_0() { return cProbabilityDOUBLETerminalRuleCall_3_0; }
 		
 		////DOUBLE
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_4() { return cRPARENTerminalRuleCall_4; }
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class Real_pdf_sampleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.real_pdf_sample");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueSIGNED_NUMBERParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final RuleCall cSEMITerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cProbabilityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cProbabilityDOUBLETerminalRuleCall_3_0 = (RuleCall)cProbabilityAssignment_3.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// real_pdf_sample -> LPAREN SIGNED_NUMBER SEMI DOUBLE RPAREN		
+		//// real_pdf_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'		
 		//real_pdf_sample ContinuousSample:
-		//	LPAREN value=SIGNED_NUMBER //DOUBLE
-		//	SEMI probability=DOUBLE //DOUBLE
-		//	RPAREN;
+		//	'(' value=SIGNED_NUMBER //DOUBLE
+		//	';' probability=DOUBLE //DOUBLE
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//LPAREN value=SIGNED_NUMBER //DOUBLE
-		//SEMI probability=DOUBLE //DOUBLE
-		//RPAREN
+		//'(' value=SIGNED_NUMBER //DOUBLE
+		//';' probability=DOUBLE //DOUBLE
+		//')'
 		public Group getGroup() { return cGroup; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0() { return cLPARENTerminalRuleCall_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 		
 		//value=SIGNED_NUMBER
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
@@ -1379,8 +1377,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueSIGNED_NUMBERParserRuleCall_1_0() { return cValueSIGNED_NUMBERParserRuleCall_1_0; }
 		
 		////DOUBLE
-		//SEMI
-		public RuleCall getSEMITerminalRuleCall_2() { return cSEMITerminalRuleCall_2; }
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 		
 		//probability=DOUBLE
 		public Assignment getProbabilityAssignment_3() { return cProbabilityAssignment_3; }
@@ -1389,33 +1387,33 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getProbabilityDOUBLETerminalRuleCall_3_0() { return cProbabilityDOUBLETerminalRuleCall_3_0; }
 		
 		////DOUBLE
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_4() { return cRPARENTerminalRuleCall_4; }
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class StringsampleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.stringsample");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final RuleCall cSEMITerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cProbabilityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cProbabilityDOUBLETerminalRuleCall_3_0 = (RuleCall)cProbabilityAssignment_3.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// stringsample -> LPAREN STRING SEMI DOUBLE RPAREN		
+		//// stringsample -> '(' STRING ';' DOUBLE ')'		
 		//stringsample StringSample:
-		//	LPAREN value=STRING
-		//	SEMI probability=DOUBLE //DOUBLE
-		//	RPAREN;
+		//	'(' value=STRING
+		//	';' probability=DOUBLE //DOUBLE
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//LPAREN value=STRING SEMI probability=DOUBLE //DOUBLE
-		//RPAREN
+		//'(' value=STRING ';' probability=DOUBLE //DOUBLE
+		//')'
 		public Group getGroup() { return cGroup; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0() { return cLPARENTerminalRuleCall_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 		
 		//value=STRING
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
@@ -1423,8 +1421,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getValueSTRINGTerminalRuleCall_1_0() { return cValueSTRINGTerminalRuleCall_1_0; }
 		
-		//SEMI
-		public RuleCall getSEMITerminalRuleCall_2() { return cSEMITerminalRuleCall_2; }
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 		
 		//probability=DOUBLE
 		public Assignment getProbabilityAssignment_3() { return cProbabilityAssignment_3; }
@@ -1433,33 +1431,33 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getProbabilityDOUBLETerminalRuleCall_3_0() { return cProbabilityDOUBLETerminalRuleCall_3_0; }
 		
 		////DOUBLE
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_4() { return cRPARENTerminalRuleCall_4; }
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class BoolsampleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.boolsample");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLPARENTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueBOOLEAN_KEYWORDSTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final RuleCall cSEMITerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cProbabilityAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cProbabilityDOUBLETerminalRuleCall_3_0 = (RuleCall)cProbabilityAssignment_3.eContents().get(0);
-		private final RuleCall cRPARENTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// boolsample -> LPAREN BOOLEAN_KEYWORDS SEMI DOUBLE RPAREN
+		//// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
 		//boolsample BoolSample:
-		//	LPAREN value=BOOLEAN_KEYWORDS
-		//	SEMI probability=DOUBLE //DOUBLE 
-		//	RPAREN;
+		//	'(' value=BOOLEAN_KEYWORDS
+		//	';' probability=DOUBLE //DOUBLE 
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//LPAREN value=BOOLEAN_KEYWORDS SEMI probability=DOUBLE //DOUBLE 
-		//RPAREN
+		//'(' value=BOOLEAN_KEYWORDS ';' probability=DOUBLE //DOUBLE 
+		//')'
 		public Group getGroup() { return cGroup; }
 		
-		//LPAREN
-		public RuleCall getLPARENTerminalRuleCall_0() { return cLPARENTerminalRuleCall_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 		
 		//value=BOOLEAN_KEYWORDS
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
@@ -1467,8 +1465,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//BOOLEAN_KEYWORDS
 		public RuleCall getValueBOOLEAN_KEYWORDSTerminalRuleCall_1_0() { return cValueBOOLEAN_KEYWORDSTerminalRuleCall_1_0; }
 		
-		//SEMI
-		public RuleCall getSEMITerminalRuleCall_2() { return cSEMITerminalRuleCall_2; }
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 		
 		//probability=DOUBLE
 		public Assignment getProbabilityAssignment_3() { return cProbabilityAssignment_3; }
@@ -1477,8 +1475,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getProbabilityDOUBLETerminalRuleCall_3_0() { return cProbabilityDOUBLETerminalRuleCall_3_0; }
 		
 		////DOUBLE 
-		//RPAREN
-		public RuleCall getRPARENTerminalRuleCall_4() { return cRPARENTerminalRuleCall_4; }
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class SIGNED_NUMBERElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.SIGNED_NUMBER");
@@ -1823,24 +1821,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tDOUBLE;
 	private final TerminalRule tDECINT;
 	private final TerminalRule tBOOLEAN_KEYWORDS;
-	private final TerminalRule tNOT;
-	private final TerminalRule tINTPMF;
-	private final TerminalRule tDOUBLEPMF;
-	private final TerminalRule tENUMPMF;
-	private final TerminalRule tDOUBLEPDF;
-	private final TerminalRule tBOOLPMF;
-	private final TerminalRule tPOW;
-	private final TerminalRule tLPAREN;
-	private final TerminalRule tRPAREN;
-	private final TerminalRule tSEMI;
-	private final TerminalRule tCOLON;
-	private final TerminalRule tORDERED_DEF;
-	private final TerminalRule tSQUARE_PAREN_L;
-	private final TerminalRule tSQUARE_PAREN_R;
 	private final TerminalRule tDIGIT;
-	private final TerminalRule tDOT;
-	private final TerminalRule tCONDDELIMITER;
-	private final TerminalRule tELSEDELIMITER;
 	private final TerminalRule tID;
 	private final TerminalRule tSTRING;
 	private final TerminalRule tML_COMMENT;
@@ -1903,24 +1884,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.DOUBLE");
 		this.tDECINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.DECINT");
 		this.tBOOLEAN_KEYWORDS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.BOOLEAN_KEYWORDS");
-		this.tNOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.NOT");
-		this.tINTPMF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.INTPMF");
-		this.tDOUBLEPMF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.DOUBLEPMF");
-		this.tENUMPMF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ENUMPMF");
-		this.tDOUBLEPDF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.DOUBLEPDF");
-		this.tBOOLPMF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.BOOLPMF");
-		this.tPOW = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.POW");
-		this.tLPAREN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.LPAREN");
-		this.tRPAREN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.RPAREN");
-		this.tSEMI = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.SEMI");
-		this.tCOLON = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.COLON");
-		this.tORDERED_DEF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ORDERED_DEF");
-		this.tSQUARE_PAREN_L = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.SQUARE_PAREN_L");
-		this.tSQUARE_PAREN_R = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.SQUARE_PAREN_R");
 		this.tDIGIT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.DIGIT");
-		this.tDOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.DOT");
-		this.tCONDDELIMITER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.CONDDELIMITER");
-		this.tELSEDELIMITER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ELSEDELIMITER");
 		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ID");
 		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.STRING");
 		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.ML_COMMENT");
@@ -1969,7 +1933,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	//// Stochastic Expressions:
 	//// ifelseExpr -> boolAndExpr ('?' boolAndExpr ':' boolAndExpr)?
 	//ifelseExpr IfElse:
-	//	boolAndExpr ({IfElseExpression.conditionExpression=current} CONDDELIMITER ifExpression=boolAndExpr ELSEDELIMITER
+	//	boolAndExpr ({IfElseExpression.conditionExpression=current} '?' ifExpression=boolAndExpr ':'
 	//	elseExpression=boolAndExpr)?;
 	public IfelseExprElements getIfelseExprAccess() {
 		return pIfelseExpr;
@@ -2108,7 +2072,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// powExpr -> unaryExpr (POW unaryExpr)?
 	//powExpr Power:
-	//	unaryExpr ({PowerExpression.base=current} POW exponent=unaryExpr)?;
+	//	unaryExpr ({PowerExpression.base=current} '^' exponent=unaryExpr)?;
 	public PowExprElements getPowExprAccess() {
 		return pPowExpr;
 	}
@@ -2130,7 +2094,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// NotExpression -> NOT unaryExpr
 	//NotExpression:
-	//	NOT inner=unaryExpr;
+	//	'NOT' inner=unaryExpr;
 	public NotExpressionElements getNotExpressionAccess() {
 		return pNotExpression;
 	}
@@ -2162,9 +2126,9 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getAtomAccess().getRule();
 	}
 	
-	//// DoubleLiteral -> DOUBLE (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+	//// DoubleLiteral -> DOUBLE ('[' Unit ']')?
 	//DoubleLiteral:
-	//	value=DOUBLE (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?;
+	//	value=DOUBLE ('[' unit=Unit ']')?;
 	public DoubleLiteralElements getDoubleLiteralAccess() {
 		return pDoubleLiteral;
 	}
@@ -2184,9 +2148,9 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getProbabilityFunctionLiteralAccess().getRule();
 	}
 	
-	//// Parenthesis -> LPAREN ifelseExpr RPAREN
+	//// Parenthesis -> '(' ifelseExpr ')'
 	//Parenthesis:
-	//	LPAREN innerExpression=ifelseExpr RPAREN;
+	//	'(' innerExpression=ifelseExpr ')';
 	public ParenthesisElements getParenthesisAccess() {
 		return pParenthesis;
 	}
@@ -2195,9 +2159,9 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getParenthesisAccess().getRule();
 	}
 	
-	//// FunctionLiteral -> ID LPAREN (boolAndExpr (COLON boolAndExpr)* )? RPAREN
+	//// FunctionLiteral -> ID '(' (boolAndExpr (',' boolAndExpr)* )? ')'
 	//FunctionLiteral:
-	//	id=ID LPAREN (parameters_FunctionLiteral+=boolAndExpr (COLON parameters_FunctionLiteral+=boolAndExpr)*)? RPAREN;
+	//	id=ID '(' (parameters_FunctionLiteral+=boolAndExpr (',' parameters_FunctionLiteral+=boolAndExpr)*)? ')';
 	public FunctionLiteralElements getFunctionLiteralAccess() {
 		return pFunctionLiteral;
 	}
@@ -2239,9 +2203,9 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getVariableReferenceAccess().getRule();
 	}
 	
-	//// NamespaceReference -> ID DOT AbstractNamedReference
+	//// NamespaceReference -> ID '.' AbstractNamedReference
 	//NamespaceReference:
-	//	referenceName=ID DOT innerReference_NamespaceReference=AbstractNamedReference;
+	//	referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference;
 	public NamespaceReferenceElements getNamespaceReferenceAccess() {
 		return pNamespaceReference;
 	}
@@ -2272,9 +2236,9 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getStringLiteralAccess().getRule();
 	}
 	
-	//// IntLiteral -> DECINT (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+	//// IntLiteral -> DECINT ('[' Unit ']')?
 	//IntLiteral:
-	//	value=DECINT (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?;
+	//	value=DECINT ('[' unit=Unit ']')?;
 	public IntLiteralElements getIntLiteralAccess() {
 		return pIntLiteral;
 	}
@@ -2318,9 +2282,10 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getUnitMultiAccess().getRule();
 	}
 	
-	//// unitPow -> (BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN) (POW SIGNED_INT)*
+	//// unitPow -> (BaseUnit | '(' (unitMulti | unitDiv) ')') (POW SIGNED_INT)*
 	//unitPow Unit:
-	//	(BaseUnit | LPAREN (unitMulti | unitDiv) RPAREN) ({UnitPower.unit=current} POW exponent=SIGNED_INT)*;
+	//	(BaseUnit |
+	//	'(' (unitMulti | unitDiv) ')') ({UnitPower.unit=current} '^' exponent=SIGNED_INT)*;
 	public UnitPowElements getUnitPowAccess() {
 		return pUnitPow;
 	}
@@ -2375,9 +2340,9 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getProbabilityDensityFunctionAccess().getRule();
 	}
 	
-	//// BoxedPDF -> DOUBLEPDF SQUARE_PAREN_L (real_pdf_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
+	//// BoxedPDF -> DOUBLEPDF '[' (real_pdf_sample)+ ']' ('[' Unit ']')?
 	//BoxedPDF:
-	//	DOUBLEPDF SQUARE_PAREN_L samples+=real_pdf_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?;
+	//	'DoublePDF' '[' samples+=real_pdf_sample+ ']' ('[' unit=Unit ']')?;
 	public BoxedPDFElements getBoxedPDFAccess() {
 		return pBoxedPDF;
 	}
@@ -2386,17 +2351,15 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getBoxedPDFAccess().getRule();
 	}
 	
-	//// ProbabilityMassFunction -> INTPMF SQUARE_PAREN_L (numeric_int_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-	//// ProbabilityMassFunction -> DOUBLEPMF SQUARE_PAREN_L (numeric_real_sample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-	//// ProbabilityMassFunction -> ENUMPMF (LPAREN ORDERED_DEF RPAREN)? SQUARE_PAREN_L (stringsample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-	//// ProbabilityMassFunction -> BOOLPMF (LPAREN ORDERED_DEF RPAREN)? SQUARE_PAREN_L (boolsample)+ SQUARE_PAREN_R (SQUARE_PAREN_L Unit SQUARE_PAREN_R)?
-	//ProbabilityMassFunction:
-	//	INTPMF SQUARE_PAREN_L samples+=numeric_int_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
-	//	| DOUBLEPMF SQUARE_PAREN_L samples+=numeric_real_sample+ SQUARE_PAREN_R (SQUARE_PAREN_L unit=Unit SQUARE_PAREN_R)?
-	//	| ENUMPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
-	//	SQUARE_PAREN_L samples+=stringsample+ SQUARE_PAREN_R
-	//	| BOOLPMF (LPAREN orderedDomain?=ORDERED_DEF RPAREN)?
-	//	SQUARE_PAREN_L samples+=boolsample+ SQUARE_PAREN_R;
+	//// ProbabilityMassFunction -> INTPMF '[' (numeric_int_sample)+ ']' ('[' Unit ']')?
+	//// ProbabilityMassFunction -> DOUBLEPMF '[' (numeric_real_sample)+ ']' ('[' Unit ']')?
+	//// ProbabilityMassFunction -> ENUMPMF ('(' 'ordered' ')')? '[' (stringsample)+ ']' ('[' Unit ']')?
+	//// ProbabilityMassFunction -> BOOLPMF ('(' 'ordered' ')')? '[' (boolsample)+ ']' ('[' Unit ']')?
+	//ProbabilityMassFunction: // Numeric PMF
+	//	'IntPMF' '[' samples+=numeric_int_sample+ ']' ('[' unit=Unit ']')? | 'DoublePMF' '[' samples+=numeric_real_sample+ ']'
+	//	('[' unit=Unit ']')? | // Enum PMF
+	//	'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=stringsample+ ']' | // Bool PMF
+	//	'BoolPMF' ('(' orderedDomain?='ordered' ')')? '[' samples+=boolsample+ ']';
 	public ProbabilityMassFunctionElements getProbabilityMassFunctionAccess() {
 		return pProbabilityMassFunction;
 	}
@@ -2405,11 +2368,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getProbabilityMassFunctionAccess().getRule();
 	}
 	
-	//// numeric_int_sample -> LPAREN SIGNED_INT SEMI DOUBLE RPAREN
+	//// numeric_int_sample -> '(' SIGNED_INT ';' DOUBLE ')'
 	//numeric_int_sample IntSample:
-	//	LPAREN value=SIGNED_INT //INT
-	//	SEMI probability=DOUBLE //DOUBLE
-	//	RPAREN;
+	//	'(' value=SIGNED_INT //INT
+	//	';' probability=DOUBLE //DOUBLE
+	//	')';
 	public Numeric_int_sampleElements getNumeric_int_sampleAccess() {
 		return pNumeric_int_sample;
 	}
@@ -2418,11 +2381,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumeric_int_sampleAccess().getRule();
 	}
 	
-	//// numeric_real_sample -> LPAREN SIGNED_NUMBER SEMI DOUBLE RPAREN
+	//// numeric_real_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'
 	//numeric_real_sample DoubleSample:
-	//	LPAREN value=SIGNED_NUMBER //DOUBLE
-	//	SEMI probability=DOUBLE //DOUBLE
-	//	RPAREN;
+	//	'(' value=SIGNED_NUMBER //DOUBLE
+	//	';' probability=DOUBLE //DOUBLE
+	//	')';
 	public Numeric_real_sampleElements getNumeric_real_sampleAccess() {
 		return pNumeric_real_sample;
 	}
@@ -2431,11 +2394,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumeric_real_sampleAccess().getRule();
 	}
 	
-	//// real_pdf_sample -> LPAREN SIGNED_NUMBER SEMI DOUBLE RPAREN		
+	//// real_pdf_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'		
 	//real_pdf_sample ContinuousSample:
-	//	LPAREN value=SIGNED_NUMBER //DOUBLE
-	//	SEMI probability=DOUBLE //DOUBLE
-	//	RPAREN;
+	//	'(' value=SIGNED_NUMBER //DOUBLE
+	//	';' probability=DOUBLE //DOUBLE
+	//	')';
 	public Real_pdf_sampleElements getReal_pdf_sampleAccess() {
 		return pReal_pdf_sample;
 	}
@@ -2444,11 +2407,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getReal_pdf_sampleAccess().getRule();
 	}
 	
-	//// stringsample -> LPAREN STRING SEMI DOUBLE RPAREN		
+	//// stringsample -> '(' STRING ';' DOUBLE ')'		
 	//stringsample StringSample:
-	//	LPAREN value=STRING
-	//	SEMI probability=DOUBLE //DOUBLE
-	//	RPAREN;
+	//	'(' value=STRING
+	//	';' probability=DOUBLE //DOUBLE
+	//	')';
 	public StringsampleElements getStringsampleAccess() {
 		return pStringsample;
 	}
@@ -2457,11 +2420,11 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return getStringsampleAccess().getRule();
 	}
 	
-	//// boolsample -> LPAREN BOOLEAN_KEYWORDS SEMI DOUBLE RPAREN
+	//// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
 	//boolsample BoolSample:
-	//	LPAREN value=BOOLEAN_KEYWORDS
-	//	SEMI probability=DOUBLE //DOUBLE 
-	//	RPAREN;
+	//	'(' value=BOOLEAN_KEYWORDS
+	//	';' probability=DOUBLE //DOUBLE 
+	//	')';
 	public BoolsampleElements getBoolsampleAccess() {
 		return pBoolsample;
 	}
@@ -2495,7 +2458,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal DOUBLE returns ecore::EDouble:
-	//	DECINT (DOT DIGIT* | (DOT DIGIT*)? ('E' | 'e') ('-' | '+')? DECINT);
+	//	DECINT ('.' DIGIT* | ('.' DIGIT*)? ('E' | 'e') ('-' | '+')? DECINT);
 	public TerminalRule getDOUBLERule() {
 		return tDOUBLE;
 	}
@@ -2512,112 +2475,10 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		return tBOOLEAN_KEYWORDS;
 	}
 	
-	//terminal NOT:
-	//	'NOT';
-	public TerminalRule getNOTRule() {
-		return tNOT;
-	}
-	
-	//terminal INTPMF:
-	//	'IntPMF';
-	public TerminalRule getINTPMFRule() {
-		return tINTPMF;
-	}
-	
-	//terminal DOUBLEPMF:
-	//	'DoublePMF';
-	public TerminalRule getDOUBLEPMFRule() {
-		return tDOUBLEPMF;
-	}
-	
-	//terminal ENUMPMF:
-	//	'EnumPMF';
-	public TerminalRule getENUMPMFRule() {
-		return tENUMPMF;
-	}
-	
-	//terminal DOUBLEPDF:
-	//	'DoublePDF';
-	public TerminalRule getDOUBLEPDFRule() {
-		return tDOUBLEPDF;
-	}
-	
-	//terminal BOOLPMF:
-	//	'BoolPMF';
-	public TerminalRule getBOOLPMFRule() {
-		return tBOOLPMF;
-	}
-	
-	//terminal POW:
-	//	'^';
-	public TerminalRule getPOWRule() {
-		return tPOW;
-	}
-	
-	//terminal LPAREN:
-	//	'(';
-	public TerminalRule getLPARENRule() {
-		return tLPAREN;
-	}
-	
-	//terminal RPAREN:
-	//	')';
-	public TerminalRule getRPARENRule() {
-		return tRPAREN;
-	}
-	
-	//terminal SEMI:
-	//	';';
-	public TerminalRule getSEMIRule() {
-		return tSEMI;
-	}
-	
-	//terminal COLON:
-	//	',';
-	public TerminalRule getCOLONRule() {
-		return tCOLON;
-	}
-	
-	//terminal ORDERED_DEF:
-	//	'ordered';
-	public TerminalRule getORDERED_DEFRule() {
-		return tORDERED_DEF;
-	}
-	
-	//terminal SQUARE_PAREN_L:
-	//	'[';
-	public TerminalRule getSQUARE_PAREN_LRule() {
-		return tSQUARE_PAREN_L;
-	}
-	
-	//terminal SQUARE_PAREN_R:
-	//	']';
-	public TerminalRule getSQUARE_PAREN_RRule() {
-		return tSQUARE_PAREN_R;
-	}
-	
 	//terminal fragment DIGIT:
 	//	'0'..'9';
 	public TerminalRule getDIGITRule() {
 		return tDIGIT;
-	}
-	
-	//terminal DOT:
-	//	'.';
-	public TerminalRule getDOTRule() {
-		return tDOT;
-	}
-	
-	//terminal CONDDELIMITER:
-	//	'?';
-	public TerminalRule getCONDDELIMITERRule() {
-		return tCONDDELIMITER;
-	}
-	
-	//terminal ELSEDELIMITER:
-	//	':';
-	public TerminalRule getELSEDELIMITERRule() {
-		return tELSEDELIMITER;
 	}
 	
 	//terminal ID:

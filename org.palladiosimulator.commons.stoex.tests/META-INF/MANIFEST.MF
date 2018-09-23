@@ -1,24 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.palladiosimulator.stoex.tests
+Bundle-Name: org.palladiosimulator.commons.stoex.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: org.palladiosimulator.commons.stoex.tests;singleton:=true
+Bundle-SymbolicName: org.palladiosimulator.commons.stoex.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.palladiosimulator.commons.stoex,
- org.palladiosimulator.commons.stoex.ui,
- org.eclipse.core.runtime,
- org.eclipse.xtext.junit4,
- org.eclipse.ui.workbench;resolution:=optional,
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.junit;bundle-version="4.12.0",
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
  org.eclipse.xtext.xbase.lib
-Import-Package: org.apache.log4j,
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.palladiosimulator.commons.stoex.tests;x-internal=true
+Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
- org.junit.runner;version="4.5.0",
- org.junit.runner.manipulation;version="4.5.0",
- org.junit.runner.notification;version="4.5.0",
- org.junit.runners;version="4.5.0",
  org.junit.runners.model;version="4.5.0",
- org.hamcrest.core
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.palladiosimulator.commons.stoex
+ org.junit.runner;version="4.5.0",
+ org.junit.runners;version="4.5.0",
+ org.junit.runner.manipulation;version="4.5.0",
+ org.junit.runner.notification;version="4.5.0"

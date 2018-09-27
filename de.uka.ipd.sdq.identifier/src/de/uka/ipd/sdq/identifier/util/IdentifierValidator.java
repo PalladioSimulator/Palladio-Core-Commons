@@ -134,7 +134,7 @@ public class IdentifierValidator extends EObjectValidator {
                  (EObject)identifier,
                  diagnostics,
                  context,
-                 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+                 "http://www.eclipse.org/emf/2002/Ecore/OCL",
                  "identifierIsUnique",
                  IDENTIFIER__IDENTIFIER_IS_UNIQUE__EEXPRESSION,
                  Diagnostic.ERROR,

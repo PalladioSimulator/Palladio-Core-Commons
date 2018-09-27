@@ -30,7 +30,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see de.uka.ipd.sdq.identifier.IdentifierPackage#getIdentifier()
  * @model abstract="true"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot identifierIsUnique='Identifier.allInstances()-&gt;isUnique(p: Identifier | p.id)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL identifierIsUnique='Identifier.allInstances()-&gt;isUnique(p: Identifier | p.id)'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='identifierIsUnique'"
  * @extends CDOObject
  * @generated

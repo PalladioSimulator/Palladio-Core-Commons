@@ -176,8 +176,8 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
         // Create annotations
         // http://www.eclipse.org/emf/2002/Ecore
         createEcoreAnnotations();
-        // http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-        createPivotAnnotations();
+        // http://www.eclipse.org/emf/2002/Ecore/OCL
+        createOCLAnnotations();
     }
 
     /**
@@ -192,9 +192,9 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
           (this,
            source,
            new String[] {
-               "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-               "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-               "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+               "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+               "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+               "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
            });
         addAnnotation
           (identifierEClass,
@@ -205,13 +205,13 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
     }
 
     /**
-     * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-    protected void createPivotAnnotations() {
-        String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+    protected void createOCLAnnotations() {
+        String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
         addAnnotation
           (identifierEClass,
            source,

@@ -644,39 +644,51 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class AbstractNamedReferenceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.AbstractNamedReference");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cVariableReferenceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cNamespaceReferenceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cNamespaceReferenceParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
 		//// AbstractNamedReference -> VariableReference|NamespaceReference
 		//AbstractNamedReference:
-		//	VariableReference | NamespaceReference;
+		//	NamespaceReference;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//VariableReference | NamespaceReference
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//VariableReference
-		public RuleCall getVariableReferenceParserRuleCall_0() { return cVariableReferenceParserRuleCall_0; }
-		
 		//NamespaceReference
-		public RuleCall getNamespaceReferenceParserRuleCall_1() { return cNamespaceReferenceParserRuleCall_1; }
+		public RuleCall getNamespaceReferenceParserRuleCall() { return cNamespaceReferenceParserRuleCall; }
 	}
 	public class VariableReferenceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.VariableReference");
 		private final Assignment cReferenceNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cReferenceNameIDTerminalRuleCall_0 = (RuleCall)cReferenceNameAssignment.eContents().get(0);
+		private final Alternatives cReferenceNameAlternatives_0 = (Alternatives)cReferenceNameAssignment.eContents().get(0);
+		private final Keyword cReferenceNameBYTESIZEKeyword_0_0 = (Keyword)cReferenceNameAlternatives_0.eContents().get(0);
+		private final Keyword cReferenceNameVALUEKeyword_0_1 = (Keyword)cReferenceNameAlternatives_0.eContents().get(1);
+		private final Keyword cReferenceNameSTRUCTUREKeyword_0_2 = (Keyword)cReferenceNameAlternatives_0.eContents().get(2);
+		private final Keyword cReferenceNameTYPEKeyword_0_3 = (Keyword)cReferenceNameAlternatives_0.eContents().get(3);
+		private final Keyword cReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4 = (Keyword)cReferenceNameAlternatives_0.eContents().get(4);
 		
 		//// VariableReference -> ID
 		//VariableReference:
-		//	referenceName=ID;
+		//	referenceName=('BYTESIZE' | 'VALUE' | 'STRUCTURE' | 'TYPE' | 'NUMBER_OF_ELEMENTS');
 		@Override public ParserRule getRule() { return rule; }
 		
-		//referenceName=ID
+		//referenceName=('BYTESIZE' | 'VALUE' | 'STRUCTURE' | 'TYPE' | 'NUMBER_OF_ELEMENTS')
 		public Assignment getReferenceNameAssignment() { return cReferenceNameAssignment; }
 		
-		//ID
-		public RuleCall getReferenceNameIDTerminalRuleCall_0() { return cReferenceNameIDTerminalRuleCall_0; }
+		//('BYTESIZE' | 'VALUE' | 'STRUCTURE' | 'TYPE' | 'NUMBER_OF_ELEMENTS')
+		public Alternatives getReferenceNameAlternatives_0() { return cReferenceNameAlternatives_0; }
+		
+		//'BYTESIZE'
+		public Keyword getReferenceNameBYTESIZEKeyword_0_0() { return cReferenceNameBYTESIZEKeyword_0_0; }
+		
+		//'VALUE'
+		public Keyword getReferenceNameVALUEKeyword_0_1() { return cReferenceNameVALUEKeyword_0_1; }
+		
+		//'STRUCTURE'
+		public Keyword getReferenceNameSTRUCTUREKeyword_0_2() { return cReferenceNameSTRUCTUREKeyword_0_2; }
+		
+		//'TYPE'
+		public Keyword getReferenceNameTYPEKeyword_0_3() { return cReferenceNameTYPEKeyword_0_3; }
+		
+		//'NUMBER_OF_ELEMENTS'
+		public Keyword getReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4() { return cReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4; }
 	}
 	public class NamespaceReferenceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.NamespaceReference");
@@ -684,15 +696,20 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cReferenceNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cReferenceNameIDTerminalRuleCall_0_0 = (RuleCall)cReferenceNameAssignment_0.eContents().get(0);
 		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cInnerReference_NamespaceReferenceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0 = (RuleCall)cInnerReference_NamespaceReferenceAssignment_2.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cInnerReference_NamespaceReferenceAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final RuleCall cInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0 = (RuleCall)cInnerReference_NamespaceReferenceAssignment_2_0.eContents().get(0);
+		private final Assignment cInnerReference_NamespaceReferenceAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final RuleCall cInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0 = (RuleCall)cInnerReference_NamespaceReferenceAssignment_2_1.eContents().get(0);
 		
 		//// NamespaceReference -> ID '.' AbstractNamedReference
 		//NamespaceReference:
-		//	referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference;
+		//	referenceName=ID '.' (innerReference_NamespaceReference=AbstractNamedReference
+		//	| innerReference_NamespaceReference=VariableReference);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference
+		//referenceName=ID '.' (innerReference_NamespaceReference=AbstractNamedReference |
+		//innerReference_NamespaceReference=VariableReference)
 		public Group getGroup() { return cGroup; }
 		
 		//referenceName=ID
@@ -704,11 +721,20 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		//'.'
 		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
 		
+		//innerReference_NamespaceReference=AbstractNamedReference | innerReference_NamespaceReference=VariableReference
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		
 		//innerReference_NamespaceReference=AbstractNamedReference
-		public Assignment getInnerReference_NamespaceReferenceAssignment_2() { return cInnerReference_NamespaceReferenceAssignment_2; }
+		public Assignment getInnerReference_NamespaceReferenceAssignment_2_0() { return cInnerReference_NamespaceReferenceAssignment_2_0; }
 		
 		//AbstractNamedReference
-		public RuleCall getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0() { return cInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0; }
+		public RuleCall getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0() { return cInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0; }
+		
+		//innerReference_NamespaceReference=VariableReference
+		public Assignment getInnerReference_NamespaceReferenceAssignment_2_1() { return cInnerReference_NamespaceReferenceAssignment_2_1; }
+		
+		//VariableReference
+		public RuleCall getInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0() { return cInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0; }
 	}
 	public class BoolLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.palladiosimulator.commons.stoex.Stoex.BoolLiteral");
@@ -1403,8 +1429,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// stringsample -> '(' STRING ';' DOUBLE ')'		
 		//stringsample StringSample:
-		//	'(' value=STRING
-		//	';' probability=DOUBLE //DOUBLE
+		//	'(' value=STRING ';' probability=DOUBLE //DOUBLE
 		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1447,8 +1472,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
 		//boolsample BoolSample:
-		//	'(' value=BOOLEAN_KEYWORDS
-		//	';' probability=DOUBLE //DOUBLE 
+		//	'(' value=BOOLEAN_KEYWORDS ';' probability=DOUBLE //DOUBLE 
 		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -2183,7 +2207,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// AbstractNamedReference -> VariableReference|NamespaceReference
 	//AbstractNamedReference:
-	//	VariableReference | NamespaceReference;
+	//	NamespaceReference;
 	public AbstractNamedReferenceElements getAbstractNamedReferenceAccess() {
 		return pAbstractNamedReference;
 	}
@@ -2194,7 +2218,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// VariableReference -> ID
 	//VariableReference:
-	//	referenceName=ID;
+	//	referenceName=('BYTESIZE' | 'VALUE' | 'STRUCTURE' | 'TYPE' | 'NUMBER_OF_ELEMENTS');
 	public VariableReferenceElements getVariableReferenceAccess() {
 		return pVariableReference;
 	}
@@ -2205,7 +2229,8 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// NamespaceReference -> ID '.' AbstractNamedReference
 	//NamespaceReference:
-	//	referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference;
+	//	referenceName=ID '.' (innerReference_NamespaceReference=AbstractNamedReference
+	//	| innerReference_NamespaceReference=VariableReference);
 	public NamespaceReferenceElements getNamespaceReferenceAccess() {
 		return pNamespaceReference;
 	}
@@ -2409,8 +2434,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// stringsample -> '(' STRING ';' DOUBLE ')'		
 	//stringsample StringSample:
-	//	'(' value=STRING
-	//	';' probability=DOUBLE //DOUBLE
+	//	'(' value=STRING ';' probability=DOUBLE //DOUBLE
 	//	')';
 	public StringsampleElements getStringsampleAccess() {
 		return pStringsample;
@@ -2422,8 +2446,7 @@ public class StoexGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
 	//boolsample BoolSample:
-	//	'(' value=BOOLEAN_KEYWORDS
-	//	';' probability=DOUBLE //DOUBLE 
+	//	'(' value=BOOLEAN_KEYWORDS ';' probability=DOUBLE //DOUBLE 
 	//	')';
 	public BoolsampleElements getBoolsampleAccess() {
 		return pBoolsample;

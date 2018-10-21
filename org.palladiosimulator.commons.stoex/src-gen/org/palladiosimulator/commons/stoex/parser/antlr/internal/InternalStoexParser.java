@@ -23,8 +23,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalStoexParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_DOUBLE", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_DECINT", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'?'", "':'", "'^'", "'NOT'", "'-'", "'['", "']'", "'('", "')'", "','", "'.'", "'/'", "'*'", "'DoublePDF'", "'IntPMF'", "'DoublePMF'", "'EnumPMF'", "'ordered'", "'BoolPMF'", "';'", "'AND'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_DOUBLE", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_DECINT", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'?'", "':'", "'^'", "'NOT'", "'-'", "'['", "']'", "'('", "')'", "','", "'BYTESIZE'", "'VALUE'", "'STRUCTURE'", "'TYPE'", "'NUMBER_OF_ELEMENTS'", "'.'", "'/'", "'*'", "'DoublePDF'", "'IntPMF'", "'DoublePMF'", "'EnumPMF'", "'ordered'", "'BoolPMF'", "';'", "'AND'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'"
     };
+    public static final int T__50=50;
     public static final int RULE_BOOLEAN_KEYWORDS=6;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -32,6 +33,10 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__14=14;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
     public static final int RULE_ID=5;
     public static final int RULE_DIGIT=9;
     public static final int T__26=26;
@@ -529,7 +534,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==34) ) {
+                if ( (LA2_0==39) ) {
                     alt2=1;
                 }
 
@@ -748,7 +753,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( ((LA3_0>=35 && LA3_0<=36)) ) {
+                if ( ((LA3_0>=40 && LA3_0<=41)) ) {
                     alt3=1;
                 }
 
@@ -965,7 +970,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( ((LA4_0>=37 && LA4_0<=42)) ) {
+            if ( ((LA4_0>=42 && LA4_0<=47)) ) {
                 alt4=1;
             }
             switch (alt4) {
@@ -1179,7 +1184,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==18||LA5_0==43) ) {
+                if ( (LA5_0==18||LA5_0==48) ) {
                     alt5=1;
                 }
 
@@ -1398,7 +1403,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( ((LA6_0>=25 && LA6_0<=26)||LA6_0==44) ) {
+                if ( ((LA6_0>=30 && LA6_0<=31)||LA6_0==49) ) {
                     alt6=1;
                 }
 
@@ -1788,11 +1793,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             case RULE_STRING:
             case RULE_DECINT:
             case 21:
-            case 27:
-            case 28:
-            case 29:
-            case 30:
             case 32:
+            case 33:
+            case 34:
+            case 35:
+            case 37:
                 {
                 alt8=3;
                 }
@@ -2997,7 +3002,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( ((LA12_0>=RULE_DOUBLE && LA12_0<=RULE_DECINT)||(LA12_0>=17 && LA12_0<=18)||LA12_0==21||(LA12_0>=27 && LA12_0<=30)||LA12_0==32) ) {
+            if ( ((LA12_0>=RULE_DOUBLE && LA12_0<=RULE_DECINT)||(LA12_0>=17 && LA12_0<=18)||LA12_0==21||(LA12_0>=32 && LA12_0<=35)||LA12_0==37) ) {
                 alt12=1;
             }
             switch (alt12) {
@@ -3292,108 +3297,41 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAbstractNamedReference"
-    // InternalStoex.g:1186:1: ruleAbstractNamedReference returns [EObject current=null] : (this_VariableReference_0= ruleVariableReference | this_NamespaceReference_1= ruleNamespaceReference ) ;
+    // InternalStoex.g:1186:1: ruleAbstractNamedReference returns [EObject current=null] : this_NamespaceReference_0= ruleNamespaceReference ;
     public final EObject ruleAbstractNamedReference() throws RecognitionException {
         EObject current = null;
 
-        EObject this_VariableReference_0 = null;
-
-        EObject this_NamespaceReference_1 = null;
+        EObject this_NamespaceReference_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalStoex.g:1192:2: ( (this_VariableReference_0= ruleVariableReference | this_NamespaceReference_1= ruleNamespaceReference ) )
-            // InternalStoex.g:1193:2: (this_VariableReference_0= ruleVariableReference | this_NamespaceReference_1= ruleNamespaceReference )
+            // InternalStoex.g:1192:2: (this_NamespaceReference_0= ruleNamespaceReference )
+            // InternalStoex.g:1193:2: this_NamespaceReference_0= ruleNamespaceReference
             {
-            // InternalStoex.g:1193:2: (this_VariableReference_0= ruleVariableReference | this_NamespaceReference_1= ruleNamespaceReference )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            if ( state.backtracking==0 ) {
 
-            if ( (LA13_0==RULE_ID) ) {
-                int LA13_1 = input.LA(2);
-
-                if ( (LA13_1==EOF||(LA13_1>=14 && LA13_1<=16)||LA13_1==18||(LA13_1>=22 && LA13_1<=23)||(LA13_1>=25 && LA13_1<=26)||(LA13_1>=34 && LA13_1<=44)) ) {
-                    alt13=1;
-                }
-                else if ( (LA13_1==24) ) {
-                    alt13=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 13, 1, input);
-
-                    throw nvae;
-                }
+              		/* */
+              	
             }
-            else {
-                if (state.backtracking>0) {state.failed=true; return current;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+            if ( state.backtracking==0 ) {
 
-                throw nvae;
+              		newCompositeNode(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall());
+              	
             }
-            switch (alt13) {
-                case 1 :
-                    // InternalStoex.g:1194:3: this_VariableReference_0= ruleVariableReference
-                    {
-                    if ( state.backtracking==0 ) {
+            pushFollow(FollowSets000.FOLLOW_2);
+            this_NamespaceReference_0=ruleNamespaceReference();
 
-                      			/* */
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
 
-                      			newCompositeNode(grammarAccess.getAbstractNamedReferenceAccess().getVariableReferenceParserRuleCall_0());
-                      		
-                    }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    this_VariableReference_0=ruleVariableReference();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      			current = this_VariableReference_0;
-                      			afterParserOrEnumRuleCall();
-                      		
-                    }
-
-                    }
-                    break;
-                case 2 :
-                    // InternalStoex.g:1206:3: this_NamespaceReference_1= ruleNamespaceReference
-                    {
-                    if ( state.backtracking==0 ) {
-
-                      			/* */
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
-
-                      			newCompositeNode(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall_1());
-                      		
-                    }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    this_NamespaceReference_1=ruleNamespaceReference();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      			current = this_NamespaceReference_1;
-                      			afterParserOrEnumRuleCall();
-                      		
-                    }
-
-                    }
-                    break;
-
+              		current = this_NamespaceReference_0;
+              		afterParserOrEnumRuleCall();
+              	
             }
-
 
             }
 
@@ -3416,7 +3354,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariableReference"
-    // InternalStoex.g:1221:1: entryRuleVariableReference returns [EObject current=null] : iv_ruleVariableReference= ruleVariableReference EOF ;
+    // InternalStoex.g:1207:1: entryRuleVariableReference returns [EObject current=null] : iv_ruleVariableReference= ruleVariableReference EOF ;
     public final EObject entryRuleVariableReference() throws RecognitionException {
         EObject current = null;
 
@@ -3424,8 +3362,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1221:58: (iv_ruleVariableReference= ruleVariableReference EOF )
-            // InternalStoex.g:1222:2: iv_ruleVariableReference= ruleVariableReference EOF
+            // InternalStoex.g:1207:58: (iv_ruleVariableReference= ruleVariableReference EOF )
+            // InternalStoex.g:1208:2: iv_ruleVariableReference= ruleVariableReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVariableReferenceRule()); 
@@ -3456,43 +3394,169 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariableReference"
-    // InternalStoex.g:1228:1: ruleVariableReference returns [EObject current=null] : ( (lv_referenceName_0_0= RULE_ID ) ) ;
+    // InternalStoex.g:1214:1: ruleVariableReference returns [EObject current=null] : ( ( (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' ) ) ) ;
     public final EObject ruleVariableReference() throws RecognitionException {
         EObject current = null;
 
-        Token lv_referenceName_0_0=null;
+        Token lv_referenceName_0_1=null;
+        Token lv_referenceName_0_2=null;
+        Token lv_referenceName_0_3=null;
+        Token lv_referenceName_0_4=null;
+        Token lv_referenceName_0_5=null;
 
 
         	enterRule();
 
         try {
-            // InternalStoex.g:1234:2: ( ( (lv_referenceName_0_0= RULE_ID ) ) )
-            // InternalStoex.g:1235:2: ( (lv_referenceName_0_0= RULE_ID ) )
+            // InternalStoex.g:1220:2: ( ( ( (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' ) ) ) )
+            // InternalStoex.g:1221:2: ( ( (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' ) ) )
             {
-            // InternalStoex.g:1235:2: ( (lv_referenceName_0_0= RULE_ID ) )
-            // InternalStoex.g:1236:3: (lv_referenceName_0_0= RULE_ID )
+            // InternalStoex.g:1221:2: ( ( (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' ) ) )
+            // InternalStoex.g:1222:3: ( (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' ) )
             {
-            // InternalStoex.g:1236:3: (lv_referenceName_0_0= RULE_ID )
-            // InternalStoex.g:1237:4: lv_referenceName_0_0= RULE_ID
+            // InternalStoex.g:1222:3: ( (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' ) )
+            // InternalStoex.g:1223:4: (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' )
             {
-            lv_referenceName_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            // InternalStoex.g:1223:4: (lv_referenceName_0_1= 'BYTESIZE' | lv_referenceName_0_2= 'VALUE' | lv_referenceName_0_3= 'STRUCTURE' | lv_referenceName_0_4= 'TYPE' | lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS' )
+            int alt13=5;
+            switch ( input.LA(1) ) {
+            case 24:
+                {
+                alt13=1;
+                }
+                break;
+            case 25:
+                {
+                alt13=2;
+                }
+                break;
+            case 26:
+                {
+                alt13=3;
+                }
+                break;
+            case 27:
+                {
+                alt13=4;
+                }
+                break;
+            case 28:
+                {
+                alt13=5;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 13, 0, input);
 
-              				newLeafNode(lv_referenceName_0_0, grammarAccess.getVariableReferenceAccess().getReferenceNameIDTerminalRuleCall_0());
-              			
+                throw nvae;
             }
-            if ( state.backtracking==0 ) {
 
-              				if (current==null) {
-              					current = createModelElement(grammarAccess.getVariableReferenceRule());
-              				}
-              				setWithLastConsumed(
-              					current,
-              					"referenceName",
-              					lv_referenceName_0_0,
-              					"org.palladiosimulator.commons.stoex.Stoex.ID");
-              			
+            switch (alt13) {
+                case 1 :
+                    // InternalStoex.g:1224:5: lv_referenceName_0_1= 'BYTESIZE'
+                    {
+                    lv_referenceName_0_1=(Token)match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(lv_referenceName_0_1, grammarAccess.getVariableReferenceAccess().getReferenceNameBYTESIZEKeyword_0_0());
+                      				
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getVariableReferenceRule());
+                      					}
+                      					setWithLastConsumed(current, "referenceName", lv_referenceName_0_1, null);
+                      				
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // InternalStoex.g:1235:5: lv_referenceName_0_2= 'VALUE'
+                    {
+                    lv_referenceName_0_2=(Token)match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(lv_referenceName_0_2, grammarAccess.getVariableReferenceAccess().getReferenceNameVALUEKeyword_0_1());
+                      				
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getVariableReferenceRule());
+                      					}
+                      					setWithLastConsumed(current, "referenceName", lv_referenceName_0_2, null);
+                      				
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalStoex.g:1246:5: lv_referenceName_0_3= 'STRUCTURE'
+                    {
+                    lv_referenceName_0_3=(Token)match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(lv_referenceName_0_3, grammarAccess.getVariableReferenceAccess().getReferenceNameSTRUCTUREKeyword_0_2());
+                      				
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getVariableReferenceRule());
+                      					}
+                      					setWithLastConsumed(current, "referenceName", lv_referenceName_0_3, null);
+                      				
+                    }
+
+                    }
+                    break;
+                case 4 :
+                    // InternalStoex.g:1257:5: lv_referenceName_0_4= 'TYPE'
+                    {
+                    lv_referenceName_0_4=(Token)match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(lv_referenceName_0_4, grammarAccess.getVariableReferenceAccess().getReferenceNameTYPEKeyword_0_3());
+                      				
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getVariableReferenceRule());
+                      					}
+                      					setWithLastConsumed(current, "referenceName", lv_referenceName_0_4, null);
+                      				
+                    }
+
+                    }
+                    break;
+                case 5 :
+                    // InternalStoex.g:1268:5: lv_referenceName_0_5= 'NUMBER_OF_ELEMENTS'
+                    {
+                    lv_referenceName_0_5=(Token)match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(lv_referenceName_0_5, grammarAccess.getVariableReferenceAccess().getReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4());
+                      				
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getVariableReferenceRule());
+                      					}
+                      					setWithLastConsumed(current, "referenceName", lv_referenceName_0_5, null);
+                      				
+                    }
+
+                    }
+                    break;
+
             }
+
 
             }
 
@@ -3521,7 +3585,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNamespaceReference"
-    // InternalStoex.g:1256:1: entryRuleNamespaceReference returns [EObject current=null] : iv_ruleNamespaceReference= ruleNamespaceReference EOF ;
+    // InternalStoex.g:1284:1: entryRuleNamespaceReference returns [EObject current=null] : iv_ruleNamespaceReference= ruleNamespaceReference EOF ;
     public final EObject entryRuleNamespaceReference() throws RecognitionException {
         EObject current = null;
 
@@ -3529,8 +3593,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1256:59: (iv_ruleNamespaceReference= ruleNamespaceReference EOF )
-            // InternalStoex.g:1257:2: iv_ruleNamespaceReference= ruleNamespaceReference EOF
+            // InternalStoex.g:1284:59: (iv_ruleNamespaceReference= ruleNamespaceReference EOF )
+            // InternalStoex.g:1285:2: iv_ruleNamespaceReference= ruleNamespaceReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNamespaceReferenceRule()); 
@@ -3561,7 +3625,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNamespaceReference"
-    // InternalStoex.g:1263:1: ruleNamespaceReference returns [EObject current=null] : ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) ) ;
+    // InternalStoex.g:1291:1: ruleNamespaceReference returns [EObject current=null] : ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) | ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) ) ) ) ;
     public final EObject ruleNamespaceReference() throws RecognitionException {
         EObject current = null;
 
@@ -3569,22 +3633,24 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         EObject lv_innerReference_NamespaceReference_2_0 = null;
 
+        EObject lv_innerReference_NamespaceReference_3_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalStoex.g:1269:2: ( ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) ) )
-            // InternalStoex.g:1270:2: ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) )
+            // InternalStoex.g:1297:2: ( ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) | ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) ) ) ) )
+            // InternalStoex.g:1298:2: ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) | ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) ) ) )
             {
-            // InternalStoex.g:1270:2: ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) )
-            // InternalStoex.g:1271:3: ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) )
+            // InternalStoex.g:1298:2: ( ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) | ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) ) ) )
+            // InternalStoex.g:1299:3: ( (lv_referenceName_0_0= RULE_ID ) ) otherlv_1= '.' ( ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) | ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) ) )
             {
-            // InternalStoex.g:1271:3: ( (lv_referenceName_0_0= RULE_ID ) )
-            // InternalStoex.g:1272:4: (lv_referenceName_0_0= RULE_ID )
+            // InternalStoex.g:1299:3: ( (lv_referenceName_0_0= RULE_ID ) )
+            // InternalStoex.g:1300:4: (lv_referenceName_0_0= RULE_ID )
             {
-            // InternalStoex.g:1272:4: (lv_referenceName_0_0= RULE_ID )
-            // InternalStoex.g:1273:5: lv_referenceName_0_0= RULE_ID
+            // InternalStoex.g:1300:4: (lv_referenceName_0_0= RULE_ID )
+            // InternalStoex.g:1301:5: lv_referenceName_0_0= RULE_ID
             {
             lv_referenceName_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3610,44 +3676,112 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getNamespaceReferenceAccess().getFullStopKeyword_1());
               		
             }
-            // InternalStoex.g:1293:3: ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) )
-            // InternalStoex.g:1294:4: (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference )
-            {
-            // InternalStoex.g:1294:4: (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference )
-            // InternalStoex.g:1295:5: lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference
-            {
-            if ( state.backtracking==0 ) {
+            // InternalStoex.g:1321:3: ( ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) ) | ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) ) )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-              					newCompositeNode(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0());
-              				
+            if ( (LA14_0==RULE_ID) ) {
+                alt14=1;
             }
-            pushFollow(FollowSets000.FOLLOW_2);
-            lv_innerReference_NamespaceReference_2_0=ruleAbstractNamedReference();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getNamespaceReferenceRule());
-              					}
-              					set(
-              						current,
-              						"innerReference_NamespaceReference",
-              						lv_innerReference_NamespaceReference_2_0,
-              						"org.palladiosimulator.commons.stoex.Stoex.AbstractNamedReference");
-              					afterParserOrEnumRuleCall();
-              				
+            else if ( ((LA14_0>=24 && LA14_0<=28)) ) {
+                alt14=2;
             }
+            else {
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 14, 0, input);
 
+                throw nvae;
             }
+            switch (alt14) {
+                case 1 :
+                    // InternalStoex.g:1322:4: ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) )
+                    {
+                    // InternalStoex.g:1322:4: ( (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference ) )
+                    // InternalStoex.g:1323:5: (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference )
+                    {
+                    // InternalStoex.g:1323:5: (lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference )
+                    // InternalStoex.g:1324:6: lv_innerReference_NamespaceReference_2_0= ruleAbstractNamedReference
+                    {
+                    if ( state.backtracking==0 ) {
 
+                      						newCompositeNode(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0());
+                      					
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    lv_innerReference_NamespaceReference_2_0=ruleAbstractNamedReference();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElementForParent(grammarAccess.getNamespaceReferenceRule());
+                      						}
+                      						set(
+                      							current,
+                      							"innerReference_NamespaceReference",
+                      							lv_innerReference_NamespaceReference_2_0,
+                      							"org.palladiosimulator.commons.stoex.Stoex.AbstractNamedReference");
+                      						afterParserOrEnumRuleCall();
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalStoex.g:1342:4: ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) )
+                    {
+                    // InternalStoex.g:1342:4: ( (lv_innerReference_NamespaceReference_3_0= ruleVariableReference ) )
+                    // InternalStoex.g:1343:5: (lv_innerReference_NamespaceReference_3_0= ruleVariableReference )
+                    {
+                    // InternalStoex.g:1343:5: (lv_innerReference_NamespaceReference_3_0= ruleVariableReference )
+                    // InternalStoex.g:1344:6: lv_innerReference_NamespaceReference_3_0= ruleVariableReference
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						newCompositeNode(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0());
+                      					
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    lv_innerReference_NamespaceReference_3_0=ruleVariableReference();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElementForParent(grammarAccess.getNamespaceReferenceRule());
+                      						}
+                      						set(
+                      							current,
+                      							"innerReference_NamespaceReference",
+                      							lv_innerReference_NamespaceReference_3_0,
+                      							"org.palladiosimulator.commons.stoex.Stoex.VariableReference");
+                      						afterParserOrEnumRuleCall();
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
@@ -3676,7 +3810,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolLiteral"
-    // InternalStoex.g:1316:1: entryRuleBoolLiteral returns [EObject current=null] : iv_ruleBoolLiteral= ruleBoolLiteral EOF ;
+    // InternalStoex.g:1366:1: entryRuleBoolLiteral returns [EObject current=null] : iv_ruleBoolLiteral= ruleBoolLiteral EOF ;
     public final EObject entryRuleBoolLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3684,8 +3818,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1316:52: (iv_ruleBoolLiteral= ruleBoolLiteral EOF )
-            // InternalStoex.g:1317:2: iv_ruleBoolLiteral= ruleBoolLiteral EOF
+            // InternalStoex.g:1366:52: (iv_ruleBoolLiteral= ruleBoolLiteral EOF )
+            // InternalStoex.g:1367:2: iv_ruleBoolLiteral= ruleBoolLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBoolLiteralRule()); 
@@ -3716,7 +3850,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolLiteral"
-    // InternalStoex.g:1323:1: ruleBoolLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) ) ;
+    // InternalStoex.g:1373:1: ruleBoolLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) ) ;
     public final EObject ruleBoolLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3726,14 +3860,14 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1329:2: ( ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) ) )
-            // InternalStoex.g:1330:2: ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) )
+            // InternalStoex.g:1379:2: ( ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) ) )
+            // InternalStoex.g:1380:2: ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) )
             {
-            // InternalStoex.g:1330:2: ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) )
-            // InternalStoex.g:1331:3: (lv_value_0_0= RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:1380:2: ( (lv_value_0_0= RULE_BOOLEAN_KEYWORDS ) )
+            // InternalStoex.g:1381:3: (lv_value_0_0= RULE_BOOLEAN_KEYWORDS )
             {
-            // InternalStoex.g:1331:3: (lv_value_0_0= RULE_BOOLEAN_KEYWORDS )
-            // InternalStoex.g:1332:4: lv_value_0_0= RULE_BOOLEAN_KEYWORDS
+            // InternalStoex.g:1381:3: (lv_value_0_0= RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:1382:4: lv_value_0_0= RULE_BOOLEAN_KEYWORDS
             {
             lv_value_0_0=(Token)match(input,RULE_BOOLEAN_KEYWORDS,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3781,7 +3915,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringLiteral"
-    // InternalStoex.g:1351:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
+    // InternalStoex.g:1401:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
     public final EObject entryRuleStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3789,8 +3923,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1351:54: (iv_ruleStringLiteral= ruleStringLiteral EOF )
-            // InternalStoex.g:1352:2: iv_ruleStringLiteral= ruleStringLiteral EOF
+            // InternalStoex.g:1401:54: (iv_ruleStringLiteral= ruleStringLiteral EOF )
+            // InternalStoex.g:1402:2: iv_ruleStringLiteral= ruleStringLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStringLiteralRule()); 
@@ -3821,7 +3955,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringLiteral"
-    // InternalStoex.g:1358:1: ruleStringLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
+    // InternalStoex.g:1408:1: ruleStringLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
     public final EObject ruleStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3831,14 +3965,14 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1364:2: ( ( (lv_value_0_0= RULE_STRING ) ) )
-            // InternalStoex.g:1365:2: ( (lv_value_0_0= RULE_STRING ) )
+            // InternalStoex.g:1414:2: ( ( (lv_value_0_0= RULE_STRING ) ) )
+            // InternalStoex.g:1415:2: ( (lv_value_0_0= RULE_STRING ) )
             {
-            // InternalStoex.g:1365:2: ( (lv_value_0_0= RULE_STRING ) )
-            // InternalStoex.g:1366:3: (lv_value_0_0= RULE_STRING )
+            // InternalStoex.g:1415:2: ( (lv_value_0_0= RULE_STRING ) )
+            // InternalStoex.g:1416:3: (lv_value_0_0= RULE_STRING )
             {
-            // InternalStoex.g:1366:3: (lv_value_0_0= RULE_STRING )
-            // InternalStoex.g:1367:4: lv_value_0_0= RULE_STRING
+            // InternalStoex.g:1416:3: (lv_value_0_0= RULE_STRING )
+            // InternalStoex.g:1417:4: lv_value_0_0= RULE_STRING
             {
             lv_value_0_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3886,7 +4020,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntLiteral"
-    // InternalStoex.g:1386:1: entryRuleIntLiteral returns [EObject current=null] : iv_ruleIntLiteral= ruleIntLiteral EOF ;
+    // InternalStoex.g:1436:1: entryRuleIntLiteral returns [EObject current=null] : iv_ruleIntLiteral= ruleIntLiteral EOF ;
     public final EObject entryRuleIntLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3894,8 +4028,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1386:51: (iv_ruleIntLiteral= ruleIntLiteral EOF )
-            // InternalStoex.g:1387:2: iv_ruleIntLiteral= ruleIntLiteral EOF
+            // InternalStoex.g:1436:51: (iv_ruleIntLiteral= ruleIntLiteral EOF )
+            // InternalStoex.g:1437:2: iv_ruleIntLiteral= ruleIntLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIntLiteralRule()); 
@@ -3926,7 +4060,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntLiteral"
-    // InternalStoex.g:1393:1: ruleIntLiteral returns [EObject current=null] : ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? ) ;
+    // InternalStoex.g:1443:1: ruleIntLiteral returns [EObject current=null] : ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? ) ;
     public final EObject ruleIntLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3940,17 +4074,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1399:2: ( ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? ) )
-            // InternalStoex.g:1400:2: ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? )
+            // InternalStoex.g:1449:2: ( ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? ) )
+            // InternalStoex.g:1450:2: ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? )
             {
-            // InternalStoex.g:1400:2: ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? )
-            // InternalStoex.g:1401:3: ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )?
+            // InternalStoex.g:1450:2: ( ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )? )
+            // InternalStoex.g:1451:3: ( (lv_value_0_0= RULE_DECINT ) ) (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )?
             {
-            // InternalStoex.g:1401:3: ( (lv_value_0_0= RULE_DECINT ) )
-            // InternalStoex.g:1402:4: (lv_value_0_0= RULE_DECINT )
+            // InternalStoex.g:1451:3: ( (lv_value_0_0= RULE_DECINT ) )
+            // InternalStoex.g:1452:4: (lv_value_0_0= RULE_DECINT )
             {
-            // InternalStoex.g:1402:4: (lv_value_0_0= RULE_DECINT )
-            // InternalStoex.g:1403:5: lv_value_0_0= RULE_DECINT
+            // InternalStoex.g:1452:4: (lv_value_0_0= RULE_DECINT )
+            // InternalStoex.g:1453:5: lv_value_0_0= RULE_DECINT
             {
             lv_value_0_0=(Token)match(input,RULE_DECINT,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3976,16 +4110,16 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalStoex.g:1419:3: (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalStoex.g:1469:3: (otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']' )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==19) ) {
-                alt14=1;
+            if ( (LA15_0==19) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalStoex.g:1420:4: otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']'
+                    // InternalStoex.g:1470:4: otherlv_1= '[' ( (lv_unit_2_0= ruleUnit ) ) otherlv_3= ']'
                     {
                     otherlv_1=(Token)match(input,19,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3993,11 +4127,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getIntLiteralAccess().getLeftSquareBracketKeyword_1_0());
                       			
                     }
-                    // InternalStoex.g:1424:4: ( (lv_unit_2_0= ruleUnit ) )
-                    // InternalStoex.g:1425:5: (lv_unit_2_0= ruleUnit )
+                    // InternalStoex.g:1474:4: ( (lv_unit_2_0= ruleUnit ) )
+                    // InternalStoex.g:1475:5: (lv_unit_2_0= ruleUnit )
                     {
-                    // InternalStoex.g:1425:5: (lv_unit_2_0= ruleUnit )
-                    // InternalStoex.g:1426:6: lv_unit_2_0= ruleUnit
+                    // InternalStoex.g:1475:5: (lv_unit_2_0= ruleUnit )
+                    // InternalStoex.g:1476:6: lv_unit_2_0= ruleUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4065,7 +4199,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnit"
-    // InternalStoex.g:1452:1: entryRuleUnit returns [EObject current=null] : iv_ruleUnit= ruleUnit EOF ;
+    // InternalStoex.g:1502:1: entryRuleUnit returns [EObject current=null] : iv_ruleUnit= ruleUnit EOF ;
     public final EObject entryRuleUnit() throws RecognitionException {
         EObject current = null;
 
@@ -4073,8 +4207,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1452:45: (iv_ruleUnit= ruleUnit EOF )
-            // InternalStoex.g:1453:2: iv_ruleUnit= ruleUnit EOF
+            // InternalStoex.g:1502:45: (iv_ruleUnit= ruleUnit EOF )
+            // InternalStoex.g:1503:2: iv_ruleUnit= ruleUnit EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnitRule()); 
@@ -4105,7 +4239,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnit"
-    // InternalStoex.g:1459:1: ruleUnit returns [EObject current=null] : (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit ) ;
+    // InternalStoex.g:1509:1: ruleUnit returns [EObject current=null] : (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit ) ;
     public final EObject ruleUnit() throws RecognitionException {
         EObject current = null;
 
@@ -4120,15 +4254,15 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1465:2: ( (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit ) )
-            // InternalStoex.g:1466:2: (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit )
+            // InternalStoex.g:1515:2: ( (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit ) )
+            // InternalStoex.g:1516:2: (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit )
             {
-            // InternalStoex.g:1466:2: (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit )
-            int alt15=3;
-            alt15 = dfa15.predict(input);
-            switch (alt15) {
+            // InternalStoex.g:1516:2: (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit )
+            int alt16=3;
+            alt16 = dfa16.predict(input);
+            switch (alt16) {
                 case 1 :
-                    // InternalStoex.g:1467:3: this_unitMulti_0= ruleunitMulti
+                    // InternalStoex.g:1517:3: this_unitMulti_0= ruleunitMulti
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4155,7 +4289,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1479:3: this_unitDiv_1= ruleunitDiv
+                    // InternalStoex.g:1529:3: this_unitDiv_1= ruleunitDiv
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4182,7 +4316,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1491:3: this_BaseUnit_2= ruleBaseUnit
+                    // InternalStoex.g:1541:3: this_BaseUnit_2= ruleBaseUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4233,7 +4367,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunitDiv"
-    // InternalStoex.g:1506:1: entryRuleunitDiv returns [EObject current=null] : iv_ruleunitDiv= ruleunitDiv EOF ;
+    // InternalStoex.g:1556:1: entryRuleunitDiv returns [EObject current=null] : iv_ruleunitDiv= ruleunitDiv EOF ;
     public final EObject entryRuleunitDiv() throws RecognitionException {
         EObject current = null;
 
@@ -4241,8 +4375,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1506:48: (iv_ruleunitDiv= ruleunitDiv EOF )
-            // InternalStoex.g:1507:2: iv_ruleunitDiv= ruleunitDiv EOF
+            // InternalStoex.g:1556:48: (iv_ruleunitDiv= ruleunitDiv EOF )
+            // InternalStoex.g:1557:2: iv_ruleunitDiv= ruleunitDiv EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnitDivRule()); 
@@ -4273,7 +4407,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunitDiv"
-    // InternalStoex.g:1513:1: ruleunitDiv returns [EObject current=null] : (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? ) ;
+    // InternalStoex.g:1563:1: ruleunitDiv returns [EObject current=null] : (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? ) ;
     public final EObject ruleunitDiv() throws RecognitionException {
         EObject current = null;
 
@@ -4287,11 +4421,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1519:2: ( (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? ) )
-            // InternalStoex.g:1520:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? )
+            // InternalStoex.g:1569:2: ( (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? ) )
+            // InternalStoex.g:1570:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? )
             {
-            // InternalStoex.g:1520:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? )
-            // InternalStoex.g:1521:3: this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )?
+            // InternalStoex.g:1570:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )? )
+            // InternalStoex.g:1571:3: this_unitPow_0= ruleunitPow ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )?
             {
             if ( state.backtracking==0 ) {
 
@@ -4314,19 +4448,19 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalStoex.g:1532:3: ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // InternalStoex.g:1582:3: ( () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) ) )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==25) ) {
-                alt16=1;
+            if ( (LA17_0==30) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
-                    // InternalStoex.g:1533:4: () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) )
+                    // InternalStoex.g:1583:4: () otherlv_2= '/' ( (lv_divisor_3_0= ruleUnit ) )
                     {
-                    // InternalStoex.g:1533:4: ()
-                    // InternalStoex.g:1534:5: 
+                    // InternalStoex.g:1583:4: ()
+                    // InternalStoex.g:1584:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4343,17 +4477,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,25,FollowSets000.FOLLOW_13); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,30,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_2, grammarAccess.getUnitDivAccess().getSolidusKeyword_1_1());
                       			
                     }
-                    // InternalStoex.g:1547:4: ( (lv_divisor_3_0= ruleUnit ) )
-                    // InternalStoex.g:1548:5: (lv_divisor_3_0= ruleUnit )
+                    // InternalStoex.g:1597:4: ( (lv_divisor_3_0= ruleUnit ) )
+                    // InternalStoex.g:1598:5: (lv_divisor_3_0= ruleUnit )
                     {
-                    // InternalStoex.g:1548:5: (lv_divisor_3_0= ruleUnit )
-                    // InternalStoex.g:1549:6: lv_divisor_3_0= ruleUnit
+                    // InternalStoex.g:1598:5: (lv_divisor_3_0= ruleUnit )
+                    // InternalStoex.g:1599:6: lv_divisor_3_0= ruleUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4415,7 +4549,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunitMulti"
-    // InternalStoex.g:1571:1: entryRuleunitMulti returns [EObject current=null] : iv_ruleunitMulti= ruleunitMulti EOF ;
+    // InternalStoex.g:1621:1: entryRuleunitMulti returns [EObject current=null] : iv_ruleunitMulti= ruleunitMulti EOF ;
     public final EObject entryRuleunitMulti() throws RecognitionException {
         EObject current = null;
 
@@ -4423,8 +4557,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1571:50: (iv_ruleunitMulti= ruleunitMulti EOF )
-            // InternalStoex.g:1572:2: iv_ruleunitMulti= ruleunitMulti EOF
+            // InternalStoex.g:1621:50: (iv_ruleunitMulti= ruleunitMulti EOF )
+            // InternalStoex.g:1622:2: iv_ruleunitMulti= ruleunitMulti EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnitMultiRule()); 
@@ -4455,7 +4589,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunitMulti"
-    // InternalStoex.g:1578:1: ruleunitMulti returns [EObject current=null] : (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* ) ;
+    // InternalStoex.g:1628:1: ruleunitMulti returns [EObject current=null] : (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* ) ;
     public final EObject ruleunitMulti() throws RecognitionException {
         EObject current = null;
 
@@ -4469,11 +4603,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1584:2: ( (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* ) )
-            // InternalStoex.g:1585:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* )
+            // InternalStoex.g:1634:2: ( (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* ) )
+            // InternalStoex.g:1635:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* )
             {
-            // InternalStoex.g:1585:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* )
-            // InternalStoex.g:1586:3: this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )*
+            // InternalStoex.g:1635:2: (this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )* )
+            // InternalStoex.g:1636:3: this_unitPow_0= ruleunitPow ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -4496,29 +4630,29 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalStoex.g:1597:3: ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )*
-            loop17:
+            // InternalStoex.g:1647:3: ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==26) ) {
-                    int LA17_2 = input.LA(2);
+                if ( (LA18_0==31) ) {
+                    int LA18_2 = input.LA(2);
 
-                    if ( (synpred25_InternalStoex()) ) {
-                        alt17=1;
+                    if ( (synpred29_InternalStoex()) ) {
+                        alt18=1;
                     }
 
 
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // InternalStoex.g:1598:4: () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) )
+            	    // InternalStoex.g:1648:4: () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) )
             	    {
-            	    // InternalStoex.g:1598:4: ()
-            	    // InternalStoex.g:1599:5: 
+            	    // InternalStoex.g:1648:4: ()
+            	    // InternalStoex.g:1649:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4535,17 +4669,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,26,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,31,FollowSets000.FOLLOW_13); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				newLeafNode(otherlv_2, grammarAccess.getUnitMultiAccess().getAsteriskKeyword_1_1());
             	      			
             	    }
-            	    // InternalStoex.g:1612:4: ( (lv_units_3_0= ruleUnit ) )
-            	    // InternalStoex.g:1613:5: (lv_units_3_0= ruleUnit )
+            	    // InternalStoex.g:1662:4: ( (lv_units_3_0= ruleUnit ) )
+            	    // InternalStoex.g:1663:5: (lv_units_3_0= ruleUnit )
             	    {
-            	    // InternalStoex.g:1613:5: (lv_units_3_0= ruleUnit )
-            	    // InternalStoex.g:1614:6: lv_units_3_0= ruleUnit
+            	    // InternalStoex.g:1663:5: (lv_units_3_0= ruleUnit )
+            	    // InternalStoex.g:1664:6: lv_units_3_0= ruleUnit
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4581,7 +4715,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
@@ -4610,7 +4744,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunitPow"
-    // InternalStoex.g:1636:1: entryRuleunitPow returns [EObject current=null] : iv_ruleunitPow= ruleunitPow EOF ;
+    // InternalStoex.g:1686:1: entryRuleunitPow returns [EObject current=null] : iv_ruleunitPow= ruleunitPow EOF ;
     public final EObject entryRuleunitPow() throws RecognitionException {
         EObject current = null;
 
@@ -4618,8 +4752,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1636:48: (iv_ruleunitPow= ruleunitPow EOF )
-            // InternalStoex.g:1637:2: iv_ruleunitPow= ruleunitPow EOF
+            // InternalStoex.g:1686:48: (iv_ruleunitPow= ruleunitPow EOF )
+            // InternalStoex.g:1687:2: iv_ruleunitPow= ruleunitPow EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnitPowRule()); 
@@ -4650,7 +4784,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunitPow"
-    // InternalStoex.g:1643:1: ruleunitPow returns [EObject current=null] : ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* ) ;
+    // InternalStoex.g:1693:1: ruleunitPow returns [EObject current=null] : ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* ) ;
     public final EObject ruleunitPow() throws RecognitionException {
         EObject current = null;
 
@@ -4670,32 +4804,32 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1649:2: ( ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* ) )
-            // InternalStoex.g:1650:2: ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* )
+            // InternalStoex.g:1699:2: ( ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* ) )
+            // InternalStoex.g:1700:2: ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* )
             {
-            // InternalStoex.g:1650:2: ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* )
-            // InternalStoex.g:1651:3: (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )*
+            // InternalStoex.g:1700:2: ( (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )* )
+            // InternalStoex.g:1701:3: (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) ) ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )*
             {
-            // InternalStoex.g:1651:3: (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalStoex.g:1701:3: (this_BaseUnit_0= ruleBaseUnit | (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' ) )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( ((LA19_0>=45 && LA19_0<=49)) ) {
-                alt19=1;
+            if ( ((LA20_0>=50 && LA20_0<=54)) ) {
+                alt20=1;
             }
-            else if ( (LA19_0==21) ) {
-                alt19=2;
+            else if ( (LA20_0==21) ) {
+                alt20=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // InternalStoex.g:1652:4: this_BaseUnit_0= ruleBaseUnit
+                    // InternalStoex.g:1702:4: this_BaseUnit_0= ruleBaseUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4722,10 +4856,10 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1664:4: (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' )
+                    // InternalStoex.g:1714:4: (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' )
                     {
-                    // InternalStoex.g:1664:4: (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' )
-                    // InternalStoex.g:1665:5: otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')'
+                    // InternalStoex.g:1714:4: (otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')' )
+                    // InternalStoex.g:1715:5: otherlv_1= '(' (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv ) otherlv_4= ')'
                     {
                     otherlv_1=(Token)match(input,21,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4733,99 +4867,99 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       					newLeafNode(otherlv_1, grammarAccess.getUnitPowAccess().getLeftParenthesisKeyword_0_1_0());
                       				
                     }
-                    // InternalStoex.g:1669:5: (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv )
-                    int alt18=2;
+                    // InternalStoex.g:1719:5: (this_unitMulti_2= ruleunitMulti | this_unitDiv_3= ruleunitDiv )
+                    int alt19=2;
                     switch ( input.LA(1) ) {
-                    case 45:
+                    case 50:
                         {
-                        int LA18_1 = input.LA(2);
+                        int LA19_1 = input.LA(2);
 
-                        if ( (synpred27_InternalStoex()) ) {
-                            alt18=1;
+                        if ( (synpred31_InternalStoex()) ) {
+                            alt19=1;
                         }
                         else if ( (true) ) {
-                            alt18=2;
+                            alt19=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 1, input);
+                                new NoViableAltException("", 19, 1, input);
 
                             throw nvae;
                         }
                         }
                         break;
-                    case 46:
+                    case 51:
                         {
-                        int LA18_2 = input.LA(2);
+                        int LA19_2 = input.LA(2);
 
-                        if ( (synpred27_InternalStoex()) ) {
-                            alt18=1;
+                        if ( (synpred31_InternalStoex()) ) {
+                            alt19=1;
                         }
                         else if ( (true) ) {
-                            alt18=2;
+                            alt19=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 2, input);
+                                new NoViableAltException("", 19, 2, input);
 
                             throw nvae;
                         }
                         }
                         break;
-                    case 47:
+                    case 52:
                         {
-                        int LA18_3 = input.LA(2);
+                        int LA19_3 = input.LA(2);
 
-                        if ( (synpred27_InternalStoex()) ) {
-                            alt18=1;
+                        if ( (synpred31_InternalStoex()) ) {
+                            alt19=1;
                         }
                         else if ( (true) ) {
-                            alt18=2;
+                            alt19=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 3, input);
+                                new NoViableAltException("", 19, 3, input);
 
                             throw nvae;
                         }
                         }
                         break;
-                    case 48:
+                    case 53:
                         {
-                        int LA18_4 = input.LA(2);
+                        int LA19_4 = input.LA(2);
 
-                        if ( (synpred27_InternalStoex()) ) {
-                            alt18=1;
+                        if ( (synpred31_InternalStoex()) ) {
+                            alt19=1;
                         }
                         else if ( (true) ) {
-                            alt18=2;
+                            alt19=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 4, input);
+                                new NoViableAltException("", 19, 4, input);
 
                             throw nvae;
                         }
                         }
                         break;
-                    case 49:
+                    case 54:
                         {
-                        int LA18_5 = input.LA(2);
+                        int LA19_5 = input.LA(2);
 
-                        if ( (synpred27_InternalStoex()) ) {
-                            alt18=1;
+                        if ( (synpred31_InternalStoex()) ) {
+                            alt19=1;
                         }
                         else if ( (true) ) {
-                            alt18=2;
+                            alt19=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 5, input);
+                                new NoViableAltException("", 19, 5, input);
 
                             throw nvae;
                         }
@@ -4833,18 +4967,18 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                         break;
                     case 21:
                         {
-                        int LA18_6 = input.LA(2);
+                        int LA19_6 = input.LA(2);
 
-                        if ( (synpred27_InternalStoex()) ) {
-                            alt18=1;
+                        if ( (synpred31_InternalStoex()) ) {
+                            alt19=1;
                         }
                         else if ( (true) ) {
-                            alt18=2;
+                            alt19=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 6, input);
+                                new NoViableAltException("", 19, 6, input);
 
                             throw nvae;
                         }
@@ -4853,14 +4987,14 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     default:
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 18, 0, input);
+                            new NoViableAltException("", 19, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt18) {
+                    switch (alt19) {
                         case 1 :
-                            // InternalStoex.g:1670:6: this_unitMulti_2= ruleunitMulti
+                            // InternalStoex.g:1720:6: this_unitMulti_2= ruleunitMulti
                             {
                             if ( state.backtracking==0 ) {
 
@@ -4887,7 +5021,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalStoex.g:1682:6: this_unitDiv_3= ruleunitDiv
+                            // InternalStoex.g:1732:6: this_unitDiv_3= ruleunitDiv
                             {
                             if ( state.backtracking==0 ) {
 
@@ -4931,23 +5065,23 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalStoex.g:1700:3: ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )*
-            loop20:
+            // InternalStoex.g:1750:3: ( () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) ) )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA20_0==16) ) {
-                    alt20=1;
+                if ( (LA21_0==16) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalStoex.g:1701:4: () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) )
+            	    // InternalStoex.g:1751:4: () otherlv_6= '^' ( (lv_exponent_7_0= ruleSIGNED_INT ) )
             	    {
-            	    // InternalStoex.g:1701:4: ()
-            	    // InternalStoex.g:1702:5: 
+            	    // InternalStoex.g:1751:4: ()
+            	    // InternalStoex.g:1752:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4970,11 +5104,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(otherlv_6, grammarAccess.getUnitPowAccess().getCircumflexAccentKeyword_1_1());
             	      			
             	    }
-            	    // InternalStoex.g:1715:4: ( (lv_exponent_7_0= ruleSIGNED_INT ) )
-            	    // InternalStoex.g:1716:5: (lv_exponent_7_0= ruleSIGNED_INT )
+            	    // InternalStoex.g:1765:4: ( (lv_exponent_7_0= ruleSIGNED_INT ) )
+            	    // InternalStoex.g:1766:5: (lv_exponent_7_0= ruleSIGNED_INT )
             	    {
-            	    // InternalStoex.g:1716:5: (lv_exponent_7_0= ruleSIGNED_INT )
-            	    // InternalStoex.g:1717:6: lv_exponent_7_0= ruleSIGNED_INT
+            	    // InternalStoex.g:1766:5: (lv_exponent_7_0= ruleSIGNED_INT )
+            	    // InternalStoex.g:1767:6: lv_exponent_7_0= ruleSIGNED_INT
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5010,7 +5144,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
@@ -5039,7 +5173,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBaseUnit"
-    // InternalStoex.g:1739:1: entryRuleBaseUnit returns [EObject current=null] : iv_ruleBaseUnit= ruleBaseUnit EOF ;
+    // InternalStoex.g:1789:1: entryRuleBaseUnit returns [EObject current=null] : iv_ruleBaseUnit= ruleBaseUnit EOF ;
     public final EObject entryRuleBaseUnit() throws RecognitionException {
         EObject current = null;
 
@@ -5047,8 +5181,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1739:49: (iv_ruleBaseUnit= ruleBaseUnit EOF )
-            // InternalStoex.g:1740:2: iv_ruleBaseUnit= ruleBaseUnit EOF
+            // InternalStoex.g:1789:49: (iv_ruleBaseUnit= ruleBaseUnit EOF )
+            // InternalStoex.g:1790:2: iv_ruleBaseUnit= ruleBaseUnit EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBaseUnitRule()); 
@@ -5079,7 +5213,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBaseUnit"
-    // InternalStoex.g:1746:1: ruleBaseUnit returns [EObject current=null] : ( (lv_name_0_0= ruleUnitNames ) ) ;
+    // InternalStoex.g:1796:1: ruleBaseUnit returns [EObject current=null] : ( (lv_name_0_0= ruleUnitNames ) ) ;
     public final EObject ruleBaseUnit() throws RecognitionException {
         EObject current = null;
 
@@ -5090,14 +5224,14 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1752:2: ( ( (lv_name_0_0= ruleUnitNames ) ) )
-            // InternalStoex.g:1753:2: ( (lv_name_0_0= ruleUnitNames ) )
+            // InternalStoex.g:1802:2: ( ( (lv_name_0_0= ruleUnitNames ) ) )
+            // InternalStoex.g:1803:2: ( (lv_name_0_0= ruleUnitNames ) )
             {
-            // InternalStoex.g:1753:2: ( (lv_name_0_0= ruleUnitNames ) )
-            // InternalStoex.g:1754:3: (lv_name_0_0= ruleUnitNames )
+            // InternalStoex.g:1803:2: ( (lv_name_0_0= ruleUnitNames ) )
+            // InternalStoex.g:1804:3: (lv_name_0_0= ruleUnitNames )
             {
-            // InternalStoex.g:1754:3: (lv_name_0_0= ruleUnitNames )
-            // InternalStoex.g:1755:4: lv_name_0_0= ruleUnitNames
+            // InternalStoex.g:1804:3: (lv_name_0_0= ruleUnitNames )
+            // InternalStoex.g:1805:4: lv_name_0_0= ruleUnitNames
             {
             if ( state.backtracking==0 ) {
 
@@ -5150,7 +5284,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuledefinition"
-    // InternalStoex.g:1775:1: entryRuledefinition returns [EObject current=null] : iv_ruledefinition= ruledefinition EOF ;
+    // InternalStoex.g:1825:1: entryRuledefinition returns [EObject current=null] : iv_ruledefinition= ruledefinition EOF ;
     public final EObject entryRuledefinition() throws RecognitionException {
         EObject current = null;
 
@@ -5158,8 +5292,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1775:51: (iv_ruledefinition= ruledefinition EOF )
-            // InternalStoex.g:1776:2: iv_ruledefinition= ruledefinition EOF
+            // InternalStoex.g:1825:51: (iv_ruledefinition= ruledefinition EOF )
+            // InternalStoex.g:1826:2: iv_ruledefinition= ruledefinition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDefinitionRule()); 
@@ -5190,7 +5324,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruledefinition"
-    // InternalStoex.g:1782:1: ruledefinition returns [EObject current=null] : (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction ) ;
+    // InternalStoex.g:1832:1: ruledefinition returns [EObject current=null] : (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction ) ;
     public final EObject ruledefinition() throws RecognitionException {
         EObject current = null;
 
@@ -5203,29 +5337,29 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1788:2: ( (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction ) )
-            // InternalStoex.g:1789:2: (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction )
+            // InternalStoex.g:1838:2: ( (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction ) )
+            // InternalStoex.g:1839:2: (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction )
             {
-            // InternalStoex.g:1789:2: (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction )
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalStoex.g:1839:2: (this_ProbabilityMassFunction_0= ruleProbabilityMassFunction | this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( ((LA21_0>=28 && LA21_0<=30)||LA21_0==32) ) {
-                alt21=1;
+            if ( ((LA22_0>=33 && LA22_0<=35)||LA22_0==37) ) {
+                alt22=1;
             }
-            else if ( (LA21_0==27) ) {
-                alt21=2;
+            else if ( (LA22_0==32) ) {
+                alt22=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // InternalStoex.g:1790:3: this_ProbabilityMassFunction_0= ruleProbabilityMassFunction
+                    // InternalStoex.g:1840:3: this_ProbabilityMassFunction_0= ruleProbabilityMassFunction
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5252,7 +5386,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1802:3: this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction
+                    // InternalStoex.g:1852:3: this_ProbabilityDensityFunction_1= ruleProbabilityDensityFunction
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5303,7 +5437,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProbabilityDensityFunction"
-    // InternalStoex.g:1817:1: entryRuleProbabilityDensityFunction returns [EObject current=null] : iv_ruleProbabilityDensityFunction= ruleProbabilityDensityFunction EOF ;
+    // InternalStoex.g:1867:1: entryRuleProbabilityDensityFunction returns [EObject current=null] : iv_ruleProbabilityDensityFunction= ruleProbabilityDensityFunction EOF ;
     public final EObject entryRuleProbabilityDensityFunction() throws RecognitionException {
         EObject current = null;
 
@@ -5311,8 +5445,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1817:67: (iv_ruleProbabilityDensityFunction= ruleProbabilityDensityFunction EOF )
-            // InternalStoex.g:1818:2: iv_ruleProbabilityDensityFunction= ruleProbabilityDensityFunction EOF
+            // InternalStoex.g:1867:67: (iv_ruleProbabilityDensityFunction= ruleProbabilityDensityFunction EOF )
+            // InternalStoex.g:1868:2: iv_ruleProbabilityDensityFunction= ruleProbabilityDensityFunction EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getProbabilityDensityFunctionRule()); 
@@ -5343,7 +5477,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProbabilityDensityFunction"
-    // InternalStoex.g:1824:1: ruleProbabilityDensityFunction returns [EObject current=null] : this_BoxedPDF_0= ruleBoxedPDF ;
+    // InternalStoex.g:1874:1: ruleProbabilityDensityFunction returns [EObject current=null] : this_BoxedPDF_0= ruleBoxedPDF ;
     public final EObject ruleProbabilityDensityFunction() throws RecognitionException {
         EObject current = null;
 
@@ -5354,8 +5488,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1830:2: (this_BoxedPDF_0= ruleBoxedPDF )
-            // InternalStoex.g:1831:2: this_BoxedPDF_0= ruleBoxedPDF
+            // InternalStoex.g:1880:2: (this_BoxedPDF_0= ruleBoxedPDF )
+            // InternalStoex.g:1881:2: this_BoxedPDF_0= ruleBoxedPDF
             {
             if ( state.backtracking==0 ) {
 
@@ -5400,7 +5534,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoxedPDF"
-    // InternalStoex.g:1845:1: entryRuleBoxedPDF returns [EObject current=null] : iv_ruleBoxedPDF= ruleBoxedPDF EOF ;
+    // InternalStoex.g:1895:1: entryRuleBoxedPDF returns [EObject current=null] : iv_ruleBoxedPDF= ruleBoxedPDF EOF ;
     public final EObject entryRuleBoxedPDF() throws RecognitionException {
         EObject current = null;
 
@@ -5408,8 +5542,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1845:49: (iv_ruleBoxedPDF= ruleBoxedPDF EOF )
-            // InternalStoex.g:1846:2: iv_ruleBoxedPDF= ruleBoxedPDF EOF
+            // InternalStoex.g:1895:49: (iv_ruleBoxedPDF= ruleBoxedPDF EOF )
+            // InternalStoex.g:1896:2: iv_ruleBoxedPDF= ruleBoxedPDF EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBoxedPDFRule()); 
@@ -5440,7 +5574,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoxedPDF"
-    // InternalStoex.g:1852:1: ruleBoxedPDF returns [EObject current=null] : (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) ;
+    // InternalStoex.g:1902:1: ruleBoxedPDF returns [EObject current=null] : (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) ;
     public final EObject ruleBoxedPDF() throws RecognitionException {
         EObject current = null;
 
@@ -5458,13 +5592,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1858:2: ( (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) )
-            // InternalStoex.g:1859:2: (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
+            // InternalStoex.g:1908:2: ( (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) )
+            // InternalStoex.g:1909:2: (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
             {
-            // InternalStoex.g:1859:2: (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
-            // InternalStoex.g:1860:3: otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
+            // InternalStoex.g:1909:2: (otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
+            // InternalStoex.g:1910:3: otherlv_0= 'DoublePDF' otherlv_1= '[' ( (lv_samples_2_0= rulereal_pdf_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
             {
-            otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_24); if (state.failed) return current;
+            otherlv_0=(Token)match(input,32,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getBoxedPDFAccess().getDoublePDFKeyword_0());
@@ -5476,24 +5610,24 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_1());
               		
             }
-            // InternalStoex.g:1868:3: ( (lv_samples_2_0= rulereal_pdf_sample ) )+
-            int cnt22=0;
-            loop22:
+            // InternalStoex.g:1918:3: ( (lv_samples_2_0= rulereal_pdf_sample ) )+
+            int cnt23=0;
+            loop23:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA22_0==21) ) {
-                    alt22=1;
+                if ( (LA23_0==21) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt23) {
             	case 1 :
-            	    // InternalStoex.g:1869:4: (lv_samples_2_0= rulereal_pdf_sample )
+            	    // InternalStoex.g:1919:4: (lv_samples_2_0= rulereal_pdf_sample )
             	    {
-            	    // InternalStoex.g:1869:4: (lv_samples_2_0= rulereal_pdf_sample )
-            	    // InternalStoex.g:1870:5: lv_samples_2_0= rulereal_pdf_sample
+            	    // InternalStoex.g:1919:4: (lv_samples_2_0= rulereal_pdf_sample )
+            	    // InternalStoex.g:1920:5: lv_samples_2_0= rulereal_pdf_sample
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5526,13 +5660,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt22 >= 1 ) break loop22;
+            	    if ( cnt23 >= 1 ) break loop23;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(22, input);
+                            new EarlyExitException(23, input);
                         throw eee;
                 }
-                cnt22++;
+                cnt23++;
             } while (true);
 
             otherlv_3=(Token)match(input,20,FollowSets000.FOLLOW_12); if (state.failed) return current;
@@ -5541,16 +5675,16 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_3());
               		
             }
-            // InternalStoex.g:1891:3: (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // InternalStoex.g:1941:3: (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA23_0==19) ) {
-                alt23=1;
+            if ( (LA24_0==19) ) {
+                alt24=1;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // InternalStoex.g:1892:4: otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']'
+                    // InternalStoex.g:1942:4: otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']'
                     {
                     otherlv_4=(Token)match(input,19,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5558,11 +5692,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_4, grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_4_0());
                       			
                     }
-                    // InternalStoex.g:1896:4: ( (lv_unit_5_0= ruleUnit ) )
-                    // InternalStoex.g:1897:5: (lv_unit_5_0= ruleUnit )
+                    // InternalStoex.g:1946:4: ( (lv_unit_5_0= ruleUnit ) )
+                    // InternalStoex.g:1947:5: (lv_unit_5_0= ruleUnit )
                     {
-                    // InternalStoex.g:1897:5: (lv_unit_5_0= ruleUnit )
-                    // InternalStoex.g:1898:6: lv_unit_5_0= ruleUnit
+                    // InternalStoex.g:1947:5: (lv_unit_5_0= ruleUnit )
+                    // InternalStoex.g:1948:6: lv_unit_5_0= ruleUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5630,7 +5764,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProbabilityMassFunction"
-    // InternalStoex.g:1924:1: entryRuleProbabilityMassFunction returns [EObject current=null] : iv_ruleProbabilityMassFunction= ruleProbabilityMassFunction EOF ;
+    // InternalStoex.g:1974:1: entryRuleProbabilityMassFunction returns [EObject current=null] : iv_ruleProbabilityMassFunction= ruleProbabilityMassFunction EOF ;
     public final EObject entryRuleProbabilityMassFunction() throws RecognitionException {
         EObject current = null;
 
@@ -5638,8 +5772,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:1924:64: (iv_ruleProbabilityMassFunction= ruleProbabilityMassFunction EOF )
-            // InternalStoex.g:1925:2: iv_ruleProbabilityMassFunction= ruleProbabilityMassFunction EOF
+            // InternalStoex.g:1974:64: (iv_ruleProbabilityMassFunction= ruleProbabilityMassFunction EOF )
+            // InternalStoex.g:1975:2: iv_ruleProbabilityMassFunction= ruleProbabilityMassFunction EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getProbabilityMassFunctionRule()); 
@@ -5670,7 +5804,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProbabilityMassFunction"
-    // InternalStoex.g:1931:1: ruleProbabilityMassFunction returns [EObject current=null] : ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) ) ;
+    // InternalStoex.g:1981:1: ruleProbabilityMassFunction returns [EObject current=null] : ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) ) ;
     public final EObject ruleProbabilityMassFunction() throws RecognitionException {
         EObject current = null;
 
@@ -5713,48 +5847,48 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:1937:2: ( ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) ) )
-            // InternalStoex.g:1938:2: ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) )
+            // InternalStoex.g:1987:2: ( ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) ) )
+            // InternalStoex.g:1988:2: ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) )
             {
-            // InternalStoex.g:1938:2: ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) )
-            int alt32=4;
+            // InternalStoex.g:1988:2: ( (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? ) | (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? ) | (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' ) | (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' ) )
+            int alt33=4;
             switch ( input.LA(1) ) {
-            case 28:
+            case 33:
                 {
-                alt32=1;
+                alt33=1;
                 }
                 break;
-            case 29:
+            case 34:
                 {
-                alt32=2;
+                alt33=2;
                 }
                 break;
-            case 30:
+            case 35:
                 {
-                alt32=3;
+                alt33=3;
                 }
                 break;
-            case 32:
+            case 37:
                 {
-                alt32=4;
+                alt33=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 33, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // InternalStoex.g:1939:3: (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
+                    // InternalStoex.g:1989:3: (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
                     {
-                    // InternalStoex.g:1939:3: (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
-                    // InternalStoex.g:1940:4: otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
+                    // InternalStoex.g:1989:3: (otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )? )
+                    // InternalStoex.g:1990:4: otherlv_0= 'IntPMF' otherlv_1= '[' ( (lv_samples_2_0= rulenumeric_int_sample ) )+ otherlv_3= ']' (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
                     {
-                    otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_24); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_0, grammarAccess.getProbabilityMassFunctionAccess().getIntPMFKeyword_0_0());
@@ -5766,24 +5900,24 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_1());
                       			
                     }
-                    // InternalStoex.g:1948:4: ( (lv_samples_2_0= rulenumeric_int_sample ) )+
-                    int cnt24=0;
-                    loop24:
+                    // InternalStoex.g:1998:4: ( (lv_samples_2_0= rulenumeric_int_sample ) )+
+                    int cnt25=0;
+                    loop25:
                     do {
-                        int alt24=2;
-                        int LA24_0 = input.LA(1);
+                        int alt25=2;
+                        int LA25_0 = input.LA(1);
 
-                        if ( (LA24_0==21) ) {
-                            alt24=1;
+                        if ( (LA25_0==21) ) {
+                            alt25=1;
                         }
 
 
-                        switch (alt24) {
+                        switch (alt25) {
                     	case 1 :
-                    	    // InternalStoex.g:1949:5: (lv_samples_2_0= rulenumeric_int_sample )
+                    	    // InternalStoex.g:1999:5: (lv_samples_2_0= rulenumeric_int_sample )
                     	    {
-                    	    // InternalStoex.g:1949:5: (lv_samples_2_0= rulenumeric_int_sample )
-                    	    // InternalStoex.g:1950:6: lv_samples_2_0= rulenumeric_int_sample
+                    	    // InternalStoex.g:1999:5: (lv_samples_2_0= rulenumeric_int_sample )
+                    	    // InternalStoex.g:2000:6: lv_samples_2_0= rulenumeric_int_sample
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -5816,13 +5950,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt24 >= 1 ) break loop24;
+                    	    if ( cnt25 >= 1 ) break loop25;
                     	    if (state.backtracking>0) {state.failed=true; return current;}
                                 EarlyExitException eee =
-                                    new EarlyExitException(24, input);
+                                    new EarlyExitException(25, input);
                                 throw eee;
                         }
-                        cnt24++;
+                        cnt25++;
                     } while (true);
 
                     otherlv_3=(Token)match(input,20,FollowSets000.FOLLOW_12); if (state.failed) return current;
@@ -5831,16 +5965,16 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_3());
                       			
                     }
-                    // InternalStoex.g:1971:4: (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
-                    int alt25=2;
-                    int LA25_0 = input.LA(1);
+                    // InternalStoex.g:2021:4: (otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']' )?
+                    int alt26=2;
+                    int LA26_0 = input.LA(1);
 
-                    if ( (LA25_0==19) ) {
-                        alt25=1;
+                    if ( (LA26_0==19) ) {
+                        alt26=1;
                     }
-                    switch (alt25) {
+                    switch (alt26) {
                         case 1 :
-                            // InternalStoex.g:1972:5: otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']'
+                            // InternalStoex.g:2022:5: otherlv_4= '[' ( (lv_unit_5_0= ruleUnit ) ) otherlv_6= ']'
                             {
                             otherlv_4=(Token)match(input,19,FollowSets000.FOLLOW_13); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -5848,11 +5982,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                               					newLeafNode(otherlv_4, grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_4_0());
                               				
                             }
-                            // InternalStoex.g:1976:5: ( (lv_unit_5_0= ruleUnit ) )
-                            // InternalStoex.g:1977:6: (lv_unit_5_0= ruleUnit )
+                            // InternalStoex.g:2026:5: ( (lv_unit_5_0= ruleUnit ) )
+                            // InternalStoex.g:2027:6: (lv_unit_5_0= ruleUnit )
                             {
-                            // InternalStoex.g:1977:6: (lv_unit_5_0= ruleUnit )
-                            // InternalStoex.g:1978:7: lv_unit_5_0= ruleUnit
+                            // InternalStoex.g:2027:6: (lv_unit_5_0= ruleUnit )
+                            // InternalStoex.g:2028:7: lv_unit_5_0= ruleUnit
                             {
                             if ( state.backtracking==0 ) {
 
@@ -5902,12 +6036,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2002:3: (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? )
+                    // InternalStoex.g:2052:3: (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? )
                     {
-                    // InternalStoex.g:2002:3: (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? )
-                    // InternalStoex.g:2003:4: otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )?
+                    // InternalStoex.g:2052:3: (otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )? )
+                    // InternalStoex.g:2053:4: otherlv_7= 'DoublePMF' otherlv_8= '[' ( (lv_samples_9_0= rulenumeric_real_sample ) )+ otherlv_10= ']' (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )?
                     {
-                    otherlv_7=(Token)match(input,29,FollowSets000.FOLLOW_24); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,34,FollowSets000.FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_7, grammarAccess.getProbabilityMassFunctionAccess().getDoublePMFKeyword_1_0());
@@ -5919,24 +6053,24 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_8, grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_1());
                       			
                     }
-                    // InternalStoex.g:2011:4: ( (lv_samples_9_0= rulenumeric_real_sample ) )+
-                    int cnt26=0;
-                    loop26:
+                    // InternalStoex.g:2061:4: ( (lv_samples_9_0= rulenumeric_real_sample ) )+
+                    int cnt27=0;
+                    loop27:
                     do {
-                        int alt26=2;
-                        int LA26_0 = input.LA(1);
+                        int alt27=2;
+                        int LA27_0 = input.LA(1);
 
-                        if ( (LA26_0==21) ) {
-                            alt26=1;
+                        if ( (LA27_0==21) ) {
+                            alt27=1;
                         }
 
 
-                        switch (alt26) {
+                        switch (alt27) {
                     	case 1 :
-                    	    // InternalStoex.g:2012:5: (lv_samples_9_0= rulenumeric_real_sample )
+                    	    // InternalStoex.g:2062:5: (lv_samples_9_0= rulenumeric_real_sample )
                     	    {
-                    	    // InternalStoex.g:2012:5: (lv_samples_9_0= rulenumeric_real_sample )
-                    	    // InternalStoex.g:2013:6: lv_samples_9_0= rulenumeric_real_sample
+                    	    // InternalStoex.g:2062:5: (lv_samples_9_0= rulenumeric_real_sample )
+                    	    // InternalStoex.g:2063:6: lv_samples_9_0= rulenumeric_real_sample
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -5969,13 +6103,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt26 >= 1 ) break loop26;
+                    	    if ( cnt27 >= 1 ) break loop27;
                     	    if (state.backtracking>0) {state.failed=true; return current;}
                                 EarlyExitException eee =
-                                    new EarlyExitException(26, input);
+                                    new EarlyExitException(27, input);
                                 throw eee;
                         }
-                        cnt26++;
+                        cnt27++;
                     } while (true);
 
                     otherlv_10=(Token)match(input,20,FollowSets000.FOLLOW_12); if (state.failed) return current;
@@ -5984,16 +6118,16 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_3());
                       			
                     }
-                    // InternalStoex.g:2034:4: (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )?
-                    int alt27=2;
-                    int LA27_0 = input.LA(1);
+                    // InternalStoex.g:2084:4: (otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']' )?
+                    int alt28=2;
+                    int LA28_0 = input.LA(1);
 
-                    if ( (LA27_0==19) ) {
-                        alt27=1;
+                    if ( (LA28_0==19) ) {
+                        alt28=1;
                     }
-                    switch (alt27) {
+                    switch (alt28) {
                         case 1 :
-                            // InternalStoex.g:2035:5: otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']'
+                            // InternalStoex.g:2085:5: otherlv_11= '[' ( (lv_unit_12_0= ruleUnit ) ) otherlv_13= ']'
                             {
                             otherlv_11=(Token)match(input,19,FollowSets000.FOLLOW_13); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6001,11 +6135,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                               					newLeafNode(otherlv_11, grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_4_0());
                               				
                             }
-                            // InternalStoex.g:2039:5: ( (lv_unit_12_0= ruleUnit ) )
-                            // InternalStoex.g:2040:6: (lv_unit_12_0= ruleUnit )
+                            // InternalStoex.g:2089:5: ( (lv_unit_12_0= ruleUnit ) )
+                            // InternalStoex.g:2090:6: (lv_unit_12_0= ruleUnit )
                             {
-                            // InternalStoex.g:2040:6: (lv_unit_12_0= ruleUnit )
-                            // InternalStoex.g:2041:7: lv_unit_12_0= ruleUnit
+                            // InternalStoex.g:2090:6: (lv_unit_12_0= ruleUnit )
+                            // InternalStoex.g:2091:7: lv_unit_12_0= ruleUnit
                             {
                             if ( state.backtracking==0 ) {
 
@@ -6055,27 +6189,27 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:2065:3: (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' )
+                    // InternalStoex.g:2115:3: (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' )
                     {
-                    // InternalStoex.g:2065:3: (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' )
-                    // InternalStoex.g:2066:4: otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']'
+                    // InternalStoex.g:2115:3: (otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']' )
+                    // InternalStoex.g:2116:4: otherlv_14= 'EnumPMF' (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )? otherlv_18= '[' ( (lv_samples_19_0= rulestringsample ) )+ otherlv_20= ']'
                     {
-                    otherlv_14=(Token)match(input,30,FollowSets000.FOLLOW_26); if (state.failed) return current;
+                    otherlv_14=(Token)match(input,35,FollowSets000.FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_14, grammarAccess.getProbabilityMassFunctionAccess().getEnumPMFKeyword_2_0());
                       			
                     }
-                    // InternalStoex.g:2070:4: (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )?
-                    int alt28=2;
-                    int LA28_0 = input.LA(1);
+                    // InternalStoex.g:2120:4: (otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')' )?
+                    int alt29=2;
+                    int LA29_0 = input.LA(1);
 
-                    if ( (LA28_0==21) ) {
-                        alt28=1;
+                    if ( (LA29_0==21) ) {
+                        alt29=1;
                     }
-                    switch (alt28) {
+                    switch (alt29) {
                         case 1 :
-                            // InternalStoex.g:2071:5: otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')'
+                            // InternalStoex.g:2121:5: otherlv_15= '(' ( (lv_orderedDomain_16_0= 'ordered' ) ) otherlv_17= ')'
                             {
                             otherlv_15=(Token)match(input,21,FollowSets000.FOLLOW_27); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6083,13 +6217,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                               					newLeafNode(otherlv_15, grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_2_1_0());
                               				
                             }
-                            // InternalStoex.g:2075:5: ( (lv_orderedDomain_16_0= 'ordered' ) )
-                            // InternalStoex.g:2076:6: (lv_orderedDomain_16_0= 'ordered' )
+                            // InternalStoex.g:2125:5: ( (lv_orderedDomain_16_0= 'ordered' ) )
+                            // InternalStoex.g:2126:6: (lv_orderedDomain_16_0= 'ordered' )
                             {
-                            // InternalStoex.g:2076:6: (lv_orderedDomain_16_0= 'ordered' )
-                            // InternalStoex.g:2077:7: lv_orderedDomain_16_0= 'ordered'
+                            // InternalStoex.g:2126:6: (lv_orderedDomain_16_0= 'ordered' )
+                            // InternalStoex.g:2127:7: lv_orderedDomain_16_0= 'ordered'
                             {
-                            lv_orderedDomain_16_0=(Token)match(input,31,FollowSets000.FOLLOW_15); if (state.failed) return current;
+                            lv_orderedDomain_16_0=(Token)match(input,36,FollowSets000.FOLLOW_15); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               							newLeafNode(lv_orderedDomain_16_0, grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0());
@@ -6127,24 +6261,24 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_2_2());
                       			
                     }
-                    // InternalStoex.g:2098:4: ( (lv_samples_19_0= rulestringsample ) )+
-                    int cnt29=0;
-                    loop29:
+                    // InternalStoex.g:2148:4: ( (lv_samples_19_0= rulestringsample ) )+
+                    int cnt30=0;
+                    loop30:
                     do {
-                        int alt29=2;
-                        int LA29_0 = input.LA(1);
+                        int alt30=2;
+                        int LA30_0 = input.LA(1);
 
-                        if ( (LA29_0==21) ) {
-                            alt29=1;
+                        if ( (LA30_0==21) ) {
+                            alt30=1;
                         }
 
 
-                        switch (alt29) {
+                        switch (alt30) {
                     	case 1 :
-                    	    // InternalStoex.g:2099:5: (lv_samples_19_0= rulestringsample )
+                    	    // InternalStoex.g:2149:5: (lv_samples_19_0= rulestringsample )
                     	    {
-                    	    // InternalStoex.g:2099:5: (lv_samples_19_0= rulestringsample )
-                    	    // InternalStoex.g:2100:6: lv_samples_19_0= rulestringsample
+                    	    // InternalStoex.g:2149:5: (lv_samples_19_0= rulestringsample )
+                    	    // InternalStoex.g:2150:6: lv_samples_19_0= rulestringsample
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -6177,13 +6311,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt29 >= 1 ) break loop29;
+                    	    if ( cnt30 >= 1 ) break loop30;
                     	    if (state.backtracking>0) {state.failed=true; return current;}
                                 EarlyExitException eee =
-                                    new EarlyExitException(29, input);
+                                    new EarlyExitException(30, input);
                                 throw eee;
                         }
-                        cnt29++;
+                        cnt30++;
                     } while (true);
 
                     otherlv_20=(Token)match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return current;
@@ -6199,27 +6333,27 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalStoex.g:2123:3: (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' )
+                    // InternalStoex.g:2173:3: (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' )
                     {
-                    // InternalStoex.g:2123:3: (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' )
-                    // InternalStoex.g:2124:4: otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']'
+                    // InternalStoex.g:2173:3: (otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']' )
+                    // InternalStoex.g:2174:4: otherlv_21= 'BoolPMF' (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )? otherlv_25= '[' ( (lv_samples_26_0= ruleboolsample ) )+ otherlv_27= ']'
                     {
-                    otherlv_21=(Token)match(input,32,FollowSets000.FOLLOW_26); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,37,FollowSets000.FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getProbabilityMassFunctionAccess().getBoolPMFKeyword_3_0());
                       			
                     }
-                    // InternalStoex.g:2128:4: (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )?
-                    int alt30=2;
-                    int LA30_0 = input.LA(1);
+                    // InternalStoex.g:2178:4: (otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')' )?
+                    int alt31=2;
+                    int LA31_0 = input.LA(1);
 
-                    if ( (LA30_0==21) ) {
-                        alt30=1;
+                    if ( (LA31_0==21) ) {
+                        alt31=1;
                     }
-                    switch (alt30) {
+                    switch (alt31) {
                         case 1 :
-                            // InternalStoex.g:2129:5: otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')'
+                            // InternalStoex.g:2179:5: otherlv_22= '(' ( (lv_orderedDomain_23_0= 'ordered' ) ) otherlv_24= ')'
                             {
                             otherlv_22=(Token)match(input,21,FollowSets000.FOLLOW_27); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6227,13 +6361,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                               					newLeafNode(otherlv_22, grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_3_1_0());
                               				
                             }
-                            // InternalStoex.g:2133:5: ( (lv_orderedDomain_23_0= 'ordered' ) )
-                            // InternalStoex.g:2134:6: (lv_orderedDomain_23_0= 'ordered' )
+                            // InternalStoex.g:2183:5: ( (lv_orderedDomain_23_0= 'ordered' ) )
+                            // InternalStoex.g:2184:6: (lv_orderedDomain_23_0= 'ordered' )
                             {
-                            // InternalStoex.g:2134:6: (lv_orderedDomain_23_0= 'ordered' )
-                            // InternalStoex.g:2135:7: lv_orderedDomain_23_0= 'ordered'
+                            // InternalStoex.g:2184:6: (lv_orderedDomain_23_0= 'ordered' )
+                            // InternalStoex.g:2185:7: lv_orderedDomain_23_0= 'ordered'
                             {
-                            lv_orderedDomain_23_0=(Token)match(input,31,FollowSets000.FOLLOW_15); if (state.failed) return current;
+                            lv_orderedDomain_23_0=(Token)match(input,36,FollowSets000.FOLLOW_15); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               							newLeafNode(lv_orderedDomain_23_0, grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0());
@@ -6271,24 +6405,24 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_25, grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_3_2());
                       			
                     }
-                    // InternalStoex.g:2156:4: ( (lv_samples_26_0= ruleboolsample ) )+
-                    int cnt31=0;
-                    loop31:
+                    // InternalStoex.g:2206:4: ( (lv_samples_26_0= ruleboolsample ) )+
+                    int cnt32=0;
+                    loop32:
                     do {
-                        int alt31=2;
-                        int LA31_0 = input.LA(1);
+                        int alt32=2;
+                        int LA32_0 = input.LA(1);
 
-                        if ( (LA31_0==21) ) {
-                            alt31=1;
+                        if ( (LA32_0==21) ) {
+                            alt32=1;
                         }
 
 
-                        switch (alt31) {
+                        switch (alt32) {
                     	case 1 :
-                    	    // InternalStoex.g:2157:5: (lv_samples_26_0= ruleboolsample )
+                    	    // InternalStoex.g:2207:5: (lv_samples_26_0= ruleboolsample )
                     	    {
-                    	    // InternalStoex.g:2157:5: (lv_samples_26_0= ruleboolsample )
-                    	    // InternalStoex.g:2158:6: lv_samples_26_0= ruleboolsample
+                    	    // InternalStoex.g:2207:5: (lv_samples_26_0= ruleboolsample )
+                    	    // InternalStoex.g:2208:6: lv_samples_26_0= ruleboolsample
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -6321,13 +6455,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt31 >= 1 ) break loop31;
+                    	    if ( cnt32 >= 1 ) break loop32;
                     	    if (state.backtracking>0) {state.failed=true; return current;}
                                 EarlyExitException eee =
-                                    new EarlyExitException(31, input);
+                                    new EarlyExitException(32, input);
                                 throw eee;
                         }
-                        cnt31++;
+                        cnt32++;
                     } while (true);
 
                     otherlv_27=(Token)match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return current;
@@ -6367,7 +6501,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenumeric_int_sample"
-    // InternalStoex.g:2184:1: entryRulenumeric_int_sample returns [EObject current=null] : iv_rulenumeric_int_sample= rulenumeric_int_sample EOF ;
+    // InternalStoex.g:2234:1: entryRulenumeric_int_sample returns [EObject current=null] : iv_rulenumeric_int_sample= rulenumeric_int_sample EOF ;
     public final EObject entryRulenumeric_int_sample() throws RecognitionException {
         EObject current = null;
 
@@ -6375,8 +6509,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2184:59: (iv_rulenumeric_int_sample= rulenumeric_int_sample EOF )
-            // InternalStoex.g:2185:2: iv_rulenumeric_int_sample= rulenumeric_int_sample EOF
+            // InternalStoex.g:2234:59: (iv_rulenumeric_int_sample= rulenumeric_int_sample EOF )
+            // InternalStoex.g:2235:2: iv_rulenumeric_int_sample= rulenumeric_int_sample EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumeric_int_sampleRule()); 
@@ -6407,7 +6541,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenumeric_int_sample"
-    // InternalStoex.g:2191:1: rulenumeric_int_sample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
+    // InternalStoex.g:2241:1: rulenumeric_int_sample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
     public final EObject rulenumeric_int_sample() throws RecognitionException {
         EObject current = null;
 
@@ -6422,11 +6556,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2197:2: ( (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
-            // InternalStoex.g:2198:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2247:2: ( (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
+            // InternalStoex.g:2248:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
             {
-            // InternalStoex.g:2198:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
-            // InternalStoex.g:2199:3: otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
+            // InternalStoex.g:2248:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2249:3: otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_INT ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6434,11 +6568,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getNumeric_int_sampleAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalStoex.g:2203:3: ( (lv_value_1_0= ruleSIGNED_INT ) )
-            // InternalStoex.g:2204:4: (lv_value_1_0= ruleSIGNED_INT )
+            // InternalStoex.g:2253:3: ( (lv_value_1_0= ruleSIGNED_INT ) )
+            // InternalStoex.g:2254:4: (lv_value_1_0= ruleSIGNED_INT )
             {
-            // InternalStoex.g:2204:4: (lv_value_1_0= ruleSIGNED_INT )
-            // InternalStoex.g:2205:5: lv_value_1_0= ruleSIGNED_INT
+            // InternalStoex.g:2254:4: (lv_value_1_0= ruleSIGNED_INT )
+            // InternalStoex.g:2255:5: lv_value_1_0= ruleSIGNED_INT
             {
             if ( state.backtracking==0 ) {
 
@@ -6469,17 +6603,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,33,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getNumeric_int_sampleAccess().getSemicolonKeyword_2());
               		
             }
-            // InternalStoex.g:2226:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
-            // InternalStoex.g:2227:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2276:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
+            // InternalStoex.g:2277:4: (lv_probability_3_0= RULE_DOUBLE )
             {
-            // InternalStoex.g:2227:4: (lv_probability_3_0= RULE_DOUBLE )
-            // InternalStoex.g:2228:5: lv_probability_3_0= RULE_DOUBLE
+            // InternalStoex.g:2277:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2278:5: lv_probability_3_0= RULE_DOUBLE
             {
             lv_probability_3_0=(Token)match(input,RULE_DOUBLE,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6536,7 +6670,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenumeric_real_sample"
-    // InternalStoex.g:2252:1: entryRulenumeric_real_sample returns [EObject current=null] : iv_rulenumeric_real_sample= rulenumeric_real_sample EOF ;
+    // InternalStoex.g:2302:1: entryRulenumeric_real_sample returns [EObject current=null] : iv_rulenumeric_real_sample= rulenumeric_real_sample EOF ;
     public final EObject entryRulenumeric_real_sample() throws RecognitionException {
         EObject current = null;
 
@@ -6544,8 +6678,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2252:60: (iv_rulenumeric_real_sample= rulenumeric_real_sample EOF )
-            // InternalStoex.g:2253:2: iv_rulenumeric_real_sample= rulenumeric_real_sample EOF
+            // InternalStoex.g:2302:60: (iv_rulenumeric_real_sample= rulenumeric_real_sample EOF )
+            // InternalStoex.g:2303:2: iv_rulenumeric_real_sample= rulenumeric_real_sample EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumeric_real_sampleRule()); 
@@ -6576,7 +6710,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenumeric_real_sample"
-    // InternalStoex.g:2259:1: rulenumeric_real_sample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
+    // InternalStoex.g:2309:1: rulenumeric_real_sample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
     public final EObject rulenumeric_real_sample() throws RecognitionException {
         EObject current = null;
 
@@ -6591,11 +6725,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2265:2: ( (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
-            // InternalStoex.g:2266:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2315:2: ( (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
+            // InternalStoex.g:2316:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
             {
-            // InternalStoex.g:2266:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
-            // InternalStoex.g:2267:3: otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
+            // InternalStoex.g:2316:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2317:3: otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6603,11 +6737,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getNumeric_real_sampleAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalStoex.g:2271:3: ( (lv_value_1_0= ruleSIGNED_NUMBER ) )
-            // InternalStoex.g:2272:4: (lv_value_1_0= ruleSIGNED_NUMBER )
+            // InternalStoex.g:2321:3: ( (lv_value_1_0= ruleSIGNED_NUMBER ) )
+            // InternalStoex.g:2322:4: (lv_value_1_0= ruleSIGNED_NUMBER )
             {
-            // InternalStoex.g:2272:4: (lv_value_1_0= ruleSIGNED_NUMBER )
-            // InternalStoex.g:2273:5: lv_value_1_0= ruleSIGNED_NUMBER
+            // InternalStoex.g:2322:4: (lv_value_1_0= ruleSIGNED_NUMBER )
+            // InternalStoex.g:2323:5: lv_value_1_0= ruleSIGNED_NUMBER
             {
             if ( state.backtracking==0 ) {
 
@@ -6638,17 +6772,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,33,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getNumeric_real_sampleAccess().getSemicolonKeyword_2());
               		
             }
-            // InternalStoex.g:2294:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
-            // InternalStoex.g:2295:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2344:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
+            // InternalStoex.g:2345:4: (lv_probability_3_0= RULE_DOUBLE )
             {
-            // InternalStoex.g:2295:4: (lv_probability_3_0= RULE_DOUBLE )
-            // InternalStoex.g:2296:5: lv_probability_3_0= RULE_DOUBLE
+            // InternalStoex.g:2345:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2346:5: lv_probability_3_0= RULE_DOUBLE
             {
             lv_probability_3_0=(Token)match(input,RULE_DOUBLE,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6705,7 +6839,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulereal_pdf_sample"
-    // InternalStoex.g:2320:1: entryRulereal_pdf_sample returns [EObject current=null] : iv_rulereal_pdf_sample= rulereal_pdf_sample EOF ;
+    // InternalStoex.g:2370:1: entryRulereal_pdf_sample returns [EObject current=null] : iv_rulereal_pdf_sample= rulereal_pdf_sample EOF ;
     public final EObject entryRulereal_pdf_sample() throws RecognitionException {
         EObject current = null;
 
@@ -6713,8 +6847,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2320:56: (iv_rulereal_pdf_sample= rulereal_pdf_sample EOF )
-            // InternalStoex.g:2321:2: iv_rulereal_pdf_sample= rulereal_pdf_sample EOF
+            // InternalStoex.g:2370:56: (iv_rulereal_pdf_sample= rulereal_pdf_sample EOF )
+            // InternalStoex.g:2371:2: iv_rulereal_pdf_sample= rulereal_pdf_sample EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getReal_pdf_sampleRule()); 
@@ -6745,7 +6879,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulereal_pdf_sample"
-    // InternalStoex.g:2327:1: rulereal_pdf_sample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
+    // InternalStoex.g:2377:1: rulereal_pdf_sample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
     public final EObject rulereal_pdf_sample() throws RecognitionException {
         EObject current = null;
 
@@ -6760,11 +6894,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2333:2: ( (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
-            // InternalStoex.g:2334:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2383:2: ( (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
+            // InternalStoex.g:2384:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
             {
-            // InternalStoex.g:2334:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
-            // InternalStoex.g:2335:3: otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
+            // InternalStoex.g:2384:2: (otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2385:3: otherlv_0= '(' ( (lv_value_1_0= ruleSIGNED_NUMBER ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6772,11 +6906,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getReal_pdf_sampleAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalStoex.g:2339:3: ( (lv_value_1_0= ruleSIGNED_NUMBER ) )
-            // InternalStoex.g:2340:4: (lv_value_1_0= ruleSIGNED_NUMBER )
+            // InternalStoex.g:2389:3: ( (lv_value_1_0= ruleSIGNED_NUMBER ) )
+            // InternalStoex.g:2390:4: (lv_value_1_0= ruleSIGNED_NUMBER )
             {
-            // InternalStoex.g:2340:4: (lv_value_1_0= ruleSIGNED_NUMBER )
-            // InternalStoex.g:2341:5: lv_value_1_0= ruleSIGNED_NUMBER
+            // InternalStoex.g:2390:4: (lv_value_1_0= ruleSIGNED_NUMBER )
+            // InternalStoex.g:2391:5: lv_value_1_0= ruleSIGNED_NUMBER
             {
             if ( state.backtracking==0 ) {
 
@@ -6807,17 +6941,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,33,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getReal_pdf_sampleAccess().getSemicolonKeyword_2());
               		
             }
-            // InternalStoex.g:2362:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
-            // InternalStoex.g:2363:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2412:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
+            // InternalStoex.g:2413:4: (lv_probability_3_0= RULE_DOUBLE )
             {
-            // InternalStoex.g:2363:4: (lv_probability_3_0= RULE_DOUBLE )
-            // InternalStoex.g:2364:5: lv_probability_3_0= RULE_DOUBLE
+            // InternalStoex.g:2413:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2414:5: lv_probability_3_0= RULE_DOUBLE
             {
             lv_probability_3_0=(Token)match(input,RULE_DOUBLE,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6874,7 +7008,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulestringsample"
-    // InternalStoex.g:2388:1: entryRulestringsample returns [EObject current=null] : iv_rulestringsample= rulestringsample EOF ;
+    // InternalStoex.g:2438:1: entryRulestringsample returns [EObject current=null] : iv_rulestringsample= rulestringsample EOF ;
     public final EObject entryRulestringsample() throws RecognitionException {
         EObject current = null;
 
@@ -6882,8 +7016,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2388:53: (iv_rulestringsample= rulestringsample EOF )
-            // InternalStoex.g:2389:2: iv_rulestringsample= rulestringsample EOF
+            // InternalStoex.g:2438:53: (iv_rulestringsample= rulestringsample EOF )
+            // InternalStoex.g:2439:2: iv_rulestringsample= rulestringsample EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStringsampleRule()); 
@@ -6914,7 +7048,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulestringsample"
-    // InternalStoex.g:2395:1: rulestringsample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
+    // InternalStoex.g:2445:1: rulestringsample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
     public final EObject rulestringsample() throws RecognitionException {
         EObject current = null;
 
@@ -6928,11 +7062,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2401:2: ( (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
-            // InternalStoex.g:2402:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2451:2: ( (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
+            // InternalStoex.g:2452:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
             {
-            // InternalStoex.g:2402:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
-            // InternalStoex.g:2403:3: otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
+            // InternalStoex.g:2452:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2453:3: otherlv_0= '(' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_31); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6940,11 +7074,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getStringsampleAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalStoex.g:2407:3: ( (lv_value_1_0= RULE_STRING ) )
-            // InternalStoex.g:2408:4: (lv_value_1_0= RULE_STRING )
+            // InternalStoex.g:2457:3: ( (lv_value_1_0= RULE_STRING ) )
+            // InternalStoex.g:2458:4: (lv_value_1_0= RULE_STRING )
             {
-            // InternalStoex.g:2408:4: (lv_value_1_0= RULE_STRING )
-            // InternalStoex.g:2409:5: lv_value_1_0= RULE_STRING
+            // InternalStoex.g:2458:4: (lv_value_1_0= RULE_STRING )
+            // InternalStoex.g:2459:5: lv_value_1_0= RULE_STRING
             {
             lv_value_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_28); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6970,17 +7104,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,33,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getStringsampleAccess().getSemicolonKeyword_2());
               		
             }
-            // InternalStoex.g:2429:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
-            // InternalStoex.g:2430:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2479:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
+            // InternalStoex.g:2480:4: (lv_probability_3_0= RULE_DOUBLE )
             {
-            // InternalStoex.g:2430:4: (lv_probability_3_0= RULE_DOUBLE )
-            // InternalStoex.g:2431:5: lv_probability_3_0= RULE_DOUBLE
+            // InternalStoex.g:2480:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2481:5: lv_probability_3_0= RULE_DOUBLE
             {
             lv_probability_3_0=(Token)match(input,RULE_DOUBLE,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -7037,7 +7171,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleboolsample"
-    // InternalStoex.g:2455:1: entryRuleboolsample returns [EObject current=null] : iv_ruleboolsample= ruleboolsample EOF ;
+    // InternalStoex.g:2505:1: entryRuleboolsample returns [EObject current=null] : iv_ruleboolsample= ruleboolsample EOF ;
     public final EObject entryRuleboolsample() throws RecognitionException {
         EObject current = null;
 
@@ -7045,8 +7179,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2455:51: (iv_ruleboolsample= ruleboolsample EOF )
-            // InternalStoex.g:2456:2: iv_ruleboolsample= ruleboolsample EOF
+            // InternalStoex.g:2505:51: (iv_ruleboolsample= ruleboolsample EOF )
+            // InternalStoex.g:2506:2: iv_ruleboolsample= ruleboolsample EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBoolsampleRule()); 
@@ -7077,7 +7211,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleboolsample"
-    // InternalStoex.g:2462:1: ruleboolsample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
+    // InternalStoex.g:2512:1: ruleboolsample returns [EObject current=null] : (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) ;
     public final EObject ruleboolsample() throws RecognitionException {
         EObject current = null;
 
@@ -7091,11 +7225,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2468:2: ( (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
-            // InternalStoex.g:2469:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2518:2: ( (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' ) )
+            // InternalStoex.g:2519:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
             {
-            // InternalStoex.g:2469:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
-            // InternalStoex.g:2470:3: otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
+            // InternalStoex.g:2519:2: (otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')' )
+            // InternalStoex.g:2520:3: otherlv_0= '(' ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) ) otherlv_2= ';' ( (lv_probability_3_0= RULE_DOUBLE ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_32); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -7103,11 +7237,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getBoolsampleAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalStoex.g:2474:3: ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) )
-            // InternalStoex.g:2475:4: (lv_value_1_0= RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:2524:3: ( (lv_value_1_0= RULE_BOOLEAN_KEYWORDS ) )
+            // InternalStoex.g:2525:4: (lv_value_1_0= RULE_BOOLEAN_KEYWORDS )
             {
-            // InternalStoex.g:2475:4: (lv_value_1_0= RULE_BOOLEAN_KEYWORDS )
-            // InternalStoex.g:2476:5: lv_value_1_0= RULE_BOOLEAN_KEYWORDS
+            // InternalStoex.g:2525:4: (lv_value_1_0= RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:2526:5: lv_value_1_0= RULE_BOOLEAN_KEYWORDS
             {
             lv_value_1_0=(Token)match(input,RULE_BOOLEAN_KEYWORDS,FollowSets000.FOLLOW_28); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -7133,17 +7267,17 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,33,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getBoolsampleAccess().getSemicolonKeyword_2());
               		
             }
-            // InternalStoex.g:2496:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
-            // InternalStoex.g:2497:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2546:3: ( (lv_probability_3_0= RULE_DOUBLE ) )
+            // InternalStoex.g:2547:4: (lv_probability_3_0= RULE_DOUBLE )
             {
-            // InternalStoex.g:2497:4: (lv_probability_3_0= RULE_DOUBLE )
-            // InternalStoex.g:2498:5: lv_probability_3_0= RULE_DOUBLE
+            // InternalStoex.g:2547:4: (lv_probability_3_0= RULE_DOUBLE )
+            // InternalStoex.g:2548:5: lv_probability_3_0= RULE_DOUBLE
             {
             lv_probability_3_0=(Token)match(input,RULE_DOUBLE,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -7200,7 +7334,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSIGNED_NUMBER"
-    // InternalStoex.g:2522:1: entryRuleSIGNED_NUMBER returns [String current=null] : iv_ruleSIGNED_NUMBER= ruleSIGNED_NUMBER EOF ;
+    // InternalStoex.g:2572:1: entryRuleSIGNED_NUMBER returns [String current=null] : iv_ruleSIGNED_NUMBER= ruleSIGNED_NUMBER EOF ;
     public final String entryRuleSIGNED_NUMBER() throws RecognitionException {
         String current = null;
 
@@ -7208,8 +7342,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2522:53: (iv_ruleSIGNED_NUMBER= ruleSIGNED_NUMBER EOF )
-            // InternalStoex.g:2523:2: iv_ruleSIGNED_NUMBER= ruleSIGNED_NUMBER EOF
+            // InternalStoex.g:2572:53: (iv_ruleSIGNED_NUMBER= ruleSIGNED_NUMBER EOF )
+            // InternalStoex.g:2573:2: iv_ruleSIGNED_NUMBER= ruleSIGNED_NUMBER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSIGNED_NUMBERRule()); 
@@ -7240,7 +7374,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSIGNED_NUMBER"
-    // InternalStoex.g:2529:1: ruleSIGNED_NUMBER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE ) ;
+    // InternalStoex.g:2579:1: ruleSIGNED_NUMBER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE ) ;
     public final AntlrDatatypeRuleToken ruleSIGNED_NUMBER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7251,22 +7385,22 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2535:2: ( ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE ) )
-            // InternalStoex.g:2536:2: ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE )
+            // InternalStoex.g:2585:2: ( ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE ) )
+            // InternalStoex.g:2586:2: ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE )
             {
-            // InternalStoex.g:2536:2: ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE )
-            // InternalStoex.g:2537:3: (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE
+            // InternalStoex.g:2586:2: ( (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE )
+            // InternalStoex.g:2587:3: (kw= '-' )? this_DOUBLE_1= RULE_DOUBLE
             {
-            // InternalStoex.g:2537:3: (kw= '-' )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // InternalStoex.g:2587:3: (kw= '-' )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA33_0==18) ) {
-                alt33=1;
+            if ( (LA34_0==18) ) {
+                alt34=1;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // InternalStoex.g:2538:4: kw= '-'
+                    // InternalStoex.g:2588:4: kw= '-'
                     {
                     kw=(Token)match(input,18,FollowSets000.FOLLOW_29); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7317,7 +7451,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSIGNED_INT"
-    // InternalStoex.g:2555:1: entryRuleSIGNED_INT returns [String current=null] : iv_ruleSIGNED_INT= ruleSIGNED_INT EOF ;
+    // InternalStoex.g:2605:1: entryRuleSIGNED_INT returns [String current=null] : iv_ruleSIGNED_INT= ruleSIGNED_INT EOF ;
     public final String entryRuleSIGNED_INT() throws RecognitionException {
         String current = null;
 
@@ -7325,8 +7459,8 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalStoex.g:2555:50: (iv_ruleSIGNED_INT= ruleSIGNED_INT EOF )
-            // InternalStoex.g:2556:2: iv_ruleSIGNED_INT= ruleSIGNED_INT EOF
+            // InternalStoex.g:2605:50: (iv_ruleSIGNED_INT= ruleSIGNED_INT EOF )
+            // InternalStoex.g:2606:2: iv_ruleSIGNED_INT= ruleSIGNED_INT EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSIGNED_INTRule()); 
@@ -7357,7 +7491,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSIGNED_INT"
-    // InternalStoex.g:2562:1: ruleSIGNED_INT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_DECINT_1= RULE_DECINT ) ;
+    // InternalStoex.g:2612:1: ruleSIGNED_INT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_DECINT_1= RULE_DECINT ) ;
     public final AntlrDatatypeRuleToken ruleSIGNED_INT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7368,22 +7502,22 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2568:2: ( ( (kw= '-' )? this_DECINT_1= RULE_DECINT ) )
-            // InternalStoex.g:2569:2: ( (kw= '-' )? this_DECINT_1= RULE_DECINT )
+            // InternalStoex.g:2618:2: ( ( (kw= '-' )? this_DECINT_1= RULE_DECINT ) )
+            // InternalStoex.g:2619:2: ( (kw= '-' )? this_DECINT_1= RULE_DECINT )
             {
-            // InternalStoex.g:2569:2: ( (kw= '-' )? this_DECINT_1= RULE_DECINT )
-            // InternalStoex.g:2570:3: (kw= '-' )? this_DECINT_1= RULE_DECINT
+            // InternalStoex.g:2619:2: ( (kw= '-' )? this_DECINT_1= RULE_DECINT )
+            // InternalStoex.g:2620:3: (kw= '-' )? this_DECINT_1= RULE_DECINT
             {
-            // InternalStoex.g:2570:3: (kw= '-' )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalStoex.g:2620:3: (kw= '-' )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==18) ) {
-                alt34=1;
+            if ( (LA35_0==18) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // InternalStoex.g:2571:4: kw= '-'
+                    // InternalStoex.g:2621:4: kw= '-'
                     {
                     kw=(Token)match(input,18,FollowSets000.FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7434,7 +7568,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanOperations"
-    // InternalStoex.g:2588:1: ruleBooleanOperations returns [Enumerator current=null] : ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) ) ;
+    // InternalStoex.g:2638:1: ruleBooleanOperations returns [Enumerator current=null] : ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) ) ;
     public final Enumerator ruleBooleanOperations() throws RecognitionException {
         Enumerator current = null;
 
@@ -7446,43 +7580,43 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2594:2: ( ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) ) )
-            // InternalStoex.g:2595:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) )
+            // InternalStoex.g:2644:2: ( ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) ) )
+            // InternalStoex.g:2645:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) )
             {
-            // InternalStoex.g:2595:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) )
-            int alt35=3;
+            // InternalStoex.g:2645:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) | (enumLiteral_2= 'XOR' ) )
+            int alt36=3;
             switch ( input.LA(1) ) {
-            case 34:
+            case 39:
                 {
-                alt35=1;
+                alt36=1;
                 }
                 break;
-            case 35:
+            case 40:
                 {
-                alt35=2;
+                alt36=2;
                 }
                 break;
-            case 36:
+            case 41:
                 {
-                alt35=3;
+                alt36=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 35, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // InternalStoex.g:2596:3: (enumLiteral_0= 'AND' )
+                    // InternalStoex.g:2646:3: (enumLiteral_0= 'AND' )
                     {
-                    // InternalStoex.g:2596:3: (enumLiteral_0= 'AND' )
-                    // InternalStoex.g:2597:4: enumLiteral_0= 'AND'
+                    // InternalStoex.g:2646:3: (enumLiteral_0= 'AND' )
+                    // InternalStoex.g:2647:4: enumLiteral_0= 'AND'
                     {
-                    enumLiteral_0=(Token)match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getBooleanOperationsAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7496,12 +7630,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2604:3: (enumLiteral_1= 'OR' )
+                    // InternalStoex.g:2654:3: (enumLiteral_1= 'OR' )
                     {
-                    // InternalStoex.g:2604:3: (enumLiteral_1= 'OR' )
-                    // InternalStoex.g:2605:4: enumLiteral_1= 'OR'
+                    // InternalStoex.g:2654:3: (enumLiteral_1= 'OR' )
+                    // InternalStoex.g:2655:4: enumLiteral_1= 'OR'
                     {
-                    enumLiteral_1=(Token)match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getBooleanOperationsAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7515,12 +7649,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:2612:3: (enumLiteral_2= 'XOR' )
+                    // InternalStoex.g:2662:3: (enumLiteral_2= 'XOR' )
                     {
-                    // InternalStoex.g:2612:3: (enumLiteral_2= 'XOR' )
-                    // InternalStoex.g:2613:4: enumLiteral_2= 'XOR'
+                    // InternalStoex.g:2662:3: (enumLiteral_2= 'XOR' )
+                    // InternalStoex.g:2663:4: enumLiteral_2= 'XOR'
                     {
-                    enumLiteral_2=(Token)match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getBooleanOperationsAccess().getXOREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -7558,7 +7692,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleandoperation"
-    // InternalStoex.g:2623:1: ruleandoperation returns [Enumerator current=null] : (enumLiteral_0= 'AND' ) ;
+    // InternalStoex.g:2673:1: ruleandoperation returns [Enumerator current=null] : (enumLiteral_0= 'AND' ) ;
     public final Enumerator ruleandoperation() throws RecognitionException {
         Enumerator current = null;
 
@@ -7568,13 +7702,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2629:2: ( (enumLiteral_0= 'AND' ) )
-            // InternalStoex.g:2630:2: (enumLiteral_0= 'AND' )
+            // InternalStoex.g:2679:2: ( (enumLiteral_0= 'AND' ) )
+            // InternalStoex.g:2680:2: (enumLiteral_0= 'AND' )
             {
-            // InternalStoex.g:2630:2: (enumLiteral_0= 'AND' )
-            // InternalStoex.g:2631:3: enumLiteral_0= 'AND'
+            // InternalStoex.g:2680:2: (enumLiteral_0= 'AND' )
+            // InternalStoex.g:2681:3: enumLiteral_0= 'AND'
             {
-            enumLiteral_0=(Token)match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current = grammarAccess.getAndoperationAccess().getANDEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -7606,7 +7740,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleoroperations"
-    // InternalStoex.g:2640:1: ruleoroperations returns [Enumerator current=null] : ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) ) ;
+    // InternalStoex.g:2690:1: ruleoroperations returns [Enumerator current=null] : ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) ) ;
     public final Enumerator ruleoroperations() throws RecognitionException {
         Enumerator current = null;
 
@@ -7617,34 +7751,34 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2646:2: ( ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) ) )
-            // InternalStoex.g:2647:2: ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) )
+            // InternalStoex.g:2696:2: ( ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) ) )
+            // InternalStoex.g:2697:2: ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) )
             {
-            // InternalStoex.g:2647:2: ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) )
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // InternalStoex.g:2697:2: ( (enumLiteral_0= 'OR' ) | (enumLiteral_1= 'XOR' ) )
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA36_0==35) ) {
-                alt36=1;
+            if ( (LA37_0==40) ) {
+                alt37=1;
             }
-            else if ( (LA36_0==36) ) {
-                alt36=2;
+            else if ( (LA37_0==41) ) {
+                alt37=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 36, 0, input);
+                    new NoViableAltException("", 37, 0, input);
 
                 throw nvae;
             }
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // InternalStoex.g:2648:3: (enumLiteral_0= 'OR' )
+                    // InternalStoex.g:2698:3: (enumLiteral_0= 'OR' )
                     {
-                    // InternalStoex.g:2648:3: (enumLiteral_0= 'OR' )
-                    // InternalStoex.g:2649:4: enumLiteral_0= 'OR'
+                    // InternalStoex.g:2698:3: (enumLiteral_0= 'OR' )
+                    // InternalStoex.g:2699:4: enumLiteral_0= 'OR'
                     {
-                    enumLiteral_0=(Token)match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getOroperationsAccess().getOREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7658,12 +7792,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2656:3: (enumLiteral_1= 'XOR' )
+                    // InternalStoex.g:2706:3: (enumLiteral_1= 'XOR' )
                     {
-                    // InternalStoex.g:2656:3: (enumLiteral_1= 'XOR' )
-                    // InternalStoex.g:2657:4: enumLiteral_1= 'XOR'
+                    // InternalStoex.g:2706:3: (enumLiteral_1= 'XOR' )
+                    // InternalStoex.g:2707:4: enumLiteral_1= 'XOR'
                     {
-                    enumLiteral_1=(Token)match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getOroperationsAccess().getXOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7701,7 +7835,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompareOperations"
-    // InternalStoex.g:2667:1: ruleCompareOperations returns [Enumerator current=null] : ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) ) ;
+    // InternalStoex.g:2717:1: ruleCompareOperations returns [Enumerator current=null] : ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) ) ;
     public final Enumerator ruleCompareOperations() throws RecognitionException {
         Enumerator current = null;
 
@@ -7716,58 +7850,58 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2673:2: ( ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) ) )
-            // InternalStoex.g:2674:2: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) )
+            // InternalStoex.g:2723:2: ( ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) ) )
+            // InternalStoex.g:2724:2: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) )
             {
-            // InternalStoex.g:2674:2: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) )
-            int alt37=6;
+            // InternalStoex.g:2724:2: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '<>' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) )
+            int alt38=6;
             switch ( input.LA(1) ) {
-            case 37:
-                {
-                alt37=1;
-                }
-                break;
-            case 38:
-                {
-                alt37=2;
-                }
-                break;
-            case 39:
-                {
-                alt37=3;
-                }
-                break;
-            case 40:
-                {
-                alt37=4;
-                }
-                break;
-            case 41:
-                {
-                alt37=5;
-                }
-                break;
             case 42:
                 {
-                alt37=6;
+                alt38=1;
+                }
+                break;
+            case 43:
+                {
+                alt38=2;
+                }
+                break;
+            case 44:
+                {
+                alt38=3;
+                }
+                break;
+            case 45:
+                {
+                alt38=4;
+                }
+                break;
+            case 46:
+                {
+                alt38=5;
+                }
+                break;
+            case 47:
+                {
+                alt38=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 37, 0, input);
+                    new NoViableAltException("", 38, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt37) {
+            switch (alt38) {
                 case 1 :
-                    // InternalStoex.g:2675:3: (enumLiteral_0= '>' )
+                    // InternalStoex.g:2725:3: (enumLiteral_0= '>' )
                     {
-                    // InternalStoex.g:2675:3: (enumLiteral_0= '>' )
-                    // InternalStoex.g:2676:4: enumLiteral_0= '>'
+                    // InternalStoex.g:2725:3: (enumLiteral_0= '>' )
+                    // InternalStoex.g:2726:4: enumLiteral_0= '>'
                     {
-                    enumLiteral_0=(Token)match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getCompareOperationsAccess().getGREATEREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7781,12 +7915,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2683:3: (enumLiteral_1= '<' )
+                    // InternalStoex.g:2733:3: (enumLiteral_1= '<' )
                     {
-                    // InternalStoex.g:2683:3: (enumLiteral_1= '<' )
-                    // InternalStoex.g:2684:4: enumLiteral_1= '<'
+                    // InternalStoex.g:2733:3: (enumLiteral_1= '<' )
+                    // InternalStoex.g:2734:4: enumLiteral_1= '<'
                     {
-                    enumLiteral_1=(Token)match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getCompareOperationsAccess().getLESSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7800,12 +7934,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:2691:3: (enumLiteral_2= '==' )
+                    // InternalStoex.g:2741:3: (enumLiteral_2= '==' )
                     {
-                    // InternalStoex.g:2691:3: (enumLiteral_2= '==' )
-                    // InternalStoex.g:2692:4: enumLiteral_2= '=='
+                    // InternalStoex.g:2741:3: (enumLiteral_2= '==' )
+                    // InternalStoex.g:2742:4: enumLiteral_2= '=='
                     {
-                    enumLiteral_2=(Token)match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getCompareOperationsAccess().getEQUALSEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -7819,12 +7953,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalStoex.g:2699:3: (enumLiteral_3= '<>' )
+                    // InternalStoex.g:2749:3: (enumLiteral_3= '<>' )
                     {
-                    // InternalStoex.g:2699:3: (enumLiteral_3= '<>' )
-                    // InternalStoex.g:2700:4: enumLiteral_3= '<>'
+                    // InternalStoex.g:2749:3: (enumLiteral_3= '<>' )
+                    // InternalStoex.g:2750:4: enumLiteral_3= '<>'
                     {
-                    enumLiteral_3=(Token)match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getCompareOperationsAccess().getNOTEQUALEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -7838,12 +7972,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalStoex.g:2707:3: (enumLiteral_4= '>=' )
+                    // InternalStoex.g:2757:3: (enumLiteral_4= '>=' )
                     {
-                    // InternalStoex.g:2707:3: (enumLiteral_4= '>=' )
-                    // InternalStoex.g:2708:4: enumLiteral_4= '>='
+                    // InternalStoex.g:2757:3: (enumLiteral_4= '>=' )
+                    // InternalStoex.g:2758:4: enumLiteral_4= '>='
                     {
-                    enumLiteral_4=(Token)match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getCompareOperationsAccess().getGREATEREQUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -7857,12 +7991,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalStoex.g:2715:3: (enumLiteral_5= '<=' )
+                    // InternalStoex.g:2765:3: (enumLiteral_5= '<=' )
                     {
-                    // InternalStoex.g:2715:3: (enumLiteral_5= '<=' )
-                    // InternalStoex.g:2716:4: enumLiteral_5= '<='
+                    // InternalStoex.g:2765:3: (enumLiteral_5= '<=' )
+                    // InternalStoex.g:2766:4: enumLiteral_5= '<='
                     {
-                    enumLiteral_5=(Token)match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getCompareOperationsAccess().getLESSEQUALEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -7900,7 +8034,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTermOperations"
-    // InternalStoex.g:2726:1: ruleTermOperations returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
+    // InternalStoex.g:2776:1: ruleTermOperations returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
     public final Enumerator ruleTermOperations() throws RecognitionException {
         Enumerator current = null;
 
@@ -7911,34 +8045,34 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2732:2: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
-            // InternalStoex.g:2733:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalStoex.g:2782:2: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
+            // InternalStoex.g:2783:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             {
-            // InternalStoex.g:2733:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // InternalStoex.g:2783:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA38_0==43) ) {
-                alt38=1;
+            if ( (LA39_0==48) ) {
+                alt39=1;
             }
-            else if ( (LA38_0==18) ) {
-                alt38=2;
+            else if ( (LA39_0==18) ) {
+                alt39=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 39, 0, input);
 
                 throw nvae;
             }
-            switch (alt38) {
+            switch (alt39) {
                 case 1 :
-                    // InternalStoex.g:2734:3: (enumLiteral_0= '+' )
+                    // InternalStoex.g:2784:3: (enumLiteral_0= '+' )
                     {
-                    // InternalStoex.g:2734:3: (enumLiteral_0= '+' )
-                    // InternalStoex.g:2735:4: enumLiteral_0= '+'
+                    // InternalStoex.g:2784:3: (enumLiteral_0= '+' )
+                    // InternalStoex.g:2785:4: enumLiteral_0= '+'
                     {
-                    enumLiteral_0=(Token)match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getTermOperationsAccess().getADDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7952,10 +8086,10 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2742:3: (enumLiteral_1= '-' )
+                    // InternalStoex.g:2792:3: (enumLiteral_1= '-' )
                     {
-                    // InternalStoex.g:2742:3: (enumLiteral_1= '-' )
-                    // InternalStoex.g:2743:4: enumLiteral_1= '-'
+                    // InternalStoex.g:2792:3: (enumLiteral_1= '-' )
+                    // InternalStoex.g:2793:4: enumLiteral_1= '-'
                     {
                     enumLiteral_1=(Token)match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7995,7 +8129,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProductOperations"
-    // InternalStoex.g:2753:1: ruleProductOperations returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) ) ;
+    // InternalStoex.g:2803:1: ruleProductOperations returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) ) ;
     public final Enumerator ruleProductOperations() throws RecognitionException {
         Enumerator current = null;
 
@@ -8007,43 +8141,43 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2759:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) ) )
-            // InternalStoex.g:2760:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) )
+            // InternalStoex.g:2809:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) ) )
+            // InternalStoex.g:2810:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) )
             {
-            // InternalStoex.g:2760:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) )
-            int alt39=3;
+            // InternalStoex.g:2810:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '/' ) | (enumLiteral_2= '%' ) )
+            int alt40=3;
             switch ( input.LA(1) ) {
-            case 26:
+            case 31:
                 {
-                alt39=1;
+                alt40=1;
                 }
                 break;
-            case 25:
+            case 30:
                 {
-                alt39=2;
+                alt40=2;
                 }
                 break;
-            case 44:
+            case 49:
                 {
-                alt39=3;
+                alt40=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 39, 0, input);
+                    new NoViableAltException("", 40, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // InternalStoex.g:2761:3: (enumLiteral_0= '*' )
+                    // InternalStoex.g:2811:3: (enumLiteral_0= '*' )
                     {
-                    // InternalStoex.g:2761:3: (enumLiteral_0= '*' )
-                    // InternalStoex.g:2762:4: enumLiteral_0= '*'
+                    // InternalStoex.g:2811:3: (enumLiteral_0= '*' )
+                    // InternalStoex.g:2812:4: enumLiteral_0= '*'
                     {
-                    enumLiteral_0=(Token)match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getProductOperationsAccess().getMULTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -8057,12 +8191,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2769:3: (enumLiteral_1= '/' )
+                    // InternalStoex.g:2819:3: (enumLiteral_1= '/' )
                     {
-                    // InternalStoex.g:2769:3: (enumLiteral_1= '/' )
-                    // InternalStoex.g:2770:4: enumLiteral_1= '/'
+                    // InternalStoex.g:2819:3: (enumLiteral_1= '/' )
+                    // InternalStoex.g:2820:4: enumLiteral_1= '/'
                     {
-                    enumLiteral_1=(Token)match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getProductOperationsAccess().getDIVEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -8076,12 +8210,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:2777:3: (enumLiteral_2= '%' )
+                    // InternalStoex.g:2827:3: (enumLiteral_2= '%' )
                     {
-                    // InternalStoex.g:2777:3: (enumLiteral_2= '%' )
-                    // InternalStoex.g:2778:4: enumLiteral_2= '%'
+                    // InternalStoex.g:2827:3: (enumLiteral_2= '%' )
+                    // InternalStoex.g:2828:4: enumLiteral_2= '%'
                     {
-                    enumLiteral_2=(Token)match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getProductOperationsAccess().getMODEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -8119,7 +8253,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnitNames"
-    // InternalStoex.g:2788:1: ruleUnitNames returns [Enumerator current=null] : ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) ) ;
+    // InternalStoex.g:2838:1: ruleUnitNames returns [Enumerator current=null] : ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) ) ;
     public final Enumerator ruleUnitNames() throws RecognitionException {
         Enumerator current = null;
 
@@ -8133,53 +8267,53 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalStoex.g:2794:2: ( ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) ) )
-            // InternalStoex.g:2795:2: ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) )
+            // InternalStoex.g:2844:2: ( ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) ) )
+            // InternalStoex.g:2845:2: ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) )
             {
-            // InternalStoex.g:2795:2: ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) )
-            int alt40=5;
+            // InternalStoex.g:2845:2: ( (enumLiteral_0= '_' ) | (enumLiteral_1= 'unitless' ) | (enumLiteral_2= 'B' ) | (enumLiteral_3= 's' ) | (enumLiteral_4= 'm' ) )
+            int alt41=5;
             switch ( input.LA(1) ) {
-            case 45:
+            case 50:
                 {
-                alt40=1;
+                alt41=1;
                 }
                 break;
-            case 46:
+            case 51:
                 {
-                alt40=2;
+                alt41=2;
                 }
                 break;
-            case 47:
+            case 52:
                 {
-                alt40=3;
+                alt41=3;
                 }
                 break;
-            case 48:
+            case 53:
                 {
-                alt40=4;
+                alt41=4;
                 }
                 break;
-            case 49:
+            case 54:
                 {
-                alt40=5;
+                alt41=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 40, 0, input);
+                    new NoViableAltException("", 41, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // InternalStoex.g:2796:3: (enumLiteral_0= '_' )
+                    // InternalStoex.g:2846:3: (enumLiteral_0= '_' )
                     {
-                    // InternalStoex.g:2796:3: (enumLiteral_0= '_' )
-                    // InternalStoex.g:2797:4: enumLiteral_0= '_'
+                    // InternalStoex.g:2846:3: (enumLiteral_0= '_' )
+                    // InternalStoex.g:2847:4: enumLiteral_0= '_'
                     {
-                    enumLiteral_0=(Token)match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getUnitNamesAccess().getUNITLESSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -8193,12 +8327,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:2804:3: (enumLiteral_1= 'unitless' )
+                    // InternalStoex.g:2854:3: (enumLiteral_1= 'unitless' )
                     {
-                    // InternalStoex.g:2804:3: (enumLiteral_1= 'unitless' )
-                    // InternalStoex.g:2805:4: enumLiteral_1= 'unitless'
+                    // InternalStoex.g:2854:3: (enumLiteral_1= 'unitless' )
+                    // InternalStoex.g:2855:4: enumLiteral_1= 'unitless'
                     {
-                    enumLiteral_1=(Token)match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getUnitNamesAccess().getUNITLESSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -8212,12 +8346,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:2812:3: (enumLiteral_2= 'B' )
+                    // InternalStoex.g:2862:3: (enumLiteral_2= 'B' )
                     {
-                    // InternalStoex.g:2812:3: (enumLiteral_2= 'B' )
-                    // InternalStoex.g:2813:4: enumLiteral_2= 'B'
+                    // InternalStoex.g:2862:3: (enumLiteral_2= 'B' )
+                    // InternalStoex.g:2863:4: enumLiteral_2= 'B'
                     {
-                    enumLiteral_2=(Token)match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getUnitNamesAccess().getBYTEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -8231,12 +8365,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalStoex.g:2820:3: (enumLiteral_3= 's' )
+                    // InternalStoex.g:2870:3: (enumLiteral_3= 's' )
                     {
-                    // InternalStoex.g:2820:3: (enumLiteral_3= 's' )
-                    // InternalStoex.g:2821:4: enumLiteral_3= 's'
+                    // InternalStoex.g:2870:3: (enumLiteral_3= 's' )
+                    // InternalStoex.g:2871:4: enumLiteral_3= 's'
                     {
-                    enumLiteral_3=(Token)match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getUnitNamesAccess().getSECONDEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -8250,12 +8384,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalStoex.g:2828:3: (enumLiteral_4= 'm' )
+                    // InternalStoex.g:2878:3: (enumLiteral_4= 'm' )
                     {
-                    // InternalStoex.g:2828:3: (enumLiteral_4= 'm' )
-                    // InternalStoex.g:2829:4: enumLiteral_4= 'm'
+                    // InternalStoex.g:2878:3: (enumLiteral_4= 'm' )
+                    // InternalStoex.g:2879:4: enumLiteral_4= 'm'
                     {
-                    enumLiteral_4=(Token)match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getUnitNamesAccess().getMETEREnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -8291,13 +8425,13 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleUnitNames"
 
-    // $ANTLR start synpred22_InternalStoex
-    public final void synpred22_InternalStoex_fragment() throws RecognitionException {   
+    // $ANTLR start synpred26_InternalStoex
+    public final void synpred26_InternalStoex_fragment() throws RecognitionException {   
         EObject this_unitMulti_0 = null;
 
 
-        // InternalStoex.g:1467:3: (this_unitMulti_0= ruleunitMulti )
-        // InternalStoex.g:1467:3: this_unitMulti_0= ruleunitMulti
+        // InternalStoex.g:1517:3: (this_unitMulti_0= ruleunitMulti )
+        // InternalStoex.g:1517:3: this_unitMulti_0= ruleunitMulti
         {
         if ( state.backtracking==0 ) {
 
@@ -8312,15 +8446,15 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
         }
     }
-    // $ANTLR end synpred22_InternalStoex
+    // $ANTLR end synpred26_InternalStoex
 
-    // $ANTLR start synpred23_InternalStoex
-    public final void synpred23_InternalStoex_fragment() throws RecognitionException {   
+    // $ANTLR start synpred27_InternalStoex
+    public final void synpred27_InternalStoex_fragment() throws RecognitionException {   
         EObject this_unitDiv_1 = null;
 
 
-        // InternalStoex.g:1479:3: (this_unitDiv_1= ruleunitDiv )
-        // InternalStoex.g:1479:3: this_unitDiv_1= ruleunitDiv
+        // InternalStoex.g:1529:3: (this_unitDiv_1= ruleunitDiv )
+        // InternalStoex.g:1529:3: this_unitDiv_1= ruleunitDiv
         {
         if ( state.backtracking==0 ) {
 
@@ -8335,19 +8469,19 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
         }
     }
-    // $ANTLR end synpred23_InternalStoex
+    // $ANTLR end synpred27_InternalStoex
 
-    // $ANTLR start synpred25_InternalStoex
-    public final void synpred25_InternalStoex_fragment() throws RecognitionException {   
+    // $ANTLR start synpred29_InternalStoex
+    public final void synpred29_InternalStoex_fragment() throws RecognitionException {   
         Token otherlv_2=null;
         EObject lv_units_3_0 = null;
 
 
-        // InternalStoex.g:1598:4: ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )
-        // InternalStoex.g:1598:4: () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) )
+        // InternalStoex.g:1648:4: ( () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) ) )
+        // InternalStoex.g:1648:4: () otherlv_2= '*' ( (lv_units_3_0= ruleUnit ) )
         {
-        // InternalStoex.g:1598:4: ()
-        // InternalStoex.g:1599:5: 
+        // InternalStoex.g:1648:4: ()
+        // InternalStoex.g:1649:5: 
         {
         if ( state.backtracking==0 ) {
 
@@ -8357,12 +8491,12 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_2=(Token)match(input,26,FollowSets000.FOLLOW_13); if (state.failed) return ;
-        // InternalStoex.g:1612:4: ( (lv_units_3_0= ruleUnit ) )
-        // InternalStoex.g:1613:5: (lv_units_3_0= ruleUnit )
+        otherlv_2=(Token)match(input,31,FollowSets000.FOLLOW_13); if (state.failed) return ;
+        // InternalStoex.g:1662:4: ( (lv_units_3_0= ruleUnit ) )
+        // InternalStoex.g:1663:5: (lv_units_3_0= ruleUnit )
         {
-        // InternalStoex.g:1613:5: (lv_units_3_0= ruleUnit )
-        // InternalStoex.g:1614:6: lv_units_3_0= ruleUnit
+        // InternalStoex.g:1663:5: (lv_units_3_0= ruleUnit )
+        // InternalStoex.g:1664:6: lv_units_3_0= ruleUnit
         {
         if ( state.backtracking==0 ) {
 
@@ -8383,15 +8517,15 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
         }
     }
-    // $ANTLR end synpred25_InternalStoex
+    // $ANTLR end synpred29_InternalStoex
 
-    // $ANTLR start synpred27_InternalStoex
-    public final void synpred27_InternalStoex_fragment() throws RecognitionException {   
+    // $ANTLR start synpred31_InternalStoex
+    public final void synpred31_InternalStoex_fragment() throws RecognitionException {   
         EObject this_unitMulti_2 = null;
 
 
-        // InternalStoex.g:1670:6: (this_unitMulti_2= ruleunitMulti )
-        // InternalStoex.g:1670:6: this_unitMulti_2= ruleunitMulti
+        // InternalStoex.g:1720:6: (this_unitMulti_2= ruleunitMulti )
+        // InternalStoex.g:1720:6: this_unitMulti_2= ruleunitMulti
         {
         if ( state.backtracking==0 ) {
 
@@ -8406,7 +8540,7 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
         }
     }
-    // $ANTLR end synpred27_InternalStoex
+    // $ANTLR end synpred31_InternalStoex
 
     // Delegated rules
 
@@ -8424,11 +8558,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred22_InternalStoex() {
+    public final boolean synpred26_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred22_InternalStoex_fragment(); // can never throw exception
+            synpred26_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -8438,11 +8572,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred23_InternalStoex() {
+    public final boolean synpred29_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred23_InternalStoex_fragment(); // can never throw exception
+            synpred29_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -8452,11 +8586,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred25_InternalStoex() {
+    public final boolean synpred31_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred25_InternalStoex_fragment(); // can never throw exception
+            synpred31_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -8469,20 +8603,19 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
 
 
     protected DFA9 dfa9 = new DFA9(this);
-    protected DFA15 dfa15 = new DFA15(this);
+    protected DFA16 dfa16 = new DFA16(this);
     static final String dfa_1s = "\12\uffff";
-    static final String dfa_2s = "\5\uffff\1\11\4\uffff";
-    static final String dfa_3s = "\1\4\4\uffff\1\16\4\uffff";
-    static final String dfa_4s = "\1\40\4\uffff\1\54\4\uffff";
-    static final String dfa_5s = "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\5\1\6";
-    static final String dfa_6s = "\12\uffff}>";
-    static final String[] dfa_7s = {
-            "\1\2\1\5\1\4\1\3\1\1\14\uffff\1\6\5\uffff\4\7\1\uffff\1\7",
+    static final String dfa_2s = "\1\4\4\uffff\1\25\4\uffff";
+    static final String dfa_3s = "\1\45\4\uffff\1\35\4\uffff";
+    static final String dfa_4s = "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\5\1\6";
+    static final String dfa_5s = "\12\uffff}>";
+    static final String[] dfa_6s = {
+            "\1\2\1\5\1\4\1\3\1\1\14\uffff\1\6\12\uffff\4\7\1\uffff\1\7",
             "",
             "",
             "",
             "",
-            "\3\11\1\uffff\1\11\2\uffff\1\10\5\11\7\uffff\13\11",
+            "\1\10\7\uffff\1\11",
             "",
             "",
             "",
@@ -8490,12 +8623,11 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
-    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
+    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
     static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
-    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
+    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
-    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
-    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
+    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
 
     class DFA9 extends DFA {
 
@@ -8503,23 +8635,23 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             this.recognizer = recognizer;
             this.decisionNumber = 9;
             this.eot = dfa_1;
-            this.eof = dfa_2;
-            this.min = dfa_3;
-            this.max = dfa_4;
-            this.accept = dfa_5;
-            this.special = dfa_6;
-            this.transition = dfa_7;
+            this.eof = dfa_1;
+            this.min = dfa_2;
+            this.max = dfa_3;
+            this.accept = dfa_4;
+            this.special = dfa_5;
+            this.transition = dfa_6;
         }
         public String getDescription() {
             return "804:2: (this_IntLiteral_0= ruleIntLiteral | this_DoubleLiteral_1= ruleDoubleLiteral | this_StringLiteral_2= ruleStringLiteral | this_BoolLiteral_3= ruleBoolLiteral | this_FunctionLiteral_4= ruleFunctionLiteral | this_Variable_5= ruleVariable | this_Parenthesis_6= ruleParenthesis | this_ProbabilityFunctionLiteral_7= ruleProbabilityFunctionLiteral )";
         }
     }
-    static final String dfa_8s = "\1\25\6\0\3\uffff";
-    static final String dfa_9s = "\1\61\6\0\3\uffff";
-    static final String dfa_10s = "\7\uffff\1\1\1\2\1\3";
-    static final String dfa_11s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\3\uffff}>";
-    static final String[] dfa_12s = {
-            "\1\6\27\uffff\1\1\1\2\1\3\1\4\1\5",
+    static final String dfa_7s = "\1\25\6\0\3\uffff";
+    static final String dfa_8s = "\1\66\6\0\3\uffff";
+    static final String dfa_9s = "\7\uffff\1\1\1\2\1\3";
+    static final String dfa_10s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\3\uffff}>";
+    static final String[] dfa_11s = {
+            "\1\6\34\uffff\1\1\1\2\1\3\1\4\1\5",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -8530,136 +8662,136 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
             "",
             ""
     };
+    static final char[] dfa_7 = DFA.unpackEncodedStringToUnsignedChars(dfa_7s);
     static final char[] dfa_8 = DFA.unpackEncodedStringToUnsignedChars(dfa_8s);
-    static final char[] dfa_9 = DFA.unpackEncodedStringToUnsignedChars(dfa_9s);
+    static final short[] dfa_9 = DFA.unpackEncodedString(dfa_9s);
     static final short[] dfa_10 = DFA.unpackEncodedString(dfa_10s);
-    static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
-    static final short[][] dfa_12 = unpackEncodedStringArray(dfa_12s);
+    static final short[][] dfa_11 = unpackEncodedStringArray(dfa_11s);
 
-    class DFA15 extends DFA {
+    class DFA16 extends DFA {
 
-        public DFA15(BaseRecognizer recognizer) {
+        public DFA16(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 15;
+            this.decisionNumber = 16;
             this.eot = dfa_1;
             this.eof = dfa_1;
-            this.min = dfa_8;
-            this.max = dfa_9;
-            this.accept = dfa_10;
-            this.special = dfa_11;
-            this.transition = dfa_12;
+            this.min = dfa_7;
+            this.max = dfa_8;
+            this.accept = dfa_9;
+            this.special = dfa_10;
+            this.transition = dfa_11;
         }
         public String getDescription() {
-            return "1466:2: (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit )";
+            return "1516:2: (this_unitMulti_0= ruleunitMulti | this_unitDiv_1= ruleunitDiv | this_BaseUnit_2= ruleBaseUnit )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA15_1 = input.LA(1);
+                        int LA16_1 = input.LA(1);
 
                          
-                        int index15_1 = input.index();
+                        int index16_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred22_InternalStoex()) ) {s = 7;}
+                        if ( (synpred26_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred23_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred27_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index15_1);
+                        input.seek(index16_1);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA15_2 = input.LA(1);
+                        int LA16_2 = input.LA(1);
 
                          
-                        int index15_2 = input.index();
+                        int index16_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred22_InternalStoex()) ) {s = 7;}
+                        if ( (synpred26_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred23_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred27_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index15_2);
+                        input.seek(index16_2);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA15_3 = input.LA(1);
+                        int LA16_3 = input.LA(1);
 
                          
-                        int index15_3 = input.index();
+                        int index16_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred22_InternalStoex()) ) {s = 7;}
+                        if ( (synpred26_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred23_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred27_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index15_3);
+                        input.seek(index16_3);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA15_4 = input.LA(1);
+                        int LA16_4 = input.LA(1);
 
                          
-                        int index15_4 = input.index();
+                        int index16_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred22_InternalStoex()) ) {s = 7;}
+                        if ( (synpred26_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred23_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred27_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index15_4);
+                        input.seek(index16_4);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA15_5 = input.LA(1);
+                        int LA16_5 = input.LA(1);
 
                          
-                        int index15_5 = input.index();
+                        int index16_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred22_InternalStoex()) ) {s = 7;}
+                        if ( (synpred26_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred23_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred27_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index15_5);
+                        input.seek(index16_5);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA15_6 = input.LA(1);
+                        int LA16_6 = input.LA(1);
 
                          
-                        int index15_6 = input.index();
+                        int index16_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred22_InternalStoex()) ) {s = 7;}
+                        if ( (synpred26_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred23_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred27_InternalStoex()) ) {s = 8;}
 
                          
-                        input.seek(index15_6);
+                        input.seek(index16_6);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 15, _s, input);
+                new NoViableAltException(getDescription(), 16, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -8671,31 +8803,31 @@ public class InternalStoexParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x00000001782601F0L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000002F002601F0L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000400000002L});
-        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000001800000002L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x000007E000000002L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000080000040002L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000100006000002L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000008000000002L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000030000000002L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000FC0000000002L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0001000000040002L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00020000C0000002L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010002L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080002L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0003E00000200000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x007C000000200000L});
         public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000100000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000001786601F0L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000002F006601F0L});
         public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000C00000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002000002L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004000002L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x000000001F000020L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000040000002L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000080000002L});
         public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000040100L});
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000300000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000280000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000004000000000L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000040010L});
         public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000080L});

@@ -368,19 +368,10 @@ public class StoexSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     NamespaceReference returns NamespaceReference
 	 *
 	 * Constraint:
-	 *     (referenceName=ID innerReference_NamespaceReference=AbstractNamedReference)
+	 *     (referenceName=ID (innerReference_NamespaceReference=AbstractNamedReference | innerReference_NamespaceReference=VariableReference))
 	 */
 	protected void sequence_NamespaceReference(ISerializationContext context, NamespaceReference semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient((EObject) semanticObject, StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME));
-			if (transientValues.isValueTransient((EObject) semanticObject, StoexPackage.Literals.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, StoexPackage.Literals.NAMESPACE_REFERENCE__INNER_REFERENCE_NAMESPACE_REFERENCE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
-		feeder.accept(grammarAccess.getNamespaceReferenceAccess().getReferenceNameIDTerminalRuleCall_0_0(), semanticObject.getReferenceName());
-		feeder.accept(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0(), semanticObject.getInnerReference_NamespaceReference());
-		feeder.finish();
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
@@ -587,20 +578,13 @@ public class StoexSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     AbstractNamedReference returns VariableReference
 	 *     VariableReference returns VariableReference
 	 *
 	 * Constraint:
-	 *     referenceName=ID
+	 *     (referenceName='BYTESIZE' | referenceName='VALUE' | referenceName='STRUCTURE' | referenceName='TYPE' | referenceName='NUMBER_OF_ELEMENTS')
 	 */
 	protected void sequence_VariableReference(ISerializationContext context, VariableReference semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient((EObject) semanticObject, StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, StoexPackage.Literals.ABSTRACT_NAMED_REFERENCE__REFERENCE_NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
-		feeder.accept(grammarAccess.getVariableReferenceAccess().getReferenceNameIDTerminalRuleCall_0(), semanticObject.getReferenceName());
-		feeder.finish();
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	

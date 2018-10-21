@@ -1190,31 +1190,17 @@ ruleAbstractNamedReference returns [EObject current=null]
 @after {
 	leaveRule();
 }:
-	(
-		{
-			/* */
-		}
-		{
-			newCompositeNode(grammarAccess.getAbstractNamedReferenceAccess().getVariableReferenceParserRuleCall_0());
-		}
-		this_VariableReference_0=ruleVariableReference
-		{
-			$current = $this_VariableReference_0.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			/* */
-		}
-		{
-			newCompositeNode(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall_1());
-		}
-		this_NamespaceReference_1=ruleNamespaceReference
-		{
-			$current = $this_NamespaceReference_1.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
+	{
+		/* */
+	}
+	{
+		newCompositeNode(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall());
+	}
+	this_NamespaceReference_0=ruleNamespaceReference
+	{
+		$current = $this_NamespaceReference_0.current;
+		afterParserOrEnumRuleCall();
+	}
 ;
 
 // Entry rule entryRuleVariableReference
@@ -1234,20 +1220,62 @@ ruleVariableReference returns [EObject current=null]
 }:
 	(
 		(
-			lv_referenceName_0_0=RULE_ID
-			{
-				newLeafNode(lv_referenceName_0_0, grammarAccess.getVariableReferenceAccess().getReferenceNameIDTerminalRuleCall_0());
-			}
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getVariableReferenceRule());
+			(
+				lv_referenceName_0_1='BYTESIZE'
+				{
+					newLeafNode(lv_referenceName_0_1, grammarAccess.getVariableReferenceAccess().getReferenceNameBYTESIZEKeyword_0_0());
 				}
-				setWithLastConsumed(
-					$current,
-					"referenceName",
-					lv_referenceName_0_0,
-					"org.palladiosimulator.commons.stoex.Stoex.ID");
-			}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableReferenceRule());
+					}
+					setWithLastConsumed($current, "referenceName", lv_referenceName_0_1, null);
+				}
+				    |
+				lv_referenceName_0_2='VALUE'
+				{
+					newLeafNode(lv_referenceName_0_2, grammarAccess.getVariableReferenceAccess().getReferenceNameVALUEKeyword_0_1());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableReferenceRule());
+					}
+					setWithLastConsumed($current, "referenceName", lv_referenceName_0_2, null);
+				}
+				    |
+				lv_referenceName_0_3='STRUCTURE'
+				{
+					newLeafNode(lv_referenceName_0_3, grammarAccess.getVariableReferenceAccess().getReferenceNameSTRUCTUREKeyword_0_2());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableReferenceRule());
+					}
+					setWithLastConsumed($current, "referenceName", lv_referenceName_0_3, null);
+				}
+				    |
+				lv_referenceName_0_4='TYPE'
+				{
+					newLeafNode(lv_referenceName_0_4, grammarAccess.getVariableReferenceAccess().getReferenceNameTYPEKeyword_0_3());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableReferenceRule());
+					}
+					setWithLastConsumed($current, "referenceName", lv_referenceName_0_4, null);
+				}
+				    |
+				lv_referenceName_0_5='NUMBER_OF_ELEMENTS'
+				{
+					newLeafNode(lv_referenceName_0_5, grammarAccess.getVariableReferenceAccess().getReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableReferenceRule());
+					}
+					setWithLastConsumed($current, "referenceName", lv_referenceName_0_5, null);
+				}
+			)
 		)
 	)
 ;
@@ -1292,21 +1320,43 @@ ruleNamespaceReference returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0());
-				}
-				lv_innerReference_NamespaceReference_2_0=ruleAbstractNamedReference
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getNamespaceReferenceRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0());
 					}
-					set(
-						$current,
-						"innerReference_NamespaceReference",
-						lv_innerReference_NamespaceReference_2_0,
-						"org.palladiosimulator.commons.stoex.Stoex.AbstractNamedReference");
-					afterParserOrEnumRuleCall();
-				}
+					lv_innerReference_NamespaceReference_2_0=ruleAbstractNamedReference
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNamespaceReferenceRule());
+						}
+						set(
+							$current,
+							"innerReference_NamespaceReference",
+							lv_innerReference_NamespaceReference_2_0,
+							"org.palladiosimulator.commons.stoex.Stoex.AbstractNamedReference");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0());
+					}
+					lv_innerReference_NamespaceReference_3_0=ruleVariableReference
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNamespaceReferenceRule());
+						}
+						set(
+							$current,
+							"innerReference_NamespaceReference",
+							lv_innerReference_NamespaceReference_3_0,
+							"org.palladiosimulator.commons.stoex.Stoex.VariableReference");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
 	)

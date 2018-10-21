@@ -23,8 +23,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalStoexParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_DOUBLE", "RULE_DECINT", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'AND'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'", "'?'", "':'", "'^'", "'NOT'", "'['", "']'", "'('", "')'", "','", "'.'", "'DoublePDF'", "'IntPMF'", "'DoublePMF'", "'EnumPMF'", "'BoolPMF'", "';'", "'ordered'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_DOUBLE", "RULE_DECINT", "RULE_ID", "RULE_BOOLEAN_KEYWORDS", "RULE_STRING", "RULE_DIGIT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'AND'", "'BYTESIZE'", "'VALUE'", "'STRUCTURE'", "'TYPE'", "'NUMBER_OF_ELEMENTS'", "'OR'", "'XOR'", "'>'", "'<'", "'=='", "'<>'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'_'", "'unitless'", "'B'", "'s'", "'m'", "'?'", "':'", "'^'", "'NOT'", "'['", "']'", "'('", "')'", "','", "'.'", "'DoublePDF'", "'IntPMF'", "'DoublePMF'", "'EnumPMF'", "'BoolPMF'", "';'", "'ordered'"
     };
+    public static final int T__50=50;
     public static final int RULE_BOOLEAN_KEYWORDS=7;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -32,6 +33,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__14=14;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
     public static final int RULE_ID=6;
     public static final int RULE_DIGIT=9;
     public static final int T__26=26;
@@ -1582,34 +1587,28 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleAbstractNamedReference"
-    // InternalStoex.g:488:1: ruleAbstractNamedReference : ( ( rule__AbstractNamedReference__Alternatives ) ) ;
+    // InternalStoex.g:488:1: ruleAbstractNamedReference : ( ruleNamespaceReference ) ;
     public final void ruleAbstractNamedReference() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:492:2: ( ( ( rule__AbstractNamedReference__Alternatives ) ) )
-            // InternalStoex.g:493:2: ( ( rule__AbstractNamedReference__Alternatives ) )
+            // InternalStoex.g:492:2: ( ( ruleNamespaceReference ) )
+            // InternalStoex.g:493:2: ( ruleNamespaceReference )
             {
-            // InternalStoex.g:493:2: ( ( rule__AbstractNamedReference__Alternatives ) )
-            // InternalStoex.g:494:3: ( rule__AbstractNamedReference__Alternatives )
+            // InternalStoex.g:493:2: ( ruleNamespaceReference )
+            // InternalStoex.g:494:3: ruleNamespaceReference
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAbstractNamedReferenceAccess().getAlternatives()); 
+               before(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall()); 
             }
-            // InternalStoex.g:495:3: ( rule__AbstractNamedReference__Alternatives )
-            // InternalStoex.g:495:4: rule__AbstractNamedReference__Alternatives
-            {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__AbstractNamedReference__Alternatives();
+            ruleNamespaceReference();
 
             state._fsp--;
             if (state.failed) return ;
-
-            }
-
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAbstractNamedReferenceAccess().getAlternatives()); 
+               after(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall()); 
             }
 
             }
@@ -3774,12 +3773,12 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             // InternalStoex.g:1144:1: ( ( ruleNegativeExpression ) | ( ruleNotExpression ) | ( ruleatom ) )
             int alt1=3;
             switch ( input.LA(1) ) {
-            case 24:
+            case 29:
                 {
                 alt1=1;
                 }
                 break;
-            case 36:
+            case 41:
                 {
                 alt1=2;
                 }
@@ -3789,12 +3788,12 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             case RULE_ID:
             case RULE_BOOLEAN_KEYWORDS:
             case RULE_STRING:
-            case 39:
-            case 43:
             case 44:
-            case 45:
-            case 46:
-            case 47:
+            case 48:
+            case 49:
+            case 50:
+            case 51:
+            case 52:
                 {
                 alt1=3;
                 }
@@ -4106,58 +4105,62 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Atom__Alternatives"
 
 
-    // $ANTLR start "rule__AbstractNamedReference__Alternatives"
-    // InternalStoex.g:1224:1: rule__AbstractNamedReference__Alternatives : ( ( ruleVariableReference ) | ( ruleNamespaceReference ) );
-    public final void rule__AbstractNamedReference__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__VariableReference__ReferenceNameAlternatives_0"
+    // InternalStoex.g:1224:1: rule__VariableReference__ReferenceNameAlternatives_0 : ( ( 'BYTESIZE' ) | ( 'VALUE' ) | ( 'STRUCTURE' ) | ( 'TYPE' ) | ( 'NUMBER_OF_ELEMENTS' ) );
+    public final void rule__VariableReference__ReferenceNameAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1228:1: ( ( ruleVariableReference ) | ( ruleNamespaceReference ) )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( (LA3_0==RULE_ID) ) {
-                int LA3_1 = input.LA(2);
-
-                if ( (LA3_1==EOF||(LA3_1>=14 && LA3_1<=27)||(LA3_1>=33 && LA3_1<=35)||(LA3_1>=40 && LA3_1<=41)) ) {
-                    alt3=1;
+            // InternalStoex.g:1228:1: ( ( 'BYTESIZE' ) | ( 'VALUE' ) | ( 'STRUCTURE' ) | ( 'TYPE' ) | ( 'NUMBER_OF_ELEMENTS' ) )
+            int alt3=5;
+            switch ( input.LA(1) ) {
+            case 15:
+                {
+                alt3=1;
                 }
-                else if ( (LA3_1==42) ) {
-                    alt3=2;
+                break;
+            case 16:
+                {
+                alt3=2;
                 }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return ;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 3, 1, input);
-
-                    throw nvae;
+                break;
+            case 17:
+                {
+                alt3=3;
                 }
-            }
-            else {
+                break;
+            case 18:
+                {
+                alt3=4;
+                }
+                break;
+            case 19:
+                {
+                alt3=5;
+                }
+                break;
+            default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
+
             switch (alt3) {
                 case 1 :
-                    // InternalStoex.g:1229:2: ( ruleVariableReference )
+                    // InternalStoex.g:1229:2: ( 'BYTESIZE' )
                     {
-                    // InternalStoex.g:1229:2: ( ruleVariableReference )
-                    // InternalStoex.g:1230:3: ruleVariableReference
+                    // InternalStoex.g:1229:2: ( 'BYTESIZE' )
+                    // InternalStoex.g:1230:3: 'BYTESIZE'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getAbstractNamedReferenceAccess().getVariableReferenceParserRuleCall_0()); 
+                       before(grammarAccess.getVariableReferenceAccess().getReferenceNameBYTESIZEKeyword_0_0()); 
                     }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    ruleVariableReference();
-
-                    state._fsp--;
-                    if (state.failed) return ;
+                    match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getAbstractNamedReferenceAccess().getVariableReferenceParserRuleCall_0()); 
+                       after(grammarAccess.getVariableReferenceAccess().getReferenceNameBYTESIZEKeyword_0_0()); 
                     }
 
                     }
@@ -4166,21 +4169,74 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1235:2: ( ruleNamespaceReference )
+                    // InternalStoex.g:1235:2: ( 'VALUE' )
                     {
-                    // InternalStoex.g:1235:2: ( ruleNamespaceReference )
-                    // InternalStoex.g:1236:3: ruleNamespaceReference
+                    // InternalStoex.g:1235:2: ( 'VALUE' )
+                    // InternalStoex.g:1236:3: 'VALUE'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall_1()); 
+                       before(grammarAccess.getVariableReferenceAccess().getReferenceNameVALUEKeyword_0_1()); 
                     }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    ruleNamespaceReference();
-
-                    state._fsp--;
-                    if (state.failed) return ;
+                    match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getAbstractNamedReferenceAccess().getNamespaceReferenceParserRuleCall_1()); 
+                       after(grammarAccess.getVariableReferenceAccess().getReferenceNameVALUEKeyword_0_1()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalStoex.g:1241:2: ( 'STRUCTURE' )
+                    {
+                    // InternalStoex.g:1241:2: ( 'STRUCTURE' )
+                    // InternalStoex.g:1242:3: 'STRUCTURE'
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getVariableReferenceAccess().getReferenceNameSTRUCTUREKeyword_0_2()); 
+                    }
+                    match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getVariableReferenceAccess().getReferenceNameSTRUCTUREKeyword_0_2()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // InternalStoex.g:1247:2: ( 'TYPE' )
+                    {
+                    // InternalStoex.g:1247:2: ( 'TYPE' )
+                    // InternalStoex.g:1248:3: 'TYPE'
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getVariableReferenceAccess().getReferenceNameTYPEKeyword_0_3()); 
+                    }
+                    match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getVariableReferenceAccess().getReferenceNameTYPEKeyword_0_3()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // InternalStoex.g:1253:2: ( 'NUMBER_OF_ELEMENTS' )
+                    {
+                    // InternalStoex.g:1253:2: ( 'NUMBER_OF_ELEMENTS' )
+                    // InternalStoex.g:1254:3: 'NUMBER_OF_ELEMENTS'
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getVariableReferenceAccess().getReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4()); 
+                    }
+                    match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getVariableReferenceAccess().getReferenceNameNUMBER_OF_ELEMENTSKeyword_0_4()); 
                     }
 
                     }
@@ -4202,25 +4258,125 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AbstractNamedReference__Alternatives"
+    // $ANTLR end "rule__VariableReference__ReferenceNameAlternatives_0"
+
+
+    // $ANTLR start "rule__NamespaceReference__Alternatives_2"
+    // InternalStoex.g:1263:1: rule__NamespaceReference__Alternatives_2 : ( ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 ) ) | ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 ) ) );
+    public final void rule__NamespaceReference__Alternatives_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalStoex.g:1267:1: ( ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 ) ) | ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 ) ) )
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==RULE_ID) ) {
+                alt4=1;
+            }
+            else if ( ((LA4_0>=15 && LA4_0<=19)) ) {
+                alt4=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 4, 0, input);
+
+                throw nvae;
+            }
+            switch (alt4) {
+                case 1 :
+                    // InternalStoex.g:1268:2: ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 ) )
+                    {
+                    // InternalStoex.g:1268:2: ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 ) )
+                    // InternalStoex.g:1269:3: ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 )
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2_0()); 
+                    }
+                    // InternalStoex.g:1270:3: ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 )
+                    // InternalStoex.g:1270:4: rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2_0()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalStoex.g:1274:2: ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 ) )
+                    {
+                    // InternalStoex.g:1274:2: ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 ) )
+                    // InternalStoex.g:1275:3: ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 )
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2_1()); 
+                    }
+                    // InternalStoex.g:1276:3: ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 )
+                    // InternalStoex.g:1276:4: rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2_1()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NamespaceReference__Alternatives_2"
 
 
     // $ANTLR start "rule__Unit__Alternatives"
-    // InternalStoex.g:1245:1: rule__Unit__Alternatives : ( ( ruleunitMulti ) | ( ruleunitDiv ) | ( ruleBaseUnit ) );
+    // InternalStoex.g:1284:1: rule__Unit__Alternatives : ( ( ruleunitMulti ) | ( ruleunitDiv ) | ( ruleBaseUnit ) );
     public final void rule__Unit__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1249:1: ( ( ruleunitMulti ) | ( ruleunitDiv ) | ( ruleBaseUnit ) )
-            int alt4=3;
-            alt4 = dfa4.predict(input);
-            switch (alt4) {
+            // InternalStoex.g:1288:1: ( ( ruleunitMulti ) | ( ruleunitDiv ) | ( ruleBaseUnit ) )
+            int alt5=3;
+            alt5 = dfa5.predict(input);
+            switch (alt5) {
                 case 1 :
-                    // InternalStoex.g:1250:2: ( ruleunitMulti )
+                    // InternalStoex.g:1289:2: ( ruleunitMulti )
                     {
-                    // InternalStoex.g:1250:2: ( ruleunitMulti )
-                    // InternalStoex.g:1251:3: ruleunitMulti
+                    // InternalStoex.g:1289:2: ( ruleunitMulti )
+                    // InternalStoex.g:1290:3: ruleunitMulti
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitAccess().getUnitMultiParserRuleCall_0()); 
@@ -4240,10 +4396,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1256:2: ( ruleunitDiv )
+                    // InternalStoex.g:1295:2: ( ruleunitDiv )
                     {
-                    // InternalStoex.g:1256:2: ( ruleunitDiv )
-                    // InternalStoex.g:1257:3: ruleunitDiv
+                    // InternalStoex.g:1295:2: ( ruleunitDiv )
+                    // InternalStoex.g:1296:3: ruleunitDiv
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitAccess().getUnitDivParserRuleCall_1()); 
@@ -4263,10 +4419,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1262:2: ( ruleBaseUnit )
+                    // InternalStoex.g:1301:2: ( ruleBaseUnit )
                     {
-                    // InternalStoex.g:1262:2: ( ruleBaseUnit )
-                    // InternalStoex.g:1263:3: ruleBaseUnit
+                    // InternalStoex.g:1301:2: ( ruleBaseUnit )
+                    // InternalStoex.g:1302:3: ruleBaseUnit
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitAccess().getBaseUnitParserRuleCall_2()); 
@@ -4303,35 +4459,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Alternatives_0"
-    // InternalStoex.g:1272:1: rule__UnitPow__Alternatives_0 : ( ( ruleBaseUnit ) | ( ( rule__UnitPow__Group_0_1__0 ) ) );
+    // InternalStoex.g:1311:1: rule__UnitPow__Alternatives_0 : ( ( ruleBaseUnit ) | ( ( rule__UnitPow__Group_0_1__0 ) ) );
     public final void rule__UnitPow__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1276:1: ( ( ruleBaseUnit ) | ( ( rule__UnitPow__Group_0_1__0 ) ) )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // InternalStoex.g:1315:1: ( ( ruleBaseUnit ) | ( ( rule__UnitPow__Group_0_1__0 ) ) )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( ((LA5_0>=28 && LA5_0<=32)) ) {
-                alt5=1;
+            if ( ((LA6_0>=33 && LA6_0<=37)) ) {
+                alt6=1;
             }
-            else if ( (LA5_0==39) ) {
-                alt5=2;
+            else if ( (LA6_0==44) ) {
+                alt6=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // InternalStoex.g:1277:2: ( ruleBaseUnit )
+                    // InternalStoex.g:1316:2: ( ruleBaseUnit )
                     {
-                    // InternalStoex.g:1277:2: ( ruleBaseUnit )
-                    // InternalStoex.g:1278:3: ruleBaseUnit
+                    // InternalStoex.g:1316:2: ( ruleBaseUnit )
+                    // InternalStoex.g:1317:3: ruleBaseUnit
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitPowAccess().getBaseUnitParserRuleCall_0_0()); 
@@ -4351,16 +4507,16 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1283:2: ( ( rule__UnitPow__Group_0_1__0 ) )
+                    // InternalStoex.g:1322:2: ( ( rule__UnitPow__Group_0_1__0 ) )
                     {
-                    // InternalStoex.g:1283:2: ( ( rule__UnitPow__Group_0_1__0 ) )
-                    // InternalStoex.g:1284:3: ( rule__UnitPow__Group_0_1__0 )
+                    // InternalStoex.g:1322:2: ( ( rule__UnitPow__Group_0_1__0 ) )
+                    // InternalStoex.g:1323:3: ( rule__UnitPow__Group_0_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitPowAccess().getGroup_0_1()); 
                     }
-                    // InternalStoex.g:1285:3: ( rule__UnitPow__Group_0_1__0 )
-                    // InternalStoex.g:1285:4: rule__UnitPow__Group_0_1__0
+                    // InternalStoex.g:1324:3: ( rule__UnitPow__Group_0_1__0 )
+                    // InternalStoex.g:1324:4: rule__UnitPow__Group_0_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__UnitPow__Group_0_1__0();
@@ -4397,124 +4553,124 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Alternatives_0_1_1"
-    // InternalStoex.g:1293:1: rule__UnitPow__Alternatives_0_1_1 : ( ( ruleunitMulti ) | ( ruleunitDiv ) );
+    // InternalStoex.g:1332:1: rule__UnitPow__Alternatives_0_1_1 : ( ( ruleunitMulti ) | ( ruleunitDiv ) );
     public final void rule__UnitPow__Alternatives_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1297:1: ( ( ruleunitMulti ) | ( ruleunitDiv ) )
-            int alt6=2;
+            // InternalStoex.g:1336:1: ( ( ruleunitMulti ) | ( ruleunitDiv ) )
+            int alt7=2;
             switch ( input.LA(1) ) {
-            case 28:
+            case 33:
                 {
-                int LA6_1 = input.LA(2);
+                int LA7_1 = input.LA(2);
 
-                if ( (synpred14_InternalStoex()) ) {
-                    alt6=1;
+                if ( (synpred18_InternalStoex()) ) {
+                    alt7=1;
                 }
                 else if ( (true) ) {
-                    alt6=2;
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 1, input);
+                        new NoViableAltException("", 7, 1, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 29:
+            case 34:
                 {
-                int LA6_2 = input.LA(2);
+                int LA7_2 = input.LA(2);
 
-                if ( (synpred14_InternalStoex()) ) {
-                    alt6=1;
+                if ( (synpred18_InternalStoex()) ) {
+                    alt7=1;
                 }
                 else if ( (true) ) {
-                    alt6=2;
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 2, input);
+                        new NoViableAltException("", 7, 2, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 30:
+            case 35:
                 {
-                int LA6_3 = input.LA(2);
+                int LA7_3 = input.LA(2);
 
-                if ( (synpred14_InternalStoex()) ) {
-                    alt6=1;
+                if ( (synpred18_InternalStoex()) ) {
+                    alt7=1;
                 }
                 else if ( (true) ) {
-                    alt6=2;
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 3, input);
+                        new NoViableAltException("", 7, 3, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 31:
+            case 36:
                 {
-                int LA6_4 = input.LA(2);
+                int LA7_4 = input.LA(2);
 
-                if ( (synpred14_InternalStoex()) ) {
-                    alt6=1;
+                if ( (synpred18_InternalStoex()) ) {
+                    alt7=1;
                 }
                 else if ( (true) ) {
-                    alt6=2;
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 4, input);
+                        new NoViableAltException("", 7, 4, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 32:
+            case 37:
                 {
-                int LA6_5 = input.LA(2);
+                int LA7_5 = input.LA(2);
 
-                if ( (synpred14_InternalStoex()) ) {
-                    alt6=1;
+                if ( (synpred18_InternalStoex()) ) {
+                    alt7=1;
                 }
                 else if ( (true) ) {
-                    alt6=2;
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 5, input);
+                        new NoViableAltException("", 7, 5, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 39:
+            case 44:
                 {
-                int LA6_6 = input.LA(2);
+                int LA7_6 = input.LA(2);
 
-                if ( (synpred14_InternalStoex()) ) {
-                    alt6=1;
+                if ( (synpred18_InternalStoex()) ) {
+                    alt7=1;
                 }
                 else if ( (true) ) {
-                    alt6=2;
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 6, input);
+                        new NoViableAltException("", 7, 6, input);
 
                     throw nvae;
                 }
@@ -4523,17 +4679,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // InternalStoex.g:1298:2: ( ruleunitMulti )
+                    // InternalStoex.g:1337:2: ( ruleunitMulti )
                     {
-                    // InternalStoex.g:1298:2: ( ruleunitMulti )
-                    // InternalStoex.g:1299:3: ruleunitMulti
+                    // InternalStoex.g:1337:2: ( ruleunitMulti )
+                    // InternalStoex.g:1338:3: ruleunitMulti
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitPowAccess().getUnitMultiParserRuleCall_0_1_1_0()); 
@@ -4553,10 +4709,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1304:2: ( ruleunitDiv )
+                    // InternalStoex.g:1343:2: ( ruleunitDiv )
                     {
-                    // InternalStoex.g:1304:2: ( ruleunitDiv )
-                    // InternalStoex.g:1305:3: ruleunitDiv
+                    // InternalStoex.g:1343:2: ( ruleunitDiv )
+                    // InternalStoex.g:1344:3: ruleunitDiv
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitPowAccess().getUnitDivParserRuleCall_0_1_1_1()); 
@@ -4593,35 +4749,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Definition__Alternatives"
-    // InternalStoex.g:1314:1: rule__Definition__Alternatives : ( ( ruleProbabilityMassFunction ) | ( ruleProbabilityDensityFunction ) );
+    // InternalStoex.g:1353:1: rule__Definition__Alternatives : ( ( ruleProbabilityMassFunction ) | ( ruleProbabilityDensityFunction ) );
     public final void rule__Definition__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1318:1: ( ( ruleProbabilityMassFunction ) | ( ruleProbabilityDensityFunction ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // InternalStoex.g:1357:1: ( ( ruleProbabilityMassFunction ) | ( ruleProbabilityDensityFunction ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( ((LA7_0>=44 && LA7_0<=47)) ) {
-                alt7=1;
+            if ( ((LA8_0>=49 && LA8_0<=52)) ) {
+                alt8=1;
             }
-            else if ( (LA7_0==43) ) {
-                alt7=2;
+            else if ( (LA8_0==48) ) {
+                alt8=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // InternalStoex.g:1319:2: ( ruleProbabilityMassFunction )
+                    // InternalStoex.g:1358:2: ( ruleProbabilityMassFunction )
                     {
-                    // InternalStoex.g:1319:2: ( ruleProbabilityMassFunction )
-                    // InternalStoex.g:1320:3: ruleProbabilityMassFunction
+                    // InternalStoex.g:1358:2: ( ruleProbabilityMassFunction )
+                    // InternalStoex.g:1359:3: ruleProbabilityMassFunction
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getDefinitionAccess().getProbabilityMassFunctionParserRuleCall_0()); 
@@ -4641,10 +4797,10 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1325:2: ( ruleProbabilityDensityFunction )
+                    // InternalStoex.g:1364:2: ( ruleProbabilityDensityFunction )
                     {
-                    // InternalStoex.g:1325:2: ( ruleProbabilityDensityFunction )
-                    // InternalStoex.g:1326:3: ruleProbabilityDensityFunction
+                    // InternalStoex.g:1364:2: ( ruleProbabilityDensityFunction )
+                    // InternalStoex.g:1365:3: ruleProbabilityDensityFunction
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getDefinitionAccess().getProbabilityDensityFunctionParserRuleCall_1()); 
@@ -4681,55 +4837,55 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Alternatives"
-    // InternalStoex.g:1335:1: rule__ProbabilityMassFunction__Alternatives : ( ( ( rule__ProbabilityMassFunction__Group_0__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_1__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_2__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_3__0 ) ) );
+    // InternalStoex.g:1374:1: rule__ProbabilityMassFunction__Alternatives : ( ( ( rule__ProbabilityMassFunction__Group_0__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_1__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_2__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_3__0 ) ) );
     public final void rule__ProbabilityMassFunction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1339:1: ( ( ( rule__ProbabilityMassFunction__Group_0__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_1__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_2__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_3__0 ) ) )
-            int alt8=4;
+            // InternalStoex.g:1378:1: ( ( ( rule__ProbabilityMassFunction__Group_0__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_1__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_2__0 ) ) | ( ( rule__ProbabilityMassFunction__Group_3__0 ) ) )
+            int alt9=4;
             switch ( input.LA(1) ) {
-            case 44:
+            case 49:
                 {
-                alt8=1;
+                alt9=1;
                 }
                 break;
-            case 45:
+            case 50:
                 {
-                alt8=2;
+                alt9=2;
                 }
                 break;
-            case 46:
+            case 51:
                 {
-                alt8=3;
+                alt9=3;
                 }
                 break;
-            case 47:
+            case 52:
                 {
-                alt8=4;
+                alt9=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // InternalStoex.g:1340:2: ( ( rule__ProbabilityMassFunction__Group_0__0 ) )
+                    // InternalStoex.g:1379:2: ( ( rule__ProbabilityMassFunction__Group_0__0 ) )
                     {
-                    // InternalStoex.g:1340:2: ( ( rule__ProbabilityMassFunction__Group_0__0 ) )
-                    // InternalStoex.g:1341:3: ( rule__ProbabilityMassFunction__Group_0__0 )
+                    // InternalStoex.g:1379:2: ( ( rule__ProbabilityMassFunction__Group_0__0 ) )
+                    // InternalStoex.g:1380:3: ( rule__ProbabilityMassFunction__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_0()); 
                     }
-                    // InternalStoex.g:1342:3: ( rule__ProbabilityMassFunction__Group_0__0 )
-                    // InternalStoex.g:1342:4: rule__ProbabilityMassFunction__Group_0__0
+                    // InternalStoex.g:1381:3: ( rule__ProbabilityMassFunction__Group_0__0 )
+                    // InternalStoex.g:1381:4: rule__ProbabilityMassFunction__Group_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_0__0();
@@ -4749,16 +4905,16 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1346:2: ( ( rule__ProbabilityMassFunction__Group_1__0 ) )
+                    // InternalStoex.g:1385:2: ( ( rule__ProbabilityMassFunction__Group_1__0 ) )
                     {
-                    // InternalStoex.g:1346:2: ( ( rule__ProbabilityMassFunction__Group_1__0 ) )
-                    // InternalStoex.g:1347:3: ( rule__ProbabilityMassFunction__Group_1__0 )
+                    // InternalStoex.g:1385:2: ( ( rule__ProbabilityMassFunction__Group_1__0 ) )
+                    // InternalStoex.g:1386:3: ( rule__ProbabilityMassFunction__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_1()); 
                     }
-                    // InternalStoex.g:1348:3: ( rule__ProbabilityMassFunction__Group_1__0 )
-                    // InternalStoex.g:1348:4: rule__ProbabilityMassFunction__Group_1__0
+                    // InternalStoex.g:1387:3: ( rule__ProbabilityMassFunction__Group_1__0 )
+                    // InternalStoex.g:1387:4: rule__ProbabilityMassFunction__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_1__0();
@@ -4778,16 +4934,16 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1352:2: ( ( rule__ProbabilityMassFunction__Group_2__0 ) )
+                    // InternalStoex.g:1391:2: ( ( rule__ProbabilityMassFunction__Group_2__0 ) )
                     {
-                    // InternalStoex.g:1352:2: ( ( rule__ProbabilityMassFunction__Group_2__0 ) )
-                    // InternalStoex.g:1353:3: ( rule__ProbabilityMassFunction__Group_2__0 )
+                    // InternalStoex.g:1391:2: ( ( rule__ProbabilityMassFunction__Group_2__0 ) )
+                    // InternalStoex.g:1392:3: ( rule__ProbabilityMassFunction__Group_2__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_2()); 
                     }
-                    // InternalStoex.g:1354:3: ( rule__ProbabilityMassFunction__Group_2__0 )
-                    // InternalStoex.g:1354:4: rule__ProbabilityMassFunction__Group_2__0
+                    // InternalStoex.g:1393:3: ( rule__ProbabilityMassFunction__Group_2__0 )
+                    // InternalStoex.g:1393:4: rule__ProbabilityMassFunction__Group_2__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_2__0();
@@ -4807,16 +4963,16 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalStoex.g:1358:2: ( ( rule__ProbabilityMassFunction__Group_3__0 ) )
+                    // InternalStoex.g:1397:2: ( ( rule__ProbabilityMassFunction__Group_3__0 ) )
                     {
-                    // InternalStoex.g:1358:2: ( ( rule__ProbabilityMassFunction__Group_3__0 ) )
-                    // InternalStoex.g:1359:3: ( rule__ProbabilityMassFunction__Group_3__0 )
+                    // InternalStoex.g:1397:2: ( ( rule__ProbabilityMassFunction__Group_3__0 ) )
+                    // InternalStoex.g:1398:3: ( rule__ProbabilityMassFunction__Group_3__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_3()); 
                     }
-                    // InternalStoex.g:1360:3: ( rule__ProbabilityMassFunction__Group_3__0 )
-                    // InternalStoex.g:1360:4: rule__ProbabilityMassFunction__Group_3__0
+                    // InternalStoex.g:1399:3: ( rule__ProbabilityMassFunction__Group_3__0 )
+                    // InternalStoex.g:1399:4: rule__ProbabilityMassFunction__Group_3__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_3__0();
@@ -4853,50 +5009,50 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BooleanOperations__Alternatives"
-    // InternalStoex.g:1368:1: rule__BooleanOperations__Alternatives : ( ( ( 'AND' ) ) | ( ( 'OR' ) ) | ( ( 'XOR' ) ) );
+    // InternalStoex.g:1407:1: rule__BooleanOperations__Alternatives : ( ( ( 'AND' ) ) | ( ( 'OR' ) ) | ( ( 'XOR' ) ) );
     public final void rule__BooleanOperations__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1372:1: ( ( ( 'AND' ) ) | ( ( 'OR' ) ) | ( ( 'XOR' ) ) )
-            int alt9=3;
+            // InternalStoex.g:1411:1: ( ( ( 'AND' ) ) | ( ( 'OR' ) ) | ( ( 'XOR' ) ) )
+            int alt10=3;
             switch ( input.LA(1) ) {
             case 14:
                 {
-                alt9=1;
+                alt10=1;
                 }
                 break;
-            case 15:
+            case 20:
                 {
-                alt9=2;
+                alt10=2;
                 }
                 break;
-            case 16:
+            case 21:
                 {
-                alt9=3;
+                alt10=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // InternalStoex.g:1373:2: ( ( 'AND' ) )
+                    // InternalStoex.g:1412:2: ( ( 'AND' ) )
                     {
-                    // InternalStoex.g:1373:2: ( ( 'AND' ) )
-                    // InternalStoex.g:1374:3: ( 'AND' )
+                    // InternalStoex.g:1412:2: ( ( 'AND' ) )
+                    // InternalStoex.g:1413:3: ( 'AND' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBooleanOperationsAccess().getANDEnumLiteralDeclaration_0()); 
                     }
-                    // InternalStoex.g:1375:3: ( 'AND' )
-                    // InternalStoex.g:1375:4: 'AND'
+                    // InternalStoex.g:1414:3: ( 'AND' )
+                    // InternalStoex.g:1414:4: 'AND'
                     {
                     match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -4912,18 +5068,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1379:2: ( ( 'OR' ) )
+                    // InternalStoex.g:1418:2: ( ( 'OR' ) )
                     {
-                    // InternalStoex.g:1379:2: ( ( 'OR' ) )
-                    // InternalStoex.g:1380:3: ( 'OR' )
+                    // InternalStoex.g:1418:2: ( ( 'OR' ) )
+                    // InternalStoex.g:1419:3: ( 'OR' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBooleanOperationsAccess().getOREnumLiteralDeclaration_1()); 
                     }
-                    // InternalStoex.g:1381:3: ( 'OR' )
-                    // InternalStoex.g:1381:4: 'OR'
+                    // InternalStoex.g:1420:3: ( 'OR' )
+                    // InternalStoex.g:1420:4: 'OR'
                     {
-                    match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -4937,18 +5093,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1385:2: ( ( 'XOR' ) )
+                    // InternalStoex.g:1424:2: ( ( 'XOR' ) )
                     {
-                    // InternalStoex.g:1385:2: ( ( 'XOR' ) )
-                    // InternalStoex.g:1386:3: ( 'XOR' )
+                    // InternalStoex.g:1424:2: ( ( 'XOR' ) )
+                    // InternalStoex.g:1425:3: ( 'XOR' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBooleanOperationsAccess().getXOREnumLiteralDeclaration_2()); 
                     }
-                    // InternalStoex.g:1387:3: ( 'XOR' )
-                    // InternalStoex.g:1387:4: 'XOR'
+                    // InternalStoex.g:1426:3: ( 'XOR' )
+                    // InternalStoex.g:1426:4: 'XOR'
                     {
-                    match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -4979,43 +5135,43 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Oroperations__Alternatives"
-    // InternalStoex.g:1395:1: rule__Oroperations__Alternatives : ( ( ( 'OR' ) ) | ( ( 'XOR' ) ) );
+    // InternalStoex.g:1434:1: rule__Oroperations__Alternatives : ( ( ( 'OR' ) ) | ( ( 'XOR' ) ) );
     public final void rule__Oroperations__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1399:1: ( ( ( 'OR' ) ) | ( ( 'XOR' ) ) )
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalStoex.g:1438:1: ( ( ( 'OR' ) ) | ( ( 'XOR' ) ) )
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==15) ) {
-                alt10=1;
+            if ( (LA11_0==20) ) {
+                alt11=1;
             }
-            else if ( (LA10_0==16) ) {
-                alt10=2;
+            else if ( (LA11_0==21) ) {
+                alt11=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // InternalStoex.g:1400:2: ( ( 'OR' ) )
+                    // InternalStoex.g:1439:2: ( ( 'OR' ) )
                     {
-                    // InternalStoex.g:1400:2: ( ( 'OR' ) )
-                    // InternalStoex.g:1401:3: ( 'OR' )
+                    // InternalStoex.g:1439:2: ( ( 'OR' ) )
+                    // InternalStoex.g:1440:3: ( 'OR' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOroperationsAccess().getOREnumLiteralDeclaration_0()); 
                     }
-                    // InternalStoex.g:1402:3: ( 'OR' )
-                    // InternalStoex.g:1402:4: 'OR'
+                    // InternalStoex.g:1441:3: ( 'OR' )
+                    // InternalStoex.g:1441:4: 'OR'
                     {
-                    match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5029,18 +5185,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1406:2: ( ( 'XOR' ) )
+                    // InternalStoex.g:1445:2: ( ( 'XOR' ) )
                     {
-                    // InternalStoex.g:1406:2: ( ( 'XOR' ) )
-                    // InternalStoex.g:1407:3: ( 'XOR' )
+                    // InternalStoex.g:1445:2: ( ( 'XOR' ) )
+                    // InternalStoex.g:1446:3: ( 'XOR' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOroperationsAccess().getXOREnumLiteralDeclaration_1()); 
                     }
-                    // InternalStoex.g:1408:3: ( 'XOR' )
-                    // InternalStoex.g:1408:4: 'XOR'
+                    // InternalStoex.g:1447:3: ( 'XOR' )
+                    // InternalStoex.g:1447:4: 'XOR'
                     {
-                    match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5071,67 +5227,67 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareOperations__Alternatives"
-    // InternalStoex.g:1416:1: rule__CompareOperations__Alternatives : ( ( ( '>' ) ) | ( ( '<' ) ) | ( ( '==' ) ) | ( ( '<>' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) );
+    // InternalStoex.g:1455:1: rule__CompareOperations__Alternatives : ( ( ( '>' ) ) | ( ( '<' ) ) | ( ( '==' ) ) | ( ( '<>' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) );
     public final void rule__CompareOperations__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1420:1: ( ( ( '>' ) ) | ( ( '<' ) ) | ( ( '==' ) ) | ( ( '<>' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) )
-            int alt11=6;
+            // InternalStoex.g:1459:1: ( ( ( '>' ) ) | ( ( '<' ) ) | ( ( '==' ) ) | ( ( '<>' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) )
+            int alt12=6;
             switch ( input.LA(1) ) {
-            case 17:
-                {
-                alt11=1;
-                }
-                break;
-            case 18:
-                {
-                alt11=2;
-                }
-                break;
-            case 19:
-                {
-                alt11=3;
-                }
-                break;
-            case 20:
-                {
-                alt11=4;
-                }
-                break;
-            case 21:
-                {
-                alt11=5;
-                }
-                break;
             case 22:
                 {
-                alt11=6;
+                alt12=1;
+                }
+                break;
+            case 23:
+                {
+                alt12=2;
+                }
+                break;
+            case 24:
+                {
+                alt12=3;
+                }
+                break;
+            case 25:
+                {
+                alt12=4;
+                }
+                break;
+            case 26:
+                {
+                alt12=5;
+                }
+                break;
+            case 27:
+                {
+                alt12=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // InternalStoex.g:1421:2: ( ( '>' ) )
+                    // InternalStoex.g:1460:2: ( ( '>' ) )
                     {
-                    // InternalStoex.g:1421:2: ( ( '>' ) )
-                    // InternalStoex.g:1422:3: ( '>' )
+                    // InternalStoex.g:1460:2: ( ( '>' ) )
+                    // InternalStoex.g:1461:3: ( '>' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompareOperationsAccess().getGREATEREnumLiteralDeclaration_0()); 
                     }
-                    // InternalStoex.g:1423:3: ( '>' )
-                    // InternalStoex.g:1423:4: '>'
+                    // InternalStoex.g:1462:3: ( '>' )
+                    // InternalStoex.g:1462:4: '>'
                     {
-                    match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5145,18 +5301,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1427:2: ( ( '<' ) )
+                    // InternalStoex.g:1466:2: ( ( '<' ) )
                     {
-                    // InternalStoex.g:1427:2: ( ( '<' ) )
-                    // InternalStoex.g:1428:3: ( '<' )
+                    // InternalStoex.g:1466:2: ( ( '<' ) )
+                    // InternalStoex.g:1467:3: ( '<' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompareOperationsAccess().getLESSEnumLiteralDeclaration_1()); 
                     }
-                    // InternalStoex.g:1429:3: ( '<' )
-                    // InternalStoex.g:1429:4: '<'
+                    // InternalStoex.g:1468:3: ( '<' )
+                    // InternalStoex.g:1468:4: '<'
                     {
-                    match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5170,18 +5326,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1433:2: ( ( '==' ) )
+                    // InternalStoex.g:1472:2: ( ( '==' ) )
                     {
-                    // InternalStoex.g:1433:2: ( ( '==' ) )
-                    // InternalStoex.g:1434:3: ( '==' )
+                    // InternalStoex.g:1472:2: ( ( '==' ) )
+                    // InternalStoex.g:1473:3: ( '==' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompareOperationsAccess().getEQUALSEnumLiteralDeclaration_2()); 
                     }
-                    // InternalStoex.g:1435:3: ( '==' )
-                    // InternalStoex.g:1435:4: '=='
+                    // InternalStoex.g:1474:3: ( '==' )
+                    // InternalStoex.g:1474:4: '=='
                     {
-                    match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5195,18 +5351,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalStoex.g:1439:2: ( ( '<>' ) )
+                    // InternalStoex.g:1478:2: ( ( '<>' ) )
                     {
-                    // InternalStoex.g:1439:2: ( ( '<>' ) )
-                    // InternalStoex.g:1440:3: ( '<>' )
+                    // InternalStoex.g:1478:2: ( ( '<>' ) )
+                    // InternalStoex.g:1479:3: ( '<>' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompareOperationsAccess().getNOTEQUALEnumLiteralDeclaration_3()); 
                     }
-                    // InternalStoex.g:1441:3: ( '<>' )
-                    // InternalStoex.g:1441:4: '<>'
+                    // InternalStoex.g:1480:3: ( '<>' )
+                    // InternalStoex.g:1480:4: '<>'
                     {
-                    match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5220,18 +5376,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalStoex.g:1445:2: ( ( '>=' ) )
+                    // InternalStoex.g:1484:2: ( ( '>=' ) )
                     {
-                    // InternalStoex.g:1445:2: ( ( '>=' ) )
-                    // InternalStoex.g:1446:3: ( '>=' )
+                    // InternalStoex.g:1484:2: ( ( '>=' ) )
+                    // InternalStoex.g:1485:3: ( '>=' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompareOperationsAccess().getGREATEREQUALEnumLiteralDeclaration_4()); 
                     }
-                    // InternalStoex.g:1447:3: ( '>=' )
-                    // InternalStoex.g:1447:4: '>='
+                    // InternalStoex.g:1486:3: ( '>=' )
+                    // InternalStoex.g:1486:4: '>='
                     {
-                    match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5245,18 +5401,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalStoex.g:1451:2: ( ( '<=' ) )
+                    // InternalStoex.g:1490:2: ( ( '<=' ) )
                     {
-                    // InternalStoex.g:1451:2: ( ( '<=' ) )
-                    // InternalStoex.g:1452:3: ( '<=' )
+                    // InternalStoex.g:1490:2: ( ( '<=' ) )
+                    // InternalStoex.g:1491:3: ( '<=' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompareOperationsAccess().getLESSEQUALEnumLiteralDeclaration_5()); 
                     }
-                    // InternalStoex.g:1453:3: ( '<=' )
-                    // InternalStoex.g:1453:4: '<='
+                    // InternalStoex.g:1492:3: ( '<=' )
+                    // InternalStoex.g:1492:4: '<='
                     {
-                    match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5287,43 +5443,43 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TermOperations__Alternatives"
-    // InternalStoex.g:1461:1: rule__TermOperations__Alternatives : ( ( ( '+' ) ) | ( ( '-' ) ) );
+    // InternalStoex.g:1500:1: rule__TermOperations__Alternatives : ( ( ( '+' ) ) | ( ( '-' ) ) );
     public final void rule__TermOperations__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1465:1: ( ( ( '+' ) ) | ( ( '-' ) ) )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalStoex.g:1504:1: ( ( ( '+' ) ) | ( ( '-' ) ) )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==23) ) {
-                alt12=1;
+            if ( (LA13_0==28) ) {
+                alt13=1;
             }
-            else if ( (LA12_0==24) ) {
-                alt12=2;
+            else if ( (LA13_0==29) ) {
+                alt13=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // InternalStoex.g:1466:2: ( ( '+' ) )
+                    // InternalStoex.g:1505:2: ( ( '+' ) )
                     {
-                    // InternalStoex.g:1466:2: ( ( '+' ) )
-                    // InternalStoex.g:1467:3: ( '+' )
+                    // InternalStoex.g:1505:2: ( ( '+' ) )
+                    // InternalStoex.g:1506:3: ( '+' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTermOperationsAccess().getADDEnumLiteralDeclaration_0()); 
                     }
-                    // InternalStoex.g:1468:3: ( '+' )
-                    // InternalStoex.g:1468:4: '+'
+                    // InternalStoex.g:1507:3: ( '+' )
+                    // InternalStoex.g:1507:4: '+'
                     {
-                    match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5337,18 +5493,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1472:2: ( ( '-' ) )
+                    // InternalStoex.g:1511:2: ( ( '-' ) )
                     {
-                    // InternalStoex.g:1472:2: ( ( '-' ) )
-                    // InternalStoex.g:1473:3: ( '-' )
+                    // InternalStoex.g:1511:2: ( ( '-' ) )
+                    // InternalStoex.g:1512:3: ( '-' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTermOperationsAccess().getSUBEnumLiteralDeclaration_1()); 
                     }
-                    // InternalStoex.g:1474:3: ( '-' )
-                    // InternalStoex.g:1474:4: '-'
+                    // InternalStoex.g:1513:3: ( '-' )
+                    // InternalStoex.g:1513:4: '-'
                     {
-                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5379,52 +5535,52 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProductOperations__Alternatives"
-    // InternalStoex.g:1482:1: rule__ProductOperations__Alternatives : ( ( ( '*' ) ) | ( ( '/' ) ) | ( ( '%' ) ) );
+    // InternalStoex.g:1521:1: rule__ProductOperations__Alternatives : ( ( ( '*' ) ) | ( ( '/' ) ) | ( ( '%' ) ) );
     public final void rule__ProductOperations__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1486:1: ( ( ( '*' ) ) | ( ( '/' ) ) | ( ( '%' ) ) )
-            int alt13=3;
+            // InternalStoex.g:1525:1: ( ( ( '*' ) ) | ( ( '/' ) ) | ( ( '%' ) ) )
+            int alt14=3;
             switch ( input.LA(1) ) {
-            case 25:
+            case 30:
                 {
-                alt13=1;
+                alt14=1;
                 }
                 break;
-            case 26:
+            case 31:
                 {
-                alt13=2;
+                alt14=2;
                 }
                 break;
-            case 27:
+            case 32:
                 {
-                alt13=3;
+                alt14=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // InternalStoex.g:1487:2: ( ( '*' ) )
+                    // InternalStoex.g:1526:2: ( ( '*' ) )
                     {
-                    // InternalStoex.g:1487:2: ( ( '*' ) )
-                    // InternalStoex.g:1488:3: ( '*' )
+                    // InternalStoex.g:1526:2: ( ( '*' ) )
+                    // InternalStoex.g:1527:3: ( '*' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProductOperationsAccess().getMULTEnumLiteralDeclaration_0()); 
                     }
-                    // InternalStoex.g:1489:3: ( '*' )
-                    // InternalStoex.g:1489:4: '*'
+                    // InternalStoex.g:1528:3: ( '*' )
+                    // InternalStoex.g:1528:4: '*'
                     {
-                    match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5438,18 +5594,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1493:2: ( ( '/' ) )
+                    // InternalStoex.g:1532:2: ( ( '/' ) )
                     {
-                    // InternalStoex.g:1493:2: ( ( '/' ) )
-                    // InternalStoex.g:1494:3: ( '/' )
+                    // InternalStoex.g:1532:2: ( ( '/' ) )
+                    // InternalStoex.g:1533:3: ( '/' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProductOperationsAccess().getDIVEnumLiteralDeclaration_1()); 
                     }
-                    // InternalStoex.g:1495:3: ( '/' )
-                    // InternalStoex.g:1495:4: '/'
+                    // InternalStoex.g:1534:3: ( '/' )
+                    // InternalStoex.g:1534:4: '/'
                     {
-                    match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5463,18 +5619,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1499:2: ( ( '%' ) )
+                    // InternalStoex.g:1538:2: ( ( '%' ) )
                     {
-                    // InternalStoex.g:1499:2: ( ( '%' ) )
-                    // InternalStoex.g:1500:3: ( '%' )
+                    // InternalStoex.g:1538:2: ( ( '%' ) )
+                    // InternalStoex.g:1539:3: ( '%' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getProductOperationsAccess().getMODEnumLiteralDeclaration_2()); 
                     }
-                    // InternalStoex.g:1501:3: ( '%' )
-                    // InternalStoex.g:1501:4: '%'
+                    // InternalStoex.g:1540:3: ( '%' )
+                    // InternalStoex.g:1540:4: '%'
                     {
-                    match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5505,62 +5661,62 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitNames__Alternatives"
-    // InternalStoex.g:1509:1: rule__UnitNames__Alternatives : ( ( ( '_' ) ) | ( ( 'unitless' ) ) | ( ( 'B' ) ) | ( ( 's' ) ) | ( ( 'm' ) ) );
+    // InternalStoex.g:1548:1: rule__UnitNames__Alternatives : ( ( ( '_' ) ) | ( ( 'unitless' ) ) | ( ( 'B' ) ) | ( ( 's' ) ) | ( ( 'm' ) ) );
     public final void rule__UnitNames__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1513:1: ( ( ( '_' ) ) | ( ( 'unitless' ) ) | ( ( 'B' ) ) | ( ( 's' ) ) | ( ( 'm' ) ) )
-            int alt14=5;
+            // InternalStoex.g:1552:1: ( ( ( '_' ) ) | ( ( 'unitless' ) ) | ( ( 'B' ) ) | ( ( 's' ) ) | ( ( 'm' ) ) )
+            int alt15=5;
             switch ( input.LA(1) ) {
-            case 28:
+            case 33:
                 {
-                alt14=1;
+                alt15=1;
                 }
                 break;
-            case 29:
+            case 34:
                 {
-                alt14=2;
+                alt15=2;
                 }
                 break;
-            case 30:
+            case 35:
                 {
-                alt14=3;
+                alt15=3;
                 }
                 break;
-            case 31:
+            case 36:
                 {
-                alt14=4;
+                alt15=4;
                 }
                 break;
-            case 32:
+            case 37:
                 {
-                alt14=5;
+                alt15=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalStoex.g:1514:2: ( ( '_' ) )
+                    // InternalStoex.g:1553:2: ( ( '_' ) )
                     {
-                    // InternalStoex.g:1514:2: ( ( '_' ) )
-                    // InternalStoex.g:1515:3: ( '_' )
+                    // InternalStoex.g:1553:2: ( ( '_' ) )
+                    // InternalStoex.g:1554:3: ( '_' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitNamesAccess().getUNITLESSEnumLiteralDeclaration_0()); 
                     }
-                    // InternalStoex.g:1516:3: ( '_' )
-                    // InternalStoex.g:1516:4: '_'
+                    // InternalStoex.g:1555:3: ( '_' )
+                    // InternalStoex.g:1555:4: '_'
                     {
-                    match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5574,18 +5730,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalStoex.g:1520:2: ( ( 'unitless' ) )
+                    // InternalStoex.g:1559:2: ( ( 'unitless' ) )
                     {
-                    // InternalStoex.g:1520:2: ( ( 'unitless' ) )
-                    // InternalStoex.g:1521:3: ( 'unitless' )
+                    // InternalStoex.g:1559:2: ( ( 'unitless' ) )
+                    // InternalStoex.g:1560:3: ( 'unitless' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitNamesAccess().getUNITLESSEnumLiteralDeclaration_1()); 
                     }
-                    // InternalStoex.g:1522:3: ( 'unitless' )
-                    // InternalStoex.g:1522:4: 'unitless'
+                    // InternalStoex.g:1561:3: ( 'unitless' )
+                    // InternalStoex.g:1561:4: 'unitless'
                     {
-                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5599,18 +5755,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalStoex.g:1526:2: ( ( 'B' ) )
+                    // InternalStoex.g:1565:2: ( ( 'B' ) )
                     {
-                    // InternalStoex.g:1526:2: ( ( 'B' ) )
-                    // InternalStoex.g:1527:3: ( 'B' )
+                    // InternalStoex.g:1565:2: ( ( 'B' ) )
+                    // InternalStoex.g:1566:3: ( 'B' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitNamesAccess().getBYTEEnumLiteralDeclaration_2()); 
                     }
-                    // InternalStoex.g:1528:3: ( 'B' )
-                    // InternalStoex.g:1528:4: 'B'
+                    // InternalStoex.g:1567:3: ( 'B' )
+                    // InternalStoex.g:1567:4: 'B'
                     {
-                    match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5624,18 +5780,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalStoex.g:1532:2: ( ( 's' ) )
+                    // InternalStoex.g:1571:2: ( ( 's' ) )
                     {
-                    // InternalStoex.g:1532:2: ( ( 's' ) )
-                    // InternalStoex.g:1533:3: ( 's' )
+                    // InternalStoex.g:1571:2: ( ( 's' ) )
+                    // InternalStoex.g:1572:3: ( 's' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitNamesAccess().getSECONDEnumLiteralDeclaration_3()); 
                     }
-                    // InternalStoex.g:1534:3: ( 's' )
-                    // InternalStoex.g:1534:4: 's'
+                    // InternalStoex.g:1573:3: ( 's' )
+                    // InternalStoex.g:1573:4: 's'
                     {
-                    match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5649,18 +5805,18 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalStoex.g:1538:2: ( ( 'm' ) )
+                    // InternalStoex.g:1577:2: ( ( 'm' ) )
                     {
-                    // InternalStoex.g:1538:2: ( ( 'm' ) )
-                    // InternalStoex.g:1539:3: ( 'm' )
+                    // InternalStoex.g:1577:2: ( ( 'm' ) )
+                    // InternalStoex.g:1578:3: ( 'm' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getUnitNamesAccess().getMETEREnumLiteralDeclaration_4()); 
                     }
-                    // InternalStoex.g:1540:3: ( 'm' )
-                    // InternalStoex.g:1540:4: 'm'
+                    // InternalStoex.g:1579:3: ( 'm' )
+                    // InternalStoex.g:1579:4: 'm'
                     {
-                    match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -5691,14 +5847,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group__0"
-    // InternalStoex.g:1548:1: rule__IfelseExpr__Group__0 : rule__IfelseExpr__Group__0__Impl rule__IfelseExpr__Group__1 ;
+    // InternalStoex.g:1587:1: rule__IfelseExpr__Group__0 : rule__IfelseExpr__Group__0__Impl rule__IfelseExpr__Group__1 ;
     public final void rule__IfelseExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1552:1: ( rule__IfelseExpr__Group__0__Impl rule__IfelseExpr__Group__1 )
-            // InternalStoex.g:1553:2: rule__IfelseExpr__Group__0__Impl rule__IfelseExpr__Group__1
+            // InternalStoex.g:1591:1: ( rule__IfelseExpr__Group__0__Impl rule__IfelseExpr__Group__1 )
+            // InternalStoex.g:1592:2: rule__IfelseExpr__Group__0__Impl rule__IfelseExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_3);
             rule__IfelseExpr__Group__0__Impl();
@@ -5729,17 +5885,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group__0__Impl"
-    // InternalStoex.g:1560:1: rule__IfelseExpr__Group__0__Impl : ( ruleboolAndExpr ) ;
+    // InternalStoex.g:1599:1: rule__IfelseExpr__Group__0__Impl : ( ruleboolAndExpr ) ;
     public final void rule__IfelseExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1564:1: ( ( ruleboolAndExpr ) )
-            // InternalStoex.g:1565:1: ( ruleboolAndExpr )
+            // InternalStoex.g:1603:1: ( ( ruleboolAndExpr ) )
+            // InternalStoex.g:1604:1: ( ruleboolAndExpr )
             {
-            // InternalStoex.g:1565:1: ( ruleboolAndExpr )
-            // InternalStoex.g:1566:2: ruleboolAndExpr
+            // InternalStoex.g:1604:1: ( ruleboolAndExpr )
+            // InternalStoex.g:1605:2: ruleboolAndExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getBoolAndExprParserRuleCall_0()); 
@@ -5774,14 +5930,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group__1"
-    // InternalStoex.g:1575:1: rule__IfelseExpr__Group__1 : rule__IfelseExpr__Group__1__Impl ;
+    // InternalStoex.g:1614:1: rule__IfelseExpr__Group__1 : rule__IfelseExpr__Group__1__Impl ;
     public final void rule__IfelseExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1579:1: ( rule__IfelseExpr__Group__1__Impl )
-            // InternalStoex.g:1580:2: rule__IfelseExpr__Group__1__Impl
+            // InternalStoex.g:1618:1: ( rule__IfelseExpr__Group__1__Impl )
+            // InternalStoex.g:1619:2: rule__IfelseExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IfelseExpr__Group__1__Impl();
@@ -5807,31 +5963,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group__1__Impl"
-    // InternalStoex.g:1586:1: rule__IfelseExpr__Group__1__Impl : ( ( rule__IfelseExpr__Group_1__0 )? ) ;
+    // InternalStoex.g:1625:1: rule__IfelseExpr__Group__1__Impl : ( ( rule__IfelseExpr__Group_1__0 )? ) ;
     public final void rule__IfelseExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1590:1: ( ( ( rule__IfelseExpr__Group_1__0 )? ) )
-            // InternalStoex.g:1591:1: ( ( rule__IfelseExpr__Group_1__0 )? )
+            // InternalStoex.g:1629:1: ( ( ( rule__IfelseExpr__Group_1__0 )? ) )
+            // InternalStoex.g:1630:1: ( ( rule__IfelseExpr__Group_1__0 )? )
             {
-            // InternalStoex.g:1591:1: ( ( rule__IfelseExpr__Group_1__0 )? )
-            // InternalStoex.g:1592:2: ( rule__IfelseExpr__Group_1__0 )?
+            // InternalStoex.g:1630:1: ( ( rule__IfelseExpr__Group_1__0 )? )
+            // InternalStoex.g:1631:2: ( rule__IfelseExpr__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:1593:2: ( rule__IfelseExpr__Group_1__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalStoex.g:1632:2: ( rule__IfelseExpr__Group_1__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==33) ) {
-                alt15=1;
+            if ( (LA16_0==38) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // InternalStoex.g:1593:3: rule__IfelseExpr__Group_1__0
+                    // InternalStoex.g:1632:3: rule__IfelseExpr__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__IfelseExpr__Group_1__0();
@@ -5869,14 +6025,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__0"
-    // InternalStoex.g:1602:1: rule__IfelseExpr__Group_1__0 : rule__IfelseExpr__Group_1__0__Impl rule__IfelseExpr__Group_1__1 ;
+    // InternalStoex.g:1641:1: rule__IfelseExpr__Group_1__0 : rule__IfelseExpr__Group_1__0__Impl rule__IfelseExpr__Group_1__1 ;
     public final void rule__IfelseExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1606:1: ( rule__IfelseExpr__Group_1__0__Impl rule__IfelseExpr__Group_1__1 )
-            // InternalStoex.g:1607:2: rule__IfelseExpr__Group_1__0__Impl rule__IfelseExpr__Group_1__1
+            // InternalStoex.g:1645:1: ( rule__IfelseExpr__Group_1__0__Impl rule__IfelseExpr__Group_1__1 )
+            // InternalStoex.g:1646:2: rule__IfelseExpr__Group_1__0__Impl rule__IfelseExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_3);
             rule__IfelseExpr__Group_1__0__Impl();
@@ -5907,23 +6063,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__0__Impl"
-    // InternalStoex.g:1614:1: rule__IfelseExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:1653:1: rule__IfelseExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__IfelseExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1618:1: ( ( () ) )
-            // InternalStoex.g:1619:1: ( () )
+            // InternalStoex.g:1657:1: ( ( () ) )
+            // InternalStoex.g:1658:1: ( () )
             {
-            // InternalStoex.g:1619:1: ( () )
-            // InternalStoex.g:1620:2: ()
+            // InternalStoex.g:1658:1: ( () )
+            // InternalStoex.g:1659:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getIfElseExpressionConditionExpressionAction_1_0()); 
             }
-            // InternalStoex.g:1621:2: ()
-            // InternalStoex.g:1621:3: 
+            // InternalStoex.g:1660:2: ()
+            // InternalStoex.g:1660:3: 
             {
             }
 
@@ -5948,14 +6104,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__1"
-    // InternalStoex.g:1629:1: rule__IfelseExpr__Group_1__1 : rule__IfelseExpr__Group_1__1__Impl rule__IfelseExpr__Group_1__2 ;
+    // InternalStoex.g:1668:1: rule__IfelseExpr__Group_1__1 : rule__IfelseExpr__Group_1__1__Impl rule__IfelseExpr__Group_1__2 ;
     public final void rule__IfelseExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1633:1: ( rule__IfelseExpr__Group_1__1__Impl rule__IfelseExpr__Group_1__2 )
-            // InternalStoex.g:1634:2: rule__IfelseExpr__Group_1__1__Impl rule__IfelseExpr__Group_1__2
+            // InternalStoex.g:1672:1: ( rule__IfelseExpr__Group_1__1__Impl rule__IfelseExpr__Group_1__2 )
+            // InternalStoex.g:1673:2: rule__IfelseExpr__Group_1__1__Impl rule__IfelseExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__IfelseExpr__Group_1__1__Impl();
@@ -5986,22 +6142,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__1__Impl"
-    // InternalStoex.g:1641:1: rule__IfelseExpr__Group_1__1__Impl : ( '?' ) ;
+    // InternalStoex.g:1680:1: rule__IfelseExpr__Group_1__1__Impl : ( '?' ) ;
     public final void rule__IfelseExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1645:1: ( ( '?' ) )
-            // InternalStoex.g:1646:1: ( '?' )
+            // InternalStoex.g:1684:1: ( ( '?' ) )
+            // InternalStoex.g:1685:1: ( '?' )
             {
-            // InternalStoex.g:1646:1: ( '?' )
-            // InternalStoex.g:1647:2: '?'
+            // InternalStoex.g:1685:1: ( '?' )
+            // InternalStoex.g:1686:2: '?'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getQuestionMarkKeyword_1_1()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfelseExprAccess().getQuestionMarkKeyword_1_1()); 
             }
@@ -6027,14 +6183,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__2"
-    // InternalStoex.g:1656:1: rule__IfelseExpr__Group_1__2 : rule__IfelseExpr__Group_1__2__Impl rule__IfelseExpr__Group_1__3 ;
+    // InternalStoex.g:1695:1: rule__IfelseExpr__Group_1__2 : rule__IfelseExpr__Group_1__2__Impl rule__IfelseExpr__Group_1__3 ;
     public final void rule__IfelseExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1660:1: ( rule__IfelseExpr__Group_1__2__Impl rule__IfelseExpr__Group_1__3 )
-            // InternalStoex.g:1661:2: rule__IfelseExpr__Group_1__2__Impl rule__IfelseExpr__Group_1__3
+            // InternalStoex.g:1699:1: ( rule__IfelseExpr__Group_1__2__Impl rule__IfelseExpr__Group_1__3 )
+            // InternalStoex.g:1700:2: rule__IfelseExpr__Group_1__2__Impl rule__IfelseExpr__Group_1__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__IfelseExpr__Group_1__2__Impl();
@@ -6065,23 +6221,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__2__Impl"
-    // InternalStoex.g:1668:1: rule__IfelseExpr__Group_1__2__Impl : ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) ) ;
+    // InternalStoex.g:1707:1: rule__IfelseExpr__Group_1__2__Impl : ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) ) ;
     public final void rule__IfelseExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1672:1: ( ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) ) )
-            // InternalStoex.g:1673:1: ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) )
+            // InternalStoex.g:1711:1: ( ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) ) )
+            // InternalStoex.g:1712:1: ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) )
             {
-            // InternalStoex.g:1673:1: ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) )
-            // InternalStoex.g:1674:2: ( rule__IfelseExpr__IfExpressionAssignment_1_2 )
+            // InternalStoex.g:1712:1: ( ( rule__IfelseExpr__IfExpressionAssignment_1_2 ) )
+            // InternalStoex.g:1713:2: ( rule__IfelseExpr__IfExpressionAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getIfExpressionAssignment_1_2()); 
             }
-            // InternalStoex.g:1675:2: ( rule__IfelseExpr__IfExpressionAssignment_1_2 )
-            // InternalStoex.g:1675:3: rule__IfelseExpr__IfExpressionAssignment_1_2
+            // InternalStoex.g:1714:2: ( rule__IfelseExpr__IfExpressionAssignment_1_2 )
+            // InternalStoex.g:1714:3: rule__IfelseExpr__IfExpressionAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IfelseExpr__IfExpressionAssignment_1_2();
@@ -6116,14 +6272,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__3"
-    // InternalStoex.g:1683:1: rule__IfelseExpr__Group_1__3 : rule__IfelseExpr__Group_1__3__Impl rule__IfelseExpr__Group_1__4 ;
+    // InternalStoex.g:1722:1: rule__IfelseExpr__Group_1__3 : rule__IfelseExpr__Group_1__3__Impl rule__IfelseExpr__Group_1__4 ;
     public final void rule__IfelseExpr__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1687:1: ( rule__IfelseExpr__Group_1__3__Impl rule__IfelseExpr__Group_1__4 )
-            // InternalStoex.g:1688:2: rule__IfelseExpr__Group_1__3__Impl rule__IfelseExpr__Group_1__4
+            // InternalStoex.g:1726:1: ( rule__IfelseExpr__Group_1__3__Impl rule__IfelseExpr__Group_1__4 )
+            // InternalStoex.g:1727:2: rule__IfelseExpr__Group_1__3__Impl rule__IfelseExpr__Group_1__4
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__IfelseExpr__Group_1__3__Impl();
@@ -6154,22 +6310,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__3__Impl"
-    // InternalStoex.g:1695:1: rule__IfelseExpr__Group_1__3__Impl : ( ':' ) ;
+    // InternalStoex.g:1734:1: rule__IfelseExpr__Group_1__3__Impl : ( ':' ) ;
     public final void rule__IfelseExpr__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1699:1: ( ( ':' ) )
-            // InternalStoex.g:1700:1: ( ':' )
+            // InternalStoex.g:1738:1: ( ( ':' ) )
+            // InternalStoex.g:1739:1: ( ':' )
             {
-            // InternalStoex.g:1700:1: ( ':' )
-            // InternalStoex.g:1701:2: ':'
+            // InternalStoex.g:1739:1: ( ':' )
+            // InternalStoex.g:1740:2: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getColonKeyword_1_3()); 
             }
-            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfelseExprAccess().getColonKeyword_1_3()); 
             }
@@ -6195,14 +6351,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__4"
-    // InternalStoex.g:1710:1: rule__IfelseExpr__Group_1__4 : rule__IfelseExpr__Group_1__4__Impl ;
+    // InternalStoex.g:1749:1: rule__IfelseExpr__Group_1__4 : rule__IfelseExpr__Group_1__4__Impl ;
     public final void rule__IfelseExpr__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1714:1: ( rule__IfelseExpr__Group_1__4__Impl )
-            // InternalStoex.g:1715:2: rule__IfelseExpr__Group_1__4__Impl
+            // InternalStoex.g:1753:1: ( rule__IfelseExpr__Group_1__4__Impl )
+            // InternalStoex.g:1754:2: rule__IfelseExpr__Group_1__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IfelseExpr__Group_1__4__Impl();
@@ -6228,23 +6384,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__Group_1__4__Impl"
-    // InternalStoex.g:1721:1: rule__IfelseExpr__Group_1__4__Impl : ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) ) ;
+    // InternalStoex.g:1760:1: rule__IfelseExpr__Group_1__4__Impl : ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) ) ;
     public final void rule__IfelseExpr__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1725:1: ( ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) ) )
-            // InternalStoex.g:1726:1: ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) )
+            // InternalStoex.g:1764:1: ( ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) ) )
+            // InternalStoex.g:1765:1: ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) )
             {
-            // InternalStoex.g:1726:1: ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) )
-            // InternalStoex.g:1727:2: ( rule__IfelseExpr__ElseExpressionAssignment_1_4 )
+            // InternalStoex.g:1765:1: ( ( rule__IfelseExpr__ElseExpressionAssignment_1_4 ) )
+            // InternalStoex.g:1766:2: ( rule__IfelseExpr__ElseExpressionAssignment_1_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getElseExpressionAssignment_1_4()); 
             }
-            // InternalStoex.g:1728:2: ( rule__IfelseExpr__ElseExpressionAssignment_1_4 )
-            // InternalStoex.g:1728:3: rule__IfelseExpr__ElseExpressionAssignment_1_4
+            // InternalStoex.g:1767:2: ( rule__IfelseExpr__ElseExpressionAssignment_1_4 )
+            // InternalStoex.g:1767:3: rule__IfelseExpr__ElseExpressionAssignment_1_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IfelseExpr__ElseExpressionAssignment_1_4();
@@ -6279,14 +6435,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group__0"
-    // InternalStoex.g:1737:1: rule__BoolAndExpr__Group__0 : rule__BoolAndExpr__Group__0__Impl rule__BoolAndExpr__Group__1 ;
+    // InternalStoex.g:1776:1: rule__BoolAndExpr__Group__0 : rule__BoolAndExpr__Group__0__Impl rule__BoolAndExpr__Group__1 ;
     public final void rule__BoolAndExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1741:1: ( rule__BoolAndExpr__Group__0__Impl rule__BoolAndExpr__Group__1 )
-            // InternalStoex.g:1742:2: rule__BoolAndExpr__Group__0__Impl rule__BoolAndExpr__Group__1
+            // InternalStoex.g:1780:1: ( rule__BoolAndExpr__Group__0__Impl rule__BoolAndExpr__Group__1 )
+            // InternalStoex.g:1781:2: rule__BoolAndExpr__Group__0__Impl rule__BoolAndExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__BoolAndExpr__Group__0__Impl();
@@ -6317,17 +6473,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group__0__Impl"
-    // InternalStoex.g:1749:1: rule__BoolAndExpr__Group__0__Impl : ( ruleboolOrExpr ) ;
+    // InternalStoex.g:1788:1: rule__BoolAndExpr__Group__0__Impl : ( ruleboolOrExpr ) ;
     public final void rule__BoolAndExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1753:1: ( ( ruleboolOrExpr ) )
-            // InternalStoex.g:1754:1: ( ruleboolOrExpr )
+            // InternalStoex.g:1792:1: ( ( ruleboolOrExpr ) )
+            // InternalStoex.g:1793:1: ( ruleboolOrExpr )
             {
-            // InternalStoex.g:1754:1: ( ruleboolOrExpr )
-            // InternalStoex.g:1755:2: ruleboolOrExpr
+            // InternalStoex.g:1793:1: ( ruleboolOrExpr )
+            // InternalStoex.g:1794:2: ruleboolOrExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getBoolOrExprParserRuleCall_0()); 
@@ -6362,14 +6518,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group__1"
-    // InternalStoex.g:1764:1: rule__BoolAndExpr__Group__1 : rule__BoolAndExpr__Group__1__Impl ;
+    // InternalStoex.g:1803:1: rule__BoolAndExpr__Group__1 : rule__BoolAndExpr__Group__1__Impl ;
     public final void rule__BoolAndExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1768:1: ( rule__BoolAndExpr__Group__1__Impl )
-            // InternalStoex.g:1769:2: rule__BoolAndExpr__Group__1__Impl
+            // InternalStoex.g:1807:1: ( rule__BoolAndExpr__Group__1__Impl )
+            // InternalStoex.g:1808:2: rule__BoolAndExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolAndExpr__Group__1__Impl();
@@ -6395,35 +6551,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group__1__Impl"
-    // InternalStoex.g:1775:1: rule__BoolAndExpr__Group__1__Impl : ( ( rule__BoolAndExpr__Group_1__0 )* ) ;
+    // InternalStoex.g:1814:1: rule__BoolAndExpr__Group__1__Impl : ( ( rule__BoolAndExpr__Group_1__0 )* ) ;
     public final void rule__BoolAndExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1779:1: ( ( ( rule__BoolAndExpr__Group_1__0 )* ) )
-            // InternalStoex.g:1780:1: ( ( rule__BoolAndExpr__Group_1__0 )* )
+            // InternalStoex.g:1818:1: ( ( ( rule__BoolAndExpr__Group_1__0 )* ) )
+            // InternalStoex.g:1819:1: ( ( rule__BoolAndExpr__Group_1__0 )* )
             {
-            // InternalStoex.g:1780:1: ( ( rule__BoolAndExpr__Group_1__0 )* )
-            // InternalStoex.g:1781:2: ( rule__BoolAndExpr__Group_1__0 )*
+            // InternalStoex.g:1819:1: ( ( rule__BoolAndExpr__Group_1__0 )* )
+            // InternalStoex.g:1820:2: ( rule__BoolAndExpr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:1782:2: ( rule__BoolAndExpr__Group_1__0 )*
-            loop16:
+            // InternalStoex.g:1821:2: ( rule__BoolAndExpr__Group_1__0 )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==14) ) {
-                    alt16=1;
+                if ( (LA17_0==14) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // InternalStoex.g:1782:3: rule__BoolAndExpr__Group_1__0
+            	    // InternalStoex.g:1821:3: rule__BoolAndExpr__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_7);
             	    rule__BoolAndExpr__Group_1__0();
@@ -6435,7 +6591,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -6464,14 +6620,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group_1__0"
-    // InternalStoex.g:1791:1: rule__BoolAndExpr__Group_1__0 : rule__BoolAndExpr__Group_1__0__Impl rule__BoolAndExpr__Group_1__1 ;
+    // InternalStoex.g:1830:1: rule__BoolAndExpr__Group_1__0 : rule__BoolAndExpr__Group_1__0__Impl rule__BoolAndExpr__Group_1__1 ;
     public final void rule__BoolAndExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1795:1: ( rule__BoolAndExpr__Group_1__0__Impl rule__BoolAndExpr__Group_1__1 )
-            // InternalStoex.g:1796:2: rule__BoolAndExpr__Group_1__0__Impl rule__BoolAndExpr__Group_1__1
+            // InternalStoex.g:1834:1: ( rule__BoolAndExpr__Group_1__0__Impl rule__BoolAndExpr__Group_1__1 )
+            // InternalStoex.g:1835:2: rule__BoolAndExpr__Group_1__0__Impl rule__BoolAndExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__BoolAndExpr__Group_1__0__Impl();
@@ -6502,23 +6658,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group_1__0__Impl"
-    // InternalStoex.g:1803:1: rule__BoolAndExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:1842:1: rule__BoolAndExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__BoolAndExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1807:1: ( ( () ) )
-            // InternalStoex.g:1808:1: ( () )
+            // InternalStoex.g:1846:1: ( ( () ) )
+            // InternalStoex.g:1847:1: ( () )
             {
-            // InternalStoex.g:1808:1: ( () )
-            // InternalStoex.g:1809:2: ()
+            // InternalStoex.g:1847:1: ( () )
+            // InternalStoex.g:1848:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getBooleanOperatorExpressionLeftAction_1_0()); 
             }
-            // InternalStoex.g:1810:2: ()
-            // InternalStoex.g:1810:3: 
+            // InternalStoex.g:1849:2: ()
+            // InternalStoex.g:1849:3: 
             {
             }
 
@@ -6543,14 +6699,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group_1__1"
-    // InternalStoex.g:1818:1: rule__BoolAndExpr__Group_1__1 : rule__BoolAndExpr__Group_1__1__Impl rule__BoolAndExpr__Group_1__2 ;
+    // InternalStoex.g:1857:1: rule__BoolAndExpr__Group_1__1 : rule__BoolAndExpr__Group_1__1__Impl rule__BoolAndExpr__Group_1__2 ;
     public final void rule__BoolAndExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1822:1: ( rule__BoolAndExpr__Group_1__1__Impl rule__BoolAndExpr__Group_1__2 )
-            // InternalStoex.g:1823:2: rule__BoolAndExpr__Group_1__1__Impl rule__BoolAndExpr__Group_1__2
+            // InternalStoex.g:1861:1: ( rule__BoolAndExpr__Group_1__1__Impl rule__BoolAndExpr__Group_1__2 )
+            // InternalStoex.g:1862:2: rule__BoolAndExpr__Group_1__1__Impl rule__BoolAndExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__BoolAndExpr__Group_1__1__Impl();
@@ -6581,23 +6737,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group_1__1__Impl"
-    // InternalStoex.g:1830:1: rule__BoolAndExpr__Group_1__1__Impl : ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) ) ;
+    // InternalStoex.g:1869:1: rule__BoolAndExpr__Group_1__1__Impl : ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) ) ;
     public final void rule__BoolAndExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1834:1: ( ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) ) )
-            // InternalStoex.g:1835:1: ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:1873:1: ( ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) ) )
+            // InternalStoex.g:1874:1: ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) )
             {
-            // InternalStoex.g:1835:1: ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) )
-            // InternalStoex.g:1836:2: ( rule__BoolAndExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:1874:1: ( ( rule__BoolAndExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:1875:2: ( rule__BoolAndExpr__OperationAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getOperationAssignment_1_1()); 
             }
-            // InternalStoex.g:1837:2: ( rule__BoolAndExpr__OperationAssignment_1_1 )
-            // InternalStoex.g:1837:3: rule__BoolAndExpr__OperationAssignment_1_1
+            // InternalStoex.g:1876:2: ( rule__BoolAndExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:1876:3: rule__BoolAndExpr__OperationAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolAndExpr__OperationAssignment_1_1();
@@ -6632,14 +6788,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group_1__2"
-    // InternalStoex.g:1845:1: rule__BoolAndExpr__Group_1__2 : rule__BoolAndExpr__Group_1__2__Impl ;
+    // InternalStoex.g:1884:1: rule__BoolAndExpr__Group_1__2 : rule__BoolAndExpr__Group_1__2__Impl ;
     public final void rule__BoolAndExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1849:1: ( rule__BoolAndExpr__Group_1__2__Impl )
-            // InternalStoex.g:1850:2: rule__BoolAndExpr__Group_1__2__Impl
+            // InternalStoex.g:1888:1: ( rule__BoolAndExpr__Group_1__2__Impl )
+            // InternalStoex.g:1889:2: rule__BoolAndExpr__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolAndExpr__Group_1__2__Impl();
@@ -6665,23 +6821,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__Group_1__2__Impl"
-    // InternalStoex.g:1856:1: rule__BoolAndExpr__Group_1__2__Impl : ( ( rule__BoolAndExpr__RightAssignment_1_2 ) ) ;
+    // InternalStoex.g:1895:1: rule__BoolAndExpr__Group_1__2__Impl : ( ( rule__BoolAndExpr__RightAssignment_1_2 ) ) ;
     public final void rule__BoolAndExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1860:1: ( ( ( rule__BoolAndExpr__RightAssignment_1_2 ) ) )
-            // InternalStoex.g:1861:1: ( ( rule__BoolAndExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:1899:1: ( ( ( rule__BoolAndExpr__RightAssignment_1_2 ) ) )
+            // InternalStoex.g:1900:1: ( ( rule__BoolAndExpr__RightAssignment_1_2 ) )
             {
-            // InternalStoex.g:1861:1: ( ( rule__BoolAndExpr__RightAssignment_1_2 ) )
-            // InternalStoex.g:1862:2: ( rule__BoolAndExpr__RightAssignment_1_2 )
+            // InternalStoex.g:1900:1: ( ( rule__BoolAndExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:1901:2: ( rule__BoolAndExpr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getRightAssignment_1_2()); 
             }
-            // InternalStoex.g:1863:2: ( rule__BoolAndExpr__RightAssignment_1_2 )
-            // InternalStoex.g:1863:3: rule__BoolAndExpr__RightAssignment_1_2
+            // InternalStoex.g:1902:2: ( rule__BoolAndExpr__RightAssignment_1_2 )
+            // InternalStoex.g:1902:3: rule__BoolAndExpr__RightAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolAndExpr__RightAssignment_1_2();
@@ -6716,14 +6872,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group__0"
-    // InternalStoex.g:1872:1: rule__BoolOrExpr__Group__0 : rule__BoolOrExpr__Group__0__Impl rule__BoolOrExpr__Group__1 ;
+    // InternalStoex.g:1911:1: rule__BoolOrExpr__Group__0 : rule__BoolOrExpr__Group__0__Impl rule__BoolOrExpr__Group__1 ;
     public final void rule__BoolOrExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1876:1: ( rule__BoolOrExpr__Group__0__Impl rule__BoolOrExpr__Group__1 )
-            // InternalStoex.g:1877:2: rule__BoolOrExpr__Group__0__Impl rule__BoolOrExpr__Group__1
+            // InternalStoex.g:1915:1: ( rule__BoolOrExpr__Group__0__Impl rule__BoolOrExpr__Group__1 )
+            // InternalStoex.g:1916:2: rule__BoolOrExpr__Group__0__Impl rule__BoolOrExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__BoolOrExpr__Group__0__Impl();
@@ -6754,17 +6910,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group__0__Impl"
-    // InternalStoex.g:1884:1: rule__BoolOrExpr__Group__0__Impl : ( rulecompareExpr ) ;
+    // InternalStoex.g:1923:1: rule__BoolOrExpr__Group__0__Impl : ( rulecompareExpr ) ;
     public final void rule__BoolOrExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1888:1: ( ( rulecompareExpr ) )
-            // InternalStoex.g:1889:1: ( rulecompareExpr )
+            // InternalStoex.g:1927:1: ( ( rulecompareExpr ) )
+            // InternalStoex.g:1928:1: ( rulecompareExpr )
             {
-            // InternalStoex.g:1889:1: ( rulecompareExpr )
-            // InternalStoex.g:1890:2: rulecompareExpr
+            // InternalStoex.g:1928:1: ( rulecompareExpr )
+            // InternalStoex.g:1929:2: rulecompareExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getCompareExprParserRuleCall_0()); 
@@ -6799,14 +6955,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group__1"
-    // InternalStoex.g:1899:1: rule__BoolOrExpr__Group__1 : rule__BoolOrExpr__Group__1__Impl ;
+    // InternalStoex.g:1938:1: rule__BoolOrExpr__Group__1 : rule__BoolOrExpr__Group__1__Impl ;
     public final void rule__BoolOrExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1903:1: ( rule__BoolOrExpr__Group__1__Impl )
-            // InternalStoex.g:1904:2: rule__BoolOrExpr__Group__1__Impl
+            // InternalStoex.g:1942:1: ( rule__BoolOrExpr__Group__1__Impl )
+            // InternalStoex.g:1943:2: rule__BoolOrExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolOrExpr__Group__1__Impl();
@@ -6832,35 +6988,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group__1__Impl"
-    // InternalStoex.g:1910:1: rule__BoolOrExpr__Group__1__Impl : ( ( rule__BoolOrExpr__Group_1__0 )* ) ;
+    // InternalStoex.g:1949:1: rule__BoolOrExpr__Group__1__Impl : ( ( rule__BoolOrExpr__Group_1__0 )* ) ;
     public final void rule__BoolOrExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1914:1: ( ( ( rule__BoolOrExpr__Group_1__0 )* ) )
-            // InternalStoex.g:1915:1: ( ( rule__BoolOrExpr__Group_1__0 )* )
+            // InternalStoex.g:1953:1: ( ( ( rule__BoolOrExpr__Group_1__0 )* ) )
+            // InternalStoex.g:1954:1: ( ( rule__BoolOrExpr__Group_1__0 )* )
             {
-            // InternalStoex.g:1915:1: ( ( rule__BoolOrExpr__Group_1__0 )* )
-            // InternalStoex.g:1916:2: ( rule__BoolOrExpr__Group_1__0 )*
+            // InternalStoex.g:1954:1: ( ( rule__BoolOrExpr__Group_1__0 )* )
+            // InternalStoex.g:1955:2: ( rule__BoolOrExpr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:1917:2: ( rule__BoolOrExpr__Group_1__0 )*
-            loop17:
+            // InternalStoex.g:1956:2: ( rule__BoolOrExpr__Group_1__0 )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( ((LA17_0>=15 && LA17_0<=16)) ) {
-                    alt17=1;
+                if ( ((LA18_0>=20 && LA18_0<=21)) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // InternalStoex.g:1917:3: rule__BoolOrExpr__Group_1__0
+            	    // InternalStoex.g:1956:3: rule__BoolOrExpr__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_9);
             	    rule__BoolOrExpr__Group_1__0();
@@ -6872,7 +7028,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
@@ -6901,14 +7057,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group_1__0"
-    // InternalStoex.g:1926:1: rule__BoolOrExpr__Group_1__0 : rule__BoolOrExpr__Group_1__0__Impl rule__BoolOrExpr__Group_1__1 ;
+    // InternalStoex.g:1965:1: rule__BoolOrExpr__Group_1__0 : rule__BoolOrExpr__Group_1__0__Impl rule__BoolOrExpr__Group_1__1 ;
     public final void rule__BoolOrExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1930:1: ( rule__BoolOrExpr__Group_1__0__Impl rule__BoolOrExpr__Group_1__1 )
-            // InternalStoex.g:1931:2: rule__BoolOrExpr__Group_1__0__Impl rule__BoolOrExpr__Group_1__1
+            // InternalStoex.g:1969:1: ( rule__BoolOrExpr__Group_1__0__Impl rule__BoolOrExpr__Group_1__1 )
+            // InternalStoex.g:1970:2: rule__BoolOrExpr__Group_1__0__Impl rule__BoolOrExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__BoolOrExpr__Group_1__0__Impl();
@@ -6939,23 +7095,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group_1__0__Impl"
-    // InternalStoex.g:1938:1: rule__BoolOrExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:1977:1: rule__BoolOrExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__BoolOrExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1942:1: ( ( () ) )
-            // InternalStoex.g:1943:1: ( () )
+            // InternalStoex.g:1981:1: ( ( () ) )
+            // InternalStoex.g:1982:1: ( () )
             {
-            // InternalStoex.g:1943:1: ( () )
-            // InternalStoex.g:1944:2: ()
+            // InternalStoex.g:1982:1: ( () )
+            // InternalStoex.g:1983:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getBooleanOperatorExpressionLeftAction_1_0()); 
             }
-            // InternalStoex.g:1945:2: ()
-            // InternalStoex.g:1945:3: 
+            // InternalStoex.g:1984:2: ()
+            // InternalStoex.g:1984:3: 
             {
             }
 
@@ -6980,14 +7136,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group_1__1"
-    // InternalStoex.g:1953:1: rule__BoolOrExpr__Group_1__1 : rule__BoolOrExpr__Group_1__1__Impl rule__BoolOrExpr__Group_1__2 ;
+    // InternalStoex.g:1992:1: rule__BoolOrExpr__Group_1__1 : rule__BoolOrExpr__Group_1__1__Impl rule__BoolOrExpr__Group_1__2 ;
     public final void rule__BoolOrExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1957:1: ( rule__BoolOrExpr__Group_1__1__Impl rule__BoolOrExpr__Group_1__2 )
-            // InternalStoex.g:1958:2: rule__BoolOrExpr__Group_1__1__Impl rule__BoolOrExpr__Group_1__2
+            // InternalStoex.g:1996:1: ( rule__BoolOrExpr__Group_1__1__Impl rule__BoolOrExpr__Group_1__2 )
+            // InternalStoex.g:1997:2: rule__BoolOrExpr__Group_1__1__Impl rule__BoolOrExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__BoolOrExpr__Group_1__1__Impl();
@@ -7018,23 +7174,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group_1__1__Impl"
-    // InternalStoex.g:1965:1: rule__BoolOrExpr__Group_1__1__Impl : ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) ) ;
+    // InternalStoex.g:2004:1: rule__BoolOrExpr__Group_1__1__Impl : ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) ) ;
     public final void rule__BoolOrExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1969:1: ( ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) ) )
-            // InternalStoex.g:1970:1: ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2008:1: ( ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) ) )
+            // InternalStoex.g:2009:1: ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) )
             {
-            // InternalStoex.g:1970:1: ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) )
-            // InternalStoex.g:1971:2: ( rule__BoolOrExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2009:1: ( ( rule__BoolOrExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2010:2: ( rule__BoolOrExpr__OperationAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getOperationAssignment_1_1()); 
             }
-            // InternalStoex.g:1972:2: ( rule__BoolOrExpr__OperationAssignment_1_1 )
-            // InternalStoex.g:1972:3: rule__BoolOrExpr__OperationAssignment_1_1
+            // InternalStoex.g:2011:2: ( rule__BoolOrExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2011:3: rule__BoolOrExpr__OperationAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolOrExpr__OperationAssignment_1_1();
@@ -7069,14 +7225,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group_1__2"
-    // InternalStoex.g:1980:1: rule__BoolOrExpr__Group_1__2 : rule__BoolOrExpr__Group_1__2__Impl ;
+    // InternalStoex.g:2019:1: rule__BoolOrExpr__Group_1__2 : rule__BoolOrExpr__Group_1__2__Impl ;
     public final void rule__BoolOrExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1984:1: ( rule__BoolOrExpr__Group_1__2__Impl )
-            // InternalStoex.g:1985:2: rule__BoolOrExpr__Group_1__2__Impl
+            // InternalStoex.g:2023:1: ( rule__BoolOrExpr__Group_1__2__Impl )
+            // InternalStoex.g:2024:2: rule__BoolOrExpr__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolOrExpr__Group_1__2__Impl();
@@ -7102,23 +7258,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__Group_1__2__Impl"
-    // InternalStoex.g:1991:1: rule__BoolOrExpr__Group_1__2__Impl : ( ( rule__BoolOrExpr__RightAssignment_1_2 ) ) ;
+    // InternalStoex.g:2030:1: rule__BoolOrExpr__Group_1__2__Impl : ( ( rule__BoolOrExpr__RightAssignment_1_2 ) ) ;
     public final void rule__BoolOrExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:1995:1: ( ( ( rule__BoolOrExpr__RightAssignment_1_2 ) ) )
-            // InternalStoex.g:1996:1: ( ( rule__BoolOrExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2034:1: ( ( ( rule__BoolOrExpr__RightAssignment_1_2 ) ) )
+            // InternalStoex.g:2035:1: ( ( rule__BoolOrExpr__RightAssignment_1_2 ) )
             {
-            // InternalStoex.g:1996:1: ( ( rule__BoolOrExpr__RightAssignment_1_2 ) )
-            // InternalStoex.g:1997:2: ( rule__BoolOrExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2035:1: ( ( rule__BoolOrExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2036:2: ( rule__BoolOrExpr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getRightAssignment_1_2()); 
             }
-            // InternalStoex.g:1998:2: ( rule__BoolOrExpr__RightAssignment_1_2 )
-            // InternalStoex.g:1998:3: rule__BoolOrExpr__RightAssignment_1_2
+            // InternalStoex.g:2037:2: ( rule__BoolOrExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2037:3: rule__BoolOrExpr__RightAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoolOrExpr__RightAssignment_1_2();
@@ -7153,14 +7309,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group__0"
-    // InternalStoex.g:2007:1: rule__CompareExpr__Group__0 : rule__CompareExpr__Group__0__Impl rule__CompareExpr__Group__1 ;
+    // InternalStoex.g:2046:1: rule__CompareExpr__Group__0 : rule__CompareExpr__Group__0__Impl rule__CompareExpr__Group__1 ;
     public final void rule__CompareExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2011:1: ( rule__CompareExpr__Group__0__Impl rule__CompareExpr__Group__1 )
-            // InternalStoex.g:2012:2: rule__CompareExpr__Group__0__Impl rule__CompareExpr__Group__1
+            // InternalStoex.g:2050:1: ( rule__CompareExpr__Group__0__Impl rule__CompareExpr__Group__1 )
+            // InternalStoex.g:2051:2: rule__CompareExpr__Group__0__Impl rule__CompareExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_10);
             rule__CompareExpr__Group__0__Impl();
@@ -7191,17 +7347,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group__0__Impl"
-    // InternalStoex.g:2019:1: rule__CompareExpr__Group__0__Impl : ( rulesumExpr ) ;
+    // InternalStoex.g:2058:1: rule__CompareExpr__Group__0__Impl : ( rulesumExpr ) ;
     public final void rule__CompareExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2023:1: ( ( rulesumExpr ) )
-            // InternalStoex.g:2024:1: ( rulesumExpr )
+            // InternalStoex.g:2062:1: ( ( rulesumExpr ) )
+            // InternalStoex.g:2063:1: ( rulesumExpr )
             {
-            // InternalStoex.g:2024:1: ( rulesumExpr )
-            // InternalStoex.g:2025:2: rulesumExpr
+            // InternalStoex.g:2063:1: ( rulesumExpr )
+            // InternalStoex.g:2064:2: rulesumExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getSumExprParserRuleCall_0()); 
@@ -7236,14 +7392,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group__1"
-    // InternalStoex.g:2034:1: rule__CompareExpr__Group__1 : rule__CompareExpr__Group__1__Impl ;
+    // InternalStoex.g:2073:1: rule__CompareExpr__Group__1 : rule__CompareExpr__Group__1__Impl ;
     public final void rule__CompareExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2038:1: ( rule__CompareExpr__Group__1__Impl )
-            // InternalStoex.g:2039:2: rule__CompareExpr__Group__1__Impl
+            // InternalStoex.g:2077:1: ( rule__CompareExpr__Group__1__Impl )
+            // InternalStoex.g:2078:2: rule__CompareExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__CompareExpr__Group__1__Impl();
@@ -7269,31 +7425,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group__1__Impl"
-    // InternalStoex.g:2045:1: rule__CompareExpr__Group__1__Impl : ( ( rule__CompareExpr__Group_1__0 )? ) ;
+    // InternalStoex.g:2084:1: rule__CompareExpr__Group__1__Impl : ( ( rule__CompareExpr__Group_1__0 )? ) ;
     public final void rule__CompareExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2049:1: ( ( ( rule__CompareExpr__Group_1__0 )? ) )
-            // InternalStoex.g:2050:1: ( ( rule__CompareExpr__Group_1__0 )? )
+            // InternalStoex.g:2088:1: ( ( ( rule__CompareExpr__Group_1__0 )? ) )
+            // InternalStoex.g:2089:1: ( ( rule__CompareExpr__Group_1__0 )? )
             {
-            // InternalStoex.g:2050:1: ( ( rule__CompareExpr__Group_1__0 )? )
-            // InternalStoex.g:2051:2: ( rule__CompareExpr__Group_1__0 )?
+            // InternalStoex.g:2089:1: ( ( rule__CompareExpr__Group_1__0 )? )
+            // InternalStoex.g:2090:2: ( rule__CompareExpr__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:2052:2: ( rule__CompareExpr__Group_1__0 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalStoex.g:2091:2: ( rule__CompareExpr__Group_1__0 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( ((LA18_0>=17 && LA18_0<=22)) ) {
-                alt18=1;
+            if ( ((LA19_0>=22 && LA19_0<=27)) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // InternalStoex.g:2052:3: rule__CompareExpr__Group_1__0
+                    // InternalStoex.g:2091:3: rule__CompareExpr__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__CompareExpr__Group_1__0();
@@ -7331,14 +7487,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group_1__0"
-    // InternalStoex.g:2061:1: rule__CompareExpr__Group_1__0 : rule__CompareExpr__Group_1__0__Impl rule__CompareExpr__Group_1__1 ;
+    // InternalStoex.g:2100:1: rule__CompareExpr__Group_1__0 : rule__CompareExpr__Group_1__0__Impl rule__CompareExpr__Group_1__1 ;
     public final void rule__CompareExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2065:1: ( rule__CompareExpr__Group_1__0__Impl rule__CompareExpr__Group_1__1 )
-            // InternalStoex.g:2066:2: rule__CompareExpr__Group_1__0__Impl rule__CompareExpr__Group_1__1
+            // InternalStoex.g:2104:1: ( rule__CompareExpr__Group_1__0__Impl rule__CompareExpr__Group_1__1 )
+            // InternalStoex.g:2105:2: rule__CompareExpr__Group_1__0__Impl rule__CompareExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_10);
             rule__CompareExpr__Group_1__0__Impl();
@@ -7369,23 +7525,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group_1__0__Impl"
-    // InternalStoex.g:2073:1: rule__CompareExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:2112:1: rule__CompareExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__CompareExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2077:1: ( ( () ) )
-            // InternalStoex.g:2078:1: ( () )
+            // InternalStoex.g:2116:1: ( ( () ) )
+            // InternalStoex.g:2117:1: ( () )
             {
-            // InternalStoex.g:2078:1: ( () )
-            // InternalStoex.g:2079:2: ()
+            // InternalStoex.g:2117:1: ( () )
+            // InternalStoex.g:2118:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getCompareExpressionLeftAction_1_0()); 
             }
-            // InternalStoex.g:2080:2: ()
-            // InternalStoex.g:2080:3: 
+            // InternalStoex.g:2119:2: ()
+            // InternalStoex.g:2119:3: 
             {
             }
 
@@ -7410,14 +7566,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group_1__1"
-    // InternalStoex.g:2088:1: rule__CompareExpr__Group_1__1 : rule__CompareExpr__Group_1__1__Impl rule__CompareExpr__Group_1__2 ;
+    // InternalStoex.g:2127:1: rule__CompareExpr__Group_1__1 : rule__CompareExpr__Group_1__1__Impl rule__CompareExpr__Group_1__2 ;
     public final void rule__CompareExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2092:1: ( rule__CompareExpr__Group_1__1__Impl rule__CompareExpr__Group_1__2 )
-            // InternalStoex.g:2093:2: rule__CompareExpr__Group_1__1__Impl rule__CompareExpr__Group_1__2
+            // InternalStoex.g:2131:1: ( rule__CompareExpr__Group_1__1__Impl rule__CompareExpr__Group_1__2 )
+            // InternalStoex.g:2132:2: rule__CompareExpr__Group_1__1__Impl rule__CompareExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__CompareExpr__Group_1__1__Impl();
@@ -7448,23 +7604,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group_1__1__Impl"
-    // InternalStoex.g:2100:1: rule__CompareExpr__Group_1__1__Impl : ( ( rule__CompareExpr__OperationAssignment_1_1 ) ) ;
+    // InternalStoex.g:2139:1: rule__CompareExpr__Group_1__1__Impl : ( ( rule__CompareExpr__OperationAssignment_1_1 ) ) ;
     public final void rule__CompareExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2104:1: ( ( ( rule__CompareExpr__OperationAssignment_1_1 ) ) )
-            // InternalStoex.g:2105:1: ( ( rule__CompareExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2143:1: ( ( ( rule__CompareExpr__OperationAssignment_1_1 ) ) )
+            // InternalStoex.g:2144:1: ( ( rule__CompareExpr__OperationAssignment_1_1 ) )
             {
-            // InternalStoex.g:2105:1: ( ( rule__CompareExpr__OperationAssignment_1_1 ) )
-            // InternalStoex.g:2106:2: ( rule__CompareExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2144:1: ( ( rule__CompareExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2145:2: ( rule__CompareExpr__OperationAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getOperationAssignment_1_1()); 
             }
-            // InternalStoex.g:2107:2: ( rule__CompareExpr__OperationAssignment_1_1 )
-            // InternalStoex.g:2107:3: rule__CompareExpr__OperationAssignment_1_1
+            // InternalStoex.g:2146:2: ( rule__CompareExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2146:3: rule__CompareExpr__OperationAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__CompareExpr__OperationAssignment_1_1();
@@ -7499,14 +7655,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group_1__2"
-    // InternalStoex.g:2115:1: rule__CompareExpr__Group_1__2 : rule__CompareExpr__Group_1__2__Impl ;
+    // InternalStoex.g:2154:1: rule__CompareExpr__Group_1__2 : rule__CompareExpr__Group_1__2__Impl ;
     public final void rule__CompareExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2119:1: ( rule__CompareExpr__Group_1__2__Impl )
-            // InternalStoex.g:2120:2: rule__CompareExpr__Group_1__2__Impl
+            // InternalStoex.g:2158:1: ( rule__CompareExpr__Group_1__2__Impl )
+            // InternalStoex.g:2159:2: rule__CompareExpr__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__CompareExpr__Group_1__2__Impl();
@@ -7532,23 +7688,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__Group_1__2__Impl"
-    // InternalStoex.g:2126:1: rule__CompareExpr__Group_1__2__Impl : ( ( rule__CompareExpr__RightAssignment_1_2 ) ) ;
+    // InternalStoex.g:2165:1: rule__CompareExpr__Group_1__2__Impl : ( ( rule__CompareExpr__RightAssignment_1_2 ) ) ;
     public final void rule__CompareExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2130:1: ( ( ( rule__CompareExpr__RightAssignment_1_2 ) ) )
-            // InternalStoex.g:2131:1: ( ( rule__CompareExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2169:1: ( ( ( rule__CompareExpr__RightAssignment_1_2 ) ) )
+            // InternalStoex.g:2170:1: ( ( rule__CompareExpr__RightAssignment_1_2 ) )
             {
-            // InternalStoex.g:2131:1: ( ( rule__CompareExpr__RightAssignment_1_2 ) )
-            // InternalStoex.g:2132:2: ( rule__CompareExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2170:1: ( ( rule__CompareExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2171:2: ( rule__CompareExpr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getRightAssignment_1_2()); 
             }
-            // InternalStoex.g:2133:2: ( rule__CompareExpr__RightAssignment_1_2 )
-            // InternalStoex.g:2133:3: rule__CompareExpr__RightAssignment_1_2
+            // InternalStoex.g:2172:2: ( rule__CompareExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2172:3: rule__CompareExpr__RightAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__CompareExpr__RightAssignment_1_2();
@@ -7583,14 +7739,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group__0"
-    // InternalStoex.g:2142:1: rule__SumExpr__Group__0 : rule__SumExpr__Group__0__Impl rule__SumExpr__Group__1 ;
+    // InternalStoex.g:2181:1: rule__SumExpr__Group__0 : rule__SumExpr__Group__0__Impl rule__SumExpr__Group__1 ;
     public final void rule__SumExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2146:1: ( rule__SumExpr__Group__0__Impl rule__SumExpr__Group__1 )
-            // InternalStoex.g:2147:2: rule__SumExpr__Group__0__Impl rule__SumExpr__Group__1
+            // InternalStoex.g:2185:1: ( rule__SumExpr__Group__0__Impl rule__SumExpr__Group__1 )
+            // InternalStoex.g:2186:2: rule__SumExpr__Group__0__Impl rule__SumExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__SumExpr__Group__0__Impl();
@@ -7621,17 +7777,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group__0__Impl"
-    // InternalStoex.g:2154:1: rule__SumExpr__Group__0__Impl : ( ruleprodExpr ) ;
+    // InternalStoex.g:2193:1: rule__SumExpr__Group__0__Impl : ( ruleprodExpr ) ;
     public final void rule__SumExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2158:1: ( ( ruleprodExpr ) )
-            // InternalStoex.g:2159:1: ( ruleprodExpr )
+            // InternalStoex.g:2197:1: ( ( ruleprodExpr ) )
+            // InternalStoex.g:2198:1: ( ruleprodExpr )
             {
-            // InternalStoex.g:2159:1: ( ruleprodExpr )
-            // InternalStoex.g:2160:2: ruleprodExpr
+            // InternalStoex.g:2198:1: ( ruleprodExpr )
+            // InternalStoex.g:2199:2: ruleprodExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getProdExprParserRuleCall_0()); 
@@ -7666,14 +7822,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group__1"
-    // InternalStoex.g:2169:1: rule__SumExpr__Group__1 : rule__SumExpr__Group__1__Impl ;
+    // InternalStoex.g:2208:1: rule__SumExpr__Group__1 : rule__SumExpr__Group__1__Impl ;
     public final void rule__SumExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2173:1: ( rule__SumExpr__Group__1__Impl )
-            // InternalStoex.g:2174:2: rule__SumExpr__Group__1__Impl
+            // InternalStoex.g:2212:1: ( rule__SumExpr__Group__1__Impl )
+            // InternalStoex.g:2213:2: rule__SumExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__SumExpr__Group__1__Impl();
@@ -7699,35 +7855,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group__1__Impl"
-    // InternalStoex.g:2180:1: rule__SumExpr__Group__1__Impl : ( ( rule__SumExpr__Group_1__0 )* ) ;
+    // InternalStoex.g:2219:1: rule__SumExpr__Group__1__Impl : ( ( rule__SumExpr__Group_1__0 )* ) ;
     public final void rule__SumExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2184:1: ( ( ( rule__SumExpr__Group_1__0 )* ) )
-            // InternalStoex.g:2185:1: ( ( rule__SumExpr__Group_1__0 )* )
+            // InternalStoex.g:2223:1: ( ( ( rule__SumExpr__Group_1__0 )* ) )
+            // InternalStoex.g:2224:1: ( ( rule__SumExpr__Group_1__0 )* )
             {
-            // InternalStoex.g:2185:1: ( ( rule__SumExpr__Group_1__0 )* )
-            // InternalStoex.g:2186:2: ( rule__SumExpr__Group_1__0 )*
+            // InternalStoex.g:2224:1: ( ( rule__SumExpr__Group_1__0 )* )
+            // InternalStoex.g:2225:2: ( rule__SumExpr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:2187:2: ( rule__SumExpr__Group_1__0 )*
-            loop19:
+            // InternalStoex.g:2226:2: ( rule__SumExpr__Group_1__0 )*
+            loop20:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( ((LA19_0>=23 && LA19_0<=24)) ) {
-                    alt19=1;
+                if ( ((LA20_0>=28 && LA20_0<=29)) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt20) {
             	case 1 :
-            	    // InternalStoex.g:2187:3: rule__SumExpr__Group_1__0
+            	    // InternalStoex.g:2226:3: rule__SumExpr__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_12);
             	    rule__SumExpr__Group_1__0();
@@ -7739,7 +7895,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop20;
                 }
             } while (true);
 
@@ -7768,14 +7924,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group_1__0"
-    // InternalStoex.g:2196:1: rule__SumExpr__Group_1__0 : rule__SumExpr__Group_1__0__Impl rule__SumExpr__Group_1__1 ;
+    // InternalStoex.g:2235:1: rule__SumExpr__Group_1__0 : rule__SumExpr__Group_1__0__Impl rule__SumExpr__Group_1__1 ;
     public final void rule__SumExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2200:1: ( rule__SumExpr__Group_1__0__Impl rule__SumExpr__Group_1__1 )
-            // InternalStoex.g:2201:2: rule__SumExpr__Group_1__0__Impl rule__SumExpr__Group_1__1
+            // InternalStoex.g:2239:1: ( rule__SumExpr__Group_1__0__Impl rule__SumExpr__Group_1__1 )
+            // InternalStoex.g:2240:2: rule__SumExpr__Group_1__0__Impl rule__SumExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__SumExpr__Group_1__0__Impl();
@@ -7806,23 +7962,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group_1__0__Impl"
-    // InternalStoex.g:2208:1: rule__SumExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:2247:1: rule__SumExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__SumExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2212:1: ( ( () ) )
-            // InternalStoex.g:2213:1: ( () )
+            // InternalStoex.g:2251:1: ( ( () ) )
+            // InternalStoex.g:2252:1: ( () )
             {
-            // InternalStoex.g:2213:1: ( () )
-            // InternalStoex.g:2214:2: ()
+            // InternalStoex.g:2252:1: ( () )
+            // InternalStoex.g:2253:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getTermExpressionLeftAction_1_0()); 
             }
-            // InternalStoex.g:2215:2: ()
-            // InternalStoex.g:2215:3: 
+            // InternalStoex.g:2254:2: ()
+            // InternalStoex.g:2254:3: 
             {
             }
 
@@ -7847,14 +8003,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group_1__1"
-    // InternalStoex.g:2223:1: rule__SumExpr__Group_1__1 : rule__SumExpr__Group_1__1__Impl rule__SumExpr__Group_1__2 ;
+    // InternalStoex.g:2262:1: rule__SumExpr__Group_1__1 : rule__SumExpr__Group_1__1__Impl rule__SumExpr__Group_1__2 ;
     public final void rule__SumExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2227:1: ( rule__SumExpr__Group_1__1__Impl rule__SumExpr__Group_1__2 )
-            // InternalStoex.g:2228:2: rule__SumExpr__Group_1__1__Impl rule__SumExpr__Group_1__2
+            // InternalStoex.g:2266:1: ( rule__SumExpr__Group_1__1__Impl rule__SumExpr__Group_1__2 )
+            // InternalStoex.g:2267:2: rule__SumExpr__Group_1__1__Impl rule__SumExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__SumExpr__Group_1__1__Impl();
@@ -7885,23 +8041,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group_1__1__Impl"
-    // InternalStoex.g:2235:1: rule__SumExpr__Group_1__1__Impl : ( ( rule__SumExpr__OperationAssignment_1_1 ) ) ;
+    // InternalStoex.g:2274:1: rule__SumExpr__Group_1__1__Impl : ( ( rule__SumExpr__OperationAssignment_1_1 ) ) ;
     public final void rule__SumExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2239:1: ( ( ( rule__SumExpr__OperationAssignment_1_1 ) ) )
-            // InternalStoex.g:2240:1: ( ( rule__SumExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2278:1: ( ( ( rule__SumExpr__OperationAssignment_1_1 ) ) )
+            // InternalStoex.g:2279:1: ( ( rule__SumExpr__OperationAssignment_1_1 ) )
             {
-            // InternalStoex.g:2240:1: ( ( rule__SumExpr__OperationAssignment_1_1 ) )
-            // InternalStoex.g:2241:2: ( rule__SumExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2279:1: ( ( rule__SumExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2280:2: ( rule__SumExpr__OperationAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getOperationAssignment_1_1()); 
             }
-            // InternalStoex.g:2242:2: ( rule__SumExpr__OperationAssignment_1_1 )
-            // InternalStoex.g:2242:3: rule__SumExpr__OperationAssignment_1_1
+            // InternalStoex.g:2281:2: ( rule__SumExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2281:3: rule__SumExpr__OperationAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__SumExpr__OperationAssignment_1_1();
@@ -7936,14 +8092,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group_1__2"
-    // InternalStoex.g:2250:1: rule__SumExpr__Group_1__2 : rule__SumExpr__Group_1__2__Impl ;
+    // InternalStoex.g:2289:1: rule__SumExpr__Group_1__2 : rule__SumExpr__Group_1__2__Impl ;
     public final void rule__SumExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2254:1: ( rule__SumExpr__Group_1__2__Impl )
-            // InternalStoex.g:2255:2: rule__SumExpr__Group_1__2__Impl
+            // InternalStoex.g:2293:1: ( rule__SumExpr__Group_1__2__Impl )
+            // InternalStoex.g:2294:2: rule__SumExpr__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__SumExpr__Group_1__2__Impl();
@@ -7969,23 +8125,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__Group_1__2__Impl"
-    // InternalStoex.g:2261:1: rule__SumExpr__Group_1__2__Impl : ( ( rule__SumExpr__RightAssignment_1_2 ) ) ;
+    // InternalStoex.g:2300:1: rule__SumExpr__Group_1__2__Impl : ( ( rule__SumExpr__RightAssignment_1_2 ) ) ;
     public final void rule__SumExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2265:1: ( ( ( rule__SumExpr__RightAssignment_1_2 ) ) )
-            // InternalStoex.g:2266:1: ( ( rule__SumExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2304:1: ( ( ( rule__SumExpr__RightAssignment_1_2 ) ) )
+            // InternalStoex.g:2305:1: ( ( rule__SumExpr__RightAssignment_1_2 ) )
             {
-            // InternalStoex.g:2266:1: ( ( rule__SumExpr__RightAssignment_1_2 ) )
-            // InternalStoex.g:2267:2: ( rule__SumExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2305:1: ( ( rule__SumExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2306:2: ( rule__SumExpr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getRightAssignment_1_2()); 
             }
-            // InternalStoex.g:2268:2: ( rule__SumExpr__RightAssignment_1_2 )
-            // InternalStoex.g:2268:3: rule__SumExpr__RightAssignment_1_2
+            // InternalStoex.g:2307:2: ( rule__SumExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2307:3: rule__SumExpr__RightAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__SumExpr__RightAssignment_1_2();
@@ -8020,14 +8176,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group__0"
-    // InternalStoex.g:2277:1: rule__ProdExpr__Group__0 : rule__ProdExpr__Group__0__Impl rule__ProdExpr__Group__1 ;
+    // InternalStoex.g:2316:1: rule__ProdExpr__Group__0 : rule__ProdExpr__Group__0__Impl rule__ProdExpr__Group__1 ;
     public final void rule__ProdExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2281:1: ( rule__ProdExpr__Group__0__Impl rule__ProdExpr__Group__1 )
-            // InternalStoex.g:2282:2: rule__ProdExpr__Group__0__Impl rule__ProdExpr__Group__1
+            // InternalStoex.g:2320:1: ( rule__ProdExpr__Group__0__Impl rule__ProdExpr__Group__1 )
+            // InternalStoex.g:2321:2: rule__ProdExpr__Group__0__Impl rule__ProdExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__ProdExpr__Group__0__Impl();
@@ -8058,17 +8214,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group__0__Impl"
-    // InternalStoex.g:2289:1: rule__ProdExpr__Group__0__Impl : ( rulepowExpr ) ;
+    // InternalStoex.g:2328:1: rule__ProdExpr__Group__0__Impl : ( rulepowExpr ) ;
     public final void rule__ProdExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2293:1: ( ( rulepowExpr ) )
-            // InternalStoex.g:2294:1: ( rulepowExpr )
+            // InternalStoex.g:2332:1: ( ( rulepowExpr ) )
+            // InternalStoex.g:2333:1: ( rulepowExpr )
             {
-            // InternalStoex.g:2294:1: ( rulepowExpr )
-            // InternalStoex.g:2295:2: rulepowExpr
+            // InternalStoex.g:2333:1: ( rulepowExpr )
+            // InternalStoex.g:2334:2: rulepowExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getPowExprParserRuleCall_0()); 
@@ -8103,14 +8259,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group__1"
-    // InternalStoex.g:2304:1: rule__ProdExpr__Group__1 : rule__ProdExpr__Group__1__Impl ;
+    // InternalStoex.g:2343:1: rule__ProdExpr__Group__1 : rule__ProdExpr__Group__1__Impl ;
     public final void rule__ProdExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2308:1: ( rule__ProdExpr__Group__1__Impl )
-            // InternalStoex.g:2309:2: rule__ProdExpr__Group__1__Impl
+            // InternalStoex.g:2347:1: ( rule__ProdExpr__Group__1__Impl )
+            // InternalStoex.g:2348:2: rule__ProdExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProdExpr__Group__1__Impl();
@@ -8136,35 +8292,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group__1__Impl"
-    // InternalStoex.g:2315:1: rule__ProdExpr__Group__1__Impl : ( ( rule__ProdExpr__Group_1__0 )* ) ;
+    // InternalStoex.g:2354:1: rule__ProdExpr__Group__1__Impl : ( ( rule__ProdExpr__Group_1__0 )* ) ;
     public final void rule__ProdExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2319:1: ( ( ( rule__ProdExpr__Group_1__0 )* ) )
-            // InternalStoex.g:2320:1: ( ( rule__ProdExpr__Group_1__0 )* )
+            // InternalStoex.g:2358:1: ( ( ( rule__ProdExpr__Group_1__0 )* ) )
+            // InternalStoex.g:2359:1: ( ( rule__ProdExpr__Group_1__0 )* )
             {
-            // InternalStoex.g:2320:1: ( ( rule__ProdExpr__Group_1__0 )* )
-            // InternalStoex.g:2321:2: ( rule__ProdExpr__Group_1__0 )*
+            // InternalStoex.g:2359:1: ( ( rule__ProdExpr__Group_1__0 )* )
+            // InternalStoex.g:2360:2: ( rule__ProdExpr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:2322:2: ( rule__ProdExpr__Group_1__0 )*
-            loop20:
+            // InternalStoex.g:2361:2: ( rule__ProdExpr__Group_1__0 )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( ((LA20_0>=25 && LA20_0<=27)) ) {
-                    alt20=1;
+                if ( ((LA21_0>=30 && LA21_0<=32)) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalStoex.g:2322:3: rule__ProdExpr__Group_1__0
+            	    // InternalStoex.g:2361:3: rule__ProdExpr__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_14);
             	    rule__ProdExpr__Group_1__0();
@@ -8176,7 +8332,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
@@ -8205,14 +8361,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group_1__0"
-    // InternalStoex.g:2331:1: rule__ProdExpr__Group_1__0 : rule__ProdExpr__Group_1__0__Impl rule__ProdExpr__Group_1__1 ;
+    // InternalStoex.g:2370:1: rule__ProdExpr__Group_1__0 : rule__ProdExpr__Group_1__0__Impl rule__ProdExpr__Group_1__1 ;
     public final void rule__ProdExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2335:1: ( rule__ProdExpr__Group_1__0__Impl rule__ProdExpr__Group_1__1 )
-            // InternalStoex.g:2336:2: rule__ProdExpr__Group_1__0__Impl rule__ProdExpr__Group_1__1
+            // InternalStoex.g:2374:1: ( rule__ProdExpr__Group_1__0__Impl rule__ProdExpr__Group_1__1 )
+            // InternalStoex.g:2375:2: rule__ProdExpr__Group_1__0__Impl rule__ProdExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__ProdExpr__Group_1__0__Impl();
@@ -8243,23 +8399,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group_1__0__Impl"
-    // InternalStoex.g:2343:1: rule__ProdExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:2382:1: rule__ProdExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__ProdExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2347:1: ( ( () ) )
-            // InternalStoex.g:2348:1: ( () )
+            // InternalStoex.g:2386:1: ( ( () ) )
+            // InternalStoex.g:2387:1: ( () )
             {
-            // InternalStoex.g:2348:1: ( () )
-            // InternalStoex.g:2349:2: ()
+            // InternalStoex.g:2387:1: ( () )
+            // InternalStoex.g:2388:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getProductExpressionLeftAction_1_0()); 
             }
-            // InternalStoex.g:2350:2: ()
-            // InternalStoex.g:2350:3: 
+            // InternalStoex.g:2389:2: ()
+            // InternalStoex.g:2389:3: 
             {
             }
 
@@ -8284,14 +8440,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group_1__1"
-    // InternalStoex.g:2358:1: rule__ProdExpr__Group_1__1 : rule__ProdExpr__Group_1__1__Impl rule__ProdExpr__Group_1__2 ;
+    // InternalStoex.g:2397:1: rule__ProdExpr__Group_1__1 : rule__ProdExpr__Group_1__1__Impl rule__ProdExpr__Group_1__2 ;
     public final void rule__ProdExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2362:1: ( rule__ProdExpr__Group_1__1__Impl rule__ProdExpr__Group_1__2 )
-            // InternalStoex.g:2363:2: rule__ProdExpr__Group_1__1__Impl rule__ProdExpr__Group_1__2
+            // InternalStoex.g:2401:1: ( rule__ProdExpr__Group_1__1__Impl rule__ProdExpr__Group_1__2 )
+            // InternalStoex.g:2402:2: rule__ProdExpr__Group_1__1__Impl rule__ProdExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__ProdExpr__Group_1__1__Impl();
@@ -8322,23 +8478,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group_1__1__Impl"
-    // InternalStoex.g:2370:1: rule__ProdExpr__Group_1__1__Impl : ( ( rule__ProdExpr__OperationAssignment_1_1 ) ) ;
+    // InternalStoex.g:2409:1: rule__ProdExpr__Group_1__1__Impl : ( ( rule__ProdExpr__OperationAssignment_1_1 ) ) ;
     public final void rule__ProdExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2374:1: ( ( ( rule__ProdExpr__OperationAssignment_1_1 ) ) )
-            // InternalStoex.g:2375:1: ( ( rule__ProdExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2413:1: ( ( ( rule__ProdExpr__OperationAssignment_1_1 ) ) )
+            // InternalStoex.g:2414:1: ( ( rule__ProdExpr__OperationAssignment_1_1 ) )
             {
-            // InternalStoex.g:2375:1: ( ( rule__ProdExpr__OperationAssignment_1_1 ) )
-            // InternalStoex.g:2376:2: ( rule__ProdExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2414:1: ( ( rule__ProdExpr__OperationAssignment_1_1 ) )
+            // InternalStoex.g:2415:2: ( rule__ProdExpr__OperationAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getOperationAssignment_1_1()); 
             }
-            // InternalStoex.g:2377:2: ( rule__ProdExpr__OperationAssignment_1_1 )
-            // InternalStoex.g:2377:3: rule__ProdExpr__OperationAssignment_1_1
+            // InternalStoex.g:2416:2: ( rule__ProdExpr__OperationAssignment_1_1 )
+            // InternalStoex.g:2416:3: rule__ProdExpr__OperationAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProdExpr__OperationAssignment_1_1();
@@ -8373,14 +8529,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group_1__2"
-    // InternalStoex.g:2385:1: rule__ProdExpr__Group_1__2 : rule__ProdExpr__Group_1__2__Impl ;
+    // InternalStoex.g:2424:1: rule__ProdExpr__Group_1__2 : rule__ProdExpr__Group_1__2__Impl ;
     public final void rule__ProdExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2389:1: ( rule__ProdExpr__Group_1__2__Impl )
-            // InternalStoex.g:2390:2: rule__ProdExpr__Group_1__2__Impl
+            // InternalStoex.g:2428:1: ( rule__ProdExpr__Group_1__2__Impl )
+            // InternalStoex.g:2429:2: rule__ProdExpr__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProdExpr__Group_1__2__Impl();
@@ -8406,23 +8562,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__Group_1__2__Impl"
-    // InternalStoex.g:2396:1: rule__ProdExpr__Group_1__2__Impl : ( ( rule__ProdExpr__RightAssignment_1_2 ) ) ;
+    // InternalStoex.g:2435:1: rule__ProdExpr__Group_1__2__Impl : ( ( rule__ProdExpr__RightAssignment_1_2 ) ) ;
     public final void rule__ProdExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2400:1: ( ( ( rule__ProdExpr__RightAssignment_1_2 ) ) )
-            // InternalStoex.g:2401:1: ( ( rule__ProdExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2439:1: ( ( ( rule__ProdExpr__RightAssignment_1_2 ) ) )
+            // InternalStoex.g:2440:1: ( ( rule__ProdExpr__RightAssignment_1_2 ) )
             {
-            // InternalStoex.g:2401:1: ( ( rule__ProdExpr__RightAssignment_1_2 ) )
-            // InternalStoex.g:2402:2: ( rule__ProdExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2440:1: ( ( rule__ProdExpr__RightAssignment_1_2 ) )
+            // InternalStoex.g:2441:2: ( rule__ProdExpr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getRightAssignment_1_2()); 
             }
-            // InternalStoex.g:2403:2: ( rule__ProdExpr__RightAssignment_1_2 )
-            // InternalStoex.g:2403:3: rule__ProdExpr__RightAssignment_1_2
+            // InternalStoex.g:2442:2: ( rule__ProdExpr__RightAssignment_1_2 )
+            // InternalStoex.g:2442:3: rule__ProdExpr__RightAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProdExpr__RightAssignment_1_2();
@@ -8457,14 +8613,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group__0"
-    // InternalStoex.g:2412:1: rule__PowExpr__Group__0 : rule__PowExpr__Group__0__Impl rule__PowExpr__Group__1 ;
+    // InternalStoex.g:2451:1: rule__PowExpr__Group__0 : rule__PowExpr__Group__0__Impl rule__PowExpr__Group__1 ;
     public final void rule__PowExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2416:1: ( rule__PowExpr__Group__0__Impl rule__PowExpr__Group__1 )
-            // InternalStoex.g:2417:2: rule__PowExpr__Group__0__Impl rule__PowExpr__Group__1
+            // InternalStoex.g:2455:1: ( rule__PowExpr__Group__0__Impl rule__PowExpr__Group__1 )
+            // InternalStoex.g:2456:2: rule__PowExpr__Group__0__Impl rule__PowExpr__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_15);
             rule__PowExpr__Group__0__Impl();
@@ -8495,17 +8651,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group__0__Impl"
-    // InternalStoex.g:2424:1: rule__PowExpr__Group__0__Impl : ( ruleunaryExpr ) ;
+    // InternalStoex.g:2463:1: rule__PowExpr__Group__0__Impl : ( ruleunaryExpr ) ;
     public final void rule__PowExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2428:1: ( ( ruleunaryExpr ) )
-            // InternalStoex.g:2429:1: ( ruleunaryExpr )
+            // InternalStoex.g:2467:1: ( ( ruleunaryExpr ) )
+            // InternalStoex.g:2468:1: ( ruleunaryExpr )
             {
-            // InternalStoex.g:2429:1: ( ruleunaryExpr )
-            // InternalStoex.g:2430:2: ruleunaryExpr
+            // InternalStoex.g:2468:1: ( ruleunaryExpr )
+            // InternalStoex.g:2469:2: ruleunaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPowExprAccess().getUnaryExprParserRuleCall_0()); 
@@ -8540,14 +8696,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group__1"
-    // InternalStoex.g:2439:1: rule__PowExpr__Group__1 : rule__PowExpr__Group__1__Impl ;
+    // InternalStoex.g:2478:1: rule__PowExpr__Group__1 : rule__PowExpr__Group__1__Impl ;
     public final void rule__PowExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2443:1: ( rule__PowExpr__Group__1__Impl )
-            // InternalStoex.g:2444:2: rule__PowExpr__Group__1__Impl
+            // InternalStoex.g:2482:1: ( rule__PowExpr__Group__1__Impl )
+            // InternalStoex.g:2483:2: rule__PowExpr__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__PowExpr__Group__1__Impl();
@@ -8573,31 +8729,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group__1__Impl"
-    // InternalStoex.g:2450:1: rule__PowExpr__Group__1__Impl : ( ( rule__PowExpr__Group_1__0 )? ) ;
+    // InternalStoex.g:2489:1: rule__PowExpr__Group__1__Impl : ( ( rule__PowExpr__Group_1__0 )? ) ;
     public final void rule__PowExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2454:1: ( ( ( rule__PowExpr__Group_1__0 )? ) )
-            // InternalStoex.g:2455:1: ( ( rule__PowExpr__Group_1__0 )? )
+            // InternalStoex.g:2493:1: ( ( ( rule__PowExpr__Group_1__0 )? ) )
+            // InternalStoex.g:2494:1: ( ( rule__PowExpr__Group_1__0 )? )
             {
-            // InternalStoex.g:2455:1: ( ( rule__PowExpr__Group_1__0 )? )
-            // InternalStoex.g:2456:2: ( rule__PowExpr__Group_1__0 )?
+            // InternalStoex.g:2494:1: ( ( rule__PowExpr__Group_1__0 )? )
+            // InternalStoex.g:2495:2: ( rule__PowExpr__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPowExprAccess().getGroup_1()); 
             }
-            // InternalStoex.g:2457:2: ( rule__PowExpr__Group_1__0 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalStoex.g:2496:2: ( rule__PowExpr__Group_1__0 )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==35) ) {
-                alt21=1;
+            if ( (LA22_0==40) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // InternalStoex.g:2457:3: rule__PowExpr__Group_1__0
+                    // InternalStoex.g:2496:3: rule__PowExpr__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__PowExpr__Group_1__0();
@@ -8635,14 +8791,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__0"
-    // InternalStoex.g:2466:1: rule__PowExpr__Group_1__0 : rule__PowExpr__Group_1__0__Impl rule__PowExpr__Group_1__1 ;
+    // InternalStoex.g:2505:1: rule__PowExpr__Group_1__0 : rule__PowExpr__Group_1__0__Impl rule__PowExpr__Group_1__1 ;
     public final void rule__PowExpr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2470:1: ( rule__PowExpr__Group_1__0__Impl rule__PowExpr__Group_1__1 )
-            // InternalStoex.g:2471:2: rule__PowExpr__Group_1__0__Impl rule__PowExpr__Group_1__1
+            // InternalStoex.g:2509:1: ( rule__PowExpr__Group_1__0__Impl rule__PowExpr__Group_1__1 )
+            // InternalStoex.g:2510:2: rule__PowExpr__Group_1__0__Impl rule__PowExpr__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_15);
             rule__PowExpr__Group_1__0__Impl();
@@ -8673,23 +8829,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__0__Impl"
-    // InternalStoex.g:2478:1: rule__PowExpr__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:2517:1: rule__PowExpr__Group_1__0__Impl : ( () ) ;
     public final void rule__PowExpr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2482:1: ( ( () ) )
-            // InternalStoex.g:2483:1: ( () )
+            // InternalStoex.g:2521:1: ( ( () ) )
+            // InternalStoex.g:2522:1: ( () )
             {
-            // InternalStoex.g:2483:1: ( () )
-            // InternalStoex.g:2484:2: ()
+            // InternalStoex.g:2522:1: ( () )
+            // InternalStoex.g:2523:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPowExprAccess().getPowerExpressionBaseAction_1_0()); 
             }
-            // InternalStoex.g:2485:2: ()
-            // InternalStoex.g:2485:3: 
+            // InternalStoex.g:2524:2: ()
+            // InternalStoex.g:2524:3: 
             {
             }
 
@@ -8714,14 +8870,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__1"
-    // InternalStoex.g:2493:1: rule__PowExpr__Group_1__1 : rule__PowExpr__Group_1__1__Impl rule__PowExpr__Group_1__2 ;
+    // InternalStoex.g:2532:1: rule__PowExpr__Group_1__1 : rule__PowExpr__Group_1__1__Impl rule__PowExpr__Group_1__2 ;
     public final void rule__PowExpr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2497:1: ( rule__PowExpr__Group_1__1__Impl rule__PowExpr__Group_1__2 )
-            // InternalStoex.g:2498:2: rule__PowExpr__Group_1__1__Impl rule__PowExpr__Group_1__2
+            // InternalStoex.g:2536:1: ( rule__PowExpr__Group_1__1__Impl rule__PowExpr__Group_1__2 )
+            // InternalStoex.g:2537:2: rule__PowExpr__Group_1__1__Impl rule__PowExpr__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__PowExpr__Group_1__1__Impl();
@@ -8752,22 +8908,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__1__Impl"
-    // InternalStoex.g:2505:1: rule__PowExpr__Group_1__1__Impl : ( '^' ) ;
+    // InternalStoex.g:2544:1: rule__PowExpr__Group_1__1__Impl : ( '^' ) ;
     public final void rule__PowExpr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2509:1: ( ( '^' ) )
-            // InternalStoex.g:2510:1: ( '^' )
+            // InternalStoex.g:2548:1: ( ( '^' ) )
+            // InternalStoex.g:2549:1: ( '^' )
             {
-            // InternalStoex.g:2510:1: ( '^' )
-            // InternalStoex.g:2511:2: '^'
+            // InternalStoex.g:2549:1: ( '^' )
+            // InternalStoex.g:2550:2: '^'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPowExprAccess().getCircumflexAccentKeyword_1_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPowExprAccess().getCircumflexAccentKeyword_1_1()); 
             }
@@ -8793,14 +8949,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__2"
-    // InternalStoex.g:2520:1: rule__PowExpr__Group_1__2 : rule__PowExpr__Group_1__2__Impl ;
+    // InternalStoex.g:2559:1: rule__PowExpr__Group_1__2 : rule__PowExpr__Group_1__2__Impl ;
     public final void rule__PowExpr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2524:1: ( rule__PowExpr__Group_1__2__Impl )
-            // InternalStoex.g:2525:2: rule__PowExpr__Group_1__2__Impl
+            // InternalStoex.g:2563:1: ( rule__PowExpr__Group_1__2__Impl )
+            // InternalStoex.g:2564:2: rule__PowExpr__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__PowExpr__Group_1__2__Impl();
@@ -8826,23 +8982,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__Group_1__2__Impl"
-    // InternalStoex.g:2531:1: rule__PowExpr__Group_1__2__Impl : ( ( rule__PowExpr__ExponentAssignment_1_2 ) ) ;
+    // InternalStoex.g:2570:1: rule__PowExpr__Group_1__2__Impl : ( ( rule__PowExpr__ExponentAssignment_1_2 ) ) ;
     public final void rule__PowExpr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2535:1: ( ( ( rule__PowExpr__ExponentAssignment_1_2 ) ) )
-            // InternalStoex.g:2536:1: ( ( rule__PowExpr__ExponentAssignment_1_2 ) )
+            // InternalStoex.g:2574:1: ( ( ( rule__PowExpr__ExponentAssignment_1_2 ) ) )
+            // InternalStoex.g:2575:1: ( ( rule__PowExpr__ExponentAssignment_1_2 ) )
             {
-            // InternalStoex.g:2536:1: ( ( rule__PowExpr__ExponentAssignment_1_2 ) )
-            // InternalStoex.g:2537:2: ( rule__PowExpr__ExponentAssignment_1_2 )
+            // InternalStoex.g:2575:1: ( ( rule__PowExpr__ExponentAssignment_1_2 ) )
+            // InternalStoex.g:2576:2: ( rule__PowExpr__ExponentAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPowExprAccess().getExponentAssignment_1_2()); 
             }
-            // InternalStoex.g:2538:2: ( rule__PowExpr__ExponentAssignment_1_2 )
-            // InternalStoex.g:2538:3: rule__PowExpr__ExponentAssignment_1_2
+            // InternalStoex.g:2577:2: ( rule__PowExpr__ExponentAssignment_1_2 )
+            // InternalStoex.g:2577:3: rule__PowExpr__ExponentAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__PowExpr__ExponentAssignment_1_2();
@@ -8877,14 +9033,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotExpression__Group__0"
-    // InternalStoex.g:2547:1: rule__NotExpression__Group__0 : rule__NotExpression__Group__0__Impl rule__NotExpression__Group__1 ;
+    // InternalStoex.g:2586:1: rule__NotExpression__Group__0 : rule__NotExpression__Group__0__Impl rule__NotExpression__Group__1 ;
     public final void rule__NotExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2551:1: ( rule__NotExpression__Group__0__Impl rule__NotExpression__Group__1 )
-            // InternalStoex.g:2552:2: rule__NotExpression__Group__0__Impl rule__NotExpression__Group__1
+            // InternalStoex.g:2590:1: ( rule__NotExpression__Group__0__Impl rule__NotExpression__Group__1 )
+            // InternalStoex.g:2591:2: rule__NotExpression__Group__0__Impl rule__NotExpression__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__NotExpression__Group__0__Impl();
@@ -8915,22 +9071,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotExpression__Group__0__Impl"
-    // InternalStoex.g:2559:1: rule__NotExpression__Group__0__Impl : ( 'NOT' ) ;
+    // InternalStoex.g:2598:1: rule__NotExpression__Group__0__Impl : ( 'NOT' ) ;
     public final void rule__NotExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2563:1: ( ( 'NOT' ) )
-            // InternalStoex.g:2564:1: ( 'NOT' )
+            // InternalStoex.g:2602:1: ( ( 'NOT' ) )
+            // InternalStoex.g:2603:1: ( 'NOT' )
             {
-            // InternalStoex.g:2564:1: ( 'NOT' )
-            // InternalStoex.g:2565:2: 'NOT'
+            // InternalStoex.g:2603:1: ( 'NOT' )
+            // InternalStoex.g:2604:2: 'NOT'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNotExpressionAccess().getNOTKeyword_0()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNotExpressionAccess().getNOTKeyword_0()); 
             }
@@ -8956,14 +9112,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotExpression__Group__1"
-    // InternalStoex.g:2574:1: rule__NotExpression__Group__1 : rule__NotExpression__Group__1__Impl ;
+    // InternalStoex.g:2613:1: rule__NotExpression__Group__1 : rule__NotExpression__Group__1__Impl ;
     public final void rule__NotExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2578:1: ( rule__NotExpression__Group__1__Impl )
-            // InternalStoex.g:2579:2: rule__NotExpression__Group__1__Impl
+            // InternalStoex.g:2617:1: ( rule__NotExpression__Group__1__Impl )
+            // InternalStoex.g:2618:2: rule__NotExpression__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__NotExpression__Group__1__Impl();
@@ -8989,23 +9145,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotExpression__Group__1__Impl"
-    // InternalStoex.g:2585:1: rule__NotExpression__Group__1__Impl : ( ( rule__NotExpression__InnerAssignment_1 ) ) ;
+    // InternalStoex.g:2624:1: rule__NotExpression__Group__1__Impl : ( ( rule__NotExpression__InnerAssignment_1 ) ) ;
     public final void rule__NotExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2589:1: ( ( ( rule__NotExpression__InnerAssignment_1 ) ) )
-            // InternalStoex.g:2590:1: ( ( rule__NotExpression__InnerAssignment_1 ) )
+            // InternalStoex.g:2628:1: ( ( ( rule__NotExpression__InnerAssignment_1 ) ) )
+            // InternalStoex.g:2629:1: ( ( rule__NotExpression__InnerAssignment_1 ) )
             {
-            // InternalStoex.g:2590:1: ( ( rule__NotExpression__InnerAssignment_1 ) )
-            // InternalStoex.g:2591:2: ( rule__NotExpression__InnerAssignment_1 )
+            // InternalStoex.g:2629:1: ( ( rule__NotExpression__InnerAssignment_1 ) )
+            // InternalStoex.g:2630:2: ( rule__NotExpression__InnerAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNotExpressionAccess().getInnerAssignment_1()); 
             }
-            // InternalStoex.g:2592:2: ( rule__NotExpression__InnerAssignment_1 )
-            // InternalStoex.g:2592:3: rule__NotExpression__InnerAssignment_1
+            // InternalStoex.g:2631:2: ( rule__NotExpression__InnerAssignment_1 )
+            // InternalStoex.g:2631:3: rule__NotExpression__InnerAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__NotExpression__InnerAssignment_1();
@@ -9040,14 +9196,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NegativeExpression__Group__0"
-    // InternalStoex.g:2601:1: rule__NegativeExpression__Group__0 : rule__NegativeExpression__Group__0__Impl rule__NegativeExpression__Group__1 ;
+    // InternalStoex.g:2640:1: rule__NegativeExpression__Group__0 : rule__NegativeExpression__Group__0__Impl rule__NegativeExpression__Group__1 ;
     public final void rule__NegativeExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2605:1: ( rule__NegativeExpression__Group__0__Impl rule__NegativeExpression__Group__1 )
-            // InternalStoex.g:2606:2: rule__NegativeExpression__Group__0__Impl rule__NegativeExpression__Group__1
+            // InternalStoex.g:2644:1: ( rule__NegativeExpression__Group__0__Impl rule__NegativeExpression__Group__1 )
+            // InternalStoex.g:2645:2: rule__NegativeExpression__Group__0__Impl rule__NegativeExpression__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__NegativeExpression__Group__0__Impl();
@@ -9078,22 +9234,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NegativeExpression__Group__0__Impl"
-    // InternalStoex.g:2613:1: rule__NegativeExpression__Group__0__Impl : ( '-' ) ;
+    // InternalStoex.g:2652:1: rule__NegativeExpression__Group__0__Impl : ( '-' ) ;
     public final void rule__NegativeExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2617:1: ( ( '-' ) )
-            // InternalStoex.g:2618:1: ( '-' )
+            // InternalStoex.g:2656:1: ( ( '-' ) )
+            // InternalStoex.g:2657:1: ( '-' )
             {
-            // InternalStoex.g:2618:1: ( '-' )
-            // InternalStoex.g:2619:2: '-'
+            // InternalStoex.g:2657:1: ( '-' )
+            // InternalStoex.g:2658:2: '-'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegativeExpressionAccess().getHyphenMinusKeyword_0()); 
             }
-            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNegativeExpressionAccess().getHyphenMinusKeyword_0()); 
             }
@@ -9119,14 +9275,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NegativeExpression__Group__1"
-    // InternalStoex.g:2628:1: rule__NegativeExpression__Group__1 : rule__NegativeExpression__Group__1__Impl ;
+    // InternalStoex.g:2667:1: rule__NegativeExpression__Group__1 : rule__NegativeExpression__Group__1__Impl ;
     public final void rule__NegativeExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2632:1: ( rule__NegativeExpression__Group__1__Impl )
-            // InternalStoex.g:2633:2: rule__NegativeExpression__Group__1__Impl
+            // InternalStoex.g:2671:1: ( rule__NegativeExpression__Group__1__Impl )
+            // InternalStoex.g:2672:2: rule__NegativeExpression__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__NegativeExpression__Group__1__Impl();
@@ -9152,23 +9308,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NegativeExpression__Group__1__Impl"
-    // InternalStoex.g:2639:1: rule__NegativeExpression__Group__1__Impl : ( ( rule__NegativeExpression__InnerAssignment_1 ) ) ;
+    // InternalStoex.g:2678:1: rule__NegativeExpression__Group__1__Impl : ( ( rule__NegativeExpression__InnerAssignment_1 ) ) ;
     public final void rule__NegativeExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2643:1: ( ( ( rule__NegativeExpression__InnerAssignment_1 ) ) )
-            // InternalStoex.g:2644:1: ( ( rule__NegativeExpression__InnerAssignment_1 ) )
+            // InternalStoex.g:2682:1: ( ( ( rule__NegativeExpression__InnerAssignment_1 ) ) )
+            // InternalStoex.g:2683:1: ( ( rule__NegativeExpression__InnerAssignment_1 ) )
             {
-            // InternalStoex.g:2644:1: ( ( rule__NegativeExpression__InnerAssignment_1 ) )
-            // InternalStoex.g:2645:2: ( rule__NegativeExpression__InnerAssignment_1 )
+            // InternalStoex.g:2683:1: ( ( rule__NegativeExpression__InnerAssignment_1 ) )
+            // InternalStoex.g:2684:2: ( rule__NegativeExpression__InnerAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegativeExpressionAccess().getInnerAssignment_1()); 
             }
-            // InternalStoex.g:2646:2: ( rule__NegativeExpression__InnerAssignment_1 )
-            // InternalStoex.g:2646:3: rule__NegativeExpression__InnerAssignment_1
+            // InternalStoex.g:2685:2: ( rule__NegativeExpression__InnerAssignment_1 )
+            // InternalStoex.g:2685:3: rule__NegativeExpression__InnerAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__NegativeExpression__InnerAssignment_1();
@@ -9203,14 +9359,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group__0"
-    // InternalStoex.g:2655:1: rule__DoubleLiteral__Group__0 : rule__DoubleLiteral__Group__0__Impl rule__DoubleLiteral__Group__1 ;
+    // InternalStoex.g:2694:1: rule__DoubleLiteral__Group__0 : rule__DoubleLiteral__Group__0__Impl rule__DoubleLiteral__Group__1 ;
     public final void rule__DoubleLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2659:1: ( rule__DoubleLiteral__Group__0__Impl rule__DoubleLiteral__Group__1 )
-            // InternalStoex.g:2660:2: rule__DoubleLiteral__Group__0__Impl rule__DoubleLiteral__Group__1
+            // InternalStoex.g:2698:1: ( rule__DoubleLiteral__Group__0__Impl rule__DoubleLiteral__Group__1 )
+            // InternalStoex.g:2699:2: rule__DoubleLiteral__Group__0__Impl rule__DoubleLiteral__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__DoubleLiteral__Group__0__Impl();
@@ -9241,23 +9397,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group__0__Impl"
-    // InternalStoex.g:2667:1: rule__DoubleLiteral__Group__0__Impl : ( ( rule__DoubleLiteral__ValueAssignment_0 ) ) ;
+    // InternalStoex.g:2706:1: rule__DoubleLiteral__Group__0__Impl : ( ( rule__DoubleLiteral__ValueAssignment_0 ) ) ;
     public final void rule__DoubleLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2671:1: ( ( ( rule__DoubleLiteral__ValueAssignment_0 ) ) )
-            // InternalStoex.g:2672:1: ( ( rule__DoubleLiteral__ValueAssignment_0 ) )
+            // InternalStoex.g:2710:1: ( ( ( rule__DoubleLiteral__ValueAssignment_0 ) ) )
+            // InternalStoex.g:2711:1: ( ( rule__DoubleLiteral__ValueAssignment_0 ) )
             {
-            // InternalStoex.g:2672:1: ( ( rule__DoubleLiteral__ValueAssignment_0 ) )
-            // InternalStoex.g:2673:2: ( rule__DoubleLiteral__ValueAssignment_0 )
+            // InternalStoex.g:2711:1: ( ( rule__DoubleLiteral__ValueAssignment_0 ) )
+            // InternalStoex.g:2712:2: ( rule__DoubleLiteral__ValueAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getValueAssignment_0()); 
             }
-            // InternalStoex.g:2674:2: ( rule__DoubleLiteral__ValueAssignment_0 )
-            // InternalStoex.g:2674:3: rule__DoubleLiteral__ValueAssignment_0
+            // InternalStoex.g:2713:2: ( rule__DoubleLiteral__ValueAssignment_0 )
+            // InternalStoex.g:2713:3: rule__DoubleLiteral__ValueAssignment_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DoubleLiteral__ValueAssignment_0();
@@ -9292,14 +9448,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group__1"
-    // InternalStoex.g:2682:1: rule__DoubleLiteral__Group__1 : rule__DoubleLiteral__Group__1__Impl ;
+    // InternalStoex.g:2721:1: rule__DoubleLiteral__Group__1 : rule__DoubleLiteral__Group__1__Impl ;
     public final void rule__DoubleLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2686:1: ( rule__DoubleLiteral__Group__1__Impl )
-            // InternalStoex.g:2687:2: rule__DoubleLiteral__Group__1__Impl
+            // InternalStoex.g:2725:1: ( rule__DoubleLiteral__Group__1__Impl )
+            // InternalStoex.g:2726:2: rule__DoubleLiteral__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DoubleLiteral__Group__1__Impl();
@@ -9325,31 +9481,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group__1__Impl"
-    // InternalStoex.g:2693:1: rule__DoubleLiteral__Group__1__Impl : ( ( rule__DoubleLiteral__Group_1__0 )? ) ;
+    // InternalStoex.g:2732:1: rule__DoubleLiteral__Group__1__Impl : ( ( rule__DoubleLiteral__Group_1__0 )? ) ;
     public final void rule__DoubleLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2697:1: ( ( ( rule__DoubleLiteral__Group_1__0 )? ) )
-            // InternalStoex.g:2698:1: ( ( rule__DoubleLiteral__Group_1__0 )? )
+            // InternalStoex.g:2736:1: ( ( ( rule__DoubleLiteral__Group_1__0 )? ) )
+            // InternalStoex.g:2737:1: ( ( rule__DoubleLiteral__Group_1__0 )? )
             {
-            // InternalStoex.g:2698:1: ( ( rule__DoubleLiteral__Group_1__0 )? )
-            // InternalStoex.g:2699:2: ( rule__DoubleLiteral__Group_1__0 )?
+            // InternalStoex.g:2737:1: ( ( rule__DoubleLiteral__Group_1__0 )? )
+            // InternalStoex.g:2738:2: ( rule__DoubleLiteral__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getGroup_1()); 
             }
-            // InternalStoex.g:2700:2: ( rule__DoubleLiteral__Group_1__0 )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // InternalStoex.g:2739:2: ( rule__DoubleLiteral__Group_1__0 )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==37) ) {
-                alt22=1;
+            if ( (LA23_0==42) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // InternalStoex.g:2700:3: rule__DoubleLiteral__Group_1__0
+                    // InternalStoex.g:2739:3: rule__DoubleLiteral__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__DoubleLiteral__Group_1__0();
@@ -9387,14 +9543,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__0"
-    // InternalStoex.g:2709:1: rule__DoubleLiteral__Group_1__0 : rule__DoubleLiteral__Group_1__0__Impl rule__DoubleLiteral__Group_1__1 ;
+    // InternalStoex.g:2748:1: rule__DoubleLiteral__Group_1__0 : rule__DoubleLiteral__Group_1__0__Impl rule__DoubleLiteral__Group_1__1 ;
     public final void rule__DoubleLiteral__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2713:1: ( rule__DoubleLiteral__Group_1__0__Impl rule__DoubleLiteral__Group_1__1 )
-            // InternalStoex.g:2714:2: rule__DoubleLiteral__Group_1__0__Impl rule__DoubleLiteral__Group_1__1
+            // InternalStoex.g:2752:1: ( rule__DoubleLiteral__Group_1__0__Impl rule__DoubleLiteral__Group_1__1 )
+            // InternalStoex.g:2753:2: rule__DoubleLiteral__Group_1__0__Impl rule__DoubleLiteral__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__DoubleLiteral__Group_1__0__Impl();
@@ -9425,22 +9581,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__0__Impl"
-    // InternalStoex.g:2721:1: rule__DoubleLiteral__Group_1__0__Impl : ( '[' ) ;
+    // InternalStoex.g:2760:1: rule__DoubleLiteral__Group_1__0__Impl : ( '[' ) ;
     public final void rule__DoubleLiteral__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2725:1: ( ( '[' ) )
-            // InternalStoex.g:2726:1: ( '[' )
+            // InternalStoex.g:2764:1: ( ( '[' ) )
+            // InternalStoex.g:2765:1: ( '[' )
             {
-            // InternalStoex.g:2726:1: ( '[' )
-            // InternalStoex.g:2727:2: '['
+            // InternalStoex.g:2765:1: ( '[' )
+            // InternalStoex.g:2766:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDoubleLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
@@ -9466,14 +9622,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__1"
-    // InternalStoex.g:2736:1: rule__DoubleLiteral__Group_1__1 : rule__DoubleLiteral__Group_1__1__Impl rule__DoubleLiteral__Group_1__2 ;
+    // InternalStoex.g:2775:1: rule__DoubleLiteral__Group_1__1 : rule__DoubleLiteral__Group_1__1__Impl rule__DoubleLiteral__Group_1__2 ;
     public final void rule__DoubleLiteral__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2740:1: ( rule__DoubleLiteral__Group_1__1__Impl rule__DoubleLiteral__Group_1__2 )
-            // InternalStoex.g:2741:2: rule__DoubleLiteral__Group_1__1__Impl rule__DoubleLiteral__Group_1__2
+            // InternalStoex.g:2779:1: ( rule__DoubleLiteral__Group_1__1__Impl rule__DoubleLiteral__Group_1__2 )
+            // InternalStoex.g:2780:2: rule__DoubleLiteral__Group_1__1__Impl rule__DoubleLiteral__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__DoubleLiteral__Group_1__1__Impl();
@@ -9504,23 +9660,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__1__Impl"
-    // InternalStoex.g:2748:1: rule__DoubleLiteral__Group_1__1__Impl : ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) ) ;
+    // InternalStoex.g:2787:1: rule__DoubleLiteral__Group_1__1__Impl : ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) ) ;
     public final void rule__DoubleLiteral__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2752:1: ( ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) ) )
-            // InternalStoex.g:2753:1: ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) )
+            // InternalStoex.g:2791:1: ( ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) ) )
+            // InternalStoex.g:2792:1: ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) )
             {
-            // InternalStoex.g:2753:1: ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) )
-            // InternalStoex.g:2754:2: ( rule__DoubleLiteral__UnitAssignment_1_1 )
+            // InternalStoex.g:2792:1: ( ( rule__DoubleLiteral__UnitAssignment_1_1 ) )
+            // InternalStoex.g:2793:2: ( rule__DoubleLiteral__UnitAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getUnitAssignment_1_1()); 
             }
-            // InternalStoex.g:2755:2: ( rule__DoubleLiteral__UnitAssignment_1_1 )
-            // InternalStoex.g:2755:3: rule__DoubleLiteral__UnitAssignment_1_1
+            // InternalStoex.g:2794:2: ( rule__DoubleLiteral__UnitAssignment_1_1 )
+            // InternalStoex.g:2794:3: rule__DoubleLiteral__UnitAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DoubleLiteral__UnitAssignment_1_1();
@@ -9555,14 +9711,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__2"
-    // InternalStoex.g:2763:1: rule__DoubleLiteral__Group_1__2 : rule__DoubleLiteral__Group_1__2__Impl ;
+    // InternalStoex.g:2802:1: rule__DoubleLiteral__Group_1__2 : rule__DoubleLiteral__Group_1__2__Impl ;
     public final void rule__DoubleLiteral__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2767:1: ( rule__DoubleLiteral__Group_1__2__Impl )
-            // InternalStoex.g:2768:2: rule__DoubleLiteral__Group_1__2__Impl
+            // InternalStoex.g:2806:1: ( rule__DoubleLiteral__Group_1__2__Impl )
+            // InternalStoex.g:2807:2: rule__DoubleLiteral__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DoubleLiteral__Group_1__2__Impl();
@@ -9588,22 +9744,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__Group_1__2__Impl"
-    // InternalStoex.g:2774:1: rule__DoubleLiteral__Group_1__2__Impl : ( ']' ) ;
+    // InternalStoex.g:2813:1: rule__DoubleLiteral__Group_1__2__Impl : ( ']' ) ;
     public final void rule__DoubleLiteral__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2778:1: ( ( ']' ) )
-            // InternalStoex.g:2779:1: ( ']' )
+            // InternalStoex.g:2817:1: ( ( ']' ) )
+            // InternalStoex.g:2818:1: ( ']' )
             {
-            // InternalStoex.g:2779:1: ( ']' )
-            // InternalStoex.g:2780:2: ']'
+            // InternalStoex.g:2818:1: ( ']' )
+            // InternalStoex.g:2819:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDoubleLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
@@ -9629,14 +9785,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__0"
-    // InternalStoex.g:2790:1: rule__Parenthesis__Group__0 : rule__Parenthesis__Group__0__Impl rule__Parenthesis__Group__1 ;
+    // InternalStoex.g:2829:1: rule__Parenthesis__Group__0 : rule__Parenthesis__Group__0__Impl rule__Parenthesis__Group__1 ;
     public final void rule__Parenthesis__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2794:1: ( rule__Parenthesis__Group__0__Impl rule__Parenthesis__Group__1 )
-            // InternalStoex.g:2795:2: rule__Parenthesis__Group__0__Impl rule__Parenthesis__Group__1
+            // InternalStoex.g:2833:1: ( rule__Parenthesis__Group__0__Impl rule__Parenthesis__Group__1 )
+            // InternalStoex.g:2834:2: rule__Parenthesis__Group__0__Impl rule__Parenthesis__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__Parenthesis__Group__0__Impl();
@@ -9667,22 +9823,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__0__Impl"
-    // InternalStoex.g:2802:1: rule__Parenthesis__Group__0__Impl : ( '(' ) ;
+    // InternalStoex.g:2841:1: rule__Parenthesis__Group__0__Impl : ( '(' ) ;
     public final void rule__Parenthesis__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2806:1: ( ( '(' ) )
-            // InternalStoex.g:2807:1: ( '(' )
+            // InternalStoex.g:2845:1: ( ( '(' ) )
+            // InternalStoex.g:2846:1: ( '(' )
             {
-            // InternalStoex.g:2807:1: ( '(' )
-            // InternalStoex.g:2808:2: '('
+            // InternalStoex.g:2846:1: ( '(' )
+            // InternalStoex.g:2847:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParenthesisAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -9708,14 +9864,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__1"
-    // InternalStoex.g:2817:1: rule__Parenthesis__Group__1 : rule__Parenthesis__Group__1__Impl rule__Parenthesis__Group__2 ;
+    // InternalStoex.g:2856:1: rule__Parenthesis__Group__1 : rule__Parenthesis__Group__1__Impl rule__Parenthesis__Group__2 ;
     public final void rule__Parenthesis__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2821:1: ( rule__Parenthesis__Group__1__Impl rule__Parenthesis__Group__2 )
-            // InternalStoex.g:2822:2: rule__Parenthesis__Group__1__Impl rule__Parenthesis__Group__2
+            // InternalStoex.g:2860:1: ( rule__Parenthesis__Group__1__Impl rule__Parenthesis__Group__2 )
+            // InternalStoex.g:2861:2: rule__Parenthesis__Group__1__Impl rule__Parenthesis__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__Parenthesis__Group__1__Impl();
@@ -9746,23 +9902,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__1__Impl"
-    // InternalStoex.g:2829:1: rule__Parenthesis__Group__1__Impl : ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) ) ;
+    // InternalStoex.g:2868:1: rule__Parenthesis__Group__1__Impl : ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) ) ;
     public final void rule__Parenthesis__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2833:1: ( ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) ) )
-            // InternalStoex.g:2834:1: ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) )
+            // InternalStoex.g:2872:1: ( ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) ) )
+            // InternalStoex.g:2873:1: ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) )
             {
-            // InternalStoex.g:2834:1: ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) )
-            // InternalStoex.g:2835:2: ( rule__Parenthesis__InnerExpressionAssignment_1 )
+            // InternalStoex.g:2873:1: ( ( rule__Parenthesis__InnerExpressionAssignment_1 ) )
+            // InternalStoex.g:2874:2: ( rule__Parenthesis__InnerExpressionAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisAccess().getInnerExpressionAssignment_1()); 
             }
-            // InternalStoex.g:2836:2: ( rule__Parenthesis__InnerExpressionAssignment_1 )
-            // InternalStoex.g:2836:3: rule__Parenthesis__InnerExpressionAssignment_1
+            // InternalStoex.g:2875:2: ( rule__Parenthesis__InnerExpressionAssignment_1 )
+            // InternalStoex.g:2875:3: rule__Parenthesis__InnerExpressionAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Parenthesis__InnerExpressionAssignment_1();
@@ -9797,14 +9953,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__2"
-    // InternalStoex.g:2844:1: rule__Parenthesis__Group__2 : rule__Parenthesis__Group__2__Impl ;
+    // InternalStoex.g:2883:1: rule__Parenthesis__Group__2 : rule__Parenthesis__Group__2__Impl ;
     public final void rule__Parenthesis__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2848:1: ( rule__Parenthesis__Group__2__Impl )
-            // InternalStoex.g:2849:2: rule__Parenthesis__Group__2__Impl
+            // InternalStoex.g:2887:1: ( rule__Parenthesis__Group__2__Impl )
+            // InternalStoex.g:2888:2: rule__Parenthesis__Group__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Parenthesis__Group__2__Impl();
@@ -9830,22 +9986,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__Group__2__Impl"
-    // InternalStoex.g:2855:1: rule__Parenthesis__Group__2__Impl : ( ')' ) ;
+    // InternalStoex.g:2894:1: rule__Parenthesis__Group__2__Impl : ( ')' ) ;
     public final void rule__Parenthesis__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2859:1: ( ( ')' ) )
-            // InternalStoex.g:2860:1: ( ')' )
+            // InternalStoex.g:2898:1: ( ( ')' ) )
+            // InternalStoex.g:2899:1: ( ')' )
             {
-            // InternalStoex.g:2860:1: ( ')' )
-            // InternalStoex.g:2861:2: ')'
+            // InternalStoex.g:2899:1: ( ')' )
+            // InternalStoex.g:2900:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisAccess().getRightParenthesisKeyword_2()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParenthesisAccess().getRightParenthesisKeyword_2()); 
             }
@@ -9871,14 +10027,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__0"
-    // InternalStoex.g:2871:1: rule__FunctionLiteral__Group__0 : rule__FunctionLiteral__Group__0__Impl rule__FunctionLiteral__Group__1 ;
+    // InternalStoex.g:2910:1: rule__FunctionLiteral__Group__0 : rule__FunctionLiteral__Group__0__Impl rule__FunctionLiteral__Group__1 ;
     public final void rule__FunctionLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2875:1: ( rule__FunctionLiteral__Group__0__Impl rule__FunctionLiteral__Group__1 )
-            // InternalStoex.g:2876:2: rule__FunctionLiteral__Group__0__Impl rule__FunctionLiteral__Group__1
+            // InternalStoex.g:2914:1: ( rule__FunctionLiteral__Group__0__Impl rule__FunctionLiteral__Group__1 )
+            // InternalStoex.g:2915:2: rule__FunctionLiteral__Group__0__Impl rule__FunctionLiteral__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__FunctionLiteral__Group__0__Impl();
@@ -9909,23 +10065,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__0__Impl"
-    // InternalStoex.g:2883:1: rule__FunctionLiteral__Group__0__Impl : ( ( rule__FunctionLiteral__IdAssignment_0 ) ) ;
+    // InternalStoex.g:2922:1: rule__FunctionLiteral__Group__0__Impl : ( ( rule__FunctionLiteral__IdAssignment_0 ) ) ;
     public final void rule__FunctionLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2887:1: ( ( ( rule__FunctionLiteral__IdAssignment_0 ) ) )
-            // InternalStoex.g:2888:1: ( ( rule__FunctionLiteral__IdAssignment_0 ) )
+            // InternalStoex.g:2926:1: ( ( ( rule__FunctionLiteral__IdAssignment_0 ) ) )
+            // InternalStoex.g:2927:1: ( ( rule__FunctionLiteral__IdAssignment_0 ) )
             {
-            // InternalStoex.g:2888:1: ( ( rule__FunctionLiteral__IdAssignment_0 ) )
-            // InternalStoex.g:2889:2: ( rule__FunctionLiteral__IdAssignment_0 )
+            // InternalStoex.g:2927:1: ( ( rule__FunctionLiteral__IdAssignment_0 ) )
+            // InternalStoex.g:2928:2: ( rule__FunctionLiteral__IdAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getIdAssignment_0()); 
             }
-            // InternalStoex.g:2890:2: ( rule__FunctionLiteral__IdAssignment_0 )
-            // InternalStoex.g:2890:3: rule__FunctionLiteral__IdAssignment_0
+            // InternalStoex.g:2929:2: ( rule__FunctionLiteral__IdAssignment_0 )
+            // InternalStoex.g:2929:3: rule__FunctionLiteral__IdAssignment_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__FunctionLiteral__IdAssignment_0();
@@ -9960,14 +10116,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__1"
-    // InternalStoex.g:2898:1: rule__FunctionLiteral__Group__1 : rule__FunctionLiteral__Group__1__Impl rule__FunctionLiteral__Group__2 ;
+    // InternalStoex.g:2937:1: rule__FunctionLiteral__Group__1 : rule__FunctionLiteral__Group__1__Impl rule__FunctionLiteral__Group__2 ;
     public final void rule__FunctionLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2902:1: ( rule__FunctionLiteral__Group__1__Impl rule__FunctionLiteral__Group__2 )
-            // InternalStoex.g:2903:2: rule__FunctionLiteral__Group__1__Impl rule__FunctionLiteral__Group__2
+            // InternalStoex.g:2941:1: ( rule__FunctionLiteral__Group__1__Impl rule__FunctionLiteral__Group__2 )
+            // InternalStoex.g:2942:2: rule__FunctionLiteral__Group__1__Impl rule__FunctionLiteral__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_21);
             rule__FunctionLiteral__Group__1__Impl();
@@ -9998,22 +10154,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__1__Impl"
-    // InternalStoex.g:2910:1: rule__FunctionLiteral__Group__1__Impl : ( '(' ) ;
+    // InternalStoex.g:2949:1: rule__FunctionLiteral__Group__1__Impl : ( '(' ) ;
     public final void rule__FunctionLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2914:1: ( ( '(' ) )
-            // InternalStoex.g:2915:1: ( '(' )
+            // InternalStoex.g:2953:1: ( ( '(' ) )
+            // InternalStoex.g:2954:1: ( '(' )
             {
-            // InternalStoex.g:2915:1: ( '(' )
-            // InternalStoex.g:2916:2: '('
+            // InternalStoex.g:2954:1: ( '(' )
+            // InternalStoex.g:2955:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionLiteralAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -10039,14 +10195,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__2"
-    // InternalStoex.g:2925:1: rule__FunctionLiteral__Group__2 : rule__FunctionLiteral__Group__2__Impl rule__FunctionLiteral__Group__3 ;
+    // InternalStoex.g:2964:1: rule__FunctionLiteral__Group__2 : rule__FunctionLiteral__Group__2__Impl rule__FunctionLiteral__Group__3 ;
     public final void rule__FunctionLiteral__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2929:1: ( rule__FunctionLiteral__Group__2__Impl rule__FunctionLiteral__Group__3 )
-            // InternalStoex.g:2930:2: rule__FunctionLiteral__Group__2__Impl rule__FunctionLiteral__Group__3
+            // InternalStoex.g:2968:1: ( rule__FunctionLiteral__Group__2__Impl rule__FunctionLiteral__Group__3 )
+            // InternalStoex.g:2969:2: rule__FunctionLiteral__Group__2__Impl rule__FunctionLiteral__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_21);
             rule__FunctionLiteral__Group__2__Impl();
@@ -10077,31 +10233,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__2__Impl"
-    // InternalStoex.g:2937:1: rule__FunctionLiteral__Group__2__Impl : ( ( rule__FunctionLiteral__Group_2__0 )? ) ;
+    // InternalStoex.g:2976:1: rule__FunctionLiteral__Group__2__Impl : ( ( rule__FunctionLiteral__Group_2__0 )? ) ;
     public final void rule__FunctionLiteral__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2941:1: ( ( ( rule__FunctionLiteral__Group_2__0 )? ) )
-            // InternalStoex.g:2942:1: ( ( rule__FunctionLiteral__Group_2__0 )? )
+            // InternalStoex.g:2980:1: ( ( ( rule__FunctionLiteral__Group_2__0 )? ) )
+            // InternalStoex.g:2981:1: ( ( rule__FunctionLiteral__Group_2__0 )? )
             {
-            // InternalStoex.g:2942:1: ( ( rule__FunctionLiteral__Group_2__0 )? )
-            // InternalStoex.g:2943:2: ( rule__FunctionLiteral__Group_2__0 )?
+            // InternalStoex.g:2981:1: ( ( rule__FunctionLiteral__Group_2__0 )? )
+            // InternalStoex.g:2982:2: ( rule__FunctionLiteral__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getGroup_2()); 
             }
-            // InternalStoex.g:2944:2: ( rule__FunctionLiteral__Group_2__0 )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // InternalStoex.g:2983:2: ( rule__FunctionLiteral__Group_2__0 )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( ((LA23_0>=RULE_DOUBLE && LA23_0<=RULE_STRING)||LA23_0==24||LA23_0==36||LA23_0==39||(LA23_0>=43 && LA23_0<=47)) ) {
-                alt23=1;
+            if ( ((LA24_0>=RULE_DOUBLE && LA24_0<=RULE_STRING)||LA24_0==29||LA24_0==41||LA24_0==44||(LA24_0>=48 && LA24_0<=52)) ) {
+                alt24=1;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // InternalStoex.g:2944:3: rule__FunctionLiteral__Group_2__0
+                    // InternalStoex.g:2983:3: rule__FunctionLiteral__Group_2__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__FunctionLiteral__Group_2__0();
@@ -10139,14 +10295,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__3"
-    // InternalStoex.g:2952:1: rule__FunctionLiteral__Group__3 : rule__FunctionLiteral__Group__3__Impl ;
+    // InternalStoex.g:2991:1: rule__FunctionLiteral__Group__3 : rule__FunctionLiteral__Group__3__Impl ;
     public final void rule__FunctionLiteral__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2956:1: ( rule__FunctionLiteral__Group__3__Impl )
-            // InternalStoex.g:2957:2: rule__FunctionLiteral__Group__3__Impl
+            // InternalStoex.g:2995:1: ( rule__FunctionLiteral__Group__3__Impl )
+            // InternalStoex.g:2996:2: rule__FunctionLiteral__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__FunctionLiteral__Group__3__Impl();
@@ -10172,22 +10328,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group__3__Impl"
-    // InternalStoex.g:2963:1: rule__FunctionLiteral__Group__3__Impl : ( ')' ) ;
+    // InternalStoex.g:3002:1: rule__FunctionLiteral__Group__3__Impl : ( ')' ) ;
     public final void rule__FunctionLiteral__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2967:1: ( ( ')' ) )
-            // InternalStoex.g:2968:1: ( ')' )
+            // InternalStoex.g:3006:1: ( ( ')' ) )
+            // InternalStoex.g:3007:1: ( ')' )
             {
-            // InternalStoex.g:2968:1: ( ')' )
-            // InternalStoex.g:2969:2: ')'
+            // InternalStoex.g:3007:1: ( ')' )
+            // InternalStoex.g:3008:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionLiteralAccess().getRightParenthesisKeyword_3()); 
             }
@@ -10213,14 +10369,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2__0"
-    // InternalStoex.g:2979:1: rule__FunctionLiteral__Group_2__0 : rule__FunctionLiteral__Group_2__0__Impl rule__FunctionLiteral__Group_2__1 ;
+    // InternalStoex.g:3018:1: rule__FunctionLiteral__Group_2__0 : rule__FunctionLiteral__Group_2__0__Impl rule__FunctionLiteral__Group_2__1 ;
     public final void rule__FunctionLiteral__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2983:1: ( rule__FunctionLiteral__Group_2__0__Impl rule__FunctionLiteral__Group_2__1 )
-            // InternalStoex.g:2984:2: rule__FunctionLiteral__Group_2__0__Impl rule__FunctionLiteral__Group_2__1
+            // InternalStoex.g:3022:1: ( rule__FunctionLiteral__Group_2__0__Impl rule__FunctionLiteral__Group_2__1 )
+            // InternalStoex.g:3023:2: rule__FunctionLiteral__Group_2__0__Impl rule__FunctionLiteral__Group_2__1
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__FunctionLiteral__Group_2__0__Impl();
@@ -10251,23 +10407,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2__0__Impl"
-    // InternalStoex.g:2991:1: rule__FunctionLiteral__Group_2__0__Impl : ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) ) ;
+    // InternalStoex.g:3030:1: rule__FunctionLiteral__Group_2__0__Impl : ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) ) ;
     public final void rule__FunctionLiteral__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:2995:1: ( ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) ) )
-            // InternalStoex.g:2996:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) )
+            // InternalStoex.g:3034:1: ( ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) ) )
+            // InternalStoex.g:3035:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) )
             {
-            // InternalStoex.g:2996:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) )
-            // InternalStoex.g:2997:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 )
+            // InternalStoex.g:3035:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 ) )
+            // InternalStoex.g:3036:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getParameters_FunctionLiteralAssignment_2_0()); 
             }
-            // InternalStoex.g:2998:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 )
-            // InternalStoex.g:2998:3: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0
+            // InternalStoex.g:3037:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 )
+            // InternalStoex.g:3037:3: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0();
@@ -10302,14 +10458,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2__1"
-    // InternalStoex.g:3006:1: rule__FunctionLiteral__Group_2__1 : rule__FunctionLiteral__Group_2__1__Impl ;
+    // InternalStoex.g:3045:1: rule__FunctionLiteral__Group_2__1 : rule__FunctionLiteral__Group_2__1__Impl ;
     public final void rule__FunctionLiteral__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3010:1: ( rule__FunctionLiteral__Group_2__1__Impl )
-            // InternalStoex.g:3011:2: rule__FunctionLiteral__Group_2__1__Impl
+            // InternalStoex.g:3049:1: ( rule__FunctionLiteral__Group_2__1__Impl )
+            // InternalStoex.g:3050:2: rule__FunctionLiteral__Group_2__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__FunctionLiteral__Group_2__1__Impl();
@@ -10335,35 +10491,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2__1__Impl"
-    // InternalStoex.g:3017:1: rule__FunctionLiteral__Group_2__1__Impl : ( ( rule__FunctionLiteral__Group_2_1__0 )* ) ;
+    // InternalStoex.g:3056:1: rule__FunctionLiteral__Group_2__1__Impl : ( ( rule__FunctionLiteral__Group_2_1__0 )* ) ;
     public final void rule__FunctionLiteral__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3021:1: ( ( ( rule__FunctionLiteral__Group_2_1__0 )* ) )
-            // InternalStoex.g:3022:1: ( ( rule__FunctionLiteral__Group_2_1__0 )* )
+            // InternalStoex.g:3060:1: ( ( ( rule__FunctionLiteral__Group_2_1__0 )* ) )
+            // InternalStoex.g:3061:1: ( ( rule__FunctionLiteral__Group_2_1__0 )* )
             {
-            // InternalStoex.g:3022:1: ( ( rule__FunctionLiteral__Group_2_1__0 )* )
-            // InternalStoex.g:3023:2: ( rule__FunctionLiteral__Group_2_1__0 )*
+            // InternalStoex.g:3061:1: ( ( rule__FunctionLiteral__Group_2_1__0 )* )
+            // InternalStoex.g:3062:2: ( rule__FunctionLiteral__Group_2_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getGroup_2_1()); 
             }
-            // InternalStoex.g:3024:2: ( rule__FunctionLiteral__Group_2_1__0 )*
-            loop24:
+            // InternalStoex.g:3063:2: ( rule__FunctionLiteral__Group_2_1__0 )*
+            loop25:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA24_0==41) ) {
-                    alt24=1;
+                if ( (LA25_0==46) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt25) {
             	case 1 :
-            	    // InternalStoex.g:3024:3: rule__FunctionLiteral__Group_2_1__0
+            	    // InternalStoex.g:3063:3: rule__FunctionLiteral__Group_2_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_23);
             	    rule__FunctionLiteral__Group_2_1__0();
@@ -10375,7 +10531,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop25;
                 }
             } while (true);
 
@@ -10404,14 +10560,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2_1__0"
-    // InternalStoex.g:3033:1: rule__FunctionLiteral__Group_2_1__0 : rule__FunctionLiteral__Group_2_1__0__Impl rule__FunctionLiteral__Group_2_1__1 ;
+    // InternalStoex.g:3072:1: rule__FunctionLiteral__Group_2_1__0 : rule__FunctionLiteral__Group_2_1__0__Impl rule__FunctionLiteral__Group_2_1__1 ;
     public final void rule__FunctionLiteral__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3037:1: ( rule__FunctionLiteral__Group_2_1__0__Impl rule__FunctionLiteral__Group_2_1__1 )
-            // InternalStoex.g:3038:2: rule__FunctionLiteral__Group_2_1__0__Impl rule__FunctionLiteral__Group_2_1__1
+            // InternalStoex.g:3076:1: ( rule__FunctionLiteral__Group_2_1__0__Impl rule__FunctionLiteral__Group_2_1__1 )
+            // InternalStoex.g:3077:2: rule__FunctionLiteral__Group_2_1__0__Impl rule__FunctionLiteral__Group_2_1__1
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__FunctionLiteral__Group_2_1__0__Impl();
@@ -10442,22 +10598,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2_1__0__Impl"
-    // InternalStoex.g:3045:1: rule__FunctionLiteral__Group_2_1__0__Impl : ( ',' ) ;
+    // InternalStoex.g:3084:1: rule__FunctionLiteral__Group_2_1__0__Impl : ( ',' ) ;
     public final void rule__FunctionLiteral__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3049:1: ( ( ',' ) )
-            // InternalStoex.g:3050:1: ( ',' )
+            // InternalStoex.g:3088:1: ( ( ',' ) )
+            // InternalStoex.g:3089:1: ( ',' )
             {
-            // InternalStoex.g:3050:1: ( ',' )
-            // InternalStoex.g:3051:2: ','
+            // InternalStoex.g:3089:1: ( ',' )
+            // InternalStoex.g:3090:2: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getCommaKeyword_2_1_0()); 
             }
-            match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionLiteralAccess().getCommaKeyword_2_1_0()); 
             }
@@ -10483,14 +10639,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2_1__1"
-    // InternalStoex.g:3060:1: rule__FunctionLiteral__Group_2_1__1 : rule__FunctionLiteral__Group_2_1__1__Impl ;
+    // InternalStoex.g:3099:1: rule__FunctionLiteral__Group_2_1__1 : rule__FunctionLiteral__Group_2_1__1__Impl ;
     public final void rule__FunctionLiteral__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3064:1: ( rule__FunctionLiteral__Group_2_1__1__Impl )
-            // InternalStoex.g:3065:2: rule__FunctionLiteral__Group_2_1__1__Impl
+            // InternalStoex.g:3103:1: ( rule__FunctionLiteral__Group_2_1__1__Impl )
+            // InternalStoex.g:3104:2: rule__FunctionLiteral__Group_2_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__FunctionLiteral__Group_2_1__1__Impl();
@@ -10516,23 +10672,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Group_2_1__1__Impl"
-    // InternalStoex.g:3071:1: rule__FunctionLiteral__Group_2_1__1__Impl : ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) ) ;
+    // InternalStoex.g:3110:1: rule__FunctionLiteral__Group_2_1__1__Impl : ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) ) ;
     public final void rule__FunctionLiteral__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3075:1: ( ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) ) )
-            // InternalStoex.g:3076:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) )
+            // InternalStoex.g:3114:1: ( ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) ) )
+            // InternalStoex.g:3115:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) )
             {
-            // InternalStoex.g:3076:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) )
-            // InternalStoex.g:3077:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 )
+            // InternalStoex.g:3115:1: ( ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 ) )
+            // InternalStoex.g:3116:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getParameters_FunctionLiteralAssignment_2_1_1()); 
             }
-            // InternalStoex.g:3078:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 )
-            // InternalStoex.g:3078:3: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1
+            // InternalStoex.g:3117:2: ( rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 )
+            // InternalStoex.g:3117:3: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1();
@@ -10567,14 +10723,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__0"
-    // InternalStoex.g:3087:1: rule__NamespaceReference__Group__0 : rule__NamespaceReference__Group__0__Impl rule__NamespaceReference__Group__1 ;
+    // InternalStoex.g:3126:1: rule__NamespaceReference__Group__0 : rule__NamespaceReference__Group__0__Impl rule__NamespaceReference__Group__1 ;
     public final void rule__NamespaceReference__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3091:1: ( rule__NamespaceReference__Group__0__Impl rule__NamespaceReference__Group__1 )
-            // InternalStoex.g:3092:2: rule__NamespaceReference__Group__0__Impl rule__NamespaceReference__Group__1
+            // InternalStoex.g:3130:1: ( rule__NamespaceReference__Group__0__Impl rule__NamespaceReference__Group__1 )
+            // InternalStoex.g:3131:2: rule__NamespaceReference__Group__0__Impl rule__NamespaceReference__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_24);
             rule__NamespaceReference__Group__0__Impl();
@@ -10605,23 +10761,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__0__Impl"
-    // InternalStoex.g:3099:1: rule__NamespaceReference__Group__0__Impl : ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) ) ;
+    // InternalStoex.g:3138:1: rule__NamespaceReference__Group__0__Impl : ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) ) ;
     public final void rule__NamespaceReference__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3103:1: ( ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) ) )
-            // InternalStoex.g:3104:1: ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) )
+            // InternalStoex.g:3142:1: ( ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) ) )
+            // InternalStoex.g:3143:1: ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) )
             {
-            // InternalStoex.g:3104:1: ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) )
-            // InternalStoex.g:3105:2: ( rule__NamespaceReference__ReferenceNameAssignment_0 )
+            // InternalStoex.g:3143:1: ( ( rule__NamespaceReference__ReferenceNameAssignment_0 ) )
+            // InternalStoex.g:3144:2: ( rule__NamespaceReference__ReferenceNameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespaceReferenceAccess().getReferenceNameAssignment_0()); 
             }
-            // InternalStoex.g:3106:2: ( rule__NamespaceReference__ReferenceNameAssignment_0 )
-            // InternalStoex.g:3106:3: rule__NamespaceReference__ReferenceNameAssignment_0
+            // InternalStoex.g:3145:2: ( rule__NamespaceReference__ReferenceNameAssignment_0 )
+            // InternalStoex.g:3145:3: rule__NamespaceReference__ReferenceNameAssignment_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__NamespaceReference__ReferenceNameAssignment_0();
@@ -10656,14 +10812,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__1"
-    // InternalStoex.g:3114:1: rule__NamespaceReference__Group__1 : rule__NamespaceReference__Group__1__Impl rule__NamespaceReference__Group__2 ;
+    // InternalStoex.g:3153:1: rule__NamespaceReference__Group__1 : rule__NamespaceReference__Group__1__Impl rule__NamespaceReference__Group__2 ;
     public final void rule__NamespaceReference__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3118:1: ( rule__NamespaceReference__Group__1__Impl rule__NamespaceReference__Group__2 )
-            // InternalStoex.g:3119:2: rule__NamespaceReference__Group__1__Impl rule__NamespaceReference__Group__2
+            // InternalStoex.g:3157:1: ( rule__NamespaceReference__Group__1__Impl rule__NamespaceReference__Group__2 )
+            // InternalStoex.g:3158:2: rule__NamespaceReference__Group__1__Impl rule__NamespaceReference__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_25);
             rule__NamespaceReference__Group__1__Impl();
@@ -10694,22 +10850,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__1__Impl"
-    // InternalStoex.g:3126:1: rule__NamespaceReference__Group__1__Impl : ( '.' ) ;
+    // InternalStoex.g:3165:1: rule__NamespaceReference__Group__1__Impl : ( '.' ) ;
     public final void rule__NamespaceReference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3130:1: ( ( '.' ) )
-            // InternalStoex.g:3131:1: ( '.' )
+            // InternalStoex.g:3169:1: ( ( '.' ) )
+            // InternalStoex.g:3170:1: ( '.' )
             {
-            // InternalStoex.g:3131:1: ( '.' )
-            // InternalStoex.g:3132:2: '.'
+            // InternalStoex.g:3170:1: ( '.' )
+            // InternalStoex.g:3171:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespaceReferenceAccess().getFullStopKeyword_1()); 
             }
-            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNamespaceReferenceAccess().getFullStopKeyword_1()); 
             }
@@ -10735,14 +10891,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__2"
-    // InternalStoex.g:3141:1: rule__NamespaceReference__Group__2 : rule__NamespaceReference__Group__2__Impl ;
+    // InternalStoex.g:3180:1: rule__NamespaceReference__Group__2 : rule__NamespaceReference__Group__2__Impl ;
     public final void rule__NamespaceReference__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3145:1: ( rule__NamespaceReference__Group__2__Impl )
-            // InternalStoex.g:3146:2: rule__NamespaceReference__Group__2__Impl
+            // InternalStoex.g:3184:1: ( rule__NamespaceReference__Group__2__Impl )
+            // InternalStoex.g:3185:2: rule__NamespaceReference__Group__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__NamespaceReference__Group__2__Impl();
@@ -10768,26 +10924,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__Group__2__Impl"
-    // InternalStoex.g:3152:1: rule__NamespaceReference__Group__2__Impl : ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 ) ) ;
+    // InternalStoex.g:3191:1: rule__NamespaceReference__Group__2__Impl : ( ( rule__NamespaceReference__Alternatives_2 ) ) ;
     public final void rule__NamespaceReference__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3156:1: ( ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 ) ) )
-            // InternalStoex.g:3157:1: ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 ) )
+            // InternalStoex.g:3195:1: ( ( ( rule__NamespaceReference__Alternatives_2 ) ) )
+            // InternalStoex.g:3196:1: ( ( rule__NamespaceReference__Alternatives_2 ) )
             {
-            // InternalStoex.g:3157:1: ( ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 ) )
-            // InternalStoex.g:3158:2: ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 )
+            // InternalStoex.g:3196:1: ( ( rule__NamespaceReference__Alternatives_2 ) )
+            // InternalStoex.g:3197:2: ( rule__NamespaceReference__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2()); 
+               before(grammarAccess.getNamespaceReferenceAccess().getAlternatives_2()); 
             }
-            // InternalStoex.g:3159:2: ( rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 )
-            // InternalStoex.g:3159:3: rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2
+            // InternalStoex.g:3198:2: ( rule__NamespaceReference__Alternatives_2 )
+            // InternalStoex.g:3198:3: rule__NamespaceReference__Alternatives_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2();
+            rule__NamespaceReference__Alternatives_2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -10795,7 +10951,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2()); 
+               after(grammarAccess.getNamespaceReferenceAccess().getAlternatives_2()); 
             }
 
             }
@@ -10819,14 +10975,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group__0"
-    // InternalStoex.g:3168:1: rule__IntLiteral__Group__0 : rule__IntLiteral__Group__0__Impl rule__IntLiteral__Group__1 ;
+    // InternalStoex.g:3207:1: rule__IntLiteral__Group__0 : rule__IntLiteral__Group__0__Impl rule__IntLiteral__Group__1 ;
     public final void rule__IntLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3172:1: ( rule__IntLiteral__Group__0__Impl rule__IntLiteral__Group__1 )
-            // InternalStoex.g:3173:2: rule__IntLiteral__Group__0__Impl rule__IntLiteral__Group__1
+            // InternalStoex.g:3211:1: ( rule__IntLiteral__Group__0__Impl rule__IntLiteral__Group__1 )
+            // InternalStoex.g:3212:2: rule__IntLiteral__Group__0__Impl rule__IntLiteral__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__IntLiteral__Group__0__Impl();
@@ -10857,23 +11013,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group__0__Impl"
-    // InternalStoex.g:3180:1: rule__IntLiteral__Group__0__Impl : ( ( rule__IntLiteral__ValueAssignment_0 ) ) ;
+    // InternalStoex.g:3219:1: rule__IntLiteral__Group__0__Impl : ( ( rule__IntLiteral__ValueAssignment_0 ) ) ;
     public final void rule__IntLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3184:1: ( ( ( rule__IntLiteral__ValueAssignment_0 ) ) )
-            // InternalStoex.g:3185:1: ( ( rule__IntLiteral__ValueAssignment_0 ) )
+            // InternalStoex.g:3223:1: ( ( ( rule__IntLiteral__ValueAssignment_0 ) ) )
+            // InternalStoex.g:3224:1: ( ( rule__IntLiteral__ValueAssignment_0 ) )
             {
-            // InternalStoex.g:3185:1: ( ( rule__IntLiteral__ValueAssignment_0 ) )
-            // InternalStoex.g:3186:2: ( rule__IntLiteral__ValueAssignment_0 )
+            // InternalStoex.g:3224:1: ( ( rule__IntLiteral__ValueAssignment_0 ) )
+            // InternalStoex.g:3225:2: ( rule__IntLiteral__ValueAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getValueAssignment_0()); 
             }
-            // InternalStoex.g:3187:2: ( rule__IntLiteral__ValueAssignment_0 )
-            // InternalStoex.g:3187:3: rule__IntLiteral__ValueAssignment_0
+            // InternalStoex.g:3226:2: ( rule__IntLiteral__ValueAssignment_0 )
+            // InternalStoex.g:3226:3: rule__IntLiteral__ValueAssignment_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IntLiteral__ValueAssignment_0();
@@ -10908,14 +11064,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group__1"
-    // InternalStoex.g:3195:1: rule__IntLiteral__Group__1 : rule__IntLiteral__Group__1__Impl ;
+    // InternalStoex.g:3234:1: rule__IntLiteral__Group__1 : rule__IntLiteral__Group__1__Impl ;
     public final void rule__IntLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3199:1: ( rule__IntLiteral__Group__1__Impl )
-            // InternalStoex.g:3200:2: rule__IntLiteral__Group__1__Impl
+            // InternalStoex.g:3238:1: ( rule__IntLiteral__Group__1__Impl )
+            // InternalStoex.g:3239:2: rule__IntLiteral__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IntLiteral__Group__1__Impl();
@@ -10941,31 +11097,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group__1__Impl"
-    // InternalStoex.g:3206:1: rule__IntLiteral__Group__1__Impl : ( ( rule__IntLiteral__Group_1__0 )? ) ;
+    // InternalStoex.g:3245:1: rule__IntLiteral__Group__1__Impl : ( ( rule__IntLiteral__Group_1__0 )? ) ;
     public final void rule__IntLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3210:1: ( ( ( rule__IntLiteral__Group_1__0 )? ) )
-            // InternalStoex.g:3211:1: ( ( rule__IntLiteral__Group_1__0 )? )
+            // InternalStoex.g:3249:1: ( ( ( rule__IntLiteral__Group_1__0 )? ) )
+            // InternalStoex.g:3250:1: ( ( rule__IntLiteral__Group_1__0 )? )
             {
-            // InternalStoex.g:3211:1: ( ( rule__IntLiteral__Group_1__0 )? )
-            // InternalStoex.g:3212:2: ( rule__IntLiteral__Group_1__0 )?
+            // InternalStoex.g:3250:1: ( ( rule__IntLiteral__Group_1__0 )? )
+            // InternalStoex.g:3251:2: ( rule__IntLiteral__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getGroup_1()); 
             }
-            // InternalStoex.g:3213:2: ( rule__IntLiteral__Group_1__0 )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalStoex.g:3252:2: ( rule__IntLiteral__Group_1__0 )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==37) ) {
-                alt25=1;
+            if ( (LA26_0==42) ) {
+                alt26=1;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // InternalStoex.g:3213:3: rule__IntLiteral__Group_1__0
+                    // InternalStoex.g:3252:3: rule__IntLiteral__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__IntLiteral__Group_1__0();
@@ -11003,14 +11159,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__0"
-    // InternalStoex.g:3222:1: rule__IntLiteral__Group_1__0 : rule__IntLiteral__Group_1__0__Impl rule__IntLiteral__Group_1__1 ;
+    // InternalStoex.g:3261:1: rule__IntLiteral__Group_1__0 : rule__IntLiteral__Group_1__0__Impl rule__IntLiteral__Group_1__1 ;
     public final void rule__IntLiteral__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3226:1: ( rule__IntLiteral__Group_1__0__Impl rule__IntLiteral__Group_1__1 )
-            // InternalStoex.g:3227:2: rule__IntLiteral__Group_1__0__Impl rule__IntLiteral__Group_1__1
+            // InternalStoex.g:3265:1: ( rule__IntLiteral__Group_1__0__Impl rule__IntLiteral__Group_1__1 )
+            // InternalStoex.g:3266:2: rule__IntLiteral__Group_1__0__Impl rule__IntLiteral__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__IntLiteral__Group_1__0__Impl();
@@ -11041,22 +11197,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__0__Impl"
-    // InternalStoex.g:3234:1: rule__IntLiteral__Group_1__0__Impl : ( '[' ) ;
+    // InternalStoex.g:3273:1: rule__IntLiteral__Group_1__0__Impl : ( '[' ) ;
     public final void rule__IntLiteral__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3238:1: ( ( '[' ) )
-            // InternalStoex.g:3239:1: ( '[' )
+            // InternalStoex.g:3277:1: ( ( '[' ) )
+            // InternalStoex.g:3278:1: ( '[' )
             {
-            // InternalStoex.g:3239:1: ( '[' )
-            // InternalStoex.g:3240:2: '['
+            // InternalStoex.g:3278:1: ( '[' )
+            // InternalStoex.g:3279:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIntLiteralAccess().getLeftSquareBracketKeyword_1_0()); 
             }
@@ -11082,14 +11238,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__1"
-    // InternalStoex.g:3249:1: rule__IntLiteral__Group_1__1 : rule__IntLiteral__Group_1__1__Impl rule__IntLiteral__Group_1__2 ;
+    // InternalStoex.g:3288:1: rule__IntLiteral__Group_1__1 : rule__IntLiteral__Group_1__1__Impl rule__IntLiteral__Group_1__2 ;
     public final void rule__IntLiteral__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3253:1: ( rule__IntLiteral__Group_1__1__Impl rule__IntLiteral__Group_1__2 )
-            // InternalStoex.g:3254:2: rule__IntLiteral__Group_1__1__Impl rule__IntLiteral__Group_1__2
+            // InternalStoex.g:3292:1: ( rule__IntLiteral__Group_1__1__Impl rule__IntLiteral__Group_1__2 )
+            // InternalStoex.g:3293:2: rule__IntLiteral__Group_1__1__Impl rule__IntLiteral__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__IntLiteral__Group_1__1__Impl();
@@ -11120,23 +11276,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__1__Impl"
-    // InternalStoex.g:3261:1: rule__IntLiteral__Group_1__1__Impl : ( ( rule__IntLiteral__UnitAssignment_1_1 ) ) ;
+    // InternalStoex.g:3300:1: rule__IntLiteral__Group_1__1__Impl : ( ( rule__IntLiteral__UnitAssignment_1_1 ) ) ;
     public final void rule__IntLiteral__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3265:1: ( ( ( rule__IntLiteral__UnitAssignment_1_1 ) ) )
-            // InternalStoex.g:3266:1: ( ( rule__IntLiteral__UnitAssignment_1_1 ) )
+            // InternalStoex.g:3304:1: ( ( ( rule__IntLiteral__UnitAssignment_1_1 ) ) )
+            // InternalStoex.g:3305:1: ( ( rule__IntLiteral__UnitAssignment_1_1 ) )
             {
-            // InternalStoex.g:3266:1: ( ( rule__IntLiteral__UnitAssignment_1_1 ) )
-            // InternalStoex.g:3267:2: ( rule__IntLiteral__UnitAssignment_1_1 )
+            // InternalStoex.g:3305:1: ( ( rule__IntLiteral__UnitAssignment_1_1 ) )
+            // InternalStoex.g:3306:2: ( rule__IntLiteral__UnitAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getUnitAssignment_1_1()); 
             }
-            // InternalStoex.g:3268:2: ( rule__IntLiteral__UnitAssignment_1_1 )
-            // InternalStoex.g:3268:3: rule__IntLiteral__UnitAssignment_1_1
+            // InternalStoex.g:3307:2: ( rule__IntLiteral__UnitAssignment_1_1 )
+            // InternalStoex.g:3307:3: rule__IntLiteral__UnitAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IntLiteral__UnitAssignment_1_1();
@@ -11171,14 +11327,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__2"
-    // InternalStoex.g:3276:1: rule__IntLiteral__Group_1__2 : rule__IntLiteral__Group_1__2__Impl ;
+    // InternalStoex.g:3315:1: rule__IntLiteral__Group_1__2 : rule__IntLiteral__Group_1__2__Impl ;
     public final void rule__IntLiteral__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3280:1: ( rule__IntLiteral__Group_1__2__Impl )
-            // InternalStoex.g:3281:2: rule__IntLiteral__Group_1__2__Impl
+            // InternalStoex.g:3319:1: ( rule__IntLiteral__Group_1__2__Impl )
+            // InternalStoex.g:3320:2: rule__IntLiteral__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__IntLiteral__Group_1__2__Impl();
@@ -11204,22 +11360,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__Group_1__2__Impl"
-    // InternalStoex.g:3287:1: rule__IntLiteral__Group_1__2__Impl : ( ']' ) ;
+    // InternalStoex.g:3326:1: rule__IntLiteral__Group_1__2__Impl : ( ']' ) ;
     public final void rule__IntLiteral__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3291:1: ( ( ']' ) )
-            // InternalStoex.g:3292:1: ( ']' )
+            // InternalStoex.g:3330:1: ( ( ']' ) )
+            // InternalStoex.g:3331:1: ( ']' )
             {
-            // InternalStoex.g:3292:1: ( ']' )
-            // InternalStoex.g:3293:2: ']'
+            // InternalStoex.g:3331:1: ( ']' )
+            // InternalStoex.g:3332:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIntLiteralAccess().getRightSquareBracketKeyword_1_2()); 
             }
@@ -11245,14 +11401,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group__0"
-    // InternalStoex.g:3303:1: rule__UnitDiv__Group__0 : rule__UnitDiv__Group__0__Impl rule__UnitDiv__Group__1 ;
+    // InternalStoex.g:3342:1: rule__UnitDiv__Group__0 : rule__UnitDiv__Group__0__Impl rule__UnitDiv__Group__1 ;
     public final void rule__UnitDiv__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3307:1: ( rule__UnitDiv__Group__0__Impl rule__UnitDiv__Group__1 )
-            // InternalStoex.g:3308:2: rule__UnitDiv__Group__0__Impl rule__UnitDiv__Group__1
+            // InternalStoex.g:3346:1: ( rule__UnitDiv__Group__0__Impl rule__UnitDiv__Group__1 )
+            // InternalStoex.g:3347:2: rule__UnitDiv__Group__0__Impl rule__UnitDiv__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_26);
             rule__UnitDiv__Group__0__Impl();
@@ -11283,17 +11439,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group__0__Impl"
-    // InternalStoex.g:3315:1: rule__UnitDiv__Group__0__Impl : ( ruleunitPow ) ;
+    // InternalStoex.g:3354:1: rule__UnitDiv__Group__0__Impl : ( ruleunitPow ) ;
     public final void rule__UnitDiv__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3319:1: ( ( ruleunitPow ) )
-            // InternalStoex.g:3320:1: ( ruleunitPow )
+            // InternalStoex.g:3358:1: ( ( ruleunitPow ) )
+            // InternalStoex.g:3359:1: ( ruleunitPow )
             {
-            // InternalStoex.g:3320:1: ( ruleunitPow )
-            // InternalStoex.g:3321:2: ruleunitPow
+            // InternalStoex.g:3359:1: ( ruleunitPow )
+            // InternalStoex.g:3360:2: ruleunitPow
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getUnitPowParserRuleCall_0()); 
@@ -11328,14 +11484,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group__1"
-    // InternalStoex.g:3330:1: rule__UnitDiv__Group__1 : rule__UnitDiv__Group__1__Impl ;
+    // InternalStoex.g:3369:1: rule__UnitDiv__Group__1 : rule__UnitDiv__Group__1__Impl ;
     public final void rule__UnitDiv__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3334:1: ( rule__UnitDiv__Group__1__Impl )
-            // InternalStoex.g:3335:2: rule__UnitDiv__Group__1__Impl
+            // InternalStoex.g:3373:1: ( rule__UnitDiv__Group__1__Impl )
+            // InternalStoex.g:3374:2: rule__UnitDiv__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitDiv__Group__1__Impl();
@@ -11361,31 +11517,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group__1__Impl"
-    // InternalStoex.g:3341:1: rule__UnitDiv__Group__1__Impl : ( ( rule__UnitDiv__Group_1__0 )? ) ;
+    // InternalStoex.g:3380:1: rule__UnitDiv__Group__1__Impl : ( ( rule__UnitDiv__Group_1__0 )? ) ;
     public final void rule__UnitDiv__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3345:1: ( ( ( rule__UnitDiv__Group_1__0 )? ) )
-            // InternalStoex.g:3346:1: ( ( rule__UnitDiv__Group_1__0 )? )
+            // InternalStoex.g:3384:1: ( ( ( rule__UnitDiv__Group_1__0 )? ) )
+            // InternalStoex.g:3385:1: ( ( rule__UnitDiv__Group_1__0 )? )
             {
-            // InternalStoex.g:3346:1: ( ( rule__UnitDiv__Group_1__0 )? )
-            // InternalStoex.g:3347:2: ( rule__UnitDiv__Group_1__0 )?
+            // InternalStoex.g:3385:1: ( ( rule__UnitDiv__Group_1__0 )? )
+            // InternalStoex.g:3386:2: ( rule__UnitDiv__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getGroup_1()); 
             }
-            // InternalStoex.g:3348:2: ( rule__UnitDiv__Group_1__0 )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // InternalStoex.g:3387:2: ( rule__UnitDiv__Group_1__0 )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA26_0==26) ) {
-                alt26=1;
+            if ( (LA27_0==31) ) {
+                alt27=1;
             }
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
-                    // InternalStoex.g:3348:3: rule__UnitDiv__Group_1__0
+                    // InternalStoex.g:3387:3: rule__UnitDiv__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__UnitDiv__Group_1__0();
@@ -11423,14 +11579,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group_1__0"
-    // InternalStoex.g:3357:1: rule__UnitDiv__Group_1__0 : rule__UnitDiv__Group_1__0__Impl rule__UnitDiv__Group_1__1 ;
+    // InternalStoex.g:3396:1: rule__UnitDiv__Group_1__0 : rule__UnitDiv__Group_1__0__Impl rule__UnitDiv__Group_1__1 ;
     public final void rule__UnitDiv__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3361:1: ( rule__UnitDiv__Group_1__0__Impl rule__UnitDiv__Group_1__1 )
-            // InternalStoex.g:3362:2: rule__UnitDiv__Group_1__0__Impl rule__UnitDiv__Group_1__1
+            // InternalStoex.g:3400:1: ( rule__UnitDiv__Group_1__0__Impl rule__UnitDiv__Group_1__1 )
+            // InternalStoex.g:3401:2: rule__UnitDiv__Group_1__0__Impl rule__UnitDiv__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_26);
             rule__UnitDiv__Group_1__0__Impl();
@@ -11461,23 +11617,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group_1__0__Impl"
-    // InternalStoex.g:3369:1: rule__UnitDiv__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:3408:1: rule__UnitDiv__Group_1__0__Impl : ( () ) ;
     public final void rule__UnitDiv__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3373:1: ( ( () ) )
-            // InternalStoex.g:3374:1: ( () )
+            // InternalStoex.g:3412:1: ( ( () ) )
+            // InternalStoex.g:3413:1: ( () )
             {
-            // InternalStoex.g:3374:1: ( () )
-            // InternalStoex.g:3375:2: ()
+            // InternalStoex.g:3413:1: ( () )
+            // InternalStoex.g:3414:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getUnitDivisionDividendAction_1_0()); 
             }
-            // InternalStoex.g:3376:2: ()
-            // InternalStoex.g:3376:3: 
+            // InternalStoex.g:3415:2: ()
+            // InternalStoex.g:3415:3: 
             {
             }
 
@@ -11502,14 +11658,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group_1__1"
-    // InternalStoex.g:3384:1: rule__UnitDiv__Group_1__1 : rule__UnitDiv__Group_1__1__Impl rule__UnitDiv__Group_1__2 ;
+    // InternalStoex.g:3423:1: rule__UnitDiv__Group_1__1 : rule__UnitDiv__Group_1__1__Impl rule__UnitDiv__Group_1__2 ;
     public final void rule__UnitDiv__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3388:1: ( rule__UnitDiv__Group_1__1__Impl rule__UnitDiv__Group_1__2 )
-            // InternalStoex.g:3389:2: rule__UnitDiv__Group_1__1__Impl rule__UnitDiv__Group_1__2
+            // InternalStoex.g:3427:1: ( rule__UnitDiv__Group_1__1__Impl rule__UnitDiv__Group_1__2 )
+            // InternalStoex.g:3428:2: rule__UnitDiv__Group_1__1__Impl rule__UnitDiv__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__UnitDiv__Group_1__1__Impl();
@@ -11540,22 +11696,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group_1__1__Impl"
-    // InternalStoex.g:3396:1: rule__UnitDiv__Group_1__1__Impl : ( '/' ) ;
+    // InternalStoex.g:3435:1: rule__UnitDiv__Group_1__1__Impl : ( '/' ) ;
     public final void rule__UnitDiv__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3400:1: ( ( '/' ) )
-            // InternalStoex.g:3401:1: ( '/' )
+            // InternalStoex.g:3439:1: ( ( '/' ) )
+            // InternalStoex.g:3440:1: ( '/' )
             {
-            // InternalStoex.g:3401:1: ( '/' )
-            // InternalStoex.g:3402:2: '/'
+            // InternalStoex.g:3440:1: ( '/' )
+            // InternalStoex.g:3441:2: '/'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getSolidusKeyword_1_1()); 
             }
-            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitDivAccess().getSolidusKeyword_1_1()); 
             }
@@ -11581,14 +11737,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group_1__2"
-    // InternalStoex.g:3411:1: rule__UnitDiv__Group_1__2 : rule__UnitDiv__Group_1__2__Impl ;
+    // InternalStoex.g:3450:1: rule__UnitDiv__Group_1__2 : rule__UnitDiv__Group_1__2__Impl ;
     public final void rule__UnitDiv__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3415:1: ( rule__UnitDiv__Group_1__2__Impl )
-            // InternalStoex.g:3416:2: rule__UnitDiv__Group_1__2__Impl
+            // InternalStoex.g:3454:1: ( rule__UnitDiv__Group_1__2__Impl )
+            // InternalStoex.g:3455:2: rule__UnitDiv__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitDiv__Group_1__2__Impl();
@@ -11614,23 +11770,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__Group_1__2__Impl"
-    // InternalStoex.g:3422:1: rule__UnitDiv__Group_1__2__Impl : ( ( rule__UnitDiv__DivisorAssignment_1_2 ) ) ;
+    // InternalStoex.g:3461:1: rule__UnitDiv__Group_1__2__Impl : ( ( rule__UnitDiv__DivisorAssignment_1_2 ) ) ;
     public final void rule__UnitDiv__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3426:1: ( ( ( rule__UnitDiv__DivisorAssignment_1_2 ) ) )
-            // InternalStoex.g:3427:1: ( ( rule__UnitDiv__DivisorAssignment_1_2 ) )
+            // InternalStoex.g:3465:1: ( ( ( rule__UnitDiv__DivisorAssignment_1_2 ) ) )
+            // InternalStoex.g:3466:1: ( ( rule__UnitDiv__DivisorAssignment_1_2 ) )
             {
-            // InternalStoex.g:3427:1: ( ( rule__UnitDiv__DivisorAssignment_1_2 ) )
-            // InternalStoex.g:3428:2: ( rule__UnitDiv__DivisorAssignment_1_2 )
+            // InternalStoex.g:3466:1: ( ( rule__UnitDiv__DivisorAssignment_1_2 ) )
+            // InternalStoex.g:3467:2: ( rule__UnitDiv__DivisorAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getDivisorAssignment_1_2()); 
             }
-            // InternalStoex.g:3429:2: ( rule__UnitDiv__DivisorAssignment_1_2 )
-            // InternalStoex.g:3429:3: rule__UnitDiv__DivisorAssignment_1_2
+            // InternalStoex.g:3468:2: ( rule__UnitDiv__DivisorAssignment_1_2 )
+            // InternalStoex.g:3468:3: rule__UnitDiv__DivisorAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitDiv__DivisorAssignment_1_2();
@@ -11665,14 +11821,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group__0"
-    // InternalStoex.g:3438:1: rule__UnitMulti__Group__0 : rule__UnitMulti__Group__0__Impl rule__UnitMulti__Group__1 ;
+    // InternalStoex.g:3477:1: rule__UnitMulti__Group__0 : rule__UnitMulti__Group__0__Impl rule__UnitMulti__Group__1 ;
     public final void rule__UnitMulti__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3442:1: ( rule__UnitMulti__Group__0__Impl rule__UnitMulti__Group__1 )
-            // InternalStoex.g:3443:2: rule__UnitMulti__Group__0__Impl rule__UnitMulti__Group__1
+            // InternalStoex.g:3481:1: ( rule__UnitMulti__Group__0__Impl rule__UnitMulti__Group__1 )
+            // InternalStoex.g:3482:2: rule__UnitMulti__Group__0__Impl rule__UnitMulti__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_27);
             rule__UnitMulti__Group__0__Impl();
@@ -11703,17 +11859,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group__0__Impl"
-    // InternalStoex.g:3450:1: rule__UnitMulti__Group__0__Impl : ( ruleunitPow ) ;
+    // InternalStoex.g:3489:1: rule__UnitMulti__Group__0__Impl : ( ruleunitPow ) ;
     public final void rule__UnitMulti__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3454:1: ( ( ruleunitPow ) )
-            // InternalStoex.g:3455:1: ( ruleunitPow )
+            // InternalStoex.g:3493:1: ( ( ruleunitPow ) )
+            // InternalStoex.g:3494:1: ( ruleunitPow )
             {
-            // InternalStoex.g:3455:1: ( ruleunitPow )
-            // InternalStoex.g:3456:2: ruleunitPow
+            // InternalStoex.g:3494:1: ( ruleunitPow )
+            // InternalStoex.g:3495:2: ruleunitPow
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getUnitPowParserRuleCall_0()); 
@@ -11748,14 +11904,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group__1"
-    // InternalStoex.g:3465:1: rule__UnitMulti__Group__1 : rule__UnitMulti__Group__1__Impl ;
+    // InternalStoex.g:3504:1: rule__UnitMulti__Group__1 : rule__UnitMulti__Group__1__Impl ;
     public final void rule__UnitMulti__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3469:1: ( rule__UnitMulti__Group__1__Impl )
-            // InternalStoex.g:3470:2: rule__UnitMulti__Group__1__Impl
+            // InternalStoex.g:3508:1: ( rule__UnitMulti__Group__1__Impl )
+            // InternalStoex.g:3509:2: rule__UnitMulti__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitMulti__Group__1__Impl();
@@ -11781,41 +11937,41 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group__1__Impl"
-    // InternalStoex.g:3476:1: rule__UnitMulti__Group__1__Impl : ( ( rule__UnitMulti__Group_1__0 )* ) ;
+    // InternalStoex.g:3515:1: rule__UnitMulti__Group__1__Impl : ( ( rule__UnitMulti__Group_1__0 )* ) ;
     public final void rule__UnitMulti__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3480:1: ( ( ( rule__UnitMulti__Group_1__0 )* ) )
-            // InternalStoex.g:3481:1: ( ( rule__UnitMulti__Group_1__0 )* )
+            // InternalStoex.g:3519:1: ( ( ( rule__UnitMulti__Group_1__0 )* ) )
+            // InternalStoex.g:3520:1: ( ( rule__UnitMulti__Group_1__0 )* )
             {
-            // InternalStoex.g:3481:1: ( ( rule__UnitMulti__Group_1__0 )* )
-            // InternalStoex.g:3482:2: ( rule__UnitMulti__Group_1__0 )*
+            // InternalStoex.g:3520:1: ( ( rule__UnitMulti__Group_1__0 )* )
+            // InternalStoex.g:3521:2: ( rule__UnitMulti__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getGroup_1()); 
             }
-            // InternalStoex.g:3483:2: ( rule__UnitMulti__Group_1__0 )*
-            loop27:
+            // InternalStoex.g:3522:2: ( rule__UnitMulti__Group_1__0 )*
+            loop28:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( (LA27_0==25) ) {
-                    int LA27_2 = input.LA(2);
+                if ( (LA28_0==30) ) {
+                    int LA28_2 = input.LA(2);
 
-                    if ( (synpred46_InternalStoex()) ) {
-                        alt27=1;
+                    if ( (synpred50_InternalStoex()) ) {
+                        alt28=1;
                     }
 
 
                 }
 
 
-                switch (alt27) {
+                switch (alt28) {
             	case 1 :
-            	    // InternalStoex.g:3483:3: rule__UnitMulti__Group_1__0
+            	    // InternalStoex.g:3522:3: rule__UnitMulti__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_28);
             	    rule__UnitMulti__Group_1__0();
@@ -11827,7 +11983,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop28;
                 }
             } while (true);
 
@@ -11856,14 +12012,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group_1__0"
-    // InternalStoex.g:3492:1: rule__UnitMulti__Group_1__0 : rule__UnitMulti__Group_1__0__Impl rule__UnitMulti__Group_1__1 ;
+    // InternalStoex.g:3531:1: rule__UnitMulti__Group_1__0 : rule__UnitMulti__Group_1__0__Impl rule__UnitMulti__Group_1__1 ;
     public final void rule__UnitMulti__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3496:1: ( rule__UnitMulti__Group_1__0__Impl rule__UnitMulti__Group_1__1 )
-            // InternalStoex.g:3497:2: rule__UnitMulti__Group_1__0__Impl rule__UnitMulti__Group_1__1
+            // InternalStoex.g:3535:1: ( rule__UnitMulti__Group_1__0__Impl rule__UnitMulti__Group_1__1 )
+            // InternalStoex.g:3536:2: rule__UnitMulti__Group_1__0__Impl rule__UnitMulti__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_27);
             rule__UnitMulti__Group_1__0__Impl();
@@ -11894,23 +12050,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group_1__0__Impl"
-    // InternalStoex.g:3504:1: rule__UnitMulti__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:3543:1: rule__UnitMulti__Group_1__0__Impl : ( () ) ;
     public final void rule__UnitMulti__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3508:1: ( ( () ) )
-            // InternalStoex.g:3509:1: ( () )
+            // InternalStoex.g:3547:1: ( ( () ) )
+            // InternalStoex.g:3548:1: ( () )
             {
-            // InternalStoex.g:3509:1: ( () )
-            // InternalStoex.g:3510:2: ()
+            // InternalStoex.g:3548:1: ( () )
+            // InternalStoex.g:3549:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getUnitMultiplicationUnitsAction_1_0()); 
             }
-            // InternalStoex.g:3511:2: ()
-            // InternalStoex.g:3511:3: 
+            // InternalStoex.g:3550:2: ()
+            // InternalStoex.g:3550:3: 
             {
             }
 
@@ -11935,14 +12091,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group_1__1"
-    // InternalStoex.g:3519:1: rule__UnitMulti__Group_1__1 : rule__UnitMulti__Group_1__1__Impl rule__UnitMulti__Group_1__2 ;
+    // InternalStoex.g:3558:1: rule__UnitMulti__Group_1__1 : rule__UnitMulti__Group_1__1__Impl rule__UnitMulti__Group_1__2 ;
     public final void rule__UnitMulti__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3523:1: ( rule__UnitMulti__Group_1__1__Impl rule__UnitMulti__Group_1__2 )
-            // InternalStoex.g:3524:2: rule__UnitMulti__Group_1__1__Impl rule__UnitMulti__Group_1__2
+            // InternalStoex.g:3562:1: ( rule__UnitMulti__Group_1__1__Impl rule__UnitMulti__Group_1__2 )
+            // InternalStoex.g:3563:2: rule__UnitMulti__Group_1__1__Impl rule__UnitMulti__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__UnitMulti__Group_1__1__Impl();
@@ -11973,22 +12129,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group_1__1__Impl"
-    // InternalStoex.g:3531:1: rule__UnitMulti__Group_1__1__Impl : ( '*' ) ;
+    // InternalStoex.g:3570:1: rule__UnitMulti__Group_1__1__Impl : ( '*' ) ;
     public final void rule__UnitMulti__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3535:1: ( ( '*' ) )
-            // InternalStoex.g:3536:1: ( '*' )
+            // InternalStoex.g:3574:1: ( ( '*' ) )
+            // InternalStoex.g:3575:1: ( '*' )
             {
-            // InternalStoex.g:3536:1: ( '*' )
-            // InternalStoex.g:3537:2: '*'
+            // InternalStoex.g:3575:1: ( '*' )
+            // InternalStoex.g:3576:2: '*'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getAsteriskKeyword_1_1()); 
             }
-            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitMultiAccess().getAsteriskKeyword_1_1()); 
             }
@@ -12014,14 +12170,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group_1__2"
-    // InternalStoex.g:3546:1: rule__UnitMulti__Group_1__2 : rule__UnitMulti__Group_1__2__Impl ;
+    // InternalStoex.g:3585:1: rule__UnitMulti__Group_1__2 : rule__UnitMulti__Group_1__2__Impl ;
     public final void rule__UnitMulti__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3550:1: ( rule__UnitMulti__Group_1__2__Impl )
-            // InternalStoex.g:3551:2: rule__UnitMulti__Group_1__2__Impl
+            // InternalStoex.g:3589:1: ( rule__UnitMulti__Group_1__2__Impl )
+            // InternalStoex.g:3590:2: rule__UnitMulti__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitMulti__Group_1__2__Impl();
@@ -12047,23 +12203,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__Group_1__2__Impl"
-    // InternalStoex.g:3557:1: rule__UnitMulti__Group_1__2__Impl : ( ( rule__UnitMulti__UnitsAssignment_1_2 ) ) ;
+    // InternalStoex.g:3596:1: rule__UnitMulti__Group_1__2__Impl : ( ( rule__UnitMulti__UnitsAssignment_1_2 ) ) ;
     public final void rule__UnitMulti__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3561:1: ( ( ( rule__UnitMulti__UnitsAssignment_1_2 ) ) )
-            // InternalStoex.g:3562:1: ( ( rule__UnitMulti__UnitsAssignment_1_2 ) )
+            // InternalStoex.g:3600:1: ( ( ( rule__UnitMulti__UnitsAssignment_1_2 ) ) )
+            // InternalStoex.g:3601:1: ( ( rule__UnitMulti__UnitsAssignment_1_2 ) )
             {
-            // InternalStoex.g:3562:1: ( ( rule__UnitMulti__UnitsAssignment_1_2 ) )
-            // InternalStoex.g:3563:2: ( rule__UnitMulti__UnitsAssignment_1_2 )
+            // InternalStoex.g:3601:1: ( ( rule__UnitMulti__UnitsAssignment_1_2 ) )
+            // InternalStoex.g:3602:2: ( rule__UnitMulti__UnitsAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getUnitsAssignment_1_2()); 
             }
-            // InternalStoex.g:3564:2: ( rule__UnitMulti__UnitsAssignment_1_2 )
-            // InternalStoex.g:3564:3: rule__UnitMulti__UnitsAssignment_1_2
+            // InternalStoex.g:3603:2: ( rule__UnitMulti__UnitsAssignment_1_2 )
+            // InternalStoex.g:3603:3: rule__UnitMulti__UnitsAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitMulti__UnitsAssignment_1_2();
@@ -12098,14 +12254,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group__0"
-    // InternalStoex.g:3573:1: rule__UnitPow__Group__0 : rule__UnitPow__Group__0__Impl rule__UnitPow__Group__1 ;
+    // InternalStoex.g:3612:1: rule__UnitPow__Group__0 : rule__UnitPow__Group__0__Impl rule__UnitPow__Group__1 ;
     public final void rule__UnitPow__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3577:1: ( rule__UnitPow__Group__0__Impl rule__UnitPow__Group__1 )
-            // InternalStoex.g:3578:2: rule__UnitPow__Group__0__Impl rule__UnitPow__Group__1
+            // InternalStoex.g:3616:1: ( rule__UnitPow__Group__0__Impl rule__UnitPow__Group__1 )
+            // InternalStoex.g:3617:2: rule__UnitPow__Group__0__Impl rule__UnitPow__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_15);
             rule__UnitPow__Group__0__Impl();
@@ -12136,23 +12292,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group__0__Impl"
-    // InternalStoex.g:3585:1: rule__UnitPow__Group__0__Impl : ( ( rule__UnitPow__Alternatives_0 ) ) ;
+    // InternalStoex.g:3624:1: rule__UnitPow__Group__0__Impl : ( ( rule__UnitPow__Alternatives_0 ) ) ;
     public final void rule__UnitPow__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3589:1: ( ( ( rule__UnitPow__Alternatives_0 ) ) )
-            // InternalStoex.g:3590:1: ( ( rule__UnitPow__Alternatives_0 ) )
+            // InternalStoex.g:3628:1: ( ( ( rule__UnitPow__Alternatives_0 ) ) )
+            // InternalStoex.g:3629:1: ( ( rule__UnitPow__Alternatives_0 ) )
             {
-            // InternalStoex.g:3590:1: ( ( rule__UnitPow__Alternatives_0 ) )
-            // InternalStoex.g:3591:2: ( rule__UnitPow__Alternatives_0 )
+            // InternalStoex.g:3629:1: ( ( rule__UnitPow__Alternatives_0 ) )
+            // InternalStoex.g:3630:2: ( rule__UnitPow__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getAlternatives_0()); 
             }
-            // InternalStoex.g:3592:2: ( rule__UnitPow__Alternatives_0 )
-            // InternalStoex.g:3592:3: rule__UnitPow__Alternatives_0
+            // InternalStoex.g:3631:2: ( rule__UnitPow__Alternatives_0 )
+            // InternalStoex.g:3631:3: rule__UnitPow__Alternatives_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitPow__Alternatives_0();
@@ -12187,14 +12343,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group__1"
-    // InternalStoex.g:3600:1: rule__UnitPow__Group__1 : rule__UnitPow__Group__1__Impl ;
+    // InternalStoex.g:3639:1: rule__UnitPow__Group__1 : rule__UnitPow__Group__1__Impl ;
     public final void rule__UnitPow__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3604:1: ( rule__UnitPow__Group__1__Impl )
-            // InternalStoex.g:3605:2: rule__UnitPow__Group__1__Impl
+            // InternalStoex.g:3643:1: ( rule__UnitPow__Group__1__Impl )
+            // InternalStoex.g:3644:2: rule__UnitPow__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitPow__Group__1__Impl();
@@ -12220,35 +12376,35 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group__1__Impl"
-    // InternalStoex.g:3611:1: rule__UnitPow__Group__1__Impl : ( ( rule__UnitPow__Group_1__0 )* ) ;
+    // InternalStoex.g:3650:1: rule__UnitPow__Group__1__Impl : ( ( rule__UnitPow__Group_1__0 )* ) ;
     public final void rule__UnitPow__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3615:1: ( ( ( rule__UnitPow__Group_1__0 )* ) )
-            // InternalStoex.g:3616:1: ( ( rule__UnitPow__Group_1__0 )* )
+            // InternalStoex.g:3654:1: ( ( ( rule__UnitPow__Group_1__0 )* ) )
+            // InternalStoex.g:3655:1: ( ( rule__UnitPow__Group_1__0 )* )
             {
-            // InternalStoex.g:3616:1: ( ( rule__UnitPow__Group_1__0 )* )
-            // InternalStoex.g:3617:2: ( rule__UnitPow__Group_1__0 )*
+            // InternalStoex.g:3655:1: ( ( rule__UnitPow__Group_1__0 )* )
+            // InternalStoex.g:3656:2: ( rule__UnitPow__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getGroup_1()); 
             }
-            // InternalStoex.g:3618:2: ( rule__UnitPow__Group_1__0 )*
-            loop28:
+            // InternalStoex.g:3657:2: ( rule__UnitPow__Group_1__0 )*
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA28_0==35) ) {
-                    alt28=1;
+                if ( (LA29_0==40) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
-            	    // InternalStoex.g:3618:3: rule__UnitPow__Group_1__0
+            	    // InternalStoex.g:3657:3: rule__UnitPow__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_29);
             	    rule__UnitPow__Group_1__0();
@@ -12260,7 +12416,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
@@ -12289,14 +12445,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__0"
-    // InternalStoex.g:3627:1: rule__UnitPow__Group_0_1__0 : rule__UnitPow__Group_0_1__0__Impl rule__UnitPow__Group_0_1__1 ;
+    // InternalStoex.g:3666:1: rule__UnitPow__Group_0_1__0 : rule__UnitPow__Group_0_1__0__Impl rule__UnitPow__Group_0_1__1 ;
     public final void rule__UnitPow__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3631:1: ( rule__UnitPow__Group_0_1__0__Impl rule__UnitPow__Group_0_1__1 )
-            // InternalStoex.g:3632:2: rule__UnitPow__Group_0_1__0__Impl rule__UnitPow__Group_0_1__1
+            // InternalStoex.g:3670:1: ( rule__UnitPow__Group_0_1__0__Impl rule__UnitPow__Group_0_1__1 )
+            // InternalStoex.g:3671:2: rule__UnitPow__Group_0_1__0__Impl rule__UnitPow__Group_0_1__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__UnitPow__Group_0_1__0__Impl();
@@ -12327,22 +12483,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__0__Impl"
-    // InternalStoex.g:3639:1: rule__UnitPow__Group_0_1__0__Impl : ( '(' ) ;
+    // InternalStoex.g:3678:1: rule__UnitPow__Group_0_1__0__Impl : ( '(' ) ;
     public final void rule__UnitPow__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3643:1: ( ( '(' ) )
-            // InternalStoex.g:3644:1: ( '(' )
+            // InternalStoex.g:3682:1: ( ( '(' ) )
+            // InternalStoex.g:3683:1: ( '(' )
             {
-            // InternalStoex.g:3644:1: ( '(' )
-            // InternalStoex.g:3645:2: '('
+            // InternalStoex.g:3683:1: ( '(' )
+            // InternalStoex.g:3684:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getLeftParenthesisKeyword_0_1_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitPowAccess().getLeftParenthesisKeyword_0_1_0()); 
             }
@@ -12368,14 +12524,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__1"
-    // InternalStoex.g:3654:1: rule__UnitPow__Group_0_1__1 : rule__UnitPow__Group_0_1__1__Impl rule__UnitPow__Group_0_1__2 ;
+    // InternalStoex.g:3693:1: rule__UnitPow__Group_0_1__1 : rule__UnitPow__Group_0_1__1__Impl rule__UnitPow__Group_0_1__2 ;
     public final void rule__UnitPow__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3658:1: ( rule__UnitPow__Group_0_1__1__Impl rule__UnitPow__Group_0_1__2 )
-            // InternalStoex.g:3659:2: rule__UnitPow__Group_0_1__1__Impl rule__UnitPow__Group_0_1__2
+            // InternalStoex.g:3697:1: ( rule__UnitPow__Group_0_1__1__Impl rule__UnitPow__Group_0_1__2 )
+            // InternalStoex.g:3698:2: rule__UnitPow__Group_0_1__1__Impl rule__UnitPow__Group_0_1__2
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__UnitPow__Group_0_1__1__Impl();
@@ -12406,23 +12562,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__1__Impl"
-    // InternalStoex.g:3666:1: rule__UnitPow__Group_0_1__1__Impl : ( ( rule__UnitPow__Alternatives_0_1_1 ) ) ;
+    // InternalStoex.g:3705:1: rule__UnitPow__Group_0_1__1__Impl : ( ( rule__UnitPow__Alternatives_0_1_1 ) ) ;
     public final void rule__UnitPow__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3670:1: ( ( ( rule__UnitPow__Alternatives_0_1_1 ) ) )
-            // InternalStoex.g:3671:1: ( ( rule__UnitPow__Alternatives_0_1_1 ) )
+            // InternalStoex.g:3709:1: ( ( ( rule__UnitPow__Alternatives_0_1_1 ) ) )
+            // InternalStoex.g:3710:1: ( ( rule__UnitPow__Alternatives_0_1_1 ) )
             {
-            // InternalStoex.g:3671:1: ( ( rule__UnitPow__Alternatives_0_1_1 ) )
-            // InternalStoex.g:3672:2: ( rule__UnitPow__Alternatives_0_1_1 )
+            // InternalStoex.g:3710:1: ( ( rule__UnitPow__Alternatives_0_1_1 ) )
+            // InternalStoex.g:3711:2: ( rule__UnitPow__Alternatives_0_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getAlternatives_0_1_1()); 
             }
-            // InternalStoex.g:3673:2: ( rule__UnitPow__Alternatives_0_1_1 )
-            // InternalStoex.g:3673:3: rule__UnitPow__Alternatives_0_1_1
+            // InternalStoex.g:3712:2: ( rule__UnitPow__Alternatives_0_1_1 )
+            // InternalStoex.g:3712:3: rule__UnitPow__Alternatives_0_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitPow__Alternatives_0_1_1();
@@ -12457,14 +12613,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__2"
-    // InternalStoex.g:3681:1: rule__UnitPow__Group_0_1__2 : rule__UnitPow__Group_0_1__2__Impl ;
+    // InternalStoex.g:3720:1: rule__UnitPow__Group_0_1__2 : rule__UnitPow__Group_0_1__2__Impl ;
     public final void rule__UnitPow__Group_0_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3685:1: ( rule__UnitPow__Group_0_1__2__Impl )
-            // InternalStoex.g:3686:2: rule__UnitPow__Group_0_1__2__Impl
+            // InternalStoex.g:3724:1: ( rule__UnitPow__Group_0_1__2__Impl )
+            // InternalStoex.g:3725:2: rule__UnitPow__Group_0_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitPow__Group_0_1__2__Impl();
@@ -12490,22 +12646,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_0_1__2__Impl"
-    // InternalStoex.g:3692:1: rule__UnitPow__Group_0_1__2__Impl : ( ')' ) ;
+    // InternalStoex.g:3731:1: rule__UnitPow__Group_0_1__2__Impl : ( ')' ) ;
     public final void rule__UnitPow__Group_0_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3696:1: ( ( ')' ) )
-            // InternalStoex.g:3697:1: ( ')' )
+            // InternalStoex.g:3735:1: ( ( ')' ) )
+            // InternalStoex.g:3736:1: ( ')' )
             {
-            // InternalStoex.g:3697:1: ( ')' )
-            // InternalStoex.g:3698:2: ')'
+            // InternalStoex.g:3736:1: ( ')' )
+            // InternalStoex.g:3737:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getRightParenthesisKeyword_0_1_2()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitPowAccess().getRightParenthesisKeyword_0_1_2()); 
             }
@@ -12531,14 +12687,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__0"
-    // InternalStoex.g:3708:1: rule__UnitPow__Group_1__0 : rule__UnitPow__Group_1__0__Impl rule__UnitPow__Group_1__1 ;
+    // InternalStoex.g:3747:1: rule__UnitPow__Group_1__0 : rule__UnitPow__Group_1__0__Impl rule__UnitPow__Group_1__1 ;
     public final void rule__UnitPow__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3712:1: ( rule__UnitPow__Group_1__0__Impl rule__UnitPow__Group_1__1 )
-            // InternalStoex.g:3713:2: rule__UnitPow__Group_1__0__Impl rule__UnitPow__Group_1__1
+            // InternalStoex.g:3751:1: ( rule__UnitPow__Group_1__0__Impl rule__UnitPow__Group_1__1 )
+            // InternalStoex.g:3752:2: rule__UnitPow__Group_1__0__Impl rule__UnitPow__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_15);
             rule__UnitPow__Group_1__0__Impl();
@@ -12569,23 +12725,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__0__Impl"
-    // InternalStoex.g:3720:1: rule__UnitPow__Group_1__0__Impl : ( () ) ;
+    // InternalStoex.g:3759:1: rule__UnitPow__Group_1__0__Impl : ( () ) ;
     public final void rule__UnitPow__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3724:1: ( ( () ) )
-            // InternalStoex.g:3725:1: ( () )
+            // InternalStoex.g:3763:1: ( ( () ) )
+            // InternalStoex.g:3764:1: ( () )
             {
-            // InternalStoex.g:3725:1: ( () )
-            // InternalStoex.g:3726:2: ()
+            // InternalStoex.g:3764:1: ( () )
+            // InternalStoex.g:3765:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getUnitPowerUnitAction_1_0()); 
             }
-            // InternalStoex.g:3727:2: ()
-            // InternalStoex.g:3727:3: 
+            // InternalStoex.g:3766:2: ()
+            // InternalStoex.g:3766:3: 
             {
             }
 
@@ -12610,14 +12766,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__1"
-    // InternalStoex.g:3735:1: rule__UnitPow__Group_1__1 : rule__UnitPow__Group_1__1__Impl rule__UnitPow__Group_1__2 ;
+    // InternalStoex.g:3774:1: rule__UnitPow__Group_1__1 : rule__UnitPow__Group_1__1__Impl rule__UnitPow__Group_1__2 ;
     public final void rule__UnitPow__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3739:1: ( rule__UnitPow__Group_1__1__Impl rule__UnitPow__Group_1__2 )
-            // InternalStoex.g:3740:2: rule__UnitPow__Group_1__1__Impl rule__UnitPow__Group_1__2
+            // InternalStoex.g:3778:1: ( rule__UnitPow__Group_1__1__Impl rule__UnitPow__Group_1__2 )
+            // InternalStoex.g:3779:2: rule__UnitPow__Group_1__1__Impl rule__UnitPow__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__UnitPow__Group_1__1__Impl();
@@ -12648,22 +12804,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__1__Impl"
-    // InternalStoex.g:3747:1: rule__UnitPow__Group_1__1__Impl : ( '^' ) ;
+    // InternalStoex.g:3786:1: rule__UnitPow__Group_1__1__Impl : ( '^' ) ;
     public final void rule__UnitPow__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3751:1: ( ( '^' ) )
-            // InternalStoex.g:3752:1: ( '^' )
+            // InternalStoex.g:3790:1: ( ( '^' ) )
+            // InternalStoex.g:3791:1: ( '^' )
             {
-            // InternalStoex.g:3752:1: ( '^' )
-            // InternalStoex.g:3753:2: '^'
+            // InternalStoex.g:3791:1: ( '^' )
+            // InternalStoex.g:3792:2: '^'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getCircumflexAccentKeyword_1_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnitPowAccess().getCircumflexAccentKeyword_1_1()); 
             }
@@ -12689,14 +12845,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__2"
-    // InternalStoex.g:3762:1: rule__UnitPow__Group_1__2 : rule__UnitPow__Group_1__2__Impl ;
+    // InternalStoex.g:3801:1: rule__UnitPow__Group_1__2 : rule__UnitPow__Group_1__2__Impl ;
     public final void rule__UnitPow__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3766:1: ( rule__UnitPow__Group_1__2__Impl )
-            // InternalStoex.g:3767:2: rule__UnitPow__Group_1__2__Impl
+            // InternalStoex.g:3805:1: ( rule__UnitPow__Group_1__2__Impl )
+            // InternalStoex.g:3806:2: rule__UnitPow__Group_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitPow__Group_1__2__Impl();
@@ -12722,23 +12878,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__Group_1__2__Impl"
-    // InternalStoex.g:3773:1: rule__UnitPow__Group_1__2__Impl : ( ( rule__UnitPow__ExponentAssignment_1_2 ) ) ;
+    // InternalStoex.g:3812:1: rule__UnitPow__Group_1__2__Impl : ( ( rule__UnitPow__ExponentAssignment_1_2 ) ) ;
     public final void rule__UnitPow__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3777:1: ( ( ( rule__UnitPow__ExponentAssignment_1_2 ) ) )
-            // InternalStoex.g:3778:1: ( ( rule__UnitPow__ExponentAssignment_1_2 ) )
+            // InternalStoex.g:3816:1: ( ( ( rule__UnitPow__ExponentAssignment_1_2 ) ) )
+            // InternalStoex.g:3817:1: ( ( rule__UnitPow__ExponentAssignment_1_2 ) )
             {
-            // InternalStoex.g:3778:1: ( ( rule__UnitPow__ExponentAssignment_1_2 ) )
-            // InternalStoex.g:3779:2: ( rule__UnitPow__ExponentAssignment_1_2 )
+            // InternalStoex.g:3817:1: ( ( rule__UnitPow__ExponentAssignment_1_2 ) )
+            // InternalStoex.g:3818:2: ( rule__UnitPow__ExponentAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getExponentAssignment_1_2()); 
             }
-            // InternalStoex.g:3780:2: ( rule__UnitPow__ExponentAssignment_1_2 )
-            // InternalStoex.g:3780:3: rule__UnitPow__ExponentAssignment_1_2
+            // InternalStoex.g:3819:2: ( rule__UnitPow__ExponentAssignment_1_2 )
+            // InternalStoex.g:3819:3: rule__UnitPow__ExponentAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__UnitPow__ExponentAssignment_1_2();
@@ -12773,14 +12929,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__0"
-    // InternalStoex.g:3789:1: rule__BoxedPDF__Group__0 : rule__BoxedPDF__Group__0__Impl rule__BoxedPDF__Group__1 ;
+    // InternalStoex.g:3828:1: rule__BoxedPDF__Group__0 : rule__BoxedPDF__Group__0__Impl rule__BoxedPDF__Group__1 ;
     public final void rule__BoxedPDF__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3793:1: ( rule__BoxedPDF__Group__0__Impl rule__BoxedPDF__Group__1 )
-            // InternalStoex.g:3794:2: rule__BoxedPDF__Group__0__Impl rule__BoxedPDF__Group__1
+            // InternalStoex.g:3832:1: ( rule__BoxedPDF__Group__0__Impl rule__BoxedPDF__Group__1 )
+            // InternalStoex.g:3833:2: rule__BoxedPDF__Group__0__Impl rule__BoxedPDF__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__BoxedPDF__Group__0__Impl();
@@ -12811,22 +12967,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__0__Impl"
-    // InternalStoex.g:3801:1: rule__BoxedPDF__Group__0__Impl : ( 'DoublePDF' ) ;
+    // InternalStoex.g:3840:1: rule__BoxedPDF__Group__0__Impl : ( 'DoublePDF' ) ;
     public final void rule__BoxedPDF__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3805:1: ( ( 'DoublePDF' ) )
-            // InternalStoex.g:3806:1: ( 'DoublePDF' )
+            // InternalStoex.g:3844:1: ( ( 'DoublePDF' ) )
+            // InternalStoex.g:3845:1: ( 'DoublePDF' )
             {
-            // InternalStoex.g:3806:1: ( 'DoublePDF' )
-            // InternalStoex.g:3807:2: 'DoublePDF'
+            // InternalStoex.g:3845:1: ( 'DoublePDF' )
+            // InternalStoex.g:3846:2: 'DoublePDF'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getDoublePDFKeyword_0()); 
             }
-            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoxedPDFAccess().getDoublePDFKeyword_0()); 
             }
@@ -12852,14 +13008,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__1"
-    // InternalStoex.g:3816:1: rule__BoxedPDF__Group__1 : rule__BoxedPDF__Group__1__Impl rule__BoxedPDF__Group__2 ;
+    // InternalStoex.g:3855:1: rule__BoxedPDF__Group__1 : rule__BoxedPDF__Group__1__Impl rule__BoxedPDF__Group__2 ;
     public final void rule__BoxedPDF__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3820:1: ( rule__BoxedPDF__Group__1__Impl rule__BoxedPDF__Group__2 )
-            // InternalStoex.g:3821:2: rule__BoxedPDF__Group__1__Impl rule__BoxedPDF__Group__2
+            // InternalStoex.g:3859:1: ( rule__BoxedPDF__Group__1__Impl rule__BoxedPDF__Group__2 )
+            // InternalStoex.g:3860:2: rule__BoxedPDF__Group__1__Impl rule__BoxedPDF__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__BoxedPDF__Group__1__Impl();
@@ -12890,22 +13046,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__1__Impl"
-    // InternalStoex.g:3828:1: rule__BoxedPDF__Group__1__Impl : ( '[' ) ;
+    // InternalStoex.g:3867:1: rule__BoxedPDF__Group__1__Impl : ( '[' ) ;
     public final void rule__BoxedPDF__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3832:1: ( ( '[' ) )
-            // InternalStoex.g:3833:1: ( '[' )
+            // InternalStoex.g:3871:1: ( ( '[' ) )
+            // InternalStoex.g:3872:1: ( '[' )
             {
-            // InternalStoex.g:3833:1: ( '[' )
-            // InternalStoex.g:3834:2: '['
+            // InternalStoex.g:3872:1: ( '[' )
+            // InternalStoex.g:3873:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_1()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_1()); 
             }
@@ -12931,14 +13087,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__2"
-    // InternalStoex.g:3843:1: rule__BoxedPDF__Group__2 : rule__BoxedPDF__Group__2__Impl rule__BoxedPDF__Group__3 ;
+    // InternalStoex.g:3882:1: rule__BoxedPDF__Group__2 : rule__BoxedPDF__Group__2__Impl rule__BoxedPDF__Group__3 ;
     public final void rule__BoxedPDF__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3847:1: ( rule__BoxedPDF__Group__2__Impl rule__BoxedPDF__Group__3 )
-            // InternalStoex.g:3848:2: rule__BoxedPDF__Group__2__Impl rule__BoxedPDF__Group__3
+            // InternalStoex.g:3886:1: ( rule__BoxedPDF__Group__2__Impl rule__BoxedPDF__Group__3 )
+            // InternalStoex.g:3887:2: rule__BoxedPDF__Group__2__Impl rule__BoxedPDF__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__BoxedPDF__Group__2__Impl();
@@ -12969,26 +13125,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__2__Impl"
-    // InternalStoex.g:3855:1: rule__BoxedPDF__Group__2__Impl : ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) ) ;
+    // InternalStoex.g:3894:1: rule__BoxedPDF__Group__2__Impl : ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) ) ;
     public final void rule__BoxedPDF__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3859:1: ( ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) ) )
-            // InternalStoex.g:3860:1: ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) )
+            // InternalStoex.g:3898:1: ( ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) ) )
+            // InternalStoex.g:3899:1: ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) )
             {
-            // InternalStoex.g:3860:1: ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) )
-            // InternalStoex.g:3861:2: ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* )
+            // InternalStoex.g:3899:1: ( ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* ) )
+            // InternalStoex.g:3900:2: ( ( rule__BoxedPDF__SamplesAssignment_2 ) ) ( ( rule__BoxedPDF__SamplesAssignment_2 )* )
             {
-            // InternalStoex.g:3861:2: ( ( rule__BoxedPDF__SamplesAssignment_2 ) )
-            // InternalStoex.g:3862:3: ( rule__BoxedPDF__SamplesAssignment_2 )
+            // InternalStoex.g:3900:2: ( ( rule__BoxedPDF__SamplesAssignment_2 ) )
+            // InternalStoex.g:3901:3: ( rule__BoxedPDF__SamplesAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getSamplesAssignment_2()); 
             }
-            // InternalStoex.g:3863:3: ( rule__BoxedPDF__SamplesAssignment_2 )
-            // InternalStoex.g:3863:4: rule__BoxedPDF__SamplesAssignment_2
+            // InternalStoex.g:3902:3: ( rule__BoxedPDF__SamplesAssignment_2 )
+            // InternalStoex.g:3902:4: rule__BoxedPDF__SamplesAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_31);
             rule__BoxedPDF__SamplesAssignment_2();
@@ -13004,26 +13160,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalStoex.g:3866:2: ( ( rule__BoxedPDF__SamplesAssignment_2 )* )
-            // InternalStoex.g:3867:3: ( rule__BoxedPDF__SamplesAssignment_2 )*
+            // InternalStoex.g:3905:2: ( ( rule__BoxedPDF__SamplesAssignment_2 )* )
+            // InternalStoex.g:3906:3: ( rule__BoxedPDF__SamplesAssignment_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getSamplesAssignment_2()); 
             }
-            // InternalStoex.g:3868:3: ( rule__BoxedPDF__SamplesAssignment_2 )*
-            loop29:
+            // InternalStoex.g:3907:3: ( rule__BoxedPDF__SamplesAssignment_2 )*
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==39) ) {
-                    alt29=1;
+                if ( (LA30_0==44) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
-            	    // InternalStoex.g:3868:4: rule__BoxedPDF__SamplesAssignment_2
+            	    // InternalStoex.g:3907:4: rule__BoxedPDF__SamplesAssignment_2
             	    {
             	    pushFollow(FollowSets000.FOLLOW_31);
             	    rule__BoxedPDF__SamplesAssignment_2();
@@ -13035,7 +13191,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -13067,14 +13223,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__3"
-    // InternalStoex.g:3877:1: rule__BoxedPDF__Group__3 : rule__BoxedPDF__Group__3__Impl rule__BoxedPDF__Group__4 ;
+    // InternalStoex.g:3916:1: rule__BoxedPDF__Group__3 : rule__BoxedPDF__Group__3__Impl rule__BoxedPDF__Group__4 ;
     public final void rule__BoxedPDF__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3881:1: ( rule__BoxedPDF__Group__3__Impl rule__BoxedPDF__Group__4 )
-            // InternalStoex.g:3882:2: rule__BoxedPDF__Group__3__Impl rule__BoxedPDF__Group__4
+            // InternalStoex.g:3920:1: ( rule__BoxedPDF__Group__3__Impl rule__BoxedPDF__Group__4 )
+            // InternalStoex.g:3921:2: rule__BoxedPDF__Group__3__Impl rule__BoxedPDF__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__BoxedPDF__Group__3__Impl();
@@ -13105,22 +13261,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__3__Impl"
-    // InternalStoex.g:3889:1: rule__BoxedPDF__Group__3__Impl : ( ']' ) ;
+    // InternalStoex.g:3928:1: rule__BoxedPDF__Group__3__Impl : ( ']' ) ;
     public final void rule__BoxedPDF__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3893:1: ( ( ']' ) )
-            // InternalStoex.g:3894:1: ( ']' )
+            // InternalStoex.g:3932:1: ( ( ']' ) )
+            // InternalStoex.g:3933:1: ( ']' )
             {
-            // InternalStoex.g:3894:1: ( ']' )
-            // InternalStoex.g:3895:2: ']'
+            // InternalStoex.g:3933:1: ( ']' )
+            // InternalStoex.g:3934:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_3()); 
             }
@@ -13146,14 +13302,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__4"
-    // InternalStoex.g:3904:1: rule__BoxedPDF__Group__4 : rule__BoxedPDF__Group__4__Impl ;
+    // InternalStoex.g:3943:1: rule__BoxedPDF__Group__4 : rule__BoxedPDF__Group__4__Impl ;
     public final void rule__BoxedPDF__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3908:1: ( rule__BoxedPDF__Group__4__Impl )
-            // InternalStoex.g:3909:2: rule__BoxedPDF__Group__4__Impl
+            // InternalStoex.g:3947:1: ( rule__BoxedPDF__Group__4__Impl )
+            // InternalStoex.g:3948:2: rule__BoxedPDF__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoxedPDF__Group__4__Impl();
@@ -13179,31 +13335,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group__4__Impl"
-    // InternalStoex.g:3915:1: rule__BoxedPDF__Group__4__Impl : ( ( rule__BoxedPDF__Group_4__0 )? ) ;
+    // InternalStoex.g:3954:1: rule__BoxedPDF__Group__4__Impl : ( ( rule__BoxedPDF__Group_4__0 )? ) ;
     public final void rule__BoxedPDF__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3919:1: ( ( ( rule__BoxedPDF__Group_4__0 )? ) )
-            // InternalStoex.g:3920:1: ( ( rule__BoxedPDF__Group_4__0 )? )
+            // InternalStoex.g:3958:1: ( ( ( rule__BoxedPDF__Group_4__0 )? ) )
+            // InternalStoex.g:3959:1: ( ( rule__BoxedPDF__Group_4__0 )? )
             {
-            // InternalStoex.g:3920:1: ( ( rule__BoxedPDF__Group_4__0 )? )
-            // InternalStoex.g:3921:2: ( rule__BoxedPDF__Group_4__0 )?
+            // InternalStoex.g:3959:1: ( ( rule__BoxedPDF__Group_4__0 )? )
+            // InternalStoex.g:3960:2: ( rule__BoxedPDF__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getGroup_4()); 
             }
-            // InternalStoex.g:3922:2: ( rule__BoxedPDF__Group_4__0 )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalStoex.g:3961:2: ( rule__BoxedPDF__Group_4__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0==37) ) {
-                alt30=1;
+            if ( (LA31_0==42) ) {
+                alt31=1;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // InternalStoex.g:3922:3: rule__BoxedPDF__Group_4__0
+                    // InternalStoex.g:3961:3: rule__BoxedPDF__Group_4__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__BoxedPDF__Group_4__0();
@@ -13241,14 +13397,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__0"
-    // InternalStoex.g:3931:1: rule__BoxedPDF__Group_4__0 : rule__BoxedPDF__Group_4__0__Impl rule__BoxedPDF__Group_4__1 ;
+    // InternalStoex.g:3970:1: rule__BoxedPDF__Group_4__0 : rule__BoxedPDF__Group_4__0__Impl rule__BoxedPDF__Group_4__1 ;
     public final void rule__BoxedPDF__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3935:1: ( rule__BoxedPDF__Group_4__0__Impl rule__BoxedPDF__Group_4__1 )
-            // InternalStoex.g:3936:2: rule__BoxedPDF__Group_4__0__Impl rule__BoxedPDF__Group_4__1
+            // InternalStoex.g:3974:1: ( rule__BoxedPDF__Group_4__0__Impl rule__BoxedPDF__Group_4__1 )
+            // InternalStoex.g:3975:2: rule__BoxedPDF__Group_4__0__Impl rule__BoxedPDF__Group_4__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__BoxedPDF__Group_4__0__Impl();
@@ -13279,22 +13435,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__0__Impl"
-    // InternalStoex.g:3943:1: rule__BoxedPDF__Group_4__0__Impl : ( '[' ) ;
+    // InternalStoex.g:3982:1: rule__BoxedPDF__Group_4__0__Impl : ( '[' ) ;
     public final void rule__BoxedPDF__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3947:1: ( ( '[' ) )
-            // InternalStoex.g:3948:1: ( '[' )
+            // InternalStoex.g:3986:1: ( ( '[' ) )
+            // InternalStoex.g:3987:1: ( '[' )
             {
-            // InternalStoex.g:3948:1: ( '[' )
-            // InternalStoex.g:3949:2: '['
+            // InternalStoex.g:3987:1: ( '[' )
+            // InternalStoex.g:3988:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_4_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoxedPDFAccess().getLeftSquareBracketKeyword_4_0()); 
             }
@@ -13320,14 +13476,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__1"
-    // InternalStoex.g:3958:1: rule__BoxedPDF__Group_4__1 : rule__BoxedPDF__Group_4__1__Impl rule__BoxedPDF__Group_4__2 ;
+    // InternalStoex.g:3997:1: rule__BoxedPDF__Group_4__1 : rule__BoxedPDF__Group_4__1__Impl rule__BoxedPDF__Group_4__2 ;
     public final void rule__BoxedPDF__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3962:1: ( rule__BoxedPDF__Group_4__1__Impl rule__BoxedPDF__Group_4__2 )
-            // InternalStoex.g:3963:2: rule__BoxedPDF__Group_4__1__Impl rule__BoxedPDF__Group_4__2
+            // InternalStoex.g:4001:1: ( rule__BoxedPDF__Group_4__1__Impl rule__BoxedPDF__Group_4__2 )
+            // InternalStoex.g:4002:2: rule__BoxedPDF__Group_4__1__Impl rule__BoxedPDF__Group_4__2
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__BoxedPDF__Group_4__1__Impl();
@@ -13358,23 +13514,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__1__Impl"
-    // InternalStoex.g:3970:1: rule__BoxedPDF__Group_4__1__Impl : ( ( rule__BoxedPDF__UnitAssignment_4_1 ) ) ;
+    // InternalStoex.g:4009:1: rule__BoxedPDF__Group_4__1__Impl : ( ( rule__BoxedPDF__UnitAssignment_4_1 ) ) ;
     public final void rule__BoxedPDF__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3974:1: ( ( ( rule__BoxedPDF__UnitAssignment_4_1 ) ) )
-            // InternalStoex.g:3975:1: ( ( rule__BoxedPDF__UnitAssignment_4_1 ) )
+            // InternalStoex.g:4013:1: ( ( ( rule__BoxedPDF__UnitAssignment_4_1 ) ) )
+            // InternalStoex.g:4014:1: ( ( rule__BoxedPDF__UnitAssignment_4_1 ) )
             {
-            // InternalStoex.g:3975:1: ( ( rule__BoxedPDF__UnitAssignment_4_1 ) )
-            // InternalStoex.g:3976:2: ( rule__BoxedPDF__UnitAssignment_4_1 )
+            // InternalStoex.g:4014:1: ( ( rule__BoxedPDF__UnitAssignment_4_1 ) )
+            // InternalStoex.g:4015:2: ( rule__BoxedPDF__UnitAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getUnitAssignment_4_1()); 
             }
-            // InternalStoex.g:3977:2: ( rule__BoxedPDF__UnitAssignment_4_1 )
-            // InternalStoex.g:3977:3: rule__BoxedPDF__UnitAssignment_4_1
+            // InternalStoex.g:4016:2: ( rule__BoxedPDF__UnitAssignment_4_1 )
+            // InternalStoex.g:4016:3: rule__BoxedPDF__UnitAssignment_4_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoxedPDF__UnitAssignment_4_1();
@@ -13409,14 +13565,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__2"
-    // InternalStoex.g:3985:1: rule__BoxedPDF__Group_4__2 : rule__BoxedPDF__Group_4__2__Impl ;
+    // InternalStoex.g:4024:1: rule__BoxedPDF__Group_4__2 : rule__BoxedPDF__Group_4__2__Impl ;
     public final void rule__BoxedPDF__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:3989:1: ( rule__BoxedPDF__Group_4__2__Impl )
-            // InternalStoex.g:3990:2: rule__BoxedPDF__Group_4__2__Impl
+            // InternalStoex.g:4028:1: ( rule__BoxedPDF__Group_4__2__Impl )
+            // InternalStoex.g:4029:2: rule__BoxedPDF__Group_4__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__BoxedPDF__Group_4__2__Impl();
@@ -13442,22 +13598,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__Group_4__2__Impl"
-    // InternalStoex.g:3996:1: rule__BoxedPDF__Group_4__2__Impl : ( ']' ) ;
+    // InternalStoex.g:4035:1: rule__BoxedPDF__Group_4__2__Impl : ( ']' ) ;
     public final void rule__BoxedPDF__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4000:1: ( ( ']' ) )
-            // InternalStoex.g:4001:1: ( ']' )
+            // InternalStoex.g:4039:1: ( ( ']' ) )
+            // InternalStoex.g:4040:1: ( ']' )
             {
-            // InternalStoex.g:4001:1: ( ']' )
-            // InternalStoex.g:4002:2: ']'
+            // InternalStoex.g:4040:1: ( ']' )
+            // InternalStoex.g:4041:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_4_2()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoxedPDFAccess().getRightSquareBracketKeyword_4_2()); 
             }
@@ -13483,14 +13639,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__0"
-    // InternalStoex.g:4012:1: rule__ProbabilityMassFunction__Group_0__0 : rule__ProbabilityMassFunction__Group_0__0__Impl rule__ProbabilityMassFunction__Group_0__1 ;
+    // InternalStoex.g:4051:1: rule__ProbabilityMassFunction__Group_0__0 : rule__ProbabilityMassFunction__Group_0__0__Impl rule__ProbabilityMassFunction__Group_0__1 ;
     public final void rule__ProbabilityMassFunction__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4016:1: ( rule__ProbabilityMassFunction__Group_0__0__Impl rule__ProbabilityMassFunction__Group_0__1 )
-            // InternalStoex.g:4017:2: rule__ProbabilityMassFunction__Group_0__0__Impl rule__ProbabilityMassFunction__Group_0__1
+            // InternalStoex.g:4055:1: ( rule__ProbabilityMassFunction__Group_0__0__Impl rule__ProbabilityMassFunction__Group_0__1 )
+            // InternalStoex.g:4056:2: rule__ProbabilityMassFunction__Group_0__0__Impl rule__ProbabilityMassFunction__Group_0__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__ProbabilityMassFunction__Group_0__0__Impl();
@@ -13521,22 +13677,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__0__Impl"
-    // InternalStoex.g:4024:1: rule__ProbabilityMassFunction__Group_0__0__Impl : ( 'IntPMF' ) ;
+    // InternalStoex.g:4063:1: rule__ProbabilityMassFunction__Group_0__0__Impl : ( 'IntPMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4028:1: ( ( 'IntPMF' ) )
-            // InternalStoex.g:4029:1: ( 'IntPMF' )
+            // InternalStoex.g:4067:1: ( ( 'IntPMF' ) )
+            // InternalStoex.g:4068:1: ( 'IntPMF' )
             {
-            // InternalStoex.g:4029:1: ( 'IntPMF' )
-            // InternalStoex.g:4030:2: 'IntPMF'
+            // InternalStoex.g:4068:1: ( 'IntPMF' )
+            // InternalStoex.g:4069:2: 'IntPMF'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getIntPMFKeyword_0_0()); 
             }
-            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getIntPMFKeyword_0_0()); 
             }
@@ -13562,14 +13718,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__1"
-    // InternalStoex.g:4039:1: rule__ProbabilityMassFunction__Group_0__1 : rule__ProbabilityMassFunction__Group_0__1__Impl rule__ProbabilityMassFunction__Group_0__2 ;
+    // InternalStoex.g:4078:1: rule__ProbabilityMassFunction__Group_0__1 : rule__ProbabilityMassFunction__Group_0__1__Impl rule__ProbabilityMassFunction__Group_0__2 ;
     public final void rule__ProbabilityMassFunction__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4043:1: ( rule__ProbabilityMassFunction__Group_0__1__Impl rule__ProbabilityMassFunction__Group_0__2 )
-            // InternalStoex.g:4044:2: rule__ProbabilityMassFunction__Group_0__1__Impl rule__ProbabilityMassFunction__Group_0__2
+            // InternalStoex.g:4082:1: ( rule__ProbabilityMassFunction__Group_0__1__Impl rule__ProbabilityMassFunction__Group_0__2 )
+            // InternalStoex.g:4083:2: rule__ProbabilityMassFunction__Group_0__1__Impl rule__ProbabilityMassFunction__Group_0__2
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__ProbabilityMassFunction__Group_0__1__Impl();
@@ -13600,22 +13756,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__1__Impl"
-    // InternalStoex.g:4051:1: rule__ProbabilityMassFunction__Group_0__1__Impl : ( '[' ) ;
+    // InternalStoex.g:4090:1: rule__ProbabilityMassFunction__Group_0__1__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4055:1: ( ( '[' ) )
-            // InternalStoex.g:4056:1: ( '[' )
+            // InternalStoex.g:4094:1: ( ( '[' ) )
+            // InternalStoex.g:4095:1: ( '[' )
             {
-            // InternalStoex.g:4056:1: ( '[' )
-            // InternalStoex.g:4057:2: '['
+            // InternalStoex.g:4095:1: ( '[' )
+            // InternalStoex.g:4096:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_1()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_1()); 
             }
@@ -13641,14 +13797,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__2"
-    // InternalStoex.g:4066:1: rule__ProbabilityMassFunction__Group_0__2 : rule__ProbabilityMassFunction__Group_0__2__Impl rule__ProbabilityMassFunction__Group_0__3 ;
+    // InternalStoex.g:4105:1: rule__ProbabilityMassFunction__Group_0__2 : rule__ProbabilityMassFunction__Group_0__2__Impl rule__ProbabilityMassFunction__Group_0__3 ;
     public final void rule__ProbabilityMassFunction__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4070:1: ( rule__ProbabilityMassFunction__Group_0__2__Impl rule__ProbabilityMassFunction__Group_0__3 )
-            // InternalStoex.g:4071:2: rule__ProbabilityMassFunction__Group_0__2__Impl rule__ProbabilityMassFunction__Group_0__3
+            // InternalStoex.g:4109:1: ( rule__ProbabilityMassFunction__Group_0__2__Impl rule__ProbabilityMassFunction__Group_0__3 )
+            // InternalStoex.g:4110:2: rule__ProbabilityMassFunction__Group_0__2__Impl rule__ProbabilityMassFunction__Group_0__3
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__ProbabilityMassFunction__Group_0__2__Impl();
@@ -13679,26 +13835,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__2__Impl"
-    // InternalStoex.g:4078:1: rule__ProbabilityMassFunction__Group_0__2__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) ) ;
+    // InternalStoex.g:4117:1: rule__ProbabilityMassFunction__Group_0__2__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) ) ;
     public final void rule__ProbabilityMassFunction__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4082:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) ) )
-            // InternalStoex.g:4083:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) )
+            // InternalStoex.g:4121:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) ) )
+            // InternalStoex.g:4122:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) )
             {
-            // InternalStoex.g:4083:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) )
-            // InternalStoex.g:4084:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* )
+            // InternalStoex.g:4122:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* ) )
+            // InternalStoex.g:4123:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* )
             {
-            // InternalStoex.g:4084:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) )
-            // InternalStoex.g:4085:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )
+            // InternalStoex.g:4123:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 ) )
+            // InternalStoex.g:4124:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_0_2()); 
             }
-            // InternalStoex.g:4086:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )
-            // InternalStoex.g:4086:4: rule__ProbabilityMassFunction__SamplesAssignment_0_2
+            // InternalStoex.g:4125:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )
+            // InternalStoex.g:4125:4: rule__ProbabilityMassFunction__SamplesAssignment_0_2
             {
             pushFollow(FollowSets000.FOLLOW_31);
             rule__ProbabilityMassFunction__SamplesAssignment_0_2();
@@ -13714,26 +13870,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalStoex.g:4089:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* )
-            // InternalStoex.g:4090:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )*
+            // InternalStoex.g:4128:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )* )
+            // InternalStoex.g:4129:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_0_2()); 
             }
-            // InternalStoex.g:4091:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )*
-            loop31:
+            // InternalStoex.g:4130:3: ( rule__ProbabilityMassFunction__SamplesAssignment_0_2 )*
+            loop32:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA31_0==39) ) {
-                    alt31=1;
+                if ( (LA32_0==44) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt32) {
             	case 1 :
-            	    // InternalStoex.g:4091:4: rule__ProbabilityMassFunction__SamplesAssignment_0_2
+            	    // InternalStoex.g:4130:4: rule__ProbabilityMassFunction__SamplesAssignment_0_2
             	    {
             	    pushFollow(FollowSets000.FOLLOW_31);
             	    rule__ProbabilityMassFunction__SamplesAssignment_0_2();
@@ -13745,7 +13901,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop32;
                 }
             } while (true);
 
@@ -13777,14 +13933,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__3"
-    // InternalStoex.g:4100:1: rule__ProbabilityMassFunction__Group_0__3 : rule__ProbabilityMassFunction__Group_0__3__Impl rule__ProbabilityMassFunction__Group_0__4 ;
+    // InternalStoex.g:4139:1: rule__ProbabilityMassFunction__Group_0__3 : rule__ProbabilityMassFunction__Group_0__3__Impl rule__ProbabilityMassFunction__Group_0__4 ;
     public final void rule__ProbabilityMassFunction__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4104:1: ( rule__ProbabilityMassFunction__Group_0__3__Impl rule__ProbabilityMassFunction__Group_0__4 )
-            // InternalStoex.g:4105:2: rule__ProbabilityMassFunction__Group_0__3__Impl rule__ProbabilityMassFunction__Group_0__4
+            // InternalStoex.g:4143:1: ( rule__ProbabilityMassFunction__Group_0__3__Impl rule__ProbabilityMassFunction__Group_0__4 )
+            // InternalStoex.g:4144:2: rule__ProbabilityMassFunction__Group_0__3__Impl rule__ProbabilityMassFunction__Group_0__4
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__ProbabilityMassFunction__Group_0__3__Impl();
@@ -13815,22 +13971,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__3__Impl"
-    // InternalStoex.g:4112:1: rule__ProbabilityMassFunction__Group_0__3__Impl : ( ']' ) ;
+    // InternalStoex.g:4151:1: rule__ProbabilityMassFunction__Group_0__3__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4116:1: ( ( ']' ) )
-            // InternalStoex.g:4117:1: ( ']' )
+            // InternalStoex.g:4155:1: ( ( ']' ) )
+            // InternalStoex.g:4156:1: ( ']' )
             {
-            // InternalStoex.g:4117:1: ( ']' )
-            // InternalStoex.g:4118:2: ']'
+            // InternalStoex.g:4156:1: ( ']' )
+            // InternalStoex.g:4157:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_3()); 
             }
@@ -13856,14 +14012,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__4"
-    // InternalStoex.g:4127:1: rule__ProbabilityMassFunction__Group_0__4 : rule__ProbabilityMassFunction__Group_0__4__Impl ;
+    // InternalStoex.g:4166:1: rule__ProbabilityMassFunction__Group_0__4 : rule__ProbabilityMassFunction__Group_0__4__Impl ;
     public final void rule__ProbabilityMassFunction__Group_0__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4131:1: ( rule__ProbabilityMassFunction__Group_0__4__Impl )
-            // InternalStoex.g:4132:2: rule__ProbabilityMassFunction__Group_0__4__Impl
+            // InternalStoex.g:4170:1: ( rule__ProbabilityMassFunction__Group_0__4__Impl )
+            // InternalStoex.g:4171:2: rule__ProbabilityMassFunction__Group_0__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_0__4__Impl();
@@ -13889,31 +14045,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0__4__Impl"
-    // InternalStoex.g:4138:1: rule__ProbabilityMassFunction__Group_0__4__Impl : ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? ) ;
+    // InternalStoex.g:4177:1: rule__ProbabilityMassFunction__Group_0__4__Impl : ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? ) ;
     public final void rule__ProbabilityMassFunction__Group_0__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4142:1: ( ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? ) )
-            // InternalStoex.g:4143:1: ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? )
+            // InternalStoex.g:4181:1: ( ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? ) )
+            // InternalStoex.g:4182:1: ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? )
             {
-            // InternalStoex.g:4143:1: ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? )
-            // InternalStoex.g:4144:2: ( rule__ProbabilityMassFunction__Group_0_4__0 )?
+            // InternalStoex.g:4182:1: ( ( rule__ProbabilityMassFunction__Group_0_4__0 )? )
+            // InternalStoex.g:4183:2: ( rule__ProbabilityMassFunction__Group_0_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_0_4()); 
             }
-            // InternalStoex.g:4145:2: ( rule__ProbabilityMassFunction__Group_0_4__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // InternalStoex.g:4184:2: ( rule__ProbabilityMassFunction__Group_0_4__0 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA32_0==37) ) {
-                alt32=1;
+            if ( (LA33_0==42) ) {
+                alt33=1;
             }
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // InternalStoex.g:4145:3: rule__ProbabilityMassFunction__Group_0_4__0
+                    // InternalStoex.g:4184:3: rule__ProbabilityMassFunction__Group_0_4__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_0_4__0();
@@ -13951,14 +14107,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__0"
-    // InternalStoex.g:4154:1: rule__ProbabilityMassFunction__Group_0_4__0 : rule__ProbabilityMassFunction__Group_0_4__0__Impl rule__ProbabilityMassFunction__Group_0_4__1 ;
+    // InternalStoex.g:4193:1: rule__ProbabilityMassFunction__Group_0_4__0 : rule__ProbabilityMassFunction__Group_0_4__0__Impl rule__ProbabilityMassFunction__Group_0_4__1 ;
     public final void rule__ProbabilityMassFunction__Group_0_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4158:1: ( rule__ProbabilityMassFunction__Group_0_4__0__Impl rule__ProbabilityMassFunction__Group_0_4__1 )
-            // InternalStoex.g:4159:2: rule__ProbabilityMassFunction__Group_0_4__0__Impl rule__ProbabilityMassFunction__Group_0_4__1
+            // InternalStoex.g:4197:1: ( rule__ProbabilityMassFunction__Group_0_4__0__Impl rule__ProbabilityMassFunction__Group_0_4__1 )
+            // InternalStoex.g:4198:2: rule__ProbabilityMassFunction__Group_0_4__0__Impl rule__ProbabilityMassFunction__Group_0_4__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__ProbabilityMassFunction__Group_0_4__0__Impl();
@@ -13989,22 +14145,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__0__Impl"
-    // InternalStoex.g:4166:1: rule__ProbabilityMassFunction__Group_0_4__0__Impl : ( '[' ) ;
+    // InternalStoex.g:4205:1: rule__ProbabilityMassFunction__Group_0_4__0__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_0_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4170:1: ( ( '[' ) )
-            // InternalStoex.g:4171:1: ( '[' )
+            // InternalStoex.g:4209:1: ( ( '[' ) )
+            // InternalStoex.g:4210:1: ( '[' )
             {
-            // InternalStoex.g:4171:1: ( '[' )
-            // InternalStoex.g:4172:2: '['
+            // InternalStoex.g:4210:1: ( '[' )
+            // InternalStoex.g:4211:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_4_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_0_4_0()); 
             }
@@ -14030,14 +14186,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__1"
-    // InternalStoex.g:4181:1: rule__ProbabilityMassFunction__Group_0_4__1 : rule__ProbabilityMassFunction__Group_0_4__1__Impl rule__ProbabilityMassFunction__Group_0_4__2 ;
+    // InternalStoex.g:4220:1: rule__ProbabilityMassFunction__Group_0_4__1 : rule__ProbabilityMassFunction__Group_0_4__1__Impl rule__ProbabilityMassFunction__Group_0_4__2 ;
     public final void rule__ProbabilityMassFunction__Group_0_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4185:1: ( rule__ProbabilityMassFunction__Group_0_4__1__Impl rule__ProbabilityMassFunction__Group_0_4__2 )
-            // InternalStoex.g:4186:2: rule__ProbabilityMassFunction__Group_0_4__1__Impl rule__ProbabilityMassFunction__Group_0_4__2
+            // InternalStoex.g:4224:1: ( rule__ProbabilityMassFunction__Group_0_4__1__Impl rule__ProbabilityMassFunction__Group_0_4__2 )
+            // InternalStoex.g:4225:2: rule__ProbabilityMassFunction__Group_0_4__1__Impl rule__ProbabilityMassFunction__Group_0_4__2
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__ProbabilityMassFunction__Group_0_4__1__Impl();
@@ -14068,23 +14224,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__1__Impl"
-    // InternalStoex.g:4193:1: rule__ProbabilityMassFunction__Group_0_4__1__Impl : ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) ) ;
+    // InternalStoex.g:4232:1: rule__ProbabilityMassFunction__Group_0_4__1__Impl : ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) ) ;
     public final void rule__ProbabilityMassFunction__Group_0_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4197:1: ( ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) ) )
-            // InternalStoex.g:4198:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) )
+            // InternalStoex.g:4236:1: ( ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) ) )
+            // InternalStoex.g:4237:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) )
             {
-            // InternalStoex.g:4198:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) )
-            // InternalStoex.g:4199:2: ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 )
+            // InternalStoex.g:4237:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 ) )
+            // InternalStoex.g:4238:2: ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getUnitAssignment_0_4_1()); 
             }
-            // InternalStoex.g:4200:2: ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 )
-            // InternalStoex.g:4200:3: rule__ProbabilityMassFunction__UnitAssignment_0_4_1
+            // InternalStoex.g:4239:2: ( rule__ProbabilityMassFunction__UnitAssignment_0_4_1 )
+            // InternalStoex.g:4239:3: rule__ProbabilityMassFunction__UnitAssignment_0_4_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__UnitAssignment_0_4_1();
@@ -14119,14 +14275,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__2"
-    // InternalStoex.g:4208:1: rule__ProbabilityMassFunction__Group_0_4__2 : rule__ProbabilityMassFunction__Group_0_4__2__Impl ;
+    // InternalStoex.g:4247:1: rule__ProbabilityMassFunction__Group_0_4__2 : rule__ProbabilityMassFunction__Group_0_4__2__Impl ;
     public final void rule__ProbabilityMassFunction__Group_0_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4212:1: ( rule__ProbabilityMassFunction__Group_0_4__2__Impl )
-            // InternalStoex.g:4213:2: rule__ProbabilityMassFunction__Group_0_4__2__Impl
+            // InternalStoex.g:4251:1: ( rule__ProbabilityMassFunction__Group_0_4__2__Impl )
+            // InternalStoex.g:4252:2: rule__ProbabilityMassFunction__Group_0_4__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_0_4__2__Impl();
@@ -14152,22 +14308,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_0_4__2__Impl"
-    // InternalStoex.g:4219:1: rule__ProbabilityMassFunction__Group_0_4__2__Impl : ( ']' ) ;
+    // InternalStoex.g:4258:1: rule__ProbabilityMassFunction__Group_0_4__2__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_0_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4223:1: ( ( ']' ) )
-            // InternalStoex.g:4224:1: ( ']' )
+            // InternalStoex.g:4262:1: ( ( ']' ) )
+            // InternalStoex.g:4263:1: ( ']' )
             {
-            // InternalStoex.g:4224:1: ( ']' )
-            // InternalStoex.g:4225:2: ']'
+            // InternalStoex.g:4263:1: ( ']' )
+            // InternalStoex.g:4264:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_4_2()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_0_4_2()); 
             }
@@ -14193,14 +14349,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__0"
-    // InternalStoex.g:4235:1: rule__ProbabilityMassFunction__Group_1__0 : rule__ProbabilityMassFunction__Group_1__0__Impl rule__ProbabilityMassFunction__Group_1__1 ;
+    // InternalStoex.g:4274:1: rule__ProbabilityMassFunction__Group_1__0 : rule__ProbabilityMassFunction__Group_1__0__Impl rule__ProbabilityMassFunction__Group_1__1 ;
     public final void rule__ProbabilityMassFunction__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4239:1: ( rule__ProbabilityMassFunction__Group_1__0__Impl rule__ProbabilityMassFunction__Group_1__1 )
-            // InternalStoex.g:4240:2: rule__ProbabilityMassFunction__Group_1__0__Impl rule__ProbabilityMassFunction__Group_1__1
+            // InternalStoex.g:4278:1: ( rule__ProbabilityMassFunction__Group_1__0__Impl rule__ProbabilityMassFunction__Group_1__1 )
+            // InternalStoex.g:4279:2: rule__ProbabilityMassFunction__Group_1__0__Impl rule__ProbabilityMassFunction__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__ProbabilityMassFunction__Group_1__0__Impl();
@@ -14231,22 +14387,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__0__Impl"
-    // InternalStoex.g:4247:1: rule__ProbabilityMassFunction__Group_1__0__Impl : ( 'DoublePMF' ) ;
+    // InternalStoex.g:4286:1: rule__ProbabilityMassFunction__Group_1__0__Impl : ( 'DoublePMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4251:1: ( ( 'DoublePMF' ) )
-            // InternalStoex.g:4252:1: ( 'DoublePMF' )
+            // InternalStoex.g:4290:1: ( ( 'DoublePMF' ) )
+            // InternalStoex.g:4291:1: ( 'DoublePMF' )
             {
-            // InternalStoex.g:4252:1: ( 'DoublePMF' )
-            // InternalStoex.g:4253:2: 'DoublePMF'
+            // InternalStoex.g:4291:1: ( 'DoublePMF' )
+            // InternalStoex.g:4292:2: 'DoublePMF'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getDoublePMFKeyword_1_0()); 
             }
-            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getDoublePMFKeyword_1_0()); 
             }
@@ -14272,14 +14428,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__1"
-    // InternalStoex.g:4262:1: rule__ProbabilityMassFunction__Group_1__1 : rule__ProbabilityMassFunction__Group_1__1__Impl rule__ProbabilityMassFunction__Group_1__2 ;
+    // InternalStoex.g:4301:1: rule__ProbabilityMassFunction__Group_1__1 : rule__ProbabilityMassFunction__Group_1__1__Impl rule__ProbabilityMassFunction__Group_1__2 ;
     public final void rule__ProbabilityMassFunction__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4266:1: ( rule__ProbabilityMassFunction__Group_1__1__Impl rule__ProbabilityMassFunction__Group_1__2 )
-            // InternalStoex.g:4267:2: rule__ProbabilityMassFunction__Group_1__1__Impl rule__ProbabilityMassFunction__Group_1__2
+            // InternalStoex.g:4305:1: ( rule__ProbabilityMassFunction__Group_1__1__Impl rule__ProbabilityMassFunction__Group_1__2 )
+            // InternalStoex.g:4306:2: rule__ProbabilityMassFunction__Group_1__1__Impl rule__ProbabilityMassFunction__Group_1__2
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__ProbabilityMassFunction__Group_1__1__Impl();
@@ -14310,22 +14466,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__1__Impl"
-    // InternalStoex.g:4274:1: rule__ProbabilityMassFunction__Group_1__1__Impl : ( '[' ) ;
+    // InternalStoex.g:4313:1: rule__ProbabilityMassFunction__Group_1__1__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4278:1: ( ( '[' ) )
-            // InternalStoex.g:4279:1: ( '[' )
+            // InternalStoex.g:4317:1: ( ( '[' ) )
+            // InternalStoex.g:4318:1: ( '[' )
             {
-            // InternalStoex.g:4279:1: ( '[' )
-            // InternalStoex.g:4280:2: '['
+            // InternalStoex.g:4318:1: ( '[' )
+            // InternalStoex.g:4319:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_1()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_1()); 
             }
@@ -14351,14 +14507,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__2"
-    // InternalStoex.g:4289:1: rule__ProbabilityMassFunction__Group_1__2 : rule__ProbabilityMassFunction__Group_1__2__Impl rule__ProbabilityMassFunction__Group_1__3 ;
+    // InternalStoex.g:4328:1: rule__ProbabilityMassFunction__Group_1__2 : rule__ProbabilityMassFunction__Group_1__2__Impl rule__ProbabilityMassFunction__Group_1__3 ;
     public final void rule__ProbabilityMassFunction__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4293:1: ( rule__ProbabilityMassFunction__Group_1__2__Impl rule__ProbabilityMassFunction__Group_1__3 )
-            // InternalStoex.g:4294:2: rule__ProbabilityMassFunction__Group_1__2__Impl rule__ProbabilityMassFunction__Group_1__3
+            // InternalStoex.g:4332:1: ( rule__ProbabilityMassFunction__Group_1__2__Impl rule__ProbabilityMassFunction__Group_1__3 )
+            // InternalStoex.g:4333:2: rule__ProbabilityMassFunction__Group_1__2__Impl rule__ProbabilityMassFunction__Group_1__3
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__ProbabilityMassFunction__Group_1__2__Impl();
@@ -14389,26 +14545,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__2__Impl"
-    // InternalStoex.g:4301:1: rule__ProbabilityMassFunction__Group_1__2__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) ) ;
+    // InternalStoex.g:4340:1: rule__ProbabilityMassFunction__Group_1__2__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) ) ;
     public final void rule__ProbabilityMassFunction__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4305:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) ) )
-            // InternalStoex.g:4306:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) )
+            // InternalStoex.g:4344:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) ) )
+            // InternalStoex.g:4345:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) )
             {
-            // InternalStoex.g:4306:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) )
-            // InternalStoex.g:4307:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* )
+            // InternalStoex.g:4345:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* ) )
+            // InternalStoex.g:4346:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* )
             {
-            // InternalStoex.g:4307:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) )
-            // InternalStoex.g:4308:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )
+            // InternalStoex.g:4346:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 ) )
+            // InternalStoex.g:4347:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_1_2()); 
             }
-            // InternalStoex.g:4309:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )
-            // InternalStoex.g:4309:4: rule__ProbabilityMassFunction__SamplesAssignment_1_2
+            // InternalStoex.g:4348:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )
+            // InternalStoex.g:4348:4: rule__ProbabilityMassFunction__SamplesAssignment_1_2
             {
             pushFollow(FollowSets000.FOLLOW_31);
             rule__ProbabilityMassFunction__SamplesAssignment_1_2();
@@ -14424,26 +14580,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalStoex.g:4312:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* )
-            // InternalStoex.g:4313:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )*
+            // InternalStoex.g:4351:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )* )
+            // InternalStoex.g:4352:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_1_2()); 
             }
-            // InternalStoex.g:4314:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )*
-            loop33:
+            // InternalStoex.g:4353:3: ( rule__ProbabilityMassFunction__SamplesAssignment_1_2 )*
+            loop34:
             do {
-                int alt33=2;
-                int LA33_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA33_0==39) ) {
-                    alt33=1;
+                if ( (LA34_0==44) ) {
+                    alt34=1;
                 }
 
 
-                switch (alt33) {
+                switch (alt34) {
             	case 1 :
-            	    // InternalStoex.g:4314:4: rule__ProbabilityMassFunction__SamplesAssignment_1_2
+            	    // InternalStoex.g:4353:4: rule__ProbabilityMassFunction__SamplesAssignment_1_2
             	    {
             	    pushFollow(FollowSets000.FOLLOW_31);
             	    rule__ProbabilityMassFunction__SamplesAssignment_1_2();
@@ -14455,7 +14611,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop33;
+            	    break loop34;
                 }
             } while (true);
 
@@ -14487,14 +14643,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__3"
-    // InternalStoex.g:4323:1: rule__ProbabilityMassFunction__Group_1__3 : rule__ProbabilityMassFunction__Group_1__3__Impl rule__ProbabilityMassFunction__Group_1__4 ;
+    // InternalStoex.g:4362:1: rule__ProbabilityMassFunction__Group_1__3 : rule__ProbabilityMassFunction__Group_1__3__Impl rule__ProbabilityMassFunction__Group_1__4 ;
     public final void rule__ProbabilityMassFunction__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4327:1: ( rule__ProbabilityMassFunction__Group_1__3__Impl rule__ProbabilityMassFunction__Group_1__4 )
-            // InternalStoex.g:4328:2: rule__ProbabilityMassFunction__Group_1__3__Impl rule__ProbabilityMassFunction__Group_1__4
+            // InternalStoex.g:4366:1: ( rule__ProbabilityMassFunction__Group_1__3__Impl rule__ProbabilityMassFunction__Group_1__4 )
+            // InternalStoex.g:4367:2: rule__ProbabilityMassFunction__Group_1__3__Impl rule__ProbabilityMassFunction__Group_1__4
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__ProbabilityMassFunction__Group_1__3__Impl();
@@ -14525,22 +14681,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__3__Impl"
-    // InternalStoex.g:4335:1: rule__ProbabilityMassFunction__Group_1__3__Impl : ( ']' ) ;
+    // InternalStoex.g:4374:1: rule__ProbabilityMassFunction__Group_1__3__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4339:1: ( ( ']' ) )
-            // InternalStoex.g:4340:1: ( ']' )
+            // InternalStoex.g:4378:1: ( ( ']' ) )
+            // InternalStoex.g:4379:1: ( ']' )
             {
-            // InternalStoex.g:4340:1: ( ']' )
-            // InternalStoex.g:4341:2: ']'
+            // InternalStoex.g:4379:1: ( ']' )
+            // InternalStoex.g:4380:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_3()); 
             }
@@ -14566,14 +14722,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__4"
-    // InternalStoex.g:4350:1: rule__ProbabilityMassFunction__Group_1__4 : rule__ProbabilityMassFunction__Group_1__4__Impl ;
+    // InternalStoex.g:4389:1: rule__ProbabilityMassFunction__Group_1__4 : rule__ProbabilityMassFunction__Group_1__4__Impl ;
     public final void rule__ProbabilityMassFunction__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4354:1: ( rule__ProbabilityMassFunction__Group_1__4__Impl )
-            // InternalStoex.g:4355:2: rule__ProbabilityMassFunction__Group_1__4__Impl
+            // InternalStoex.g:4393:1: ( rule__ProbabilityMassFunction__Group_1__4__Impl )
+            // InternalStoex.g:4394:2: rule__ProbabilityMassFunction__Group_1__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_1__4__Impl();
@@ -14599,31 +14755,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1__4__Impl"
-    // InternalStoex.g:4361:1: rule__ProbabilityMassFunction__Group_1__4__Impl : ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? ) ;
+    // InternalStoex.g:4400:1: rule__ProbabilityMassFunction__Group_1__4__Impl : ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? ) ;
     public final void rule__ProbabilityMassFunction__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4365:1: ( ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? ) )
-            // InternalStoex.g:4366:1: ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? )
+            // InternalStoex.g:4404:1: ( ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? ) )
+            // InternalStoex.g:4405:1: ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? )
             {
-            // InternalStoex.g:4366:1: ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? )
-            // InternalStoex.g:4367:2: ( rule__ProbabilityMassFunction__Group_1_4__0 )?
+            // InternalStoex.g:4405:1: ( ( rule__ProbabilityMassFunction__Group_1_4__0 )? )
+            // InternalStoex.g:4406:2: ( rule__ProbabilityMassFunction__Group_1_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_1_4()); 
             }
-            // InternalStoex.g:4368:2: ( rule__ProbabilityMassFunction__Group_1_4__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalStoex.g:4407:2: ( rule__ProbabilityMassFunction__Group_1_4__0 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==37) ) {
-                alt34=1;
+            if ( (LA35_0==42) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // InternalStoex.g:4368:3: rule__ProbabilityMassFunction__Group_1_4__0
+                    // InternalStoex.g:4407:3: rule__ProbabilityMassFunction__Group_1_4__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_1_4__0();
@@ -14661,14 +14817,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__0"
-    // InternalStoex.g:4377:1: rule__ProbabilityMassFunction__Group_1_4__0 : rule__ProbabilityMassFunction__Group_1_4__0__Impl rule__ProbabilityMassFunction__Group_1_4__1 ;
+    // InternalStoex.g:4416:1: rule__ProbabilityMassFunction__Group_1_4__0 : rule__ProbabilityMassFunction__Group_1_4__0__Impl rule__ProbabilityMassFunction__Group_1_4__1 ;
     public final void rule__ProbabilityMassFunction__Group_1_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4381:1: ( rule__ProbabilityMassFunction__Group_1_4__0__Impl rule__ProbabilityMassFunction__Group_1_4__1 )
-            // InternalStoex.g:4382:2: rule__ProbabilityMassFunction__Group_1_4__0__Impl rule__ProbabilityMassFunction__Group_1_4__1
+            // InternalStoex.g:4420:1: ( rule__ProbabilityMassFunction__Group_1_4__0__Impl rule__ProbabilityMassFunction__Group_1_4__1 )
+            // InternalStoex.g:4421:2: rule__ProbabilityMassFunction__Group_1_4__0__Impl rule__ProbabilityMassFunction__Group_1_4__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__ProbabilityMassFunction__Group_1_4__0__Impl();
@@ -14699,22 +14855,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__0__Impl"
-    // InternalStoex.g:4389:1: rule__ProbabilityMassFunction__Group_1_4__0__Impl : ( '[' ) ;
+    // InternalStoex.g:4428:1: rule__ProbabilityMassFunction__Group_1_4__0__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_1_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4393:1: ( ( '[' ) )
-            // InternalStoex.g:4394:1: ( '[' )
+            // InternalStoex.g:4432:1: ( ( '[' ) )
+            // InternalStoex.g:4433:1: ( '[' )
             {
-            // InternalStoex.g:4394:1: ( '[' )
-            // InternalStoex.g:4395:2: '['
+            // InternalStoex.g:4433:1: ( '[' )
+            // InternalStoex.g:4434:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_4_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_1_4_0()); 
             }
@@ -14740,14 +14896,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__1"
-    // InternalStoex.g:4404:1: rule__ProbabilityMassFunction__Group_1_4__1 : rule__ProbabilityMassFunction__Group_1_4__1__Impl rule__ProbabilityMassFunction__Group_1_4__2 ;
+    // InternalStoex.g:4443:1: rule__ProbabilityMassFunction__Group_1_4__1 : rule__ProbabilityMassFunction__Group_1_4__1__Impl rule__ProbabilityMassFunction__Group_1_4__2 ;
     public final void rule__ProbabilityMassFunction__Group_1_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4408:1: ( rule__ProbabilityMassFunction__Group_1_4__1__Impl rule__ProbabilityMassFunction__Group_1_4__2 )
-            // InternalStoex.g:4409:2: rule__ProbabilityMassFunction__Group_1_4__1__Impl rule__ProbabilityMassFunction__Group_1_4__2
+            // InternalStoex.g:4447:1: ( rule__ProbabilityMassFunction__Group_1_4__1__Impl rule__ProbabilityMassFunction__Group_1_4__2 )
+            // InternalStoex.g:4448:2: rule__ProbabilityMassFunction__Group_1_4__1__Impl rule__ProbabilityMassFunction__Group_1_4__2
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__ProbabilityMassFunction__Group_1_4__1__Impl();
@@ -14778,23 +14934,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__1__Impl"
-    // InternalStoex.g:4416:1: rule__ProbabilityMassFunction__Group_1_4__1__Impl : ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) ) ;
+    // InternalStoex.g:4455:1: rule__ProbabilityMassFunction__Group_1_4__1__Impl : ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) ) ;
     public final void rule__ProbabilityMassFunction__Group_1_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4420:1: ( ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) ) )
-            // InternalStoex.g:4421:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) )
+            // InternalStoex.g:4459:1: ( ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) ) )
+            // InternalStoex.g:4460:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) )
             {
-            // InternalStoex.g:4421:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) )
-            // InternalStoex.g:4422:2: ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 )
+            // InternalStoex.g:4460:1: ( ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 ) )
+            // InternalStoex.g:4461:2: ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getUnitAssignment_1_4_1()); 
             }
-            // InternalStoex.g:4423:2: ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 )
-            // InternalStoex.g:4423:3: rule__ProbabilityMassFunction__UnitAssignment_1_4_1
+            // InternalStoex.g:4462:2: ( rule__ProbabilityMassFunction__UnitAssignment_1_4_1 )
+            // InternalStoex.g:4462:3: rule__ProbabilityMassFunction__UnitAssignment_1_4_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__UnitAssignment_1_4_1();
@@ -14829,14 +14985,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__2"
-    // InternalStoex.g:4431:1: rule__ProbabilityMassFunction__Group_1_4__2 : rule__ProbabilityMassFunction__Group_1_4__2__Impl ;
+    // InternalStoex.g:4470:1: rule__ProbabilityMassFunction__Group_1_4__2 : rule__ProbabilityMassFunction__Group_1_4__2__Impl ;
     public final void rule__ProbabilityMassFunction__Group_1_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4435:1: ( rule__ProbabilityMassFunction__Group_1_4__2__Impl )
-            // InternalStoex.g:4436:2: rule__ProbabilityMassFunction__Group_1_4__2__Impl
+            // InternalStoex.g:4474:1: ( rule__ProbabilityMassFunction__Group_1_4__2__Impl )
+            // InternalStoex.g:4475:2: rule__ProbabilityMassFunction__Group_1_4__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_1_4__2__Impl();
@@ -14862,22 +15018,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_1_4__2__Impl"
-    // InternalStoex.g:4442:1: rule__ProbabilityMassFunction__Group_1_4__2__Impl : ( ']' ) ;
+    // InternalStoex.g:4481:1: rule__ProbabilityMassFunction__Group_1_4__2__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_1_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4446:1: ( ( ']' ) )
-            // InternalStoex.g:4447:1: ( ']' )
+            // InternalStoex.g:4485:1: ( ( ']' ) )
+            // InternalStoex.g:4486:1: ( ']' )
             {
-            // InternalStoex.g:4447:1: ( ']' )
-            // InternalStoex.g:4448:2: ']'
+            // InternalStoex.g:4486:1: ( ']' )
+            // InternalStoex.g:4487:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_4_2()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_1_4_2()); 
             }
@@ -14903,14 +15059,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__0"
-    // InternalStoex.g:4458:1: rule__ProbabilityMassFunction__Group_2__0 : rule__ProbabilityMassFunction__Group_2__0__Impl rule__ProbabilityMassFunction__Group_2__1 ;
+    // InternalStoex.g:4497:1: rule__ProbabilityMassFunction__Group_2__0 : rule__ProbabilityMassFunction__Group_2__0__Impl rule__ProbabilityMassFunction__Group_2__1 ;
     public final void rule__ProbabilityMassFunction__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4462:1: ( rule__ProbabilityMassFunction__Group_2__0__Impl rule__ProbabilityMassFunction__Group_2__1 )
-            // InternalStoex.g:4463:2: rule__ProbabilityMassFunction__Group_2__0__Impl rule__ProbabilityMassFunction__Group_2__1
+            // InternalStoex.g:4501:1: ( rule__ProbabilityMassFunction__Group_2__0__Impl rule__ProbabilityMassFunction__Group_2__1 )
+            // InternalStoex.g:4502:2: rule__ProbabilityMassFunction__Group_2__0__Impl rule__ProbabilityMassFunction__Group_2__1
             {
             pushFollow(FollowSets000.FOLLOW_32);
             rule__ProbabilityMassFunction__Group_2__0__Impl();
@@ -14941,22 +15097,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__0__Impl"
-    // InternalStoex.g:4470:1: rule__ProbabilityMassFunction__Group_2__0__Impl : ( 'EnumPMF' ) ;
+    // InternalStoex.g:4509:1: rule__ProbabilityMassFunction__Group_2__0__Impl : ( 'EnumPMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4474:1: ( ( 'EnumPMF' ) )
-            // InternalStoex.g:4475:1: ( 'EnumPMF' )
+            // InternalStoex.g:4513:1: ( ( 'EnumPMF' ) )
+            // InternalStoex.g:4514:1: ( 'EnumPMF' )
             {
-            // InternalStoex.g:4475:1: ( 'EnumPMF' )
-            // InternalStoex.g:4476:2: 'EnumPMF'
+            // InternalStoex.g:4514:1: ( 'EnumPMF' )
+            // InternalStoex.g:4515:2: 'EnumPMF'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getEnumPMFKeyword_2_0()); 
             }
-            match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getEnumPMFKeyword_2_0()); 
             }
@@ -14982,14 +15138,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__1"
-    // InternalStoex.g:4485:1: rule__ProbabilityMassFunction__Group_2__1 : rule__ProbabilityMassFunction__Group_2__1__Impl rule__ProbabilityMassFunction__Group_2__2 ;
+    // InternalStoex.g:4524:1: rule__ProbabilityMassFunction__Group_2__1 : rule__ProbabilityMassFunction__Group_2__1__Impl rule__ProbabilityMassFunction__Group_2__2 ;
     public final void rule__ProbabilityMassFunction__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4489:1: ( rule__ProbabilityMassFunction__Group_2__1__Impl rule__ProbabilityMassFunction__Group_2__2 )
-            // InternalStoex.g:4490:2: rule__ProbabilityMassFunction__Group_2__1__Impl rule__ProbabilityMassFunction__Group_2__2
+            // InternalStoex.g:4528:1: ( rule__ProbabilityMassFunction__Group_2__1__Impl rule__ProbabilityMassFunction__Group_2__2 )
+            // InternalStoex.g:4529:2: rule__ProbabilityMassFunction__Group_2__1__Impl rule__ProbabilityMassFunction__Group_2__2
             {
             pushFollow(FollowSets000.FOLLOW_32);
             rule__ProbabilityMassFunction__Group_2__1__Impl();
@@ -15020,31 +15176,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__1__Impl"
-    // InternalStoex.g:4497:1: rule__ProbabilityMassFunction__Group_2__1__Impl : ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? ) ;
+    // InternalStoex.g:4536:1: rule__ProbabilityMassFunction__Group_2__1__Impl : ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? ) ;
     public final void rule__ProbabilityMassFunction__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4501:1: ( ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? ) )
-            // InternalStoex.g:4502:1: ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? )
+            // InternalStoex.g:4540:1: ( ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? ) )
+            // InternalStoex.g:4541:1: ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? )
             {
-            // InternalStoex.g:4502:1: ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? )
-            // InternalStoex.g:4503:2: ( rule__ProbabilityMassFunction__Group_2_1__0 )?
+            // InternalStoex.g:4541:1: ( ( rule__ProbabilityMassFunction__Group_2_1__0 )? )
+            // InternalStoex.g:4542:2: ( rule__ProbabilityMassFunction__Group_2_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_2_1()); 
             }
-            // InternalStoex.g:4504:2: ( rule__ProbabilityMassFunction__Group_2_1__0 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // InternalStoex.g:4543:2: ( rule__ProbabilityMassFunction__Group_2_1__0 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==39) ) {
-                alt35=1;
+            if ( (LA36_0==44) ) {
+                alt36=1;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // InternalStoex.g:4504:3: rule__ProbabilityMassFunction__Group_2_1__0
+                    // InternalStoex.g:4543:3: rule__ProbabilityMassFunction__Group_2_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_2_1__0();
@@ -15082,14 +15238,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__2"
-    // InternalStoex.g:4512:1: rule__ProbabilityMassFunction__Group_2__2 : rule__ProbabilityMassFunction__Group_2__2__Impl rule__ProbabilityMassFunction__Group_2__3 ;
+    // InternalStoex.g:4551:1: rule__ProbabilityMassFunction__Group_2__2 : rule__ProbabilityMassFunction__Group_2__2__Impl rule__ProbabilityMassFunction__Group_2__3 ;
     public final void rule__ProbabilityMassFunction__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4516:1: ( rule__ProbabilityMassFunction__Group_2__2__Impl rule__ProbabilityMassFunction__Group_2__3 )
-            // InternalStoex.g:4517:2: rule__ProbabilityMassFunction__Group_2__2__Impl rule__ProbabilityMassFunction__Group_2__3
+            // InternalStoex.g:4555:1: ( rule__ProbabilityMassFunction__Group_2__2__Impl rule__ProbabilityMassFunction__Group_2__3 )
+            // InternalStoex.g:4556:2: rule__ProbabilityMassFunction__Group_2__2__Impl rule__ProbabilityMassFunction__Group_2__3
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__ProbabilityMassFunction__Group_2__2__Impl();
@@ -15120,22 +15276,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__2__Impl"
-    // InternalStoex.g:4524:1: rule__ProbabilityMassFunction__Group_2__2__Impl : ( '[' ) ;
+    // InternalStoex.g:4563:1: rule__ProbabilityMassFunction__Group_2__2__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4528:1: ( ( '[' ) )
-            // InternalStoex.g:4529:1: ( '[' )
+            // InternalStoex.g:4567:1: ( ( '[' ) )
+            // InternalStoex.g:4568:1: ( '[' )
             {
-            // InternalStoex.g:4529:1: ( '[' )
-            // InternalStoex.g:4530:2: '['
+            // InternalStoex.g:4568:1: ( '[' )
+            // InternalStoex.g:4569:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_2_2()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_2_2()); 
             }
@@ -15161,14 +15317,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__3"
-    // InternalStoex.g:4539:1: rule__ProbabilityMassFunction__Group_2__3 : rule__ProbabilityMassFunction__Group_2__3__Impl rule__ProbabilityMassFunction__Group_2__4 ;
+    // InternalStoex.g:4578:1: rule__ProbabilityMassFunction__Group_2__3 : rule__ProbabilityMassFunction__Group_2__3__Impl rule__ProbabilityMassFunction__Group_2__4 ;
     public final void rule__ProbabilityMassFunction__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4543:1: ( rule__ProbabilityMassFunction__Group_2__3__Impl rule__ProbabilityMassFunction__Group_2__4 )
-            // InternalStoex.g:4544:2: rule__ProbabilityMassFunction__Group_2__3__Impl rule__ProbabilityMassFunction__Group_2__4
+            // InternalStoex.g:4582:1: ( rule__ProbabilityMassFunction__Group_2__3__Impl rule__ProbabilityMassFunction__Group_2__4 )
+            // InternalStoex.g:4583:2: rule__ProbabilityMassFunction__Group_2__3__Impl rule__ProbabilityMassFunction__Group_2__4
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__ProbabilityMassFunction__Group_2__3__Impl();
@@ -15199,26 +15355,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__3__Impl"
-    // InternalStoex.g:4551:1: rule__ProbabilityMassFunction__Group_2__3__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) ) ;
+    // InternalStoex.g:4590:1: rule__ProbabilityMassFunction__Group_2__3__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) ) ;
     public final void rule__ProbabilityMassFunction__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4555:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) ) )
-            // InternalStoex.g:4556:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) )
+            // InternalStoex.g:4594:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) ) )
+            // InternalStoex.g:4595:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) )
             {
-            // InternalStoex.g:4556:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) )
-            // InternalStoex.g:4557:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* )
+            // InternalStoex.g:4595:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* ) )
+            // InternalStoex.g:4596:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* )
             {
-            // InternalStoex.g:4557:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) )
-            // InternalStoex.g:4558:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )
+            // InternalStoex.g:4596:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 ) )
+            // InternalStoex.g:4597:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_2_3()); 
             }
-            // InternalStoex.g:4559:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )
-            // InternalStoex.g:4559:4: rule__ProbabilityMassFunction__SamplesAssignment_2_3
+            // InternalStoex.g:4598:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )
+            // InternalStoex.g:4598:4: rule__ProbabilityMassFunction__SamplesAssignment_2_3
             {
             pushFollow(FollowSets000.FOLLOW_31);
             rule__ProbabilityMassFunction__SamplesAssignment_2_3();
@@ -15234,26 +15390,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalStoex.g:4562:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* )
-            // InternalStoex.g:4563:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )*
+            // InternalStoex.g:4601:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )* )
+            // InternalStoex.g:4602:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_2_3()); 
             }
-            // InternalStoex.g:4564:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )*
-            loop36:
+            // InternalStoex.g:4603:3: ( rule__ProbabilityMassFunction__SamplesAssignment_2_3 )*
+            loop37:
             do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA36_0==39) ) {
-                    alt36=1;
+                if ( (LA37_0==44) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt36) {
+                switch (alt37) {
             	case 1 :
-            	    // InternalStoex.g:4564:4: rule__ProbabilityMassFunction__SamplesAssignment_2_3
+            	    // InternalStoex.g:4603:4: rule__ProbabilityMassFunction__SamplesAssignment_2_3
             	    {
             	    pushFollow(FollowSets000.FOLLOW_31);
             	    rule__ProbabilityMassFunction__SamplesAssignment_2_3();
@@ -15265,7 +15421,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop37;
                 }
             } while (true);
 
@@ -15297,14 +15453,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__4"
-    // InternalStoex.g:4573:1: rule__ProbabilityMassFunction__Group_2__4 : rule__ProbabilityMassFunction__Group_2__4__Impl ;
+    // InternalStoex.g:4612:1: rule__ProbabilityMassFunction__Group_2__4 : rule__ProbabilityMassFunction__Group_2__4__Impl ;
     public final void rule__ProbabilityMassFunction__Group_2__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4577:1: ( rule__ProbabilityMassFunction__Group_2__4__Impl )
-            // InternalStoex.g:4578:2: rule__ProbabilityMassFunction__Group_2__4__Impl
+            // InternalStoex.g:4616:1: ( rule__ProbabilityMassFunction__Group_2__4__Impl )
+            // InternalStoex.g:4617:2: rule__ProbabilityMassFunction__Group_2__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_2__4__Impl();
@@ -15330,22 +15486,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2__4__Impl"
-    // InternalStoex.g:4584:1: rule__ProbabilityMassFunction__Group_2__4__Impl : ( ']' ) ;
+    // InternalStoex.g:4623:1: rule__ProbabilityMassFunction__Group_2__4__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4588:1: ( ( ']' ) )
-            // InternalStoex.g:4589:1: ( ']' )
+            // InternalStoex.g:4627:1: ( ( ']' ) )
+            // InternalStoex.g:4628:1: ( ']' )
             {
-            // InternalStoex.g:4589:1: ( ']' )
-            // InternalStoex.g:4590:2: ']'
+            // InternalStoex.g:4628:1: ( ']' )
+            // InternalStoex.g:4629:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_2_4()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_2_4()); 
             }
@@ -15371,14 +15527,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__0"
-    // InternalStoex.g:4600:1: rule__ProbabilityMassFunction__Group_2_1__0 : rule__ProbabilityMassFunction__Group_2_1__0__Impl rule__ProbabilityMassFunction__Group_2_1__1 ;
+    // InternalStoex.g:4639:1: rule__ProbabilityMassFunction__Group_2_1__0 : rule__ProbabilityMassFunction__Group_2_1__0__Impl rule__ProbabilityMassFunction__Group_2_1__1 ;
     public final void rule__ProbabilityMassFunction__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4604:1: ( rule__ProbabilityMassFunction__Group_2_1__0__Impl rule__ProbabilityMassFunction__Group_2_1__1 )
-            // InternalStoex.g:4605:2: rule__ProbabilityMassFunction__Group_2_1__0__Impl rule__ProbabilityMassFunction__Group_2_1__1
+            // InternalStoex.g:4643:1: ( rule__ProbabilityMassFunction__Group_2_1__0__Impl rule__ProbabilityMassFunction__Group_2_1__1 )
+            // InternalStoex.g:4644:2: rule__ProbabilityMassFunction__Group_2_1__0__Impl rule__ProbabilityMassFunction__Group_2_1__1
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__ProbabilityMassFunction__Group_2_1__0__Impl();
@@ -15409,22 +15565,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__0__Impl"
-    // InternalStoex.g:4612:1: rule__ProbabilityMassFunction__Group_2_1__0__Impl : ( '(' ) ;
+    // InternalStoex.g:4651:1: rule__ProbabilityMassFunction__Group_2_1__0__Impl : ( '(' ) ;
     public final void rule__ProbabilityMassFunction__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4616:1: ( ( '(' ) )
-            // InternalStoex.g:4617:1: ( '(' )
+            // InternalStoex.g:4655:1: ( ( '(' ) )
+            // InternalStoex.g:4656:1: ( '(' )
             {
-            // InternalStoex.g:4617:1: ( '(' )
-            // InternalStoex.g:4618:2: '('
+            // InternalStoex.g:4656:1: ( '(' )
+            // InternalStoex.g:4657:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_2_1_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_2_1_0()); 
             }
@@ -15450,14 +15606,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__1"
-    // InternalStoex.g:4627:1: rule__ProbabilityMassFunction__Group_2_1__1 : rule__ProbabilityMassFunction__Group_2_1__1__Impl rule__ProbabilityMassFunction__Group_2_1__2 ;
+    // InternalStoex.g:4666:1: rule__ProbabilityMassFunction__Group_2_1__1 : rule__ProbabilityMassFunction__Group_2_1__1__Impl rule__ProbabilityMassFunction__Group_2_1__2 ;
     public final void rule__ProbabilityMassFunction__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4631:1: ( rule__ProbabilityMassFunction__Group_2_1__1__Impl rule__ProbabilityMassFunction__Group_2_1__2 )
-            // InternalStoex.g:4632:2: rule__ProbabilityMassFunction__Group_2_1__1__Impl rule__ProbabilityMassFunction__Group_2_1__2
+            // InternalStoex.g:4670:1: ( rule__ProbabilityMassFunction__Group_2_1__1__Impl rule__ProbabilityMassFunction__Group_2_1__2 )
+            // InternalStoex.g:4671:2: rule__ProbabilityMassFunction__Group_2_1__1__Impl rule__ProbabilityMassFunction__Group_2_1__2
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__ProbabilityMassFunction__Group_2_1__1__Impl();
@@ -15488,23 +15644,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__1__Impl"
-    // InternalStoex.g:4639:1: rule__ProbabilityMassFunction__Group_2_1__1__Impl : ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) ) ;
+    // InternalStoex.g:4678:1: rule__ProbabilityMassFunction__Group_2_1__1__Impl : ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) ) ;
     public final void rule__ProbabilityMassFunction__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4643:1: ( ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) ) )
-            // InternalStoex.g:4644:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) )
+            // InternalStoex.g:4682:1: ( ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) ) )
+            // InternalStoex.g:4683:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) )
             {
-            // InternalStoex.g:4644:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) )
-            // InternalStoex.g:4645:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 )
+            // InternalStoex.g:4683:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 ) )
+            // InternalStoex.g:4684:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainAssignment_2_1_1()); 
             }
-            // InternalStoex.g:4646:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 )
-            // InternalStoex.g:4646:3: rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1
+            // InternalStoex.g:4685:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 )
+            // InternalStoex.g:4685:3: rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1();
@@ -15539,14 +15695,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__2"
-    // InternalStoex.g:4654:1: rule__ProbabilityMassFunction__Group_2_1__2 : rule__ProbabilityMassFunction__Group_2_1__2__Impl ;
+    // InternalStoex.g:4693:1: rule__ProbabilityMassFunction__Group_2_1__2 : rule__ProbabilityMassFunction__Group_2_1__2__Impl ;
     public final void rule__ProbabilityMassFunction__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4658:1: ( rule__ProbabilityMassFunction__Group_2_1__2__Impl )
-            // InternalStoex.g:4659:2: rule__ProbabilityMassFunction__Group_2_1__2__Impl
+            // InternalStoex.g:4697:1: ( rule__ProbabilityMassFunction__Group_2_1__2__Impl )
+            // InternalStoex.g:4698:2: rule__ProbabilityMassFunction__Group_2_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_2_1__2__Impl();
@@ -15572,22 +15728,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_2_1__2__Impl"
-    // InternalStoex.g:4665:1: rule__ProbabilityMassFunction__Group_2_1__2__Impl : ( ')' ) ;
+    // InternalStoex.g:4704:1: rule__ProbabilityMassFunction__Group_2_1__2__Impl : ( ')' ) ;
     public final void rule__ProbabilityMassFunction__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4669:1: ( ( ')' ) )
-            // InternalStoex.g:4670:1: ( ')' )
+            // InternalStoex.g:4708:1: ( ( ')' ) )
+            // InternalStoex.g:4709:1: ( ')' )
             {
-            // InternalStoex.g:4670:1: ( ')' )
-            // InternalStoex.g:4671:2: ')'
+            // InternalStoex.g:4709:1: ( ')' )
+            // InternalStoex.g:4710:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_2_1_2()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_2_1_2()); 
             }
@@ -15613,14 +15769,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__0"
-    // InternalStoex.g:4681:1: rule__ProbabilityMassFunction__Group_3__0 : rule__ProbabilityMassFunction__Group_3__0__Impl rule__ProbabilityMassFunction__Group_3__1 ;
+    // InternalStoex.g:4720:1: rule__ProbabilityMassFunction__Group_3__0 : rule__ProbabilityMassFunction__Group_3__0__Impl rule__ProbabilityMassFunction__Group_3__1 ;
     public final void rule__ProbabilityMassFunction__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4685:1: ( rule__ProbabilityMassFunction__Group_3__0__Impl rule__ProbabilityMassFunction__Group_3__1 )
-            // InternalStoex.g:4686:2: rule__ProbabilityMassFunction__Group_3__0__Impl rule__ProbabilityMassFunction__Group_3__1
+            // InternalStoex.g:4724:1: ( rule__ProbabilityMassFunction__Group_3__0__Impl rule__ProbabilityMassFunction__Group_3__1 )
+            // InternalStoex.g:4725:2: rule__ProbabilityMassFunction__Group_3__0__Impl rule__ProbabilityMassFunction__Group_3__1
             {
             pushFollow(FollowSets000.FOLLOW_32);
             rule__ProbabilityMassFunction__Group_3__0__Impl();
@@ -15651,22 +15807,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__0__Impl"
-    // InternalStoex.g:4693:1: rule__ProbabilityMassFunction__Group_3__0__Impl : ( 'BoolPMF' ) ;
+    // InternalStoex.g:4732:1: rule__ProbabilityMassFunction__Group_3__0__Impl : ( 'BoolPMF' ) ;
     public final void rule__ProbabilityMassFunction__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4697:1: ( ( 'BoolPMF' ) )
-            // InternalStoex.g:4698:1: ( 'BoolPMF' )
+            // InternalStoex.g:4736:1: ( ( 'BoolPMF' ) )
+            // InternalStoex.g:4737:1: ( 'BoolPMF' )
             {
-            // InternalStoex.g:4698:1: ( 'BoolPMF' )
-            // InternalStoex.g:4699:2: 'BoolPMF'
+            // InternalStoex.g:4737:1: ( 'BoolPMF' )
+            // InternalStoex.g:4738:2: 'BoolPMF'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getBoolPMFKeyword_3_0()); 
             }
-            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getBoolPMFKeyword_3_0()); 
             }
@@ -15692,14 +15848,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__1"
-    // InternalStoex.g:4708:1: rule__ProbabilityMassFunction__Group_3__1 : rule__ProbabilityMassFunction__Group_3__1__Impl rule__ProbabilityMassFunction__Group_3__2 ;
+    // InternalStoex.g:4747:1: rule__ProbabilityMassFunction__Group_3__1 : rule__ProbabilityMassFunction__Group_3__1__Impl rule__ProbabilityMassFunction__Group_3__2 ;
     public final void rule__ProbabilityMassFunction__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4712:1: ( rule__ProbabilityMassFunction__Group_3__1__Impl rule__ProbabilityMassFunction__Group_3__2 )
-            // InternalStoex.g:4713:2: rule__ProbabilityMassFunction__Group_3__1__Impl rule__ProbabilityMassFunction__Group_3__2
+            // InternalStoex.g:4751:1: ( rule__ProbabilityMassFunction__Group_3__1__Impl rule__ProbabilityMassFunction__Group_3__2 )
+            // InternalStoex.g:4752:2: rule__ProbabilityMassFunction__Group_3__1__Impl rule__ProbabilityMassFunction__Group_3__2
             {
             pushFollow(FollowSets000.FOLLOW_32);
             rule__ProbabilityMassFunction__Group_3__1__Impl();
@@ -15730,31 +15886,31 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__1__Impl"
-    // InternalStoex.g:4720:1: rule__ProbabilityMassFunction__Group_3__1__Impl : ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? ) ;
+    // InternalStoex.g:4759:1: rule__ProbabilityMassFunction__Group_3__1__Impl : ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? ) ;
     public final void rule__ProbabilityMassFunction__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4724:1: ( ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? ) )
-            // InternalStoex.g:4725:1: ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? )
+            // InternalStoex.g:4763:1: ( ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? ) )
+            // InternalStoex.g:4764:1: ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? )
             {
-            // InternalStoex.g:4725:1: ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? )
-            // InternalStoex.g:4726:2: ( rule__ProbabilityMassFunction__Group_3_1__0 )?
+            // InternalStoex.g:4764:1: ( ( rule__ProbabilityMassFunction__Group_3_1__0 )? )
+            // InternalStoex.g:4765:2: ( rule__ProbabilityMassFunction__Group_3_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getGroup_3_1()); 
             }
-            // InternalStoex.g:4727:2: ( rule__ProbabilityMassFunction__Group_3_1__0 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // InternalStoex.g:4766:2: ( rule__ProbabilityMassFunction__Group_3_1__0 )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA37_0==39) ) {
-                alt37=1;
+            if ( (LA38_0==44) ) {
+                alt38=1;
             }
-            switch (alt37) {
+            switch (alt38) {
                 case 1 :
-                    // InternalStoex.g:4727:3: rule__ProbabilityMassFunction__Group_3_1__0
+                    // InternalStoex.g:4766:3: rule__ProbabilityMassFunction__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__ProbabilityMassFunction__Group_3_1__0();
@@ -15792,14 +15948,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__2"
-    // InternalStoex.g:4735:1: rule__ProbabilityMassFunction__Group_3__2 : rule__ProbabilityMassFunction__Group_3__2__Impl rule__ProbabilityMassFunction__Group_3__3 ;
+    // InternalStoex.g:4774:1: rule__ProbabilityMassFunction__Group_3__2 : rule__ProbabilityMassFunction__Group_3__2__Impl rule__ProbabilityMassFunction__Group_3__3 ;
     public final void rule__ProbabilityMassFunction__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4739:1: ( rule__ProbabilityMassFunction__Group_3__2__Impl rule__ProbabilityMassFunction__Group_3__3 )
-            // InternalStoex.g:4740:2: rule__ProbabilityMassFunction__Group_3__2__Impl rule__ProbabilityMassFunction__Group_3__3
+            // InternalStoex.g:4778:1: ( rule__ProbabilityMassFunction__Group_3__2__Impl rule__ProbabilityMassFunction__Group_3__3 )
+            // InternalStoex.g:4779:2: rule__ProbabilityMassFunction__Group_3__2__Impl rule__ProbabilityMassFunction__Group_3__3
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__ProbabilityMassFunction__Group_3__2__Impl();
@@ -15830,22 +15986,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__2__Impl"
-    // InternalStoex.g:4747:1: rule__ProbabilityMassFunction__Group_3__2__Impl : ( '[' ) ;
+    // InternalStoex.g:4786:1: rule__ProbabilityMassFunction__Group_3__2__Impl : ( '[' ) ;
     public final void rule__ProbabilityMassFunction__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4751:1: ( ( '[' ) )
-            // InternalStoex.g:4752:1: ( '[' )
+            // InternalStoex.g:4790:1: ( ( '[' ) )
+            // InternalStoex.g:4791:1: ( '[' )
             {
-            // InternalStoex.g:4752:1: ( '[' )
-            // InternalStoex.g:4753:2: '['
+            // InternalStoex.g:4791:1: ( '[' )
+            // InternalStoex.g:4792:2: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_3_2()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftSquareBracketKeyword_3_2()); 
             }
@@ -15871,14 +16027,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__3"
-    // InternalStoex.g:4762:1: rule__ProbabilityMassFunction__Group_3__3 : rule__ProbabilityMassFunction__Group_3__3__Impl rule__ProbabilityMassFunction__Group_3__4 ;
+    // InternalStoex.g:4801:1: rule__ProbabilityMassFunction__Group_3__3 : rule__ProbabilityMassFunction__Group_3__3__Impl rule__ProbabilityMassFunction__Group_3__4 ;
     public final void rule__ProbabilityMassFunction__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4766:1: ( rule__ProbabilityMassFunction__Group_3__3__Impl rule__ProbabilityMassFunction__Group_3__4 )
-            // InternalStoex.g:4767:2: rule__ProbabilityMassFunction__Group_3__3__Impl rule__ProbabilityMassFunction__Group_3__4
+            // InternalStoex.g:4805:1: ( rule__ProbabilityMassFunction__Group_3__3__Impl rule__ProbabilityMassFunction__Group_3__4 )
+            // InternalStoex.g:4806:2: rule__ProbabilityMassFunction__Group_3__3__Impl rule__ProbabilityMassFunction__Group_3__4
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__ProbabilityMassFunction__Group_3__3__Impl();
@@ -15909,26 +16065,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__3__Impl"
-    // InternalStoex.g:4774:1: rule__ProbabilityMassFunction__Group_3__3__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) ) ;
+    // InternalStoex.g:4813:1: rule__ProbabilityMassFunction__Group_3__3__Impl : ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) ) ;
     public final void rule__ProbabilityMassFunction__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4778:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) ) )
-            // InternalStoex.g:4779:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) )
+            // InternalStoex.g:4817:1: ( ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) ) )
+            // InternalStoex.g:4818:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) )
             {
-            // InternalStoex.g:4779:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) )
-            // InternalStoex.g:4780:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* )
+            // InternalStoex.g:4818:1: ( ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* ) )
+            // InternalStoex.g:4819:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) ) ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* )
             {
-            // InternalStoex.g:4780:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) )
-            // InternalStoex.g:4781:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )
+            // InternalStoex.g:4819:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 ) )
+            // InternalStoex.g:4820:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_3_3()); 
             }
-            // InternalStoex.g:4782:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )
-            // InternalStoex.g:4782:4: rule__ProbabilityMassFunction__SamplesAssignment_3_3
+            // InternalStoex.g:4821:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )
+            // InternalStoex.g:4821:4: rule__ProbabilityMassFunction__SamplesAssignment_3_3
             {
             pushFollow(FollowSets000.FOLLOW_31);
             rule__ProbabilityMassFunction__SamplesAssignment_3_3();
@@ -15944,26 +16100,26 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalStoex.g:4785:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* )
-            // InternalStoex.g:4786:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )*
+            // InternalStoex.g:4824:2: ( ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )* )
+            // InternalStoex.g:4825:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesAssignment_3_3()); 
             }
-            // InternalStoex.g:4787:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )*
-            loop38:
+            // InternalStoex.g:4826:3: ( rule__ProbabilityMassFunction__SamplesAssignment_3_3 )*
+            loop39:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA38_0==39) ) {
-                    alt38=1;
+                if ( (LA39_0==44) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt39) {
             	case 1 :
-            	    // InternalStoex.g:4787:4: rule__ProbabilityMassFunction__SamplesAssignment_3_3
+            	    // InternalStoex.g:4826:4: rule__ProbabilityMassFunction__SamplesAssignment_3_3
             	    {
             	    pushFollow(FollowSets000.FOLLOW_31);
             	    rule__ProbabilityMassFunction__SamplesAssignment_3_3();
@@ -15975,7 +16131,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
@@ -16007,14 +16163,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__4"
-    // InternalStoex.g:4796:1: rule__ProbabilityMassFunction__Group_3__4 : rule__ProbabilityMassFunction__Group_3__4__Impl ;
+    // InternalStoex.g:4835:1: rule__ProbabilityMassFunction__Group_3__4 : rule__ProbabilityMassFunction__Group_3__4__Impl ;
     public final void rule__ProbabilityMassFunction__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4800:1: ( rule__ProbabilityMassFunction__Group_3__4__Impl )
-            // InternalStoex.g:4801:2: rule__ProbabilityMassFunction__Group_3__4__Impl
+            // InternalStoex.g:4839:1: ( rule__ProbabilityMassFunction__Group_3__4__Impl )
+            // InternalStoex.g:4840:2: rule__ProbabilityMassFunction__Group_3__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_3__4__Impl();
@@ -16040,22 +16196,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3__4__Impl"
-    // InternalStoex.g:4807:1: rule__ProbabilityMassFunction__Group_3__4__Impl : ( ']' ) ;
+    // InternalStoex.g:4846:1: rule__ProbabilityMassFunction__Group_3__4__Impl : ( ']' ) ;
     public final void rule__ProbabilityMassFunction__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4811:1: ( ( ']' ) )
-            // InternalStoex.g:4812:1: ( ']' )
+            // InternalStoex.g:4850:1: ( ( ']' ) )
+            // InternalStoex.g:4851:1: ( ']' )
             {
-            // InternalStoex.g:4812:1: ( ']' )
-            // InternalStoex.g:4813:2: ']'
+            // InternalStoex.g:4851:1: ( ']' )
+            // InternalStoex.g:4852:2: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_3_4()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightSquareBracketKeyword_3_4()); 
             }
@@ -16081,14 +16237,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__0"
-    // InternalStoex.g:4823:1: rule__ProbabilityMassFunction__Group_3_1__0 : rule__ProbabilityMassFunction__Group_3_1__0__Impl rule__ProbabilityMassFunction__Group_3_1__1 ;
+    // InternalStoex.g:4862:1: rule__ProbabilityMassFunction__Group_3_1__0 : rule__ProbabilityMassFunction__Group_3_1__0__Impl rule__ProbabilityMassFunction__Group_3_1__1 ;
     public final void rule__ProbabilityMassFunction__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4827:1: ( rule__ProbabilityMassFunction__Group_3_1__0__Impl rule__ProbabilityMassFunction__Group_3_1__1 )
-            // InternalStoex.g:4828:2: rule__ProbabilityMassFunction__Group_3_1__0__Impl rule__ProbabilityMassFunction__Group_3_1__1
+            // InternalStoex.g:4866:1: ( rule__ProbabilityMassFunction__Group_3_1__0__Impl rule__ProbabilityMassFunction__Group_3_1__1 )
+            // InternalStoex.g:4867:2: rule__ProbabilityMassFunction__Group_3_1__0__Impl rule__ProbabilityMassFunction__Group_3_1__1
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__ProbabilityMassFunction__Group_3_1__0__Impl();
@@ -16119,22 +16275,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__0__Impl"
-    // InternalStoex.g:4835:1: rule__ProbabilityMassFunction__Group_3_1__0__Impl : ( '(' ) ;
+    // InternalStoex.g:4874:1: rule__ProbabilityMassFunction__Group_3_1__0__Impl : ( '(' ) ;
     public final void rule__ProbabilityMassFunction__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4839:1: ( ( '(' ) )
-            // InternalStoex.g:4840:1: ( '(' )
+            // InternalStoex.g:4878:1: ( ( '(' ) )
+            // InternalStoex.g:4879:1: ( '(' )
             {
-            // InternalStoex.g:4840:1: ( '(' )
-            // InternalStoex.g:4841:2: '('
+            // InternalStoex.g:4879:1: ( '(' )
+            // InternalStoex.g:4880:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_3_1_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getLeftParenthesisKeyword_3_1_0()); 
             }
@@ -16160,14 +16316,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__1"
-    // InternalStoex.g:4850:1: rule__ProbabilityMassFunction__Group_3_1__1 : rule__ProbabilityMassFunction__Group_3_1__1__Impl rule__ProbabilityMassFunction__Group_3_1__2 ;
+    // InternalStoex.g:4889:1: rule__ProbabilityMassFunction__Group_3_1__1 : rule__ProbabilityMassFunction__Group_3_1__1__Impl rule__ProbabilityMassFunction__Group_3_1__2 ;
     public final void rule__ProbabilityMassFunction__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4854:1: ( rule__ProbabilityMassFunction__Group_3_1__1__Impl rule__ProbabilityMassFunction__Group_3_1__2 )
-            // InternalStoex.g:4855:2: rule__ProbabilityMassFunction__Group_3_1__1__Impl rule__ProbabilityMassFunction__Group_3_1__2
+            // InternalStoex.g:4893:1: ( rule__ProbabilityMassFunction__Group_3_1__1__Impl rule__ProbabilityMassFunction__Group_3_1__2 )
+            // InternalStoex.g:4894:2: rule__ProbabilityMassFunction__Group_3_1__1__Impl rule__ProbabilityMassFunction__Group_3_1__2
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__ProbabilityMassFunction__Group_3_1__1__Impl();
@@ -16198,23 +16354,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__1__Impl"
-    // InternalStoex.g:4862:1: rule__ProbabilityMassFunction__Group_3_1__1__Impl : ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) ) ;
+    // InternalStoex.g:4901:1: rule__ProbabilityMassFunction__Group_3_1__1__Impl : ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) ) ;
     public final void rule__ProbabilityMassFunction__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4866:1: ( ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) ) )
-            // InternalStoex.g:4867:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) )
+            // InternalStoex.g:4905:1: ( ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) ) )
+            // InternalStoex.g:4906:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) )
             {
-            // InternalStoex.g:4867:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) )
-            // InternalStoex.g:4868:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 )
+            // InternalStoex.g:4906:1: ( ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 ) )
+            // InternalStoex.g:4907:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainAssignment_3_1_1()); 
             }
-            // InternalStoex.g:4869:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 )
-            // InternalStoex.g:4869:3: rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1
+            // InternalStoex.g:4908:2: ( rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 )
+            // InternalStoex.g:4908:3: rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1();
@@ -16249,14 +16405,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__2"
-    // InternalStoex.g:4877:1: rule__ProbabilityMassFunction__Group_3_1__2 : rule__ProbabilityMassFunction__Group_3_1__2__Impl ;
+    // InternalStoex.g:4916:1: rule__ProbabilityMassFunction__Group_3_1__2 : rule__ProbabilityMassFunction__Group_3_1__2__Impl ;
     public final void rule__ProbabilityMassFunction__Group_3_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4881:1: ( rule__ProbabilityMassFunction__Group_3_1__2__Impl )
-            // InternalStoex.g:4882:2: rule__ProbabilityMassFunction__Group_3_1__2__Impl
+            // InternalStoex.g:4920:1: ( rule__ProbabilityMassFunction__Group_3_1__2__Impl )
+            // InternalStoex.g:4921:2: rule__ProbabilityMassFunction__Group_3_1__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__ProbabilityMassFunction__Group_3_1__2__Impl();
@@ -16282,22 +16438,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__Group_3_1__2__Impl"
-    // InternalStoex.g:4888:1: rule__ProbabilityMassFunction__Group_3_1__2__Impl : ( ')' ) ;
+    // InternalStoex.g:4927:1: rule__ProbabilityMassFunction__Group_3_1__2__Impl : ( ')' ) ;
     public final void rule__ProbabilityMassFunction__Group_3_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4892:1: ( ( ')' ) )
-            // InternalStoex.g:4893:1: ( ')' )
+            // InternalStoex.g:4931:1: ( ( ')' ) )
+            // InternalStoex.g:4932:1: ( ')' )
             {
-            // InternalStoex.g:4893:1: ( ')' )
-            // InternalStoex.g:4894:2: ')'
+            // InternalStoex.g:4932:1: ( ')' )
+            // InternalStoex.g:4933:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_3_1_2()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getRightParenthesisKeyword_3_1_2()); 
             }
@@ -16323,14 +16479,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__0"
-    // InternalStoex.g:4904:1: rule__Numeric_int_sample__Group__0 : rule__Numeric_int_sample__Group__0__Impl rule__Numeric_int_sample__Group__1 ;
+    // InternalStoex.g:4943:1: rule__Numeric_int_sample__Group__0 : rule__Numeric_int_sample__Group__0__Impl rule__Numeric_int_sample__Group__1 ;
     public final void rule__Numeric_int_sample__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4908:1: ( rule__Numeric_int_sample__Group__0__Impl rule__Numeric_int_sample__Group__1 )
-            // InternalStoex.g:4909:2: rule__Numeric_int_sample__Group__0__Impl rule__Numeric_int_sample__Group__1
+            // InternalStoex.g:4947:1: ( rule__Numeric_int_sample__Group__0__Impl rule__Numeric_int_sample__Group__1 )
+            // InternalStoex.g:4948:2: rule__Numeric_int_sample__Group__0__Impl rule__Numeric_int_sample__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__Numeric_int_sample__Group__0__Impl();
@@ -16361,22 +16517,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__0__Impl"
-    // InternalStoex.g:4916:1: rule__Numeric_int_sample__Group__0__Impl : ( '(' ) ;
+    // InternalStoex.g:4955:1: rule__Numeric_int_sample__Group__0__Impl : ( '(' ) ;
     public final void rule__Numeric_int_sample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4920:1: ( ( '(' ) )
-            // InternalStoex.g:4921:1: ( '(' )
+            // InternalStoex.g:4959:1: ( ( '(' ) )
+            // InternalStoex.g:4960:1: ( '(' )
             {
-            // InternalStoex.g:4921:1: ( '(' )
-            // InternalStoex.g:4922:2: '('
+            // InternalStoex.g:4960:1: ( '(' )
+            // InternalStoex.g:4961:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumeric_int_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -16402,14 +16558,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__1"
-    // InternalStoex.g:4931:1: rule__Numeric_int_sample__Group__1 : rule__Numeric_int_sample__Group__1__Impl rule__Numeric_int_sample__Group__2 ;
+    // InternalStoex.g:4970:1: rule__Numeric_int_sample__Group__1 : rule__Numeric_int_sample__Group__1__Impl rule__Numeric_int_sample__Group__2 ;
     public final void rule__Numeric_int_sample__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4935:1: ( rule__Numeric_int_sample__Group__1__Impl rule__Numeric_int_sample__Group__2 )
-            // InternalStoex.g:4936:2: rule__Numeric_int_sample__Group__1__Impl rule__Numeric_int_sample__Group__2
+            // InternalStoex.g:4974:1: ( rule__Numeric_int_sample__Group__1__Impl rule__Numeric_int_sample__Group__2 )
+            // InternalStoex.g:4975:2: rule__Numeric_int_sample__Group__1__Impl rule__Numeric_int_sample__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__Numeric_int_sample__Group__1__Impl();
@@ -16440,23 +16596,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__1__Impl"
-    // InternalStoex.g:4943:1: rule__Numeric_int_sample__Group__1__Impl : ( ( rule__Numeric_int_sample__ValueAssignment_1 ) ) ;
+    // InternalStoex.g:4982:1: rule__Numeric_int_sample__Group__1__Impl : ( ( rule__Numeric_int_sample__ValueAssignment_1 ) ) ;
     public final void rule__Numeric_int_sample__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4947:1: ( ( ( rule__Numeric_int_sample__ValueAssignment_1 ) ) )
-            // InternalStoex.g:4948:1: ( ( rule__Numeric_int_sample__ValueAssignment_1 ) )
+            // InternalStoex.g:4986:1: ( ( ( rule__Numeric_int_sample__ValueAssignment_1 ) ) )
+            // InternalStoex.g:4987:1: ( ( rule__Numeric_int_sample__ValueAssignment_1 ) )
             {
-            // InternalStoex.g:4948:1: ( ( rule__Numeric_int_sample__ValueAssignment_1 ) )
-            // InternalStoex.g:4949:2: ( rule__Numeric_int_sample__ValueAssignment_1 )
+            // InternalStoex.g:4987:1: ( ( rule__Numeric_int_sample__ValueAssignment_1 ) )
+            // InternalStoex.g:4988:2: ( rule__Numeric_int_sample__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getValueAssignment_1()); 
             }
-            // InternalStoex.g:4950:2: ( rule__Numeric_int_sample__ValueAssignment_1 )
-            // InternalStoex.g:4950:3: rule__Numeric_int_sample__ValueAssignment_1
+            // InternalStoex.g:4989:2: ( rule__Numeric_int_sample__ValueAssignment_1 )
+            // InternalStoex.g:4989:3: rule__Numeric_int_sample__ValueAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Numeric_int_sample__ValueAssignment_1();
@@ -16491,14 +16647,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__2"
-    // InternalStoex.g:4958:1: rule__Numeric_int_sample__Group__2 : rule__Numeric_int_sample__Group__2__Impl rule__Numeric_int_sample__Group__3 ;
+    // InternalStoex.g:4997:1: rule__Numeric_int_sample__Group__2 : rule__Numeric_int_sample__Group__2__Impl rule__Numeric_int_sample__Group__3 ;
     public final void rule__Numeric_int_sample__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4962:1: ( rule__Numeric_int_sample__Group__2__Impl rule__Numeric_int_sample__Group__3 )
-            // InternalStoex.g:4963:2: rule__Numeric_int_sample__Group__2__Impl rule__Numeric_int_sample__Group__3
+            // InternalStoex.g:5001:1: ( rule__Numeric_int_sample__Group__2__Impl rule__Numeric_int_sample__Group__3 )
+            // InternalStoex.g:5002:2: rule__Numeric_int_sample__Group__2__Impl rule__Numeric_int_sample__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__Numeric_int_sample__Group__2__Impl();
@@ -16529,22 +16685,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__2__Impl"
-    // InternalStoex.g:4970:1: rule__Numeric_int_sample__Group__2__Impl : ( ';' ) ;
+    // InternalStoex.g:5009:1: rule__Numeric_int_sample__Group__2__Impl : ( ';' ) ;
     public final void rule__Numeric_int_sample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4974:1: ( ( ';' ) )
-            // InternalStoex.g:4975:1: ( ';' )
+            // InternalStoex.g:5013:1: ( ( ';' ) )
+            // InternalStoex.g:5014:1: ( ';' )
             {
-            // InternalStoex.g:4975:1: ( ';' )
-            // InternalStoex.g:4976:2: ';'
+            // InternalStoex.g:5014:1: ( ';' )
+            // InternalStoex.g:5015:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumeric_int_sampleAccess().getSemicolonKeyword_2()); 
             }
@@ -16570,14 +16726,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__3"
-    // InternalStoex.g:4985:1: rule__Numeric_int_sample__Group__3 : rule__Numeric_int_sample__Group__3__Impl rule__Numeric_int_sample__Group__4 ;
+    // InternalStoex.g:5024:1: rule__Numeric_int_sample__Group__3 : rule__Numeric_int_sample__Group__3__Impl rule__Numeric_int_sample__Group__4 ;
     public final void rule__Numeric_int_sample__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:4989:1: ( rule__Numeric_int_sample__Group__3__Impl rule__Numeric_int_sample__Group__4 )
-            // InternalStoex.g:4990:2: rule__Numeric_int_sample__Group__3__Impl rule__Numeric_int_sample__Group__4
+            // InternalStoex.g:5028:1: ( rule__Numeric_int_sample__Group__3__Impl rule__Numeric_int_sample__Group__4 )
+            // InternalStoex.g:5029:2: rule__Numeric_int_sample__Group__3__Impl rule__Numeric_int_sample__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__Numeric_int_sample__Group__3__Impl();
@@ -16608,23 +16764,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__3__Impl"
-    // InternalStoex.g:4997:1: rule__Numeric_int_sample__Group__3__Impl : ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) ) ;
+    // InternalStoex.g:5036:1: rule__Numeric_int_sample__Group__3__Impl : ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) ) ;
     public final void rule__Numeric_int_sample__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5001:1: ( ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) ) )
-            // InternalStoex.g:5002:1: ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5040:1: ( ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) ) )
+            // InternalStoex.g:5041:1: ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) )
             {
-            // InternalStoex.g:5002:1: ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) )
-            // InternalStoex.g:5003:2: ( rule__Numeric_int_sample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5041:1: ( ( rule__Numeric_int_sample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5042:2: ( rule__Numeric_int_sample__ProbabilityAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getProbabilityAssignment_3()); 
             }
-            // InternalStoex.g:5004:2: ( rule__Numeric_int_sample__ProbabilityAssignment_3 )
-            // InternalStoex.g:5004:3: rule__Numeric_int_sample__ProbabilityAssignment_3
+            // InternalStoex.g:5043:2: ( rule__Numeric_int_sample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5043:3: rule__Numeric_int_sample__ProbabilityAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Numeric_int_sample__ProbabilityAssignment_3();
@@ -16659,14 +16815,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__4"
-    // InternalStoex.g:5012:1: rule__Numeric_int_sample__Group__4 : rule__Numeric_int_sample__Group__4__Impl ;
+    // InternalStoex.g:5051:1: rule__Numeric_int_sample__Group__4 : rule__Numeric_int_sample__Group__4__Impl ;
     public final void rule__Numeric_int_sample__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5016:1: ( rule__Numeric_int_sample__Group__4__Impl )
-            // InternalStoex.g:5017:2: rule__Numeric_int_sample__Group__4__Impl
+            // InternalStoex.g:5055:1: ( rule__Numeric_int_sample__Group__4__Impl )
+            // InternalStoex.g:5056:2: rule__Numeric_int_sample__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Numeric_int_sample__Group__4__Impl();
@@ -16692,22 +16848,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__Group__4__Impl"
-    // InternalStoex.g:5023:1: rule__Numeric_int_sample__Group__4__Impl : ( ')' ) ;
+    // InternalStoex.g:5062:1: rule__Numeric_int_sample__Group__4__Impl : ( ')' ) ;
     public final void rule__Numeric_int_sample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5027:1: ( ( ')' ) )
-            // InternalStoex.g:5028:1: ( ')' )
+            // InternalStoex.g:5066:1: ( ( ')' ) )
+            // InternalStoex.g:5067:1: ( ')' )
             {
-            // InternalStoex.g:5028:1: ( ')' )
-            // InternalStoex.g:5029:2: ')'
+            // InternalStoex.g:5067:1: ( ')' )
+            // InternalStoex.g:5068:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumeric_int_sampleAccess().getRightParenthesisKeyword_4()); 
             }
@@ -16733,14 +16889,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__0"
-    // InternalStoex.g:5039:1: rule__Numeric_real_sample__Group__0 : rule__Numeric_real_sample__Group__0__Impl rule__Numeric_real_sample__Group__1 ;
+    // InternalStoex.g:5078:1: rule__Numeric_real_sample__Group__0 : rule__Numeric_real_sample__Group__0__Impl rule__Numeric_real_sample__Group__1 ;
     public final void rule__Numeric_real_sample__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5043:1: ( rule__Numeric_real_sample__Group__0__Impl rule__Numeric_real_sample__Group__1 )
-            // InternalStoex.g:5044:2: rule__Numeric_real_sample__Group__0__Impl rule__Numeric_real_sample__Group__1
+            // InternalStoex.g:5082:1: ( rule__Numeric_real_sample__Group__0__Impl rule__Numeric_real_sample__Group__1 )
+            // InternalStoex.g:5083:2: rule__Numeric_real_sample__Group__0__Impl rule__Numeric_real_sample__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_36);
             rule__Numeric_real_sample__Group__0__Impl();
@@ -16771,22 +16927,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__0__Impl"
-    // InternalStoex.g:5051:1: rule__Numeric_real_sample__Group__0__Impl : ( '(' ) ;
+    // InternalStoex.g:5090:1: rule__Numeric_real_sample__Group__0__Impl : ( '(' ) ;
     public final void rule__Numeric_real_sample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5055:1: ( ( '(' ) )
-            // InternalStoex.g:5056:1: ( '(' )
+            // InternalStoex.g:5094:1: ( ( '(' ) )
+            // InternalStoex.g:5095:1: ( '(' )
             {
-            // InternalStoex.g:5056:1: ( '(' )
-            // InternalStoex.g:5057:2: '('
+            // InternalStoex.g:5095:1: ( '(' )
+            // InternalStoex.g:5096:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumeric_real_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -16812,14 +16968,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__1"
-    // InternalStoex.g:5066:1: rule__Numeric_real_sample__Group__1 : rule__Numeric_real_sample__Group__1__Impl rule__Numeric_real_sample__Group__2 ;
+    // InternalStoex.g:5105:1: rule__Numeric_real_sample__Group__1 : rule__Numeric_real_sample__Group__1__Impl rule__Numeric_real_sample__Group__2 ;
     public final void rule__Numeric_real_sample__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5070:1: ( rule__Numeric_real_sample__Group__1__Impl rule__Numeric_real_sample__Group__2 )
-            // InternalStoex.g:5071:2: rule__Numeric_real_sample__Group__1__Impl rule__Numeric_real_sample__Group__2
+            // InternalStoex.g:5109:1: ( rule__Numeric_real_sample__Group__1__Impl rule__Numeric_real_sample__Group__2 )
+            // InternalStoex.g:5110:2: rule__Numeric_real_sample__Group__1__Impl rule__Numeric_real_sample__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__Numeric_real_sample__Group__1__Impl();
@@ -16850,23 +17006,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__1__Impl"
-    // InternalStoex.g:5078:1: rule__Numeric_real_sample__Group__1__Impl : ( ( rule__Numeric_real_sample__ValueAssignment_1 ) ) ;
+    // InternalStoex.g:5117:1: rule__Numeric_real_sample__Group__1__Impl : ( ( rule__Numeric_real_sample__ValueAssignment_1 ) ) ;
     public final void rule__Numeric_real_sample__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5082:1: ( ( ( rule__Numeric_real_sample__ValueAssignment_1 ) ) )
-            // InternalStoex.g:5083:1: ( ( rule__Numeric_real_sample__ValueAssignment_1 ) )
+            // InternalStoex.g:5121:1: ( ( ( rule__Numeric_real_sample__ValueAssignment_1 ) ) )
+            // InternalStoex.g:5122:1: ( ( rule__Numeric_real_sample__ValueAssignment_1 ) )
             {
-            // InternalStoex.g:5083:1: ( ( rule__Numeric_real_sample__ValueAssignment_1 ) )
-            // InternalStoex.g:5084:2: ( rule__Numeric_real_sample__ValueAssignment_1 )
+            // InternalStoex.g:5122:1: ( ( rule__Numeric_real_sample__ValueAssignment_1 ) )
+            // InternalStoex.g:5123:2: ( rule__Numeric_real_sample__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getValueAssignment_1()); 
             }
-            // InternalStoex.g:5085:2: ( rule__Numeric_real_sample__ValueAssignment_1 )
-            // InternalStoex.g:5085:3: rule__Numeric_real_sample__ValueAssignment_1
+            // InternalStoex.g:5124:2: ( rule__Numeric_real_sample__ValueAssignment_1 )
+            // InternalStoex.g:5124:3: rule__Numeric_real_sample__ValueAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Numeric_real_sample__ValueAssignment_1();
@@ -16901,14 +17057,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__2"
-    // InternalStoex.g:5093:1: rule__Numeric_real_sample__Group__2 : rule__Numeric_real_sample__Group__2__Impl rule__Numeric_real_sample__Group__3 ;
+    // InternalStoex.g:5132:1: rule__Numeric_real_sample__Group__2 : rule__Numeric_real_sample__Group__2__Impl rule__Numeric_real_sample__Group__3 ;
     public final void rule__Numeric_real_sample__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5097:1: ( rule__Numeric_real_sample__Group__2__Impl rule__Numeric_real_sample__Group__3 )
-            // InternalStoex.g:5098:2: rule__Numeric_real_sample__Group__2__Impl rule__Numeric_real_sample__Group__3
+            // InternalStoex.g:5136:1: ( rule__Numeric_real_sample__Group__2__Impl rule__Numeric_real_sample__Group__3 )
+            // InternalStoex.g:5137:2: rule__Numeric_real_sample__Group__2__Impl rule__Numeric_real_sample__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__Numeric_real_sample__Group__2__Impl();
@@ -16939,22 +17095,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__2__Impl"
-    // InternalStoex.g:5105:1: rule__Numeric_real_sample__Group__2__Impl : ( ';' ) ;
+    // InternalStoex.g:5144:1: rule__Numeric_real_sample__Group__2__Impl : ( ';' ) ;
     public final void rule__Numeric_real_sample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5109:1: ( ( ';' ) )
-            // InternalStoex.g:5110:1: ( ';' )
+            // InternalStoex.g:5148:1: ( ( ';' ) )
+            // InternalStoex.g:5149:1: ( ';' )
             {
-            // InternalStoex.g:5110:1: ( ';' )
-            // InternalStoex.g:5111:2: ';'
+            // InternalStoex.g:5149:1: ( ';' )
+            // InternalStoex.g:5150:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumeric_real_sampleAccess().getSemicolonKeyword_2()); 
             }
@@ -16980,14 +17136,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__3"
-    // InternalStoex.g:5120:1: rule__Numeric_real_sample__Group__3 : rule__Numeric_real_sample__Group__3__Impl rule__Numeric_real_sample__Group__4 ;
+    // InternalStoex.g:5159:1: rule__Numeric_real_sample__Group__3 : rule__Numeric_real_sample__Group__3__Impl rule__Numeric_real_sample__Group__4 ;
     public final void rule__Numeric_real_sample__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5124:1: ( rule__Numeric_real_sample__Group__3__Impl rule__Numeric_real_sample__Group__4 )
-            // InternalStoex.g:5125:2: rule__Numeric_real_sample__Group__3__Impl rule__Numeric_real_sample__Group__4
+            // InternalStoex.g:5163:1: ( rule__Numeric_real_sample__Group__3__Impl rule__Numeric_real_sample__Group__4 )
+            // InternalStoex.g:5164:2: rule__Numeric_real_sample__Group__3__Impl rule__Numeric_real_sample__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__Numeric_real_sample__Group__3__Impl();
@@ -17018,23 +17174,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__3__Impl"
-    // InternalStoex.g:5132:1: rule__Numeric_real_sample__Group__3__Impl : ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) ) ;
+    // InternalStoex.g:5171:1: rule__Numeric_real_sample__Group__3__Impl : ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) ) ;
     public final void rule__Numeric_real_sample__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5136:1: ( ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) ) )
-            // InternalStoex.g:5137:1: ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5175:1: ( ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) ) )
+            // InternalStoex.g:5176:1: ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) )
             {
-            // InternalStoex.g:5137:1: ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) )
-            // InternalStoex.g:5138:2: ( rule__Numeric_real_sample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5176:1: ( ( rule__Numeric_real_sample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5177:2: ( rule__Numeric_real_sample__ProbabilityAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getProbabilityAssignment_3()); 
             }
-            // InternalStoex.g:5139:2: ( rule__Numeric_real_sample__ProbabilityAssignment_3 )
-            // InternalStoex.g:5139:3: rule__Numeric_real_sample__ProbabilityAssignment_3
+            // InternalStoex.g:5178:2: ( rule__Numeric_real_sample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5178:3: rule__Numeric_real_sample__ProbabilityAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Numeric_real_sample__ProbabilityAssignment_3();
@@ -17069,14 +17225,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__4"
-    // InternalStoex.g:5147:1: rule__Numeric_real_sample__Group__4 : rule__Numeric_real_sample__Group__4__Impl ;
+    // InternalStoex.g:5186:1: rule__Numeric_real_sample__Group__4 : rule__Numeric_real_sample__Group__4__Impl ;
     public final void rule__Numeric_real_sample__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5151:1: ( rule__Numeric_real_sample__Group__4__Impl )
-            // InternalStoex.g:5152:2: rule__Numeric_real_sample__Group__4__Impl
+            // InternalStoex.g:5190:1: ( rule__Numeric_real_sample__Group__4__Impl )
+            // InternalStoex.g:5191:2: rule__Numeric_real_sample__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Numeric_real_sample__Group__4__Impl();
@@ -17102,22 +17258,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__Group__4__Impl"
-    // InternalStoex.g:5158:1: rule__Numeric_real_sample__Group__4__Impl : ( ')' ) ;
+    // InternalStoex.g:5197:1: rule__Numeric_real_sample__Group__4__Impl : ( ')' ) ;
     public final void rule__Numeric_real_sample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5162:1: ( ( ')' ) )
-            // InternalStoex.g:5163:1: ( ')' )
+            // InternalStoex.g:5201:1: ( ( ')' ) )
+            // InternalStoex.g:5202:1: ( ')' )
             {
-            // InternalStoex.g:5163:1: ( ')' )
-            // InternalStoex.g:5164:2: ')'
+            // InternalStoex.g:5202:1: ( ')' )
+            // InternalStoex.g:5203:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumeric_real_sampleAccess().getRightParenthesisKeyword_4()); 
             }
@@ -17143,14 +17299,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__0"
-    // InternalStoex.g:5174:1: rule__Real_pdf_sample__Group__0 : rule__Real_pdf_sample__Group__0__Impl rule__Real_pdf_sample__Group__1 ;
+    // InternalStoex.g:5213:1: rule__Real_pdf_sample__Group__0 : rule__Real_pdf_sample__Group__0__Impl rule__Real_pdf_sample__Group__1 ;
     public final void rule__Real_pdf_sample__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5178:1: ( rule__Real_pdf_sample__Group__0__Impl rule__Real_pdf_sample__Group__1 )
-            // InternalStoex.g:5179:2: rule__Real_pdf_sample__Group__0__Impl rule__Real_pdf_sample__Group__1
+            // InternalStoex.g:5217:1: ( rule__Real_pdf_sample__Group__0__Impl rule__Real_pdf_sample__Group__1 )
+            // InternalStoex.g:5218:2: rule__Real_pdf_sample__Group__0__Impl rule__Real_pdf_sample__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_36);
             rule__Real_pdf_sample__Group__0__Impl();
@@ -17181,22 +17337,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__0__Impl"
-    // InternalStoex.g:5186:1: rule__Real_pdf_sample__Group__0__Impl : ( '(' ) ;
+    // InternalStoex.g:5225:1: rule__Real_pdf_sample__Group__0__Impl : ( '(' ) ;
     public final void rule__Real_pdf_sample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5190:1: ( ( '(' ) )
-            // InternalStoex.g:5191:1: ( '(' )
+            // InternalStoex.g:5229:1: ( ( '(' ) )
+            // InternalStoex.g:5230:1: ( '(' )
             {
-            // InternalStoex.g:5191:1: ( '(' )
-            // InternalStoex.g:5192:2: '('
+            // InternalStoex.g:5230:1: ( '(' )
+            // InternalStoex.g:5231:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReal_pdf_sampleAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -17222,14 +17378,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__1"
-    // InternalStoex.g:5201:1: rule__Real_pdf_sample__Group__1 : rule__Real_pdf_sample__Group__1__Impl rule__Real_pdf_sample__Group__2 ;
+    // InternalStoex.g:5240:1: rule__Real_pdf_sample__Group__1 : rule__Real_pdf_sample__Group__1__Impl rule__Real_pdf_sample__Group__2 ;
     public final void rule__Real_pdf_sample__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5205:1: ( rule__Real_pdf_sample__Group__1__Impl rule__Real_pdf_sample__Group__2 )
-            // InternalStoex.g:5206:2: rule__Real_pdf_sample__Group__1__Impl rule__Real_pdf_sample__Group__2
+            // InternalStoex.g:5244:1: ( rule__Real_pdf_sample__Group__1__Impl rule__Real_pdf_sample__Group__2 )
+            // InternalStoex.g:5245:2: rule__Real_pdf_sample__Group__1__Impl rule__Real_pdf_sample__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__Real_pdf_sample__Group__1__Impl();
@@ -17260,23 +17416,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__1__Impl"
-    // InternalStoex.g:5213:1: rule__Real_pdf_sample__Group__1__Impl : ( ( rule__Real_pdf_sample__ValueAssignment_1 ) ) ;
+    // InternalStoex.g:5252:1: rule__Real_pdf_sample__Group__1__Impl : ( ( rule__Real_pdf_sample__ValueAssignment_1 ) ) ;
     public final void rule__Real_pdf_sample__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5217:1: ( ( ( rule__Real_pdf_sample__ValueAssignment_1 ) ) )
-            // InternalStoex.g:5218:1: ( ( rule__Real_pdf_sample__ValueAssignment_1 ) )
+            // InternalStoex.g:5256:1: ( ( ( rule__Real_pdf_sample__ValueAssignment_1 ) ) )
+            // InternalStoex.g:5257:1: ( ( rule__Real_pdf_sample__ValueAssignment_1 ) )
             {
-            // InternalStoex.g:5218:1: ( ( rule__Real_pdf_sample__ValueAssignment_1 ) )
-            // InternalStoex.g:5219:2: ( rule__Real_pdf_sample__ValueAssignment_1 )
+            // InternalStoex.g:5257:1: ( ( rule__Real_pdf_sample__ValueAssignment_1 ) )
+            // InternalStoex.g:5258:2: ( rule__Real_pdf_sample__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getValueAssignment_1()); 
             }
-            // InternalStoex.g:5220:2: ( rule__Real_pdf_sample__ValueAssignment_1 )
-            // InternalStoex.g:5220:3: rule__Real_pdf_sample__ValueAssignment_1
+            // InternalStoex.g:5259:2: ( rule__Real_pdf_sample__ValueAssignment_1 )
+            // InternalStoex.g:5259:3: rule__Real_pdf_sample__ValueAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Real_pdf_sample__ValueAssignment_1();
@@ -17311,14 +17467,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__2"
-    // InternalStoex.g:5228:1: rule__Real_pdf_sample__Group__2 : rule__Real_pdf_sample__Group__2__Impl rule__Real_pdf_sample__Group__3 ;
+    // InternalStoex.g:5267:1: rule__Real_pdf_sample__Group__2 : rule__Real_pdf_sample__Group__2__Impl rule__Real_pdf_sample__Group__3 ;
     public final void rule__Real_pdf_sample__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5232:1: ( rule__Real_pdf_sample__Group__2__Impl rule__Real_pdf_sample__Group__3 )
-            // InternalStoex.g:5233:2: rule__Real_pdf_sample__Group__2__Impl rule__Real_pdf_sample__Group__3
+            // InternalStoex.g:5271:1: ( rule__Real_pdf_sample__Group__2__Impl rule__Real_pdf_sample__Group__3 )
+            // InternalStoex.g:5272:2: rule__Real_pdf_sample__Group__2__Impl rule__Real_pdf_sample__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__Real_pdf_sample__Group__2__Impl();
@@ -17349,22 +17505,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__2__Impl"
-    // InternalStoex.g:5240:1: rule__Real_pdf_sample__Group__2__Impl : ( ';' ) ;
+    // InternalStoex.g:5279:1: rule__Real_pdf_sample__Group__2__Impl : ( ';' ) ;
     public final void rule__Real_pdf_sample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5244:1: ( ( ';' ) )
-            // InternalStoex.g:5245:1: ( ';' )
+            // InternalStoex.g:5283:1: ( ( ';' ) )
+            // InternalStoex.g:5284:1: ( ';' )
             {
-            // InternalStoex.g:5245:1: ( ';' )
-            // InternalStoex.g:5246:2: ';'
+            // InternalStoex.g:5284:1: ( ';' )
+            // InternalStoex.g:5285:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReal_pdf_sampleAccess().getSemicolonKeyword_2()); 
             }
@@ -17390,14 +17546,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__3"
-    // InternalStoex.g:5255:1: rule__Real_pdf_sample__Group__3 : rule__Real_pdf_sample__Group__3__Impl rule__Real_pdf_sample__Group__4 ;
+    // InternalStoex.g:5294:1: rule__Real_pdf_sample__Group__3 : rule__Real_pdf_sample__Group__3__Impl rule__Real_pdf_sample__Group__4 ;
     public final void rule__Real_pdf_sample__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5259:1: ( rule__Real_pdf_sample__Group__3__Impl rule__Real_pdf_sample__Group__4 )
-            // InternalStoex.g:5260:2: rule__Real_pdf_sample__Group__3__Impl rule__Real_pdf_sample__Group__4
+            // InternalStoex.g:5298:1: ( rule__Real_pdf_sample__Group__3__Impl rule__Real_pdf_sample__Group__4 )
+            // InternalStoex.g:5299:2: rule__Real_pdf_sample__Group__3__Impl rule__Real_pdf_sample__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__Real_pdf_sample__Group__3__Impl();
@@ -17428,23 +17584,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__3__Impl"
-    // InternalStoex.g:5267:1: rule__Real_pdf_sample__Group__3__Impl : ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) ) ;
+    // InternalStoex.g:5306:1: rule__Real_pdf_sample__Group__3__Impl : ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) ) ;
     public final void rule__Real_pdf_sample__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5271:1: ( ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) ) )
-            // InternalStoex.g:5272:1: ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5310:1: ( ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) ) )
+            // InternalStoex.g:5311:1: ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) )
             {
-            // InternalStoex.g:5272:1: ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) )
-            // InternalStoex.g:5273:2: ( rule__Real_pdf_sample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5311:1: ( ( rule__Real_pdf_sample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5312:2: ( rule__Real_pdf_sample__ProbabilityAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getProbabilityAssignment_3()); 
             }
-            // InternalStoex.g:5274:2: ( rule__Real_pdf_sample__ProbabilityAssignment_3 )
-            // InternalStoex.g:5274:3: rule__Real_pdf_sample__ProbabilityAssignment_3
+            // InternalStoex.g:5313:2: ( rule__Real_pdf_sample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5313:3: rule__Real_pdf_sample__ProbabilityAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Real_pdf_sample__ProbabilityAssignment_3();
@@ -17479,14 +17635,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__4"
-    // InternalStoex.g:5282:1: rule__Real_pdf_sample__Group__4 : rule__Real_pdf_sample__Group__4__Impl ;
+    // InternalStoex.g:5321:1: rule__Real_pdf_sample__Group__4 : rule__Real_pdf_sample__Group__4__Impl ;
     public final void rule__Real_pdf_sample__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5286:1: ( rule__Real_pdf_sample__Group__4__Impl )
-            // InternalStoex.g:5287:2: rule__Real_pdf_sample__Group__4__Impl
+            // InternalStoex.g:5325:1: ( rule__Real_pdf_sample__Group__4__Impl )
+            // InternalStoex.g:5326:2: rule__Real_pdf_sample__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Real_pdf_sample__Group__4__Impl();
@@ -17512,22 +17668,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__Group__4__Impl"
-    // InternalStoex.g:5293:1: rule__Real_pdf_sample__Group__4__Impl : ( ')' ) ;
+    // InternalStoex.g:5332:1: rule__Real_pdf_sample__Group__4__Impl : ( ')' ) ;
     public final void rule__Real_pdf_sample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5297:1: ( ( ')' ) )
-            // InternalStoex.g:5298:1: ( ')' )
+            // InternalStoex.g:5336:1: ( ( ')' ) )
+            // InternalStoex.g:5337:1: ( ')' )
             {
-            // InternalStoex.g:5298:1: ( ')' )
-            // InternalStoex.g:5299:2: ')'
+            // InternalStoex.g:5337:1: ( ')' )
+            // InternalStoex.g:5338:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReal_pdf_sampleAccess().getRightParenthesisKeyword_4()); 
             }
@@ -17553,14 +17709,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__0"
-    // InternalStoex.g:5309:1: rule__Stringsample__Group__0 : rule__Stringsample__Group__0__Impl rule__Stringsample__Group__1 ;
+    // InternalStoex.g:5348:1: rule__Stringsample__Group__0 : rule__Stringsample__Group__0__Impl rule__Stringsample__Group__1 ;
     public final void rule__Stringsample__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5313:1: ( rule__Stringsample__Group__0__Impl rule__Stringsample__Group__1 )
-            // InternalStoex.g:5314:2: rule__Stringsample__Group__0__Impl rule__Stringsample__Group__1
+            // InternalStoex.g:5352:1: ( rule__Stringsample__Group__0__Impl rule__Stringsample__Group__1 )
+            // InternalStoex.g:5353:2: rule__Stringsample__Group__0__Impl rule__Stringsample__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_37);
             rule__Stringsample__Group__0__Impl();
@@ -17591,22 +17747,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__0__Impl"
-    // InternalStoex.g:5321:1: rule__Stringsample__Group__0__Impl : ( '(' ) ;
+    // InternalStoex.g:5360:1: rule__Stringsample__Group__0__Impl : ( '(' ) ;
     public final void rule__Stringsample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5325:1: ( ( '(' ) )
-            // InternalStoex.g:5326:1: ( '(' )
+            // InternalStoex.g:5364:1: ( ( '(' ) )
+            // InternalStoex.g:5365:1: ( '(' )
             {
-            // InternalStoex.g:5326:1: ( '(' )
-            // InternalStoex.g:5327:2: '('
+            // InternalStoex.g:5365:1: ( '(' )
+            // InternalStoex.g:5366:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringsampleAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -17632,14 +17788,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__1"
-    // InternalStoex.g:5336:1: rule__Stringsample__Group__1 : rule__Stringsample__Group__1__Impl rule__Stringsample__Group__2 ;
+    // InternalStoex.g:5375:1: rule__Stringsample__Group__1 : rule__Stringsample__Group__1__Impl rule__Stringsample__Group__2 ;
     public final void rule__Stringsample__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5340:1: ( rule__Stringsample__Group__1__Impl rule__Stringsample__Group__2 )
-            // InternalStoex.g:5341:2: rule__Stringsample__Group__1__Impl rule__Stringsample__Group__2
+            // InternalStoex.g:5379:1: ( rule__Stringsample__Group__1__Impl rule__Stringsample__Group__2 )
+            // InternalStoex.g:5380:2: rule__Stringsample__Group__1__Impl rule__Stringsample__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__Stringsample__Group__1__Impl();
@@ -17670,23 +17826,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__1__Impl"
-    // InternalStoex.g:5348:1: rule__Stringsample__Group__1__Impl : ( ( rule__Stringsample__ValueAssignment_1 ) ) ;
+    // InternalStoex.g:5387:1: rule__Stringsample__Group__1__Impl : ( ( rule__Stringsample__ValueAssignment_1 ) ) ;
     public final void rule__Stringsample__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5352:1: ( ( ( rule__Stringsample__ValueAssignment_1 ) ) )
-            // InternalStoex.g:5353:1: ( ( rule__Stringsample__ValueAssignment_1 ) )
+            // InternalStoex.g:5391:1: ( ( ( rule__Stringsample__ValueAssignment_1 ) ) )
+            // InternalStoex.g:5392:1: ( ( rule__Stringsample__ValueAssignment_1 ) )
             {
-            // InternalStoex.g:5353:1: ( ( rule__Stringsample__ValueAssignment_1 ) )
-            // InternalStoex.g:5354:2: ( rule__Stringsample__ValueAssignment_1 )
+            // InternalStoex.g:5392:1: ( ( rule__Stringsample__ValueAssignment_1 ) )
+            // InternalStoex.g:5393:2: ( rule__Stringsample__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getValueAssignment_1()); 
             }
-            // InternalStoex.g:5355:2: ( rule__Stringsample__ValueAssignment_1 )
-            // InternalStoex.g:5355:3: rule__Stringsample__ValueAssignment_1
+            // InternalStoex.g:5394:2: ( rule__Stringsample__ValueAssignment_1 )
+            // InternalStoex.g:5394:3: rule__Stringsample__ValueAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Stringsample__ValueAssignment_1();
@@ -17721,14 +17877,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__2"
-    // InternalStoex.g:5363:1: rule__Stringsample__Group__2 : rule__Stringsample__Group__2__Impl rule__Stringsample__Group__3 ;
+    // InternalStoex.g:5402:1: rule__Stringsample__Group__2 : rule__Stringsample__Group__2__Impl rule__Stringsample__Group__3 ;
     public final void rule__Stringsample__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5367:1: ( rule__Stringsample__Group__2__Impl rule__Stringsample__Group__3 )
-            // InternalStoex.g:5368:2: rule__Stringsample__Group__2__Impl rule__Stringsample__Group__3
+            // InternalStoex.g:5406:1: ( rule__Stringsample__Group__2__Impl rule__Stringsample__Group__3 )
+            // InternalStoex.g:5407:2: rule__Stringsample__Group__2__Impl rule__Stringsample__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__Stringsample__Group__2__Impl();
@@ -17759,22 +17915,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__2__Impl"
-    // InternalStoex.g:5375:1: rule__Stringsample__Group__2__Impl : ( ';' ) ;
+    // InternalStoex.g:5414:1: rule__Stringsample__Group__2__Impl : ( ';' ) ;
     public final void rule__Stringsample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5379:1: ( ( ';' ) )
-            // InternalStoex.g:5380:1: ( ';' )
+            // InternalStoex.g:5418:1: ( ( ';' ) )
+            // InternalStoex.g:5419:1: ( ';' )
             {
-            // InternalStoex.g:5380:1: ( ';' )
-            // InternalStoex.g:5381:2: ';'
+            // InternalStoex.g:5419:1: ( ';' )
+            // InternalStoex.g:5420:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringsampleAccess().getSemicolonKeyword_2()); 
             }
@@ -17800,14 +17956,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__3"
-    // InternalStoex.g:5390:1: rule__Stringsample__Group__3 : rule__Stringsample__Group__3__Impl rule__Stringsample__Group__4 ;
+    // InternalStoex.g:5429:1: rule__Stringsample__Group__3 : rule__Stringsample__Group__3__Impl rule__Stringsample__Group__4 ;
     public final void rule__Stringsample__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5394:1: ( rule__Stringsample__Group__3__Impl rule__Stringsample__Group__4 )
-            // InternalStoex.g:5395:2: rule__Stringsample__Group__3__Impl rule__Stringsample__Group__4
+            // InternalStoex.g:5433:1: ( rule__Stringsample__Group__3__Impl rule__Stringsample__Group__4 )
+            // InternalStoex.g:5434:2: rule__Stringsample__Group__3__Impl rule__Stringsample__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__Stringsample__Group__3__Impl();
@@ -17838,23 +17994,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__3__Impl"
-    // InternalStoex.g:5402:1: rule__Stringsample__Group__3__Impl : ( ( rule__Stringsample__ProbabilityAssignment_3 ) ) ;
+    // InternalStoex.g:5441:1: rule__Stringsample__Group__3__Impl : ( ( rule__Stringsample__ProbabilityAssignment_3 ) ) ;
     public final void rule__Stringsample__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5406:1: ( ( ( rule__Stringsample__ProbabilityAssignment_3 ) ) )
-            // InternalStoex.g:5407:1: ( ( rule__Stringsample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5445:1: ( ( ( rule__Stringsample__ProbabilityAssignment_3 ) ) )
+            // InternalStoex.g:5446:1: ( ( rule__Stringsample__ProbabilityAssignment_3 ) )
             {
-            // InternalStoex.g:5407:1: ( ( rule__Stringsample__ProbabilityAssignment_3 ) )
-            // InternalStoex.g:5408:2: ( rule__Stringsample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5446:1: ( ( rule__Stringsample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5447:2: ( rule__Stringsample__ProbabilityAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getProbabilityAssignment_3()); 
             }
-            // InternalStoex.g:5409:2: ( rule__Stringsample__ProbabilityAssignment_3 )
-            // InternalStoex.g:5409:3: rule__Stringsample__ProbabilityAssignment_3
+            // InternalStoex.g:5448:2: ( rule__Stringsample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5448:3: rule__Stringsample__ProbabilityAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Stringsample__ProbabilityAssignment_3();
@@ -17889,14 +18045,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__4"
-    // InternalStoex.g:5417:1: rule__Stringsample__Group__4 : rule__Stringsample__Group__4__Impl ;
+    // InternalStoex.g:5456:1: rule__Stringsample__Group__4 : rule__Stringsample__Group__4__Impl ;
     public final void rule__Stringsample__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5421:1: ( rule__Stringsample__Group__4__Impl )
-            // InternalStoex.g:5422:2: rule__Stringsample__Group__4__Impl
+            // InternalStoex.g:5460:1: ( rule__Stringsample__Group__4__Impl )
+            // InternalStoex.g:5461:2: rule__Stringsample__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Stringsample__Group__4__Impl();
@@ -17922,22 +18078,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__Group__4__Impl"
-    // InternalStoex.g:5428:1: rule__Stringsample__Group__4__Impl : ( ')' ) ;
+    // InternalStoex.g:5467:1: rule__Stringsample__Group__4__Impl : ( ')' ) ;
     public final void rule__Stringsample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5432:1: ( ( ')' ) )
-            // InternalStoex.g:5433:1: ( ')' )
+            // InternalStoex.g:5471:1: ( ( ')' ) )
+            // InternalStoex.g:5472:1: ( ')' )
             {
-            // InternalStoex.g:5433:1: ( ')' )
-            // InternalStoex.g:5434:2: ')'
+            // InternalStoex.g:5472:1: ( ')' )
+            // InternalStoex.g:5473:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringsampleAccess().getRightParenthesisKeyword_4()); 
             }
@@ -17963,14 +18119,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__0"
-    // InternalStoex.g:5444:1: rule__Boolsample__Group__0 : rule__Boolsample__Group__0__Impl rule__Boolsample__Group__1 ;
+    // InternalStoex.g:5483:1: rule__Boolsample__Group__0 : rule__Boolsample__Group__0__Impl rule__Boolsample__Group__1 ;
     public final void rule__Boolsample__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5448:1: ( rule__Boolsample__Group__0__Impl rule__Boolsample__Group__1 )
-            // InternalStoex.g:5449:2: rule__Boolsample__Group__0__Impl rule__Boolsample__Group__1
+            // InternalStoex.g:5487:1: ( rule__Boolsample__Group__0__Impl rule__Boolsample__Group__1 )
+            // InternalStoex.g:5488:2: rule__Boolsample__Group__0__Impl rule__Boolsample__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_38);
             rule__Boolsample__Group__0__Impl();
@@ -18001,22 +18157,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__0__Impl"
-    // InternalStoex.g:5456:1: rule__Boolsample__Group__0__Impl : ( '(' ) ;
+    // InternalStoex.g:5495:1: rule__Boolsample__Group__0__Impl : ( '(' ) ;
     public final void rule__Boolsample__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5460:1: ( ( '(' ) )
-            // InternalStoex.g:5461:1: ( '(' )
+            // InternalStoex.g:5499:1: ( ( '(' ) )
+            // InternalStoex.g:5500:1: ( '(' )
             {
-            // InternalStoex.g:5461:1: ( '(' )
-            // InternalStoex.g:5462:2: '('
+            // InternalStoex.g:5500:1: ( '(' )
+            // InternalStoex.g:5501:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoolsampleAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -18042,14 +18198,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__1"
-    // InternalStoex.g:5471:1: rule__Boolsample__Group__1 : rule__Boolsample__Group__1__Impl rule__Boolsample__Group__2 ;
+    // InternalStoex.g:5510:1: rule__Boolsample__Group__1 : rule__Boolsample__Group__1__Impl rule__Boolsample__Group__2 ;
     public final void rule__Boolsample__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5475:1: ( rule__Boolsample__Group__1__Impl rule__Boolsample__Group__2 )
-            // InternalStoex.g:5476:2: rule__Boolsample__Group__1__Impl rule__Boolsample__Group__2
+            // InternalStoex.g:5514:1: ( rule__Boolsample__Group__1__Impl rule__Boolsample__Group__2 )
+            // InternalStoex.g:5515:2: rule__Boolsample__Group__1__Impl rule__Boolsample__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__Boolsample__Group__1__Impl();
@@ -18080,23 +18236,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__1__Impl"
-    // InternalStoex.g:5483:1: rule__Boolsample__Group__1__Impl : ( ( rule__Boolsample__ValueAssignment_1 ) ) ;
+    // InternalStoex.g:5522:1: rule__Boolsample__Group__1__Impl : ( ( rule__Boolsample__ValueAssignment_1 ) ) ;
     public final void rule__Boolsample__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5487:1: ( ( ( rule__Boolsample__ValueAssignment_1 ) ) )
-            // InternalStoex.g:5488:1: ( ( rule__Boolsample__ValueAssignment_1 ) )
+            // InternalStoex.g:5526:1: ( ( ( rule__Boolsample__ValueAssignment_1 ) ) )
+            // InternalStoex.g:5527:1: ( ( rule__Boolsample__ValueAssignment_1 ) )
             {
-            // InternalStoex.g:5488:1: ( ( rule__Boolsample__ValueAssignment_1 ) )
-            // InternalStoex.g:5489:2: ( rule__Boolsample__ValueAssignment_1 )
+            // InternalStoex.g:5527:1: ( ( rule__Boolsample__ValueAssignment_1 ) )
+            // InternalStoex.g:5528:2: ( rule__Boolsample__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getValueAssignment_1()); 
             }
-            // InternalStoex.g:5490:2: ( rule__Boolsample__ValueAssignment_1 )
-            // InternalStoex.g:5490:3: rule__Boolsample__ValueAssignment_1
+            // InternalStoex.g:5529:2: ( rule__Boolsample__ValueAssignment_1 )
+            // InternalStoex.g:5529:3: rule__Boolsample__ValueAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Boolsample__ValueAssignment_1();
@@ -18131,14 +18287,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__2"
-    // InternalStoex.g:5498:1: rule__Boolsample__Group__2 : rule__Boolsample__Group__2__Impl rule__Boolsample__Group__3 ;
+    // InternalStoex.g:5537:1: rule__Boolsample__Group__2 : rule__Boolsample__Group__2__Impl rule__Boolsample__Group__3 ;
     public final void rule__Boolsample__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5502:1: ( rule__Boolsample__Group__2__Impl rule__Boolsample__Group__3 )
-            // InternalStoex.g:5503:2: rule__Boolsample__Group__2__Impl rule__Boolsample__Group__3
+            // InternalStoex.g:5541:1: ( rule__Boolsample__Group__2__Impl rule__Boolsample__Group__3 )
+            // InternalStoex.g:5542:2: rule__Boolsample__Group__2__Impl rule__Boolsample__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__Boolsample__Group__2__Impl();
@@ -18169,22 +18325,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__2__Impl"
-    // InternalStoex.g:5510:1: rule__Boolsample__Group__2__Impl : ( ';' ) ;
+    // InternalStoex.g:5549:1: rule__Boolsample__Group__2__Impl : ( ';' ) ;
     public final void rule__Boolsample__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5514:1: ( ( ';' ) )
-            // InternalStoex.g:5515:1: ( ';' )
+            // InternalStoex.g:5553:1: ( ( ';' ) )
+            // InternalStoex.g:5554:1: ( ';' )
             {
-            // InternalStoex.g:5515:1: ( ';' )
-            // InternalStoex.g:5516:2: ';'
+            // InternalStoex.g:5554:1: ( ';' )
+            // InternalStoex.g:5555:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getSemicolonKeyword_2()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoolsampleAccess().getSemicolonKeyword_2()); 
             }
@@ -18210,14 +18366,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__3"
-    // InternalStoex.g:5525:1: rule__Boolsample__Group__3 : rule__Boolsample__Group__3__Impl rule__Boolsample__Group__4 ;
+    // InternalStoex.g:5564:1: rule__Boolsample__Group__3 : rule__Boolsample__Group__3__Impl rule__Boolsample__Group__4 ;
     public final void rule__Boolsample__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5529:1: ( rule__Boolsample__Group__3__Impl rule__Boolsample__Group__4 )
-            // InternalStoex.g:5530:2: rule__Boolsample__Group__3__Impl rule__Boolsample__Group__4
+            // InternalStoex.g:5568:1: ( rule__Boolsample__Group__3__Impl rule__Boolsample__Group__4 )
+            // InternalStoex.g:5569:2: rule__Boolsample__Group__3__Impl rule__Boolsample__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__Boolsample__Group__3__Impl();
@@ -18248,23 +18404,23 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__3__Impl"
-    // InternalStoex.g:5537:1: rule__Boolsample__Group__3__Impl : ( ( rule__Boolsample__ProbabilityAssignment_3 ) ) ;
+    // InternalStoex.g:5576:1: rule__Boolsample__Group__3__Impl : ( ( rule__Boolsample__ProbabilityAssignment_3 ) ) ;
     public final void rule__Boolsample__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5541:1: ( ( ( rule__Boolsample__ProbabilityAssignment_3 ) ) )
-            // InternalStoex.g:5542:1: ( ( rule__Boolsample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5580:1: ( ( ( rule__Boolsample__ProbabilityAssignment_3 ) ) )
+            // InternalStoex.g:5581:1: ( ( rule__Boolsample__ProbabilityAssignment_3 ) )
             {
-            // InternalStoex.g:5542:1: ( ( rule__Boolsample__ProbabilityAssignment_3 ) )
-            // InternalStoex.g:5543:2: ( rule__Boolsample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5581:1: ( ( rule__Boolsample__ProbabilityAssignment_3 ) )
+            // InternalStoex.g:5582:2: ( rule__Boolsample__ProbabilityAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getProbabilityAssignment_3()); 
             }
-            // InternalStoex.g:5544:2: ( rule__Boolsample__ProbabilityAssignment_3 )
-            // InternalStoex.g:5544:3: rule__Boolsample__ProbabilityAssignment_3
+            // InternalStoex.g:5583:2: ( rule__Boolsample__ProbabilityAssignment_3 )
+            // InternalStoex.g:5583:3: rule__Boolsample__ProbabilityAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Boolsample__ProbabilityAssignment_3();
@@ -18299,14 +18455,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__4"
-    // InternalStoex.g:5552:1: rule__Boolsample__Group__4 : rule__Boolsample__Group__4__Impl ;
+    // InternalStoex.g:5591:1: rule__Boolsample__Group__4 : rule__Boolsample__Group__4__Impl ;
     public final void rule__Boolsample__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5556:1: ( rule__Boolsample__Group__4__Impl )
-            // InternalStoex.g:5557:2: rule__Boolsample__Group__4__Impl
+            // InternalStoex.g:5595:1: ( rule__Boolsample__Group__4__Impl )
+            // InternalStoex.g:5596:2: rule__Boolsample__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Boolsample__Group__4__Impl();
@@ -18332,22 +18488,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__Group__4__Impl"
-    // InternalStoex.g:5563:1: rule__Boolsample__Group__4__Impl : ( ')' ) ;
+    // InternalStoex.g:5602:1: rule__Boolsample__Group__4__Impl : ( ')' ) ;
     public final void rule__Boolsample__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5567:1: ( ( ')' ) )
-            // InternalStoex.g:5568:1: ( ')' )
+            // InternalStoex.g:5606:1: ( ( ')' ) )
+            // InternalStoex.g:5607:1: ( ')' )
             {
-            // InternalStoex.g:5568:1: ( ')' )
-            // InternalStoex.g:5569:2: ')'
+            // InternalStoex.g:5607:1: ( ')' )
+            // InternalStoex.g:5608:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoolsampleAccess().getRightParenthesisKeyword_4()); 
             }
@@ -18373,14 +18529,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_NUMBER__Group__0"
-    // InternalStoex.g:5579:1: rule__SIGNED_NUMBER__Group__0 : rule__SIGNED_NUMBER__Group__0__Impl rule__SIGNED_NUMBER__Group__1 ;
+    // InternalStoex.g:5618:1: rule__SIGNED_NUMBER__Group__0 : rule__SIGNED_NUMBER__Group__0__Impl rule__SIGNED_NUMBER__Group__1 ;
     public final void rule__SIGNED_NUMBER__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5583:1: ( rule__SIGNED_NUMBER__Group__0__Impl rule__SIGNED_NUMBER__Group__1 )
-            // InternalStoex.g:5584:2: rule__SIGNED_NUMBER__Group__0__Impl rule__SIGNED_NUMBER__Group__1
+            // InternalStoex.g:5622:1: ( rule__SIGNED_NUMBER__Group__0__Impl rule__SIGNED_NUMBER__Group__1 )
+            // InternalStoex.g:5623:2: rule__SIGNED_NUMBER__Group__0__Impl rule__SIGNED_NUMBER__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_36);
             rule__SIGNED_NUMBER__Group__0__Impl();
@@ -18411,33 +18567,33 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_NUMBER__Group__0__Impl"
-    // InternalStoex.g:5591:1: rule__SIGNED_NUMBER__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalStoex.g:5630:1: rule__SIGNED_NUMBER__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__SIGNED_NUMBER__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5595:1: ( ( ( '-' )? ) )
-            // InternalStoex.g:5596:1: ( ( '-' )? )
+            // InternalStoex.g:5634:1: ( ( ( '-' )? ) )
+            // InternalStoex.g:5635:1: ( ( '-' )? )
             {
-            // InternalStoex.g:5596:1: ( ( '-' )? )
-            // InternalStoex.g:5597:2: ( '-' )?
+            // InternalStoex.g:5635:1: ( ( '-' )? )
+            // InternalStoex.g:5636:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSIGNED_NUMBERAccess().getHyphenMinusKeyword_0()); 
             }
-            // InternalStoex.g:5598:2: ( '-' )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // InternalStoex.g:5637:2: ( '-' )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA39_0==24) ) {
-                alt39=1;
+            if ( (LA40_0==29) ) {
+                alt40=1;
             }
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // InternalStoex.g:5598:3: '-'
+                    // InternalStoex.g:5637:3: '-'
                     {
-                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -18469,14 +18625,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_NUMBER__Group__1"
-    // InternalStoex.g:5606:1: rule__SIGNED_NUMBER__Group__1 : rule__SIGNED_NUMBER__Group__1__Impl ;
+    // InternalStoex.g:5645:1: rule__SIGNED_NUMBER__Group__1 : rule__SIGNED_NUMBER__Group__1__Impl ;
     public final void rule__SIGNED_NUMBER__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5610:1: ( rule__SIGNED_NUMBER__Group__1__Impl )
-            // InternalStoex.g:5611:2: rule__SIGNED_NUMBER__Group__1__Impl
+            // InternalStoex.g:5649:1: ( rule__SIGNED_NUMBER__Group__1__Impl )
+            // InternalStoex.g:5650:2: rule__SIGNED_NUMBER__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__SIGNED_NUMBER__Group__1__Impl();
@@ -18502,17 +18658,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_NUMBER__Group__1__Impl"
-    // InternalStoex.g:5617:1: rule__SIGNED_NUMBER__Group__1__Impl : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:5656:1: rule__SIGNED_NUMBER__Group__1__Impl : ( RULE_DOUBLE ) ;
     public final void rule__SIGNED_NUMBER__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5621:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:5622:1: ( RULE_DOUBLE )
+            // InternalStoex.g:5660:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:5661:1: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:5622:1: ( RULE_DOUBLE )
-            // InternalStoex.g:5623:2: RULE_DOUBLE
+            // InternalStoex.g:5661:1: ( RULE_DOUBLE )
+            // InternalStoex.g:5662:2: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSIGNED_NUMBERAccess().getDOUBLETerminalRuleCall_1()); 
@@ -18543,14 +18699,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_INT__Group__0"
-    // InternalStoex.g:5633:1: rule__SIGNED_INT__Group__0 : rule__SIGNED_INT__Group__0__Impl rule__SIGNED_INT__Group__1 ;
+    // InternalStoex.g:5672:1: rule__SIGNED_INT__Group__0 : rule__SIGNED_INT__Group__0__Impl rule__SIGNED_INT__Group__1 ;
     public final void rule__SIGNED_INT__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5637:1: ( rule__SIGNED_INT__Group__0__Impl rule__SIGNED_INT__Group__1 )
-            // InternalStoex.g:5638:2: rule__SIGNED_INT__Group__0__Impl rule__SIGNED_INT__Group__1
+            // InternalStoex.g:5676:1: ( rule__SIGNED_INT__Group__0__Impl rule__SIGNED_INT__Group__1 )
+            // InternalStoex.g:5677:2: rule__SIGNED_INT__Group__0__Impl rule__SIGNED_INT__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__SIGNED_INT__Group__0__Impl();
@@ -18581,33 +18737,33 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_INT__Group__0__Impl"
-    // InternalStoex.g:5645:1: rule__SIGNED_INT__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalStoex.g:5684:1: rule__SIGNED_INT__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__SIGNED_INT__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5649:1: ( ( ( '-' )? ) )
-            // InternalStoex.g:5650:1: ( ( '-' )? )
+            // InternalStoex.g:5688:1: ( ( ( '-' )? ) )
+            // InternalStoex.g:5689:1: ( ( '-' )? )
             {
-            // InternalStoex.g:5650:1: ( ( '-' )? )
-            // InternalStoex.g:5651:2: ( '-' )?
+            // InternalStoex.g:5689:1: ( ( '-' )? )
+            // InternalStoex.g:5690:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSIGNED_INTAccess().getHyphenMinusKeyword_0()); 
             }
-            // InternalStoex.g:5652:2: ( '-' )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalStoex.g:5691:2: ( '-' )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA40_0==24) ) {
-                alt40=1;
+            if ( (LA41_0==29) ) {
+                alt41=1;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // InternalStoex.g:5652:3: '-'
+                    // InternalStoex.g:5691:3: '-'
                     {
-                    match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -18639,14 +18795,14 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_INT__Group__1"
-    // InternalStoex.g:5660:1: rule__SIGNED_INT__Group__1 : rule__SIGNED_INT__Group__1__Impl ;
+    // InternalStoex.g:5699:1: rule__SIGNED_INT__Group__1 : rule__SIGNED_INT__Group__1__Impl ;
     public final void rule__SIGNED_INT__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5664:1: ( rule__SIGNED_INT__Group__1__Impl )
-            // InternalStoex.g:5665:2: rule__SIGNED_INT__Group__1__Impl
+            // InternalStoex.g:5703:1: ( rule__SIGNED_INT__Group__1__Impl )
+            // InternalStoex.g:5704:2: rule__SIGNED_INT__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__SIGNED_INT__Group__1__Impl();
@@ -18672,17 +18828,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SIGNED_INT__Group__1__Impl"
-    // InternalStoex.g:5671:1: rule__SIGNED_INT__Group__1__Impl : ( RULE_DECINT ) ;
+    // InternalStoex.g:5710:1: rule__SIGNED_INT__Group__1__Impl : ( RULE_DECINT ) ;
     public final void rule__SIGNED_INT__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5675:1: ( ( RULE_DECINT ) )
-            // InternalStoex.g:5676:1: ( RULE_DECINT )
+            // InternalStoex.g:5714:1: ( ( RULE_DECINT ) )
+            // InternalStoex.g:5715:1: ( RULE_DECINT )
             {
-            // InternalStoex.g:5676:1: ( RULE_DECINT )
-            // InternalStoex.g:5677:2: RULE_DECINT
+            // InternalStoex.g:5715:1: ( RULE_DECINT )
+            // InternalStoex.g:5716:2: RULE_DECINT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSIGNED_INTAccess().getDECINTTerminalRuleCall_1()); 
@@ -18713,17 +18869,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__IfExpressionAssignment_1_2"
-    // InternalStoex.g:5687:1: rule__IfelseExpr__IfExpressionAssignment_1_2 : ( ruleboolAndExpr ) ;
+    // InternalStoex.g:5726:1: rule__IfelseExpr__IfExpressionAssignment_1_2 : ( ruleboolAndExpr ) ;
     public final void rule__IfelseExpr__IfExpressionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5691:1: ( ( ruleboolAndExpr ) )
-            // InternalStoex.g:5692:2: ( ruleboolAndExpr )
+            // InternalStoex.g:5730:1: ( ( ruleboolAndExpr ) )
+            // InternalStoex.g:5731:2: ( ruleboolAndExpr )
             {
-            // InternalStoex.g:5692:2: ( ruleboolAndExpr )
-            // InternalStoex.g:5693:3: ruleboolAndExpr
+            // InternalStoex.g:5731:2: ( ruleboolAndExpr )
+            // InternalStoex.g:5732:3: ruleboolAndExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getIfExpressionBoolAndExprParserRuleCall_1_2_0()); 
@@ -18758,17 +18914,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfelseExpr__ElseExpressionAssignment_1_4"
-    // InternalStoex.g:5702:1: rule__IfelseExpr__ElseExpressionAssignment_1_4 : ( ruleboolAndExpr ) ;
+    // InternalStoex.g:5741:1: rule__IfelseExpr__ElseExpressionAssignment_1_4 : ( ruleboolAndExpr ) ;
     public final void rule__IfelseExpr__ElseExpressionAssignment_1_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5706:1: ( ( ruleboolAndExpr ) )
-            // InternalStoex.g:5707:2: ( ruleboolAndExpr )
+            // InternalStoex.g:5745:1: ( ( ruleboolAndExpr ) )
+            // InternalStoex.g:5746:2: ( ruleboolAndExpr )
             {
-            // InternalStoex.g:5707:2: ( ruleboolAndExpr )
-            // InternalStoex.g:5708:3: ruleboolAndExpr
+            // InternalStoex.g:5746:2: ( ruleboolAndExpr )
+            // InternalStoex.g:5747:3: ruleboolAndExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfelseExprAccess().getElseExpressionBoolAndExprParserRuleCall_1_4_0()); 
@@ -18803,17 +18959,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__OperationAssignment_1_1"
-    // InternalStoex.g:5717:1: rule__BoolAndExpr__OperationAssignment_1_1 : ( ruleandoperation ) ;
+    // InternalStoex.g:5756:1: rule__BoolAndExpr__OperationAssignment_1_1 : ( ruleandoperation ) ;
     public final void rule__BoolAndExpr__OperationAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5721:1: ( ( ruleandoperation ) )
-            // InternalStoex.g:5722:2: ( ruleandoperation )
+            // InternalStoex.g:5760:1: ( ( ruleandoperation ) )
+            // InternalStoex.g:5761:2: ( ruleandoperation )
             {
-            // InternalStoex.g:5722:2: ( ruleandoperation )
-            // InternalStoex.g:5723:3: ruleandoperation
+            // InternalStoex.g:5761:2: ( ruleandoperation )
+            // InternalStoex.g:5762:3: ruleandoperation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getOperationAndoperationEnumRuleCall_1_1_0()); 
@@ -18848,17 +19004,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolAndExpr__RightAssignment_1_2"
-    // InternalStoex.g:5732:1: rule__BoolAndExpr__RightAssignment_1_2 : ( ruleboolOrExpr ) ;
+    // InternalStoex.g:5771:1: rule__BoolAndExpr__RightAssignment_1_2 : ( ruleboolOrExpr ) ;
     public final void rule__BoolAndExpr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5736:1: ( ( ruleboolOrExpr ) )
-            // InternalStoex.g:5737:2: ( ruleboolOrExpr )
+            // InternalStoex.g:5775:1: ( ( ruleboolOrExpr ) )
+            // InternalStoex.g:5776:2: ( ruleboolOrExpr )
             {
-            // InternalStoex.g:5737:2: ( ruleboolOrExpr )
-            // InternalStoex.g:5738:3: ruleboolOrExpr
+            // InternalStoex.g:5776:2: ( ruleboolOrExpr )
+            // InternalStoex.g:5777:3: ruleboolOrExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAndExprAccess().getRightBoolOrExprParserRuleCall_1_2_0()); 
@@ -18893,17 +19049,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__OperationAssignment_1_1"
-    // InternalStoex.g:5747:1: rule__BoolOrExpr__OperationAssignment_1_1 : ( ruleoroperations ) ;
+    // InternalStoex.g:5786:1: rule__BoolOrExpr__OperationAssignment_1_1 : ( ruleoroperations ) ;
     public final void rule__BoolOrExpr__OperationAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5751:1: ( ( ruleoroperations ) )
-            // InternalStoex.g:5752:2: ( ruleoroperations )
+            // InternalStoex.g:5790:1: ( ( ruleoroperations ) )
+            // InternalStoex.g:5791:2: ( ruleoroperations )
             {
-            // InternalStoex.g:5752:2: ( ruleoroperations )
-            // InternalStoex.g:5753:3: ruleoroperations
+            // InternalStoex.g:5791:2: ( ruleoroperations )
+            // InternalStoex.g:5792:3: ruleoroperations
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getOperationOroperationsEnumRuleCall_1_1_0()); 
@@ -18938,17 +19094,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolOrExpr__RightAssignment_1_2"
-    // InternalStoex.g:5762:1: rule__BoolOrExpr__RightAssignment_1_2 : ( rulecompareExpr ) ;
+    // InternalStoex.g:5801:1: rule__BoolOrExpr__RightAssignment_1_2 : ( rulecompareExpr ) ;
     public final void rule__BoolOrExpr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5766:1: ( ( rulecompareExpr ) )
-            // InternalStoex.g:5767:2: ( rulecompareExpr )
+            // InternalStoex.g:5805:1: ( ( rulecompareExpr ) )
+            // InternalStoex.g:5806:2: ( rulecompareExpr )
             {
-            // InternalStoex.g:5767:2: ( rulecompareExpr )
-            // InternalStoex.g:5768:3: rulecompareExpr
+            // InternalStoex.g:5806:2: ( rulecompareExpr )
+            // InternalStoex.g:5807:3: rulecompareExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolOrExprAccess().getRightCompareExprParserRuleCall_1_2_0()); 
@@ -18983,17 +19139,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__OperationAssignment_1_1"
-    // InternalStoex.g:5777:1: rule__CompareExpr__OperationAssignment_1_1 : ( ruleCompareOperations ) ;
+    // InternalStoex.g:5816:1: rule__CompareExpr__OperationAssignment_1_1 : ( ruleCompareOperations ) ;
     public final void rule__CompareExpr__OperationAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5781:1: ( ( ruleCompareOperations ) )
-            // InternalStoex.g:5782:2: ( ruleCompareOperations )
+            // InternalStoex.g:5820:1: ( ( ruleCompareOperations ) )
+            // InternalStoex.g:5821:2: ( ruleCompareOperations )
             {
-            // InternalStoex.g:5782:2: ( ruleCompareOperations )
-            // InternalStoex.g:5783:3: ruleCompareOperations
+            // InternalStoex.g:5821:2: ( ruleCompareOperations )
+            // InternalStoex.g:5822:3: ruleCompareOperations
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getOperationCompareOperationsEnumRuleCall_1_1_0()); 
@@ -19028,17 +19184,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpr__RightAssignment_1_2"
-    // InternalStoex.g:5792:1: rule__CompareExpr__RightAssignment_1_2 : ( rulesumExpr ) ;
+    // InternalStoex.g:5831:1: rule__CompareExpr__RightAssignment_1_2 : ( rulesumExpr ) ;
     public final void rule__CompareExpr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5796:1: ( ( rulesumExpr ) )
-            // InternalStoex.g:5797:2: ( rulesumExpr )
+            // InternalStoex.g:5835:1: ( ( rulesumExpr ) )
+            // InternalStoex.g:5836:2: ( rulesumExpr )
             {
-            // InternalStoex.g:5797:2: ( rulesumExpr )
-            // InternalStoex.g:5798:3: rulesumExpr
+            // InternalStoex.g:5836:2: ( rulesumExpr )
+            // InternalStoex.g:5837:3: rulesumExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExprAccess().getRightSumExprParserRuleCall_1_2_0()); 
@@ -19073,17 +19229,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__OperationAssignment_1_1"
-    // InternalStoex.g:5807:1: rule__SumExpr__OperationAssignment_1_1 : ( ruleTermOperations ) ;
+    // InternalStoex.g:5846:1: rule__SumExpr__OperationAssignment_1_1 : ( ruleTermOperations ) ;
     public final void rule__SumExpr__OperationAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5811:1: ( ( ruleTermOperations ) )
-            // InternalStoex.g:5812:2: ( ruleTermOperations )
+            // InternalStoex.g:5850:1: ( ( ruleTermOperations ) )
+            // InternalStoex.g:5851:2: ( ruleTermOperations )
             {
-            // InternalStoex.g:5812:2: ( ruleTermOperations )
-            // InternalStoex.g:5813:3: ruleTermOperations
+            // InternalStoex.g:5851:2: ( ruleTermOperations )
+            // InternalStoex.g:5852:3: ruleTermOperations
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getOperationTermOperationsEnumRuleCall_1_1_0()); 
@@ -19118,17 +19274,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SumExpr__RightAssignment_1_2"
-    // InternalStoex.g:5822:1: rule__SumExpr__RightAssignment_1_2 : ( ruleprodExpr ) ;
+    // InternalStoex.g:5861:1: rule__SumExpr__RightAssignment_1_2 : ( ruleprodExpr ) ;
     public final void rule__SumExpr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5826:1: ( ( ruleprodExpr ) )
-            // InternalStoex.g:5827:2: ( ruleprodExpr )
+            // InternalStoex.g:5865:1: ( ( ruleprodExpr ) )
+            // InternalStoex.g:5866:2: ( ruleprodExpr )
             {
-            // InternalStoex.g:5827:2: ( ruleprodExpr )
-            // InternalStoex.g:5828:3: ruleprodExpr
+            // InternalStoex.g:5866:2: ( ruleprodExpr )
+            // InternalStoex.g:5867:3: ruleprodExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSumExprAccess().getRightProdExprParserRuleCall_1_2_0()); 
@@ -19163,17 +19319,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__OperationAssignment_1_1"
-    // InternalStoex.g:5837:1: rule__ProdExpr__OperationAssignment_1_1 : ( ruleProductOperations ) ;
+    // InternalStoex.g:5876:1: rule__ProdExpr__OperationAssignment_1_1 : ( ruleProductOperations ) ;
     public final void rule__ProdExpr__OperationAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5841:1: ( ( ruleProductOperations ) )
-            // InternalStoex.g:5842:2: ( ruleProductOperations )
+            // InternalStoex.g:5880:1: ( ( ruleProductOperations ) )
+            // InternalStoex.g:5881:2: ( ruleProductOperations )
             {
-            // InternalStoex.g:5842:2: ( ruleProductOperations )
-            // InternalStoex.g:5843:3: ruleProductOperations
+            // InternalStoex.g:5881:2: ( ruleProductOperations )
+            // InternalStoex.g:5882:3: ruleProductOperations
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getOperationProductOperationsEnumRuleCall_1_1_0()); 
@@ -19208,17 +19364,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProdExpr__RightAssignment_1_2"
-    // InternalStoex.g:5852:1: rule__ProdExpr__RightAssignment_1_2 : ( rulepowExpr ) ;
+    // InternalStoex.g:5891:1: rule__ProdExpr__RightAssignment_1_2 : ( rulepowExpr ) ;
     public final void rule__ProdExpr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5856:1: ( ( rulepowExpr ) )
-            // InternalStoex.g:5857:2: ( rulepowExpr )
+            // InternalStoex.g:5895:1: ( ( rulepowExpr ) )
+            // InternalStoex.g:5896:2: ( rulepowExpr )
             {
-            // InternalStoex.g:5857:2: ( rulepowExpr )
-            // InternalStoex.g:5858:3: rulepowExpr
+            // InternalStoex.g:5896:2: ( rulepowExpr )
+            // InternalStoex.g:5897:3: rulepowExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProdExprAccess().getRightPowExprParserRuleCall_1_2_0()); 
@@ -19253,17 +19409,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PowExpr__ExponentAssignment_1_2"
-    // InternalStoex.g:5867:1: rule__PowExpr__ExponentAssignment_1_2 : ( ruleunaryExpr ) ;
+    // InternalStoex.g:5906:1: rule__PowExpr__ExponentAssignment_1_2 : ( ruleunaryExpr ) ;
     public final void rule__PowExpr__ExponentAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5871:1: ( ( ruleunaryExpr ) )
-            // InternalStoex.g:5872:2: ( ruleunaryExpr )
+            // InternalStoex.g:5910:1: ( ( ruleunaryExpr ) )
+            // InternalStoex.g:5911:2: ( ruleunaryExpr )
             {
-            // InternalStoex.g:5872:2: ( ruleunaryExpr )
-            // InternalStoex.g:5873:3: ruleunaryExpr
+            // InternalStoex.g:5911:2: ( ruleunaryExpr )
+            // InternalStoex.g:5912:3: ruleunaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPowExprAccess().getExponentUnaryExprParserRuleCall_1_2_0()); 
@@ -19298,17 +19454,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotExpression__InnerAssignment_1"
-    // InternalStoex.g:5882:1: rule__NotExpression__InnerAssignment_1 : ( ruleunaryExpr ) ;
+    // InternalStoex.g:5921:1: rule__NotExpression__InnerAssignment_1 : ( ruleunaryExpr ) ;
     public final void rule__NotExpression__InnerAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5886:1: ( ( ruleunaryExpr ) )
-            // InternalStoex.g:5887:2: ( ruleunaryExpr )
+            // InternalStoex.g:5925:1: ( ( ruleunaryExpr ) )
+            // InternalStoex.g:5926:2: ( ruleunaryExpr )
             {
-            // InternalStoex.g:5887:2: ( ruleunaryExpr )
-            // InternalStoex.g:5888:3: ruleunaryExpr
+            // InternalStoex.g:5926:2: ( ruleunaryExpr )
+            // InternalStoex.g:5927:3: ruleunaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNotExpressionAccess().getInnerUnaryExprParserRuleCall_1_0()); 
@@ -19343,17 +19499,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NegativeExpression__InnerAssignment_1"
-    // InternalStoex.g:5897:1: rule__NegativeExpression__InnerAssignment_1 : ( ruleunaryExpr ) ;
+    // InternalStoex.g:5936:1: rule__NegativeExpression__InnerAssignment_1 : ( ruleunaryExpr ) ;
     public final void rule__NegativeExpression__InnerAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5901:1: ( ( ruleunaryExpr ) )
-            // InternalStoex.g:5902:2: ( ruleunaryExpr )
+            // InternalStoex.g:5940:1: ( ( ruleunaryExpr ) )
+            // InternalStoex.g:5941:2: ( ruleunaryExpr )
             {
-            // InternalStoex.g:5902:2: ( ruleunaryExpr )
-            // InternalStoex.g:5903:3: ruleunaryExpr
+            // InternalStoex.g:5941:2: ( ruleunaryExpr )
+            // InternalStoex.g:5942:3: ruleunaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegativeExpressionAccess().getInnerUnaryExprParserRuleCall_1_0()); 
@@ -19388,17 +19544,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__ValueAssignment_0"
-    // InternalStoex.g:5912:1: rule__DoubleLiteral__ValueAssignment_0 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:5951:1: rule__DoubleLiteral__ValueAssignment_0 : ( RULE_DOUBLE ) ;
     public final void rule__DoubleLiteral__ValueAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5916:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:5917:2: ( RULE_DOUBLE )
+            // InternalStoex.g:5955:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:5956:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:5917:2: ( RULE_DOUBLE )
-            // InternalStoex.g:5918:3: RULE_DOUBLE
+            // InternalStoex.g:5956:2: ( RULE_DOUBLE )
+            // InternalStoex.g:5957:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getValueDOUBLETerminalRuleCall_0_0()); 
@@ -19429,17 +19585,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DoubleLiteral__UnitAssignment_1_1"
-    // InternalStoex.g:5927:1: rule__DoubleLiteral__UnitAssignment_1_1 : ( ruleUnit ) ;
+    // InternalStoex.g:5966:1: rule__DoubleLiteral__UnitAssignment_1_1 : ( ruleUnit ) ;
     public final void rule__DoubleLiteral__UnitAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5931:1: ( ( ruleUnit ) )
-            // InternalStoex.g:5932:2: ( ruleUnit )
+            // InternalStoex.g:5970:1: ( ( ruleUnit ) )
+            // InternalStoex.g:5971:2: ( ruleUnit )
             {
-            // InternalStoex.g:5932:2: ( ruleUnit )
-            // InternalStoex.g:5933:3: ruleUnit
+            // InternalStoex.g:5971:2: ( ruleUnit )
+            // InternalStoex.g:5972:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleLiteralAccess().getUnitUnitParserRuleCall_1_1_0()); 
@@ -19474,17 +19630,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityFunctionLiteral__Function_ProbabilityFunctionLiteralAssignment"
-    // InternalStoex.g:5942:1: rule__ProbabilityFunctionLiteral__Function_ProbabilityFunctionLiteralAssignment : ( ruledefinition ) ;
+    // InternalStoex.g:5981:1: rule__ProbabilityFunctionLiteral__Function_ProbabilityFunctionLiteralAssignment : ( ruledefinition ) ;
     public final void rule__ProbabilityFunctionLiteral__Function_ProbabilityFunctionLiteralAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5946:1: ( ( ruledefinition ) )
-            // InternalStoex.g:5947:2: ( ruledefinition )
+            // InternalStoex.g:5985:1: ( ( ruledefinition ) )
+            // InternalStoex.g:5986:2: ( ruledefinition )
             {
-            // InternalStoex.g:5947:2: ( ruledefinition )
-            // InternalStoex.g:5948:3: ruledefinition
+            // InternalStoex.g:5986:2: ( ruledefinition )
+            // InternalStoex.g:5987:3: ruledefinition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityFunctionLiteralAccess().getFunction_ProbabilityFunctionLiteralDefinitionParserRuleCall_0()); 
@@ -19519,17 +19675,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Parenthesis__InnerExpressionAssignment_1"
-    // InternalStoex.g:5957:1: rule__Parenthesis__InnerExpressionAssignment_1 : ( ruleifelseExpr ) ;
+    // InternalStoex.g:5996:1: rule__Parenthesis__InnerExpressionAssignment_1 : ( ruleifelseExpr ) ;
     public final void rule__Parenthesis__InnerExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5961:1: ( ( ruleifelseExpr ) )
-            // InternalStoex.g:5962:2: ( ruleifelseExpr )
+            // InternalStoex.g:6000:1: ( ( ruleifelseExpr ) )
+            // InternalStoex.g:6001:2: ( ruleifelseExpr )
             {
-            // InternalStoex.g:5962:2: ( ruleifelseExpr )
-            // InternalStoex.g:5963:3: ruleifelseExpr
+            // InternalStoex.g:6001:2: ( ruleifelseExpr )
+            // InternalStoex.g:6002:3: ruleifelseExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisAccess().getInnerExpressionIfelseExprParserRuleCall_1_0()); 
@@ -19564,17 +19720,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__IdAssignment_0"
-    // InternalStoex.g:5972:1: rule__FunctionLiteral__IdAssignment_0 : ( RULE_ID ) ;
+    // InternalStoex.g:6011:1: rule__FunctionLiteral__IdAssignment_0 : ( RULE_ID ) ;
     public final void rule__FunctionLiteral__IdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5976:1: ( ( RULE_ID ) )
-            // InternalStoex.g:5977:2: ( RULE_ID )
+            // InternalStoex.g:6015:1: ( ( RULE_ID ) )
+            // InternalStoex.g:6016:2: ( RULE_ID )
             {
-            // InternalStoex.g:5977:2: ( RULE_ID )
-            // InternalStoex.g:5978:3: RULE_ID
+            // InternalStoex.g:6016:2: ( RULE_ID )
+            // InternalStoex.g:6017:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getIdIDTerminalRuleCall_0_0()); 
@@ -19605,17 +19761,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0"
-    // InternalStoex.g:5987:1: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 : ( ruleboolAndExpr ) ;
+    // InternalStoex.g:6026:1: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0 : ( ruleboolAndExpr ) ;
     public final void rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:5991:1: ( ( ruleboolAndExpr ) )
-            // InternalStoex.g:5992:2: ( ruleboolAndExpr )
+            // InternalStoex.g:6030:1: ( ( ruleboolAndExpr ) )
+            // InternalStoex.g:6031:2: ( ruleboolAndExpr )
             {
-            // InternalStoex.g:5992:2: ( ruleboolAndExpr )
-            // InternalStoex.g:5993:3: ruleboolAndExpr
+            // InternalStoex.g:6031:2: ( ruleboolAndExpr )
+            // InternalStoex.g:6032:3: ruleboolAndExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getParameters_FunctionLiteralBoolAndExprParserRuleCall_2_0_0()); 
@@ -19650,17 +19806,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1"
-    // InternalStoex.g:6002:1: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 : ( ruleboolAndExpr ) ;
+    // InternalStoex.g:6041:1: rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1 : ( ruleboolAndExpr ) ;
     public final void rule__FunctionLiteral__Parameters_FunctionLiteralAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6006:1: ( ( ruleboolAndExpr ) )
-            // InternalStoex.g:6007:2: ( ruleboolAndExpr )
+            // InternalStoex.g:6045:1: ( ( ruleboolAndExpr ) )
+            // InternalStoex.g:6046:2: ( ruleboolAndExpr )
             {
-            // InternalStoex.g:6007:2: ( ruleboolAndExpr )
-            // InternalStoex.g:6008:3: ruleboolAndExpr
+            // InternalStoex.g:6046:2: ( ruleboolAndExpr )
+            // InternalStoex.g:6047:3: ruleboolAndExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionLiteralAccess().getParameters_FunctionLiteralBoolAndExprParserRuleCall_2_1_1_0()); 
@@ -19695,17 +19851,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Id_VariableAssignment"
-    // InternalStoex.g:6017:1: rule__Variable__Id_VariableAssignment : ( ruleAbstractNamedReference ) ;
+    // InternalStoex.g:6056:1: rule__Variable__Id_VariableAssignment : ( ruleAbstractNamedReference ) ;
     public final void rule__Variable__Id_VariableAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6021:1: ( ( ruleAbstractNamedReference ) )
-            // InternalStoex.g:6022:2: ( ruleAbstractNamedReference )
+            // InternalStoex.g:6060:1: ( ( ruleAbstractNamedReference ) )
+            // InternalStoex.g:6061:2: ( ruleAbstractNamedReference )
             {
-            // InternalStoex.g:6022:2: ( ruleAbstractNamedReference )
-            // InternalStoex.g:6023:3: ruleAbstractNamedReference
+            // InternalStoex.g:6061:2: ( ruleAbstractNamedReference )
+            // InternalStoex.g:6062:3: ruleAbstractNamedReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAccess().getId_VariableAbstractNamedReferenceParserRuleCall_0()); 
@@ -19740,24 +19896,34 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableReference__ReferenceNameAssignment"
-    // InternalStoex.g:6032:1: rule__VariableReference__ReferenceNameAssignment : ( RULE_ID ) ;
+    // InternalStoex.g:6071:1: rule__VariableReference__ReferenceNameAssignment : ( ( rule__VariableReference__ReferenceNameAlternatives_0 ) ) ;
     public final void rule__VariableReference__ReferenceNameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6036:1: ( ( RULE_ID ) )
-            // InternalStoex.g:6037:2: ( RULE_ID )
+            // InternalStoex.g:6075:1: ( ( ( rule__VariableReference__ReferenceNameAlternatives_0 ) ) )
+            // InternalStoex.g:6076:2: ( ( rule__VariableReference__ReferenceNameAlternatives_0 ) )
             {
-            // InternalStoex.g:6037:2: ( RULE_ID )
-            // InternalStoex.g:6038:3: RULE_ID
+            // InternalStoex.g:6076:2: ( ( rule__VariableReference__ReferenceNameAlternatives_0 ) )
+            // InternalStoex.g:6077:3: ( rule__VariableReference__ReferenceNameAlternatives_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVariableReferenceAccess().getReferenceNameIDTerminalRuleCall_0()); 
+               before(grammarAccess.getVariableReferenceAccess().getReferenceNameAlternatives_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalStoex.g:6078:3: ( rule__VariableReference__ReferenceNameAlternatives_0 )
+            // InternalStoex.g:6078:4: rule__VariableReference__ReferenceNameAlternatives_0
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VariableReference__ReferenceNameAlternatives_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVariableReferenceAccess().getReferenceNameIDTerminalRuleCall_0()); 
+               after(grammarAccess.getVariableReferenceAccess().getReferenceNameAlternatives_0()); 
             }
 
             }
@@ -19781,17 +19947,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceReference__ReferenceNameAssignment_0"
-    // InternalStoex.g:6047:1: rule__NamespaceReference__ReferenceNameAssignment_0 : ( RULE_ID ) ;
+    // InternalStoex.g:6086:1: rule__NamespaceReference__ReferenceNameAssignment_0 : ( RULE_ID ) ;
     public final void rule__NamespaceReference__ReferenceNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6051:1: ( ( RULE_ID ) )
-            // InternalStoex.g:6052:2: ( RULE_ID )
+            // InternalStoex.g:6090:1: ( ( RULE_ID ) )
+            // InternalStoex.g:6091:2: ( RULE_ID )
             {
-            // InternalStoex.g:6052:2: ( RULE_ID )
-            // InternalStoex.g:6053:3: RULE_ID
+            // InternalStoex.g:6091:2: ( RULE_ID )
+            // InternalStoex.g:6092:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespaceReferenceAccess().getReferenceNameIDTerminalRuleCall_0_0()); 
@@ -19821,21 +19987,21 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NamespaceReference__ReferenceNameAssignment_0"
 
 
-    // $ANTLR start "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2"
-    // InternalStoex.g:6062:1: rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2 : ( ruleAbstractNamedReference ) ;
-    public final void rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0"
+    // InternalStoex.g:6101:1: rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0 : ( ruleAbstractNamedReference ) ;
+    public final void rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6066:1: ( ( ruleAbstractNamedReference ) )
-            // InternalStoex.g:6067:2: ( ruleAbstractNamedReference )
+            // InternalStoex.g:6105:1: ( ( ruleAbstractNamedReference ) )
+            // InternalStoex.g:6106:2: ( ruleAbstractNamedReference )
             {
-            // InternalStoex.g:6067:2: ( ruleAbstractNamedReference )
-            // InternalStoex.g:6068:3: ruleAbstractNamedReference
+            // InternalStoex.g:6106:2: ( ruleAbstractNamedReference )
+            // InternalStoex.g:6107:3: ruleAbstractNamedReference
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0()); 
+               before(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleAbstractNamedReference();
@@ -19843,7 +20009,7 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0()); 
+               after(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAbstractNamedReferenceParserRuleCall_2_0_0()); 
             }
 
             }
@@ -19863,21 +20029,66 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2"
+    // $ANTLR end "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0"
+
+
+    // $ANTLR start "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1"
+    // InternalStoex.g:6116:1: rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1 : ( ruleVariableReference ) ;
+    public final void rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalStoex.g:6120:1: ( ( ruleVariableReference ) )
+            // InternalStoex.g:6121:2: ( ruleVariableReference )
+            {
+            // InternalStoex.g:6121:2: ( ruleVariableReference )
+            // InternalStoex.g:6122:3: ruleVariableReference
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVariableReference();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceVariableReferenceParserRuleCall_2_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1"
 
 
     // $ANTLR start "rule__BoolLiteral__ValueAssignment"
-    // InternalStoex.g:6077:1: rule__BoolLiteral__ValueAssignment : ( RULE_BOOLEAN_KEYWORDS ) ;
+    // InternalStoex.g:6131:1: rule__BoolLiteral__ValueAssignment : ( RULE_BOOLEAN_KEYWORDS ) ;
     public final void rule__BoolLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6081:1: ( ( RULE_BOOLEAN_KEYWORDS ) )
-            // InternalStoex.g:6082:2: ( RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:6135:1: ( ( RULE_BOOLEAN_KEYWORDS ) )
+            // InternalStoex.g:6136:2: ( RULE_BOOLEAN_KEYWORDS )
             {
-            // InternalStoex.g:6082:2: ( RULE_BOOLEAN_KEYWORDS )
-            // InternalStoex.g:6083:3: RULE_BOOLEAN_KEYWORDS
+            // InternalStoex.g:6136:2: ( RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:6137:3: RULE_BOOLEAN_KEYWORDS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolLiteralAccess().getValueBOOLEAN_KEYWORDSTerminalRuleCall_0()); 
@@ -19908,17 +20119,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StringLiteral__ValueAssignment"
-    // InternalStoex.g:6092:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
+    // InternalStoex.g:6146:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6096:1: ( ( RULE_STRING ) )
-            // InternalStoex.g:6097:2: ( RULE_STRING )
+            // InternalStoex.g:6150:1: ( ( RULE_STRING ) )
+            // InternalStoex.g:6151:2: ( RULE_STRING )
             {
-            // InternalStoex.g:6097:2: ( RULE_STRING )
-            // InternalStoex.g:6098:3: RULE_STRING
+            // InternalStoex.g:6151:2: ( RULE_STRING )
+            // InternalStoex.g:6152:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
@@ -19949,17 +20160,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__ValueAssignment_0"
-    // InternalStoex.g:6107:1: rule__IntLiteral__ValueAssignment_0 : ( RULE_DECINT ) ;
+    // InternalStoex.g:6161:1: rule__IntLiteral__ValueAssignment_0 : ( RULE_DECINT ) ;
     public final void rule__IntLiteral__ValueAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6111:1: ( ( RULE_DECINT ) )
-            // InternalStoex.g:6112:2: ( RULE_DECINT )
+            // InternalStoex.g:6165:1: ( ( RULE_DECINT ) )
+            // InternalStoex.g:6166:2: ( RULE_DECINT )
             {
-            // InternalStoex.g:6112:2: ( RULE_DECINT )
-            // InternalStoex.g:6113:3: RULE_DECINT
+            // InternalStoex.g:6166:2: ( RULE_DECINT )
+            // InternalStoex.g:6167:3: RULE_DECINT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getValueDECINTTerminalRuleCall_0_0()); 
@@ -19990,17 +20201,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntLiteral__UnitAssignment_1_1"
-    // InternalStoex.g:6122:1: rule__IntLiteral__UnitAssignment_1_1 : ( ruleUnit ) ;
+    // InternalStoex.g:6176:1: rule__IntLiteral__UnitAssignment_1_1 : ( ruleUnit ) ;
     public final void rule__IntLiteral__UnitAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6126:1: ( ( ruleUnit ) )
-            // InternalStoex.g:6127:2: ( ruleUnit )
+            // InternalStoex.g:6180:1: ( ( ruleUnit ) )
+            // InternalStoex.g:6181:2: ( ruleUnit )
             {
-            // InternalStoex.g:6127:2: ( ruleUnit )
-            // InternalStoex.g:6128:3: ruleUnit
+            // InternalStoex.g:6181:2: ( ruleUnit )
+            // InternalStoex.g:6182:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntLiteralAccess().getUnitUnitParserRuleCall_1_1_0()); 
@@ -20035,17 +20246,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitDiv__DivisorAssignment_1_2"
-    // InternalStoex.g:6137:1: rule__UnitDiv__DivisorAssignment_1_2 : ( ruleUnit ) ;
+    // InternalStoex.g:6191:1: rule__UnitDiv__DivisorAssignment_1_2 : ( ruleUnit ) ;
     public final void rule__UnitDiv__DivisorAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6141:1: ( ( ruleUnit ) )
-            // InternalStoex.g:6142:2: ( ruleUnit )
+            // InternalStoex.g:6195:1: ( ( ruleUnit ) )
+            // InternalStoex.g:6196:2: ( ruleUnit )
             {
-            // InternalStoex.g:6142:2: ( ruleUnit )
-            // InternalStoex.g:6143:3: ruleUnit
+            // InternalStoex.g:6196:2: ( ruleUnit )
+            // InternalStoex.g:6197:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitDivAccess().getDivisorUnitParserRuleCall_1_2_0()); 
@@ -20080,17 +20291,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitMulti__UnitsAssignment_1_2"
-    // InternalStoex.g:6152:1: rule__UnitMulti__UnitsAssignment_1_2 : ( ruleUnit ) ;
+    // InternalStoex.g:6206:1: rule__UnitMulti__UnitsAssignment_1_2 : ( ruleUnit ) ;
     public final void rule__UnitMulti__UnitsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6156:1: ( ( ruleUnit ) )
-            // InternalStoex.g:6157:2: ( ruleUnit )
+            // InternalStoex.g:6210:1: ( ( ruleUnit ) )
+            // InternalStoex.g:6211:2: ( ruleUnit )
             {
-            // InternalStoex.g:6157:2: ( ruleUnit )
-            // InternalStoex.g:6158:3: ruleUnit
+            // InternalStoex.g:6211:2: ( ruleUnit )
+            // InternalStoex.g:6212:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitMultiAccess().getUnitsUnitParserRuleCall_1_2_0()); 
@@ -20125,17 +20336,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnitPow__ExponentAssignment_1_2"
-    // InternalStoex.g:6167:1: rule__UnitPow__ExponentAssignment_1_2 : ( ruleSIGNED_INT ) ;
+    // InternalStoex.g:6221:1: rule__UnitPow__ExponentAssignment_1_2 : ( ruleSIGNED_INT ) ;
     public final void rule__UnitPow__ExponentAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6171:1: ( ( ruleSIGNED_INT ) )
-            // InternalStoex.g:6172:2: ( ruleSIGNED_INT )
+            // InternalStoex.g:6225:1: ( ( ruleSIGNED_INT ) )
+            // InternalStoex.g:6226:2: ( ruleSIGNED_INT )
             {
-            // InternalStoex.g:6172:2: ( ruleSIGNED_INT )
-            // InternalStoex.g:6173:3: ruleSIGNED_INT
+            // InternalStoex.g:6226:2: ( ruleSIGNED_INT )
+            // InternalStoex.g:6227:3: ruleSIGNED_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnitPowAccess().getExponentSIGNED_INTParserRuleCall_1_2_0()); 
@@ -20170,17 +20381,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BaseUnit__NameAssignment"
-    // InternalStoex.g:6182:1: rule__BaseUnit__NameAssignment : ( ruleUnitNames ) ;
+    // InternalStoex.g:6236:1: rule__BaseUnit__NameAssignment : ( ruleUnitNames ) ;
     public final void rule__BaseUnit__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6186:1: ( ( ruleUnitNames ) )
-            // InternalStoex.g:6187:2: ( ruleUnitNames )
+            // InternalStoex.g:6240:1: ( ( ruleUnitNames ) )
+            // InternalStoex.g:6241:2: ( ruleUnitNames )
             {
-            // InternalStoex.g:6187:2: ( ruleUnitNames )
-            // InternalStoex.g:6188:3: ruleUnitNames
+            // InternalStoex.g:6241:2: ( ruleUnitNames )
+            // InternalStoex.g:6242:3: ruleUnitNames
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBaseUnitAccess().getNameUnitNamesEnumRuleCall_0()); 
@@ -20215,17 +20426,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__SamplesAssignment_2"
-    // InternalStoex.g:6197:1: rule__BoxedPDF__SamplesAssignment_2 : ( rulereal_pdf_sample ) ;
+    // InternalStoex.g:6251:1: rule__BoxedPDF__SamplesAssignment_2 : ( rulereal_pdf_sample ) ;
     public final void rule__BoxedPDF__SamplesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6201:1: ( ( rulereal_pdf_sample ) )
-            // InternalStoex.g:6202:2: ( rulereal_pdf_sample )
+            // InternalStoex.g:6255:1: ( ( rulereal_pdf_sample ) )
+            // InternalStoex.g:6256:2: ( rulereal_pdf_sample )
             {
-            // InternalStoex.g:6202:2: ( rulereal_pdf_sample )
-            // InternalStoex.g:6203:3: rulereal_pdf_sample
+            // InternalStoex.g:6256:2: ( rulereal_pdf_sample )
+            // InternalStoex.g:6257:3: rulereal_pdf_sample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getSamplesReal_pdf_sampleParserRuleCall_2_0()); 
@@ -20260,17 +20471,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoxedPDF__UnitAssignment_4_1"
-    // InternalStoex.g:6212:1: rule__BoxedPDF__UnitAssignment_4_1 : ( ruleUnit ) ;
+    // InternalStoex.g:6266:1: rule__BoxedPDF__UnitAssignment_4_1 : ( ruleUnit ) ;
     public final void rule__BoxedPDF__UnitAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6216:1: ( ( ruleUnit ) )
-            // InternalStoex.g:6217:2: ( ruleUnit )
+            // InternalStoex.g:6270:1: ( ( ruleUnit ) )
+            // InternalStoex.g:6271:2: ( ruleUnit )
             {
-            // InternalStoex.g:6217:2: ( ruleUnit )
-            // InternalStoex.g:6218:3: ruleUnit
+            // InternalStoex.g:6271:2: ( ruleUnit )
+            // InternalStoex.g:6272:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoxedPDFAccess().getUnitUnitParserRuleCall_4_1_0()); 
@@ -20305,17 +20516,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__SamplesAssignment_0_2"
-    // InternalStoex.g:6227:1: rule__ProbabilityMassFunction__SamplesAssignment_0_2 : ( rulenumeric_int_sample ) ;
+    // InternalStoex.g:6281:1: rule__ProbabilityMassFunction__SamplesAssignment_0_2 : ( rulenumeric_int_sample ) ;
     public final void rule__ProbabilityMassFunction__SamplesAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6231:1: ( ( rulenumeric_int_sample ) )
-            // InternalStoex.g:6232:2: ( rulenumeric_int_sample )
+            // InternalStoex.g:6285:1: ( ( rulenumeric_int_sample ) )
+            // InternalStoex.g:6286:2: ( rulenumeric_int_sample )
             {
-            // InternalStoex.g:6232:2: ( rulenumeric_int_sample )
-            // InternalStoex.g:6233:3: rulenumeric_int_sample
+            // InternalStoex.g:6286:2: ( rulenumeric_int_sample )
+            // InternalStoex.g:6287:3: rulenumeric_int_sample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesNumeric_int_sampleParserRuleCall_0_2_0()); 
@@ -20350,17 +20561,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__UnitAssignment_0_4_1"
-    // InternalStoex.g:6242:1: rule__ProbabilityMassFunction__UnitAssignment_0_4_1 : ( ruleUnit ) ;
+    // InternalStoex.g:6296:1: rule__ProbabilityMassFunction__UnitAssignment_0_4_1 : ( ruleUnit ) ;
     public final void rule__ProbabilityMassFunction__UnitAssignment_0_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6246:1: ( ( ruleUnit ) )
-            // InternalStoex.g:6247:2: ( ruleUnit )
+            // InternalStoex.g:6300:1: ( ( ruleUnit ) )
+            // InternalStoex.g:6301:2: ( ruleUnit )
             {
-            // InternalStoex.g:6247:2: ( ruleUnit )
-            // InternalStoex.g:6248:3: ruleUnit
+            // InternalStoex.g:6301:2: ( ruleUnit )
+            // InternalStoex.g:6302:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getUnitUnitParserRuleCall_0_4_1_0()); 
@@ -20395,17 +20606,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__SamplesAssignment_1_2"
-    // InternalStoex.g:6257:1: rule__ProbabilityMassFunction__SamplesAssignment_1_2 : ( rulenumeric_real_sample ) ;
+    // InternalStoex.g:6311:1: rule__ProbabilityMassFunction__SamplesAssignment_1_2 : ( rulenumeric_real_sample ) ;
     public final void rule__ProbabilityMassFunction__SamplesAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6261:1: ( ( rulenumeric_real_sample ) )
-            // InternalStoex.g:6262:2: ( rulenumeric_real_sample )
+            // InternalStoex.g:6315:1: ( ( rulenumeric_real_sample ) )
+            // InternalStoex.g:6316:2: ( rulenumeric_real_sample )
             {
-            // InternalStoex.g:6262:2: ( rulenumeric_real_sample )
-            // InternalStoex.g:6263:3: rulenumeric_real_sample
+            // InternalStoex.g:6316:2: ( rulenumeric_real_sample )
+            // InternalStoex.g:6317:3: rulenumeric_real_sample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesNumeric_real_sampleParserRuleCall_1_2_0()); 
@@ -20440,17 +20651,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__UnitAssignment_1_4_1"
-    // InternalStoex.g:6272:1: rule__ProbabilityMassFunction__UnitAssignment_1_4_1 : ( ruleUnit ) ;
+    // InternalStoex.g:6326:1: rule__ProbabilityMassFunction__UnitAssignment_1_4_1 : ( ruleUnit ) ;
     public final void rule__ProbabilityMassFunction__UnitAssignment_1_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6276:1: ( ( ruleUnit ) )
-            // InternalStoex.g:6277:2: ( ruleUnit )
+            // InternalStoex.g:6330:1: ( ( ruleUnit ) )
+            // InternalStoex.g:6331:2: ( ruleUnit )
             {
-            // InternalStoex.g:6277:2: ( ruleUnit )
-            // InternalStoex.g:6278:3: ruleUnit
+            // InternalStoex.g:6331:2: ( ruleUnit )
+            // InternalStoex.g:6332:3: ruleUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getUnitUnitParserRuleCall_1_4_1_0()); 
@@ -20485,28 +20696,28 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1"
-    // InternalStoex.g:6287:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 : ( ( 'ordered' ) ) ;
+    // InternalStoex.g:6341:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1 : ( ( 'ordered' ) ) ;
     public final void rule__ProbabilityMassFunction__OrderedDomainAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6291:1: ( ( ( 'ordered' ) ) )
-            // InternalStoex.g:6292:2: ( ( 'ordered' ) )
+            // InternalStoex.g:6345:1: ( ( ( 'ordered' ) ) )
+            // InternalStoex.g:6346:2: ( ( 'ordered' ) )
             {
-            // InternalStoex.g:6292:2: ( ( 'ordered' ) )
-            // InternalStoex.g:6293:3: ( 'ordered' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
-            }
-            // InternalStoex.g:6294:3: ( 'ordered' )
-            // InternalStoex.g:6295:4: 'ordered'
+            // InternalStoex.g:6346:2: ( ( 'ordered' ) )
+            // InternalStoex.g:6347:3: ( 'ordered' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
             }
-            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalStoex.g:6348:3: ( 'ordered' )
+            // InternalStoex.g:6349:4: 'ordered'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
+            }
+            match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_2_1_1_0()); 
             }
@@ -20538,17 +20749,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__SamplesAssignment_2_3"
-    // InternalStoex.g:6306:1: rule__ProbabilityMassFunction__SamplesAssignment_2_3 : ( rulestringsample ) ;
+    // InternalStoex.g:6360:1: rule__ProbabilityMassFunction__SamplesAssignment_2_3 : ( rulestringsample ) ;
     public final void rule__ProbabilityMassFunction__SamplesAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6310:1: ( ( rulestringsample ) )
-            // InternalStoex.g:6311:2: ( rulestringsample )
+            // InternalStoex.g:6364:1: ( ( rulestringsample ) )
+            // InternalStoex.g:6365:2: ( rulestringsample )
             {
-            // InternalStoex.g:6311:2: ( rulestringsample )
-            // InternalStoex.g:6312:3: rulestringsample
+            // InternalStoex.g:6365:2: ( rulestringsample )
+            // InternalStoex.g:6366:3: rulestringsample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesStringsampleParserRuleCall_2_3_0()); 
@@ -20583,28 +20794,28 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1"
-    // InternalStoex.g:6321:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 : ( ( 'ordered' ) ) ;
+    // InternalStoex.g:6375:1: rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1 : ( ( 'ordered' ) ) ;
     public final void rule__ProbabilityMassFunction__OrderedDomainAssignment_3_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6325:1: ( ( ( 'ordered' ) ) )
-            // InternalStoex.g:6326:2: ( ( 'ordered' ) )
+            // InternalStoex.g:6379:1: ( ( ( 'ordered' ) ) )
+            // InternalStoex.g:6380:2: ( ( 'ordered' ) )
             {
-            // InternalStoex.g:6326:2: ( ( 'ordered' ) )
-            // InternalStoex.g:6327:3: ( 'ordered' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
-            }
-            // InternalStoex.g:6328:3: ( 'ordered' )
-            // InternalStoex.g:6329:4: 'ordered'
+            // InternalStoex.g:6380:2: ( ( 'ordered' ) )
+            // InternalStoex.g:6381:3: ( 'ordered' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
             }
-            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalStoex.g:6382:3: ( 'ordered' )
+            // InternalStoex.g:6383:4: 'ordered'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
+            }
+            match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProbabilityMassFunctionAccess().getOrderedDomainOrderedKeyword_3_1_1_0()); 
             }
@@ -20636,17 +20847,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ProbabilityMassFunction__SamplesAssignment_3_3"
-    // InternalStoex.g:6340:1: rule__ProbabilityMassFunction__SamplesAssignment_3_3 : ( ruleboolsample ) ;
+    // InternalStoex.g:6394:1: rule__ProbabilityMassFunction__SamplesAssignment_3_3 : ( ruleboolsample ) ;
     public final void rule__ProbabilityMassFunction__SamplesAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6344:1: ( ( ruleboolsample ) )
-            // InternalStoex.g:6345:2: ( ruleboolsample )
+            // InternalStoex.g:6398:1: ( ( ruleboolsample ) )
+            // InternalStoex.g:6399:2: ( ruleboolsample )
             {
-            // InternalStoex.g:6345:2: ( ruleboolsample )
-            // InternalStoex.g:6346:3: ruleboolsample
+            // InternalStoex.g:6399:2: ( ruleboolsample )
+            // InternalStoex.g:6400:3: ruleboolsample
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProbabilityMassFunctionAccess().getSamplesBoolsampleParserRuleCall_3_3_0()); 
@@ -20681,17 +20892,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__ValueAssignment_1"
-    // InternalStoex.g:6355:1: rule__Numeric_int_sample__ValueAssignment_1 : ( ruleSIGNED_INT ) ;
+    // InternalStoex.g:6409:1: rule__Numeric_int_sample__ValueAssignment_1 : ( ruleSIGNED_INT ) ;
     public final void rule__Numeric_int_sample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6359:1: ( ( ruleSIGNED_INT ) )
-            // InternalStoex.g:6360:2: ( ruleSIGNED_INT )
+            // InternalStoex.g:6413:1: ( ( ruleSIGNED_INT ) )
+            // InternalStoex.g:6414:2: ( ruleSIGNED_INT )
             {
-            // InternalStoex.g:6360:2: ( ruleSIGNED_INT )
-            // InternalStoex.g:6361:3: ruleSIGNED_INT
+            // InternalStoex.g:6414:2: ( ruleSIGNED_INT )
+            // InternalStoex.g:6415:3: ruleSIGNED_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getValueSIGNED_INTParserRuleCall_1_0()); 
@@ -20726,17 +20937,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_int_sample__ProbabilityAssignment_3"
-    // InternalStoex.g:6370:1: rule__Numeric_int_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6424:1: rule__Numeric_int_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Numeric_int_sample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6374:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6375:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6428:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6429:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6375:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6376:3: RULE_DOUBLE
+            // InternalStoex.g:6429:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6430:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_int_sampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20767,17 +20978,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__ValueAssignment_1"
-    // InternalStoex.g:6385:1: rule__Numeric_real_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
+    // InternalStoex.g:6439:1: rule__Numeric_real_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
     public final void rule__Numeric_real_sample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6389:1: ( ( ruleSIGNED_NUMBER ) )
-            // InternalStoex.g:6390:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6443:1: ( ( ruleSIGNED_NUMBER ) )
+            // InternalStoex.g:6444:2: ( ruleSIGNED_NUMBER )
             {
-            // InternalStoex.g:6390:2: ( ruleSIGNED_NUMBER )
-            // InternalStoex.g:6391:3: ruleSIGNED_NUMBER
+            // InternalStoex.g:6444:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6445:3: ruleSIGNED_NUMBER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getValueSIGNED_NUMBERParserRuleCall_1_0()); 
@@ -20812,17 +21023,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numeric_real_sample__ProbabilityAssignment_3"
-    // InternalStoex.g:6400:1: rule__Numeric_real_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6454:1: rule__Numeric_real_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Numeric_real_sample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6404:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6405:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6458:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6459:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6405:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6406:3: RULE_DOUBLE
+            // InternalStoex.g:6459:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6460:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_real_sampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20853,17 +21064,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__ValueAssignment_1"
-    // InternalStoex.g:6415:1: rule__Real_pdf_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
+    // InternalStoex.g:6469:1: rule__Real_pdf_sample__ValueAssignment_1 : ( ruleSIGNED_NUMBER ) ;
     public final void rule__Real_pdf_sample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6419:1: ( ( ruleSIGNED_NUMBER ) )
-            // InternalStoex.g:6420:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6473:1: ( ( ruleSIGNED_NUMBER ) )
+            // InternalStoex.g:6474:2: ( ruleSIGNED_NUMBER )
             {
-            // InternalStoex.g:6420:2: ( ruleSIGNED_NUMBER )
-            // InternalStoex.g:6421:3: ruleSIGNED_NUMBER
+            // InternalStoex.g:6474:2: ( ruleSIGNED_NUMBER )
+            // InternalStoex.g:6475:3: ruleSIGNED_NUMBER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getValueSIGNED_NUMBERParserRuleCall_1_0()); 
@@ -20898,17 +21109,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Real_pdf_sample__ProbabilityAssignment_3"
-    // InternalStoex.g:6430:1: rule__Real_pdf_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6484:1: rule__Real_pdf_sample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Real_pdf_sample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6434:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6435:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6488:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6489:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6435:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6436:3: RULE_DOUBLE
+            // InternalStoex.g:6489:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6490:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReal_pdf_sampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -20939,17 +21150,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__ValueAssignment_1"
-    // InternalStoex.g:6445:1: rule__Stringsample__ValueAssignment_1 : ( RULE_STRING ) ;
+    // InternalStoex.g:6499:1: rule__Stringsample__ValueAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Stringsample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6449:1: ( ( RULE_STRING ) )
-            // InternalStoex.g:6450:2: ( RULE_STRING )
+            // InternalStoex.g:6503:1: ( ( RULE_STRING ) )
+            // InternalStoex.g:6504:2: ( RULE_STRING )
             {
-            // InternalStoex.g:6450:2: ( RULE_STRING )
-            // InternalStoex.g:6451:3: RULE_STRING
+            // InternalStoex.g:6504:2: ( RULE_STRING )
+            // InternalStoex.g:6505:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getValueSTRINGTerminalRuleCall_1_0()); 
@@ -20980,17 +21191,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringsample__ProbabilityAssignment_3"
-    // InternalStoex.g:6460:1: rule__Stringsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6514:1: rule__Stringsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Stringsample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6464:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6465:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6518:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6519:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6465:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6466:3: RULE_DOUBLE
+            // InternalStoex.g:6519:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6520:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringsampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -21021,17 +21232,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__ValueAssignment_1"
-    // InternalStoex.g:6475:1: rule__Boolsample__ValueAssignment_1 : ( RULE_BOOLEAN_KEYWORDS ) ;
+    // InternalStoex.g:6529:1: rule__Boolsample__ValueAssignment_1 : ( RULE_BOOLEAN_KEYWORDS ) ;
     public final void rule__Boolsample__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6479:1: ( ( RULE_BOOLEAN_KEYWORDS ) )
-            // InternalStoex.g:6480:2: ( RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:6533:1: ( ( RULE_BOOLEAN_KEYWORDS ) )
+            // InternalStoex.g:6534:2: ( RULE_BOOLEAN_KEYWORDS )
             {
-            // InternalStoex.g:6480:2: ( RULE_BOOLEAN_KEYWORDS )
-            // InternalStoex.g:6481:3: RULE_BOOLEAN_KEYWORDS
+            // InternalStoex.g:6534:2: ( RULE_BOOLEAN_KEYWORDS )
+            // InternalStoex.g:6535:3: RULE_BOOLEAN_KEYWORDS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getValueBOOLEAN_KEYWORDSTerminalRuleCall_1_0()); 
@@ -21062,17 +21273,17 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Boolsample__ProbabilityAssignment_3"
-    // InternalStoex.g:6490:1: rule__Boolsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalStoex.g:6544:1: rule__Boolsample__ProbabilityAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Boolsample__ProbabilityAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalStoex.g:6494:1: ( ( RULE_DOUBLE ) )
-            // InternalStoex.g:6495:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6548:1: ( ( RULE_DOUBLE ) )
+            // InternalStoex.g:6549:2: ( RULE_DOUBLE )
             {
-            // InternalStoex.g:6495:2: ( RULE_DOUBLE )
-            // InternalStoex.g:6496:3: RULE_DOUBLE
+            // InternalStoex.g:6549:2: ( RULE_DOUBLE )
+            // InternalStoex.g:6550:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolsampleAccess().getProbabilityDOUBLETerminalRuleCall_3_0()); 
@@ -21101,13 +21312,13 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__Boolsample__ProbabilityAssignment_3"
 
-    // $ANTLR start synpred11_InternalStoex
-    public final void synpred11_InternalStoex_fragment() throws RecognitionException {   
-        // InternalStoex.g:1250:2: ( ( ruleunitMulti ) )
-        // InternalStoex.g:1250:2: ( ruleunitMulti )
+    // $ANTLR start synpred15_InternalStoex
+    public final void synpred15_InternalStoex_fragment() throws RecognitionException {   
+        // InternalStoex.g:1289:2: ( ( ruleunitMulti ) )
+        // InternalStoex.g:1289:2: ( ruleunitMulti )
         {
-        // InternalStoex.g:1250:2: ( ruleunitMulti )
-        // InternalStoex.g:1251:3: ruleunitMulti
+        // InternalStoex.g:1289:2: ( ruleunitMulti )
+        // InternalStoex.g:1290:3: ruleunitMulti
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getUnitAccess().getUnitMultiParserRuleCall_0()); 
@@ -21123,15 +21334,15 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred11_InternalStoex
+    // $ANTLR end synpred15_InternalStoex
 
-    // $ANTLR start synpred12_InternalStoex
-    public final void synpred12_InternalStoex_fragment() throws RecognitionException {   
-        // InternalStoex.g:1256:2: ( ( ruleunitDiv ) )
-        // InternalStoex.g:1256:2: ( ruleunitDiv )
+    // $ANTLR start synpred16_InternalStoex
+    public final void synpred16_InternalStoex_fragment() throws RecognitionException {   
+        // InternalStoex.g:1295:2: ( ( ruleunitDiv ) )
+        // InternalStoex.g:1295:2: ( ruleunitDiv )
         {
-        // InternalStoex.g:1256:2: ( ruleunitDiv )
-        // InternalStoex.g:1257:3: ruleunitDiv
+        // InternalStoex.g:1295:2: ( ruleunitDiv )
+        // InternalStoex.g:1296:3: ruleunitDiv
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getUnitAccess().getUnitDivParserRuleCall_1()); 
@@ -21147,15 +21358,15 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred12_InternalStoex
+    // $ANTLR end synpred16_InternalStoex
 
-    // $ANTLR start synpred14_InternalStoex
-    public final void synpred14_InternalStoex_fragment() throws RecognitionException {   
-        // InternalStoex.g:1298:2: ( ( ruleunitMulti ) )
-        // InternalStoex.g:1298:2: ( ruleunitMulti )
+    // $ANTLR start synpred18_InternalStoex
+    public final void synpred18_InternalStoex_fragment() throws RecognitionException {   
+        // InternalStoex.g:1337:2: ( ( ruleunitMulti ) )
+        // InternalStoex.g:1337:2: ( ruleunitMulti )
         {
-        // InternalStoex.g:1298:2: ( ruleunitMulti )
-        // InternalStoex.g:1299:3: ruleunitMulti
+        // InternalStoex.g:1337:2: ( ruleunitMulti )
+        // InternalStoex.g:1338:3: ruleunitMulti
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getUnitPowAccess().getUnitMultiParserRuleCall_0_1_1_0()); 
@@ -21171,12 +21382,12 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred14_InternalStoex
+    // $ANTLR end synpred18_InternalStoex
 
-    // $ANTLR start synpred46_InternalStoex
-    public final void synpred46_InternalStoex_fragment() throws RecognitionException {   
-        // InternalStoex.g:3483:3: ( rule__UnitMulti__Group_1__0 )
-        // InternalStoex.g:3483:3: rule__UnitMulti__Group_1__0
+    // $ANTLR start synpred50_InternalStoex
+    public final void synpred50_InternalStoex_fragment() throws RecognitionException {   
+        // InternalStoex.g:3522:3: ( rule__UnitMulti__Group_1__0 )
+        // InternalStoex.g:3522:3: rule__UnitMulti__Group_1__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__UnitMulti__Group_1__0();
@@ -21186,15 +21397,15 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred46_InternalStoex
+    // $ANTLR end synpred50_InternalStoex
 
     // Delegated rules
 
-    public final boolean synpred11_InternalStoex() {
+    public final boolean synpred50_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred11_InternalStoex_fragment(); // can never throw exception
+            synpred50_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -21204,11 +21415,11 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred12_InternalStoex() {
+    public final boolean synpred16_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred12_InternalStoex_fragment(); // can never throw exception
+            synpred16_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -21218,11 +21429,11 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred46_InternalStoex() {
+    public final boolean synpred15_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred46_InternalStoex_fragment(); // can never throw exception
+            synpred15_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -21232,11 +21443,11 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred14_InternalStoex() {
+    public final boolean synpred18_InternalStoex() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred14_InternalStoex_fragment(); // can never throw exception
+            synpred18_InternalStoex_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -21249,20 +21460,19 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
 
 
     protected DFA2 dfa2 = new DFA2(this);
-    protected DFA4 dfa4 = new DFA4(this);
+    protected DFA5 dfa5 = new DFA5(this);
     static final String dfa_1s = "\12\uffff";
-    static final String dfa_2s = "\5\uffff\1\10\4\uffff";
-    static final String dfa_3s = "\1\4\4\uffff\1\16\4\uffff";
-    static final String dfa_4s = "\1\57\4\uffff\1\52\4\uffff";
-    static final String dfa_5s = "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\6\1\5";
-    static final String dfa_6s = "\12\uffff}>";
-    static final String[] dfa_7s = {
-            "\1\2\1\1\1\5\1\4\1\3\36\uffff\1\6\3\uffff\5\7",
+    static final String dfa_2s = "\1\4\4\uffff\1\54\4\uffff";
+    static final String dfa_3s = "\1\64\4\uffff\1\57\4\uffff";
+    static final String dfa_4s = "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\7\1\10\1\5\1\6";
+    static final String dfa_5s = "\12\uffff}>";
+    static final String[] dfa_6s = {
+            "\1\2\1\1\1\5\1\4\1\3\43\uffff\1\6\3\uffff\5\7",
             "",
             "",
             "",
             "",
-            "\16\10\5\uffff\3\10\3\uffff\1\11\3\10",
+            "\1\10\2\uffff\1\11",
             "",
             "",
             "",
@@ -21270,12 +21480,11 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
-    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
+    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
     static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
-    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
+    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
-    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
-    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
+    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
 
     class DFA2 extends DFA {
 
@@ -21283,22 +21492,22 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             this.recognizer = recognizer;
             this.decisionNumber = 2;
             this.eot = dfa_1;
-            this.eof = dfa_2;
-            this.min = dfa_3;
-            this.max = dfa_4;
-            this.accept = dfa_5;
-            this.special = dfa_6;
-            this.transition = dfa_7;
+            this.eof = dfa_1;
+            this.min = dfa_2;
+            this.max = dfa_3;
+            this.accept = dfa_4;
+            this.special = dfa_5;
+            this.transition = dfa_6;
         }
         public String getDescription() {
             return "1167:1: rule__Atom__Alternatives : ( ( ruleIntLiteral ) | ( ruleDoubleLiteral ) | ( ruleStringLiteral ) | ( ruleBoolLiteral ) | ( ruleFunctionLiteral ) | ( ruleVariable ) | ( ruleParenthesis ) | ( ruleProbabilityFunctionLiteral ) );";
         }
     }
-    static final String dfa_8s = "\1\34\6\0\3\uffff";
-    static final String dfa_9s = "\1\47\6\0\3\uffff";
-    static final String dfa_10s = "\7\uffff\1\1\1\2\1\3";
-    static final String dfa_11s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\3\uffff}>";
-    static final String[] dfa_12s = {
+    static final String dfa_7s = "\1\41\6\0\3\uffff";
+    static final String dfa_8s = "\1\54\6\0\3\uffff";
+    static final String dfa_9s = "\7\uffff\1\1\1\2\1\3";
+    static final String dfa_10s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\3\uffff}>";
+    static final String[] dfa_11s = {
             "\1\1\1\2\1\3\1\4\1\5\6\uffff\1\6",
             "\1\uffff",
             "\1\uffff",
@@ -21310,136 +21519,136 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
             "",
             ""
     };
+    static final char[] dfa_7 = DFA.unpackEncodedStringToUnsignedChars(dfa_7s);
     static final char[] dfa_8 = DFA.unpackEncodedStringToUnsignedChars(dfa_8s);
-    static final char[] dfa_9 = DFA.unpackEncodedStringToUnsignedChars(dfa_9s);
+    static final short[] dfa_9 = DFA.unpackEncodedString(dfa_9s);
     static final short[] dfa_10 = DFA.unpackEncodedString(dfa_10s);
-    static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
-    static final short[][] dfa_12 = unpackEncodedStringArray(dfa_12s);
+    static final short[][] dfa_11 = unpackEncodedStringArray(dfa_11s);
 
-    class DFA4 extends DFA {
+    class DFA5 extends DFA {
 
-        public DFA4(BaseRecognizer recognizer) {
+        public DFA5(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 4;
+            this.decisionNumber = 5;
             this.eot = dfa_1;
             this.eof = dfa_1;
-            this.min = dfa_8;
-            this.max = dfa_9;
-            this.accept = dfa_10;
-            this.special = dfa_11;
-            this.transition = dfa_12;
+            this.min = dfa_7;
+            this.max = dfa_8;
+            this.accept = dfa_9;
+            this.special = dfa_10;
+            this.transition = dfa_11;
         }
         public String getDescription() {
-            return "1245:1: rule__Unit__Alternatives : ( ( ruleunitMulti ) | ( ruleunitDiv ) | ( ruleBaseUnit ) );";
+            return "1284:1: rule__Unit__Alternatives : ( ( ruleunitMulti ) | ( ruleunitDiv ) | ( ruleBaseUnit ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA4_1 = input.LA(1);
+                        int LA5_1 = input.LA(1);
 
                          
-                        int index4_1 = input.index();
+                        int index5_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred11_InternalStoex()) ) {s = 7;}
+                        if ( (synpred15_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred12_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred16_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index4_1);
+                        input.seek(index5_1);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA4_2 = input.LA(1);
+                        int LA5_2 = input.LA(1);
 
                          
-                        int index4_2 = input.index();
+                        int index5_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred11_InternalStoex()) ) {s = 7;}
+                        if ( (synpred15_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred12_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred16_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index4_2);
+                        input.seek(index5_2);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA4_3 = input.LA(1);
+                        int LA5_3 = input.LA(1);
 
                          
-                        int index4_3 = input.index();
+                        int index5_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred11_InternalStoex()) ) {s = 7;}
+                        if ( (synpred15_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred12_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred16_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index4_3);
+                        input.seek(index5_3);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA4_4 = input.LA(1);
+                        int LA5_4 = input.LA(1);
 
                          
-                        int index4_4 = input.index();
+                        int index5_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred11_InternalStoex()) ) {s = 7;}
+                        if ( (synpred15_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred12_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred16_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index4_4);
+                        input.seek(index5_4);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA4_5 = input.LA(1);
+                        int LA5_5 = input.LA(1);
 
                          
-                        int index4_5 = input.index();
+                        int index5_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred11_InternalStoex()) ) {s = 7;}
+                        if ( (synpred15_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred12_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred16_InternalStoex()) ) {s = 8;}
 
                         else if ( (true) ) {s = 9;}
 
                          
-                        input.seek(index4_5);
+                        input.seek(index5_5);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA4_6 = input.LA(1);
+                        int LA5_6 = input.LA(1);
 
                          
-                        int index4_6 = input.index();
+                        int index5_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred11_InternalStoex()) ) {s = 7;}
+                        if ( (synpred15_InternalStoex()) ) {s = 7;}
 
-                        else if ( (synpred12_InternalStoex()) ) {s = 8;}
+                        else if ( (synpred16_InternalStoex()) ) {s = 8;}
 
                          
-                        input.seek(index4_6);
+                        input.seek(index5_6);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 4, _s, input);
+                new NoViableAltException(getDescription(), 5, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -21450,40 +21659,40 @@ public class InternalStoexParser extends AbstractInternalContentAssistParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000F890010001F0L});
-        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x001F1200200001F0L});
+        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000008000000000L});
         public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000018000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000018002L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000000007E0000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000001800000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000001800002L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000000E000000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x000000000E000002L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000800000000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000002000000000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000081F0000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000004000000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000010000000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000008000000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000F990010001F0L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000020000000002L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000002000002L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000800000002L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000001000020L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000008000000002L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x000000A000000000L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000300000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000300002L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x000000000FC00000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000030000000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000030000002L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000001C0000000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00000001C0000002L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000010000000000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000103E00000000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000080000000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x001F3200200001F0L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000400000000002L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x00000000000F8040L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040000002L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000010000000002L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000020000020L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000100000000002L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000140000000000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0020000000000000L});
         public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000001000010L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000020000010L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000100L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000080L});
     }

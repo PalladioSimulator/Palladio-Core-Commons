@@ -33,7 +33,8 @@ public class StoexParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getUnaryExprAccess().getAlternatives(), "rule__UnaryExpr__Alternatives");
 					put(grammarAccess.getAtomAccess().getAlternatives(), "rule__Atom__Alternatives");
-					put(grammarAccess.getAbstractNamedReferenceAccess().getAlternatives(), "rule__AbstractNamedReference__Alternatives");
+					put(grammarAccess.getVariableReferenceAccess().getReferenceNameAlternatives_0(), "rule__VariableReference__ReferenceNameAlternatives_0");
+					put(grammarAccess.getNamespaceReferenceAccess().getAlternatives_2(), "rule__NamespaceReference__Alternatives_2");
 					put(grammarAccess.getUnitAccess().getAlternatives(), "rule__Unit__Alternatives");
 					put(grammarAccess.getUnitPowAccess().getAlternatives_0(), "rule__UnitPow__Alternatives_0");
 					put(grammarAccess.getUnitPowAccess().getAlternatives_0_1_1(), "rule__UnitPow__Alternatives_0_1_1");
@@ -123,7 +124,8 @@ public class StoexParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVariableAccess().getId_VariableAssignment(), "rule__Variable__Id_VariableAssignment");
 					put(grammarAccess.getVariableReferenceAccess().getReferenceNameAssignment(), "rule__VariableReference__ReferenceNameAssignment");
 					put(grammarAccess.getNamespaceReferenceAccess().getReferenceNameAssignment_0(), "rule__NamespaceReference__ReferenceNameAssignment_0");
-					put(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2(), "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2");
+					put(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2_0(), "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_0");
+					put(grammarAccess.getNamespaceReferenceAccess().getInnerReference_NamespaceReferenceAssignment_2_1(), "rule__NamespaceReference__InnerReference_NamespaceReferenceAssignment_2_1");
 					put(grammarAccess.getBoolLiteralAccess().getValueAssignment(), "rule__BoolLiteral__ValueAssignment");
 					put(grammarAccess.getStringLiteralAccess().getValueAssignment(), "rule__StringLiteral__ValueAssignment");
 					put(grammarAccess.getIntLiteralAccess().getValueAssignment_0(), "rule__IntLiteral__ValueAssignment_0");

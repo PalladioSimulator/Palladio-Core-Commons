@@ -23,14 +23,15 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uka.ipd.sdq.identifier.Identifier#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uka.ipd.sdq.identifier.IdentifierPackage#getIdentifier()
  * @model abstract="true"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot null='Identifier.allInstances()->isUnique(p: Identifier | p.id)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL identifierIsUnique='Identifier.allInstances()-&gt;isUnique(p: Identifier | p.id)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='identifierIsUnique'"
  * @extends CDOObject
  * @generated
  */

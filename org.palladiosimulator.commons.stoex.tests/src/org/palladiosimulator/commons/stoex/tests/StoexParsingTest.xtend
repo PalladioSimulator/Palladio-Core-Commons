@@ -20,10 +20,23 @@ class StoexParsingTest {
 	
 	@Test
 	def void loadModel() {
-		val result = parseHelper.parse('''
-			Hello Xtext!
-		''')
+		val result = parseHelper.parse('''1''')
 		Assert.assertNotNull(result)
 		Assert.assertTrue(result.eResource.errors.isEmpty)
 	}
+	
+	@Test
+	def void parseAddition() {
+		val result = parseHelper.parse('''1+1+1''')
+		Assert.assertNotNull(result)
+		Assert.assertTrue(result.eResource.errors.isEmpty)
+	}
+	
+	@Test
+	def void parseSubtraction() {
+		val result = parseHelper.parse('''1-1-1''')
+		Assert.assertNotNull(result)
+		Assert.assertTrue(result.eResource.errors.isEmpty)
+	}
+	
 }

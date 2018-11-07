@@ -3,6 +3,8 @@
  */
 package org.palladiosimulator.commons.stoex
 
+import com.google.inject.Injector
+import org.eclipse.emf.ecore.EPackage
 
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
@@ -12,4 +14,19 @@ class StoexStandaloneSetup extends StoexStandaloneSetupGenerated {
 	def static void doSetup() {
 		new StoexStandaloneSetup().createInjectorAndDoEMFRegistration()
 	}
+	
+	
+    override void register(Injector injector) {
+        if (!EPackage.Registry.INSTANCE.containsKey("http://sdq.ipd.uka.de/StochasticExpressions/2.2")) {
+            EPackage.Registry.INSTANCE.put("http://sdq.ipd.uka.de/StochasticExpressions/2.2", de.uka.ipd.sdq.stoex.StoexPackage.eINSTANCE);
+        }
+        if (!EPackage.Registry.INSTANCE.containsKey("http://sdq.ipd.uka.de/ProbFunction/2.1")) {
+            EPackage.Registry.INSTANCE.put("http://sdq.ipd.uka.de/ProbFunction/2.1", de.uka.ipd.sdq.probfunction.ProbfunctionPackage.eINSTANCE
+            );
+        }
+        if (!EPackage.Registry.INSTANCE.containsKey("http://sdq.ipd.uka.de/Units/2.1")) {
+            EPackage.Registry.INSTANCE.put("http://sdq.ipd.uka.de/Units/2.1", de.uka.ipd.sdq.units.UnitsPackage.eINSTANCE);
+        }
+        super.register(injector);
+    }
 }

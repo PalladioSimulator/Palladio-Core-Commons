@@ -17,16 +17,17 @@ class StoexStandaloneSetup extends StoexStandaloneSetupGenerated {
 	
 	
     override void register(Injector injector) {
-        if (!EPackage.Registry.INSTANCE.containsKey("http://sdq.ipd.uka.de/StochasticExpressions/2.2")) {
-            EPackage.Registry.INSTANCE.put("http://sdq.ipd.uka.de/StochasticExpressions/2.2", de.uka.ipd.sdq.stoex.StoexPackage.eINSTANCE);
+        if (!EPackage.Registry.INSTANCE.containsKey(de.uka.ipd.sdq.stoex.StoexPackage.eNS_URI)) {
+            EPackage.Registry.INSTANCE.put(de.uka.ipd.sdq.stoex.StoexPackage.eNS_URI, de.uka.ipd.sdq.stoex.StoexPackage.eINSTANCE);
         }
-        if (!EPackage.Registry.INSTANCE.containsKey("http://sdq.ipd.uka.de/ProbFunction/2.1")) {
-            EPackage.Registry.INSTANCE.put("http://sdq.ipd.uka.de/ProbFunction/2.1", de.uka.ipd.sdq.probfunction.ProbfunctionPackage.eINSTANCE
+        if (!EPackage.Registry.INSTANCE.containsKey(de.uka.ipd.sdq.probfunction.ProbfunctionPackage.eNS_URI)) {
+            EPackage.Registry.INSTANCE.put(de.uka.ipd.sdq.probfunction.ProbfunctionPackage.eNS_URI, de.uka.ipd.sdq.probfunction.ProbfunctionPackage.eINSTANCE
             );
         }
-        if (!EPackage.Registry.INSTANCE.containsKey("http://sdq.ipd.uka.de/Units/2.1")) {
-            EPackage.Registry.INSTANCE.put("http://sdq.ipd.uka.de/Units/2.1", de.uka.ipd.sdq.units.UnitsPackage.eINSTANCE);
+        if (!EPackage.Registry.INSTANCE.containsKey(de.uka.ipd.sdq.units.UnitsPackage.eNS_URI)) {
+            EPackage.Registry.INSTANCE.put(de.uka.ipd.sdq.units.UnitsPackage.eNS_URI, de.uka.ipd.sdq.units.UnitsPackage.eINSTANCE);
         }
+        
         super.register(injector);
     }
 }

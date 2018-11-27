@@ -20,7 +20,6 @@
 		<module>de.uka.ipd.sdq.probfunction.edit</module>
 		<module>de.uka.ipd.sdq.probfunction.math</module>
 		<module>de.uka.ipd.sdq.statistics</module>
-		<module>de.uka.ipd.sdq.statistics.test</module>
 		<module>de.uka.ipd.sdq.stoex</module>
 		<module>de.uka.ipd.sdq.stoex.edit</module>
 		<module>de.uka.ipd.sdq.units</module>
@@ -30,12 +29,6 @@
 		<module>edu.kit.ipd.sdq.commons.util.java</module>
 		<module>edu.kit.ipd.sdq.commons.util.mdsdprofiles</module>
 		<module>org.palladiosimulator.commons</module>
-		<module>org.palladiosimulator.commons.stoex</module>
-		<module>org.palladiosimulator.commons.stoex.adapter</module>
-		<module>org.palladiosimulator.commons.stoex.ui</module>
-		<module>org.palladiosimulator.commons.stoexNew</module>
-		<module>org.palladiosimulator.commons.stoexNew.ide</module>
-		<module>org.palladiosimulator.commons.stoexNew.ui</module>
 		<module>org.palladiosimulator.commons.xtexttools</module>
 	</modules>
 	

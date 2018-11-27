@@ -27,7 +27,6 @@
 		<module>de.uka.ipd.sdq.units.editor</module>
 		<module>edu.kit.ipd.sdq.commons.util.emf</module>
 		<module>edu.kit.ipd.sdq.commons.util.java</module>
-		<module>edu.kit.ipd.sdq.commons.util.mdsdprofiles</module>
 		<module>org.palladiosimulator.commons</module>
 		<module>org.palladiosimulator.commons.xtexttools</module>
 	</modules>

@@ -13,9 +13,7 @@
 	
 	<modules>
 		<module>de.uka.ipd.sdq.probfunction.math.tests</module>
-		<module>org.palladiosimulator.commons.stoex.tests</module>
-		<module>org.palladiosimulator.commons.stoexNew.tests</module>
-		<module>org.palladiosimulator.commons.stoexNew.ui.tests</module>
+		<module>de.uka.ipd.sdq.statistics.test</module>
 	</modules>
 	
 </project>

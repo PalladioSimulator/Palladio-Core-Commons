@@ -30,7 +30,11 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
  org.eclipse.xtend.lib,
- org.eclipse.xtext.ecore
+ org.eclipse.xtext.ecore,
+ de.uka.ipd.sdq.stoex.analyser,
+ de.uka.ipd.sdq.errorhandling,
+ de.uka.ipd.sdq.pcm.stochasticexpressions,
+ org.palladiosimulator.pcm;bundle-version="4.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.palladiosimulator.commons.stoex,
  org.palladiosimulator.commons.stoex.scoping,

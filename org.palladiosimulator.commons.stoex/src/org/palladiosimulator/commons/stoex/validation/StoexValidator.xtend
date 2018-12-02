@@ -3,23 +3,63 @@
  */
 package org.palladiosimulator.commons.stoex.validation
 
+import de.uka.ipd.sdq.stoex.Expression
+import org.eclipse.xtext.validation.Check
+import de.uka.ipd.sdq.stoex.analyser.visitors.NonProbabilisticExpressionInferTypeVisitor;
+import de.uka.ipd.sdq.stoex.analyser.visitors.TypeCheckVisitor
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.common.util.TreeIterator
+import de.uka.ipd.sdq.errorhandling.IIssue
+import java.util.Collection
+import org.palladiosimulator.pcm.stochasticexpressions.parser.ErrorEntry
+import de.uka.ipd.sdq.stoex.StoexPackage
+import de.uka.ipd.sdq.stoex.BooleanOperatorExpression
+import de.uka.ipd.sdq.stoex.BooleanExpression
+import de.uka.ipd.sdq.stoex.analyser.exceptions.ExpectedTypeMismatchIssue
 
 /**
  * This class contains custom validation rules. 
- *
+ * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class StoexValidator extends AbstractStoexValidator {
-	
-//	public static val INVALID_NAME = 'invalidName'
-//
+
+	val delta = 0.00001;
+
+	@Check
+	def checkTypes(Expression exp) {
+		val typeVisitor = new NonProbabilisticExpressionInferTypeVisitor;
+		typeVisitor.doSwitch(exp)
+		val typeChecker = new TypeCheckVisitor(typeVisitor);
+		typeChecker.doSwitch(exp);
+		val TreeIterator<EObject> iterator = exp.eAllContents();
+		for (; iterator.hasNext();) {
+			val EObject treeNode = iterator.next();
+			typeChecker.doSwitch(treeNode);
+		}
+		val Collection<IIssue> issueList = getIssues(typeChecker)
+
+		for (IIssue ex : issueList) {
+			if (ex instanceof ErrorEntry) {
+				error(ex.message, exp, StoexPackage.Literals.IF_ELSE_EXPRESSION__CONDITION_EXPRESSION)
+			} else if (ex instanceof ExpectedTypeMismatchIssue) {
+				warning(ex.message, exp, (ex as ExpectedTypeMismatchIssue).feature)
+			}
+		}
+
+	}
+
+	def Collection<IIssue> getIssues(TypeCheckVisitor visitor) {
+		visitor.issues
+	}
+
 //	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					StoexPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
+//	def checkBoolOperatorTypes(BooleanOperatorExpression boolExp) {
+//		if (!(boolExp.left instanceof BooleanExpression)) {
+//			warning('Expected type BOOL', boolExp.left, StoexPackage.Literals.BOOLEAN_OPERATOR_EXPRESSION__LEFT)
+//		} else if (!(boolExp.right instanceof BooleanExpression)) {
+//			warning('Expected type BOOL', boolExp.right, StoexPackage.Literals.BOOLEAN_OPERATOR_EXPRESSION__RIGHT)
 //		}
 //	}
-	
+
 }

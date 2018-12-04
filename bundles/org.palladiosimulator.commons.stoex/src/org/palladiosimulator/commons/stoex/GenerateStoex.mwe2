@@ -49,11 +49,13 @@ Workflow {
 				rootPath = rootPath
 				runtimeTest = {
 					enabled = true
+					root = "../../tests/${projectName}.tests"
 				}
 				eclipsePlugin = {
 					enabled = true
 				}
 				eclipsePluginTest = {
+					root = "../../tests/${projectName}.ui.tests"
 					enabled = true
 				}
 				createEclipseMetaData = true

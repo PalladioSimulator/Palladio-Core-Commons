@@ -9,23 +9,59 @@ import de.uka.ipd.sdq.stoex.IfElseExpression
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.palladiosimulator.commons.stoex.services.StoexGrammarAccess
+import de.uka.ipd.sdq.stoex.CompareExpression
+import de.uka.ipd.sdq.stoex.DoubleLiteral
+import de.uka.ipd.sdq.stoex.NegativeExpression
+import de.uka.ipd.sdq.stoex.NotExpression
+import de.uka.ipd.sdq.stoex.PowerExpression
+import de.uka.ipd.sdq.stoex.ProductExpression
+import de.uka.ipd.sdq.stoex.TermExpression
 
 class StoexFormatter extends AbstractFormatter2 {
 	
 	@Inject extension StoexGrammarAccess
 
 	def dispatch void format(IfElseExpression ifElseExpression, extension IFormattableDocument document) {
-		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		ifElseExpression.getIfExpression.format;
-		ifElseExpression.getElseExpression.format;
-		ifElseExpression.getConditionExpression.format;
+		ifElseExpression.regionFor.keyword(ifelseExprAccess.questionMarkKeyword_1_1).prepend[space = " "].append[space = " "]
+		ifElseExpression.regionFor.keyword(ifelseExprAccess.colonKeyword_1_3).prepend[space = " "].append[space = " "]
+		ifElseExpression.getIfExpression.format
+		ifElseExpression.getElseExpression.format
+		ifElseExpression.getConditionExpression.format
 	}
 
 	def dispatch void format(BooleanOperatorExpression booleanOperatorExpression, extension IFormattableDocument document) {
-		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		booleanOperatorExpression.getRight.format;
-		booleanOperatorExpression.getLeft.format;
+		booleanOperatorExpression.getLeft.format.append[space = " "]
+		booleanOperatorExpression.operation.format
+		booleanOperatorExpression.getRight.format.prepend[space = " "]
 	}
 	
-	// TODO: implement for CompareExpression, TermExpression, ProductExpression, PowerExpression, NotExpression, NegativeExpression, DoubleLiteral, ProbabilityFunctionLiteral, Parenthesis, FunctionLiteral, Variable, NamespaceReference, IntLiteral, UnitDivision, UnitMultiplication, BoxedPDF, ProbabilityMassFunction, UnitPower
+	def dispatch void format(CompareExpression compareExpression, extension IFormattableDocument document) {
+		
+	}
+	
+	def dispatch void format(DoubleLiteral doubleLiteral, extension IFormattableDocument document) {
+		
+	}
+	
+	def dispatch void format(NegativeExpression negativeExpression, extension IFormattableDocument document) {
+		
+	}
+	
+	def dispatch void format(NotExpression notExpression, extension IFormattableDocument document) {
+		
+	}
+	
+	def dispatch void format(PowerExpression powerExpression, extension IFormattableDocument document) {
+		
+	}
+	
+	def dispatch void format(ProductExpression productExpression, extension IFormattableDocument document) {
+		
+	}
+	
+	def dispatch void format(TermExpression termExpression, extension IFormattableDocument document) {
+		
+	}
+	
+	// TODO: implement for , , , , , , ProbabilityFunctionLiteral, Parenthesis, FunctionLiteral, Variable, NamespaceReference, IntLiteral, UnitDivision, UnitMultiplication, BoxedPDF, ProbabilityMassFunction, UnitPower
 }

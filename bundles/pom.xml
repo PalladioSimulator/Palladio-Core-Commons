@@ -26,7 +26,9 @@
 		<module>de.uka.ipd.sdq.units.edit</module>
 		<module>de.uka.ipd.sdq.units.editor</module>
 		<module>org.palladiosimulator.commons</module>
-		<module>org.palladiosimulator.commons.xtexttools</module>
+		<module>org.palladiosimulator.commons.stoex</module>
+		<module>org.palladiosimulator.commons.stoex.ide</module>
+		<module>org.palladiosimulator.commons.stoex.ui</module>
 	</modules>
 	
 </project>

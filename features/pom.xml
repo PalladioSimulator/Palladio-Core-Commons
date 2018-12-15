@@ -20,6 +20,8 @@
 		<module>de.uka.ipd.sdq.stoex.feature</module>
 		<module>de.uka.ipd.sdq.units.feature</module>
 		<module>org.palladiosimulator.commons.feature</module>
+		<module>org.palladiosimulator.commons.stoex.feature</module>
+		<module>org.palladiosimulator.commons.stoex.sdk</module>
 	</modules>
 	
 </project>

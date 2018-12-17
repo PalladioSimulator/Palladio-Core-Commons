@@ -3,19 +3,17 @@
  */
 package org.palladiosimulator.commons.stoex.validation
 
-import de.uka.ipd.sdq.stoex.Expression
-import org.eclipse.xtext.validation.Check
-import de.uka.ipd.sdq.stoex.analyser.visitors.NonProbabilisticExpressionInferTypeVisitor;
-import de.uka.ipd.sdq.stoex.analyser.visitors.TypeCheckVisitor
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.emf.common.util.TreeIterator
 import de.uka.ipd.sdq.errorhandling.IIssue
-import java.util.Collection
-import org.palladiosimulator.pcm.stochasticexpressions.parser.ErrorEntry
+import de.uka.ipd.sdq.stoex.Expression
 import de.uka.ipd.sdq.stoex.StoexPackage
-import de.uka.ipd.sdq.stoex.BooleanOperatorExpression
-import de.uka.ipd.sdq.stoex.BooleanExpression
 import de.uka.ipd.sdq.stoex.analyser.exceptions.ExpectedTypeMismatchIssue
+import de.uka.ipd.sdq.stoex.analyser.visitors.NonProbabilisticExpressionInferTypeVisitor
+import de.uka.ipd.sdq.stoex.analyser.visitors.TypeCheckVisitor
+import java.util.Collection
+import org.eclipse.emf.common.util.TreeIterator
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.xtext.validation.Check
+import org.palladiosimulator.pcm.stochasticexpressions.parser.ErrorEntry
 
 /**
  * This class contains custom validation rules. 
@@ -23,9 +21,7 @@ import de.uka.ipd.sdq.stoex.analyser.exceptions.ExpectedTypeMismatchIssue
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class StoexValidator extends AbstractStoexValidator {
-
-	val delta = 0.00001;
-
+	
 	@Check
 	def checkTypes(Expression exp) {
 		val typeVisitor = new NonProbabilisticExpressionInferTypeVisitor;
@@ -52,14 +48,5 @@ class StoexValidator extends AbstractStoexValidator {
 	def Collection<IIssue> getIssues(TypeCheckVisitor visitor) {
 		visitor.issues
 	}
-
-//	@Check
-//	def checkBoolOperatorTypes(BooleanOperatorExpression boolExp) {
-//		if (!(boolExp.left instanceof BooleanExpression)) {
-//			warning('Expected type BOOL', boolExp.left, StoexPackage.Literals.BOOLEAN_OPERATOR_EXPRESSION__LEFT)
-//		} else if (!(boolExp.right instanceof BooleanExpression)) {
-//			warning('Expected type BOOL', boolExp.right, StoexPackage.Literals.BOOLEAN_OPERATOR_EXPRESSION__RIGHT)
-//		}
-//	}
-
+	
 }

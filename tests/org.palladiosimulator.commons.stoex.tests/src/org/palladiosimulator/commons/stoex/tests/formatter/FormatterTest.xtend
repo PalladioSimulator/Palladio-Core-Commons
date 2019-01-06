@@ -100,8 +100,8 @@ class FormatterTest {
 
 	@Test
 	def testExpression() {
-		val exp = '''2.67E2+9*DoublePDF[(0.000445786;0.0)(0.000526678;0.10411217020161)]'''
-		assertEquals("2.67E2 + 9 * DoublePDF[(0.000445786;0.0)(0.000526678;0.10411217020161)]", exp.parse.serialize(SaveOptions.newBuilder.format.options))
+		val exp = '''2.67E+9*DoublePDF[(0.000445786;0.0)(0.000526678;0.10411217020161)]'''
+		assertEquals("2.67E+9 * DoublePDF[(0.000445786;0.0)(0.000526678;0.10411217020161)]", exp.parse.serialize(SaveOptions.newBuilder.format.options))
 	}
 
 }

@@ -54,6 +54,10 @@ import de.uka.ipd.sdq.stoex.Unary;
 import de.uka.ipd.sdq.stoex.Variable;
 import de.uka.ipd.sdq.stoex.VariableReference;
 
+/**
+* @deprecated use {@link #new(org.palladiosimulators.commons.stoex.Stoex)} instead.
+*/
+@Deprecated
 public class StochasticExpressionsParser extends Parser {
     public static final String[] tokenNames = new String[] {
             "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "OR", "XOR", "GREATER", "LESS", "EQUAL", "NOTEQUAL",

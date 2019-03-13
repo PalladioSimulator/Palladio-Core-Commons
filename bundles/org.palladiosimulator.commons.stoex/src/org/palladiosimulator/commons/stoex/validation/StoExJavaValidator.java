@@ -48,7 +48,7 @@ public class StoExJavaValidator extends org.palladiosimulator.commons.stoex.vali
    }
    
    @Check
-   public void checkSamplesSumUpToOne(ProbabilityMassFunction pmf){
+   public void checkSamplesSumUpToOne(ProbabilityMassFunction<?> pmf){
        double sum = 0;
        for(Sample<?> s : pmf.getSamples()){
            sum += s.getProbability();

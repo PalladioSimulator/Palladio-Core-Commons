@@ -7,6 +7,10 @@
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
+   <requires>
+      <import plugin="org.palladiosimulator.branding"/>
+   </requires>
+
    <plugin
          id="org.palladiosimulator.commons.stoex"
          download-size="0"
@@ -23,13 +27,6 @@
 
    <plugin
          id="org.palladiosimulator.commons.stoex.adapter"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"

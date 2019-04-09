@@ -24,6 +24,7 @@
       <import plugin="org.eclipse.uml2.common.edit"/>
       <import plugin="org.eclipse.core.runtime" version="3.9.0" match="greaterOrEqual"/>
       <import plugin="org.apache.log4j" version="1.2.15" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
    <plugin
@@ -42,13 +43,6 @@
 
    <plugin
          id="de.uka.ipd.sdq.probfunction.math"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"

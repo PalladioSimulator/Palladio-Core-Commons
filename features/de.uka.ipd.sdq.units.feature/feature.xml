@@ -23,6 +23,7 @@
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
    <plugin
@@ -44,13 +45,6 @@
          download-size="0"
          install-size="0"
          version="2.1.1.qualifier"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
          unpack="false"/>
 
 </feature>

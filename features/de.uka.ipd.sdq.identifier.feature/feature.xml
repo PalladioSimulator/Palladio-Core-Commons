@@ -18,6 +18,7 @@
       <import plugin="de.uka.ipd.sdq.identifier"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
    <plugin
@@ -32,13 +33,6 @@
          download-size="0"
          install-size="0"
          version="2.1.0.qualifier"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
          unpack="false"/>
 
 </feature>

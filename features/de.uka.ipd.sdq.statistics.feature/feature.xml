@@ -16,17 +16,11 @@ estimators, confidence estimators and indepence tests.
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.apache.log4j" version="1.2.13" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction.math" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
    <plugin
          id="de.uka.ipd.sdq.statistics"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"

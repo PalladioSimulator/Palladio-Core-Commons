@@ -4,10 +4,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="UnitCarryingElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" ordered="false" eType="#//Unit"
         unsettable="true" containment="true">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="name" value=""/>
-        <details key="namespace" value=""/>
-      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
@@ -17,10 +13,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="BaseUnit" eSuperTypes="#//Unit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="#//UnitNames" iD="true">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="name" value=""/>
-        <details key="namespace" value=""/>
-      </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitRepository">

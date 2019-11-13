@@ -30,7 +30,7 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.common,
  org.eclipse.xtend.lib,
  org.eclipse.xtext.ecore
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoexNew,
  org.palladiosimulator.commons.stoexNew.services,
  org.palladiosimulator.commons.stoexNew.serializer,

@@ -30,7 +30,7 @@ Require-Bundle: org.palladiosimulator.commons.stoexNew,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoexNew.ui.quickfix,
  org.palladiosimulator.commons.stoexNew.ui.contentassist,
  org.palladiosimulator.commons.stoexNew.ui.internal

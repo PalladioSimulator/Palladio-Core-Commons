@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-		
+
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.palladiosimulator.core-commons</groupId>
@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>bundles</artifactId>
 	<packaging>pom</packaging>
-	
+
 	<modules>
 		<module>de.uka.ipd.sdq.dialogs</module>
 		<module>de.uka.ipd.sdq.errorhandling</module>
@@ -21,6 +21,7 @@
 		<module>de.uka.ipd.sdq.probfunction.math</module>
 		<module>de.uka.ipd.sdq.statistics</module>
 		<module>de.uka.ipd.sdq.stoex</module>
+		<module>de.uka.ipd.sdq.stoex.analyser</module>
 		<module>de.uka.ipd.sdq.stoex.edit</module>
 		<module>de.uka.ipd.sdq.units</module>
 		<module>de.uka.ipd.sdq.units.edit</module>
@@ -28,5 +29,5 @@
 		<module>org.palladiosimulator.commons</module>
 		<module>org.palladiosimulator.commons.xtexttools</module>
 	</modules>
-	
+
 </project>

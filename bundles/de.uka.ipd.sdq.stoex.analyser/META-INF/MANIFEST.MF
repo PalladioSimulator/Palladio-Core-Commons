@@ -9,9 +9,7 @@ Require-Bundle: de.uka.ipd.sdq.probfunction;bundle-version="2.1.0",
  de.uka.ipd.sdq.stoex;bundle-version="2.2.0";visibility:=reexport,
  de.uka.ipd.sdq.units;bundle-version="2.1.0",
  de.uka.ipd.sdq.errorhandling;bundle-version="1.0.0",
- org.apache.log4j,
- org.eclipse.core.runtime.source;bundle-version="3.16.0",
- org.eclipse.e4.core.di;bundle-version="1.7.400"
+ org.apache.log4j
 Export-Package: de.uka.ipd.sdq.stoex.analyser.exceptions,
  de.uka.ipd.sdq.stoex.analyser.operations,
  de.uka.ipd.sdq.stoex.analyser.probfunction,

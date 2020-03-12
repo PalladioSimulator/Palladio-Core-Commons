@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.dialogs.feature"
       label="Palladio Commons Dialogs"
-      version="1.4.0.qualifier"
+      version="4.2.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -19,17 +19,11 @@
       <import plugin="org.eclipse.ui.ide"/>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
    <plugin
          id="de.uka.ipd.sdq.dialogs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"

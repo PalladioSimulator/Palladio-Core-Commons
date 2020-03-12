@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-	<feature url="features/org.palladiosimulator.commons.feature_1.5.3.qualifier.jar" id="org.palladiosimulator.commons.feature" version="1.5.3.qualifier">
+	<feature url="features/org.palladiosimulator.commons.feature_4.2.0.qualifier.jar" id="org.palladiosimulator.commons.feature" version="4.2.0.qualifier">
 	   <category name="org.palladiosimulator.corefeatures.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.commons.feature.source_1.5.3.qualifier.jar" id="org.palladiosimulator.commons.feature.source" version="1.5.3.qualifier">
+	<feature url="features/org.palladiosimulator.commons.feature.source_4.2.0.qualifier.jar" id="org.palladiosimulator.commons.feature.source" version="4.2.0.qualifier">
 	   <category name="org.palladiosimulator.corefeatures.source.category"/>
 	</feature>
 	<category-def name="org.palladiosimulator.corefeatures.category" label="This category contains all features which belong to a complete installation of the Palladio Bench Core Features">

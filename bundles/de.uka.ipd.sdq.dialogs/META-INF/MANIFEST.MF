@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Common SDQ Dialogs
 Bundle-SymbolicName: de.uka.ipd.sdq.dialogs;singleton:=true
-Bundle-Version: 2.0.1.qualifier
+Bundle-Version: 4.2.0.qualifier
 Bundle-Vendor: sdq.ipd.uka.de
 Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.edit,
@@ -16,4 +16,4 @@ Export-Package: de.uka.ipd.sdq.dialogs.error,
  de.uka.ipd.sdq.dialogs.selection
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: de.uka.ipd.sdq.dialogs.DialogPluginActivator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11

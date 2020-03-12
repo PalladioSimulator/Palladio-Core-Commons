@@ -10,6 +10,9 @@
       <import feature="org.eclipse.xtext.sdk" version="2.8.1.v201503230617"/>
       <import feature="org.eclipse.xtend.sdk" version="2.8.1.v201503230617"/>
       <import plugin="de.uka.ipd.sdq.stoex.analyser" version="2.0.0" match="greaterOrEqual"/>
+   <requires>
+      <import plugin="org.palladiosimulator.branding"/>
+   </requires>
 
    <plugin
          id="org.palladiosimulator.commons.stoex"
@@ -26,7 +29,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.palladiosimulator.branding"
+         id="org.palladiosimulator.commons.stoex.adapter"
          download-size="0"
          install-size="0"
          version="0.0.0"

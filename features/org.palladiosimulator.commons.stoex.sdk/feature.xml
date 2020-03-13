@@ -7,11 +7,10 @@
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
-      <import feature="org.eclipse.xtext.sdk" version="2.8.1.v201503230617"/>
-      <import feature="org.eclipse.xtend.sdk" version="2.8.1.v201503230617"/>
-      <import plugin="de.uka.ipd.sdq.stoex.analyser" version="2.0.0" match="greaterOrEqual"/>
    <requires>
       <import plugin="org.palladiosimulator.branding"/>
+      <import feature="org.eclipse.xtext.sdk" version="2.20.0.v20191202-1256"/>
+      <import feature="org.eclipse.xtend.sdk" version="2.20.0.v20191202-1256"/>
    </requires>
 
    <plugin
@@ -29,7 +28,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.palladiosimulator.commons.stoex.adapter"
+         id="de.uka.ipd.sdq.stoex.analyser"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.commons.stoex.ide"
          download-size="0"
          install-size="0"
          version="0.0.0"

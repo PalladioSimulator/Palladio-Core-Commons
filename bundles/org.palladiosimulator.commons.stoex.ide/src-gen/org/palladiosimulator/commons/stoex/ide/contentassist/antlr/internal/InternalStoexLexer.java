@@ -2042,13 +2042,16 @@ public class InternalStoexLexer extends Lexer {
         "\2\uffff\1\2\1\uffff\1\1";
     static final String DFA5_specialS =
         "\5\uffff}>";
-    static final String[] DFA5_transitionS = {
-            "\1\1\26\uffff\1\2\37\uffff\1\2",
-            "\12\3\13\uffff\1\2\37\uffff\1\2",
-            "",
-            "\12\3\13\uffff\1\2\37\uffff\1\2",
-            ""
-    };
+    static final String[] DFA5_transitionS = DFA5_transitionS_.DFA5_transitionS;
+    private static final class DFA5_transitionS_ {
+        static final String[] DFA5_transitionS = {
+                "\1\1\26\uffff\1\2\37\uffff\1\2",
+                "\12\3\13\uffff\1\2\37\uffff\1\2",
+                "",
+                "\12\3\13\uffff\1\2\37\uffff\1\2",
+                ""
+        };
+    }
 
     static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
     static final short[] DFA5_eof = DFA.unpackEncodedString(DFA5_eofS);

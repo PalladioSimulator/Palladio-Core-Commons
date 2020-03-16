@@ -1,7 +1,6 @@
 Bundle-ManifestVersion: 2
 Bundle-Name: org.palladiosimulator.commons.stoex
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 4.2.0.qualifier
 Bundle-SymbolicName: org.palladiosimulator.commons.stoex; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,

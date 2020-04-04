@@ -13,7 +13,7 @@ Require-Bundle: org.palladiosimulator.commons.stoex.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.workbench;resolution:=optional,
  org.eclipse.xtext.ui.testing
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoex.ui.tests;x-internal=true
 Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
@@ -23,3 +23,4 @@ Import-Package: org.hamcrest.core,
  org.junit.runner.manipulation;version="4.5.0",
  org.junit.runner.notification;version="4.5.0"
 Bundle-Vendor: palladiosimulator.org
+Automatic-Module-Name: org.palladiosimulator.commons.stoex.ui.tests

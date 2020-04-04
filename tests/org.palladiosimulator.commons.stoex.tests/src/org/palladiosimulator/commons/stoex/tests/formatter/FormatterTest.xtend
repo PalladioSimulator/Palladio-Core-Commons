@@ -1,17 +1,17 @@
 package org.palladiosimulator.commons.stoex.tests.formatter
 
-import org.eclipse.xtext.serializer.ISerializer
-import org.junit.Test
 import com.google.inject.Inject
 import de.uka.ipd.sdq.stoex.Expression
-import org.eclipse.xtext.testing.util.ParseHelper
 import org.eclipse.xtext.resource.SaveOptions
-import static org.junit.Assert.*
-import org.junit.runner.RunWith
-import org.eclipse.xtext.testing.XtextRunner
-import org.palladiosimulator.commons.stoex.tests.StoexInjectorProvider
+import org.eclipse.xtext.serializer.ISerializer
 import org.eclipse.xtext.testing.InjectWith
-import org.junit.Ignore
+import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.util.ParseHelper
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.palladiosimulator.commons.stoex.tests.StoexInjectorProvider
+
+import static org.junit.Assert.*
 
 @RunWith(XtextRunner)
 @InjectWith(StoexInjectorProvider)

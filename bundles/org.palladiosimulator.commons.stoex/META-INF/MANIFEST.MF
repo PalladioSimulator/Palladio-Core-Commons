@@ -42,3 +42,4 @@ Export-Package: org.palladiosimulator.commons.stoex,
  org.palladiosimulator.commons.stoex.validation,
  org.palladiosimulator.commons.stoex.formatting2
 Import-Package: org.apache.log4j
+Automatic-Module-Name: org.palladiosimulator.commons.stoex

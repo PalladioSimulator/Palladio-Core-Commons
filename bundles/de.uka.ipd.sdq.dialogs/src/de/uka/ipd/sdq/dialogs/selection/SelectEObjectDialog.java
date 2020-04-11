@@ -99,12 +99,11 @@ public class SelectEObjectDialog extends TitleAreaDialog {
         return new ViewerComparator() {
 
             private boolean isRootObject(Object o) {
-                Optional<EObject> eobject = Optional.ofNullable(o).filter(EObject.class::isInstance)
-                        .map(EObject.class::cast);
-                if (eobject.isPresent()) {
-                    return eobject.get().eContainer() == null;
-                }
-                return false;
+                return Optional.ofNullable(o)
+                        .filter(EObject.class::isInstance)
+                        .map(EObject.class::cast)
+                        .map(e -> e.eContainer() == null)
+                        .orElse(false);
             }
 
             @Override

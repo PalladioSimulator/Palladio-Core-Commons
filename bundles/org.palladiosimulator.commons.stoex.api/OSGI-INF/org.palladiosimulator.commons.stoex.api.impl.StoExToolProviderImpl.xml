@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="org.palladiosimulator.commons.stoex.api.impl.StoExToolProviderImpl">
+   <service scope="singleton">
+      <provide interface="org.palladiosimulator.commons.stoex.api.impl.StoExToolProvider"/>
+   </service>
+   <implementation class="org.palladiosimulator.commons.stoex.api.impl.StoExToolProviderImpl"/>
+</scr:component>

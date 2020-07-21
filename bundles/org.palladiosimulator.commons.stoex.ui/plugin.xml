@@ -422,4 +422,10 @@
 			type="text">
 		</fileTypes>
 	</extension>
+ <extension
+       point="org.palladiosimulator.commons.stoex.api.extensions.parserprovider">
+    <class
+          class="org.palladiosimulator.commons.stoex.ui.StoexExecutableExtensionFactory:org.eclipse.xtext.parser.IParser">
+    </class>
+ </extension>
 </plugin>

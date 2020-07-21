@@ -1,5 +1,7 @@
 package de.uka.ipd.sdq.dialogs.selection;
 
+import java.util.Optional;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -19,6 +21,8 @@ import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -85,9 +89,33 @@ public class SelectEObjectDialog extends TitleAreaDialog {
         this.contentProvider = contentProvider;
 
         viewer.setContentProvider(contentProvider);
+        viewer.setComparator(createViewerComparator());
         viewer.setLabelProvider(labelProvider);
         viewer.setInput(input);
         viewer.expandAll();
+    }
+
+    private static ViewerComparator createViewerComparator() {
+        return new ViewerComparator() {
+
+            private boolean isRootObject(Object o) {
+                return Optional.ofNullable(o)
+                        .filter(EObject.class::isInstance)
+                        .map(EObject.class::cast)
+                        .map(e -> e.eContainer() == null)
+                        .orElse(false);
+            }
+
+            @Override
+            public int compare(Viewer viewer, Object e1, Object e2) {
+                // do not sort root elements
+                if (isRootObject(e1) && isRootObject(e2)) {
+                    return 0;
+                }
+                return super.compare(viewer, e1, e2);
+            }
+
+        };
     }
 
     /**

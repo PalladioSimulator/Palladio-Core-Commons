@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.stoex.sdk"
       label="StoEx SDK Feature "
-      version="4.2.0.qualifier"
+      version="4.3.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -36,6 +36,13 @@
 
    <plugin
          id="org.palladiosimulator.commons.stoex.ide"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.commons.stoex.api"
          download-size="0"
          install-size="0"
          version="0.0.0"

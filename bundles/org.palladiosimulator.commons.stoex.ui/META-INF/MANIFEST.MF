@@ -1,8 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.palladiosimulator.stoex.ui
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 4.3.0.qualifier
 Bundle-SymbolicName: org.palladiosimulator.commons.stoex.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.palladiosimulator.commons.stoex;visibility:=reexport,
@@ -16,12 +15,16 @@ Require-Bundle: org.palladiosimulator.commons.stoex;visibility:=reexport,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare,
- org.eclipse.xtext.xbase.lib
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
+ org.palladiosimulator.commons.stoex.ide,
+ org.palladiosimulator.commons.stoex.api;bundle-version="4.3.0"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoex.ui.quickfix,
  org.palladiosimulator.commons.stoex.ui.contentassist,
- org.palladiosimulator.commons.stoex.ui.contentassist.antlr,
  org.palladiosimulator.commons.stoex.ui.internal
-Bundle-Activator: org.palladiosimulator.commons.stoex.ui.internal.StoExActivator
+Bundle-Activator: org.palladiosimulator.commons.stoex.ui.internal.StoexActivator
+Bundle-Vendor: palladiosimulator.org
+Automatic-Module-Name: org.palladiosimulator.commons.stoex.ui

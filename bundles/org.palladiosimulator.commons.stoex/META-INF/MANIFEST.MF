@@ -1,12 +1,12 @@
-Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.palladiosimulator.stoex
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: org.palladiosimulator.commons.stoex;singleton:=true
+Bundle-Name: org.palladiosimulator.commons.stoex
+Bundle-Version: 4.3.0.qualifier
+Bundle-SymbolicName: org.palladiosimulator.commons.stoex; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext;visibility:=reexport,
- org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xtext.generator;resolution:=optional,
  org.eclipse.xtext.generator;resolution:=optional,
  org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
@@ -17,22 +17,29 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.uml2.codegen.ecore.ui;bundle-version="1.8.0",
  org.eclipse.uml2.common;bundle-version="1.8.2",
  org.eclipse.uml2.common.edit;bundle-version="1.6.0",
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
- de.uka.ipd.sdq.stoex;bundle-version="2.1.0",
+ org.objectweb.asm;bundle-version="[5.0.1,8.0.0)";resolution:=optional,
+ de.uka.ipd.sdq.stoex;bundle-version="2.1.0";visibility:=reexport,
  org.eclipse.emf;bundle-version="2.6.0",
  org.eclipse.xtext.util,
- org.antlr.runtime,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
  org.eclipse.xtext.common.types,
- org.eclipse.xtext.xbase.lib
-Import-Package: org.apache.log4j,
- org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+ org.eclipse.xtend.standalone;bundle-version="2.8.2",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.ecore,
+ de.uka.ipd.sdq.stoex.analyser,
+ de.uka.ipd.sdq.errorhandling
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoex,
- org.palladiosimulator.commons.stoex.formatting,
- org.palladiosimulator.commons.stoex.generator,
  org.palladiosimulator.commons.stoex.scoping,
+ org.palladiosimulator.commons.stoex.generator,
  org.palladiosimulator.commons.stoex.serializer,
- org.palladiosimulator.commons.stoex.validation,
- org.palladiosimulator.commons.stoex.services,
  org.palladiosimulator.commons.stoex.parser.antlr,
- org.palladiosimulator.commons.stoex.parser.antlr.internal
+ org.palladiosimulator.commons.stoex.parser.antlr.internal,
+ org.palladiosimulator.commons.stoex.services,
+ org.palladiosimulator.commons.stoex.validation,
+ org.palladiosimulator.commons.stoex.formatting2
+Import-Package: org.apache.log4j
+Automatic-Module-Name: org.palladiosimulator.commons.stoex

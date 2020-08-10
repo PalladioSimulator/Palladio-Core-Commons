@@ -10,7 +10,10 @@ import org.antlr.runtime.Lexer;
 import org.antlr.runtime.MismatchedSetException;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.RecognizerSharedState;
-
+/**
+* @deprecated use {@link #new(org.palladiosimulators.commons.stoex.Stoex)} instead.
+*/
+@Deprecated
 public class StochasticExpressionsLexer extends Lexer {
     public static final int INNER = 43;
     public static final int MOD = 17;

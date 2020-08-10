@@ -2,13 +2,15 @@
 <feature
       id="org.palladiosimulator.stoex.sdk"
       label="StoEx SDK Feature "
-      version="1.0.0.qualifier"
+      version="4.3.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
    <requires>
       <import plugin="org.palladiosimulator.branding"/>
+      <import feature="org.eclipse.xtext.sdk" version="2.20.0.v20191202-1256"/>
+      <import feature="org.eclipse.xtend.sdk" version="2.20.0.v20191202-1256"/>
    </requires>
 
    <plugin
@@ -26,7 +28,21 @@
          unpack="false"/>
 
    <plugin
-         id="org.palladiosimulator.commons.stoex.adapter"
+         id="de.uka.ipd.sdq.stoex.analyser"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.commons.stoex.ide"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.commons.stoex.api"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,0 +1,278 @@
+/**
+ * @author Jonas Heinisch
+ * This is a textual grammar for Stochastic Expressions in common.
+ */
+grammar org.palladiosimulator.commons.stoex.Stoex hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://sdq.ipd.uka.de/StochasticExpressions/2.2"
+import "http://sdq.ipd.uka.de/ProbFunction/2.1"
+import "http://sdq.ipd.uka.de/Units/2.1"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+//#############################
+// start-rule:
+// expression -> ifelseExpr
+expression returns Expression:
+	ifelseExpr;
+
+	//#############################
+// Stochastic Expressions:
+
+// ifelseExpr -> boolAndExpr ('?' boolAndExpr ':' boolAndExpr)?
+ifelseExpr returns IfElse:
+	boolAndExpr ({IfElseExpression.conditionExpression=current} '?' ifExpression=boolAndExpr ':'
+	elseExpression=boolAndExpr)?;
+
+	//BooleanExpression -> boolOrExpr (BooleanOperations boolOrExpr)*
+// Note: This is a workaround for the serializer to work with AND-Operations!
+BooleanExpression:
+	boolOrExpr ({BooleanOperatorExpression.left=current} operation=BooleanOperations right=boolOrExpr)*;
+
+	//BooleanOperations -> AND | OR | XOR
+enum BooleanOperations:
+	AND | OR | XOR;
+
+	// boolAndExpr -> boolOrExpr (andoperation boolOrExpr)*
+boolAndExpr returns BooleanExpression:
+	boolOrExpr ({BooleanOperatorExpression.left=current} operation=andoperation right=boolOrExpr)*;
+
+	// andoperation -> AND
+enum andoperation returns BooleanOperations:
+	AND;
+
+	// boolOrExpr -> compareExpr (oroperations compareExpr)*
+boolOrExpr returns BooleanExpression:
+	compareExpr ({BooleanOperatorExpression.left=current} operation=oroperations right=compareExpr)*;
+
+	// oroperations -> OR|XOR
+enum oroperations returns BooleanOperations:
+	OR | XOR;
+
+	// compareExpr -> sumExpr (CompareOperations sumExpr)?
+compareExpr returns Comparison:
+	sumExpr ({CompareExpression.left=current} operation=CompareOperations right=sumExpr)?;
+
+	// CompareOperations -> '>' | '<' | '==' | '<>' | '>=' | '<='
+enum CompareOperations:
+	GREATER='>' | LESS='<' | EQUALS='==' | NOTEQUAL='<>' | GREATEREQUAL='>=' | LESSEQUAL='<=';
+
+	// sumExpr -> prodExpr (TermOperations prodExpr)*
+sumExpr returns Term:
+	prodExpr ({TermExpression.left=current} operation=TermOperations right=prodExpr)*;
+
+	// TermOperations -> "+" | "-"
+enum TermOperations:
+	ADD="+" | SUB="-";
+
+	// prodExpr -> powExpr (ProductOperations powExpr)*
+prodExpr returns Product:
+	powExpr ({ProductExpression.left=current} operation=ProductOperations right=powExpr)*;
+
+	// ProductOperations -> "*" | "/" | "%"
+enum ProductOperations:
+	MULT="*" | DIV="/" | MOD="%";
+
+	// powExpr -> unaryExpr (POW unaryExpr)?
+powExpr returns Power:
+	unaryExpr ({PowerExpression.base=current} '^' exponent=unaryExpr)?;
+
+	// unaryExpr -> NegativeExpression | NotExpression | atom
+unaryExpr returns Unary:
+	NegativeExpression | NotExpression | atom;
+
+	// NotExpression -> NOT unaryExpr
+NotExpression:
+	'NOT' inner=unaryExpr;
+
+	// NegativeExpression -> '-' unaryExpr
+NegativeExpression:
+	'-' inner=unaryExpr;
+
+	// atom -> 	IntLiteral | DoubleLiteral |StringLiteral | BoolLiteral | FunctionLiteral | Variable | Parenthesis | ProbabilityFunctionLiteral
+atom returns Atom:
+	IntLiteral |
+	DoubleLiteral |
+	StringLiteral |
+	BoolLiteral |
+	FunctionLiteral |
+	Variable |
+	Parenthesis |
+	ProbabilityFunctionLiteral;
+
+	// DoubleLiteral -> DOUBLE ('[' Unit ']')?
+DoubleLiteral:
+	value=DOUBLE ('[' unit=Unit ']')?;
+
+	// ProbabilityFunctionLiteral -> definition
+ProbabilityFunctionLiteral:
+	function_ProbabilityFunctionLiteral=definition;
+
+	// Parenthesis -> '(' ifelseExpr ')'
+Parenthesis:
+	'(' innerExpression=ifelseExpr ')';
+
+	// FunctionLiteral -> ID '(' (boolAndExpr (',' boolAndExpr)* )? ')'
+FunctionLiteral:
+	id=ID '(' (parameters_FunctionLiteral+=boolAndExpr
+	(',' parameters_FunctionLiteral+=boolAndExpr)*)? ')';
+
+	// Variable -> AbstractNamedReference
+Variable:
+	id_Variable=AbstractNamedReference;
+
+	// AbstractNamedReference -> VariableReference|NamespaceReference
+AbstractNamedReference:
+	NamespaceReference;
+
+	// VariableReference -> ID
+VariableReference:
+	referenceName=('BYTESIZE' | 'VALUE' | 'STRUCTURE' | 'TYPE' | 'NUMBER_OF_ELEMENTS');
+
+	// NamespaceReference -> ID '.' AbstractNamedReference
+NamespaceReference:
+	referenceName=ID '.' (innerReference_NamespaceReference=AbstractNamedReference
+	| innerReference_NamespaceReference=VariableReference);
+
+	// BoolLiteral -> BOOLEAN_KEYWORDS
+BoolLiteral:
+	value=BOOLEAN_KEYWORDS;
+
+	// StringLiteral -> STRING
+StringLiteral:
+	value=STRING;
+
+	// IntLiteral -> DECINT ('[' Unit ']')?
+IntLiteral:
+	value=DECINT ('[' unit=Unit ']')?;
+
+	//#############################
+// Units:
+
+// Unit -> unitMulti | unitDiv | BaseUnit
+Unit:
+	unitMulti | unitDiv | BaseUnit;
+
+	// unitDiv -> unitPow ('/' Unit)?
+unitDiv returns Unit:
+	unitPow ({UnitDivision.dividend=current} '/' divisor=Unit)?;
+
+	// unitMulti -> unitPow ('*' Unit)*
+unitMulti returns Unit:
+	unitPow ({UnitMultiplication.units+=current} '*' units+=Unit)*;
+
+	// unitPow -> (BaseUnit | '(' (unitMulti | unitDiv) ')') (POW SIGNED_INT)*
+unitPow returns Unit:
+	(BaseUnit |
+	'(' (unitMulti | unitDiv) ')') ({UnitPower.unit=current} '^' exponent=SIGNED_INT)*;
+
+	// BaseUnit -> UnitNames
+BaseUnit:
+	name=UnitNames;
+
+	// UnitNames -> "_" | "unitless" | "B" | "s" | "m"
+enum UnitNames:
+	UNITLESS="_" | UNITLESS="unitless" | BYTE="B" | SECOND="s" | METER="m";
+
+	//#############################
+//Probability Functions:
+
+// definition -> ProbabilityMassFunction | ProbabilityDensityFunction
+definition returns ProbabilityFunction:
+	ProbabilityMassFunction
+	| ProbabilityDensityFunction;
+
+	// ProbabilityDensityFunction -> BoxedPDF
+ProbabilityDensityFunction:
+	BoxedPDF;
+
+	// BoxedPDF -> DOUBLEPDF '[' (real_pdf_sample)+ ']' ('[' Unit ']')?
+BoxedPDF:
+	'DoublePDF' '[' (samples+=real_pdf_sample)+ ']'
+	('[' unit=Unit ']')?;
+
+	// ProbabilityMassFunction -> INTPMF '[' (numeric_int_sample)+ ']' ('[' Unit ']')?
+// ProbabilityMassFunction -> DOUBLEPMF '[' (numeric_real_sample)+ ']' ('[' Unit ']')?
+// ProbabilityMassFunction -> ENUMPMF ('(' 'ordered' ')')? '[' (stringsample)+ ']' ('[' Unit ']')?
+// ProbabilityMassFunction -> BOOLPMF ('(' 'ordered' ')')? '[' (boolsample)+ ']' ('[' Unit ']')?
+ProbabilityMassFunction:
+// Numeric PMF
+	'IntPMF' '[' (samples+=numeric_int_sample)+ ']' ('[' unit=Unit ']')? | 'DoublePMF' '[' (samples+=numeric_real_sample)+
+	']' ('[' unit=Unit ']')? | // Enum PMF
+	'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' (samples+=stringsample)+ ']' | // Bool PMF
+	'BoolPMF' ('(' orderedDomain?='ordered' ')')? '[' (samples+=boolsample)+ ']';
+
+	// numeric_int_sample -> '(' SIGNED_INT ';' DOUBLE ')'
+numeric_int_sample returns IntSample:
+	'(' value=SIGNED_INT //INT
+	';' probability=DOUBLE //DOUBLE
+	')';
+
+	// numeric_real_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'
+numeric_real_sample returns DoubleSample:
+	'(' value=SIGNED_NUMBER //DOUBLE
+	';' probability=DOUBLE //DOUBLE
+	')';
+
+	// real_pdf_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'		
+real_pdf_sample returns ContinuousSample:
+	'(' value=SIGNED_NUMBER //DOUBLE
+	';' probability=DOUBLE //DOUBLE
+	')';
+
+	// stringsample -> '(' STRING ';' DOUBLE ')'		
+stringsample returns StringSample:
+	'(' value=STRING ';' probability=DOUBLE //DOUBLE
+	')';
+
+	// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
+boolsample returns BoolSample:
+	'(' value=BOOLEAN_KEYWORDS ';' probability=DOUBLE //DOUBLE 
+	')';
+
+	//#############################
+// Datatype rules/terminals:
+
+// SIGNED_NUMBER -> ('-')? DOUBLE
+SIGNED_NUMBER returns ecore::EDouble:
+	('-')? DOUBLE;
+
+	// SIGNED_INT -> ('-')? DECINT
+SIGNED_INT returns ecore::EInt:
+	('-')? DECINT;
+
+	//#############################
+//terminals
+
+terminal DOUBLE returns ecore::EDouble:
+	DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E' | 'e') ('-' | '+')? DECINT));
+
+terminal DECINT returns ecore::EInt:
+	'0' | ('1'..'9') DIGIT*;
+
+terminal BOOLEAN_KEYWORDS returns ecore::EBoolean:
+	'false' | 'true';
+
+terminal fragment DIGIT:
+	'0'..'9';
+
+	//#############################
+//adapted from xtexts terminals:
+terminal ID:
+	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+
+terminal STRING:
+	'\"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | 'u' | '"' | "'" | '\\') | !('\\' | '"'))* '\"' |
+	'\'' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | 'u' | '"' | "'" | '\\') | !('\\' | '"'))* '\'';
+	//multi-line
+terminal ML_COMMENT:
+	'/*'->'*/';
+	//single-line comment
+terminal SL_COMMENT:
+	'//' !('\n' | '\r')* ('\r'? '\n')?;
+	//whitespaces
+terminal WS:
+	(' ' | '\t' | '\r' | '\n')+;
+
+terminal ANY_OTHER:
+	.;
+//#############################

@@ -6,10 +6,10 @@
    <feature id="org.palladiosimulator.commons.feature.source">
       <category name="org.palladiosimulator.corefeatures.source.category"/>
    </feature>
-   <feature id="org.palladiosimulator.stoex.sdk">
+   <feature id="org.palladiosimulator.commons.stoex.sdk">
       <category name="org.palladiosimulator.corefeatures.category"/>
    </feature>
-   <feature id="org.palladiosimulator.stoex.sdk.source">
+   <feature id="org.palladiosimulator.commons.stoex.sdk.source">
       <category name="org.palladiosimulator.corefeatures.source.category"/>
    </feature>
    <category-def name="org.palladiosimulator.corefeatures.category" label="This category contains all features which belong to a complete installation of the Palladio Bench Core Features">

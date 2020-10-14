@@ -159,6 +159,54 @@ public final class ExtensionHelper {
 
         return Collections.unmodifiableList(results);
     }
+    
+    /**
+     * Gets all executable extensions registered at a given extension point at a given element and
+     * conforming to a given attribute and filtered by the given attribute and its value.
+     * 
+     * @param extensionPointID
+     *            the extension point identifier; pointing to the extension point to get executable
+     *            extensions from.
+     * @param elementName
+     *            the name of the configuration element.
+     * @param attributeName
+     *            the name of the attribute.
+     * @param filterAttributeName
+     *            the attribute to be used for filtering.
+     * @param filterAttributeValue
+     *            the atrribute's value to be used for filtering. Found attributes have to equal
+     *            this value in case they should be chosen.
+     * @return a list of executable extensions matching to all selection criteria defined by this 
+     *         method's parameters.
+     * @param <DATA_TYPE>
+     *            the data type of the executable extension.
+     */
+    public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
+            final String elementName, final String attributeName, final String filterAttributeName,
+            final String filterAttributeValue) {
+        final List<IExtension> extensions = loadExtensions(extensionPointID);
+        final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
+
+        for (final IExtension extension : extensions) {
+            final IConfigurationElement configurationElement = obtainConfigurationElement(extension, elementName);
+
+            if (configurationElement.getAttribute(filterAttributeName)
+                .equals(filterAttributeValue)) {
+                try {
+                    @SuppressWarnings("unchecked")
+                    final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
+                        .createExecutableExtension(attributeName);
+                    results.add(executableExtension);
+                } catch (final CoreException e) {
+                    throw new RuntimeException("Could not create executable extension \"" + extensionPointID + "->"
+                            + elementName + "->" + attributeName + "\" with filter \"" + filterAttributeName + "\" = \""
+                            + filterAttributeValue + "\"");
+                }
+            }
+        }
+
+        return results;
+    }
 
     /**
      * Gets an executable extension registered at a given extension point at a given element and
@@ -183,25 +231,14 @@ public final class ExtensionHelper {
      */
     public static <DATA_TYPE> DATA_TYPE getExecutableExtension(final String extensionPointID, final String elementName,
             final String attributeName, final String filterAttributeName, final String filterAttributeValue) {
-        final List<IExtension> extensions = loadExtensions(extensionPointID);
+        var extensions = ExtensionHelper.<DATA_TYPE> getExecutableExtensions(extensionPointID, elementName,
+                attributeName, filterAttributeName, filterAttributeValue);
 
-        for (final IExtension extension : extensions) {
-            final IConfigurationElement configurationElement = obtainConfigurationElement(extension, elementName);
-
-            if (configurationElement.getAttribute(filterAttributeName).equals(filterAttributeValue)) {
-                try {
-                    @SuppressWarnings("unchecked")
-                    final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
-                            .createExecutableExtension(attributeName);
-                    return executableExtension;
-                } catch (final CoreException e) {
-                }
-            }
-        }
-
-        throw new RuntimeException("Could not create executable extension \"" + extensionPointID + "->" + elementName
-                + "->" + attributeName + "\" with filter \"" + filterAttributeName + "\" = \"" + filterAttributeValue
-                + "\"");
+        return extensions.stream()
+            .findAny()
+            .orElseThrow(() -> new RuntimeException("Could not create executable extension \"" + extensionPointID + "->"
+                    + elementName + "->" + attributeName + "\" with filter \"" + filterAttributeName + "\" = \""
+                    + filterAttributeValue + "\""));
     }
 
     /**

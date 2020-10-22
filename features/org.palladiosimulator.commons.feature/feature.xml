@@ -39,6 +39,10 @@
          id="de.uka.ipd.sdq.probfunction.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.palladiosimulator.commons.stoex.sdk"
+         version="0.0.0"/>
+
    <requires>
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.eclipse.emf.edit"/>

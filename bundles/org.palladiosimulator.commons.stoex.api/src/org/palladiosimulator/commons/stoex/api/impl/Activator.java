@@ -26,4 +26,5 @@ public class Activator extends Plugin {
     public static Activator getInstance() {
         return Activator.instance;
     }
+
 }

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.palladiosimulator.commons.stoex.api.impl.StoExParserImpl">
-   <service>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="org.palladiosimulator.commons.stoex.api.impl.StoExParserImpl">
+   <service scope="singleton">
       <provide interface="org.palladiosimulator.commons.stoex.api.StoExParser"/>
    </service>
-   <reference bind="init" interface="org.palladiosimulator.commons.stoex.api.impl.StoExToolProvider" name="init"/>
    <implementation class="org.palladiosimulator.commons.stoex.api.impl.StoExParserImpl"/>
 </scr:component>

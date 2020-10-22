@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.palladiosimulator.commons.stoex.sdk"
-      label="StoEx SDK Feature "
+      id="org.palladiosimulator.commons.stoex.ui.feature"
+      label="StoEx UI Feature"
       version="4.3.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
    <includes
-         id="org.palladiosimulator.commons.stoex.ui.feature"
+         id="org.palladiosimulator.commons.stoex.serialising.feature"
          version="0.0.0"/>
 
    <requires>
       <import plugin="org.palladiosimulator.branding"/>
    </requires>
+
+   <plugin
+         id="org.palladiosimulator.commons.stoex.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

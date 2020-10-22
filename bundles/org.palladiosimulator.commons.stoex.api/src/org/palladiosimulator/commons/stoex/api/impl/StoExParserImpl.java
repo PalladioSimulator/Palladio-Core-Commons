@@ -1,5 +1,6 @@
 package org.palladiosimulator.commons.stoex.api.impl;
 
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -7,39 +8,35 @@ import java.util.Optional;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.nodemodel.SyntaxErrorMessage;
 import org.eclipse.xtext.parser.IParseResult;
+import org.eclipse.xtext.parser.IParser;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ServiceScope;
 import org.palladiosimulator.commons.stoex.api.StoExParser;
-import org.palladiosimulator.commons.stoex.parser.antlr.StoexParser;
 
 import de.uka.ipd.sdq.stoex.Expression;
 
 /**
  * Wrapper for the Xtext StoEx parser.
  */
-@Component
+@Component(scope = ServiceScope.SINGLETON)
 public class StoExParserImpl implements StoExParser {
 
-    private StoexParser parser;
+    private final IParser parser;
 
     /**
-     * Initializes the instance by the tool provider.
-     * 
-     * After a call to this method, the implementation is assumed to be fully initialized.
-     * 
-     * @param toolProvider
-     *            The tool provider.
+     * Constructs new parser instance.
      */
-    @Reference
-    public void init(StoExToolProvider toolProvider) {
-        this.parser = toolProvider.getParser();
+    public StoExParserImpl() {
+        parser = new XtextStoExParserProvider().get();
     }
 
     @Override
     public Expression parse(String serializedStoEx) throws SyntaxErrorException {
-        IParseResult result = parser.doParse(serializedStoEx);
-        assertNoSyntaxErrorException(result);
-        return (Expression) result.getRootASTElement();
+        try (var sr = new StringReader(serializedStoEx)) {
+            IParseResult result = parser.parse(sr);
+            assertNoSyntaxErrorException(result);
+            return (Expression) result.getRootASTElement();            
+        }
     }
 
     /**

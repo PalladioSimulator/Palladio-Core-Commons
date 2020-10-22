@@ -1,12 +1,14 @@
 package org.palladiosimulator.commons.stoex.api;
 
+import org.palladiosimulator.commons.stoex.api.impl.StoExParserImpl;
+
 import de.uka.ipd.sdq.stoex.Expression;
 
 /**
  * Service interface for StoEx parsers.
  * 
  * The parser translates a serialized StoEx into an {@link Expression}. You can acquire an instance
- * of the parser via OSGi declarative services.
+ * of the parser via OSGi declarative services or use the {@link #createInstance()} method.
  *
  */
 public interface StoExParser {
@@ -39,5 +41,14 @@ public interface StoExParser {
      *             thrown in case of a syntax error.
      */
     Expression parse(String serializedStoEx) throws SyntaxErrorException;
+    
+    /**
+     * Creates an instance of the {@link StoExParser}.
+     * 
+     * @return Instance of {@link StoExParser}
+     */
+    static StoExParser createInstance() {
+        return new StoExParserImpl();
+    }
 
 }

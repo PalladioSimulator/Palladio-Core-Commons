@@ -3,9 +3,15 @@
  */
 package org.palladiosimulator.commons.stoex
 
+import org.palladiosimulator.commons.stoex.parser.PostProcessingStoExParser
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 class StoexRuntimeModule extends AbstractStoexRuntimeModule {
+    
+    override bindIParser() {
+        return PostProcessingStoExParser;
+    }
+    
 }

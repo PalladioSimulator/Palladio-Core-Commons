@@ -2,6 +2,7 @@ package de.uka.ipd.sdq.stoex.analyser.visitors;
 
 import java.util.HashMap;
 import java.util.Optional;
+import java.util.ServiceLoader;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
@@ -60,29 +61,45 @@ public class ExpressionInferTypeVisitor extends StoexSwitch<Object> {
     /**
   	 * Optional extension for determining the type of a variable
   	 */
-    private Optional<ITypeInference> typeInference = Optional.empty();
+    private final Optional<ITypeInference> typeInference;
 
     /**
 	 * Standard constructor which tries to load all required extensions via Eclipse.
 	 */
 	public ExpressionInferTypeVisitor() {
-    	try {
-    		// Iterate over all configuration items from all extensions configured in the identified extension point
-            for (IConfigurationElement Element : Platform.getExtensionRegistry().getConfigurationElementsFor(EXTENSION_POINT_ID)) {
-                // Create a new instance of the identified executable extension 
-            	final Object extension = Element.createExecutableExtension("class");
-            	// If this extension is of ITypeInference, it is used to Inferencing the type
-                if (extension instanceof ITypeInference) {
-                	typeInference = Optional.of(((ITypeInference) extension));
-                	break;
-                }
-            }
-        } catch (InvalidRegistryObjectException | CoreException e) {
-        	LOGGER.debug("The extension for the Stoex analyzer could not be loaded.", e);
-        } 
-		
+	    typeInference = findTypeInferenceExtension();
 	}
 
+    /**
+     * Finds an {@link ITypeInference} service.
+     * 
+     * The method either tries to find the service via the extension point registry or via a
+     * {@link ServiceLoader}.
+     * 
+     * @return The service instance or an empty result.
+     */
+    protected Optional<ITypeInference> findTypeInferenceExtension() {
+        if (Platform.isRunning()) {
+            try {
+                // Iterate over all configuration items from all extensions configured in the
+                // identified extension point
+                for (IConfigurationElement Element : Platform.getExtensionRegistry()
+                    .getConfigurationElementsFor(EXTENSION_POINT_ID)) {
+                    // Create a new instance of the identified executable extension
+                    final Object extension = Element.createExecutableExtension("class");
+                    // If this extension is of ITypeInference, it is used to Inferencing the type
+                    if (extension instanceof ITypeInference) {
+                        return Optional.of(((ITypeInference) extension));
+                    }
+                }
+            } catch (InvalidRegistryObjectException | CoreException e) {
+                LOGGER.debug("The extension for the Stoex analyzer could not be loaded.", e);
+            }
+        }
+        return ServiceLoader.load(ITypeInference.class)
+            .findFirst();
+    }
+	
 	/**
      * Result of a compare expression is always of type BOOL_PMF.
      */
@@ -247,8 +264,9 @@ public class ExpressionInferTypeVisitor extends StoexSwitch<Object> {
     @Override
     public Object caseVariable(final Variable var) {
     	// If a type inference extension is present, it is used to get the type of a variable
-    	TypeEnum type = typeInference.isPresent() ? typeInference.get().getType(var) : null;
-    	
+        TypeEnum type = typeInference.isPresent() ? typeInference.get()
+            .getType(var) : TypeEnum.ANY_PMF;
+
     	if (type == null)
     		return var;
     	else if (type == TypeEnum.ANY_PMF)

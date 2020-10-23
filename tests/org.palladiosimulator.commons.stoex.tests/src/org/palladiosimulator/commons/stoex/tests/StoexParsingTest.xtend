@@ -84,10 +84,7 @@ class StoexParsingTest {
 
     @Test
     def void parseMax() {
-        val result = parseHelper.parse('''Max ( 35374 * 10 , 60 * 196 * 2375646 + 60 * 196 * 13697006 )''')
-        /* TODO I removed "/ loopSize.VALUE" from the above because it was failing in 
-         * plugin test mode. It worked in standalone mode, though. 
-         * Figure out why and if there is a bug. [Krach]*/
+        val result = parseHelper.parse('''Max ( 35374 * 10 , 60 * 196 * 2375646 + 60 * 196 * 13697006 ) / loopSize.VALUE''')
         assertNoIssues(result)
     }
 
@@ -122,6 +119,12 @@ class StoexParsingTest {
     def void parseRandomChars() {
         val result = parseHelper.parse('''a$JFfuRKrp23r32#''')
         Assert.assertNull(result)
+    }
+    
+    @Test
+    def void parseVariable() {
+        val result = parseHelper.parse('''file.TYPE''')
+        assertNoIssues(result)
     }
 
 }

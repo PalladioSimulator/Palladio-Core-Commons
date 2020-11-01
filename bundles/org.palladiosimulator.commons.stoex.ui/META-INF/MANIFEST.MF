@@ -18,13 +18,15 @@ Require-Bundle: org.palladiosimulator.commons.stoex;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
  org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
  org.palladiosimulator.commons.stoex.ide,
- org.palladiosimulator.commons.stoex.api;bundle-version="4.3.0"
+ org.palladiosimulator.commons.stoex.api;bundle-version="4.3.0",
+ de.uka.ipd.sdq.stoex.analyser
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: org.palladiosimulator.commons.stoex.ui.quickfix,
- org.palladiosimulator.commons.stoex.ui.contentassist,
- org.palladiosimulator.commons.stoex.ui.internal
-Bundle-Activator: org.palladiosimulator.commons.stoex.ui.internal.StoexActivator
+Export-Package: org.palladiosimulator.commons.stoex.ui.contentassist,
+ org.palladiosimulator.commons.stoex.ui.dialog,
+ org.palladiosimulator.commons.stoex.ui.internal,
+ org.palladiosimulator.commons.stoex.ui.quickfix
+Bundle-Activator: org.palladiosimulator.commons.stoex.ui.internal.CustomStoexActivator
 Bundle-Vendor: palladiosimulator.org
 Automatic-Module-Name: org.palladiosimulator.commons.stoex.ui

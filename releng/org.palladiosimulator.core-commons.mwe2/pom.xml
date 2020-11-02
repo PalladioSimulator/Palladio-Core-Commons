@@ -28,7 +28,7 @@
 							<arguments>
 								<argument>/${project.basedir}/workflow/GenerateStoex.mwe2</argument>
 								<argument>-p</argument>
-								<argument>rootPath=/${maven.multiModuleProjectDirectory}</argument>
+								<argument>workspaceRoot=/${maven.multiModuleProjectDirectory}</argument>
 							</arguments>
 							<classpathScope>compile</classpathScope>
 							<includePluginDependencies>true</includePluginDependencies>

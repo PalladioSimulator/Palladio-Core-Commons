@@ -7,7 +7,7 @@ import tools.mdsd.ecoreworkflow.mwe2lib.component.RegexComponent
 import tools.mdsd.ecoreworkflow.mwe2lib.component.URISupportingDirectoryCleaner
 import tools.mdsd.ecoreworkflow.mwe2lib.component.GenPatternPostProcessor
 
-var workspaceRoot = "../../"
+var workspaceRoot = "../.."
 
 Workflow {
     bean = EclipseRCPSupportingStandaloneSetup {

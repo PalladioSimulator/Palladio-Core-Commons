@@ -9,8 +9,6 @@ import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.nodemodel.SyntaxErrorMessage;
 import org.eclipse.xtext.parser.IParseResult;
 import org.eclipse.xtext.parser.IParser;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ServiceScope;
 import org.palladiosimulator.commons.stoex.api.StoExParser;
 
 import de.uka.ipd.sdq.stoex.Expression;
@@ -18,7 +16,6 @@ import de.uka.ipd.sdq.stoex.Expression;
 /**
  * Wrapper for the Xtext StoEx parser.
  */
-@Component(scope = ServiceScope.SINGLETON)
 public class StoExParserImpl implements StoExParser {
 
     private final IParser parser;

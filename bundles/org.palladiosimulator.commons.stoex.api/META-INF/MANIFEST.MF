@@ -6,10 +6,9 @@ Bundle-Version: 4.3.0.qualifier
 Automatic-Module-Name: org.palladiosimulator.commons.stoex.api
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.eclipse.xtext,
- org.palladiosimulator.commons.stoex;bundle-version="4.3.0";visibility:=reexport
+ org.palladiosimulator.commons.stoex;bundle-version="4.3.0";visibility:=reexport,
+ org.palladiosimulator.commons;bundle-version="4.3.0"
 Bundle-ActivationPolicy: lazy
 Import-Package: org.osgi.service.component.annotations;version="1.3.0"
 Export-Package: org.palladiosimulator.commons.stoex.api
-Service-Component: OSGI-INF/org.palladiosimulator.commons.stoex.api.impl.StoExParserImpl.xml,
- OSGI-INF/org.palladiosimulator.commons.stoex.api.impl.StoExSerialiserImpl.xml
 Bundle-Activator: org.palladiosimulator.commons.stoex.api.impl.Activator

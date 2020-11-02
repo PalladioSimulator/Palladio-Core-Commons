@@ -2,20 +2,14 @@ package org.palladiosimulator.commons.stoex.parser;
 
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
-import java.util.Optional;
 import java.util.ServiceLoader;
-import java.util.stream.Collectors;
 
 import org.antlr.runtime.CharStream;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.parser.IParseResult;
+import org.palladiosimulator.commons.eclipseutils.ExtensionHelper;
 import org.palladiosimulator.commons.stoex.parser.antlr.StoexParser;
 
 /**
@@ -48,31 +42,13 @@ public class PostProcessingStoExParser extends StoexParser {
      * @return The identified processors.
      */
     protected Iterable<ParseResultPostProcessor> findPostProcessors() {
-        var result = new ArrayList<ParseResultPostProcessor>();
         if (Platform.isRunning()) {
-            var configurationElements = Optional.ofNullable(Platform.getExtensionRegistry())
-                .map(r -> r.getConfigurationElementsFor(EP_ID))
-                .map(Arrays::asList)
-                .map(l -> l.stream()
-                    .filter(Objects::nonNull)
-                    .collect(Collectors.toList()))
-                .orElse(Collections.emptyList());
-            for (IConfigurationElement configurationElement : configurationElements) {
-                try {
-                    Object extension = configurationElement.createExecutableExtension(EP_ATTR_ID);
-                    if (extension instanceof ParseResultPostProcessor) {
-                        result.add((ParseResultPostProcessor) extension);
-                    }
-                } catch (CoreException e) {
-                    // error in instantiation
-                    // ignore for now and try next one
-                }
-            }
-        } else {
-            var processors = ServiceLoader.load(ParseResultPostProcessor.class);
-            for (var processor : processors) {
-                result.add(processor);
-            }
+            return ExtensionHelper.getExecutableExtensions(EP_ID, EP_ATTR_ID);
+        }
+        var result = new ArrayList<ParseResultPostProcessor>();
+        var processors = ServiceLoader.load(ParseResultPostProcessor.class);
+        for (var processor : processors) {
+            result.add(processor);
         }
         return result;
     }

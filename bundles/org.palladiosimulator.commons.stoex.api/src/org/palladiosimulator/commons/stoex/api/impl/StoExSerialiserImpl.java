@@ -10,8 +10,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.serializer.ISerializer;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ServiceScope;
 import org.palladiosimulator.commons.stoex.api.StoExSerialiser;
 
 import de.uka.ipd.sdq.stoex.Expression;
@@ -19,7 +17,6 @@ import de.uka.ipd.sdq.stoex.Expression;
 /**
  * Wrapper for an serialize for StoEx expressions.
  */
-@Component(scope = ServiceScope.SINGLETON)
 public class StoExSerialiserImpl implements StoExSerialiser {
 
     private final ISerializer serialiser;

@@ -13,6 +13,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import org.eclipse.xtext.testing.validation.ValidationTestHelper
+import static org.junit.Assert.assertNull
 
 @RunWith(XtextRunner)
 @InjectWith(StoexInjectorProvider)
@@ -124,6 +125,18 @@ class StoexParsingTest {
     @Test
     def void parseVariable() {
         val result = parseHelper.parse('''file.TYPE''')
+        assertNoIssues(result)
+    }
+    
+    @Test
+    def void parseReferenceWithKeyword() {
+        val result = parseHelper.parse('''ordered.TYPE''')
+        assertNull(result)
+    }
+    
+    @Test
+    def void parseShortVariable() {
+        val result = parseHelper.parse('''s.TYPE''')
         assertNoIssues(result)
     }
 

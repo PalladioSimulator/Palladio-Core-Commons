@@ -52,14 +52,18 @@ class StoexFormatter extends AbstractFormatter2 {
 	}
 	
 	def dispatch void format(IntLiteral intLiteral, extension IFormattableDocument document) {
+	    /*
 		intLiteral.regionFor.keyword(intLiteralAccess.leftSquareBracketKeyword_1_0).prepend[oneSpace].append[oneSpace]
 		intLiteral.regionFor.keyword(intLiteralAccess.rightSquareBracketKeyword_1_2.prepend[oneSpace].append[oneSpace])
+		*/
 		intLiteral.value.format
 	}
 	
 	def dispatch void format(DoubleLiteral doubleLiteral, extension IFormattableDocument document) {
+	    /*
 		doubleLiteral.regionFor.keyword(doubleLiteralAccess.leftSquareBracketKeyword_1_0).prepend[oneSpace].append[oneSpace]
 		doubleLiteral.regionFor.keyword(doubleLiteralAccess.rightSquareBracketKeyword_1_2).prepend[oneSpace].append[oneSpace]
+		*/
 	}
 	
 	def dispatch void format(NegativeExpression negativeExpression, extension IFormattableDocument document) {
@@ -91,28 +95,30 @@ class StoexFormatter extends AbstractFormatter2 {
 		termExpression.prepend[noSpace; lowPriority].append[noSpace; lowPriority]
 	}
 	
+	/*
 	def dispatch void format(UnitPower unitPower, extension IFormattableDocument document) {
 		unitPower.regionFor.keyword(unitPowAccess.circumflexAccentKeyword_1_1).prepend[oneSpace].append[oneSpace]
 		unitPower.regionFor.keyword(unitPowAccess.leftParenthesisKeyword_0_1_0).append[oneSpace]
 		unitPower.regionFor.keyword(unitPowAccess.rightParenthesisKeyword_0_1_2).prepend[oneSpace]
 	}
+	*/
 	
 	def dispatch void format(ProbabilityMassFunction<Sample<?>> probabilityMassFunction, extension IFormattableDocument document) {
 		probabilityMassFunction.samples.forEach[format]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftParenthesisKeyword_2_1_0).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftParenthesisKeyword_3_1_0).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_0_1).prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_0_4_0).prepend[noSpace].append[noSpace]
+		//probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_0_4_0).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_1_1).prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_1_4_0).prepend[noSpace].append[noSpace]
+		//probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_1_4_0).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_2_2).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.leftSquareBracketKeyword_3_2).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightParenthesisKeyword_2_1_2).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightParenthesisKeyword_3_1_2).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_0_3).prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_0_4_2).prepend[noSpace].append[noSpace]
+		//probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_0_4_2).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_1_3).prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_1_4_2).prepend[noSpace].append[noSpace]
+		//probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_1_4_2).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_2_4).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_3_4).prepend[noSpace].append[noSpace]
 		
@@ -129,12 +135,13 @@ class StoexFormatter extends AbstractFormatter2 {
 	def dispatch void format(BoxedPDF boxedPDF, extension IFormattableDocument document) {
 		boxedPDF.regionFor.keyword(boxedPDFAccess.doublePDFKeyword_0).prepend[noSpace; lowPriority].append[noSpace; lowPriority]
 		boxedPDF.regionFor.keyword(boxedPDFAccess.leftSquareBracketKeyword_1).prepend[noSpace].append[noSpace]
-		boxedPDF.regionFor.keyword(boxedPDFAccess.leftSquareBracketKeyword_4_0).prepend[noSpace].append[noSpace]
+		//boxedPDF.regionFor.keyword(boxedPDFAccess.leftSquareBracketKeyword_4_0).prepend[noSpace].append[noSpace]
 		
 		boxedPDF.regionFor.keyword(boxedPDFAccess.rightSquareBracketKeyword_3).prepend[noSpace].append[noSpace]
-		boxedPDF.regionFor.keyword(boxedPDFAccess.rightSquareBracketKeyword_4_2).prepend[noSpace].append[noSpace]
+		//boxedPDF.regionFor.keyword(boxedPDFAccess.rightSquareBracketKeyword_4_2).prepend[noSpace].append[noSpace]
 	}
 	
+	/*
 	def dispatch void format(UnitMultiplication unitMultiplication, extension IFormattableDocument document) {
 		unitMultiplication.regionFor.keyword(unitMultiAccess.asteriskKeyword_1_1).prepend[oneSpace].append[oneSpace]
 	}
@@ -142,6 +149,7 @@ class StoexFormatter extends AbstractFormatter2 {
 	def dispatch void format(UnitDivision unitDivision, extension IFormattableDocument document) {
 		unitDivision.regionFor.keyword(unitDivAccess.solidusKeyword_1_1).prepend[oneSpace].append[oneSpace]
 	}
+	*/
 	
 	def dispatch void format(NamespaceReference namespaceReference, extension IFormattableDocument document) {
 		namespaceReference.regionFor.keyword(namespaceReferenceAccess.fullStopKeyword_1).prepend[noSpace].append[noSpace]

@@ -1,14 +1,9 @@
 package org.palladiosimulator.commons.stoex.api.impl;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
+import org.palladiosimulator.commons.eclipseutils.ExtensionHelper;
 
 /**
  * Abstract base class for {@link XtextToolProvider} implementations.
@@ -54,30 +49,15 @@ public abstract class XtextToolProviderImpl<T> implements XtextToolProvider<T> {
      * 
      * @return The found extension or an empty {@link Optional} otherwise.
      */
-    @SuppressWarnings("unchecked")
     protected Optional<T> getExtension() {
         if (!Platform.isRunning()) {
             return Optional.empty();
         }
-        var configurationElements = Optional.ofNullable(Platform.getExtensionRegistry())
-            .map(r -> r.getConfigurationElementsFor(extensionPointId))
-            .map(Arrays::asList)
-            .map(l -> l.stream()
-                .filter(Objects::nonNull)
-                .collect(Collectors.toList()))
-            .orElse(Collections.emptyList());
-        for (IConfigurationElement configurationElement : configurationElements) {
-            try {
-                Object extension = configurationElement.createExecutableExtension(extensionPointAttr);
-                if (requestedType.isInstance(extension)) {
-                    return Optional.of((T) extension);
-                }
-            } catch (CoreException e) {
-                // error in instantiation
-                // ignore for now and try next one
-            }
+        final var foundExtensions = ExtensionHelper.<T> getExecutableExtensions(extensionPointId, extensionPointAttr);
+        if (foundExtensions.isEmpty()) {
+            return Optional.empty();
         }
-        return Optional.empty();
+        return Optional.of(foundExtensions.get(0));
     }
 
     /**

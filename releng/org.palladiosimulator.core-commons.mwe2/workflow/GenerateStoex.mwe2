@@ -7,12 +7,12 @@ import org.eclipse.emf.mwe.utils.StandaloneSetup
 import tools.mdsd.ecoreworkflow.mwe2lib.xtext.config.TychoStandardLayoutProjectConfig
 
 var projectName = "org.palladiosimulator.commons.stoex"
-var rootPath = "../.."
+var workspaceRoot = "../.."
 
 Workflow {
 	bean = StandaloneSetup {
 		scanClassPath = true
-		platformUri = "${rootPath}"
+		platformUri = "${workspaceRoot}"
 		uriMap = {
 			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
 			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
@@ -43,7 +43,7 @@ Workflow {
 		configuration = {
 			project = TychoStandardLayoutProjectConfig {
 				baseName = "${projectName}"
-				rootPath = rootPath
+				rootPath = workspaceRoot
 				runtimeTest = {
 					enabled = true
 				}

@@ -76,7 +76,7 @@ public final class ExtensionHelper {
                     results.add(executableExtension);
                 } catch (final CoreException e) {
                     throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
-                            + attributeName + "\"");
+                            + attributeName + "\"", e);
                 }
             }
         }

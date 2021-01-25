@@ -139,5 +139,17 @@ class StoexParsingTest {
         val result = parseHelper.parse('''s.TYPE''')
         assertNoIssues(result)
     }
+    
+    @Test
+    def void parseDoublePMFWithIntegerValue() {
+        val result = parseHelper.parse('''DoublePMF[(16850000000;0.5)(16950000000;0.5)]''')
+        assertNoIssues(result)
+    }
+    
+    @Test
+    def void parseDoublePMFWithIntegerProbability() {
+        val result = parseHelper.parse('''DoublePMF[(1;0.5)(2;0.5)(3;0)]''')
+        assertNoIssues(result)
+    }
 
 }

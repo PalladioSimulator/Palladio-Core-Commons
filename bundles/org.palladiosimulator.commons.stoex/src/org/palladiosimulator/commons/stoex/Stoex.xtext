@@ -208,37 +208,41 @@ ProbabilityMassFunction:
 	// numeric_int_sample -> '(' SIGNED_INT ';' DOUBLE ')'
 numeric_int_sample returns IntSample:
 	'(' value=SIGNED_INT //INT
-	';' probability=DOUBLE //DOUBLE
+	';' probability=NUMBER //DOUBLE
 	')';
 
 	// numeric_real_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'
 numeric_real_sample returns DoubleSample:
 	'(' value=SIGNED_NUMBER //DOUBLE
-	';' probability=DOUBLE //DOUBLE
+	';' probability=NUMBER //DOUBLE
 	')';
 
 	// real_pdf_sample -> '(' SIGNED_NUMBER ';' DOUBLE ')'		
 real_pdf_sample returns ContinuousSample:
 	'(' value=SIGNED_NUMBER //DOUBLE
-	';' probability=DOUBLE //DOUBLE
+	';' probability=NUMBER //DOUBLE
 	')';
 
 	// stringsample -> '(' STRING ';' DOUBLE ')'		
 stringsample returns StringSample:
-	'(' value=STRING ';' probability=DOUBLE //DOUBLE
+	'(' value=STRING ';' probability=NUMBER //DOUBLE
 	')';
 
 	// boolsample -> '(' BOOLEAN_KEYWORDS ';' DOUBLE ')'
 boolsample returns BoolSample:
-	'(' value=BOOLEAN_KEYWORDS ';' probability=DOUBLE //DOUBLE 
+	'(' value=BOOLEAN_KEYWORDS ';' probability=NUMBER //DOUBLE 
 	')';
 
 	//#############################
 // Datatype rules/terminals:
 
+NUMBER returns ecore::EDouble:
+    DECINT|DOUBLE
+;
+
 // SIGNED_NUMBER -> ('-')? DOUBLE
 SIGNED_NUMBER returns ecore::EDouble:
-	('-')? DOUBLE;
+	('-')? NUMBER;
 
 	// SIGNED_INT -> ('-')? DECINT
 SIGNED_INT returns ecore::EInt:

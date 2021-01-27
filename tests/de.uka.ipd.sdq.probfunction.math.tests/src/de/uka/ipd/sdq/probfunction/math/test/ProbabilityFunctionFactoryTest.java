@@ -7,14 +7,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import junit.framework.JUnit4TestAdapter;
-
 import org.eclipse.emf.common.util.EList;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
+import de.uka.ipd.sdq.probfunction.BoolSample;
 import de.uka.ipd.sdq.probfunction.BoxedPDF;
 import de.uka.ipd.sdq.probfunction.ContinuousSample;
+import de.uka.ipd.sdq.probfunction.DoubleSample;
+import de.uka.ipd.sdq.probfunction.IntSample;
 import de.uka.ipd.sdq.probfunction.ProbabilityMassFunction;
 import de.uka.ipd.sdq.probfunction.ProbfunctionFactory;
 import de.uka.ipd.sdq.probfunction.Sample;
@@ -39,6 +41,7 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnitNameNotSetException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnitNotSetException;
 import de.uka.ipd.sdq.probfunction.math.exception.UnknownPDFTypeException;
 import de.uka.ipd.sdq.probfunction.math.impl.ProbabilityFunctionFactoryImpl;
+import junit.framework.JUnit4TestAdapter;
 
 /**
  * @author Ihssane
@@ -149,6 +152,54 @@ public class ProbabilityFunctionFactoryTest {
 
         // assertTrue(iProbFunc.getUnit().getUnitName().equals("sec"));
         assertTrue(iProbFunc.hasOrderedDomain());
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void iPMFToPMFForIntSamples() {
+        var iPMF = pfFactory.createPMFFromMeasurements(new Integer[] { 0, 1, 2 }, null, false);
+        var pmf = pfFactory.transformToModelPMF(iPMF);
+        assertTrue(pmf.getSamples()
+            .stream()
+            .allMatch(IntSample.class::isInstance));
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void iPMFToPMFForDoubleSamples() {
+        var iPMF = pfFactory.createPMFFromMeasurements(new Double[] { 0.0, 1.1, 2.2 }, 0.01, null, false);
+        var pmf = pfFactory.transformToModelPMF(iPMF);
+        assertTrue(pmf.getSamples()
+            .stream()
+            .allMatch(DoubleSample.class::isInstance));
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void iPMFToPMFForBooleanSamples() {
+        var iPMF = pfFactory.createPMFFromMeasurements(new Boolean[] { true, false, true }, null, false);
+        var pmf = pfFactory.transformToModelPMF(iPMF);
+        assertTrue(pmf.getSamples()
+            .stream()
+            .allMatch(BoolSample.class::isInstance));
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void iPMFToPMFForMixedSamples() {
+        var iPMF = pfFactory.createPMFFromMeasurements(new Double[] { 0.1, 1.1, 2.2 }, 0.01, null, false);
+        var newSamples = new ArrayList<>(iPMF.getSamples());
+        var intSample = pfFactory.createSample(1, 0.1);
+        newSamples.add(intSample);
+
+        var ipmfMock = Mockito.mock(IProbabilityMassFunction.class);
+        Mockito.when(ipmfMock.getSamples())
+            .thenReturn(newSamples);
+        var pmf = pfFactory.transformToModelPMF(ipmfMock);
+
+        assertTrue(pmf.getSamples()
+            .stream()
+            .allMatch(s -> s.getClass() == de.uka.ipd.sdq.probfunction.impl.SampleImpl.class));
     }
 
     @Test

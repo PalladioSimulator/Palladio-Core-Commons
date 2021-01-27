@@ -19,3 +19,4 @@ Require-Bundle: de.uka.ipd.sdq.probfunction;bundle-version="2.1.0",
  org.apache.log4j;bundle-version="1.2.15"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: de.uka.ipd.sdq.probfunction.math

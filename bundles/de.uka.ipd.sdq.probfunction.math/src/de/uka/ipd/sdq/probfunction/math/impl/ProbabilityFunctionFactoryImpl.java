@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.commons.math.complex.Complex;
 import org.eclipse.emf.common.util.EList;
@@ -437,9 +438,24 @@ public class ProbabilityFunctionFactoryImpl implements IProbabilityFunctionFacto
     public ProbabilityMassFunction transformToModelPMF(IProbabilityMassFunction pmf) {
         ProbabilityMassFunction epmf = eFactory.createProbabilityMassFunction();
         EList list = epmf.getSamples();
+        
+        var valueTypes = pmf.getSamples()
+            .stream()
+            .map(ISample::getValue)
+            .map(Object::getClass)
+            .collect(Collectors.toSet());
+        if (valueTypes.size() == 1) {
+            // we can create typed samples because all samples have the same value type
+            pmf.getSamples()
+                .stream()
+                .map(this::transformToTypedModelSample)
+                .forEach(list::add);
+        } else {
+            for (ISample s : pmf.getSamples()) {
+                list.add(transformToModelSample(s));                            
+            }
+        }
 
-        for (ISample s : pmf.getSamples())
-            list.add(transformToModelSample(s));
         // TODO:Unit!
         // epmf.setUnitSpecification(transformToModelUnitSpecification(pmf.getUnit()));
         epmf.setOrderedDomain(pmf.hasOrderedDomain());
@@ -545,6 +561,29 @@ public class ProbabilityFunctionFactoryImpl implements IProbabilityFunctionFacto
         eSample.setProbability(sample.getProbability());
         eSample.setValue(sample.getValue());
         return eSample;
+    }
+    
+    protected Sample transformToTypedModelSample(ISample sample) {
+        var value = sample.getValue();
+        if (value instanceof Integer) {
+            var newSample = eFactory.createIntSample();
+            newSample.setProbability(sample.getProbability());
+            newSample.setValue((Integer) value);
+            return newSample;
+        }
+        if (value instanceof Double) {
+            var newSample = eFactory.createDoubleSample();
+            newSample.setProbability(sample.getProbability());
+            newSample.setValue((Double) value);
+            return newSample;
+        }
+        if (value instanceof Boolean) {
+            var newSample = eFactory.createBoolSample();
+            newSample.setProbability(sample.getProbability());
+            newSample.setValue((Boolean) value);
+            return newSample;
+        }
+        return transformToModelSample(sample);
     }
 
     public String transformToModelUnitSpecification(IUnit unit) {

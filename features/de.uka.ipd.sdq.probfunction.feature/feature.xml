@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.probfunction.feature"
       label="Palladio Commons Probability Functions"
-      version="4.3.0.qualifier"
+      version="5.0.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -17,7 +17,7 @@
       <import plugin="de.uka.ipd.sdq.units"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="de.uka.ipd.sdq.units.edit"/>
-      <import plugin="de.uka.ipd.sdq.stoex" version="4.3.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.stoex" version="5.0.0" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.math" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
@@ -31,14 +31,14 @@
          id="de.uka.ipd.sdq.probfunction"
          download-size="0"
          install-size="0"
-         version="4.3.0.qualifier"
+         version="5.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.uka.ipd.sdq.probfunction.edit"
          download-size="0"
          install-size="0"
-         version="4.3.0.qualifier"
+         version="5.0.0.qualifier"
          unpack="false"/>
 
    <plugin

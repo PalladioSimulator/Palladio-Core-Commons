@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.palladiosimulator.stoex.ui
-Bundle-Version: 4.3.0.qualifier
+Bundle-Version: 5.0.0.qualifier
 Bundle-SymbolicName: org.palladiosimulator.commons.stoex.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.palladiosimulator.commons.stoex;visibility:=reexport,
@@ -18,7 +18,7 @@ Require-Bundle: org.palladiosimulator.commons.stoex;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
  org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
  org.palladiosimulator.commons.stoex.ide,
- org.palladiosimulator.commons.stoex.api;bundle-version="4.3.0",
+ org.palladiosimulator.commons.stoex.api;bundle-version="5.0.0",
  de.uka.ipd.sdq.stoex.analyser
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib

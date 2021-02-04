@@ -23,6 +23,10 @@ import de.uka.ipd.sdq.stoex.Variable
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.palladiosimulator.commons.stoex.services.StoexGrammarAccess
+import de.uka.ipd.sdq.probfunction.StringSample
+import de.uka.ipd.sdq.probfunction.DoubleSample
+import de.uka.ipd.sdq.probfunction.IntSample
+import de.uka.ipd.sdq.probfunction.BoolSample
 
 class StoexFormatter extends AbstractFormatter2 {
 	
@@ -99,15 +103,43 @@ class StoexFormatter extends AbstractFormatter2 {
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_2_4).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_3_4).prepend[noSpace].append[noSpace]
 		
-		probabilityMassFunction.regionFor.keyword("IntPMF").prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword("DoublePMF").prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword("EnumPMF").prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword("BoolPMF").prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.intPMFKeyword_0_0).prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.doublePMFKeyword_1_0).prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.enumPMFKeyword_2_0).prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.boolPMFKeyword_3_0).prepend[noSpace].append[noSpace]
 	}
 	
 	def dispatch void format(Sample<?> sample, extension IFormattableDocument document) {
 		sample.prepend[noSpace].append[noSpace]
 	}
+
+    def dispatch void format(IntSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(numeric_int_sampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(numeric_int_sampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(numeric_int_sampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
+
+    def dispatch void format(DoubleSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(numeric_real_sampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(numeric_real_sampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(numeric_real_sampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
+    
+    def dispatch void format(StringSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(stringsampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(stringsampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(stringsampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
+    
+    def dispatch void format(BoolSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(boolsampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(boolsampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(boolsampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
 	
 	def dispatch void format(BoxedPDF boxedPDF, extension IFormattableDocument document) {
 		boxedPDF.regionFor.keyword(boxedPDFAccess.doublePDFKeyword_0).prepend[noSpace; lowPriority].append[noSpace; lowPriority]

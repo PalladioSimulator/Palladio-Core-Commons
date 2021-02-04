@@ -9,10 +9,8 @@ import de.uka.ipd.sdq.probfunction.ProbabilityMassFunction
 import de.uka.ipd.sdq.probfunction.Sample
 import de.uka.ipd.sdq.stoex.BooleanOperatorExpression
 import de.uka.ipd.sdq.stoex.CompareExpression
-import de.uka.ipd.sdq.stoex.DoubleLiteral
 import de.uka.ipd.sdq.stoex.FunctionLiteral
 import de.uka.ipd.sdq.stoex.IfElseExpression
-import de.uka.ipd.sdq.stoex.IntLiteral
 import de.uka.ipd.sdq.stoex.NamespaceReference
 import de.uka.ipd.sdq.stoex.NegativeExpression
 import de.uka.ipd.sdq.stoex.NotExpression
@@ -22,15 +20,9 @@ import de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral
 import de.uka.ipd.sdq.stoex.ProductExpression
 import de.uka.ipd.sdq.stoex.TermExpression
 import de.uka.ipd.sdq.stoex.Variable
-import de.uka.ipd.sdq.units.UnitDivision
-import de.uka.ipd.sdq.units.UnitMultiplication
-import de.uka.ipd.sdq.units.UnitPower
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.palladiosimulator.commons.stoex.services.StoexGrammarAccess
-import de.uka.ipd.sdq.probfunction.IntSample
-import de.uka.ipd.sdq.stoex.Term
-import de.uka.ipd.sdq.stoex.BooleanExpression
 
 class StoexFormatter extends AbstractFormatter2 {
 	
@@ -49,21 +41,6 @@ class StoexFormatter extends AbstractFormatter2 {
 	def dispatch void format(CompareExpression compareExpression, extension IFormattableDocument document) {
 		compareExpression.left.format.append[oneSpace]
 		compareExpression.right.format.prepend[oneSpace]
-	}
-	
-	def dispatch void format(IntLiteral intLiteral, extension IFormattableDocument document) {
-	    /*
-		intLiteral.regionFor.keyword(intLiteralAccess.leftSquareBracketKeyword_1_0).prepend[oneSpace].append[oneSpace]
-		intLiteral.regionFor.keyword(intLiteralAccess.rightSquareBracketKeyword_1_2.prepend[oneSpace].append[oneSpace])
-		*/
-		intLiteral.value.format
-	}
-	
-	def dispatch void format(DoubleLiteral doubleLiteral, extension IFormattableDocument document) {
-	    /*
-		doubleLiteral.regionFor.keyword(doubleLiteralAccess.leftSquareBracketKeyword_1_0).prepend[oneSpace].append[oneSpace]
-		doubleLiteral.regionFor.keyword(doubleLiteralAccess.rightSquareBracketKeyword_1_2).prepend[oneSpace].append[oneSpace]
-		*/
 	}
 	
 	def dispatch void format(NegativeExpression negativeExpression, extension IFormattableDocument document) {

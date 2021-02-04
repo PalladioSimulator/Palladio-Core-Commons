@@ -46,9 +46,27 @@ class FormatterTest {
 	
 	@Test
 	def testIntPMF() {
-		val intPMF = '''IntPMF  [(1;0.2)  (2;0.4)  (3;0.1)  ]'''
+		val intPMF = '''IntPMF  [ ( 1 ; 0.2 )  ( 2 ; 0.4 )  ( 3 ; 0.1)  ]'''
 		assertEquals("IntPMF[(1;0.2)(2;0.4)(3;0.1)]", intPMF.parse.serialize(SaveOptions.newBuilder.format.options))
 	}
+	
+	@Test
+	def testDoublePMF() {
+	    val doublePMF = '''DoublePMF  [ ( 1.1 ; 0.2 )   ( 2.2 ; 0.4 )   ( 3.3 ; 0.1)  ]'''
+        assertEquals("DoublePMF[(1.1;0.2)(2.2;0.4)(3.3;0.1)]", doublePMF.parse.serialize(SaveOptions.newBuilder.format.options))
+	}
+	
+    @Test
+    def testEnumPMF() {
+        val enumPMF = '''EnumPMF ( ordered ) [ ( "a" ; 0.2 )   ( "b" ; 0.4 )   ( "c" ; 0.1)  ]'''
+        assertEquals("EnumPMF(ordered)[(\"a\";0.2)(\"b\";0.4)(\"c\";0.1)]", enumPMF.parse.serialize(SaveOptions.newBuilder.format.options))
+    }
+	
+    @Test
+    def testBoolPMF() {
+        val enumPMF = '''BoolPMF ( ordered ) [ ( true ; 0.2 )   ( false ; 0.4 )   ( true ; 0.1)  ]'''
+        assertEquals("BoolPMF(ordered)[(true;0.2)(false;0.4)(true;0.1)]", enumPMF.parse.serialize(SaveOptions.newBuilder.format.options))
+    }
 	
 	@Test
 	def testPower() {
@@ -102,6 +120,12 @@ class FormatterTest {
 	def testExpression() {
 		val exp = '''2.67E+9*DoublePDF[(0.000445786;0.0)(0.000526678;0.10411217020161)]'''
 		assertEquals("2.67E+9 * DoublePDF[(0.000445786;0.0)(0.000526678;0.10411217020161)]", exp.parse.serialize(SaveOptions.newBuilder.format.options))
+	}
+	
+	@Test
+	def testIfElse() {
+	    val ifelse = '''true?1:2'''
+	    assertEquals("true ? 1 : 2", ifelse.parse.serialize(SaveOptions.newBuilder.format.options));
 	}
 
 }

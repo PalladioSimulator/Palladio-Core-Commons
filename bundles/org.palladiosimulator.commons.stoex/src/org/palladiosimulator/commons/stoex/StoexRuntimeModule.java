@@ -3,7 +3,9 @@
  */
 package org.palladiosimulator.commons.stoex;
 
+import org.eclipse.xtext.formatting2.IFormatter2;
 import org.eclipse.xtext.parser.IParser;
+import org.palladiosimulator.commons.stoex.formatting2.StoexFormatter;
 import org.palladiosimulator.commons.stoex.parser.PostProcessingStoExParser;
 
 /**
@@ -16,5 +18,9 @@ public class StoexRuntimeModule extends AbstractStoexRuntimeModule {
     public Class<? extends IParser> bindIParser() {
         return PostProcessingStoExParser.class;
     }
-
+    
+    public Class<? extends IFormatter2> bindIFormatter2() {
+        return StoexFormatter.class;
+    }
+    
 }

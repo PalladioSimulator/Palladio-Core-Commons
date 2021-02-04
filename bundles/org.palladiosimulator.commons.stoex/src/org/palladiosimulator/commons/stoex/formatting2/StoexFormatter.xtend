@@ -9,10 +9,8 @@ import de.uka.ipd.sdq.probfunction.ProbabilityMassFunction
 import de.uka.ipd.sdq.probfunction.Sample
 import de.uka.ipd.sdq.stoex.BooleanOperatorExpression
 import de.uka.ipd.sdq.stoex.CompareExpression
-import de.uka.ipd.sdq.stoex.DoubleLiteral
 import de.uka.ipd.sdq.stoex.FunctionLiteral
 import de.uka.ipd.sdq.stoex.IfElseExpression
-import de.uka.ipd.sdq.stoex.IntLiteral
 import de.uka.ipd.sdq.stoex.NamespaceReference
 import de.uka.ipd.sdq.stoex.NegativeExpression
 import de.uka.ipd.sdq.stoex.NotExpression
@@ -22,15 +20,13 @@ import de.uka.ipd.sdq.stoex.ProbabilityFunctionLiteral
 import de.uka.ipd.sdq.stoex.ProductExpression
 import de.uka.ipd.sdq.stoex.TermExpression
 import de.uka.ipd.sdq.stoex.Variable
-import de.uka.ipd.sdq.units.UnitDivision
-import de.uka.ipd.sdq.units.UnitMultiplication
-import de.uka.ipd.sdq.units.UnitPower
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.palladiosimulator.commons.stoex.services.StoexGrammarAccess
+import de.uka.ipd.sdq.probfunction.StringSample
+import de.uka.ipd.sdq.probfunction.DoubleSample
 import de.uka.ipd.sdq.probfunction.IntSample
-import de.uka.ipd.sdq.stoex.Term
-import de.uka.ipd.sdq.stoex.BooleanExpression
+import de.uka.ipd.sdq.probfunction.BoolSample
 
 class StoexFormatter extends AbstractFormatter2 {
 	
@@ -49,21 +45,6 @@ class StoexFormatter extends AbstractFormatter2 {
 	def dispatch void format(CompareExpression compareExpression, extension IFormattableDocument document) {
 		compareExpression.left.format.append[oneSpace]
 		compareExpression.right.format.prepend[oneSpace]
-	}
-	
-	def dispatch void format(IntLiteral intLiteral, extension IFormattableDocument document) {
-	    /*
-		intLiteral.regionFor.keyword(intLiteralAccess.leftSquareBracketKeyword_1_0).prepend[oneSpace].append[oneSpace]
-		intLiteral.regionFor.keyword(intLiteralAccess.rightSquareBracketKeyword_1_2.prepend[oneSpace].append[oneSpace])
-		*/
-		intLiteral.value.format
-	}
-	
-	def dispatch void format(DoubleLiteral doubleLiteral, extension IFormattableDocument document) {
-	    /*
-		doubleLiteral.regionFor.keyword(doubleLiteralAccess.leftSquareBracketKeyword_1_0).prepend[oneSpace].append[oneSpace]
-		doubleLiteral.regionFor.keyword(doubleLiteralAccess.rightSquareBracketKeyword_1_2).prepend[oneSpace].append[oneSpace]
-		*/
 	}
 	
 	def dispatch void format(NegativeExpression negativeExpression, extension IFormattableDocument document) {
@@ -122,15 +103,43 @@ class StoexFormatter extends AbstractFormatter2 {
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_2_4).prepend[noSpace].append[noSpace]
 		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.rightSquareBracketKeyword_3_4).prepend[noSpace].append[noSpace]
 		
-		probabilityMassFunction.regionFor.keyword("IntPMF").prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword("DoublePMF").prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword("EnumPMF").prepend[noSpace].append[noSpace]
-		probabilityMassFunction.regionFor.keyword("BoolPMF").prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.intPMFKeyword_0_0).prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.doublePMFKeyword_1_0).prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.enumPMFKeyword_2_0).prepend[noSpace].append[noSpace]
+		probabilityMassFunction.regionFor.keyword(probabilityMassFunctionAccess.boolPMFKeyword_3_0).prepend[noSpace].append[noSpace]
 	}
 	
 	def dispatch void format(Sample<?> sample, extension IFormattableDocument document) {
 		sample.prepend[noSpace].append[noSpace]
 	}
+
+    def dispatch void format(IntSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(numeric_int_sampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(numeric_int_sampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(numeric_int_sampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
+
+    def dispatch void format(DoubleSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(numeric_real_sampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(numeric_real_sampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(numeric_real_sampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
+    
+    def dispatch void format(StringSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(stringsampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(stringsampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(stringsampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
+    
+    def dispatch void format(BoolSample sample, extension IFormattableDocument document) {
+        _format(sample as Sample<?>, document)
+        sample.regionFor.keyword(boolsampleAccess.leftParenthesisKeyword_0).append[noSpace]
+        sample.regionFor.keyword(boolsampleAccess.rightParenthesisKeyword_4).prepend[noSpace]
+        sample.regionFor.keyword(boolsampleAccess.semicolonKeyword_2).prepend[noSpace].append[noSpace]
+    }
 	
 	def dispatch void format(BoxedPDF boxedPDF, extension IFormattableDocument document) {
 		boxedPDF.regionFor.keyword(boxedPDFAccess.doublePDFKeyword_0).prepend[noSpace; lowPriority].append[noSpace; lowPriority]

@@ -3,6 +3,7 @@ package org.palladiosimulator.commons.stoex.api.impl;
 import java.util.Optional;
 
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.ui.IFileEditorInput;
 import org.palladiosimulator.commons.eclipseutils.ExtensionHelper;
 
 /**
@@ -51,6 +52,12 @@ public abstract class XtextToolProviderImpl<T> implements XtextToolProvider<T> {
      */
     protected Optional<T> getExtension() {
         if (!Platform.isRunning()) {
+            return Optional.empty();
+        }
+        try {
+            // This is done because StoEx requires IFileEditorInput to be loadable.
+            IFileEditorInput.class.getClassLoader();
+        } catch (NoClassDefFoundError e) {
             return Optional.empty();
         }
         final var foundExtensions = ExtensionHelper.<T> getExecutableExtensions(extensionPointId, extensionPointAttr);

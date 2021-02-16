@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
-<plugin>
-   <extension-point id="org.palladiosimulator.commons.stoex.api.extensions.parserprovider" name="StoExParserProvider" schema="schema/org.palladiosimulator.commons.stoex.api.extensions.parserprovider.exsd"/>
-   <extension-point id="org.palladiosimulator.commons.stoex.api.extensions.serialiserprovider" name="StoExSerialiserProvider" schema="schema/org.palladiosimulator.commons.stoex.api.extensions.serialiserprovider.exsd"/>
-</plugin>

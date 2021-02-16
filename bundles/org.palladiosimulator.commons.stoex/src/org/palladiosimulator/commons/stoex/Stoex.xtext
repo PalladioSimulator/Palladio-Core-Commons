@@ -120,18 +120,18 @@ FunctionLiteral:
 Variable:
 	id_Variable=AbstractNamedReference;
 
-	// AbstractNamedReference -> VariableReference|NamespaceReference
+
 AbstractNamedReference:
-	NamespaceReference;
+    VariableReference | NamespaceReference
+;
 
-	// VariableReference -> ID
-VariableReference:
-	referenceName=('BYTESIZE' | 'VALUE' | 'STRUCTURE' | 'TYPE' | 'NUMBER_OF_ELEMENTS');
+NamespaceReference returns AbstractNamedReference:
+    {NamespaceReference} referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference
+;
 
-	// NamespaceReference -> ID '.' AbstractNamedReference
-NamespaceReference:
-	referenceName=ID '.' (innerReference_NamespaceReference=AbstractNamedReference
-	| innerReference_NamespaceReference=VariableReference);
+VariableReference returns AbstractNamedReference:
+    {VariableReference} referenceName=ID 
+;
 
 	// BoolLiteral -> BOOLEAN_KEYWORDS
 BoolLiteral:

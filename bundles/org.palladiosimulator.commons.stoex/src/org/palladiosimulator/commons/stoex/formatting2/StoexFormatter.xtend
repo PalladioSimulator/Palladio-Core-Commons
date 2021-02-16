@@ -161,7 +161,7 @@ class StoexFormatter extends AbstractFormatter2 {
 	*/
 	
 	def dispatch void format(NamespaceReference namespaceReference, extension IFormattableDocument document) {
-		namespaceReference.regionFor.keyword(namespaceReferenceAccess.fullStopKeyword_1).prepend[noSpace].append[noSpace]
+		namespaceReference.regionFor.keyword(namespaceReferenceAccess.fullStopKeyword_2).prepend[noSpace].append[noSpace]
 		namespaceReference.innerReference_NamespaceReference.format
 	}
 	

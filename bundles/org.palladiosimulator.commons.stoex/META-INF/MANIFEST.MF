@@ -27,7 +27,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoex,
  org.palladiosimulator.commons.stoex.formatting2,
  org.palladiosimulator.commons.stoex.generator,
- org.palladiosimulator.commons.stoex.parser,
  org.palladiosimulator.commons.stoex.parser.antlr,
  org.palladiosimulator.commons.stoex.parser.antlr.internal,
  org.palladiosimulator.commons.stoex.scoping,

@@ -125,7 +125,7 @@ AbstractNamedReference:
     VariableReference | NamespaceReference
 ;
 
-NamespaceReference returns AbstractNamedReference:
+NamespaceReference:
     {NamespaceReference} referenceName=ID '.' innerReference_NamespaceReference=AbstractNamedReference
 ;
 

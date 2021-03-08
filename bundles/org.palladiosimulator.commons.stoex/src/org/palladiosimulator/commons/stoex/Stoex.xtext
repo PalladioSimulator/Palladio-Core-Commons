@@ -100,8 +100,7 @@ atom returns Atom:
 
 	// DoubleLiteral -> DOUBLE ('[' Unit ']')?
 DoubleLiteral:
-	value=DOUBLE //('[' unit=Unit ']')?
-	;
+	value=DOUBLE;
 
 	// ProbabilityFunctionLiteral -> definition
 ProbabilityFunctionLiteral:
@@ -143,39 +142,8 @@ StringLiteral:
 
 	// IntLiteral -> DECINT ('[' Unit ']')?
 IntLiteral:
-	value=DECINT // ('[' unit=Unit ']')?
-	;
+	value=DECINT;
 
-/*
-	//#############################
-// Units:
-
-// Unit -> unitMulti | unitDiv | BaseUnit
-Unit:
-	unitMulti | unitDiv | BaseUnit;
-
-	// unitDiv -> unitPow ('/' Unit)?
-unitDiv returns Unit:
-	unitPow ({UnitDivision.dividend=current} '/' divisor=Unit)?;
-
-	// unitMulti -> unitPow ('*' Unit)*
-unitMulti returns Unit:
-	unitPow ({UnitMultiplication.units+=current} '*' units+=Unit)*;
-
-	// unitPow -> (BaseUnit | '(' (unitMulti | unitDiv) ')') (POW SIGNED_INT)*
-unitPow returns Unit:
-	(BaseUnit |
-	'(' (unitMulti | unitDiv) ')') ({UnitPower.unit=current} '^' exponent=SIGNED_INT)*;
-
-	// BaseUnit -> UnitNames
-BaseUnit:
-	name=UnitNames;
-
-	// UnitNames -> "_" | "unitless" | "B" | "s" | "m"
-enum UnitNames:
-	UNITLESS="_" | UNITLESS="unitless" | BYTE="B" | SECOND="s" | METER="m";
- */
- 
 	//#############################
 //Probability Functions:
 
@@ -190,19 +158,16 @@ ProbabilityDensityFunction:
 
 	// BoxedPDF -> DOUBLEPDF '[' (real_pdf_sample)+ ']' ('[' Unit ']')?
 BoxedPDF:
-	'DoublePDF' '[' (samples+=real_pdf_sample)+ ']'
-	//('[' unit=Unit ']')?
-	;
+	'DoublePDF' '[' (samples+=real_pdf_sample)+ ']';
 
 	// ProbabilityMassFunction -> INTPMF '[' (numeric_int_sample)+ ']' ('[' Unit ']')?
 // ProbabilityMassFunction -> DOUBLEPMF '[' (numeric_real_sample)+ ']' ('[' Unit ']')?
 // ProbabilityMassFunction -> ENUMPMF ('(' 'ordered' ')')? '[' (stringsample)+ ']' ('[' Unit ']')?
 // ProbabilityMassFunction -> BOOLPMF ('(' 'ordered' ')')? '[' (boolsample)+ ']' ('[' Unit ']')?
 ProbabilityMassFunction:
-// Numeric PMF
-	'IntPMF' '[' (samples+=numeric_int_sample)+ ']' /*('[' unit=Unit ']')?*/ | 'DoublePMF' '[' (samples+=numeric_real_sample)+
-	']' /*('[' unit=Unit ']')?*/ | // Enum PMF
-	'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' (samples+=stringsample)+ ']' | // Bool PMF
+	'IntPMF' '[' (samples+=numeric_int_sample)+ ']' |
+	'DoublePMF' '[' (samples+=numeric_real_sample)+	']' |
+	'EnumPMF' ('(' orderedDomain?='ordered' ')')? '[' (samples+=stringsample)+ ']' |
 	'BoolPMF' ('(' orderedDomain?='ordered' ')')? '[' (samples+=boolsample)+ ']';
 
 	// numeric_int_sample -> '(' SIGNED_INT ';' DOUBLE ')'

@@ -5,15 +5,21 @@ package org.palladiosimulator.commons.stoex;
 
 import org.eclipse.xtext.formatting2.IFormatter2;
 import org.palladiosimulator.commons.stoex.formatting2.StoexFormatter;
+import org.palladiosimulator.commons.stoex.services.StoexContextProvider;
+import org.palladiosimulator.commons.stoex.services.StoexContextProviderImpl;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension
  * registry.
  */
 public class StoexRuntimeModule extends AbstractStoexRuntimeModule {
-    
+
     public Class<? extends IFormatter2> bindIFormatter2() {
         return StoexFormatter.class;
     }
-    
+
+    public Class<? extends StoexContextProvider> bindStoexContextProvider() {
+        return StoexContextProviderImpl.class;
+    }
+
 }

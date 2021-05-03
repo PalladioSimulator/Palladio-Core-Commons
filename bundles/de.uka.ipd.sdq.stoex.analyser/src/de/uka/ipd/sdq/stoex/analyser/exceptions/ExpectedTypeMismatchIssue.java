@@ -37,7 +37,7 @@ public class ExpectedTypeMismatchIssue implements IIssue {
 
 	public String getMessage() {
 		return 
-			"Expected Type and Actual Type mismatch.\nInfered Type: " +
+			"Expected Type and Actual Type mismatch.\nInferred Type: " +
 			( foundType == null ? "unknown" : foundType.name() ) +
 			", Expected Type: "+expectedType;
 	}

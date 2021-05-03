@@ -85,12 +85,6 @@ class StoexParsingTest {
 
     @Test
     def void parseMax() {
-        val result = parseHelper.parse('''Max ( 35374 * 10 , 60 * 196 * 2375646 + 60 * 196 * 13697006 ) / loopSize.VALUE''')
-        assertNoIssues(result)
-    }
-
-    @Test
-    def void parseMax2() {
         val result = parseHelper.parse('''Max ( 35374 * 10 , 60 * 196 * 2375646 + 60 * 196 * 13697006 )/ 100''')
         assertNoIssues(result)
     }

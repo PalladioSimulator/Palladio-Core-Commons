@@ -4,16 +4,24 @@
 package org.palladiosimulator.commons.stoex.validation;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Optional;
 
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.validation.Check;
+import org.palladiosimulator.commons.stoex.services.StoexContext;
+import org.palladiosimulator.commons.stoex.services.StoexContextProvider;
+
+import com.google.inject.Inject;
 
 import de.uka.ipd.sdq.errorhandling.IIssue;
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.analyser.exceptions.ExpectedTypeMismatchIssue;
+import de.uka.ipd.sdq.stoex.analyser.visitors.ExpressionInferTypeVisitor;
 import de.uka.ipd.sdq.stoex.analyser.visitors.NonProbabilisticExpressionInferTypeVisitor;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeCheckVisitor;
+import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 
 /**
  * This class contains custom validation rules. 
@@ -22,6 +30,9 @@ import de.uka.ipd.sdq.stoex.analyser.visitors.TypeCheckVisitor;
  */
 public class StoexValidator extends AbstractStoexValidator {
 	
+    @Inject
+    private StoexContextProvider contextProvider;
+    
     @Check
     public void checkTypes(Expression exp) {
         var typeVisitor = new NonProbabilisticExpressionInferTypeVisitor();
@@ -45,10 +56,29 @@ public class StoexValidator extends AbstractStoexValidator {
             }
         }
 
+        Optional.ofNullable(exp)
+            .map(EObject::eResource)
+            .map(contextProvider::getContext)
+            .flatMap(StoexContext::getExpectedType)
+            .ifPresent(expectedType -> {
+                Collection<? extends IIssue> typeIssues = assertType(exp, typeVisitor, expectedType);
+                for (IIssue typeIssue : typeIssues) {
+                    warning(typeIssue.getMessage(), exp, null);
+                }
+            });
     }
 
-    public Collection<IIssue> getIssues(TypeCheckVisitor visitor) {
+    protected Collection<IIssue> getIssues(TypeCheckVisitor visitor) {
         return visitor.getIssues();
+    }
+    
+    protected Collection<? extends IIssue> assertType(final EObject result, final ExpressionInferTypeVisitor typeVisitor,
+            final TypeEnum expectedType) {
+        if (!TypeCheckVisitor.typesCompatible(expectedType, typeVisitor.getType((Expression) result))) {
+            return Collections.singletonList(
+                    new ExpectedTypeMismatchIssue(expectedType, typeVisitor.getType((Expression) result)));
+        }
+        return Collections.emptyList();
     }
 	
 }

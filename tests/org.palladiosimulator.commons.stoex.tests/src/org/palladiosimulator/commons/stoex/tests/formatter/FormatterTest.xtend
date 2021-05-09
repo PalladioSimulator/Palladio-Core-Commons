@@ -128,4 +128,10 @@ class FormatterTest {
 	    assertEquals("true ? 1 : 2", ifelse.parse.serialize(SaveOptions.newBuilder.format.options));
 	}
 
+	@Test
+	def testNamespaceReference() {
+	    val reference = '''a . b . c'''
+	    assertEquals("a.b.c", reference.parse.serialize(SaveOptions.newBuilder.format.options));
+	}
+
 }

@@ -2,26 +2,28 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.palladiosimulator.commons.stoex.tests
 Bundle-Version: 5.0.0.qualifier
-Bundle-SymbolicName: org.palladiosimulator.commons.stoex.tests; singleton:=true
+Bundle-SymbolicName: org.palladiosimulator.commons.stoex.tests;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.palladiosimulator.commons.stoex,
- org.junit;bundle-version="4.12.0",
  org.eclipse.xtext.testing,
  org.eclipse.xtext.xbase.testing,
- org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
- tools.mdsd.library.standalone.initialization;bundle-version="0.2.0"
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoex.tests;x-internal=true
 Import-Package: net.bytebuddy;version="1.9.0",
+ org.apache.commons.lang3.mutable;version="3.1.0",
  org.hamcrest.core,
- org.junit;version="4.5.0",
- org.junit.runner;version="4.5.0",
- org.junit.runner.manipulation;version="4.5.0",
- org.junit.runner.notification;version="4.5.0",
- org.junit.runners;version="4.5.0",
- org.junit.runners.model;version="4.5.0",
+ org.junit;version="4.13.0",
+ org.junit.jupiter.api;version="5.7.0",
+ org.junit.jupiter.api.extension;version="5.7.0",
+ org.junit.jupiter.api.function;version="5.7.0",
+ org.junit.runner;version="4.13.0",
  org.mockito;version="2.23.0",
+ org.mockito.invocation;version="2.23.0",
  org.mockito.stubbing;version="2.23.0",
- org.objenesis;version="2.6.0"
+ org.objenesis;version="2.6.0",
+ tools.mdsd.junit5utils.annotations,
+ tools.mdsd.library.standalone.initialization,
+ tools.mdsd.library.standalone.initialization.core
 Bundle-Vendor: palladiosimulator.org
 Automatic-Module-Name: org.palladiosimulator.commons.stoex.tests

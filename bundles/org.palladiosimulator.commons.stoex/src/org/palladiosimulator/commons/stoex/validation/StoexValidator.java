@@ -3,12 +3,17 @@
  */
 package org.palladiosimulator.commons.stoex.validation;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtext.validation.Check;
 import org.palladiosimulator.commons.stoex.services.StoexContext;
 import org.palladiosimulator.commons.stoex.services.StoexContextProvider;
@@ -16,7 +21,9 @@ import org.palladiosimulator.commons.stoex.services.StoexContextProvider;
 import com.google.inject.Inject;
 
 import de.uka.ipd.sdq.errorhandling.IIssue;
+import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 import de.uka.ipd.sdq.stoex.Expression;
+import de.uka.ipd.sdq.stoex.StoexPackage;
 import de.uka.ipd.sdq.stoex.analyser.exceptions.ExpectedTypeMismatchIssue;
 import de.uka.ipd.sdq.stoex.analyser.visitors.ExpressionInferTypeVisitor;
 import de.uka.ipd.sdq.stoex.analyser.visitors.NonProbabilisticExpressionInferTypeVisitor;
@@ -33,6 +40,15 @@ public class StoexValidator extends AbstractStoexValidator {
     @Inject
     private StoexContextProvider contextProvider;
     
+    @Override
+    protected List<EPackage> getEPackages() {
+        Set<EPackage> epackages = new HashSet<>(super.getEPackages());
+        epackages.add(StoexPackage.eINSTANCE);
+        epackages.add(ProbfunctionPackage.eINSTANCE);
+        epackages.remove(null);
+        return new ArrayList<>(epackages);
+    }
+
     @Check
     public void checkTypes(Expression exp) {
         var typeVisitor = new NonProbabilisticExpressionInferTypeVisitor();

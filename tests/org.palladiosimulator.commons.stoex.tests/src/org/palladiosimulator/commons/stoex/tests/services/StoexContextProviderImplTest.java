@@ -1,17 +1,18 @@
 package org.palladiosimulator.commons.stoex.tests.services;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.palladiosimulator.commons.stoex.StoexStandaloneSetup;
 import org.palladiosimulator.commons.stoex.services.StoexContext;
 import org.palladiosimulator.commons.stoex.services.StoexContextProvider;
@@ -28,7 +29,7 @@ public class StoexContextProviderImplTest {
     protected StoexContextProviderAdapterMock adapter;
     protected StoexContext context;
 
-    @BeforeClass
+    @BeforeAll
     public static void init() throws StandaloneInitializationException {
         StandaloneInitializerBuilder.builder()
             .addCustomTask(StoexStandaloneSetup::doSetup)
@@ -36,7 +37,7 @@ public class StoexContextProviderImplTest {
             .init();
     }
 
-    @Before
+    @BeforeEach
     public void setup() {
         rs = new ResourceSetImpl();
         r = rs.createResource(URI.createURI("virtual:/test/model.stoex"));
@@ -47,9 +48,9 @@ public class StoexContextProviderImplTest {
         when(adapter.getContext(r)).thenReturn(context);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testNullResource() {
-        subject.getContext(null);
+        assertThrows(IllegalArgumentException.class, () -> subject.getContext(null));
     }
 
     @Test

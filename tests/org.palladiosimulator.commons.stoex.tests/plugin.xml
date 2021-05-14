@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="xtexttool_dummy" name="xtexttool_dummy" schema="schema/xtexttool_dummy.exsd"/>
+   <extension
+         point="org.palladiosimulator.commons.stoex.tests.xtexttool_dummy">
+      <class
+            class="org.palladiosimulator.commons.stoex.tests.api.impl.generic.XtextToolDummyImpl">
+      </class>
+   </extension>
+
+</plugin>

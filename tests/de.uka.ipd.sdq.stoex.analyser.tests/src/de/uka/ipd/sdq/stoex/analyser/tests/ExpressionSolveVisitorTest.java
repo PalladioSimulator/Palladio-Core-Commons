@@ -2,8 +2,6 @@ package de.uka.ipd.sdq.stoex.analyser.tests;
 
 import java.util.HashMap;
 
-import junit.framework.TestCase;
-
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
@@ -19,6 +17,7 @@ import de.uka.ipd.sdq.stoex.analyser.visitors.ExpressionSolveVisitor;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 import de.uka.ipd.sdq.stoex.parser.StochasticExpressionsLexer;
 import de.uka.ipd.sdq.stoex.parser.StochasticExpressionsParser;
+import junit.framework.TestCase;
 
 public class ExpressionSolveVisitorTest extends TestCase {
 
@@ -34,7 +33,7 @@ public class ExpressionSolveVisitorTest extends TestCase {
 		HashMap<Expression, TypeEnum> typeAnnotation = inferTypeVisitor
 		.getTypeAnnotation();
 
-		return new ExpressionSolveVisitor(typeAnnotation);
+		return new ExpressionSolveVisitor(typeAnnotation, e -> "<SERIALISED EXPRESSION>");
 	}
 	
 	public void testExpressionHelper(String exprString, String expectedResultString) throws RecognitionException{

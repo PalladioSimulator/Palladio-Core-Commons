@@ -6,16 +6,15 @@ package org.palladiosimulator.commons.stoex.tests
 import com.google.inject.Inject
 import de.uka.ipd.sdq.stoex.Expression
 import org.eclipse.xtext.testing.InjectWith
-import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.extensions.InjectionExtension
 import org.eclipse.xtext.testing.util.ParseHelper
-import org.junit.Assert
-import org.junit.Test
-import org.junit.runner.RunWith
-
 import org.eclipse.xtext.testing.validation.ValidationTestHelper
-import static org.junit.Assert.assertNull
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.^extension.ExtendWith
 
-@RunWith(XtextRunner)
+import static org.junit.jupiter.api.Assertions.*
+
+@ExtendWith(InjectionExtension)
 @InjectWith(StoexInjectorProvider)
 class StoexParsingTest {
     @Inject
@@ -93,27 +92,27 @@ class StoexParsingTest {
     def void parseTooMuchOperators() {
         val model = parseHelper.parse('''+6***6''')
         val issue = validate(model)
-        Assert.assertTrue(!issue.isEmpty())
+        assertTrue(!issue.isEmpty())
     }
 
     @Test
     def void parseDoublePlus() {
         val model = parseHelper.parse('''2++3''')
         val issue = validate(model)
-        Assert.assertTrue(!issue.isEmpty())
+        assertTrue(!issue.isEmpty())
     }
 
     @Test
     def void parseWrongIntPMF() {
         val model = parseHelper.parse('''IntPMF[(1.0;2)(1;0.3)]''')
         val issue = validate(model)
-        Assert.assertTrue(!issue.isEmpty())
+        assertTrue(!issue.isEmpty())
     }
 
     @Test
     def void parseRandomChars() {
         val result = parseHelper.parse('''a$JFfuRKrp23r32#''')
-        Assert.assertNull(result)
+        assertNull(result)
     }
     
     @Test

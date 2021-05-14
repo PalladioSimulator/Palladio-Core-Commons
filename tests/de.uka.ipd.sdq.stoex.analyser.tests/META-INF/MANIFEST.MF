@@ -3,10 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.uka.ipd.sdq.stoex.analyser.tests;singleton:=true
 Bundle-Version: 5.0.0.qualifier
-Fragment-Host: de.uka.ipd.sdq.stoex.analyser
 Bundle-Vendor: %providerName
-Require-Bundle: de.uka.ipd.sdq.stoex;visibility:=reexport,
- de.uka.ipd.sdq.probfunction.math,
- org.junit;bundle-version="4.11.0"
+Require-Bundle: de.uka.ipd.sdq.probfunction.math,
+ org.junit;bundle-version="4.11.0",
+ de.uka.ipd.sdq.stoex.analyser;bundle-version="5.0.0",
+ org.palladiosimulator.commons.stoex;bundle-version="5.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: de.uka.ipd.sdq.stoex.analyser.tests

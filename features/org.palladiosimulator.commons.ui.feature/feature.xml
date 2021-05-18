@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.palladiosimulator.commons.ui.feature"
+      label="Palladio Common UI Components Feature"
+      version="1.0.0.qualifier"
+      plugin="org.palladiosimulator.branding"
+      license-feature="org.palladiosimulator.license.epl2"
+      license-feature-version="1.0.0">
+
+   <description>
+      This feature contains shared UI elements for the Palladio Simulator project.
+   </description>
+
+   <plugin
+         id="org.palladiosimulator.commons.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

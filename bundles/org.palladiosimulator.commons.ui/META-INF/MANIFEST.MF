@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Palladio Common UI Components
+Bundle-SymbolicName: org.palladiosimulator.commons.ui
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.palladiosimulator.commons.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.palladiosimulator.commons.ui.launch
+Require-Bundle: org.eclipse.debug.ui,
+ org.eclipse.swt,
+ org.eclipse.core.databinding.observable,
+ org.eclipse.core.databinding
+Import-Package: org.eclipse.core.runtime

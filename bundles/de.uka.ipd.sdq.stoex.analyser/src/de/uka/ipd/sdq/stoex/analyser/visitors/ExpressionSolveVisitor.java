@@ -1,5 +1,6 @@
 package de.uka.ipd.sdq.stoex.analyser.visitors;
 
+import java.io.NotSerializableException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -95,21 +96,24 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
      */
     private static final int MAX_NUMBER_OF_SAMPLES_FOR_TRUNC =1000;
 
-    protected IProbabilityFunctionFactory iProbFuncFactory =
+    protected static final IProbabilityFunctionFactory iProbFuncFactory =
             IProbabilityFunctionFactory.eINSTANCE;
 
-    protected ProbfunctionFactory probFuncFactory = ProbfunctionFactory.eINSTANCE;
+    protected static final ProbfunctionFactory probFuncFactory = ProbfunctionFactory.eINSTANCE;
 
-    protected StoexFactory stocFactory = StoexFactory.eINSTANCE;
+    protected static final StoexFactory stocFactory = StoexFactory.eINSTANCE;
 
-    protected HashMap<Expression, TypeEnum> typeAnnotation;
+    protected final StoexSerialiser stoexSerialiser;
+    protected final HashMap<Expression, TypeEnum> typeAnnotation;
+
 
     /**
      * Constructor storing the evaluated type annotations.
      * @param typeAnn
      */
-    public ExpressionSolveVisitor(final HashMap<Expression, TypeEnum> typeAnn) {
+    public ExpressionSolveVisitor(final HashMap<Expression, TypeEnum> typeAnn, StoexSerialiser stoexSerialiser) {
         this.typeAnnotation = typeAnn;
+        this.stoexSerialiser = stoexSerialiser;
     }
 
     /**
@@ -377,10 +381,10 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
                     // no need to Trunc as this is already an Integer
                     return (IntLiteral)solvedParam;
                 } else {
-                    throw new ExpressionSolvingFailedException("Function Trunc is only supported supported for a DoublePDF or a single double parameter!", object);
+                    throw new ExpressionSolvingFailedException("Function Trunc is only supported supported for a DoublePDF or a single double parameter!", object, stoexSerialiser);
                 }
             } else {
-                throw new ExpressionSolvingFailedException("Function Trunc is only supported supported for a single double parameter!", object);
+                throw new ExpressionSolvingFailedException("Function Trunc is only supported supported for a single double parameter!", object, stoexSerialiser);
             }
         }  else if (object.getId().equals("Round")){
             // Round must only have one parameter
@@ -392,10 +396,10 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
                     intLit.setValue((int)Math.round(((DoubleLiteral)solvedParam).getValue()));
                     return intLit;
                 } else {
-                    throw new ExpressionSolvingFailedException("Function Round is only supported supported for a single double parameter!", object);
+                    throw new ExpressionSolvingFailedException("Function Round is only supported supported for a single double parameter!", object, stoexSerialiser);
                 }
             } else {
-                throw new ExpressionSolvingFailedException("Function Round is only supported supported for a single double parameter!", object);
+                throw new ExpressionSolvingFailedException("Function Round is only supported supported for a single double parameter!", object, stoexSerialiser);
             }
         }  else if (object.getId().equals("Ceil")){
             // Ceil must only have one parameter
@@ -407,10 +411,10 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
                     intLit.setValue((int)Math.ceil(((DoubleLiteral)solvedParam).getValue()));
                     return intLit;
                 } else {
-                    throw new ExpressionSolvingFailedException("Function Ceil is only supported supported for a single double parameter!", object);
+                    throw new ExpressionSolvingFailedException("Function Ceil is only supported supported for a single double parameter!", object, stoexSerialiser);
                 }
             } else {
-                throw new ExpressionSolvingFailedException("Function Ceil is only supported supported for a single double parameter!", object);
+                throw new ExpressionSolvingFailedException("Function Ceil is only supported supported for a single double parameter!", object, stoexSerialiser);
             }
         }  else if (object.getId().equals("Sqrt")){
             // Sqrt must only have one parameter
@@ -422,10 +426,10 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
                     doubleLit.setValue(Math.sqrt(((DoubleLiteral)solvedParam).getValue()));
                     return doubleLit;
                 } else {
-                    throw new ExpressionSolvingFailedException("Function Sqrt is only supported supported for a single double parameter!", object);
+                    throw new ExpressionSolvingFailedException("Function Sqrt is only supported supported for a single double parameter!", object, stoexSerialiser);
                 }
             } else {
-                throw new ExpressionSolvingFailedException("Function Sqrt is only supported supported for a single double parameter!", object);
+                throw new ExpressionSolvingFailedException("Function Sqrt is only supported supported for a single double parameter!", object, stoexSerialiser);
             }
         } else if (object.getId().equals("Log")){
             // Log must have two parameters: base, value
@@ -437,10 +441,10 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
                     result.setValue(Math.log(((DoubleLiteral)value).getValue())/Math.log(((DoubleLiteral)base).getValue()));
                     return result;
                 } else {
-                    throw new ExpressionSolvingFailedException("Function Ceil is only supported supported for a single double parameter!", object);
+                    throw new ExpressionSolvingFailedException("Function Ceil is only supported supported for a single double parameter!", object, stoexSerialiser);
                 }
             } else {
-                throw new ExpressionSolvingFailedException("Function Log is only supported supported for two double parameters: base, value!", object);
+                throw new ExpressionSolvingFailedException("Function Log is only supported supported for two double parameters: base, value!", object, stoexSerialiser);
             }
         } else {
             throw new UnsupportedOperationException(this.getClass().getName()+": Function "+object.getId()+" not supported!");
@@ -496,7 +500,7 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
         final List<ContinuousSample> samples = pdf.getSamples();
 
         if (samples.size() == 0){
-            throw new ExpressionSolvingFailedException("Cannot handle an empty DoublePDF for Trunc.",object);
+            throw new ExpressionSolvingFailedException("Cannot handle an empty DoublePDF for Trunc.",object, stoexSerialiser);
         }
         final double leftBorder = samples.get(0).getProbability() > 0 ? samples.get(0).getValue() : 0;
         final int range = (int)Math.ceil(samples.get(samples.size()-1).getValue() - leftBorder);
@@ -507,14 +511,14 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
         try {
             samplePDF = iProbFuncFactory.transformToSamplePDF(iProbFuncFactory.transformToPDF(pdf),distance);
         } catch (final Exception e) {
-            throw new ExpressionSolvingFailedException(object, e);
+            throw new ExpressionSolvingFailedException(object, e, stoexSerialiser);
         }
 
         if (samplePDF.getLowerDomainBorder() < 0){
-            throw new ExpressionSolvingFailedException("Cannot Trunc a DoublePDF with negative values.",object);
+            throw new ExpressionSolvingFailedException("Cannot Trunc a DoublePDF with negative values.",object, stoexSerialiser);
         }
         if (samplePDF.getDistance() != distance){
-            throw new ExpressionSolvingFailedException("Bug! Distance of SamplePDF is not "+distance, object);
+            throw new ExpressionSolvingFailedException("Bug! Distance of SamplePDF is not "+distance, object, stoexSerialiser);
         }
 
         final ProbabilityMassFunction pmf = this.probFuncFactory.createProbabilityMassFunction();
@@ -538,7 +542,13 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
         literal.setFunction_ProbabilityFunctionLiteral(pmf);
 
         if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug("Trunc result: "+new StoExPrettyPrintVisitor().doSwitch(literal));
+            try {
+                String stoexText = stoexSerialiser.serialise(literal);
+                LOGGER.debug("Trunc result: " + stoexText);                
+            } catch (NotSerializableException e) {
+                LOGGER.warn("Could not serialize " + ProbabilityFunctionLiteral.class.getSimpleName()
+                        + " for debug purposes.", e);
+            }
         }
 
         return literal;
@@ -982,11 +992,11 @@ public class ExpressionSolveVisitor extends StoexSwitch<Object> {
         } else if (function instanceof ProbabilityDensityFunction){
             final String msg = "Could not transform expression to PMF. Note that NUMBER_OF_ELEMENT and BYTESIZE characterisations are assumed to be PMFs and must not be PDFs. Maybe you need to fix your models here.";
             LOGGER.error(msg);
-            throw new TypeInferenceFailedException(expr, msg);
+            throw new TypeInferenceFailedException(expr, msg, stoexSerialiser);
         } else {
             final String msg = "Unknown ProbabilityFunction subclass "+function.getClass().getName()+" that cannot be handled by "+this.getClass().getName();
             LOGGER.error(msg);
-            throw new TypeInferenceFailedException(expr, msg);
+            throw new TypeInferenceFailedException(expr, msg, stoexSerialiser);
         }
     }
 

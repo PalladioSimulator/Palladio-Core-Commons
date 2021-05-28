@@ -13,10 +13,6 @@ Export-Package: de.uka.ipd.sdq.stoex,
    org.eclipse.emf.ecore.impl,
    org.eclipse.emf.common.notify,
    de.uka.ipd.sdq.stoex",
- de.uka.ipd.sdq.stoex.parser;
-  uses:="de.uka.ipd.sdq.probfunction,
-   antlr,
-   de.uka.ipd.sdq.stoex",
  de.uka.ipd.sdq.stoex.util;
   uses:="org.eclipse.emf.ecore,
    org.eclipse.emf.common.notify.impl,
@@ -26,7 +22,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.cdo;visibility:=reexport,
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
- de.uka.ipd.sdq.units;visibility:=reexport,
- org.antlr.runtime;bundle-version="[3.2.0,3.3.0)";visibility:=reexport
+ de.uka.ipd.sdq.units;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: de.uka.ipd.sdq.stoex

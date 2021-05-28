@@ -14,9 +14,9 @@ import org.eclipse.swt.widgets.Composite;
  * same validation logic multiple times.
  * 
  * Instead of implementing
- * {@code AbstractLaunchConfigurationTab#initializeFrom(ILaunchConfiguration)},
- * {@code AbstractLaunchConfigurationTab#performApply(ILaunchConfigurationWorkingCopy)} and
- * {@code AbstractLaunchConfigurationTab#setDefaults(ILaunchConfigurationWorkingCopy)}, registry the
+ * {@link AbstractLaunchConfigurationTab#initializeFrom(ILaunchConfiguration)},
+ * {@link AbstractLaunchConfigurationTab#performApply(ILaunchConfigurationWorkingCopy)} and
+ * {@link AbstractLaunchConfigurationTab#setDefaults(ILaunchConfigurationWorkingCopy)}, registry the
  * required bindings, already providing sensible defaults through
  * {@link #registerDataBindings(ObservableLaunchConfigurationAttributeFactory)}.
  * 
@@ -38,6 +38,7 @@ public abstract class AbstractDataBindingLaunchConfigurationTab extends Abstract
 
     @Override
     public final void createControl(Composite parent) {
+        setDirty(false);
         getLaunchConfigAdapter();
         
         assert dbc != null;

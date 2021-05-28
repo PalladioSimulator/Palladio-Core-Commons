@@ -5,15 +5,15 @@ import de.uka.ipd.sdq.stoex.Expression
 import org.eclipse.xtext.resource.SaveOptions
 import org.eclipse.xtext.serializer.ISerializer
 import org.eclipse.xtext.testing.InjectWith
-import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.extensions.InjectionExtension
 import org.eclipse.xtext.testing.util.ParseHelper
-import org.junit.Test
-import org.junit.runner.RunWith
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.^extension.ExtendWith
 import org.palladiosimulator.commons.stoex.tests.StoexInjectorProvider
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
-@RunWith(XtextRunner)
+@ExtendWith(InjectionExtension)
 @InjectWith(StoexInjectorProvider)
 class FormatterTest {
 
@@ -126,6 +126,12 @@ class FormatterTest {
 	def testIfElse() {
 	    val ifelse = '''true?1:2'''
 	    assertEquals("true ? 1 : 2", ifelse.parse.serialize(SaveOptions.newBuilder.format.options));
+	}
+
+	@Test
+	def testNamespaceReference() {
+	    val reference = '''a . b . c'''
+	    assertEquals("a.b.c", reference.parse.serialize(SaveOptions.newBuilder.format.options));
 	}
 
 }

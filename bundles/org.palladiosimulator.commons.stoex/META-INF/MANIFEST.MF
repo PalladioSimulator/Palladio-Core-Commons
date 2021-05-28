@@ -25,6 +25,9 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.palladiosimulator.core-commons.mwe2;bundle-version="5.0.0";resolution:=optional
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.commons.stoex,
+ org.palladiosimulator.commons.stoex.api,
+ org.palladiosimulator.commons.stoex.api.impl,
+ org.palladiosimulator.commons.stoex.api.impl.generic,
  org.palladiosimulator.commons.stoex.formatting2,
  org.palladiosimulator.commons.stoex.generator,
  org.palladiosimulator.commons.stoex.parser.antlr,

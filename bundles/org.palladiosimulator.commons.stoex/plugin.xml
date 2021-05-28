@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="stoex_serialiser_provider" name="stoex_serialiser_provider" schema="schema/stoex_serialiser_provider.exsd"/>
+   <extension-point id="stoex_parser_provider" name="stoex_parser_provider" schema="schema/stoex_parser_provider.exsd"/>
+
+</plugin>

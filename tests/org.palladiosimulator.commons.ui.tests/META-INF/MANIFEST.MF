@@ -8,5 +8,6 @@ Automatic-Module-Name: org.palladiosimulator.commons.ui.tests
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.junit,
  org.junit.jupiter.api,
- tools.mdsd.junit5utils;bundle-version="0.1.0",
- org.eclipse.jface.databinding
+ tools.mdsd.junit5utils,
+ org.eclipse.jface.databinding,
+ org.eclipse.emf.common

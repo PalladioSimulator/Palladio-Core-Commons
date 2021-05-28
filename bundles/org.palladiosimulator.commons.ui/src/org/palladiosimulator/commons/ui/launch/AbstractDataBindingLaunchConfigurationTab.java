@@ -38,6 +38,7 @@ public abstract class AbstractDataBindingLaunchConfigurationTab extends Abstract
 
     @Override
     public final void createControl(Composite parent) {
+        setDirty(false);
         getLaunchConfigAdapter();
         
         assert dbc != null;

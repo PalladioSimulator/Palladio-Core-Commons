@@ -27,6 +27,7 @@ public class ObservableLaunchConfigurationAdapter implements ObservableLaunchCon
     protected Map<String, IObservableValue<?>> observables = new HashMap<>();
     private ISideEffect dirtyNotificationEffect;
     private Runnable dirtyNotification;
+    private volatile boolean isInitialization = false;
 
     public void notifyWhenDirty(Runnable dirtyNotification) {
         this.dirtyNotification = dirtyNotification;
@@ -38,11 +39,15 @@ public class ObservableLaunchConfigurationAdapter implements ObservableLaunchCon
         }
         mUpdates.values()
             .forEach(c -> c.accept(configuration));
+        isInitialization = true;
         dirtyNotificationEffect = ISideEffect.create(() -> {
             observables.values()
                 .forEach(IObservableValue::getValue);
-            dirtyNotification.run();
+            if (dirtyNotification != null && !isInitialization) {
+                dirtyNotification.run();
+            }
         });
+        isInitialization = false;
     }
 
     public void performApply(ILaunchConfigurationWorkingCopy workingCopy) {

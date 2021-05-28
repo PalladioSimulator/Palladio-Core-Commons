@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Palladio Commons UI Tests
+Bundle-SymbolicName: org.palladiosimulator.commons.ui.tests;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: org.palladiosimulator.commons.ui;bundle-version="1.0.0"
+Automatic-Module-Name: org.palladiosimulator.commons.ui.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.junit,
+ org.junit.jupiter.api,
+ tools.mdsd.junit5utils;bundle-version="0.1.0",
+ org.eclipse.jface.databinding

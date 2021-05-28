@@ -11,6 +11,12 @@ import org.eclipse.eef.properties.ui.api.IEEFTabbedPropertySheetPageContributor;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IWorkbenchPart;
 
+/**
+ * This class implements an E4-aware EEF tabbed property sheet page. It should not be used directly.
+ * 
+ * @see E4PartWrappingAdapterDelegator
+ * 
+ */
 public class E4SelectionAwareEEFTabbedPropertySheetPage extends EEFTabbedPropertySheetPage implements E4SelectionAwarePropertySheetPageMixin {
 
     @Inject

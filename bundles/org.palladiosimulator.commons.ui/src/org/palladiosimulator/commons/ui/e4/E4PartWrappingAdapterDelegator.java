@@ -14,8 +14,37 @@ import org.eclipse.eef.properties.ui.api.IEEFTabbedPropertySheetPageContributor;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.internal.E4PartWrapper;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
+import org.eclipse.ui.views.properties.IPropertySource;
+import org.eclipse.ui.views.properties.IPropertySourceProvider;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 
+/**
+ * This class acts as intermediate adapter factory for Eclipse's E4PartWrapper. Unfortunately, large
+ * parts of the IDE-code base relies on the legacy view framework, especially, the properties view.
+ * While there are a couple of E3E4 compatibility mechanisms in place, AdapterFactories are only
+ * queried based on the E4WrapperPart.
+ *
+ * This factory provides an adapter based on the wrapped view part. It looks up the according E4
+ * view, and tries to retrieve the required adapter for it.
+ * 
+ * It is currently registered to provide adapters for
+ * 
+ * <ul>
+ * <li>org.eclipse.ui.views.properties.IPropertySheetPage</li>
+ * <li>org.eclipse.ui.views.properties.IPropertySourceProvider</li>
+ * <li>org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor</li>
+ * <li>org.eclipse.eef.properties.ui.api.IEEFTabbedPropertySheetPageContributor</li>
+ * </ul>
+ * 
+ * It further provides E4 selection aware PropertySheetPage implementations, in case the view can be
+ * adapted to either a (EEF)TabbedPropertySheetPageContributor or a PropertySource(Provider).
+ * 
+ * If you need the delegation for further adapter types, please register this delegator accordingly.
+ * 
+ * @author Sebastian Krach
+ *
+ */
+@SuppressWarnings("restriction")
 public class E4PartWrappingAdapterDelegator implements IAdapterFactory {
     public static final String ADAPTER_FACTORY_EXTENSION_POINT = "org.eclipse.core.runtime.adapters";
     public static final String ADAPTER_FACTORY_ADAPTED_OBJECT = "adaptableType";
@@ -38,17 +67,23 @@ public class E4PartWrappingAdapterDelegator implements IAdapterFactory {
                 var contributor = Adapters.adapt(adaptableObject, IEEFTabbedPropertySheetPageContributor.class);
                 if (contributor != null) {
                     eclipseContext.set(IEEFTabbedPropertySheetPageContributor.class, contributor);
-                    return adapterType.cast(ContextInjectionFactory.make(E4SelectionAwareEEFTabbedPropertySheetPage.class,
-                            eclipseContext));
+                    return adapterType.cast(ContextInjectionFactory
+                        .make(E4SelectionAwareEEFTabbedPropertySheetPage.class, eclipseContext));
                 }
+
                 var tabbedContributor = Adapters.adapt(adaptableObject, ITabbedPropertySheetPageContributor.class);
                 if (tabbedContributor != null) {
                     eclipseContext.set(ITabbedPropertySheetPageContributor.class, tabbedContributor);
                     return adapterType.cast(ContextInjectionFactory.make(E4SelectionAwareTabbedPropertySheetPage.class,
                             eclipseContext));
                 }
-                return adapterType
-                    .cast(ContextInjectionFactory.make(E4SelectionAwarePropertySheetPage.class, eclipseContext));
+
+                var isPropertySource = (Adapters.adapt(adaptableObject, IPropertySourceProvider.class) != null)
+                        || (Adapters.adapt(adaptableObject, IPropertySource.class) != null);
+                if (isPropertySource) {
+                    return adapterType
+                        .cast(ContextInjectionFactory.make(E4SelectionAwarePropertySheetPage.class, eclipseContext));
+                }
             }
             return adapterType.cast(adapter);
         }

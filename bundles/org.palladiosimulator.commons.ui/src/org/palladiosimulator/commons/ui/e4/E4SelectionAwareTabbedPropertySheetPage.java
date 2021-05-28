@@ -8,6 +8,12 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
+/**
+ * This class implements an E4-aware tabbed property sheet page. It should not be used directly.
+ * 
+ * @see E4PartWrappingAdapterDelegator
+ * 
+ */
 public class E4SelectionAwareTabbedPropertySheetPage extends TabbedPropertySheetPage implements E4SelectionAwarePropertySheetPageMixin {
 
     @Inject

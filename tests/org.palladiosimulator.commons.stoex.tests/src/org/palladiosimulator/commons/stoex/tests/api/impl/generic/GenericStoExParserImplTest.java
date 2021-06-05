@@ -94,6 +94,16 @@ public class GenericStoExParserImplTest {
         // execution
         assertThrows(ParseException.class, () -> subject.parse(expectedParseInput));
     }
+    
+    @Test
+    public void testParseExceptionOnNull() {
+        assertThrows(ParseException.class, () -> subject.parse(null));
+    }
+    
+    @Test
+    public void testParseExceptionOnBlank() {
+        assertThrows(ParseException.class, () -> subject.parse(" \t "));
+    }
 
     protected INode mockSyntaxErrorNode(String errorMessage) {
         INode node = mock(INode.class);

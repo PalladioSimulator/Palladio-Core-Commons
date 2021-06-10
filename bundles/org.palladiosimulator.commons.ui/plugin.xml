@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
 <plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.ui.internal.E4PartWrapper"
+            class="org.palladiosimulator.commons.ui.e4.E4PartWrappingAdapterDelegator">
+         <adapter
+               type="org.eclipse.ui.views.properties.IPropertySheetPage">
+         </adapter>
+         <adapter
+               type="org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor">
+         </adapter>
+         <adapter
+               type="org.eclipse.ui.views.properties.IPropertySourceProvider">
+         </adapter>
+         <adapter
+               type="org.eclipse.eef.properties.ui.api.IEEFTabbedPropertySheetPageContributor">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         id="org.palladiosimulator.commons.ui.fragment"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi"
+            apply="always">
+      </fragment>
+   </extension>
 
 </plugin>

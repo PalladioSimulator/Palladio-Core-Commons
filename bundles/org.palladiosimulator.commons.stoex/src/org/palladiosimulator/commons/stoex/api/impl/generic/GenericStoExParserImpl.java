@@ -31,6 +31,9 @@ public abstract class GenericStoExParserImpl implements GenericStoExParser {
 
     @Override
     public Expression parse(String serializedStoEx) throws ParseException {
+        if (serializedStoEx == null || serializedStoEx.isBlank()) {
+            throw new ParseException("The given stoex is empty. Therefore it is no valid stoex.", 0);
+        }
         try (var sr = new StringReader(serializedStoEx)) {
             IParseResult result = parser.parse(sr);
             assertNoSyntaxErrorException(result);

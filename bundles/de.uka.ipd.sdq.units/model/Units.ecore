@@ -12,8 +12,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Unit" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="BaseUnit" eSuperTypes="#//Unit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="#//UnitNames" iD="true">
-    </eStructuralFeatures>
+        eType="#//UnitNames" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" ordered="false"

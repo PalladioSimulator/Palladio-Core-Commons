@@ -17,6 +17,8 @@ Workflow {
 
     component = URISupportingDirectoryCleaner {
         exclude = ".gitkeep"
+        directory = "platform:/resource/de.uka.ipd.sdq.stoex/src-gen"
+        directory = "platform:/resource/de.uka.ipd.sdq.stoex.edit/src-gen"
         directory = "platform:/resource/org.palladiosimulator.commons.stoex/src-gen"
         directory = "platform:/resource/org.palladiosimulator.commons.stoex.ide/src-gen"
         directory = "platform:/resource/org.palladiosimulator.commons.stoex.tests/src-gen"

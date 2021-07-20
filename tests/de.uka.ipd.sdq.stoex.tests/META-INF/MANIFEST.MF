@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: StoEx Test
+Bundle-SymbolicName: de.uka.ipd.sdq.stoex.tests
+Bundle-Version: 5.0.0.qualifier
+Fragment-Host: de.uka.ipd.sdq.stoex;bundle-version="5.0.0"
+Automatic-Module-Name: de.uka.ipd.sdq.stoex.test
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: org.junit.jupiter.api;version="5.7.0"
+Require-Bundle: tools.mdsd.library.standalone.initialization.ocl;bundle-version="0.2.0",
+ tools.mdsd.library.standalone.initialization

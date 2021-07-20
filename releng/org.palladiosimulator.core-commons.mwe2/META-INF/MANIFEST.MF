@@ -23,4 +23,4 @@ Require-Bundle: org.eclipse.xtext.generator,
  de.itemis.xtext.antlr,
  org.antlr.generator,
  tools.mdsd.ecoreworkflow.mwe2lib.xtext;bundle-version="0.1.1",
- de.uka.ipd.sdq.stoex;bundle-version="5.0.0"
+ tools.mdsd.ecoreworkflow.umlecoregenerator

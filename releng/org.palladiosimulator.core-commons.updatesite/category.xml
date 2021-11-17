@@ -6,6 +6,12 @@
    <feature id="org.palladiosimulator.commons.feature.source">
       <category name="org.palladiosimulator.corefeatures.source.category"/>
    </feature>
+   <feature id="de.uka.ipd.sdq.identifier.uiutils.feature">
+      <category name="org.palladiosimulator.corefeatures.category"/>
+   </feature>
+   <feature id="de.uka.ipd.sdq.identifier.uiutils.feature.source">
+      <category name="org.palladiosimulator.corefeatures.source.category"/>
+   </feature>
    <category-def name="org.palladiosimulator.corefeatures.category" label="This category contains all features which belong to a complete installation of the Palladio Bench Core Features">
       <description>
          This category contains all features which belong to a complete installation of the Palladio Bench Core Features

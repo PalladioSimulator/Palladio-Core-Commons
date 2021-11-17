@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated identifiertest -->
+      <package
+            uri="http://sdq.ipd.uka.de/Identifier/2.1/testing"
+            class="identifiertesting.IdentifiertestingPackage"
+            genModel="model/identifiertest.genmodel"/>
+   </extension>
+</plugin>

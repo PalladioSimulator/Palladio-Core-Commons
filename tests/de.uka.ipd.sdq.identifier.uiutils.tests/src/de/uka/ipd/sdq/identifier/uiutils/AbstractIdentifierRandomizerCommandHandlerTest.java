@@ -12,11 +12,15 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.expressions.EvaluationContext;
+import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.ui.ISources;
 import org.junit.jupiter.api.BeforeAll;
@@ -73,11 +77,8 @@ public abstract class AbstractIdentifierRandomizerCommandHandlerTest {
 
     @Test
     public void testSelectionContainingNonModelObject() throws ExecutionException {
-        var rs = new ResourceSetImpl();
-        var r = rs.createResource(URI.createURI("virtual:/tmp.xmi"));
         var element = F.createIdentified();
-        r.getContents()
-            .add(element);
+        createResource().getContents().add(element);
         var oldIdentifier = element.getId();
         var dummy = new Object();
         var event = createEvent(Arrays.asList(element, dummy));
@@ -93,9 +94,8 @@ public abstract class AbstractIdentifierRandomizerCommandHandlerTest {
         copier.copyReferences();
 
         // execute randomizer
-        var rs = new ResourceSetImpl();
         for (var rootElement : rootElements) {
-            var r = rs.createResource(URI.createURI("virtual:/" + UUID.randomUUID()));
+            var r = createResource();
             r.getContents()
                 .add(rootElement);
         }
@@ -129,6 +129,19 @@ public abstract class AbstractIdentifierRandomizerCommandHandlerTest {
         context.addVariable(ISources.ACTIVE_CURRENT_SELECTION_NAME, selection);
         var event = new ExecutionEvent(null, Collections.emptyMap(), null, context);
         return event;
+    }
+    
+    protected static Resource createResource() {
+        var rs = createResourceSet();
+        var r = rs.createResource(URI.createURI("virtual:/" + UUID.randomUUID() + ".xmi"));
+        return r;
+    }
+    
+    protected static ResourceSet createResourceSet() {
+        var composedAdapterFactory = new ComposedAdapterFactory(
+                ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+        var editingDomain = new AdapterFactoryEditingDomain(composedAdapterFactory, new BasicCommandStack());
+        return editingDomain.getResourceSet();
     }
 
 }

@@ -2,20 +2,18 @@ package de.uka.ipd.sdq.identifier.uiutils;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.emf.transaction.util.TransactionUtil;
+import org.eclipse.emf.edit.command.ChangeCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -27,9 +25,16 @@ public abstract class AbstractIdentifierRandomizerCommandHandler extends Abstrac
     public Object execute(ExecutionEvent event) throws ExecutionException {
         List<EObject> selectedEObjects = getSelectedEObjects(event);
 
-        Map<ResourceSet, List<EObject>> groupedEObjects = selectedEObjects.stream()
-            .collect(Collectors.groupingBy(eobject -> eobject.eResource()
-                .getResourceSet()));
+        Map<EditingDomain, List<EObject>> groupedEObjects = new HashMap<>();
+        for (var eobject : selectedEObjects) {
+            var editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(eobject);
+            if (editingDomain == null) {
+                throw new ExecutionException("Could not find an editing domain for every element.");
+            }
+            var eobjectGroup = groupedEObjects.computeIfAbsent(editingDomain, e -> new ArrayList<>());
+            eobjectGroup.add(eobject);
+        }
+
         for (var entry : groupedEObjects.entrySet()) {
             randomizeIDsForSelectionGroup(entry.getKey(), entry.getValue());
         }
@@ -37,8 +42,8 @@ public abstract class AbstractIdentifierRandomizerCommandHandler extends Abstrac
         return null;
     }
 
-    protected void randomizeIDsForSelectionGroup(ResourceSet resourceSet, Collection<EObject> selectedEObjects) {
-        executeInTransaction(resourceSet, () -> {
+    protected void randomizeIDsForSelectionGroup(EditingDomain editingDomain, Collection<EObject> selectedEObjects) {
+        executeInTransaction(editingDomain, () -> {
             randomizeIDsForSelectedEObjects(selectedEObjects);
         });
     }
@@ -56,11 +61,9 @@ public abstract class AbstractIdentifierRandomizerCommandHandler extends Abstrac
         return selectedEObjects;
     }
 
-    protected void executeInTransaction(ResourceSet rs, Runnable runnable) {
-        TransactionalEditingDomain editingDomain = Optional.ofNullable(TransactionUtil.getEditingDomain(rs))
-            .orElseGet(() -> TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain(rs));
+    protected void executeInTransaction(EditingDomain editingDomain, Runnable runnable) {
         editingDomain.getCommandStack()
-            .execute(new RecordingCommand(editingDomain) {
+            .execute(new ChangeCommand(editingDomain.getResourceSet()) {
                 @Override
                 protected void doExecute() {
                     runnable.run();

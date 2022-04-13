@@ -6,7 +6,7 @@ jobs:
   Palladio-Core-Commons:
     runs-on: self-hosted
     steps:
-      - uses: Nicolas-Boltz/BuildPipelineActionTest@main
+      - uses: PalladioSimulator/Palladio-Build-ActionsPipeline@v2
         with:
           use-display-output: true
           deploy-updatesite: 'releng/org.palladiosimulator.core-commons.updatesite/target/repository'

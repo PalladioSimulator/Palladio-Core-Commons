@@ -6,6 +6,8 @@ jobs:
   Palladio-Core-Commons:
     uses: PalladioSimulator/Palladio-Build-ActionsPipeline/.github/workflows/build.yml@v3.2
     with:
+      java-version: 17
+      runner-label: ubuntu-latest
       use-display-output: true
       deploy-updatesite: 'releng/org.palladiosimulator.core-commons.updatesite/target/repository'
     secrets:

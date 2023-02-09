@@ -5,7 +5,7 @@ Bundle-SymbolicName: de.uka.ipd.sdq.identifier.uiutils;singleton:=true
 Bundle-Version: 5.1.0.qualifier
 Bundle-Vendor: sdq.ipd.uka.de
 Automatic-Module-Name: de.uka.ipd.sdq.identifier.editor
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.ui;bundle-version="3.118.100",
  org.eclipse.emf.edit;bundle-version="2.16.0",
  de.uka.ipd.sdq.identifier;bundle-version="5.1.0",

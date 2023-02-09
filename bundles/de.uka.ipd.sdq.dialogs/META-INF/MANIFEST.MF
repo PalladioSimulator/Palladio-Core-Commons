@@ -16,4 +16,4 @@ Export-Package: de.uka.ipd.sdq.dialogs.error,
  de.uka.ipd.sdq.dialogs.selection
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: de.uka.ipd.sdq.dialogs.DialogPluginActivator
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17

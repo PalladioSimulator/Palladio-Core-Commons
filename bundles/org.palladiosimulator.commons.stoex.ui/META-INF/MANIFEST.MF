@@ -21,7 +21,7 @@ Require-Bundle: org.palladiosimulator.commons.stoex;visibility:=reexport,
  de.uka.ipd.sdq.stoex.analyser
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.commons.stoex.ui.contentassist,
  org.palladiosimulator.commons.stoex.ui.internal,
  org.palladiosimulator.commons.stoex.ui.quickfix

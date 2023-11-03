@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.palladiosimulator.core-commons</groupId>
     <artifactId>tests</artifactId>
-    <version>5.1.0-SNAPSHOT</version>
+    <version>5.2.0-SNAPSHOT</version>
     <relativePath>..\.polyglot.pom.tycho</relativePath>
   </parent>
   <artifactId>org.palladiosimulator.commons.ui.tests</artifactId>

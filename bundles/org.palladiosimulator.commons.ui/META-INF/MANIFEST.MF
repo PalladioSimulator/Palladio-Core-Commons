@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Palladio Common UI Components
 Bundle-SymbolicName: org.palladiosimulator.commons.ui;singleton:=true
-Bundle-Version: 5.1.0.qualifier
+Bundle-Version: 5.2.0.qualifier
 Export-Package: org.palladiosimulator.commons.ui.e4,
  org.palladiosimulator.commons.ui.launch
 Require-Bundle: org.eclipse.debug.ui,

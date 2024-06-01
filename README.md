@@ -1,8 +1,11 @@
 # Palladio Commons
 Common utilities for development of Palladio and beyond.
 
-## Documentation
-For comprehensive documentation, please visit our [wiki page](https://sdqweb.ipd.kit.edu/wiki/Palladio_Component_Model/Palladio_Commons).
+## Update Site
+### Latest Release
+https://updatesite.palladio-simulator.com/palladio-core-commons/releases/latest/
+### Nightly
+http://sdqweb.ipd.kit.edu/eclipse/commons/nightly/
 
 ## Support
 For support

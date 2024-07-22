@@ -5,7 +5,7 @@ Common utilities for development of Palladio and beyond.
 ### Latest Release
 https://updatesite.palladio-simulator.com/palladio-core-commons/releases/latest/
 ### Nightly
-http://sdqweb.ipd.kit.edu/eclipse/commons/nightly/
+https://updatesite.palladio-simulator.com/palladio-core-commons/nightly/
 
 ## Support
 For support

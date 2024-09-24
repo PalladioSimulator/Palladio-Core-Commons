@@ -4,3 +4,6 @@ bin/
 *.jar
 xtend-gen/
 target/
+**/.polyglot.META-INF
+**/plugin.xml_gen
+bundles/de.uka.ipd.sdq.probfunction/.externalToolBuilders

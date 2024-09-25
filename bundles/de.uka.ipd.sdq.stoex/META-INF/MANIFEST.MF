@@ -7,12 +7,14 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: de.uka.ipd.sdq.stoex,
- de.uka.ipd.sdq.stoex.impl; uses:="org.eclipse.emf.ecore,
+ de.uka.ipd.sdq.stoex.impl;
+  uses:="org.eclipse.emf.ecore,
    de.uka.ipd.sdq.probfunction,
    org.eclipse.emf.ecore.impl,
    org.eclipse.emf.common.notify,
    de.uka.ipd.sdq.stoex",
- de.uka.ipd.sdq.stoex.util; uses:="org.eclipse.emf.ecore,
+ de.uka.ipd.sdq.stoex.util;
+  uses:="org.eclipse.emf.ecore,
    org.eclipse.emf.common.notify.impl,
    org.eclipse.emf.common.notify,
    de.uka.ipd.sdq.stoex"
@@ -24,5 +26,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ocl.ecore;visibility:=reexport,
  org.palladiosimulator.core-commons.mwe2;resolution:=optional
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Automatic-Module-Name: de.uka.ipd.sdq.stoex

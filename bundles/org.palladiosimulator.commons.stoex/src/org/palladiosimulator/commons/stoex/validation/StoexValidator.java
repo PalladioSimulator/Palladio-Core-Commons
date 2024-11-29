@@ -20,7 +20,7 @@ import org.palladiosimulator.commons.stoex.services.StoexContextProvider;
 
 import com.google.inject.Inject;
 
-import de.uka.ipd.sdq.errorhandling.IIssue;
+import de.uka.ipd.sdq.errorhandling.core.IIssue;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
 import de.uka.ipd.sdq.stoex.Expression;
 import de.uka.ipd.sdq.stoex.StoexPackage;

@@ -3,5 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: SDQ Errorhandling Core
 Bundle-SymbolicName: de.uka.ipd.sdq.errorhandling.core
 Bundle-Version: 5.2.0.qualifier
+Export-Package: de.uka.ipd.sdq.errorhandling.core
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.33.0"
 Bundle-Vendor: sdq.ipd.uka.de
 Bundle-RequiredExecutionEnvironment: JavaSE-17

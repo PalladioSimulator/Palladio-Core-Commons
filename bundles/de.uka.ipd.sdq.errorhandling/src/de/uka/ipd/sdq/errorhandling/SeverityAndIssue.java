@@ -1,6 +1,8 @@
-package de.uka.ipd.sdq.errorhandling.core;
+package de.uka.ipd.sdq.errorhandling;
 
 import org.eclipse.emf.ecore.EObject;
+
+import de.uka.ipd.sdq.errorhandling.dialogs.issues.IssuesDialog;
 
 /**
  * Issue combined with a severity level. Used to record and report issues to the user using the
@@ -95,30 +97,26 @@ public class SeverityAndIssue implements Comparable<SeverityAndIssue> {
     public String getResourceName() {
         if (element != null) {
             if (element instanceof EObject) {
-                return ((EObject) element).eResource()
-                    .getURI()
-                    .toFileString();
+                return ((EObject) element).eResource().getURI().toFileString();
             } else {
                 return objectResourceName == null ? DEFAULT_RESOURCE_NAME : objectResourceName;
             }
-        } else {
+        } else
             return DEFAULT_RESOURCE_NAME;
-        }
+
     }
 
     public SeverityEnum getError() {
         return severity;
     }
 
-    @Override
     public int compareTo(SeverityAndIssue o) {
-        if (this.severity == o.getError()) {
+        if (this.severity == o.getError())
             return 0;
-        }
-        if (this.severity == SeverityEnum.ERROR && o.getError() == SeverityEnum.WARNING) {
+        if (this.severity == SeverityEnum.ERROR && o.getError() == SeverityEnum.WARNING)
             return -1;
-        }
-        return 1;
+        else
+            return 1;
     }
 
 }

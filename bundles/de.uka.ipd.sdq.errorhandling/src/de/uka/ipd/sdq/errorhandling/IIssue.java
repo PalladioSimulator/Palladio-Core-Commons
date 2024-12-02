@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.errorhandling.core;
+package de.uka.ipd.sdq.errorhandling;
 
 /**
  * Interface for reportable issues.

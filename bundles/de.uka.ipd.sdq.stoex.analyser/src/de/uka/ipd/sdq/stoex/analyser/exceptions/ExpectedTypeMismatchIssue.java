@@ -3,7 +3,7 @@ package de.uka.ipd.sdq.stoex.analyser.exceptions;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import de.uka.ipd.sdq.errorhandling.core.IIssue;
+import de.uka.ipd.sdq.errorhandling.IIssue;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 
 public class ExpectedTypeMismatchIssue implements IIssue {

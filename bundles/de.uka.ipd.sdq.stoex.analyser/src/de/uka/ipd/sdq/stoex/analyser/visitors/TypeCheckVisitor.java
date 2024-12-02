@@ -3,7 +3,7 @@ package de.uka.ipd.sdq.stoex.analyser.visitors;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import de.uka.ipd.sdq.errorhandling.core.IIssue;
+import de.uka.ipd.sdq.errorhandling.IIssue;
 import de.uka.ipd.sdq.stoex.BooleanOperatorExpression;
 import de.uka.ipd.sdq.stoex.IfElseExpression;
 import de.uka.ipd.sdq.stoex.NegativeExpression;

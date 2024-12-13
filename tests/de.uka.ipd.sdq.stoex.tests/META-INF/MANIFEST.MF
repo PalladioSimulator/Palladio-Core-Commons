@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: StoEx Test
 Bundle-SymbolicName: de.uka.ipd.sdq.stoex.tests
-Bundle-Version: 5.2.0.qualifier
-Fragment-Host: de.uka.ipd.sdq.stoex;bundle-version="5.2.0"
+Bundle-Version: 5.2.1.qualifier
+Fragment-Host: de.uka.ipd.sdq.stoex;bundle-version="5.2.1"
 Automatic-Module-Name: de.uka.ipd.sdq.stoex.test
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: org.junit;version="4.12.0",

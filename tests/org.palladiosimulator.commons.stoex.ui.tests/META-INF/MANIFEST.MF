@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.palladiosimulator.commons.stoex.ui.tests
-Bundle-Version: 5.2.0.qualifier
+Bundle-Version: 5.2.1.qualifier
 Bundle-SymbolicName: org.palladiosimulator.commons.stoex.ui.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Fragment-Host: org.palladiosimulator.commons.stoex.ui

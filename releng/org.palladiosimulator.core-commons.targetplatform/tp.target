@@ -15,13 +15,16 @@
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.xtext.sdk.feature.group" version="0.0.0"/>
-<unit id="org.hamcrest.core" version="0.0.0"/>
-<unit id="org.hamcrest.library" version="0.0.0"/>
 <unit id="org.objectweb.asm" version="0.0.0"/>
 <unit id="org.junit" version="0.0.0"/>
 <unit id="org.eclipse.e4.core.di" version="0.0.0"/>
 <unit id="org.apache.commons.lang3" version="0.0.0"/>
 <repository location="https://download.eclipse.org/releases/2023-09/202309131000/"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
+    <unit id="org.hamcrest.core" version="0.0.0"/>
+    <unit id="org.hamcrest.library" version="0.0.0"/>
+<repository location="https://download.eclipse.org/releases/2023-03/202303151000/"/>
+</location>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
 <unit id="tools.mdsd.library.standalone.initialization.core.feature.feature.group" version="0.0.0"/>

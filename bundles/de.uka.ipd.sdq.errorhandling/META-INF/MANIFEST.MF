@@ -7,7 +7,8 @@ Bundle-Activator: de.uka.ipd.sdq.errorhandling.Activator
 Bundle-Vendor: sdq.ipd.uka.de
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
- org.eclipse.ui;resolution:=optional
+ org.eclipse.ui;resolution:=optional,
+ de.uka.ipd.sdq.errorhandling.core;bundle-version="5.2.1";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: de.uka.ipd.sdq.errorhandling,
  de.uka.ipd.sdq.errorhandling.dialogs.issues

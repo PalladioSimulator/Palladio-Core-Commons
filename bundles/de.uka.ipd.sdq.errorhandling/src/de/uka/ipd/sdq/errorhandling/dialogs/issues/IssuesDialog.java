@@ -25,8 +25,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 
-import de.uka.ipd.sdq.errorhandling.SeverityAndIssue;
-import de.uka.ipd.sdq.errorhandling.SeverityEnum;
+import de.uka.ipd.sdq.errorhandling.core.SeverityAndIssue;
+import de.uka.ipd.sdq.errorhandling.core.SeverityEnum;
 
 public class IssuesDialog extends Dialog {
 

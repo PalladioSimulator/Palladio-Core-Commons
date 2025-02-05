@@ -5,7 +5,6 @@ import java.util.Optional;
 import javax.inject.Provider;
 
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.ui.IEditorInput;
 import org.palladiosimulator.commons.eclipseutils.ExtensionHelper;
 
 import com.google.inject.Injector;
@@ -61,13 +60,6 @@ public abstract class GenericXtextToolProviderImpl<T> implements GenericXtextToo
      */
     protected Optional<T> getExtension() {
         if (!Platform.isRunning()) {
-            return Optional.empty();
-        }
-        try {
-            // This is done because the Xtext framework requires the Eclipse UI bundle to be loaded
-            // when running within the platform. 
-            IEditorInput.class.getClass();
-        } catch (NoClassDefFoundError e) {
             return Optional.empty();
         }
         final var foundExtensions = ExtensionHelper.<T> getExecutableExtensions(extensionPointId, extensionPointAttr);

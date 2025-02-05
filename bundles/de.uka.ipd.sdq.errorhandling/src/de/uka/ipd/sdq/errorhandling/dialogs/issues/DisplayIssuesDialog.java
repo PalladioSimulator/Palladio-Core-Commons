@@ -8,7 +8,7 @@ import java.util.List;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.ui.PlatformUI;
 
-import de.uka.ipd.sdq.errorhandling.SeverityAndIssue;
+import de.uka.ipd.sdq.errorhandling.core.SeverityAndIssue;
 
 /**
  * Inner class used to display the dialog containing found validation errors. Needed by Eclipse to

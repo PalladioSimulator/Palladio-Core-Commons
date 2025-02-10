@@ -4,7 +4,7 @@ import java.io.NotSerializableException;
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.inject.Provider;
+import com.google.inject.Provider;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;

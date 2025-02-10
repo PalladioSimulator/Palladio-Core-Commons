@@ -2,7 +2,7 @@ package org.palladiosimulator.commons.stoex.api.impl.generic;
 
 import java.util.Optional;
 
-import javax.inject.Provider;
+import com.google.inject.Provider;
 
 import org.eclipse.core.runtime.Platform;
 import org.palladiosimulator.commons.eclipseutils.ExtensionHelper;

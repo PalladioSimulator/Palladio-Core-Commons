@@ -1,6 +1,6 @@
 package org.palladiosimulator.commons.stoex.api.impl.generic;
 
-import javax.inject.Provider;
+import com.google.inject.Provider;
 
 /**
  * Base interface to get an Xtext tool like parsers or serialisers.

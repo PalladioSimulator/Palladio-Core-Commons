@@ -2,7 +2,7 @@ package org.palladiosimulator.commons.stoex.api.impl.generic;
 
 import java.util.Optional;
 
-import javax.inject.Provider;
+import jakarta.inject.Provider;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.ui.IEditorInput;

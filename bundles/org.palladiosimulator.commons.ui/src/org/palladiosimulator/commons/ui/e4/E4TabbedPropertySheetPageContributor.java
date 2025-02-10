@@ -1,7 +1,7 @@
 package org.palladiosimulator.commons.ui.e4;
 
-import javax.inject.Inject;
-import javax.inject.Named;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 
 import org.eclipse.eef.properties.ui.api.IEEFTabbedPropertySheetPageContributor;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;

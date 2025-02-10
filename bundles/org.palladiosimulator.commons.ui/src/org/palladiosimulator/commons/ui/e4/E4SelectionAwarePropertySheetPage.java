@@ -1,7 +1,7 @@
 package org.palladiosimulator.commons.ui.e4;
 
-import com.google.inject.Inject;
-import com.google.inject.name.Named;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.PropertySheetPage;

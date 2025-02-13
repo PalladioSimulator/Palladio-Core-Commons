@@ -19,10 +19,9 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.common,
  org.eclipse.xtend.lib;bundle-version="2.14.0",
  org.eclipse.xtext.ecore,
- de.uka.ipd.sdq.stoex.analyser;visibility:=reexport,
+ de.uka.ipd.sdq.stoex.analyser,
  de.uka.ipd.sdq.errorhandling.core;bundle-version="5.2.1",
- org.palladiosimulator.commons;bundle-version="5.2.1",
- org.palladiosimulator.core-commons.mwe2;bundle-version="5.2.1";resolution:=optional
+ org.palladiosimulator.commons;bundle-version="5.2.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.commons.stoex,
  org.palladiosimulator.commons.stoex.api,

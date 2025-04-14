@@ -39,7 +39,7 @@ public final class ExtensionHelper {
     public static List<String> getAttributes(final String extensionPointID, final String elementName,
             final String attributeName) {
         final List<IExtension> extensions = loadExtensions(extensionPointID);
-        final List<String> results = new LinkedList<String>();
+        final List<String> results = new LinkedList<>();
 
         for (final IExtension extension : extensions) {
             results.add(obtainConfigurationElement(extension, elementName).getAttribute(attributeName));
@@ -63,20 +63,20 @@ public final class ExtensionHelper {
      */
     public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
             final String attributeName) {
-        final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
+        final List<DATA_TYPE> results = new LinkedList<>();
 
         if (Platform.getExtensionRegistry() != null) {
             final IConfigurationElement[] configurationElements = Platform.getExtensionRegistry()
-                    .getConfigurationElementsFor(extensionPointID);
+                .getConfigurationElementsFor(extensionPointID);
             for (final IConfigurationElement configurationElement : configurationElements) {
                 try {
                     @SuppressWarnings("unchecked")
                     final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
-                            .createExecutableExtension(attributeName);
+                        .createExecutableExtension(attributeName);
                     results.add(executableExtension);
                 } catch (final CoreException e) {
                     throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
-                            + attributeName + "\"");
+                            + attributeName + "\"", e);
                 }
             }
         }
@@ -106,13 +106,14 @@ public final class ExtensionHelper {
             final String attributeName, final String filterAttributeName, final String filterAttributeValue) {
         if (Platform.getExtensionRegistry() != null) {
             final IConfigurationElement[] configurationElements = Platform.getExtensionRegistry()
-                    .getConfigurationElementsFor(extensionPointID);
+                .getConfigurationElementsFor(extensionPointID);
             for (final IConfigurationElement configurationElement : configurationElements) {
-                if (configurationElement.getAttribute(filterAttributeName).equals(filterAttributeValue)) {
+                if (configurationElement.getAttribute(filterAttributeName)
+                    .equals(filterAttributeValue)) {
                     try {
                         @SuppressWarnings("unchecked")
                         final DATA_TYPE executableExtension = (DATA_TYPE) configurationElement
-                                .createExecutableExtension(attributeName);
+                            .createExecutableExtension(attributeName);
                         return executableExtension;
                     } catch (final CoreException e) {
                         throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID
@@ -143,13 +144,13 @@ public final class ExtensionHelper {
      */
     public static <DATA_TYPE> List<DATA_TYPE> getExecutableExtensions(final String extensionPointID,
             final String elementName, final String attributeName) {
-        final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
+        final List<DATA_TYPE> results = new LinkedList<>();
         final List<IExtension> extensions = loadExtensions(extensionPointID);
         for (final IExtension extension : extensions) {
             try {
                 @SuppressWarnings("unchecked")
                 final DATA_TYPE executableExtension = (DATA_TYPE) obtainConfigurationElement(extension, elementName)
-                        .createExecutableExtension(attributeName);
+                    .createExecutableExtension(attributeName);
                 results.add(executableExtension);
             } catch (final CoreException e) {
                 throw new RuntimeException("Unable to create executable extension for \"" + extensionPointID + "->"
@@ -159,7 +160,7 @@ public final class ExtensionHelper {
 
         return Collections.unmodifiableList(results);
     }
-    
+
     /**
      * Gets all executable extensions registered at a given extension point at a given element and
      * conforming to a given attribute and filtered by the given attribute and its value.
@@ -177,9 +178,9 @@ public final class ExtensionHelper {
      *            the atrribute's value to be used for filtering. Found attributes have to equal
      *            this value in case they should be chosen.
      * @param extensionType
-     *            the extension base class. Extensions not conforming to the base class will be            
+     *            the extension base class. Extensions not conforming to the base class will be
      *            silently ignored.
-     * @return a list of executable extensions matching to all selection criteria defined by this 
+     * @return a list of executable extensions matching to all selection criteria defined by this
      *         method's parameters.
      * @param <DATA_TYPE>
      *            the data type of the executable extension.
@@ -188,7 +189,7 @@ public final class ExtensionHelper {
             final String elementName, final String attributeName, final String filterAttributeName,
             final String filterAttributeValue, Class<DATA_TYPE> extensionType) {
         final List<IExtension> extensions = loadExtensions(extensionPointID);
-        final List<DATA_TYPE> results = new LinkedList<DATA_TYPE>();
+        final List<DATA_TYPE> results = new LinkedList<>();
 
         for (final IExtension extension : extensions) {
             final IConfigurationElement configurationElement = obtainConfigurationElement(extension, elementName);
@@ -196,8 +197,7 @@ public final class ExtensionHelper {
             if (configurationElement.getAttribute(filterAttributeName)
                 .equals(filterAttributeValue)) {
                 try {
-                    var ext = configurationElement
-                            .createExecutableExtension(attributeName);
+                    var ext = configurationElement.createExecutableExtension(attributeName);
                     if (extensionType.isInstance(ext)) {
                         results.add(extensionType.cast(ext));
                     }
@@ -211,7 +211,7 @@ public final class ExtensionHelper {
 
         return results;
     }
-    
+
     /**
      * Gets an executable extension registered at a given extension point at a given element and
      * conforming to a given attribute and filtered by the given attribute and its value.
@@ -278,8 +278,8 @@ public final class ExtensionHelper {
     @Deprecated
     public static <DATA_TYPE> DATA_TYPE getExecutableExtension(final String extensionPointID, final String elementName,
             final String attributeName, final String filterAttributeName, final String filterAttributeValue) {
-        var extensions = ExtensionHelper.getExecutableExtensions(extensionPointID, elementName,
-                attributeName, filterAttributeName, filterAttributeValue, Object.class);
+        var extensions = ExtensionHelper.getExecutableExtensions(extensionPointID, elementName, attributeName,
+                filterAttributeName, filterAttributeValue, Object.class);
 
         return (DATA_TYPE) extensions.stream()
             .findAny()
@@ -300,7 +300,8 @@ public final class ExtensionHelper {
     private static IConfigurationElement obtainConfigurationElement(final IExtension extension,
             final String elementName) {
         for (final IConfigurationElement element : extension.getConfigurationElements()) {
-            if (element.getName().equals(elementName)) {
+            if (element.getName()
+                .equals(elementName)) {
                 return element;
             }
         }
@@ -317,8 +318,9 @@ public final class ExtensionHelper {
      * @return list of extensions at the given extension point.
      */
     private static List<IExtension> loadExtensions(final String extensionPointID) {
-        return Collections.unmodifiableList(
-                Arrays.asList(Platform.getExtensionRegistry().getExtensionPoint(extensionPointID).getExtensions()));
+        return Collections.unmodifiableList(Arrays.asList(Platform.getExtensionRegistry()
+            .getExtensionPoint(extensionPointID)
+            .getExtensions()));
     }
 
 }

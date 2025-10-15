@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Palladio Simulator Commons Plugin
 Bundle-SymbolicName: org.palladiosimulator.commons
-Bundle-Version: 5.2.1.qualifier
+Bundle-Version: 5.2.2
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.commons.datastructureutils,

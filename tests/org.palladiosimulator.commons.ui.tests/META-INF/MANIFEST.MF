@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Palladio Commons UI Tests
 Bundle-SymbolicName: org.palladiosimulator.commons.ui.tests;singleton:=true
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Fragment-Host: org.palladiosimulator.commons.ui;bundle-version="5.2.2"
 Automatic-Module-Name: org.palladiosimulator.commons.ui.tests
 Bundle-RequiredExecutionEnvironment: JavaSE-17

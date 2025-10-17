@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Palladio GUID Identifier UI Utils
 Bundle-SymbolicName: de.uka.ipd.sdq.identifier.uiutils;singleton:=true
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Bundle-Vendor: sdq.ipd.uka.de
 Automatic-Module-Name: de.uka.ipd.sdq.identifier.editor
 Bundle-RequiredExecutionEnvironment: JavaSE-17

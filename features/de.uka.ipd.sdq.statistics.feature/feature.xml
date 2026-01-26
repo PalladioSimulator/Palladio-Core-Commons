@@ -2,7 +2,7 @@
 <feature
       id="de.uka.ipd.sdq.statistics.feature"
       label="Palladio Statistics Feature"
-      version="5.2.2"
+      version="6.0.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -15,7 +15,7 @@ estimators, confidence estimators and indepence tests.
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.apache.log4j" version="1.2.13" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.probfunction.math" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.probfunction.math"/>
       <import plugin="org.palladiosimulator.branding"/>
    </requires>
 

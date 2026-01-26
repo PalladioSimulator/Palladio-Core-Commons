@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Statistics
 Bundle-SymbolicName: de.uka.ipd.sdq.statistics
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Bundle-Activator: de.uka.ipd.sdq.statistics.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.apache.log4j;bundle-version="1.2.13",
- de.uka.ipd.sdq.probfunction.math;bundle-version="2.0.0"
+ de.uka.ipd.sdq.probfunction.math
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: de.uka.ipd.sdq.statistics,

@@ -4,7 +4,7 @@
     modelPluginID="de.uka.ipd.sdq.identifier.editor.tests" modelName="Identifiertest"
     rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
-    complianceLevel="5.0" copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
+    complianceLevel="17.0" copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
     usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier"
     importOrganizing="true">
   <foreignModel>identifiertest.ecore</foreignModel>

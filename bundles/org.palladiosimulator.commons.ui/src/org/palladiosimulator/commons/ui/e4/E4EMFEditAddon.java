@@ -1,6 +1,6 @@
 package org.palladiosimulator.commons.ui.e4;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;

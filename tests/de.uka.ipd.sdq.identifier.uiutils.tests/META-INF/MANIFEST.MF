@@ -8,7 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Fragment-Host: de.uka.ipd.sdq.identifier.uiutils
 Automatic-Module-Name: de.uka.ipd.sdq.identifier.editor.tests
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: identifiertesting,
  identifiertesting.impl,
  identifiertesting.util

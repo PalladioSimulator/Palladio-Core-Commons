@@ -9,5 +9,5 @@ Require-Bundle: de.uka.ipd.sdq.probfunction.math,
  de.uka.ipd.sdq.stoex.analyser,
  org.palladiosimulator.commons.stoex
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: de.uka.ipd.sdq.stoex.analyser.tests

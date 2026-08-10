@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.palladiosimulator.commons.ui.tests;singleton:=true
 Bundle-Version: 6.0.0.qualifier
 Fragment-Host: org.palladiosimulator.commons.ui
 Automatic-Module-Name: org.palladiosimulator.commons.ui.tests
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: org.junit,
  junit-jupiter-api,
  tools.mdsd.junit5utils,

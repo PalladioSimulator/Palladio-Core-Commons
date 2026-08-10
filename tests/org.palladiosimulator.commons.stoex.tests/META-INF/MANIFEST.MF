@@ -9,7 +9,7 @@ Require-Bundle: org.palladiosimulator.commons.stoex,
  org.eclipse.xtext.xbase.testing,
  org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
  de.uka.ipd.sdq.stoex.analyser
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.palladiosimulator.commons.stoex.tests;x-internal=true
 Import-Package: net.bytebuddy;version="1.9.0",
  org.apache.commons.lang3.mutable;version="3.1.0",

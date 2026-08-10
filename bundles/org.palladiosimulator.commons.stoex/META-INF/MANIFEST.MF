@@ -22,7 +22,7 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  de.uka.ipd.sdq.stoex.analyser,
  de.uka.ipd.sdq.errorhandling.core,
  org.palladiosimulator.commons
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.palladiosimulator.commons.stoex,
  org.palladiosimulator.commons.stoex.api,
  org.palladiosimulator.commons.stoex.api.impl,

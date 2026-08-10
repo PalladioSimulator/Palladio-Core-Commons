@@ -21,9 +21,9 @@ Require-Bundle: org.eclipse.debug.ui,
  org.eclipse.emf.edit.ui,
  org.eclipse.e4.core.contexts,
  org.eclipse.e4.core.di,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ jakarta.annotation-api;bundle-version="[2.1.0,3.0.0)",
+ jakarta.inject.jakarta.inject-api;bundle-version="[2.0.0,3.0.0)"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.palladiosimulator.commons.ui
-Import-Package: javax.annotation,
- javax.inject
 Bundle-ActivationPolicy: lazy

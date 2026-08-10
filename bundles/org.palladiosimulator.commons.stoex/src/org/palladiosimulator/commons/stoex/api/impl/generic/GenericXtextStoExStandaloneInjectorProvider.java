@@ -1,6 +1,6 @@
 package org.palladiosimulator.commons.stoex.api.impl.generic;
 
-import javax.inject.Provider;
+import jakarta.inject.Provider;
 
 import org.eclipse.xtext.ISetup;
 

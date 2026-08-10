@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Tests
 Bundle-SymbolicName: de.uka.ipd.sdq.probfunction.math.tests
 Bundle-Version: 6.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: de.uka.ipd.sdq.probfunction.math,
  de.uka.ipd.sdq.probfunction,
  org.junit;bundle-version="4.11.0"

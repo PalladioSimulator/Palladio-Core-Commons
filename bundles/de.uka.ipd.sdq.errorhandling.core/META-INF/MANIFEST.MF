@@ -7,4 +7,4 @@ Export-Package: de.uka.ipd.sdq.errorhandling.core
 Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.33.0"
 Bundle-Vendor: sdq.ipd.uka.de
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

@@ -1,5 +1,7 @@
 package org.palladiosimulator.commons.ui.e4;
 
+import java.util.List;
+
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
@@ -39,6 +41,11 @@ public class E4TabbedPropertySheetPageContributor
     @Override
     public String getContributorId() {
         return contributorId;
+    }
+
+    @Override
+    public List<String> getContributorIds() {
+        return List.of(contributorId);
     }
 
     @Override

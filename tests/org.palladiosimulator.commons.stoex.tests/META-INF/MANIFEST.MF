@@ -11,7 +11,7 @@ Require-Bundle: org.palladiosimulator.commons.stoex,
  de.uka.ipd.sdq.stoex.analyser
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.palladiosimulator.commons.stoex.tests;x-internal=true
-Import-Package: net.bytebuddy;version="1.9.0",
+Import-Package: net.bytebuddy,
  org.apache.commons.lang3.mutable;version="3.1.0",
  org.hamcrest.core,
  org.junit;version="4.13.0",
@@ -22,7 +22,7 @@ Import-Package: net.bytebuddy;version="1.9.0",
  org.mockito,
  org.mockito.invocation,
  org.mockito.stubbing,
- org.objenesis;version="2.6.0",
+ org.objenesis,
  tools.mdsd.junit5utils.annotations,
  tools.mdsd.library.standalone.initialization,
  tools.mdsd.library.standalone.initialization.core

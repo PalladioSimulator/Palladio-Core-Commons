@@ -6,8 +6,9 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-import org.apache.commons.math.complex.Complex;
-import org.apache.commons.math.util.MathUtils;
+import org.apache.commons.math3.complex.Complex;
+import org.apache.commons.math3.util.ArithmeticUtils;
+import org.apache.commons.math3.util.FastMath;
 
 import de.uka.ipd.sdq.probfunction.math.IContinuousSample;
 import de.uka.ipd.sdq.probfunction.math.ISample;
@@ -338,7 +339,7 @@ public class MathTools {
         if (value <= 0)
             throw new IllegalArgumentException("Expected a parameter greater than 0, but encountered " + value);
 
-        double exponent = MathUtils.log(2, value);
+        double exponent = FastMath.log(2, value);
 
         // test if the passed value is already a power of two and, if so, return the argument.
         if (Math.floor(exponent) == exponent) {
@@ -346,7 +347,7 @@ public class MathTools {
         }
 
         int resultingExponent = (int) Math.floor(exponent) + 1;
-        int resultingPowerOfTwo = MathUtils.pow(2, resultingExponent);
+        int resultingPowerOfTwo = ArithmeticUtils.pow(2, resultingExponent);
 
         return resultingPowerOfTwo;
     }

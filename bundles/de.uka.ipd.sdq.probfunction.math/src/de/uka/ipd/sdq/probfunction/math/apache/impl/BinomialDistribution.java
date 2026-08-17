@@ -3,7 +3,6 @@
  */
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.BinomialDistributionImpl;
 
 import de.uka.ipd.sdq.probfunction.math.IBinomialDistribution;
 import de.uka.ipd.sdq.probfunction.math.exception.DomainNotNumbersException;
@@ -17,7 +16,7 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
 public class BinomialDistribution extends AbstractDiscretePDF implements IBinomialDistribution {
 
     public BinomialDistribution(int trials, double p) {
-        this.internalFunction = new BinomialDistributionImpl(trials, p);
+        this.internalFunction = new org.apache.commons.math3.distribution.BinomialDistribution(trials, p);
     }
 
     /*
@@ -27,8 +26,8 @@ public class BinomialDistribution extends AbstractDiscretePDF implements IBinomi
      */
     @Override
     public double getStandardDeviation() {
-        int n = ((BinomialDistributionImpl) internalFunction).getNumberOfTrials();
-        double p = ((BinomialDistributionImpl) internalFunction).getProbabilityOfSuccess();
+        int n = ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getNumberOfTrials();
+        double p = ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getProbabilityOfSuccess();
         return Math.sqrt(n * p * (1 - p));
     }
 
@@ -50,7 +49,7 @@ public class BinomialDistribution extends AbstractDiscretePDF implements IBinomi
     @Override
     public double getXsup() {
 
-        return ((BinomialDistributionImpl) internalFunction).getNumberOfTrials();
+        return ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getNumberOfTrials();
     }
 
     /*
@@ -100,21 +99,21 @@ public class BinomialDistribution extends AbstractDiscretePDF implements IBinomi
 
     @Override
     public double getMean() {
-        int n = ((BinomialDistributionImpl) internalFunction).getNumberOfTrials();
-        double p = ((BinomialDistributionImpl) internalFunction).getProbabilityOfSuccess();
+        int n = ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getNumberOfTrials();
+        double p = ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getProbabilityOfSuccess();
         return n * p;
     }
 
     @Override
     public double getProbability() {
 
-        return ((BinomialDistributionImpl) internalFunction).getProbabilityOfSuccess();
+        return ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getProbabilityOfSuccess();
     }
 
     @Override
     public int getTrials() {
 
-        return ((BinomialDistributionImpl) internalFunction).getNumberOfTrials();
+        return ((org.apache.commons.math3.distribution.BinomialDistribution) internalFunction).getNumberOfTrials();
     }
 
 }

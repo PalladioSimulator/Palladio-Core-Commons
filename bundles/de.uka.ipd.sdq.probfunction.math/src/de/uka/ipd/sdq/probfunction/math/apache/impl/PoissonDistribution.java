@@ -3,7 +3,6 @@
  */
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.PoissonDistributionImpl;
 
 import de.uka.ipd.sdq.probfunction.math.IPoissonDistribution;
 import de.uka.ipd.sdq.probfunction.math.exception.DomainNotNumbersException;
@@ -17,7 +16,7 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
 public class PoissonDistribution extends AbstractDiscretePDF implements IPoissonDistribution {
 
     public PoissonDistribution(double lambda) {
-        this.internalFunction = new PoissonDistributionImpl(lambda);
+        this.internalFunction = new org.apache.commons.math3.distribution.PoissonDistribution(lambda);
     }
 
     /*
@@ -28,7 +27,7 @@ public class PoissonDistribution extends AbstractDiscretePDF implements IPoisson
     @Override
     public double getStandardDeviation() {
 
-        double lambda = ((PoissonDistributionImpl) internalFunction).getMean();
+        double lambda = ((org.apache.commons.math3.distribution.PoissonDistribution) internalFunction).getMean();
         return Math.sqrt(lambda);
     }
 
@@ -100,7 +99,7 @@ public class PoissonDistribution extends AbstractDiscretePDF implements IPoisson
 
     @Override
     public double getMean() {
-        return ((PoissonDistributionImpl) internalFunction).getMean();
+        return ((org.apache.commons.math3.distribution.PoissonDistribution) internalFunction).getMean();
     }
 
 }

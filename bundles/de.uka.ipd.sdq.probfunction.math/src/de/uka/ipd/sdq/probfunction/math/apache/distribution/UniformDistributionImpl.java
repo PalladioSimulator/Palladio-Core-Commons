@@ -1,19 +1,23 @@
 /**
- * 
+ *
  */
 package de.uka.ipd.sdq.probfunction.math.apache.distribution;
 
-import org.apache.commons.math.MathException;
-import org.apache.commons.math.distribution.AbstractContinuousDistribution;
+import org.apache.commons.math3.distribution.AbstractRealDistribution;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
 
 /**
  * @author joerg
- * 
+ *
+ * Hand written rather than taken from Commons Math, whose uniform distribution offers a
+ * density where this one deliberately refuses to.
  */
-public class UniformDistributionImpl extends AbstractContinuousDistribution {
+public class UniformDistributionImpl extends AbstractRealDistribution {
 
     /**
-	 * 
+	 *
 	 */
     private static final long serialVersionUID = 4771624459254238355L;
     double a, b;
@@ -26,23 +30,18 @@ public class UniformDistributionImpl extends AbstractContinuousDistribution {
         return b;
     }
 
-    public UniformDistributionImpl(double a, double b) throws MathException {
+    public UniformDistributionImpl(double a, double b) {
         if (b < a)
-            throw new MathException("Second value has to be greater than first value of interval");
+            throw new MathIllegalArgumentException(LocalizedFormats.SIMPLE_MESSAGE,
+                    "Second value has to be greater than first value of interval");
 
         this.a = a;
         this.b = b;
 
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.apache.commons.math.distribution.AbstractIntegerDistribution#cumulativeProbability(int)
-     */
     @Override
-    public double cumulativeProbability(double x) throws MathException {
+    public double cumulativeProbability(double x) {
         if (x < a)
             return 0;
         else if (x > b)
@@ -51,26 +50,11 @@ public class UniformDistributionImpl extends AbstractContinuousDistribution {
         return (x - a) / (b - a);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.apache.commons.math.distribution.AbstractIntegerDistribution#getDomainLowerBound(double)
-     */
+    /** Deliberately not implemented: this distribution does not offer a density. */
     @Override
-    protected double getDomainLowerBound(double p) {
-        return a;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.apache.commons.math.distribution.AbstractIntegerDistribution#getDomainUpperBound(double)
-     */
-    @Override
-    protected double getDomainUpperBound(double p) {
-        return b;
+    public double density(double x) {
+        throw new MathUnsupportedOperationException(LocalizedFormats.SIMPLE_MESSAGE,
+                "This distribution does not have a density function implemented");
     }
 
     public double getMean() {
@@ -82,8 +66,38 @@ public class UniformDistributionImpl extends AbstractContinuousDistribution {
     }
 
     @Override
-    protected double getInitialDomain(double p) {
+    public double getNumericalMean() {
         return getMean();
+    }
+
+    @Override
+    public double getNumericalVariance() {
+        return getVariance();
+    }
+
+    @Override
+    public double getSupportLowerBound() {
+        return a;
+    }
+
+    @Override
+    public double getSupportUpperBound() {
+        return b;
+    }
+
+    @Override
+    public boolean isSupportLowerBoundInclusive() {
+        return true;
+    }
+
+    @Override
+    public boolean isSupportUpperBoundInclusive() {
+        return true;
+    }
+
+    @Override
+    public boolean isSupportConnected() {
+        return true;
     }
 
 }

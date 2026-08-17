@@ -1,6 +1,11 @@
 package de.uka.ipd.sdq.probfunction.math.apache.distribution;
 
-import org.apache.commons.math.MathException;
+import org.apache.commons.math3.exception.MathArithmeticException;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathIllegalStateException;
+import org.apache.commons.math3.exception.MathRuntimeException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
 
 /**
  * SDQ implementation of LogNormalDistFromMoments based on apache.commons.math
@@ -13,7 +18,7 @@ public class LognormalDistributionFromMomentsImpl extends LognormalDistributionI
     /** Serializable version identifier */
     private static final long serialVersionUID = -7504569402218262740L;
 
-    public LognormalDistributionFromMomentsImpl(double mean, double variance) throws MathException {
+    public LognormalDistributionFromMomentsImpl(double mean, double variance) {
         super(calculateMu(mean, variance), calculateSigma(mean, variance));
     }
 
@@ -25,9 +30,8 @@ public class LognormalDistributionFromMomentsImpl extends LognormalDistributionI
      * @param var
      *            The variance
      * @return The value of mu
-     * @throws MathException
      */
-    private static double calculateMu(double mean, double var) throws MathException {
+    private static double calculateMu(double mean, double var) {
         final double sigma2 = calculateSigma2(mean, var);
         return Math.log(mean) - sigma2 / 2.0;
     }
@@ -40,9 +44,8 @@ public class LognormalDistributionFromMomentsImpl extends LognormalDistributionI
      * @param var
      *            The variance
      * @return The value of sigma
-     * @throws MathException
      */
-    private static double calculateSigma(double mean, double var) throws MathException {
+    private static double calculateSigma(double mean, double var) {
         final double sigma2 = calculateSigma2(mean, var);
         return Math.sqrt(sigma2);
     }
@@ -60,13 +63,12 @@ public class LognormalDistributionFromMomentsImpl extends LognormalDistributionI
      * @param var
      *            The variance
      * @return The value of sigma^2
-     * @throws MathException
      */
-    private static double calculateSigma2(double mean, double var) throws MathException {
+    private static double calculateSigma2(double mean, double var) {
         if (mean <= 0)
-            throw new MathException("Mean has to be positive");
+            throw new MathIllegalArgumentException(LocalizedFormats.SIMPLE_MESSAGE, "Mean has to be positive");
         if (var <= 0)
-            throw new MathException("Variance has to be positive");
+            throw new MathIllegalArgumentException(LocalizedFormats.SIMPLE_MESSAGE, "Variance has to be positive");
 
         double o2 = var;
         double u2 = (mean * mean);

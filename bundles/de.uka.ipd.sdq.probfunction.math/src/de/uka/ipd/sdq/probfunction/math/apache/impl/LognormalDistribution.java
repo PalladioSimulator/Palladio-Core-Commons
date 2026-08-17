@@ -1,6 +1,11 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.MathException;
+import org.apache.commons.math3.exception.MathArithmeticException;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathIllegalStateException;
+import org.apache.commons.math3.exception.MathRuntimeException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
 
 //import umontreal.iro.lecuyer.probdist.LognormalDist;
 //import umontreal.iro.lecuyer.probdist.LognormalDistFromMoments;
@@ -149,7 +154,8 @@ public class LognormalDistribution extends AbstractContinousPDF implements ILogn
         try {
             return new LognormalDistribution(new LognormalDistributionFromMomentsImpl(newMean, newVariance),
                     sampleDrawer);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
@@ -160,7 +166,8 @@ public class LognormalDistribution extends AbstractContinousPDF implements ILogn
         try {
             return new LognormalDistribution(new LognormalDistributionFromMomentsImpl(newMean, newVariance),
                     sampleDrawer);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }

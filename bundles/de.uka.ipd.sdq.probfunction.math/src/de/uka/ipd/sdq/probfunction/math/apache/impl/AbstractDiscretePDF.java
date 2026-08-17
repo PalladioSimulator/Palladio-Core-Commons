@@ -1,7 +1,12 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.MathException;
-import org.apache.commons.math.distribution.AbstractIntegerDistribution;
+import org.apache.commons.math3.exception.MathArithmeticException;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathIllegalStateException;
+import org.apache.commons.math3.exception.MathRuntimeException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
+import org.apache.commons.math3.distribution.AbstractIntegerDistribution;
 
 import de.uka.ipd.sdq.probfunction.math.IDiscretePDF;
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
@@ -40,7 +45,8 @@ public abstract class AbstractDiscretePDF implements IDiscretePDF {
     public double cdf(int x) {
         try {
             return this.internalFunction.cumulativeProbability(x);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
@@ -80,8 +86,10 @@ public abstract class AbstractDiscretePDF implements IDiscretePDF {
      */
     public double cdf(double x) {
         try {
-            return this.internalFunction.cumulativeProbability(x);
-        } catch (MathException e) {
+            // A discrete distribution is evaluated at the largest integer below x.
+            return this.internalFunction.cumulativeProbability((int) Math.floor(x));
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
@@ -93,7 +101,8 @@ public abstract class AbstractDiscretePDF implements IDiscretePDF {
         }
         try {
             return internalFunction.inverseCumulativeProbability(sampleDrawer.random());
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
@@ -113,7 +122,8 @@ public abstract class AbstractDiscretePDF implements IDiscretePDF {
 
         try {
             return this.internalFunction.inverseCumulativeProbability(u);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             e.printStackTrace();
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }

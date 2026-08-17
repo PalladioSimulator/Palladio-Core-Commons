@@ -1,6 +1,6 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.ChiSquaredDistributionImpl;
+import org.apache.commons.math3.distribution.ChiSquaredDistribution;
 
 import de.uka.ipd.sdq.probfunction.math.IChiSquareDistribution;
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
@@ -44,7 +44,7 @@ public class ChiSquareDistribution extends AbstractContinousPDF implements IChiS
         super(rng);
         assert (degreesOfFreedom > 0) : "The parameter degrees of freedom must be a positive integer.";
         this.degreesOfFreedom = degreesOfFreedom;
-        this.internalFunction = new ChiSquaredDistributionImpl(degreesOfFreedom);
+        this.internalFunction = new ChiSquaredDistribution(degreesOfFreedom);
     }
 
     @Override

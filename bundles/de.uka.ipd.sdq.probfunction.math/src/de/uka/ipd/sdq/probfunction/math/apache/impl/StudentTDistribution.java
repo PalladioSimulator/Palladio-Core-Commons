@@ -1,6 +1,6 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.TDistributionImpl;
+import org.apache.commons.math3.distribution.TDistribution;
 
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
@@ -43,7 +43,7 @@ public class StudentTDistribution extends AbstractContinousPDF implements IStude
         super(rng);
         assert (degreesOfFreedom > 0) : "The parameter degrees of freedom must be a positive integer.";
         this.degreesOfFreedom = degreesOfFreedom;
-        this.internalFunction = new TDistributionImpl(degreesOfFreedom);
+        this.internalFunction = new TDistribution(degreesOfFreedom);
     }
 
     @Override

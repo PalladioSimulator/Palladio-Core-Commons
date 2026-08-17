@@ -1,6 +1,6 @@
 package de.uka.ipd.sdq.probfunction.math.apache.distribution;
 
-import org.apache.commons.math.distribution.GammaDistributionImpl;
+import org.apache.commons.math3.distribution.GammaDistribution;
 
 /**
  * SDQ implementation of GammaDistFromMoments based on apache.commons.math
@@ -8,7 +8,7 @@ import org.apache.commons.math.distribution.GammaDistributionImpl;
  * @author joerg
  * 
  */
-public class GammaDistributionFromMomentsImpl extends GammaDistributionImpl {
+public class GammaDistributionFromMomentsImpl extends GammaDistribution {
     /** Serializable version identifier */
     private static final long serialVersionUID = -6141545702288594591L;
 

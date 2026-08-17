@@ -1,6 +1,6 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.random.RandomGenerator;
+import org.apache.commons.math3.random.RandomGenerator;
 import org.apache.log4j.Logger;
 
 import de.uka.ipd.sdq.probfunction.math.random.IRandomStream;

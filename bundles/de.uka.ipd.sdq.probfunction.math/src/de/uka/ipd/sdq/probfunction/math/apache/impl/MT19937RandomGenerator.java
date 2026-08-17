@@ -1,6 +1,6 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.random.MersenneTwister;
+import org.apache.commons.math3.random.MersenneTwister;
 
 /**
  * MersenneTwister RNG.

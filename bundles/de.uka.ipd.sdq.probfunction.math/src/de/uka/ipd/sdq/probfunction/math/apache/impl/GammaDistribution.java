@@ -1,6 +1,5 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.GammaDistributionImpl;
 
 //import umontreal.iro.lecuyer.probdist.GammaDist;
 //import umontreal.iro.lecuyer.probdist.GammaDistFromMoments;
@@ -42,7 +41,7 @@ public class GammaDistribution extends AbstractContinousPDF implements IGammaDis
          * In contrast to SSJ apache common math uses beta as a direct replacement of theta! No
          * 1/theta required!
          */
-        this.internalFunction = new GammaDistributionImpl(alpha, theta);
+        this.internalFunction = new org.apache.commons.math3.distribution.GammaDistribution(alpha, theta);
     }
 
     @Override
@@ -58,7 +57,7 @@ public class GammaDistribution extends AbstractContinousPDF implements IGammaDis
         super(rng);
     }
 
-    private GammaDistribution(GammaDistributionImpl internal, IRandomGenerator rng) {
+    private GammaDistribution(org.apache.commons.math3.distribution.GammaDistribution internal, IRandomGenerator rng) {
         super(rng);
         this.internalFunction = internal;
     }
@@ -133,14 +132,14 @@ public class GammaDistribution extends AbstractContinousPDF implements IGammaDis
      * Shape parameter
      */
     public double getAlpha() {
-        return ((GammaDistributionImpl) this.internalFunction).getAlpha();
+        return ((org.apache.commons.math3.distribution.GammaDistribution) this.internalFunction).getAlpha();
     }
 
     /**
      * Scale parameter beta
      */
     public double getTheta() {
-        return ((GammaDistributionImpl) this.internalFunction).getBeta();
+        return ((org.apache.commons.math3.distribution.GammaDistribution) this.internalFunction).getBeta();
     }
 
     public IProbabilityDensityFunction getCumulativeFunction() throws FunctionNotInTimeDomainException {

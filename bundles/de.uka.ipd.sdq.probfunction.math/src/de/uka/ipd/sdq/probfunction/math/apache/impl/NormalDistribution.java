@@ -1,6 +1,5 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.NormalDistributionImpl;
 
 //import umontreal.iro.lecuyer.probdist.NormalDist;
 import de.uka.ipd.sdq.probfunction.math.INormalDistribution;
@@ -34,17 +33,17 @@ public class NormalDistribution extends AbstractContinousPDF implements INormalD
     public NormalDistribution(double mean, double sigma, IRandomGenerator rng) {
         super(rng);
         double sd = sigma;
-        this.internalFunction = new NormalDistributionImpl(mean, sd);
+        this.internalFunction = new org.apache.commons.math3.distribution.NormalDistribution(mean, sd);
     }
 
     @Override
     public double getMean() {
-        return ((NormalDistributionImpl) this.internalFunction).getMean();
+        return ((org.apache.commons.math3.distribution.NormalDistribution) this.internalFunction).getMean();
     }
 
     @Override
     public double getSigma() {
-        return ((NormalDistributionImpl) this.internalFunction).getStandardDeviation();
+        return ((org.apache.commons.math3.distribution.NormalDistribution) this.internalFunction).getStandardDeviation();
     }
 
     @Override
@@ -143,7 +142,7 @@ public class NormalDistribution extends AbstractContinousPDF implements INormalD
 
     @Override
     public Object getMedian() throws UnorderedDomainException {
-        return ((NormalDistributionImpl) internalFunction).getMean();
+        return ((org.apache.commons.math3.distribution.NormalDistribution) internalFunction).getMean();
     }
 
     @Override
@@ -158,7 +157,7 @@ public class NormalDistribution extends AbstractContinousPDF implements INormalD
 
     @Override
     public double getStandardDeviation() {
-        return ((NormalDistributionImpl) internalFunction).getStandardDeviation();
+        return ((org.apache.commons.math3.distribution.NormalDistribution) internalFunction).getStandardDeviation();
     }
 
     @Override
@@ -174,7 +173,7 @@ public class NormalDistribution extends AbstractContinousPDF implements INormalD
 
     @Override
     public double getArithmeticMeanValue() throws DomainNotNumbersException, FunctionNotInTimeDomainException {
-        return ((NormalDistributionImpl) internalFunction).getMean();
+        return ((org.apache.commons.math3.distribution.NormalDistribution) internalFunction).getMean();
     }
 
 }

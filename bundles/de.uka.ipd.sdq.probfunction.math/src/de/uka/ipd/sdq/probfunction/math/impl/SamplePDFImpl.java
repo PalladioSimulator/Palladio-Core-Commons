@@ -8,8 +8,10 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.math.complex.Complex;
-import org.apache.commons.math.transform.FastFourierTransformer;
+import org.apache.commons.math3.complex.Complex;
+import org.apache.commons.math3.transform.DftNormalization;
+import org.apache.commons.math3.transform.FastFourierTransformer;
+import org.apache.commons.math3.transform.TransformType;
 
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
@@ -52,7 +54,10 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements ISa
 
     private Complex fillValue;
 
-    private FastFourierTransformer fft = new FastFourierTransformer();
+    // STANDARD leaves the forward transform unnormalised and divides the inverse one by the
+    // sample count. UNITARY would scale both directions by the square root instead, which
+    // rescales every transformed function without failing anything.
+    private FastFourierTransformer fft = new FastFourierTransformer(DftNormalization.STANDARD);
 
     protected SamplePDFImpl(double distance, IUnit unit, IRandomGenerator generator) {
         this(distance, unit, false, generator);
@@ -457,9 +462,9 @@ public class SamplePDFImpl extends ProbabilityDensityFunctionImpl implements ISa
         // perform (inverse) FFT
         Complex[] transformedData;
         if (flag == FOURIER_TRANSFORM)
-            transformedData = fft.transform(cValues);
+            transformedData = fft.transform(cValues, TransformType.FORWARD);
         else
-            transformedData = fft.inversetransform(cValues);
+            transformedData = fft.transform(cValues, TransformType.INVERSE);
 
         List<Complex> resultList = Arrays.asList(transformedData);
 

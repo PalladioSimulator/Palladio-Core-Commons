@@ -12,27 +12,25 @@ import de.uka.ipd.sdq.probfunction.math.IContinousPDF;
 import de.uka.ipd.sdq.probfunction.math.IPDFFactory;
 import de.uka.ipd.sdq.probfunction.math.IProbabilityFunctionFactory;
 import de.uka.ipd.sdq.probfunction.math.ISamplePDF;
+import de.uka.ipd.sdq.probfunction.math.IUniformIntDistribution;
 
 /**
- * Pins down what the distributions and the Fourier transform currently compute.
+ * Pins down what the distributions and the Fourier transform compute.
  *
- * This bundle wraps Apache Commons Math, and replacing that library replaces every
- * distribution implementation underneath it. None of that fails to compile - it changes
- * numbers, and there was nothing here to notice:
+ * This bundle wraps Apache Commons Math, and the values below are the contract against it.
+ * Two of them are easy to break without anything failing:
  *
  * <ul>
  * <li>{@code inverseF} is what {@code drawSample} draws through, so a different inversion
  * changes every sampled value and with it every simulation run,</li>
- * <li>the Fourier transform has a normalisation convention. The forward transform here is
- * unnormalised, which is why the first coefficient equals the sum of the input. A convention
- * that normalises by the square root of the sample count would halve these values for four
- * samples - and would still pass a round trip test, because the inverse transform would scale
- * them back. That is why both directions are pinned separately.</li>
+ * <li>the forward Fourier transform is unnormalised, which is why the first coefficient
+ * equals the sum of the input. A convention normalising by the square root of the sample
+ * count would halve these values and still pass a round trip test, because the inverse
+ * transform would scale them back. Both directions are therefore pinned separately.</li>
  * </ul>
  *
- * The expected values were recorded from this bundle built against commons-math 2.1. The
- * tolerance leaves room for a different solver arriving at the same answer, but not for a
- * changed formula, parameterisation or normalisation.
+ * The tolerance leaves room for a different solver arriving at the same answer, but not for
+ * a changed formula, parameterisation or normalisation.
  */
 public class DistributionCharacterisationTest {
 
@@ -43,6 +41,12 @@ public class DistributionCharacterisationTest {
 
     /** The quantiles inverseF is probed at. */
     private static final double[] P = { 0.01, 0.25, 0.5, 0.75, 0.99 };
+
+    /**
+     * Two probes per value of the integer distribution below. None sits on a step of the
+     * distribution function, where the tie-break is not part of the contract.
+     */
+    private static final double[] INT_P = { 0.01, 0.1, 0.3, 0.4, 0.6, 0.7, 0.9, 0.99 };
 
     private static void assertValues(String what, double[] expected, double[] actual) {
         assertEquals(what + " length", expected.length, actual.length);
@@ -144,10 +148,8 @@ public class DistributionCharacterisationTest {
     }
 
     /**
-     * The uniform distribution is hand written here and inherits the default density, which
-     * refuses to answer. Commons Math ships a uniform distribution that does implement it, so
-     * this is the one place where replacing the library turns an exception into a number.
-     * Pinned so that the change is noticed rather than discovered.
+     * The uniform distribution deliberately offers no density and refuses to answer. Pinned
+     * because a distribution that starts returning a number here would not fail anywhere.
      */
     @Test
     public void uniformDistributionHasNoDensity() {
@@ -158,6 +160,27 @@ public class DistributionCharacterisationTest {
         } catch (RuntimeException expected) {
             // 'This distribution does not have a density function implemented'
         }
+    }
+
+    /**
+     * The integer uniform distribution, which SimuCom reaches through the stochastic
+     * expression {@code UniInt(a,b)}. An off-by-one in the inversion shifts every drawn
+     * value without failing anything, so each of the four values is probed twice.
+     */
+    @Test
+    public void uniformIntDistribution() {
+        IUniformIntDistribution pdf = pdfs.createUniformIntDistribution(1, 4);
+        double[] actual = new double[INT_P.length];
+        for (int i = 0; i < INT_P.length; i++) {
+            actual[i] = pdf.inverseF(INT_P[i]);
+        }
+        assertValues("uniformInt inverseF", new double[] { 1, 1, 2, 2, 3, 3, 4, 4 }, actual);
+        assertValues("uniformInt cdf", new double[] { 0.0, 0.25, 0.5, 0.75, 1.0, 1.0 },
+                new double[] { pdf.cdf(0), pdf.cdf(1), pdf.cdf(2), pdf.cdf(3), pdf.cdf(4),
+                        pdf.cdf(5) });
+        assertValues("uniformInt probability", new double[] { 0.0, 0.25, 0.25, 0.25, 0.25, 0.0 },
+                new double[] { pdf.probability(0), pdf.probability(1), pdf.probability(2),
+                        pdf.probability(3), pdf.probability(4), pdf.probability(5) });
     }
 
     @Test

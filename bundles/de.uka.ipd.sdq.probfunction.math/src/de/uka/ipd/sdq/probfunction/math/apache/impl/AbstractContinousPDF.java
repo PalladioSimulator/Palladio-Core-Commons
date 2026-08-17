@@ -1,7 +1,12 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.MathException;
-import org.apache.commons.math.distribution.AbstractContinuousDistribution;
+import org.apache.commons.math3.exception.MathArithmeticException;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathIllegalStateException;
+import org.apache.commons.math3.exception.MathRuntimeException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
+import org.apache.commons.math3.distribution.AbstractRealDistribution;
 
 import de.uka.ipd.sdq.probfunction.math.IContinousPDF;
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
@@ -23,7 +28,7 @@ import de.uka.ipd.sdq.probfunction.math.impl.DefaultRandomGenerator;
 
 public abstract class AbstractContinousPDF implements IContinousPDF {
 
-    protected AbstractContinuousDistribution internalFunction = null;
+    protected AbstractRealDistribution internalFunction = null;
     protected IRandomGenerator sampleDrawer = new DefaultRandomGenerator();
 
     public AbstractContinousPDF(IRandomGenerator rng) {
@@ -62,7 +67,8 @@ public abstract class AbstractContinousPDF implements IContinousPDF {
     public double cdf(double x) {
         try {
             return this.internalFunction.cumulativeProbability(x);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
@@ -85,7 +91,8 @@ public abstract class AbstractContinousPDF implements IContinousPDF {
         }
         try {
             return internalFunction.inverseCumulativeProbability(sampleDrawer.random());
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
@@ -182,7 +189,8 @@ public abstract class AbstractContinousPDF implements IContinousPDF {
 
         try {
             return this.internalFunction.inverseCumulativeProbability(u);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             e.printStackTrace();
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }

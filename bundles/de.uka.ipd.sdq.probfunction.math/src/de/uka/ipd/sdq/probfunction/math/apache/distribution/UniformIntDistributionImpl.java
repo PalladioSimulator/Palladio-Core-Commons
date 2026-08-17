@@ -3,8 +3,13 @@
  */
 package de.uka.ipd.sdq.probfunction.math.apache.distribution;
 
-import org.apache.commons.math.MathException;
-import org.apache.commons.math.distribution.AbstractIntegerDistribution;
+import org.apache.commons.math3.exception.MathArithmeticException;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathIllegalStateException;
+import org.apache.commons.math3.exception.MathRuntimeException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
+import org.apache.commons.math3.distribution.AbstractIntegerDistribution;
 
 /**
  * @author joerg
@@ -27,9 +32,9 @@ public class UniformIntDistributionImpl extends AbstractIntegerDistribution {
         return b;
     }
 
-    public UniformIntDistributionImpl(int a, int b) throws MathException {
+    public UniformIntDistributionImpl(int a, int b) {
         if (b < a)
-            throw new MathException("Second value has to be greater than first value of interval");
+            throw new MathIllegalArgumentException(LocalizedFormats.SIMPLE_MESSAGE, "Second value has to be greater than first value of interval");
 
         this.a = a;
         this.b = b;
@@ -41,10 +46,10 @@ public class UniformIntDistributionImpl extends AbstractIntegerDistribution {
      * (non-Javadoc)
      * 
      * @see
-     * org.apache.commons.math.distribution.AbstractIntegerDistribution#cumulativeProbability(int)
+     * org.apache.commons.math3.distribution.AbstractIntegerDistribution#cumulativeProbability(int)
      */
     @Override
-    public double cumulativeProbability(int x) throws MathException {
+    public double cumulativeProbability(int x) {
         if (x < a)
             return 0;
         else if (x > b)
@@ -56,29 +61,7 @@ public class UniformIntDistributionImpl extends AbstractIntegerDistribution {
     /*
      * (non-Javadoc)
      * 
-     * @see
-     * org.apache.commons.math.distribution.AbstractIntegerDistribution#getDomainLowerBound(double)
-     */
-    @Override
-    protected int getDomainLowerBound(double p) {
-        return a;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.apache.commons.math.distribution.AbstractIntegerDistribution#getDomainUpperBound(double)
-     */
-    @Override
-    protected int getDomainUpperBound(double p) {
-        return b;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.apache.commons.math.distribution.IntegerDistribution#probability(int)
+     * @see org.apache.commons.math3.distribution.IntegerDistribution#probability(int)
      */
     @Override
     public double probability(int x) {
@@ -86,6 +69,31 @@ public class UniformIntDistributionImpl extends AbstractIntegerDistribution {
             return 0;
 
         return 1.0 / intCount;
+    }
+
+    @Override
+    public int getSupportLowerBound() {
+        return a;
+    }
+
+    @Override
+    public int getSupportUpperBound() {
+        return b;
+    }
+
+    @Override
+    public boolean isSupportConnected() {
+        return true;
+    }
+
+    @Override
+    public double getNumericalMean() {
+        return getMean();
+    }
+
+    @Override
+    public double getNumericalVariance() {
+        return getVariance();
     }
 
     public double getMean() {

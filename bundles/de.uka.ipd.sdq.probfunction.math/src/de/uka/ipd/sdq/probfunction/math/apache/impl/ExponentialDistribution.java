@@ -1,6 +1,5 @@
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.distribution.ExponentialDistributionImpl;
 
 //import umontreal.iro.lecuyer.probdist.ExponentialDist;
 import de.uka.ipd.sdq.probfunction.math.IExponentialDistribution;
@@ -38,7 +37,7 @@ public class ExponentialDistribution extends AbstractContinousPDF implements IEx
     public ExponentialDistribution(double rate, IRandomGenerator rng) {
         super(rng);
         double mean = 1.0 / rate;
-        this.internalFunction = new ExponentialDistributionImpl(mean);
+        this.internalFunction = new org.apache.commons.math3.distribution.ExponentialDistribution(mean);
     }
 
     public IProbabilityDensityFunction add(IProbabilityDensityFunction pdf) throws FunctionsInDifferenDomainsException,
@@ -108,7 +107,7 @@ public class ExponentialDistribution extends AbstractContinousPDF implements IEx
     }
 
     public double getRate() {
-        return 1.0 / ((ExponentialDistributionImpl) this.internalFunction).getMean();
+        return 1.0 / ((org.apache.commons.math3.distribution.ExponentialDistribution) this.internalFunction).getMean();
     }
 
     public IProbabilityDensityFunction scale(double scalar) {
@@ -128,7 +127,7 @@ public class ExponentialDistribution extends AbstractContinousPDF implements IEx
         /**
          * Apache math uses the StandardDeviation as mean!
          */
-        final double m = ((ExponentialDistributionImpl) this.internalFunction).getMean();
+        final double m = ((org.apache.commons.math3.distribution.ExponentialDistribution) this.internalFunction).getMean();
         return m;
     }
 
@@ -144,7 +143,7 @@ public class ExponentialDistribution extends AbstractContinousPDF implements IEx
 
     @Override
     public double getArithmeticMeanValue() throws DomainNotNumbersException, FunctionNotInTimeDomainException {
-        return ((ExponentialDistributionImpl) this.internalFunction).getMean();
+        return ((org.apache.commons.math3.distribution.ExponentialDistribution) this.internalFunction).getMean();
     }
 
 }

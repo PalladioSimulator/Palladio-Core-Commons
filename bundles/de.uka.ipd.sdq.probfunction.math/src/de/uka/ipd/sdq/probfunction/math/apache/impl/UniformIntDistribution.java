@@ -3,7 +3,12 @@
  */
 package de.uka.ipd.sdq.probfunction.math.apache.impl;
 
-import org.apache.commons.math.MathException;
+import org.apache.commons.math3.exception.MathArithmeticException;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.exception.MathIllegalStateException;
+import org.apache.commons.math3.exception.MathRuntimeException;
+import org.apache.commons.math3.exception.MathUnsupportedOperationException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
 
 import de.uka.ipd.sdq.probfunction.math.IUniformIntDistribution;
 import de.uka.ipd.sdq.probfunction.math.apache.distribution.UniformIntDistributionImpl;
@@ -18,24 +23,11 @@ import de.uka.ipd.sdq.probfunction.math.exception.UnorderedDomainException;
  */
 public class UniformIntDistribution extends AbstractDiscretePDF implements IUniformIntDistribution {
 
-    @Override
-    public int inverseF(double u) {
-        int value = super.inverseF(u);
-
-        // Fix for bug in Apache commons math 2.1
-        ++value;
-        int ub = ((UniformIntDistributionImpl) this.internalFunction).getB();
-        if (value > ub)
-            value = ub;
-        // end fix
-
-        return value;
-    }
-
     public UniformIntDistribution(int a, int b) {
         try {
             this.internalFunction = new UniformIntDistributionImpl(a, b);
-        } catch (MathException e) {
+        } catch (MathIllegalArgumentException | MathIllegalStateException | MathArithmeticException
+                | MathUnsupportedOperationException | MathRuntimeException e) {
             throw new ProbabilityFunctionException(e.getLocalizedMessage());
         }
     }
